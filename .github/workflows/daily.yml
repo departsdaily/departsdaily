@@ -1,0 +1,44 @@
+name: departs-daily-7am
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 11:00 UTC = 7:00 AM ET during daylight time
+  workflow_dispatch: {}     # manual "Run workflow" button for testing
+permissions:
+  contents: write
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Fetch and verify fares
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+        run: python pipeline/fetch_fares.py
+      - name: Render slides and stories
+        run: |
+          mkdir -p out
+          python pipeline/render_slides.py
+      - name: Publish images and deals to site
+        run: |
+          D=$(date +%F)
+          mkdir -p "site/daily/$D"
+          cp out/*.png "site/daily/$D/"
+          python pipeline/update_site.py
+          git config user.name departs-bot
+          git config user.email bot@departsdaily.com
+          git add -A
+          git commit -m "board $D"
+          git push
+      - name: Wait for Pages deploy
+        run: sleep 90
+      - name: Publish to Instagram
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          export RAW_BASE="https://departsdaily.com/daily/$(date +%F)"
+          python pipeline/publish_instagram.py
