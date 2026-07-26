@@ -15,10 +15,16 @@ for p in pages:
     deep = os.sep + "destinations" + os.sep in p
     pre = "../" if deep else ""
 
-    # 1. stylesheet after board.css
+    # 1. stylesheet after board.css — or before </head> when a page has no
+    #    board.css link at all (index.html carries its styles inline, which is
+    #    how the first pass silently skipped it and left the mobile nav hidden).
     if "nav-fix.css" not in s:
-        s = re.sub(r'(<link rel="stylesheet" href="' + re.escape(pre) + r'css/board\.css">)',
-                   r'\1\n<link rel="stylesheet" href="' + pre + 'css/nav-fix.css">', s, count=1)
+        link = '<link rel="stylesheet" href="' + pre + 'css/nav-fix.css">'
+        pat = r'(<link rel="stylesheet" href="' + re.escape(pre) + r'css/board\.css">)'
+        if re.search(pat, s):
+            s = re.sub(pat, r'\1\n' + link, s, count=1)
+        else:
+            s = s.replace("</head>", link + "\n</head>", 1)
 
     # 2. nav.js before </head> (defer so it never blocks paint)
     if "js/nav.js" not in s:

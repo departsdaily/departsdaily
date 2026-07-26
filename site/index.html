@@ -198,6 +198,33 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 .lights i{width:9px;height:9px;border-radius:50%;background:var(--amber);display:block}
 @media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* --- header + nav corrections (mirrors css/nav-fix.css) --- */
+header{position:static;backdrop-filter:none;background:var(--navy)}
+
+.hbar{flex-wrap:wrap}
+.hnav{display:flex;gap:16px;margin-left:22px;flex-wrap:wrap}
+
+.hnav a{
+  color:var(--sky);font-size:12px;letter-spacing:.12em;font-weight:700;
+  text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;
+}
+.hnav a:hover{color:var(--amber)}
+.hnav a:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+
+/* Current page — amber, underlined, not a link you need to guess at. */
+.hnav a[aria-current="page"]{
+  color:var(--amber);
+  border-bottom-color:var(--amber);
+  cursor:default;
+}
+
+@media(max-width:760px){
+  .hnav{display:flex;margin-left:0;width:100%;gap:18px;padding-bottom:4px}
+  .hbar .tag{display:none}
+  .hbar .name{font-size:22px}
+}
+
 </style>
 <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false" data-no-defer="1">
   (function () {
@@ -255,17 +282,8 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <div class="bfoot">The ten best fares we've verified this week across all <b style="color:var(--white)">30 tracked destinations</b> — these hold up day to day and refresh every Monday. "Below average" compares to the DOT/BTS published average fare for that route where available (see methodology in the footer); international averages are our estimates from public fare tracking. Tap any row for a live search on those dates.</div>
 </div>
 
-<div class="board" style="margin-top:18px">
-  <div class="bhead"><span>BOOK THE REST OF THE TRIP</span><span><a href="book.html" style="color:var(--amber);text-decoration:none">FULL BOOKING DESK ›</a></span></div>
-  <div class="triprow">
-    <a class="tripbtn" data-aff="hotels" href="#"><span class="em">🏨</span>HOTELS<small>COMPARE STAY PRICES</small></a>
-    <a class="tripbtn" data-aff="tours" href="#"><span class="em">🎟️</span>TOURS<small>SKIP-THE-LINE PICKS</small></a>
-    <a class="tripbtn" data-aff="cars" href="#"><span class="em">🚗</span>CARS<small>RENTAL COMPARISON</small></a>
-    <a class="tripbtn" data-aff="esim" href="#"><span class="em">📶</span>eSIM<small>DATA THAT JUST WORKS</small></a>
-    <a class="tripbtn" data-aff="transfers" href="#"><span class="em">🚖</span>TRANSFERS<small>DRIVER AT ARRIVALS</small></a>
-    <a class="tripbtn" data-aff="insurance" href="#"><span class="em">🛡️</span>INSURANCE<small>COVER THE TRIP</small></a>
-  </div>
-</div>
+<!-- old booking strip removed; replaced by #rest below, which shows on both tabs -->
+
 
 <div class="adslot">AD SLOT — 728×90 / RESPONSIVE (AdSense code goes here)</div>
 
@@ -290,9 +308,6 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <p class="sub" style="margin-top:10px">Want every filter on one screen?
     <a href="search.html">Open the full Fare Finder →</a></p>
 </section></div>
-
-
-<!-- ===== BOOK THE REST OF YOUR TRIP — directly under the search ===== -->
 <section id="rest" style="padding-top:6px">
   <h2>Book the <span class="amber">rest</span> of the trip</h2>
   <p class="sub">The flight is the cheap part. These are the pieces most people book next.</p>
@@ -319,6 +334,10 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <p class="sub" style="margin-top:12px;font-size:12px">These are affiliate links — if you book,
   we earn a commission at no extra cost to you. It is what keeps the board free.</p>
 </section>
+
+
+
+
 
 
 
@@ -601,9 +620,6 @@ function renderRoutes(origin){
   renderChart(R.CUN?"CUN":Object.keys(R)[0]);
 }
 
-/* City guide cards — built from the route list so they always match */
-document.getElementById("guidegrid").innerHTML=Object.entries(ROUTES.CLT).map(([c,r])=>
- `<a class="guidecard" href="destinations/${r.slug}.html"><span class="code">${c}</span><div class="gcity">${r.city.toUpperCase()}</div><span class="st">● HOTELS · TOURS · CARS</span></a>`).join("");
 
 /* Forms — both post to Netlify Forms (captured in the Netlify dashboard).
    AJAX submit keeps the visitor on the page; success text only shows
