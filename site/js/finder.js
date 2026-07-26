@@ -233,7 +233,7 @@ window.Finder = (function () {
 
   function panelHTML(monthOpts) {
     const months = [1,2,3,4,6,9,12].map(m =>
-      `<option value="${m}"${m===2?" selected":""}>Next ${m} month${m>1?"s":""}</option>`).join("");
+      `<option value="${m}"${m===6?" selected":""}>Next ${m} month${m>1?"s":""}</option>`).join("");
     return `
     <div class="fquick fquick3">
       <div class="fq"><label for="fOrig">FROM</label>
@@ -254,14 +254,14 @@ window.Finder = (function () {
       <div class="fsec"><div class="flbl"><span>TRIP LENGTH</span><span class="hint" id="fNHint"></span></div>
         <div class="fchips" id="fLen">
           <button class="fch" data-lo="2" data-hi="3">Weekend</button>
-          <button class="fch" data-lo="3" data-hi="4" aria-pressed="true">Long weekend</button>
+          <button class="fch" data-lo="3" data-hi="4">Long weekend</button>
           <button class="fch" data-lo="5" data-hi="8">A week</button>
           <button class="fch" data-lo="9" data-hi="14">10 days – 2 wks</button>
           <button class="fch" data-lo="15" data-hi="30">Extended</button>
-          <button class="fch" data-lo="1" data-hi="30">Any</button></div>
+          <button class="fch" data-lo="1" data-hi="30" aria-pressed="true">Any</button></div>
         <div class="fsl" style="margin-top:12px"><span class="v" id="fNVal"></span>
-          <input type="range" id="fNLo" min="1" max="30" value="3" aria-label="Minimum nights">
-          <input type="range" id="fNHi" min="1" max="30" value="4" aria-label="Maximum nights"></div></div>
+          <input type="range" id="fNLo" min="1" max="30" value="1" aria-label="Minimum nights">
+          <input type="range" id="fNHi" min="1" max="30" value="30" aria-label="Maximum nights"></div></div>
 
       <div class="fsec"><div class="flbl"><span>LEAVE ON</span><span class="hint" id="fHOut"></span></div>
         <div class="fdow" id="fDOut"></div></div>
@@ -269,8 +269,8 @@ window.Finder = (function () {
         <div class="fdow" id="fDRet"></div></div>
 
       <div class="fsec"><div class="flbl"><span>MAX ROUND-TRIP BUDGET</span></div>
-        <div class="fsl"><span class="v" id="fBVal">$600</span>
-          <input type="range" id="fBud" min="80" max="3000" step="20" value="600" aria-label="Budget"></div></div>
+        <div class="fsl"><span class="v" id="fBVal">$1500</span>
+          <input type="range" id="fBud" min="80" max="3000" step="20" value="1500" aria-label="Budget"></div></div>
 
       <div class="fsec"><div class="flbl"><span>STOPS</span></div>
         <div class="fchips" id="fStops">
@@ -289,8 +289,11 @@ window.Finder = (function () {
   function mount(root, opts) {
     opts = opts || {};
     const $ = id => root.querySelector("#" + id);
-    const S = { orig: opts.origin || "CLT", dest:"*", mode:"window", mo:2, from:"", to:"",
-                lo:3, hi:4, out:[4,5], ret:[0,1], bud:600, stops:-1,
+    /* Start wide. A first-time visitor should see everything we have and then
+       narrow — not land on four filters at once and conclude the tool is
+       empty. Trip length, days of week and budget all default to "any". */
+    const S = { orig: opts.origin || "CLT", dest:"*", mode:"window", mo:6, from:"", to:"",
+                lo:1, hi:30, out:[0,1,2,3,4,5,6], ret:[0,1,2,3,4,5,6], bud:1500, stops:-1,
                 tOutDep:[], tOutArr:[], tRetDep:[], tRetArr:[] };
     let IDX = null;
     root.querySelector(".fwrap").innerHTML = panelHTML();
@@ -398,8 +401,12 @@ window.Finder = (function () {
         ? (r.length >= 25 ? "25+ TRIPS" : r.length + " TRIP" + (r.length > 1 ? "S" : "")) : "NO MATCHES";
       rowsEl.innerHTML = r.length
         ? r.map(h => rowHTML(S.orig, IDX, h, true)).join("")
-        : `<div class="fzero">Nothing matches all of those filters.<br>Budget and stops are usually
-           the ones to move first.</div>`;
+        : `<div class="fzero">${
+            IDX.rows.length < 500
+              ? "We don't have many cached fares for " + S.orig + " yet — the index is still filling out.<br>" +
+                "Try <b>Anywhere</b> and a longer window, or check the board above for today's verified deals."
+              : "Nothing matches all of those filters.<br>Budget and stops are usually the ones to move first."
+          }</div>`;
       if (opts.onState) opts.onState(S, r);
     }
 

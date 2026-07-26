@@ -6,6 +6,11 @@ name: Nightly fare index
 on:
   schedule:
     - cron: "10 7 * * *"      # 03:10 EDT / 02:10 EST
+  # Lets the migration branch build a real index before it is merged, since
+  # workflow_dispatch only works once a workflow is on the default branch.
+  push:
+    branches: [cloudflare-migration]
+    paths: [scripts/build_index.py, .github/workflows/nightly-index.yml]
   workflow_dispatch:
     inputs:
       origins:

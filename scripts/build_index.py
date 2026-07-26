@@ -40,14 +40,28 @@ ORIGINS = [o.strip().upper() for o in os.environ.get(
 LEN_LO, LEN_HI = 1, 30         # trip lengths we keep, in nights
 
 
-def fetch(origin, dest, month):
-    url = ("https://api.travelpayouts.com/aviasales/v3/prices_for_dates"
-           f"?origin={origin}&destination={dest}&departure_at={month}"
-           f"&currency=usd&market=us&one_way=false&sorting=price"
-           f"&limit=1000&token={TOKEN}")
+def _get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "departsdaily-index"})
     with urllib.request.urlopen(req, timeout=45) as r:
         return json.load(r).get("data", [])
+
+
+def fetch(origin, dest, month=None):
+    """Month-scoped query where supported, otherwise the unscoped cheapest set.
+
+    Scoping by month is what makes the index dense: without it the API returns
+    only its overall cheapest handful per route, which is exactly why the old
+    index held 97 outbound legs across 30 cities. If a month query comes back
+    empty we fall back to unscoped so a route is never dropped entirely.
+    """
+    base = ("https://api.travelpayouts.com/aviasales/v3/prices_for_dates"
+            f"?origin={origin}&destination={dest}&currency=usd&market=us"
+            f"&one_way=false&sorting=price&limit=1000&token={TOKEN}")
+    if month:
+        data = _get(base + f"&departure_at={month}")
+        if data:
+            return data
+    return _get(base)
 
 
 def months_ahead(today, n):
@@ -66,7 +80,7 @@ def build_origin(origin, today):
         if dest == origin:
             continue
         got = 0
-        for month in months_ahead(today, MONTHS):
+        for month in [None] + months_ahead(today, MONTHS):
             try:
                 fares = fetch(origin, dest, month)
             except Exception as e:
