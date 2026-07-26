@@ -29,8 +29,9 @@ if skip:
         skip["city"], skip["price"])
 cap += ("\n\n📅 Exact dates on every slide"
         "\n✅ Every fare verified before posting — fares move fast and aren't guaranteed"
-        "\n🎯 Want different dates? Build a custom search (budget, nonstop, trip"
-        " length, weekends + more) with the Fare Finder on our site"
+        "\n🎯 Flexible dates? Tell the Fare Finder your trip shape — leave Friday,"
+        " back Monday, anytime in the next 3 months, under $200 — and it finds the"
+        " cheapest fare that fits. On departsdaily.com"
         "\n🔗 Booking links in bio"
         "\n🌅 New board every morning at 7AM\n\n")
 
@@ -45,7 +46,7 @@ for d in B["deals"]:
 cap += " ".join(tags)
 
 children = []
-for s in ["slide1_cover.png", "slide2_board.png", "slide3_cta.png"]:
+for s in ["slide1_cover.png", "slide2_board.png", "slide3_finder.png", "slide4_cta.png"]:
     r = post(IG_USER + "/media", image_url=RAW_BASE + "/" + s, is_carousel_item="true")
     children.append(r["id"])
     time.sleep(2)
