@@ -2,7 +2,11 @@ name: Hourly board refresh
 
 on:
   schedule:
-    - cron: "0 * * * *"    # every hour, 24/7 — board is never more than ~1 hour old
+    - cron: "7 */4 * * *"   # every 4 hours - was hourly.
+    # Netlify bills 15 credits per production deploy; 24 deploys/day was
+    # 360 credits/day against a 300/month allowance. Fares this far out do
+    # not move hour to hour, so nothing on the board is less accurate.
+    # Revert to "0 * * * *" once hosting no longer charges per deploy.    # every hour, 24/7 — board is never more than ~1 hour old
   workflow_dispatch:        # allows manual "Run workflow" button too
   push:                     # any site/script change pushed to main auto-deploys
     branches: [main]
