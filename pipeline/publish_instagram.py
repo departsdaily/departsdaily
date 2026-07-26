@@ -3,10 +3,10 @@
 Requires env: IG_USER_ID, IG_TOKEN, RAW_BASE (public URL of today's images)."""
 import os, json, time, urllib.request, urllib.parse
 
-IG_USER = os.environ["IG_USER_ID"]
+IG_USER = "me"  # Instagram-login tokens: "me" resolves to the connected account
 TOKEN = os.environ["IG_TOKEN"]
 RAW_BASE = os.environ["RAW_BASE"]
-G = "https://graph.facebook.com/v21.0"
+G = "https://graph.instagram.com/v21.0"
 
 def post(path, **params):
     params["access_token"] = TOKEN

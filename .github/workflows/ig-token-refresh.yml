@@ -1,0 +1,43 @@
+name: IG token keep-alive
+
+# Instagram access tokens expire after 60 days. This refreshes the token on
+# the 1st and 15th of every month and writes the new one back into the
+# IG_TOKEN repo secret, so the morning post never dies of an expired key.
+on:
+  schedule:
+    - cron: "0 5 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh token and update secret
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          pip install -q pynacl requests
+          python3 - <<'EOF'
+          import os, json, requests
+          from base64 import b64encode
+          from nacl import public, encoding
+
+          old = os.environ["IG_TOKEN"]
+          r = requests.get("https://graph.instagram.com/refresh_access_token",
+                           params={"grant_type": "ig_refresh_token", "access_token": old}, timeout=30)
+          r.raise_for_status()
+          new = r.json()["access_token"]
+          print("Got refreshed token, expires_in:", r.json().get("expires_in"))
+
+          H = {"Authorization": "Bearer " + os.environ["GH_PAT"],
+               "Accept": "application/vnd.github+json"}
+          repo = "departsdaily/departsdaily"
+          k = requests.get(f"https://api.github.com/repos/{repo}/actions/secrets/public-key", headers=H, timeout=30).json()
+          pk = public.PublicKey(k["key"].encode(), encoding.Base64Encoder())
+          enc = b64encode(public.SealedBox(pk).encrypt(new.encode())).decode()
+          u = requests.put(f"https://api.github.com/repos/{repo}/actions/secrets/IG_TOKEN", headers=H,
+                           json={"encrypted_value": enc, "key_id": k["key_id"]}, timeout=30)
+          u.raise_for_status()
+          print("IG_TOKEN secret updated:", u.status_code)
+          EOF
