@@ -41,7 +41,10 @@ jobs:
       - name: Build per-origin indexes
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
-          ORIGINS: ${{ github.event.inputs.origins }}
+          # A push to the migration branch builds CLT only: ~630 calls, a few
+          # minutes, and enough to prove what the fare API actually returns
+          # before committing to a 10-origin run.
+          ORIGINS: ${{ github.event.inputs.origins || (github.event_name == 'push' && 'CLT' || '') }}
           INDEX_MONTHS: ${{ github.event.inputs.months || '6' }}
           TP_SLEEP: "0.4"
         run: |
@@ -54,6 +57,7 @@ jobs:
       # They must ship inside site/ because Cloudflare Pages serves that
       # directory — a separate data branch would 404 in production.
       - name: Commit index
+        if: always()
         run: |
           git config user.name  "departsdaily-bot"
           git config user.email "bot@departsdaily.com"

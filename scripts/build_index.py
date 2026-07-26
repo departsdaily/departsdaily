@@ -21,7 +21,7 @@ Design rules (same honesty guarantees as the board):
 Usage:  TP_TOKEN=... python scripts/build_index.py site/data
 """
 import json, os, sys, time, urllib.request
-from datetime import datetime
+from datetime import datetime, date
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -44,6 +44,20 @@ def _get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "departsdaily-index"})
     with urllib.request.urlopen(req, timeout=45) as r:
         return json.load(r).get("data", [])
+
+
+def fetch_ow(origin, dest, month=None):
+    """One-way legs. TP caches far more one-way data than round-trip data —
+    which is why the original builder stored legs. We take both: real round
+    trips where they exist, legs to fill the gaps."""
+    base = ("https://api.travelpayouts.com/aviasales/v3/prices_for_dates"
+            f"?origin={origin}&destination={dest}&currency=usd&market=us"
+            f"&one_way=true&sorting=price&limit=1000&token={TOKEN}")
+    if month:
+        d = _get(base + f"&departure_at={month}")
+        if d:
+            return d
+    return _get(base)
 
 
 def fetch(origin, dest, month=None):
@@ -76,6 +90,7 @@ def months_ahead(today, n):
 
 def build_origin(origin, today):
     best = {}                       # (dest, dayOffset, nights) -> row
+    diag = {}                       # per-route counts, so a thin build is explainable
     for dest in ROUTES:
         if dest == origin:
             continue
@@ -117,14 +132,59 @@ def build_origin(origin, today):
                 arr_back = (dep_back + int(dur_back)) % 1440 if dur_back else -1
                 best[key] = (dest, off, nights, price, st_out, st_back,
                              dep_out, arr_out, dep_back, arr_back,
-                             (f.get("airline") or "")[:2])
+                             (f.get("airline") or "")[:2], 0)
                 got += 1
             time.sleep(SLEEP)
-        print(f"    {origin}->{dest}: {got} offers")
+        # One-way legs both directions, then compose any pair we lack as a
+        # real round trip. Composed rows carry a flag so the site can label
+        # them TWO ONE-WAYS rather than implying a single bookable ticket.
+        out_legs, back_legs = {}, {}
+        for month in [None] + months_ahead(today, MONTHS):
+            for a, b, store in ((origin, dest, out_legs), (dest, origin, back_legs)):
+                try:
+                    legs = fetch_ow(a, b, month)
+                except Exception as e:
+                    print(f"    {a}->{b} {month} OW FAIL: {e}")
+                    time.sleep(SLEEP); continue
+                for f in legs:
+                    try:
+                        d1 = datetime.fromisoformat(f["departure_at"])
+                        price = int(f.get("price") or 0)
+                    except (KeyError, ValueError, TypeError):
+                        continue
+                    if price <= 0:
+                        continue
+                    k = d1.date().isoformat()
+                    row = (price, int(f.get("transfers") or 0), d1.hour * 60 + d1.minute)
+                    if k not in store or store[k][0] > price:
+                        store[k] = row
+                time.sleep(SLEEP)
+
+        composed = 0
+        for dk, o in out_legs.items():
+            do = date.fromisoformat(dk)
+            off = (do - today).days
+            if off < 2:
+                continue
+            for rk, b in back_legs.items():
+                nights = (date.fromisoformat(rk) - do).days
+                if not (LEN_LO <= nights <= LEN_HI):
+                    continue
+                key = (dest, off, nights)
+                if key in best:                       # a real round trip wins
+                    continue
+                best[key] = (dest, off, nights, o[0] + b[0], o[1], b[1],
+                             o[2], -1, b[2], -1, "", 1)
+                composed += 1
+
+        diag[dest] = {"rt": got, "out_legs": len(out_legs),
+                      "back_legs": len(back_legs), "composed": composed}
+        print(f"    {origin}->{dest}: {got} round-trips, "
+              f"{len(out_legs)}/{len(back_legs)} legs, {composed} composed")
     codes = sorted({k[0] for k in best})
     ix = {c: i for i, c in enumerate(codes)}
     rows = sorted((ix[d], *rest) for (d, *rest) in best.values())
-    return [list(r) for r in rows], codes
+    return [list(r) for r in rows], codes, diag
 
 
 def main():
@@ -135,11 +195,12 @@ def main():
 
     now = datetime.now(ET)
     today = now.date()
-    manifest, wrote, skipped = [], 0, []
+    manifest, wrote, skipped, all_diag = [], 0, [], {}
 
     for origin in ORIGINS:
         print(f"\n=== {origin} ===")
-        rows, codes = build_origin(origin, today)
+        rows, codes, diag = build_origin(origin, today)
+        all_diag[origin] = diag
         if len(rows) < MIN_ROWS_PER_ORIGIN:
             print(f"  SKIP {origin}: only {len(rows)} rows "
                   f"(min {MIN_ROWS_PER_ORIGIN}) - keeping previous file")
@@ -155,7 +216,7 @@ def main():
             "intl": [c for c in codes if c in INTL],
             "airlines": AIRLINES,
             # row = [destIdx, dayOffset, nights, price, stopsOut, stopsBack,
-            #        depOutMin, arrOutMin, depBackMin, arrBackMin, airline]
+            #        depOutMin, arrOutMin, depBackMin, arrBackMin, airline, composed]
             #        arrival = -1 when the API did not supply a duration
             "schema": 2,
             "has_arrivals": any(r[7] >= 0 or r[9] >= 0 for r in rows),
@@ -170,8 +231,14 @@ def main():
                          "offers": len(rows), "kb": round(kb)})
         wrote += 1
 
+    # Diagnostics are written even when nothing else is, so a thin or failed
+    # build can be explained from the repo instead of from CI logs.
+    with open(os.path.join(outdir, "_diag.json"), "w") as fh:
+        json.dump({"generated": now.isoformat(timespec="seconds"),
+                   "origins": all_diag}, fh, indent=1)
+
     if wrote == 0:
-        print("FATAL: no origin produced a usable index - nothing written")
+        print("FATAL: no origin produced a usable index - see site/data/_diag.json")
         sys.exit(1)
 
     with open(os.path.join(outdir, "manifest.json"), "w") as fh:
