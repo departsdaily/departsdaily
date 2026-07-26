@@ -211,8 +211,10 @@ price that applies. <span id="stamp" style="color:var(--amber)"></span></div>
 
 <script src="js/affiliates.js"></script>
 <script>
-/* ============ Fare Finder — real data from data/idx-CLT.json ============ */
-const ORIGIN="CLT";
+/* ============ Fare Finder — real data from data/idx-<ORIGIN>.json ============ */
+const _qo=(new URLSearchParams(location.search).get("origin")||"CLT").toUpperCase();
+const ORIGIN=/^[A-Z]{3}$/.test(_qo)?_qo:"CLT";
+const ORIGIN_NAMES={CLT:"Charlotte",ATL:"Atlanta",RDU:"Raleigh–Durham",BNA:"Nashville"};
 const AIRPORTS=[["NYC","New York City"],["BOS","Boston"],["MIA","Miami"],["FLL","Ft. Lauderdale"],
 ["DCA","Washington DC"],["ORD","Chicago"],["DFW","Dallas"],["MCO","Orlando"],["LAX","Los Angeles"],
 ["DEN","Denver"],["PHL","Philadelphia"],["HOU","Houston"],["LAS","Las Vegas"],["PHX","Phoenix"],
@@ -225,7 +227,12 @@ const S={dest:"*",months:2,lo:3,hi:4,out:[4,5],ret:[0,1],budget:400,ns:false,tim
 const $=s=>document.querySelector(s);
 let IDX=null;
 
-fetch("data/idx-CLT.json").then(r=>{if(!r.ok)throw 0;return r.json()})
+if(ORIGIN!=="CLT"){
+  const on=(ORIGIN_NAMES[ORIGIN]||ORIGIN);
+  $(".kicker").textContent="■ FARE FINDER — "+on.toUpperCase()+" ("+ORIGIN+")";
+  $(".route input[disabled]").value=on+" · "+ORIGIN;
+}
+fetch("data/idx-"+ORIGIN+".json?v="+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{IDX=j;$("#stamp").textContent="Fare data built "+(j.meta&&j.meta.label||"today")+".";run();})
   .catch(()=>{ $("#results").innerHTML=
     `<div class="fempty"><p>The Fare Finder's data index is being built for the first time —<br>
@@ -341,14 +348,50 @@ const fmt=s=>{const d=new Date(s+"T12:00:00");
   return DOW[d.getDay()].toUpperCase()+" "+d.toLocaleDateString("en-US",{month:"short",day:"numeric"}).toUpperCase()};
 const t12=t=>{if(!t)return"";let h=+t.slice(0,2);const m=t.slice(3,5),ap=h<12?"AM":"PM";h=h%12||12;
   return" "+h+":"+m+ap;};
+/* When the cache has nothing, never dead-end: offer live searches that
+   fit the chosen trip shape (each opens a real-time Aviasales search). */
+function liveRows(){
+  const today=new Date(); today.setHours(12,0,0,0);
+  const horizon=new Date(today); horizon.setMonth(horizon.getMonth()+S.months);
+  const cands=[];
+  for(let d=new Date(today.getTime()+864e5);d<=horizon;d.setDate(d.getDate()+1)){
+    if(!S.out.includes(d.getDay()))continue;
+    for(let n=S.lo;n<=S.hi;n++){
+      const r=new Date(d.getTime()); r.setDate(r.getDate()+n);
+      if(!S.ret.includes(r.getDay()))continue;
+      cands.push([d.toISOString().slice(0,10),r.toISOString().slice(0,10),n]);
+      break;
+    }
+  }
+  if(!cands.length)return[];
+  const rows=[];
+  if(S.dest==="*"){
+    for(const c of ["NYC","MIA","LAS"])rows.push([c,...cands[0]]);
+  }else{
+    const step=Math.max(1,Math.floor(cands.length/4));
+    for(let i=0;i<cands.length&&rows.length<4;i+=step)rows.push([S.dest,...cands[i]]);
+  }
+  return rows;
+}
 function run(){
   if(!IDX)return;
   const r=search(), box=$("#results");
   $("#count").textContent=r.length?r.length+(r.length===25?"+ TRIPS":" TRIPS"):"";
   if(!r.length){
-    box.innerHTML=`<div class="fempty"><p>Nothing in the fare data matches all of that.<br>
-      Budget is usually the filter to loosen first.</p>
-      <button onclick="loosen()">Raise budget to $${Math.min(S.budget+200,1500)}</button></div>`;
+    const lv=liveRows();
+    box.innerHTML=`<div class="fempty" style="padding-bottom:18px"><p>No cached fare matches all of that —
+      our index only holds fares recently seen in real searches.${lv.length?`<br>
+      These <b style="color:var(--white)">live searches</b> fit your trip shape — tap one for today's real prices:`:""}</p>
+      ${S.budget<1500?`<button onclick="loosen()">Raise budget to $${Math.min(S.budget+200,1500)}</button>`:""}</div>`
+      +lv.map(([c,d1,d2,n])=>`<a class="frow" href="${affFlightSearch(ORIGIN,c,d1,d2)}" target="_blank" rel="noopener">
+        <div class="nt"><div class="n">${n}</div><div class="l">${n===1?"night":"nights"}</div></div>
+        <div>
+          <div class="fdest"><span class="code">${c}</span>${NAME[c]||c}</div>
+          <div class="legs"><b>${fmt(d1)}</b> → <b>${fmt(d2)}</b></div>
+          <div class="ftags"><span class="ftag">NO CACHED FARE — RUNS A LIVE SEARCH</span></div>
+        </div>
+        <div class="fprice"><div class="p" style="font-size:16px;color:#FFB703">LIVE →</div><div class="rt">SEARCH NOW</div></div>
+      </a>`).join("");
     return;
   }
   box.innerHTML=r.map(h=>{

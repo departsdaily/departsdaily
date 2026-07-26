@@ -1,7 +1,9 @@
 name: Fare Finder index build
 
-# Rebuilds the Fare Finder's fare index (site/data/idx-CLT.json) once a day
-# before the morning rush, plus on demand. ~450 API calls, runs a few minutes.
+# Rebuilds the Fare Finder's per-origin fare indexes (site/data/idx-<O>.json)
+# once a day before the morning rush, plus on demand. ~900 API calls per
+# origin (v3 prices_for_dates + month-matrix + calendar), runs ~10 minutes.
+# New origin: add it to the ORIGINS list below (+ dest list in the script).
 on:
   schedule:
     - cron: "30 9 * * *"   # 9:30 UTC = 5:30 AM ET (daylight time)
@@ -24,17 +26,21 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build fare index from live cached fares
+      - name: Build fare indexes from live cached fares
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
-        run: python scripts/build_fare_index.py site/data/idx-CLT.json
+          ORIGINS: "CLT"
+        run: |
+          for O in $ORIGINS; do
+            python scripts/build_fare_index.py "$O" "site/data/idx-$O.json"
+          done
 
       - name: Commit index
         run: |
           git config user.name departs-bot
           git config user.email board@departsdaily.com
           git pull --rebase origin main || true
-          git add site/data/idx-CLT.json
+          git add site/data/idx-*.json
           git commit -m "Fare index $(date -u '+%F %H:%M UTC')" || echo "no changes"
           git push origin HEAD:main
 
