@@ -1,0 +1,17 @@
+{
+  "_comment": "Quality gate for every hotel the site recommends. Scales are NOT interchangeable — apply the floor native to whichever source supplied the score. Never convert between them.",
+  "min_reviews": 50,
+  "tiers": {
+    "budget":  { "booking_10pt": 8.1, "google_5pt": 4.3, "badge": "BUDGET"  },
+    "mid":     { "booking_10pt": 8.5, "google_5pt": 4.5, "badge": "MID-RANGE" },
+    "high":    { "booking_10pt": 9.0, "google_5pt": 4.6, "badge": "SPLURGE" }
+  },
+  "revalidate_days": 7,
+  "display_required": ["score", "scale", "review_count", "checked_date"],
+  "on_fail": "drop_and_replace",
+  "notes": [
+    "Google's 5-pt floors are stricter than a mechanical halving of the 10-pt floors, on purpose: Google ratings are compressed (most decent hotels sit 3.9-4.6) and accept reviews from non-guests.",
+    "High tier stops at 4.6 not 4.7 — Google penalises expensive hotels via non-guest reviews in a way Booking's verified-stay system does not.",
+    "Blocked until the Travelpayouts hotel programs unlock (~Oct 2026). Config lives here now so the filter is ready on day one."
+  ]
+}

@@ -1,0 +1,13 @@
+name = "departsdaily-fares"
+main = "custom-origin.js"
+compatibility_date = "2026-07-01"
+
+# KV cache for custom-origin lookups.
+# Create with:  npx wrangler kv namespace create FARES
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "FARES"
+id = "PASTE_KV_NAMESPACE_ID_HERE"
+
+# Secret (never put the token in this file):
+#   npx wrangler secret put TP_TOKEN

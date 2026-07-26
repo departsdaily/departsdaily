@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fare Finder — Departs Daily</title>
+<meta name="description" content="Search cheap flights by trip shape, not fixed dates. Pick your days of the week, trip length and budget — we find the cheapest real fares that fit.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="css/nav-fix.css">
+<link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="css/finder.css">
+<script src="js/nav.js" defer></script>
+</head><body>
+
+<header><div class="wrap hbar">
+  <a class="name" href="index.html">DEPARTS DAILY</a>
+  <nav class="hnav"><a href="index.html">BOARD</a><a href="search.html">FARE FINDER</a>
+    <a href="gear.html">GEAR</a></nav>
+  <div class="tag">EVERY FARE IS A REAL SEARCH RESULT</div>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">FARE FINDER</div>
+    <h1>Search by the <span class="amber">shape</span> of the trip</h1>
+    <p class="sub">Or by exact dates. Tell us when you can leave, how long you want, how many stops
+    you'll accept and what you'll spend — we check every real fare we have and show what fits.</p>
+  </div>
+
+  <div class="fq" style="max-width:320px;margin-bottom:14px">
+    <label for="origSel">LEAVING FROM</label>
+    <select id="origSel"></select>
+  </div>
+
+  <div id="app">
+    <div class="fwrap"></div>
+    <div class="board"><div class="bhead"><span data-count>SEARCHING…</span><span data-src></span></div>
+      <div data-rows></div></div>
+  </div>
+
+  <div class="note">Fares are the cheapest we found in cached search data and are not a guarantee of
+  availability. Tapping a result runs a live search for those exact dates — the price at checkout is
+  the only price. Departs Daily is not a travel agency. We earn a commission on some bookings at no
+  extra cost to you.</div>
+</div>
+
+<script src="js/affiliates.js"></script>
+<script src="js/finder.js"></script>
+<script>
+const ORIGINS=[["CLT","Charlotte"],["ATL","Atlanta"],["ORD","Chicago"],["DFW","Dallas"],
+["DEN","Denver"],["LAX","Los Angeles"],["JFK","New York"],["MIA","Miami"],["SEA","Seattle"],
+["BOS","Boston"]];
+const sel=document.getElementById("origSel");
+sel.innerHTML=ORIGINS.map(([c,n])=>`<option value="${c}">${n} · ${c}</option>`).join("");
+const app=Finder.mount(document.getElementById("app"),{origin:"CLT"});
+sel.addEventListener("change",e=>app.boot(e.target.value));
+</script>
+</body></html>

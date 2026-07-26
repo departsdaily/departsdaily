@@ -9,6 +9,102 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
+.tabs{display:flex;gap:4px;margin:18px 0 0}
+.tab{flex:0 0 auto;background:var(--tile);border:2px solid var(--edge);border-bottom:0;
+ border-radius:12px 12px 0 0;color:var(--dim);font-family:var(--disp);font-weight:700;font-size:19px;
+ letter-spacing:.06em;padding:11px 22px;cursor:pointer}
+.tab:hover{color:var(--white)}
+.tab[aria-selected=true]{background:var(--panel);color:var(--amber);border-color:var(--amber)}
+.tab:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+.fdates{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 16px}
+.fdates[hidden]{display:none}
+.fdates input[type=date]{width:100%;background:var(--tile);border:2px solid var(--edge);border-radius:8px;
+ color:var(--white);font-family:var(--mono);font-size:15px;padding:10px 11px}
+.fdates input[type=date]:focus{outline:none;border-color:var(--amber)}
+.arrv{color:var(--sky);font-size:11px}
+.fsec[hidden]{display:none}
+@media(max-width:560px){.tab{font-size:16px;padding:10px 15px}.fdates{grid-template-columns:1fr}}
+
+.gbtn{display:inline-block;margin-left:10px;font-family:var(--mono);font-size:9px;letter-spacing:.11em;
+ color:var(--sky);border:1px solid var(--edge);border-radius:5px;padding:3px 7px;text-decoration:none;vertical-align:middle}
+.gbtn:hover{color:var(--amber);border-color:var(--amber)}
+.restgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:14px}
+.restcard{display:block;background:var(--panel);border:2px solid var(--edge);border-radius:12px;
+ padding:15px;text-decoration:none}
+.restcard:hover{border-color:var(--amber)}
+.restcard .rl{display:block;color:var(--sky);font-size:10px;letter-spacing:.16em}
+.restcard .rn{display:block;font-family:var(--disp);font-weight:700;font-size:23px;color:var(--white);margin-top:5px}
+.restcard .rd{display:block;color:var(--dim);font-size:12px;line-height:1.5;margin-top:5px}
+
+/* ---- Fare Finder widget (homepage + search page) ---- */
+.fwrap{border:2px solid var(--edge);border-radius:14px;overflow:hidden;margin:14px 0;background:var(--panel)}
+.fquick{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;padding:16px;align-items:end}
+.fq label{display:block;color:var(--sky);font-size:11px;letter-spacing:.14em;margin-bottom:7px}
+.fq input,.fq select{width:100%;background:var(--tile);border:2px solid var(--edge);border-radius:8px;
+ color:var(--white);font-family:var(--mono);font-size:15px;padding:10px 11px}
+.fq input:focus,.fq select:focus{outline:none;border-color:var(--amber)}
+.fmore{background:var(--tile);border:2px solid var(--edge);border-radius:8px;color:var(--amber);
+ font-family:var(--mono);font-size:12px;letter-spacing:.1em;padding:11px 15px;cursor:pointer;white-space:nowrap}
+.fmore:hover{border-color:var(--amber)}
+.fpanel{border-top:2px solid var(--edge);background:var(--tile)}
+.fpanel[hidden]{display:none}
+.fsec{padding:14px 16px;border-bottom:1px solid var(--edge)}
+.fsec:last-child{border-bottom:0}
+.flbl{color:var(--sky);font-size:11px;letter-spacing:.14em;margin-bottom:9px;display:flex;
+ justify-content:space-between;gap:10px;flex-wrap:wrap}
+.flbl .hint{color:var(--amber);letter-spacing:.02em}
+.fchips{display:flex;flex-wrap:wrap;gap:6px}
+.fch{background:var(--panel);border:2px solid var(--edge);border-radius:8px;color:var(--dim);
+ font-family:var(--mono);font-size:12px;padding:8px 12px;cursor:pointer}
+.fch:hover{border-color:var(--sky);color:var(--white)}
+.fch[aria-pressed=true]{background:var(--amber);border-color:var(--amber);color:var(--navy);font-weight:700}
+.fch:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+.fdow{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.fdow .fch{padding:10px 0;text-align:center}
+.fsl{display:flex;align-items:center;gap:13px}
+.fsl .v{font-family:var(--disp);font-weight:700;font-size:24px;color:var(--amber);min-width:112px}
+.fsl input[type=range]{flex:1;accent-color:var(--amber);min-width:70px}
+.ftg{display:flex;align-items:center;gap:11px;padding:7px 0;cursor:pointer;font-size:13px;color:var(--white)}
+.ftg input{appearance:none;width:40px;height:22px;border-radius:11px;background:var(--panel);
+ border:2px solid var(--edge);position:relative;cursor:pointer;flex:none;margin:0}
+.ftg input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
+ background:var(--dim);transition:transform .15s}
+.ftg input:checked{border-color:var(--amber)}
+.ftg input:checked::after{transform:translateX(18px);background:var(--amber)}
+.ftg input:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+.fsub{padding-left:51px}.fsub[hidden]{display:none}
+.frow{border-bottom:1px solid var(--edge)}
+.frow:last-child{border-bottom:0}
+.fmain{display:grid;grid-template-columns:58px 1fr auto;gap:14px;align-items:center;padding:15px 18px;
+ text-decoration:none;color:inherit}
+.fmain:hover{background:#152B47}
+.fmain:focus-visible{outline:2px solid var(--amber);outline-offset:-3px}
+.fnt{text-align:center;background:var(--tile);border:2px solid var(--amber);border-radius:9px;padding:7px 2px}
+.fnt .n{font-family:var(--disp);font-weight:700;font-size:24px;color:var(--amber);line-height:1}
+.fnt .l{font-size:9px;letter-spacing:.1em;color:var(--sky)}
+.fcity{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:.03em}
+.fcd{color:var(--amber);font-family:var(--mono);font-size:14px;margin-right:9px}
+.ipill{font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--navy);background:var(--sky);
+ border-radius:4px;padding:2px 6px;margin-left:9px;vertical-align:middle}
+.fdts{color:var(--dim);font-size:12.5px;margin-top:5px;line-height:1.5}
+.fdts b{color:var(--white)}
+.fmt{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+.fpill{font-size:10px;letter-spacing:.1em;border:1px solid var(--edge);border-radius:5px;padding:3px 7px;color:var(--dim)}
+.fpill.ns{border-color:var(--green);color:var(--green)}
+.fpr{text-align:right}
+.fpr .p{font-family:var(--disp);font-weight:700;font-size:29px;color:var(--white);line-height:1}
+.fpr .u{font-size:10px;letter-spacing:.1em;color:var(--sky);margin-top:3px}
+.gchip{display:block;padding:9px 18px 13px 90px;font-size:11px;letter-spacing:.1em;color:var(--sky);
+ text-decoration:none;background:var(--tile)}
+.gchip:hover{color:var(--amber)}
+.fzero{padding:36px 20px;text-align:center;color:var(--dim);font-size:14px;line-height:1.6}
+@media(max-width:640px){
+ .fquick{grid-template-columns:1fr}
+ .fmain{grid-template-columns:50px 1fr;gap:11px}
+ .fpr{grid-column:2;text-align:left;margin-top:8px}
+ .gchip{padding-left:18px}
+}
+
 :root{
   --navy:#0B1829; --panel:#12243C; --tile:#070F1B; --edge:#2E425E;
   --amber:#FFB703; --sky:#6C9EDE; --green:#3EC97E; --white:#F0F4FA; --dim:#788CA5;
@@ -119,6 +215,7 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   gtag('js', new Date());
   gtag('config', 'G-YPF0WKF1J5');
 </script>
+<script src="js/nav.js" defer></script>
 </head>
 <body>
 <header><div class="wrap hbar">
@@ -127,7 +224,6 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <nav class="hnav" aria-label="Site">
     <a href="#guides">CITY GUIDES</a>
     <a href="book.html">BOOKING DESK</a>
-    <a href="finder.html">FARE FINDER</a>
     <a href="gear.html">GEAR</a>
     <a href="disclosure.html">DISCLOSURE</a>
   </nav>
@@ -141,6 +237,11 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <p class="sub">Every fare below is compared against its route's typical price, so you know a deal is actually a deal. Tapping a row runs a <b style="color:var(--white)">live search</b> for those exact dates — the price you book is always today's price, never a cached one.</p>
 </div>
 
+<div class="tabs" role="tablist" aria-label="Board or search">
+  <button class="tab" id="tabBoard" role="tab" aria-selected="true" aria-controls="paneBoard">DEAL BOARD</button>
+  <button class="tab" id="tabFind"  role="tab" aria-selected="false" aria-controls="paneFind">FARE FINDER</button>
+</div>
+<div id="paneBoard" role="tabpanel" aria-labelledby="tabBoard">
 <div class="citybar" id="citybar" role="tablist" aria-label="Choose your airport"></div>
 
 <div class="board">
@@ -149,9 +250,8 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <div class="bfoot">Every fare was verified at the board's last update (shown above). Tapping a row opens a <b style="color:var(--white)">live search for those exact dates</b> — so what you book is today's real price. Deals expire off this board automatically; if a fare jumped since our check, the live search shows you the current best. Averages based on typical route pricing. Some links are affiliate links — we may earn a commission at no cost to you. <a href="disclosure.html">Details</a>.</div>
 </div>
 
-<div class="board" style="margin-top:18px">
-  <div class="bhead"><span>DEALS OF THE WEEK — <span id="weekCity">CHARLOTTE (CLT)</span></span><span id="weekStamp">TOP 10 · ROUND TRIP</span></div>
-  <div id="weekRows"></div>
+<!-- Weekly board removed — the daily board rotates instead. -->
+
   <div class="bfoot">The ten best fares we've verified this week across all <b style="color:var(--white)">30 tracked destinations</b> — these hold up day to day and refresh every Monday. "Below average" compares to the DOT/BTS published average fare for that route where available (see methodology in the footer); international averages are our estimates from public fare tracking. Tap any row for a live search on those dates.</div>
 </div>
 
@@ -169,11 +269,58 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 
 <div class="adslot">AD SLOT — 728×90 / RESPONSIVE (AdSense code goes here)</div>
 
-<section id="guides">
-  <h2>Know before you go — 30 city guides</h2>
-  <p class="sub">Every destination we track gets a full briefing: the hotels we'd book at three budgets, the tours worth the money, car rental &amp; airport transfer advice, and how to do it cheap.</p>
-  <div class="guidegrid" id="guidegrid"></div>
+<!-- City guides intentionally removed from the homepage.
+     Guides now surface contextually: every Fare Finder result for a city that
+     has a real guide shows a "CITY GUIDE →" prompt beneath the fare, which is
+     the moment the visitor is actually planning that trip. Full list: /guides.html -->
+
+
+<!-- ===== CUSTOM SEARCH — sits directly under the board ===== -->
+</div>
+<div id="paneFind" role="tabpanel" aria-labelledby="tabFind" hidden>
+<section id="finder">
+  <h2>Search <span class="amber">your</span> trip</h2>
+  <p class="sub">The board is today's best. This searches every fare we have — pick the shape of the
+  trip and we'll find the cheapest that fits.</p>
+
+  <div class="fwrap"></div>
+<div class="board"><div class="bhead"><span data-count>SEARCHING…</span><span data-src></span></div>
+    <div data-rows></div></div>
+
+  <p class="sub" style="margin-top:10px">Want every filter on one screen?
+    <a href="search.html">Open the full Fare Finder →</a></p>
+</section></div>
+
+
+<!-- ===== BOOK THE REST OF YOUR TRIP — directly under the search ===== -->
+<section id="rest" style="padding-top:6px">
+  <h2>Book the <span class="amber">rest</span> of the trip</h2>
+  <p class="sub">The flight is the cheap part. These are the pieces most people book next.</p>
+  <div class="restgrid">
+    <a class="restcard" id="rHotels" target="_blank" rel="sponsored noopener">
+      <span class="rl">STAY</span><span class="rn">Hotels</span>
+      <span class="rd">Compare every booking site at once</span></a>
+    <a class="restcard" id="rTours" target="_blank" rel="sponsored noopener">
+      <span class="rl">DO</span><span class="rn">Tours &amp; tickets</span>
+      <span class="rd">Skip-the-line and day trips</span></a>
+    <a class="restcard" id="rCars" target="_blank" rel="sponsored noopener">
+      <span class="rl">DRIVE</span><span class="rn">Car hire</span>
+      <span class="rd">Worth it outside the big cities</span></a>
+    <a class="restcard" id="rEsim" target="_blank" rel="sponsored noopener">
+      <span class="rl">CONNECT</span><span class="rn">eSIM data</span>
+      <span class="rd">Land with working internet</span></a>
+    <a class="restcard" id="rIns" target="_blank" rel="sponsored noopener">
+      <span class="rl">COVER</span><span class="rn">Travel insurance</span>
+      <span class="rd">Cheap fares are non-refundable</span></a>
+    <a class="restcard" id="rXfer" target="_blank" rel="sponsored noopener">
+      <span class="rl">ARRIVE</span><span class="rn">Airport transfers</span>
+      <span class="rd">Fixed price, driver waiting</span></a>
+  </div>
+  <p class="sub" style="margin-top:12px;font-size:12px">These are affiliate links — if you book,
+  we earn a commission at no extra cost to you. It is what keeps the board free.</p>
 </section>
+
+
 
 <section>
   <h2>10 airports. One board.</h2>
@@ -242,6 +389,7 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 
 <script src="js/affiliates.js"></script>
 <script src="js/deals-data.js"></script>
+<script src="js/finder.js"></script>
 <script>
 const CITIES=[
  {code:"CLT",name:"CHARLOTTE (CLT)",live:true},
@@ -255,7 +403,6 @@ const CITIES=[
    DAILY BOARD DATA now lives in js/deals-data.js — a small generated
    file rewritten automatically every hour from live
    Travelpayouts fare data (see scripts/update_deals.py in the repo).
-   BOARD, DEALS and DEALS_WEEK are defined there and loaded above.
    Never hand-edit deals here; the generator owns that file.
    ===================================================================== */
 
@@ -360,31 +507,32 @@ function fmtTrip(d1,d2){
   return f(d1)+" → "+f(d2);
 }
 
+/* If we have a real, hand-written guide for the city, offer it right on the
+   row — that is the moment someone is actually planning that trip. */
+function guideBtn(code,x){
+  const rt=(ROUTES[code]||{})[x.to];
+  if(!rt||!rt.slug) return "";
+  return ` <a class="gbtn" href="destinations/${rt.slug}.html" onclick="event.stopPropagation()">CITY GUIDE</a>`;
+}
+
 function rowHTML(code,x){
   const rt=(ROUTES[code]||{})[x.to];
   const intl=rt&&rt.intl?' · <b class="st">INTL</b>':'';
   const dep=x.dep?` · <b style="color:var(--white)">DEP ${x.dep}</b>`:"";
+  /* Airline is only printed when the updater could verify it (nonstop). On a
+     connection the API returns the first carrier, not the operator of the whole
+     trip, so we print nothing rather than a name that is wrong. */
+  const al=x.al?` · ${x.al}`:"";
+  /* Cheapest transatlantic fares are often self-transfer itineraries: if the
+     first leg is late, the second airline owes you nothing. Say so. */
+  const xfer=x.xfer?' · <b class="st" title="Separate tickets — a missed connection is not protected">SELF-TRANSFER</b>':"";
   return `
    <a class="row" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener">
      <span class="tiles">${tiles(code)}<span class="arr">›</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span><br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep} · ${x.al} · <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}</span></span>
+     <span><span class="city">${x.city}</span>${guideBtn(code,x)}<br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep}${al} · <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span>
      <span class="price">$${x.price}</span>
      <span class="var">${dealVar(x)}</span>
    </a>`;
-}
-
-function renderWeek(code){
-  const c=CITIES.find(x=>x.code===code);
-  document.getElementById("weekCity").textContent=c.name;
-  document.getElementById("weekStamp").textContent="TOP 10 · "+BOARD.weekOf+" · ROUND TRIP";
-  const wr=document.getElementById("weekRows");
-  if(!DEALS_WEEK[code]){wr.innerHTML=`<div class="empty">Weekly deals for ${code} open soon.<br>Get on the email list below and you'll know the day this board goes live.</div>`;return;}
-  if(BOARD.weekExp && new Date(BOARD.weekExp+"T23:59:59-04:00")<new Date()){
-    wr.innerHTML=`<div class="empty">This week's list has expired — a fresh top 10 posts every Monday morning.<br>Get on the email list below so it lands in your inbox.</div>`;return;
-  }
-  const deals=liveDeals(DEALS_WEEK[code]);
-  if(!deals.length){wr.innerHTML=`<div class="empty">This week's list is being refreshed — a new top 10 posts every Monday morning.</div>`;return;}
-  wr.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
 }
 
 function renderCity(code){
@@ -394,7 +542,6 @@ function renderCity(code){
   document.getElementById("boardCity").textContent=c.name;
   const rows=document.getElementById("rows");
   document.querySelectorAll("#citybar .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===code));
-  renderWeek(code);
   renderRoutes(code);
   if(!DEALS[code]){rows.innerHTML=`<div class="empty">This board opens soon.<br>Get on the email list below and you'll know the day ${code} goes live.</div>`;return;}
   const deals=liveDeals(DEALS[code]);
@@ -477,6 +624,40 @@ wireForm("signupform",'<p style="color:var(--green)">You are on the list. ✈</p
 
 /* Initial render — after all sections above are defined */
 renderCity("CLT");
+
+/* Fare Finder tab — all filter UI and logic live in js/finder.js so the
+   homepage tab and /search.html can never drift apart. */
+(function(){
+  if(!window.Finder) return;
+  const pane=document.getElementById("paneFind");
+  const app=Finder.mount(pane,{origin:"CLT"});
+  window.addEventListener("dd:city",e=>app.boot(e.detail));
+
+  const tb=document.getElementById("tabBoard"), tf=document.getElementById("tabFind");
+  const pb=document.getElementById("paneBoard"), pf=document.getElementById("paneFind");
+  function show(which){
+    const board=which==="board";
+    pb.hidden=!board; pf.hidden=board;
+    tb.setAttribute("aria-selected",String(board));
+    tf.setAttribute("aria-selected",String(!board));
+    history.replaceState(null,"",board?location.pathname:"#search");
+  }
+  tb.addEventListener("click",()=>show("board"));
+  tf.addEventListener("click",()=>show("find"));
+  if(location.hash==="#search") show("find");
+})();
+
+
+/* "Book the rest of the trip" — routed through the affiliate engine so each
+   button carries the marker once it is set in js/affiliates.js. */
+(function(){
+  const map={rHotels:"hotels",rTours:"tours",rCars:"cars",rEsim:"esim",rIns:"insurance",rXfer:"transfers"};
+  for(const id in map){
+    const el=document.getElementById(id); if(!el) continue;
+    try{ el.href=affResolve(map[id]); }catch(e){ el.href=AFF_DEFAULTS[map[id]](); }
+  }
+})();
+
 </script>
 </body>
 </html>
