@@ -1,5 +1,53 @@
 {
  "date": "2026-07-26",
- "deals": [],
- "skip": null
+ "deals": [
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 235,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "airline": "F9",
+   "stops": 1,
+   "baseline": 338,
+   "disc": 30,
+   "link": "https://www.aviasales.com/search/CLT0210LAS04101?t=F917909606401790983200000556CLTIAHLAS17910755401791112500000436LASDFWCLT_3e70a6b7f5bde6fbf25f6e6019b3cb49_18388&search_date=21072026&expected_price_uuid=019f86a4-b30d-8040-255a-314580a86ee6&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=HPz_ya450ILYydOC85qKVQ&expected_price_source=share&expected_price_currency=usd&expected_price=235&marker=755800"
+  },
+  {
+   "to": "MIA",
+   "city": "Miami",
+   "price": 147,
+   "d1": "2026-08-13",
+   "d2": "2026-08-20",
+   "airline": "F9",
+   "stops": 0,
+   "baseline": 178,
+   "disc": 17,
+   "link": "https://www.aviasales.com/search/CLT1308MIA20081?t=F917866468801786655100000137CLTMIA17872360201787244360000139MIACLT_701203823b7f47316bc30ac62ddde9af_11536&search_date=21072026&expected_price_uuid=019f85a2-c4fe-8040-2333-a07418426b0d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=XIRaU1_Za_ScwknfyxLxUg&expected_price_source=share&expected_price_currency=usd&expected_price=147&marker=755800"
+  },
+  {
+   "to": "SJU",
+   "city": "San Juan",
+   "price": 266,
+   "d1": "2026-08-14",
+   "d2": "2026-08-18",
+   "airline": "F9",
+   "stops": 0,
+   "baseline": 318,
+   "disc": 16,
+   "link": "https://www.aviasales.com/search/CLT1408SJU18081?t=F917867392801786753380000235CLTSJU17870866201787126460000664SJUMCOCLT_5ce3cd5efd683e890475caba972d3812_20655&search_date=24072026&expected_price_uuid=019f95c4-c030-8040-241c-560a63460ea9&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rGO8LR3-qAMWy8riLD9kQQ&expected_price_source=share&expected_price_currency=usd&expected_price=266&marker=755800"
+  }
+ ],
+ "skip": {
+  "to": "MSY",
+  "city": "New Orleans",
+  "price": 291,
+  "d1": "2026-09-18",
+  "d2": "2026-09-21",
+  "airline": "F9",
+  "stops": 1,
+  "baseline": 188,
+  "disc": -55,
+  "link": "https://www.aviasales.com/search/CLT1809MSY21091?t=F917897239201789758420000635CLTMCOMSY17899876801790017140000431MSYDENCLT_20d110738095525891a132d438c010d5_22750&search_date=26072026&expected_price_uuid=019f9eeb-61e2-8040-210a-7eef4f6cd507&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=w5glG98ZND4OV0hHYiEpNw&expected_price_source=share&expected_price_currency=usd&expected_price=291&marker=755800"
+ }
 }
