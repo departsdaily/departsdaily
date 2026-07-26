@@ -1,0 +1,84 @@
+name: Nightly fare index
+
+# Rebuilds the Fare Finder index for every pre-built origin.
+# Runs at 03:10 ET. Fares this far out do not move hour to hour, so nightly
+# is plenty — and it keeps us far inside every rate limit and free tier.
+on:
+  schedule:
+    - cron: "10 7 * * *"      # 03:10 EDT / 02:10 EST
+  # A push that changes the builder rebuilds CLT only — quick proof the
+  # builder still works before the next full nightly run.
+  push:
+    branches: [main]
+    paths: [scripts/build_index.py, .github/workflows/nightly-index.yml]
+  workflow_dispatch:
+    inputs:
+      origins:
+        description: "Comma-separated origins (blank = default 10)"
+        required: false
+      months:
+        description: "Months ahead to index (default 6)"
+        required: false
+
+# Without this the default GITHUB_TOKEN is read-only and the commit step's
+# push is rejected — which is exactly how a successful build kept failing.
+permissions:
+  contents: write
+
+concurrency:
+  group: fare-index
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build per-origin indexes
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+          # A push to the migration branch builds CLT only: ~630 calls, a few
+          # minutes, and enough to prove what the fare API actually returns
+          # before committing to a 10-origin run.
+          ORIGINS: ${{ github.event.inputs.origins || (github.event_name == 'push' && 'CLT' || '') }}
+          INDEX_MONTHS: ${{ github.event.inputs.months || '6' }}
+          TP_SLEEP: "0.4"
+        run: |
+          mkdir -p site/data
+          python scripts/build_index.py site/data
+          echo "--- built ---"
+          ls -lh site/data/
+
+      # Index files are committed into site/data/ on the branch itself.
+      # They must ship inside site/ because Cloudflare Pages serves that
+      # directory — a separate data branch would 404 in production.
+      - name: Commit index
+        if: always()
+        run: |
+          git config user.name  "departsdaily-bot"
+          git config user.email "bot@departsdaily.com"
+          git add site/data/
+          # Steps run under `bash -e`, so `git diff --cached --quiet` exiting 1
+          # (which is what it does when there ARE changes) killed the step
+          # immediately after a successful build. Use an if-block instead.
+          if git diff --cached --quiet; then
+            echo "no change"; exit 0
+          fi
+          git commit -q -m "fare index $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin ${{ github.ref_name }} || git rebase --abort || true
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Fare index" >> $GITHUB_STEP_SUMMARY
+          cat site/data/manifest.json >> $GITHUB_STEP_SUMMARY 2>/dev/null || echo "no manifest" >> $GITHUB_STEP_SUMMARY

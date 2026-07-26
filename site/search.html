@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fare Finder — Departs Daily</title>
+<meta name="description" content="Search cheap flights by trip shape, not fixed dates. Pick your days of the week, trip length and budget — we find the cheapest real fares that fit.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="css/nav-fix.css">
+<link rel="stylesheet" href="css/finder.css">
+<script src="js/nav.js" defer></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5064929428745790" crossorigin="anonymous"></script>
+<style>.adslot{margin:26px 0;min-height:90px}
+.adslot ins[data-ad-status="unfilled"]{display:none!important}</style>
+</head><body>
+
+<header><div class="wrap hbar">
+  <a class="name" href="index.html">DEPARTS DAILY</a>
+  <nav class="hnav"><a href="index.html">BOARD</a><a href="search.html">FARE FINDER</a>
+    <a href="gear.html">GEAR</a></nav>
+  <div class="tag">EVERY FARE IS A REAL SEARCH RESULT</div>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">FARE FINDER</div>
+    <h1>Search by the <span class="amber">shape</span> of the trip</h1>
+    <p class="sub">Or by exact dates. Tell us when you can leave, how long you want, how many stops
+    you'll accept and what you'll spend — we check every real fare we have and show what fits.</p>
+  </div>
+
+  <div id="app">
+    <div class="fwrap"></div>
+    <div class="board"><div class="bhead"><span data-count>SEARCHING…</span><span data-src></span></div>
+      <div data-rows></div></div>
+  </div>
+
+  
+  <!-- Ad sits below the results: the tool answers the question first. -->
+  <div class="adslot">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5064929428745790"
+         data-ad-slot="4192557686"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="note">Fares are the cheapest we found in cached search data and are not a guarantee of
+  availability. Tapping a result runs a live search for those exact dates — the price at checkout is
+  the only price. Departs Daily is not a travel agency. We earn a commission on some bookings at no
+  extra cost to you.</div>
+</div>
+
+<script src="js/affiliates.js"></script>
+<script src="js/finder.js"></script>
+<script>
+Finder.mount(document.getElementById("app"),{origin:"CLT"});
+</script>
+</body></html>

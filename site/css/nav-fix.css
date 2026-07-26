@@ -1,0 +1,34 @@
+/* =====================================================================
+   Header corrections — load AFTER css/board.css.
+   1. The header was position:sticky with a blur, so it floated over the
+      board while scrolling. It is now static: it scrolls away like the
+      rest of the page.
+   2. .hnav was display:none under 760px, so on a phone the navigation
+      vanished entirely. It now wraps onto its own line instead.
+   3. The current page is marked in amber with an underline, so you can
+      always tell where you are.
+   ===================================================================== */
+header{position:static;backdrop-filter:none;background:var(--navy)}
+
+.hbar{flex-wrap:wrap}
+.hnav{display:flex;gap:16px;margin-left:22px;flex-wrap:wrap}
+
+.hnav a{
+  color:var(--sky);font-size:12px;letter-spacing:.12em;font-weight:700;
+  text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;
+}
+.hnav a:hover{color:var(--amber)}
+.hnav a:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+
+/* Current page — amber, underlined, not a link you need to guess at. */
+.hnav a[aria-current="page"]{
+  color:var(--amber);
+  border-bottom-color:var(--amber);
+  cursor:default;
+}
+
+@media(max-width:760px){
+  .hnav{display:flex;margin-left:0;width:100%;gap:18px;padding-bottom:4px}
+  .hbar .tag{display:none}
+  .hbar .name{font-size:22px}
+}

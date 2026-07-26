@@ -1,0 +1,18 @@
+{
+  "_comment": "Board rotation weights. Higher = shown more often. Seeded by hand today; scripts/update_weights.py will overwrite these from real Fare Finder search counts once search logging is live. Rotation multiplies a deal's discount score by its weight and by a recency penalty, so popular cities appear often but never permanently.",
+  "_scale": "1.0 = neutral. 1.6 = flagship. 0.4 = long tail.",
+  "default": 0.6,
+  "recency_penalty": {
+    "_comment": "Multiplier applied when a city was on the board recently. Index = days since last shown.",
+    "days": [0.25, 0.45, 0.7, 0.9, 1.0]
+  },
+  "weights": {
+    "NYC": 1.6, "MCO": 1.6, "LAS": 1.5, "MIA": 1.5, "CUN": 1.5,
+    "LAX": 1.4, "DEN": 1.3, "ORD": 1.3, "BOS": 1.2, "SFO": 1.2,
+    "SEA": 1.2, "TPA": 1.2, "FLL": 1.1, "NAS": 1.1, "SJU": 1.1,
+    "MSY": 1.1, "AUS": 1.0, "BNA": 1.0, "PHX": 1.0, "DFW": 1.0,
+    "DCA": 1.0, "PHL": 0.9, "HOU": 0.9, "MBJ": 0.9, "PUJ": 0.9,
+    "AUA": 0.8, "GCM": 0.8,
+    "LON": 1.4, "PAR": 1.3, "ROM": 1.2
+  }
+}

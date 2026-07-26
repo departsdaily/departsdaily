@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>City guides — Departs Daily</title>
+<meta name="description" content="Where to stay at three price points, what is actually worth booking, and which months are cheap — 30 city guides from the Departs Daily board.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="css/nav-fix.css">
+<script src="js/nav.js" defer></script>
+<style>
+.gfilter{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 4px}
+.gf{background:var(--tile);border:2px solid var(--edge);border-radius:9px;color:var(--dim);
+ font-family:var(--mono);font-size:12px;letter-spacing:.08em;padding:9px 15px;cursor:pointer}
+.gf:hover{border-color:var(--sky);color:var(--white)}
+.gf[aria-pressed=true]{background:var(--amber);border-color:var(--amber);color:var(--navy);font-weight:700}
+.gf:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+.gsearch{flex:1;min-width:170px;background:var(--tile);border:2px solid var(--edge);border-radius:9px;
+ color:var(--white);font-family:var(--mono);font-size:14px;padding:10px 13px}
+.gsearch:focus{outline:none;border-color:var(--amber)}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:12px;margin:18px 0}
+.gc{display:flex;flex-direction:column;background:var(--panel);border:2px solid var(--edge);
+ border-radius:13px;padding:16px;text-decoration:none;transition:border-color .13s,transform .13s}
+.gc:hover{border-color:var(--amber);transform:translateY(-2px)}
+.gc:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.gc[hidden]{display:none}
+.gc-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.gc-code{display:inline-flex;align-items:center;justify-content:center;min-width:56px;height:38px;
+ background:var(--tile);border:1px solid var(--edge);border-radius:7px;color:var(--amber);
+ font-family:var(--mono);font-weight:700;font-size:17px;letter-spacing:.06em}
+.gc-tag{font-family:var(--mono);font-size:9px;letter-spacing:.13em;color:var(--navy);
+ background:var(--sky);border-radius:4px;padding:3px 7px}
+.gc-city{font-family:var(--disp);font-weight:700;font-size:27px;color:var(--white);
+ letter-spacing:.02em;line-height:1.1;margin:12px 0 10px}
+.gc-meta{display:flex;gap:14px;flex-wrap:wrap;color:var(--dim);font-size:10.5px;letter-spacing:.09em;
+ padding-bottom:13px;border-bottom:1px solid var(--edge)}
+.gc-meta b{color:var(--white);font-weight:700}
+.gc-go{margin-top:12px;color:var(--sky);font-size:11px;letter-spacing:.12em;font-weight:700}
+.gc:hover .gc-go{color:var(--amber)}
+.gnone{padding:40px;text-align:center;color:var(--dim);font-size:14px;
+ border:1px dashed var(--edge);border-radius:13px}
+.gnone[hidden]{display:none}
+@media(max-width:520px){.ggrid{grid-template-columns:1fr 1fr;gap:9px}
+ .gc{padding:13px}.gc-city{font-size:21px}.gc-meta{font-size:9.5px;gap:9px}}
+</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5064929428745790" crossorigin="anonymous"></script>
+</head><body>
+
+<header><div class="wrap hbar">
+  <img src="logo.png" alt="Departs Daily logo">
+  <a class="name" href="index.html">DEPARTS <span style="color:var(--amber)">DAILY</span></a>
+  <nav class="hnav" aria-label="Site"></nav>
+  <div class="tag">30 CITIES</div>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">CITY GUIDES</div>
+    <h1>Know before <span class="amber">you go</span></h1>
+    <p class="sub">Every city on the board has a guide: where to stay at three price points, what is
+    actually worth booking, and which months are cheap. Typical fares are round trip from Charlotte —
+    domestic figures come from U.S. DOT data, international are our estimates.</p>
+  </div>
+
+  <section style="padding-top:8px">
+    <div class="gfilter">
+      <button class="gf" data-f="*" aria-pressed="true">ALL 30</button>
+      <button class="gf" data-f="d">DOMESTIC</button>
+      <button class="gf" data-f="i">INTERNATIONAL</button>
+      <input class="gsearch" id="gq" type="search" placeholder="Search a city or code…" aria-label="Search city guides">
+    </div>
+
+    <div class="ggrid" id="ggrid">
+      <a class="gc" href="destinations/new-york.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">NYC</span></div>
+        <div class="gc-city">New York City</div>
+        <div class="gc-meta"><span>TYPICAL <b>$382</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/boston.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">BOS</span></div>
+        <div class="gc-city">Boston</div>
+        <div class="gc-meta"><span>TYPICAL <b>$492</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/miami.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">MIA</span></div>
+        <div class="gc-city">Miami</div>
+        <div class="gc-meta"><span>TYPICAL <b>$426</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/fort-lauderdale.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">FLL</span></div>
+        <div class="gc-city">Ft. Lauderdale</div>
+        <div class="gc-meta"><span>TYPICAL <b>$426</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/washington-dc.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">DCA</span></div>
+        <div class="gc-city">Washington DC</div>
+        <div class="gc-meta"><span>TYPICAL <b>$412</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/chicago.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">ORD</span></div>
+        <div class="gc-city">Chicago</div>
+        <div class="gc-meta"><span>TYPICAL <b>$416</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/dallas.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">DFW</span></div>
+        <div class="gc-city">Dallas</div>
+        <div class="gc-meta"><span>TYPICAL <b>$548</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/orlando.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">MCO</span></div>
+        <div class="gc-city">Orlando</div>
+        <div class="gc-meta"><span>TYPICAL <b>$416</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/los-angeles.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">LAX</span></div>
+        <div class="gc-city">Los Angeles</div>
+        <div class="gc-meta"><span>TYPICAL <b>$662</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/denver.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">DEN</span></div>
+        <div class="gc-city">Denver</div>
+        <div class="gc-meta"><span>TYPICAL <b>$440</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/philadelphia.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">PHL</span></div>
+        <div class="gc-city">Philadelphia</div>
+        <div class="gc-meta"><span>TYPICAL <b>$424</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/houston.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">HOU</span></div>
+        <div class="gc-city">Houston</div>
+        <div class="gc-meta"><span>TYPICAL <b>$434</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/vegas.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">LAS</span></div>
+        <div class="gc-city">Las Vegas</div>
+        <div class="gc-meta"><span>TYPICAL <b>$646</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/phoenix.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">PHX</span></div>
+        <div class="gc-city">Phoenix</div>
+        <div class="gc-meta"><span>TYPICAL <b>$660</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/tampa.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">TPA</span></div>
+        <div class="gc-city">Tampa</div>
+        <div class="gc-meta"><span>TYPICAL <b>$474</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/nashville.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">BNA</span></div>
+        <div class="gc-city">Nashville</div>
+        <div class="gc-meta"><span>TYPICAL <b>$434</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/new-orleans.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">MSY</span></div>
+        <div class="gc-city">New Orleans</div>
+        <div class="gc-meta"><span>TYPICAL <b>$462</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/san-francisco.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">SFO</span></div>
+        <div class="gc-city">San Francisco</div>
+        <div class="gc-meta"><span>TYPICAL <b>$738</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/seattle.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">SEA</span></div>
+        <div class="gc-city">Seattle</div>
+        <div class="gc-meta"><span>TYPICAL <b>$694</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc" href="destinations/austin.html" data-k="d">
+        <div class="gc-top"><span class="gc-code">AUS</span></div>
+        <div class="gc-city">Austin</div>
+        <div class="gc-meta"><span>TYPICAL <b>$648</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/cancun.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">CUN</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Cancún</div>
+        <div class="gc-meta"><span>TYPICAL <b>$520</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/punta-cana.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">PUJ</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Punta Cana</div>
+        <div class="gc-meta"><span>TYPICAL <b>$560</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/montego-bay.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">MBJ</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Montego Bay</div>
+        <div class="gc-meta"><span>TYPICAL <b>$540</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/nassau.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">NAS</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Nassau</div>
+        <div class="gc-meta"><span>TYPICAL <b>$480</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/aruba.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">AUA</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Aruba</div>
+        <div class="gc-meta"><span>TYPICAL <b>$620</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/san-juan.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">SJU</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">San Juan, PR</div>
+        <div class="gc-meta"><span>TYPICAL <b>$420</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/grand-cayman.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">GCM</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Grand Cayman</div>
+        <div class="gc-meta"><span>TYPICAL <b>$640</b></span><span>CHEAP <b>SEP</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/london.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">LON</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">London</div>
+        <div class="gc-meta"><span>TYPICAL <b>$850</b></span><span>CHEAP <b>JAN–FEB</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/paris.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">PAR</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Paris</div>
+        <div class="gc-meta"><span>TYPICAL <b>$900</b></span><span>CHEAP <b>JAN–FEB</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+      <a class="gc intl" href="destinations/rome.html" data-k="i">
+        <div class="gc-top"><span class="gc-code">ROM</span><span class="gc-tag">INTL</span></div>
+        <div class="gc-city">Rome</div>
+        <div class="gc-meta"><span>TYPICAL <b>$950</b></span><span>CHEAP <b>JAN–FEB</b></span></div>
+        <div class="gc-go">READ THE GUIDE →</div>
+      </a>
+    </div>
+    <div class="gnone" id="gnone" hidden>No guide matches that. Try a city name or airport code.</div>
+  </section>
+</div>
+
+<script>
+/* Filter + search run over cards already in the page — no requests, instant. */
+(function(){
+  var grid=document.getElementById("ggrid"), q=document.getElementById("gq"),
+      none=document.getElementById("gnone"), cards=[].slice.call(grid.children), filt="*";
+  function apply(){
+    var t=q.value.trim().toLowerCase(), shown=0;
+    cards.forEach(function(c){
+      var okF = filt==="*" || c.dataset.k===filt;
+      var okQ = !t || c.textContent.toLowerCase().indexOf(t)>-1;
+      c.hidden = !(okF && okQ);
+      if(!c.hidden) shown++;
+    });
+    none.hidden = shown>0;
+  }
+  document.querySelector(".gfilter").addEventListener("click",function(e){
+    var b=e.target.closest(".gf"); if(!b) return;
+    [].forEach.call(b.parentNode.querySelectorAll(".gf"),function(x){x.setAttribute("aria-pressed","false")});
+    b.setAttribute("aria-pressed","true"); filt=b.dataset.f; apply();
+  });
+  q.addEventListener("input",apply);
+})();
+</script>
+</body></html>

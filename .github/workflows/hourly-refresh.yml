@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "departs-daily-bot"
           git config user.email "board@departsdaily.com"
-          git add site/js/deals-data.js
+          git add site/js/deals-data.js state/
           git commit -m "Board refresh $(date -u '+%F %H:%M UTC')" || echo "No changes to commit"
           # Rebase before pushing: any concurrent commit to main (a manual
           # push, or another workflow) otherwise rejects this as non-fast-
@@ -42,6 +42,8 @@ jobs:
           git pull --rebase origin main || git rebase --abort || true
           git push origin HEAD:main
 
+      # Still hosted on Netlify. When the Cloudflare Pages migration happens
+      # (see GO-LIVE.md Part 1), delete this step — Cloudflare builds on push.
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

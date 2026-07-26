@@ -4,7 +4,7 @@ Departs Daily — hourly board refresh.
 
 Pulls the cheapest real round-trip fares for all 30 tracked CLT routes from
 the Travelpayouts/Aviasales prices API and rewrites site/js/deals-data.js
-(BOARD stamp, daily DEALS board, weekly top-10 DEALS_WEEK board).
+(BOARD stamp + the daily DEALS board).
 
 Design rules (match the site's honesty guarantees):
   - Only real fares from the API ever reach the board — nothing is invented.
@@ -43,6 +43,13 @@ ROUTES = {
 # longer trip windows, and guaranteed board slots (higher-value bookings).
 INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM"}
 
+# Board shape. International gets guaranteed slots because those bookings are
+# worth several times a domestic one — bigger fares, and the traveller goes on
+# to book hotels and tours through the city guide. Ordering only: prices and
+# computed discount badges are never adjusted to favour them.
+DAILY_ROWS  = 8
+DAILY_INTL  = 3
+
 AIRLINES = {
  "AA":"American","DL":"Delta","UA":"United","WN":"Southwest","B6":"JetBlue",
  "NK":"Spirit","F9":"Frontier","AS":"Alaska","G4":"Allegiant","SY":"Sun Country",
@@ -54,6 +61,58 @@ AIRLINES = {
  "YV":"American Eagle","OH":"American Eagle","MQ":"American Eagle","PT":"American Eagle",
  "9E":"Delta Connection","OO":"SkyWest","YX":"Republic","ZW":"Air Wisconsin","C5":"CommuteAir",
 }
+
+WEIGHTS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "..", "config", "city-weights.json")
+ROTATION_STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "..", "state", "rotation.json")
+
+def load_weights():
+    try:
+        with open(WEIGHTS_PATH, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {"default": 1.0, "weights": {}, "recency_penalty": {"days": [1.0]}}
+
+def rotation_score(deal, cfg, last_shown, today):
+    """Discount, weighted by how much people want the city and how recently
+    we showed it. Popular cities surface more; nothing sits on the board
+    forever; the 150th city still gets its turn."""
+    w = cfg.get("weights", {}).get(deal["to"], cfg.get("default", 1.0))
+    seen = last_shown.get(deal["to"])
+    pen = 1.0
+    if seen:
+        try:
+            days = (today - date.fromisoformat(seen)).days
+            scale = cfg.get("recency_penalty", {}).get("days", [1.0])
+            pen = scale[min(days, len(scale) - 1)]
+        except ValueError:
+            pass
+    return deal["pct"] * w * pen
+
+# --- Carrier plausibility -------------------------------------------------
+# prices_for_dates returns the FIRST/validating carrier, not the operator of
+# every leg. That is how a one-stop CLT-LON came back labelled "Frontier".
+# Regional feeders never operate a whole trip alone, and no US ultra-low-cost
+# carrier flies the Atlantic, so when the label is impossible for the route we
+# say so instead of printing a wrong airline name.
+REGIONAL = {"YV","OH","MQ","PT","9E","OO","YX","ZW","C5"}          # feeders only
+NO_ATLANTIC = {"F9","WN","G4","SY","MX","XP","NK","AS","B6"}       # no CLT-Europe service
+TRANSATLANTIC_DESTS = {"LON","PAR","ROM"}
+
+def carrier_label(code, stops, dest):
+    """Return (airline_name, self_transfer_flag)."""
+    name = AIRLINES.get(code, code)
+    if stops == 0:
+        return name, False                      # single carrier, verifiable
+    if code in REGIONAL:
+        return "", False                        # this is a feeder leg, not the trip
+    if dest in TRANSATLANTIC_DESTS and code in NO_ATLANTIC:
+        # Cheapest transatlantic fares are often self-transfer itineraries whose
+        # first hop is a domestic low-cost carrier. The connection is NOT
+        # protected, and the traveller should know that before they book.
+        return "", True
+    return name, False
 
 def fetch(dest):
     url = ("https://api.travelpayouts.com/aviasales/v3/prices_for_dates"
@@ -88,17 +147,23 @@ def pick(dest, fares, today):
             continue
         if best is None or price < best["price"]:
             stops = max(f.get("transfers", 0), f.get("return_transfers", 0))
+            # The API returns the FIRST/validating carrier, not the operating
+            # carrier for every leg. On a connecting itinerary that name is
+            # frequently wrong (a $723 CLT-LON "Frontier" fare is a self-transfer
+            # whose first hop is Frontier), so we only claim an airline when the
+            # trip is nonstop and the carrier is therefore verifiable.
+            al, self_transfer = carrier_label(f.get("airline", ""), int(stops), dest)
             best = {"to": dest, "city": ROUTES[dest][0], "price": int(price),
                     "d1": d1.date().isoformat(), "d2": d2.date().isoformat(),
-                    "dep": dep_time(d1),
-                    "al": AIRLINES.get(f.get("airline", ""), f.get("airline", "")),
-                    "stops": int(stops)}
+                    "dep": dep_time(d1), "al": al, "stops": int(stops),
+                    "xfer": 1 if self_transfer else 0}
     return best
 
 def js_deal(d, exp=None):
     s = (f'{{to:"{d["to"]}",city:{json.dumps(d["city"], ensure_ascii=False)},'
          f'price:{d["price"]},d1:"{d["d1"]}",d2:"{d["d2"]}",dep:"{d["dep"]}",'
          f'al:{json.dumps(d["al"], ensure_ascii=False)},stops:{d["stops"]}')
+    if d.get("xfer"): s += ',xfer:1' 
     if exp: s += f',exp:"{exp}"'
     return s + "}"
 
@@ -130,33 +195,41 @@ def main():
               f"({len(failed)} failed) — keeping yesterday's board.")
         sys.exit(1)
 
+    # Daily rows expire after 2 days: cheap fares rarely live longer, and an
+    # expired row removes itself rather than showing a price nobody can book.
+    exp_daily = (today + timedelta(days=2)).isoformat()
+
     by_value = sorted(found, key=lambda d: -d["pct"])
     intl_found = [d for d in by_value if d["to"] in INTL]
 
-    # Daily board: 5 best values + the single best international deal.
-    daily = by_value[:5]
-    for d in intl_found:
-        if d not in daily:
-            daily.append(d); break
-    if len(daily) < 6:
-        daily = by_value[:6]
+    # Daily board: 8 rows, with 3 guaranteed international slots.
+    # International trips are worth more to us (bigger fares, and the traveller
+    # goes on to book hotels and tours) AND to the visitor planning a real
+    # holiday rather than a weekend. This changes ORDERING ONLY — every price
+    # and every computed "% below average" is untouched, so a guaranteed slot
+    # can never turn into an overstated saving.
+    cfg = load_weights()
+    try:
+        with open(ROTATION_STATE, encoding="utf-8") as fh:
+            last_shown = json.load(fh)
+    except (OSError, ValueError):
+        last_shown = {}
 
-    # Weekly top 10: guarantee up to 3 international slots.
-    intl_slots = intl_found[:3]
-    weekly = [d for d in by_value if d not in intl_slots][:10 - len(intl_slots)] + intl_slots
-    weekly = sorted(weekly, key=lambda d: -d["pct"])
-    exp_daily = (today + timedelta(days=2)).isoformat()
+    ranked = sorted(found, key=lambda d: -rotation_score(d, cfg, last_shown, today))
+    intl_slots = [d for d in ranked if d["to"] in INTL][:DAILY_INTL]
+    dom_slots  = [d for d in ranked if d not in intl_slots][:DAILY_ROWS - len(intl_slots)]
+    daily = sorted(dom_slots + intl_slots, key=lambda d: -d["pct"])
+    if len(daily) < DAILY_ROWS:                      # thin cache - backfill on value
+        daily = by_value[:DAILY_ROWS]
 
-    # Current Mon–Sun week label, e.g. "WEEK OF JUL 27–AUG 2"
-    mon = today - timedelta(days=today.weekday())
-    sun = mon + timedelta(days=6)
-    M = lambda d: d.strftime("%b").upper()
-    week_of = (f"WEEK OF {M(mon)} {mon.day}–{sun.day}" if mon.month == sun.month
-               else f"WEEK OF {M(mon)} {mon.day}–{M(sun)} {sun.day}")
+    for d in daily:
+        last_shown[d["to"]] = today.isoformat()
+    os.makedirs(os.path.dirname(ROTATION_STATE), exist_ok=True)
+    with open(ROTATION_STATE, "w", encoding="utf-8") as fh:
+        json.dump(last_shown, fh, indent=1)
 
     sep = ",\n "
     daily_js = sep.join(js_deal(d, exp_daily) for d in daily)
-    weekly_js = sep.join(js_deal(d) for d in weekly)
     tz = now.strftime("%z")
     updated = now.strftime("%Y-%m-%dT%H:%M:%S") + tz[:3] + ":" + tz[3:]
     body = f"""/* =====================================================================
@@ -169,17 +242,13 @@ def main():
    ===================================================================== */
 const BOARD={{
  updated:"{updated}",
- weekOf:"{week_of}",
- weekExp:"{sun.isoformat()}"
 }};
 const DEALS={{CLT:[
  {daily_js}]}};
-const DEALS_WEEK={{CLT:[
- {weekly_js}]}};
 """
     with open(out_path, "w", encoding="utf-8") as fh:
         fh.write(body)
-    print(f"WROTE {out_path}: {len(daily)} daily deals, {len(weekly)} weekly, "
+    print(f"WROTE {out_path}: {len(daily)} daily deals, "
           f"stamp {now.strftime('%a %b %d %I:%M%p ET')}")
 
 if __name__ == "__main__":
