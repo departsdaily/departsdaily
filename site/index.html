@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Departs Daily — Cheap flights from your airport. Every day.</title>
-<meta name="description" content="Data-driven flight deals from CLT and 9 more US airports. Every fare compared against its route average. Updated daily at 7AM.">
+<meta name="description" content="Data-driven flight deals from CLT and 9 more US airports. Every fare compared against its route average. Updated every hour, around the clock.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -25,6 +25,23 @@ header{position:sticky;top:0;background:rgba(11,24,41,.94);backdrop-filter:blur(
 .hbar img{width:46px;height:46px;border-radius:50%}
 .hbar .name{font-family:var(--disp);font-weight:700;font-size:26px;letter-spacing:.04em}
 .hbar .tag{color:var(--sky);font-size:12px;margin-left:auto;text-align:right}
+.hnav{display:flex;gap:16px;margin-left:22px}
+.hnav a{color:var(--sky);font-size:12px;letter-spacing:.12em;text-decoration:none;font-weight:700}
+.hnav a:hover{color:var(--amber)}
+@media(max-width:760px){.hnav{display:none}}
+
+.triprow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));background:var(--panel)}
+.tripbtn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 10px;color:var(--amber);font-weight:700;font-size:13px;letter-spacing:.1em;text-decoration:none;border-right:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+.tripbtn:hover{background:#16304f}
+.tripbtn small{color:var(--dim);font-size:10px;letter-spacing:.08em;font-weight:500}
+.tripbtn .em{font-size:22px}
+
+.guidegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;margin:18px 0 8px}
+.guidecard{background:var(--panel);border:2px solid var(--edge);border-radius:12px;padding:16px;text-decoration:none;display:block}
+.guidecard:hover{border-color:var(--amber)}
+.guidecard .code{font-weight:700;font-size:22px;color:var(--amber)}
+.guidecard .gcity{font-family:var(--disp);font-weight:600;font-size:20px;color:var(--white);margin:2px 0 6px}
+.guidecard .st{font-size:11px;letter-spacing:.1em;color:var(--green)}
 
 .hero{padding:44px 0 8px}
 .kicker{color:var(--sky);font-size:13px;letter-spacing:.18em}
@@ -56,6 +73,7 @@ h1 .amber{color:var(--amber)}
 
 .ns{color:var(--green)}.st{color:var(--amber)}
 .routesel{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.rlbl{flex-basis:100%;color:var(--dim);font-size:11px;letter-spacing:.16em;margin-top:8px}
 .chartbox{background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:18px}
 .chartbox h3{font-family:var(--disp);font-size:24px;margin-bottom:4px}
 .chartnote{color:var(--dim);font-size:12px;line-height:1.6;margin-top:10px}
@@ -85,31 +103,76 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 @media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+<script data-noptimize="1" data-cfasync="false" data-wpfc-render="false" data-no-defer="1">
+  (function () {
+    var script = document.createElement("script");
+    script.async = 1;
+    script.src = 'https://emrldtp.cc/NTU0NjU4.js?t=554658';
+    document.head.appendChild(script);
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPF0WKF1J5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YPF0WKF1J5');
+</script>
 </head>
 <body>
 <header><div class="wrap hbar">
   <img src="logo.png" alt="Departs Daily logo">
   <span class="name">DEPARTS <span style="color:var(--amber)">DAILY</span></span>
-  <span class="tag">CHEAP FLIGHTS. EVERY DAY.<br>UPDATED 7AM ET</span>
+  <nav class="hnav" aria-label="Site">
+    <a href="#guides">CITY GUIDES</a>
+    <a href="book.html">BOOKING DESK</a>
+    <a href="gear.html">GEAR</a>
+    <a href="disclosure.html">DISCLOSURE</a>
+  </nav>
+  <span class="tag">CHEAP FLIGHTS. EVERY DAY.<br>UPDATED EVERY HOUR</span>
 </div></header>
 
 <main class="wrap">
 <div class="hero">
-  <div class="kicker">■ LIVE DEAL BOARD — FRI JUL 24 2026</div>
+  <div class="kicker">■ LIVE DEAL BOARD — <span id="boardDate"></span></div>
   <h1>TODAY'S CHEAPEST FLIGHTS<br>OUT OF <span class="amber" id="heroCity">CLT</span></h1>
-  <p class="sub">Every fare below is compared against its route's typical price, so you know a deal is actually a deal. Tap any row to open the exact dates in Google Flights.</p>
+  <p class="sub">Every fare below is compared against its route's typical price, so you know a deal is actually a deal. Tapping a row runs a <b style="color:var(--white)">live search</b> for those exact dates — the price you book is always today's price, never a cached one.</p>
 </div>
 
-<p class="sub" style="margin-top:10px">City guides: <a href="destinations/vegas.html">Las Vegas</a> · <a href="destinations/cancun.html">Cancún</a> · <a href="destinations/miami.html">Miami</a> · <a href="destinations/fort-lauderdale.html">Ft. Lauderdale</a> · <a href="destinations/orlando.html">Orlando</a></p>
 <div class="citybar" id="citybar" role="tablist" aria-label="Choose your airport"></div>
 
 <div class="board">
-  <div class="bhead"><span>DEPARTURES — <span id="boardCity">CHARLOTTE (CLT)</span></span><span>ROUND TRIP</span></div>
+  <div class="bhead"><span>DEPARTURES — <span id="boardCity">CHARLOTTE (CLT)</span></span><span id="boardStamp">ROUND TRIP</span></div>
   <div id="rows"></div>
-  <div class="bfoot">Every fare verified in Google Flights at time of posting. Fares change fast and are not guaranteed — always confirm at booking. Averages based on typical route pricing.</div>
+  <div class="bfoot">Every fare was verified at the board's last update (shown above). Tapping a row opens a <b style="color:var(--white)">live search for those exact dates</b> — so what you book is today's real price. Deals expire off this board automatically; if a fare jumped since our check, the live search shows you the current best. Averages based on typical route pricing. Some links are affiliate links — we may earn a commission at no cost to you. <a href="disclosure.html">Details</a>.</div>
+</div>
+
+<div class="board" style="margin-top:18px">
+  <div class="bhead"><span>DEALS OF THE WEEK — <span id="weekCity">CHARLOTTE (CLT)</span></span><span id="weekStamp">TOP 10 · ROUND TRIP</span></div>
+  <div id="weekRows"></div>
+  <div class="bfoot">The ten best fares we've verified this week across all <b style="color:var(--white)">30 tracked destinations</b> — these hold up day to day and refresh every Monday. "Below average" compares to the DOT/BTS published average fare for that route where available (see methodology in the footer); international averages are our estimates from public fare tracking. Tap any row for a live search on those dates.</div>
+</div>
+
+<div class="board" style="margin-top:18px">
+  <div class="bhead"><span>BOOK THE REST OF THE TRIP</span><span><a href="book.html" style="color:var(--amber);text-decoration:none">FULL BOOKING DESK ›</a></span></div>
+  <div class="triprow">
+    <a class="tripbtn" data-aff="hotels" href="#"><span class="em">🏨</span>HOTELS<small>COMPARE STAY PRICES</small></a>
+    <a class="tripbtn" data-aff="tours" href="#"><span class="em">🎟️</span>TOURS<small>SKIP-THE-LINE PICKS</small></a>
+    <a class="tripbtn" data-aff="cars" href="#"><span class="em">🚗</span>CARS<small>RENTAL COMPARISON</small></a>
+    <a class="tripbtn" data-aff="esim" href="#"><span class="em">📶</span>eSIM<small>DATA THAT JUST WORKS</small></a>
+    <a class="tripbtn" data-aff="transfers" href="#"><span class="em">🚖</span>TRANSFERS<small>DRIVER AT ARRIVALS</small></a>
+    <a class="tripbtn" data-aff="insurance" href="#"><span class="em">🛡️</span>INSURANCE<small>COVER THE TRIP</small></a>
+  </div>
 </div>
 
 <div class="adslot">AD SLOT — 728×90 / RESPONSIVE (AdSense code goes here)</div>
+
+<section id="guides">
+  <h2>Know before you go — 30 city guides</h2>
+  <p class="sub">Every destination we track gets a full briefing: the hotels we'd book at three budgets, the tours worth the money, car rental &amp; airport transfer advice, and how to do it cheap.</p>
+  <div class="guidegrid" id="guidegrid"></div>
+</section>
 
 <section>
   <h2>10 airports. One board.</h2>
@@ -120,20 +183,21 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 <section>
   <h2>How the numbers work</h2>
   <div class="method">
-    <div class="mcard"><b>1 · Scan.</b> Every morning at 7AM we sweep Google Flights, Kayak, airline web specials, and mistake-fare trackers across 30 routes.</div>
-    <div class="mcard"><b>2 · Compare.</b> Each fare is measured against the route's typical round-trip price. No baseline, no post.</div>
+    <div class="mcard"><b>1 · Scan.</b> Every hour, around the clock, our system sweeps live airfare search data across all 30 tracked routes from CLT — real fares found in real searches.</div>
+    <div class="mcard"><b>2 · Compare.</b> Each fare is measured against the route's average price — official DOT/BTS government data on domestic routes, clearly-labeled estimates on international ones. No baseline, no post.</div>
     <div class="mcard"><b>3 · Rank.</b> Only the top savings make the board — and nothing repeats within 6 days, so the board is always fresh.</div>
   </div>
 </section>
 
 <section>
-  <h2>When is it cheap? Every route, every month.</h2>
-  <p class="sub">Typical round-trip cost from CLT by month. The amber line is the annual average — bars under the line are the months to book. Green dot = today's deal.</p>
+  <h2>When is it cheap from <span class="amber" id="chartOrigin">CLT</span>? 30 routes, every month.</h2>
+  <p class="sub">All 30 destinations we track — 19 domestic and 11 international &amp; Caribbean. The amber line is the route's annual round-trip average; bars under the line are the months to book. Green dot = a deal on today's board. Pick your airport above — this section follows it.</p>
   <div class="routesel" id="routesel"></div>
+  <div class="empty" id="routesEmpty" style="display:none;border:2px solid var(--edge);border-radius:14px">Route pricing for this airport opens with its board.<br>Get on the email list below and you'll know the day it goes live.</div>
   <div class="chartbox">
     <h3 id="chartTitle"></h3>
     <div id="chart"></div>
-    <p class="chartnote">Deal scores on the board compare against the <b style="color:var(--white)">month of travel</b>, not the annual average — a fare that beats spring-break pricing is a bigger win than one that beats a slow September. Baselines currently seeded from typical route pricing; DOT route data integration in progress.</p>
+    <p class="chartnote"><b style="color:var(--white)">Where these numbers come from:</b> for domestic routes, the annual average is official U.S. DOT/BTS data — the Consumer Airfare Report's average fare for this city-pair across all four quarters of 2025 (each-way fares doubled to a round-trip equivalent; includes all cabins, taxes and fees). DOT does not publish international city-pair fares, so international averages are our estimates from public fare tracking and are labeled as estimates. The month-by-month bars on every route are an <b style="color:var(--white)">estimated seasonal pattern</b> scaled to the annual average — a booking guide, not a price quote. "% below average" on the deal boards compares a deal's round-trip price to this annual average.</p>
   </div>
 </section>
 
@@ -143,8 +207,9 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <div class="signup">
     <h2>Got a suggestion?</h2>
     <p class="sub" style="margin:0 auto 16px">Want a route tracked, a city added, or a feature built? Tell us — this board is built around its riders.</p>
-    <form id="sugform">
-      <input type="text" id="sugtext" required placeholder="e.g. Track CLT to Denver next" aria-label="Your suggestion">
+    <form id="sugform" name="suggestion" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="suggestion">
+      <input type="text" id="sugtext" name="suggestion" required placeholder="e.g. Track CLT to Denver next" aria-label="Your suggestion">
       <button type="submit">Send it</button>
     </form>
   </div>
@@ -154,8 +219,9 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
   <div class="signup">
     <h2>Get the board by email</h2>
     <p class="sub" style="margin:0 auto 16px">One email, every morning. The deals, the dates, the links. Free.</p>
-    <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--green)\'>You are on the list. First board arrives tomorrow at 7AM. ✈</p>'">
-      <input type="email" required placeholder="you@email.com" aria-label="Email address">
+    <form id="signupform" name="board-signup" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="board-signup">
+      <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
       <button type="submit">Board now</button>
     </form>
   </div>
@@ -164,10 +230,17 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 
 <footer><div class="wrap">
   <p><b style="color:var(--white)">Departs Daily</b> · departsdaily.com · @CLTdeparts on Instagram, TikTok &amp; YouTube</p>
-  <p>Disclosure: some links on this site may be affiliate links, meaning we may earn a commission if you book — at no extra cost to you. We only feature fares our data says are genuinely below typical prices.</p>
+  <p><a href="#guides">City Guides</a> · <a href="book.html">Booking Desk</a> · <a href="gear.html">Travel Gear</a> · <a href="disclosure.html">Affiliate Disclosure</a> · <a href="terms.html">Terms of Use</a> · <a href="privacy.html">Privacy Policy</a></p>
+  <p><b style="color:var(--white)">Important disclaimers.</b> Departs Daily is an independent, advertising- and affiliate-supported publisher of travel information. We are not a travel agency, airline, or seller of travel; we do not sell tickets, take payments, or make bookings. All bookings are made directly with third-party providers under their own terms, prices, and policies.</p>
+  <p><b style="color:var(--white)">Prices.</b> Airfares change constantly and without notice. Every fare shown was verified at the date and time stamped on the board, is not guaranteed, and may no longer be available. Clicking a deal runs a live search so you always see the current price before booking; the price shown by the booking site at checkout is the only price that applies. Deals automatically expire off our boards after their posted window.</p>
+  <p><b style="color:var(--white)">Averages &amp; methodology.</b> "Below average" comparisons on domestic routes use the U.S. DOT/BTS Consumer Airfare Report (average city-pair fares, all four quarters of 2025, each-way fares doubled to a round-trip equivalent; includes all cabins, taxes and fees). DOT does not publish international city-pair fares; international averages and all month-by-month seasonality patterns are our own estimates from public fare tracking, provided for general guidance only. Departs Daily is not affiliated with or endorsed by the U.S. Department of Transportation.</p>
+  <p><b style="color:var(--white)">Trademarks.</b> Airline, hotel, and brand names are trademarks of their respective owners and are used for identification only; their use implies no affiliation or endorsement.</p>
+  <p>Affiliate disclosure: some links on this site are affiliate links, meaning we may earn a commission if you book or buy — at no extra cost to you. See our full <a href="disclosure.html">Affiliate Disclosure</a> and <a href="terms.html">Terms of Use</a>. All content is provided "as is" without warranties of any kind; your use of this site is at your own risk and subject to the Terms of Use.</p>
   <div class="lights"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 </div></footer>
 
+<script src="js/affiliates.js"></script>
+<script src="js/deals-data.js"></script>
 <script>
 const CITIES=[
  {code:"CLT",name:"CHARLOTTE (CLT)",live:true},
@@ -177,54 +250,173 @@ const CITIES=[
  {code:"LAS",name:"LAS VEGAS (LAS)"},{code:"MCO",name:"ORLANDO (MCO)"},
  {code:"MIA",name:"MIAMI (MIA)"}];
 
-/* Daily data — replace this object each morning (generated by the 7AM scan) */
-const DEALS={CLT:[]};
+/* =====================================================================
+   DAILY BOARD DATA now lives in js/deals-data.js — a small generated
+   file rewritten automatically every hour from live
+   Travelpayouts fare data (see scripts/update_deals.py in the repo).
+   BOARD, DEALS and DEALS_WEEK are defined there and loaded above.
+   Never hand-edit deals here; the generator owns that file.
+   ===================================================================== */
 
-/* Monthly typical round-trip cost per route (Jan–Dec) + annual average.
-   SEED ESTIMATES — being replaced with DOT/BTS route data. */
-const ROUTES={
- LAS:{city:"Las Vegas",m:[318,342,398,410,388,352,368,344,306,338,362,402]},
- CUN:{city:"Cancún",m:[520,588,652,610,478,442,468,430,382,414,462,548]},
- FLL:{city:"Ft. Lauderdale",m:[178,196,242,208,172,158,166,152,138,148,168,204]},
- MIA:{city:"Miami",m:[212,238,286,244,198,182,194,178,158,172,196,248]},
- MCO:{city:"Orlando",m:[168,182,228,206,172,188,204,176,148,162,178,214]}};
-Object.values(ROUTES).forEach(r=>r.avg=Math.round(r.m.reduce((a,b)=>a+b)/12));
+/* Freshness engine: stamp the board + drop expired deals automatically */
+const UPD=new Date(BOARD.updated);
+const ET={timeZone:"America/New_York"};
+const fmtDay=d=>d.toLocaleDateString("en-US",{...ET,weekday:"short",month:"short",day:"numeric"}).toUpperCase();
+document.getElementById("boardDate").textContent=fmtDay(UPD)+" "+UPD.getFullYear();
+document.getElementById("boardStamp").textContent="ROUND TRIP · VERIFIED "+fmtDay(UPD)+" "+
+  UPD.toLocaleTimeString("en-US",{...ET,hour:"numeric",minute:"2-digit"}).replace(" ","")+" ET";
+function liveDeals(list){
+  const now=new Date();
+  return (list||[]).filter(x=>{
+    if(x.exp && new Date(x.exp+"T23:59:59-04:00")<now) return false;   // deal expired
+    if(new Date(x.d1+"T23:59:59-04:00")<now) return false;             // travel date passed
+    return true;
+  });
+}
 
-const GUIDE={"LAS": "vegas", "CUN": "cancun", "FLL": "fort-lauderdale", "MIA": "miami", "MCO": "orlando"};
-const gf=(o,t,a,b)=>`https://www.google.com/travel/flights?q=Flights%20from%20${o}%20to%20${t}%20on%20${a}%20through%20${b}`;
+/* =====================================================================
+   30 TRACKED DESTINATIONS FROM CLT (11 international/Caribbean).
+   src:"DOT" — annual average comes from the U.S. DOT/BTS Consumer
+     Airfare Report (Table 6, all four quarters of 2025 averaged).
+     DOT publishes EACH-WAY fares (all cabins, taxes/fees included);
+     we double them for a round-trip equivalent. Official government
+     data — the strongest baseline that exists.
+   src:"EST" — DOT does not publish international city-pair fares, so
+     these averages are our estimates from public fare tracking, and
+     the site labels them as estimates everywhere they appear.
+   Monthly bars are an ESTIMATED seasonal pattern scaled to the annual
+   average (the chart note says exactly that).
+   ===================================================================== */
+const PATTERNS={ // Jan..Dec multipliers by destination type (estimated)
+ city:   [.95,.97,1.05,1.04,1.00,1.03,1.05,.98,.90,.97,.99,1.07],
+ beach:  [1.10,1.16,1.22,1.08,.92,.88,.94,.86,.80,.86,.94,1.14],
+ leisure:[.94,1.00,1.14,1.06,.98,1.02,1.06,.94,.86,.96,1.00,1.10],
+ europe: [.78,.80,.90,1.00,1.10,1.24,1.28,1.20,1.02,.92,.82,.94]
+};
+/* ROUTES is keyed BY ORIGIN AIRPORT — when a new airport goes live,
+   add its own 30-destination block here and everything below the city
+   selector (daily board, weekly board, when-is-it-cheap charts)
+   updates for that origin automatically. Each destination's `slug`
+   links it to its city guide page in /destinations/. */
+const ROUTES={CLT:{
+ // ------- DOMESTIC (DOT/BTS 2025 averages, each-way ×2) -------
+ NYC:{city:"New York City",slug:"new-york",avg:382,src:"DOT",pat:"city"},
+ BOS:{city:"Boston",slug:"boston",avg:492,src:"DOT",pat:"city"},
+ MIA:{city:"Miami",slug:"miami",avg:426,src:"DOT",pat:"beach"},
+ FLL:{city:"Ft. Lauderdale",slug:"fort-lauderdale",avg:426,src:"DOT",pat:"beach",note:"DOT groups FLL in the Miami metro market"},
+ DCA:{city:"Washington DC",slug:"washington-dc",avg:412,src:"DOT",pat:"city"},
+ ORD:{city:"Chicago",slug:"chicago",avg:416,src:"DOT",pat:"city"},
+ DFW:{city:"Dallas",slug:"dallas",avg:548,src:"DOT",pat:"city"},
+ MCO:{city:"Orlando",slug:"orlando",avg:416,src:"DOT",pat:"leisure"},
+ LAX:{city:"Los Angeles",slug:"los-angeles",avg:662,src:"DOT",pat:"city"},
+ DEN:{city:"Denver",slug:"denver",avg:440,src:"DOT",pat:"city"},
+ PHL:{city:"Philadelphia",slug:"philadelphia",avg:424,src:"DOT",pat:"city"},
+ HOU:{city:"Houston",slug:"houston",avg:434,src:"DOT",pat:"city"},
+ LAS:{city:"Las Vegas",slug:"vegas",avg:646,src:"DOT",pat:"leisure"},
+ PHX:{city:"Phoenix",slug:"phoenix",avg:660,src:"DOT",pat:"leisure"},
+ TPA:{city:"Tampa",slug:"tampa",avg:474,src:"DOT",pat:"beach"},
+ BNA:{city:"Nashville",slug:"nashville",avg:434,src:"DOT",pat:"city"},
+ MSY:{city:"New Orleans",slug:"new-orleans",avg:462,src:"DOT",pat:"city"},
+ SFO:{city:"San Francisco",slug:"san-francisco",avg:738,src:"DOT",pat:"city"},
+ SEA:{city:"Seattle",slug:"seattle",avg:694,src:"DOT",pat:"city"},
+ AUS:{city:"Austin",slug:"austin",avg:648,src:"DOT",pat:"city"},
+ // ------- INTERNATIONAL & CARIBBEAN (estimates — DOT doesn't publish these) -------
+ CUN:{city:"Cancún",slug:"cancun",avg:520,src:"EST",pat:"beach",intl:true},
+ PUJ:{city:"Punta Cana",slug:"punta-cana",avg:560,src:"EST",pat:"beach",intl:true},
+ MBJ:{city:"Montego Bay",slug:"montego-bay",avg:540,src:"EST",pat:"beach",intl:true},
+ NAS:{city:"Nassau",slug:"nassau",avg:480,src:"EST",pat:"beach",intl:true},
+ AUA:{city:"Aruba",slug:"aruba",avg:620,src:"EST",pat:"beach",intl:true},
+ SJU:{city:"San Juan, PR",slug:"san-juan",avg:420,src:"EST",pat:"beach",intl:true,note:"U.S. territory — outside DOT's contiguous-states table"},
+ GCM:{city:"Grand Cayman",slug:"grand-cayman",avg:640,src:"EST",pat:"beach",intl:true},
+ LHR:{city:"London",slug:"london",avg:850,src:"EST",pat:"europe",intl:true},
+ CDG:{city:"Paris",slug:"paris",avg:900,src:"EST",pat:"europe",intl:true},
+ FCO:{city:"Rome",slug:"rome",avg:950,src:"EST",pat:"europe",intl:true}}};
+Object.values(ROUTES).forEach(o=>Object.values(o).forEach(r=>{r.m=PATTERNS[r.pat].map(x=>Math.round(r.avg*x));}));
+
+let curOrigin="CLT"; // the selected departure airport
+
+/* Deal-vs-average label, computed live so it can never overstate:
+   compares the deal's round-trip price to the route's annual average. */
+function dealVar(x){
+  const r=(ROUTES[curOrigin]||{})[x.to];
+  if(!r) return "HOT FARE";
+  const pct=Math.round((1-x.price/r.avg)*100);
+  if(pct<15) return "HOT FARE";
+  return pct+"% BELOW "+(r.src==="DOT"?"DOT 2025 AVG":"TYPICAL (OUR EST.)");
+}
+
+/* Row links go through the affiliate engine (js/affiliates.js):
+   with your Travelpayouts marker set, every row is a tracked search. */
+const gf=(o,t,a,b)=>affFlightSearch(o,t,a,b);
 const tiles=t=>[...t].map(c=>`<span class="tile">${c}</span>`).join("");
 
+/* Full date display with day of week, computed from the exact dates —
+   e.g. "WED SEP 9 → MON SEP 14". Never hand-typed, so it can't be wrong. */
+function fmtTrip(d1,d2){
+  const f=s=>new Date(s+"T12:00:00-04:00")
+    .toLocaleDateString("en-US",{timeZone:"America/New_York",weekday:"short",month:"short",day:"numeric"})
+    .toUpperCase().replace(",","");
+  return f(d1)+" → "+f(d2);
+}
+
+function rowHTML(code,x){
+  const rt=(ROUTES[code]||{})[x.to];
+  const intl=rt&&rt.intl?' · <b class="st">INTL</b>':'';
+  const dep=x.dep?` · <b style="color:var(--white)">DEP ${x.dep}</b>`:"";
+  return `
+   <a class="row" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener">
+     <span class="tiles">${tiles(code)}<span class="arr">›</span>${tiles(x.to)}</span>
+     <span><span class="city">${x.city}</span><br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep} · ${x.al} · <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}</span></span>
+     <span class="price">$${x.price}</span>
+     <span class="var">${dealVar(x)}</span>
+   </a>`;
+}
+
+function renderWeek(code){
+  const c=CITIES.find(x=>x.code===code);
+  document.getElementById("weekCity").textContent=c.name;
+  document.getElementById("weekStamp").textContent="TOP 10 · "+BOARD.weekOf+" · ROUND TRIP";
+  const wr=document.getElementById("weekRows");
+  if(!DEALS_WEEK[code]){wr.innerHTML=`<div class="empty">Weekly deals for ${code} open soon.<br>Get on the email list below and you'll know the day this board goes live.</div>`;return;}
+  if(BOARD.weekExp && new Date(BOARD.weekExp+"T23:59:59-04:00")<new Date()){
+    wr.innerHTML=`<div class="empty">This week's list has expired — a fresh top 10 posts every Monday morning.<br>Get on the email list below so it lands in your inbox.</div>`;return;
+  }
+  const deals=liveDeals(DEALS_WEEK[code]);
+  if(!deals.length){wr.innerHTML=`<div class="empty">This week's list is being refreshed — a new top 10 posts every Monday morning.</div>`;return;}
+  wr.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
+}
+
 function renderCity(code){
+  curOrigin=code;
   document.getElementById("heroCity").textContent=code;
   const c=CITIES.find(x=>x.code===code);
   document.getElementById("boardCity").textContent=c.name;
-  const rows=document.getElementById("rows"), deals=DEALS[code];
-  document.querySelectorAll(".citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===code));
-  if(!deals){rows.innerHTML=`<div class="empty">This board opens soon.<br>Get on the email list below and you'll know the day ${code} goes live.</div>`;return;}
-  rows.innerHTML=deals.map(x=>`
-   <a class="row" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener">
-     <span class="tiles">${tiles(code)}<span class="arr">›</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span>${GUIDE[x.to]?` <a href="destinations/${GUIDE[x.to]}.html" style="font-size:12px" onclick="event.stopPropagation()">guide</a>`:""}<br><span class="dates">${x.dates} · ${x.al} · <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b></span></span>
-     <span class="price">$${x.price}</span>
-     <span class="var">${x.varpct}</span>
-   </a>`).join("");
+  const rows=document.getElementById("rows");
+  document.querySelectorAll("#citybar .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===code));
+  renderWeek(code);
+  renderRoutes(code);
+  if(!DEALS[code]){rows.innerHTML=`<div class="empty">This board opens soon.<br>Get on the email list below and you'll know the day ${code} goes live.</div>`;return;}
+  const deals=liveDeals(DEALS[code]);
+  if(!deals.length){rows.innerHTML=`<div class="empty">Today's deals have expired — the board refreshes every hour.<br>Get on the email list below so tomorrow's fares land in your inbox.</div>`;return;}
+  rows.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
 }
 
 document.getElementById("citybar").innerHTML=CITIES.map(c=>
  `<button class="citybtn ${c.live?"":"soon"}" role="tab" data-code="${c.code}" aria-pressed="${c.live?"true":"false"}" ${c.live?"":'title="Coming soon"'}>${c.code}</button>`).join("");
 document.getElementById("citygrid").innerHTML=CITIES.map(c=>
  `<div class="gcard ${c.live?"live":""}"><div class="code">${c.code}</div><div class="st">${c.live?"● LIVE NOW":"COMING SOON"}</div></div>`).join("");
-document.querySelectorAll(".citybtn").forEach(b=>b.addEventListener("click",()=>renderCity(b.dataset.code)));
-renderCity("CLT");
+document.querySelectorAll("#citybar .citybtn").forEach(b=>b.addEventListener("click",()=>renderCity(b.dataset.code)));
+/* initial render happens at the end of this script, after the chart code is defined */
 
 /* Route seasonality chart (SVG, no libraries) */
 const MO=["J","F","M","A","M","J","J","A","S","O","N","D"];
 function renderChart(code){
-  const r=ROUTES[code],deal=(DEALS.CLT||[]).find(x=>x.to===code);
-  document.getElementById("chartTitle").textContent=`CLT › ${code} — ${r.city} · annual avg $${r.avg}`;
+  const r=ROUTES[curOrigin][code],deal=liveDeals(DEALS[curOrigin]||[]).find(x=>x.to===code);
+  document.getElementById("chartTitle").textContent=
+    `${curOrigin} › ${code} — ${r.city} · annual avg $${r.avg} RT (${r.src==="DOT"?"DOT/BTS 2025":"OUR ESTIMATE"})`;
   const w=940,h=300,pad=40,max=Math.max(...r.m)*1.15,bw=(w-pad*2)/12;
   const yv=v=>h-24-(v/max)*(h-70);
-  let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="Monthly typical prices for CLT to ${r.city}">`;
+  let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="Estimated monthly prices for ${curOrigin} to ${r.city}">`;
   r.m.forEach((v,i)=>{
     const x=pad+i*bw+6,bh=h-24-yv(v),below=v<r.avg;
     s+=`<rect x="${x}" y="${yv(v)}" width="${bw-12}" height="${bh}" rx="5" fill="${below?"#3EC97E":"#12243C"}" stroke="#2E425E"/>`;
@@ -239,18 +431,51 @@ function renderChart(code){
   document.getElementById("chart").innerHTML=s;
   document.querySelectorAll("#routesel .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rt===code));
 }
-document.getElementById("routesel").innerHTML=Object.keys(ROUTES).map(c=>
- `<button class="citybtn" data-rt="${c}">${c}</button>`).join("");
-document.querySelectorAll("#routesel .citybtn").forEach(b=>b.addEventListener("click",()=>renderChart(b.dataset.rt)));
-renderChart("CUN");
+function renderRoutes(origin){
+  document.getElementById("chartOrigin").textContent=origin;
+  const sel=document.getElementById("routesel"), box=document.querySelector(".chartbox");
+  const R=ROUTES[origin];
+  if(!R){
+    sel.innerHTML="";
+    box.style.display="none";
+    document.getElementById("routesEmpty").style.display="block";
+    return;
+  }
+  box.style.display="";
+  document.getElementById("routesEmpty").style.display="none";
+  const rbtn=c=>`<button class="citybtn" data-rt="${c}">${c}</button>`;
+  sel.innerHTML=
+   `<span class="rlbl">DOMESTIC — DOT/BTS DATA</span>`+
+   Object.keys(R).filter(c=>!R[c].intl).map(rbtn).join("")+
+   `<span class="rlbl">INTERNATIONAL &amp; CARIBBEAN — OUR ESTIMATES</span>`+
+   Object.keys(R).filter(c=>R[c].intl).map(rbtn).join("");
+  sel.querySelectorAll(".citybtn").forEach(b=>b.addEventListener("click",()=>renderChart(b.dataset.rt)));
+  renderChart(R.CUN?"CUN":Object.keys(R)[0]);
+}
 
-/* Suggestions — swap action URL for your Formspree endpoint later */
-document.getElementById("sugform").addEventListener("submit",e=>{
-  e.preventDefault();
-  const t=encodeURIComponent(document.getElementById("sugtext").value);
-  location.href=`mailto:departshq@gmail.com?subject=Departs%20Daily%20suggestion&body=${t}`;
-  e.target.innerHTML='<p style="color:var(--green)">Thanks — suggestion sent. ✈</p>';
-});
+/* City guide cards — built from the route list so they always match */
+document.getElementById("guidegrid").innerHTML=Object.entries(ROUTES.CLT).map(([c,r])=>
+ `<a class="guidecard" href="destinations/${r.slug}.html"><span class="code">${c}</span><div class="gcity">${r.city.toUpperCase()}</div><span class="st">● HOTELS · TOURS · CARS</span></a>`).join("");
+
+/* Forms — both post to Netlify Forms (captured in the Netlify dashboard).
+   AJAX submit keeps the visitor on the page; success text only shows
+   after the submission is actually accepted. */
+function wireForm(id, okHTML){
+  const f=document.getElementById(id);
+  f.addEventListener("submit",e=>{
+    e.preventDefault();
+    const btn=f.querySelector("button"); btn.disabled=true; btn.textContent="…";
+    fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},
+      body:new URLSearchParams(new FormData(f)).toString()})
+      .then(r=>{if(!r.ok) throw 0; f.innerHTML=okHTML;})
+      .catch(()=>{btn.disabled=false;btn.textContent="Try again";});
+  });
+}
+wireForm("sugform",'<p style="color:var(--green)">Thanks — suggestion received. ✈</p>');
+wireForm("signupform",'<p style="color:var(--green)">You are on the list. ✈</p>');
+
+/* Initial render — after all sections above are defined */
+renderCity("CLT");
 </script>
 </body>
 </html>

@@ -37,7 +37,18 @@ for code in ROUTES:
         print(code, "fetch failed", e); continue
     if not offers:
         continue
-    o = offers[0]
+    # sanity filter: leaves 3-90 days out, sensible 2-9 day round trip
+    o = None
+    for cand in offers:
+        try:
+            dd = datetime.date.fromisoformat(cand["departure_at"][:10])
+            rr = datetime.date.fromisoformat((cand.get("return_at") or "")[:10])
+        except ValueError:
+            continue
+        if 3 <= (dd - today).days <= 90 and 2 <= (rr - dd).days <= 9:
+            o = cand; break
+    if o is None:
+        continue
     price = round(o["price"])
     dep = datetime.date.fromisoformat(o["departure_at"][:10])
     base = ROUTES[code]["m"][dep.month - 1]
@@ -46,7 +57,7 @@ for code in ROUTES:
            "d1": o["departure_at"][:10], "d2": (o.get("return_at") or "")[:10],
            "airline": o.get("airline", ""), "stops": o.get("transfers", 0),
            "baseline": base, "disc": round(disc * 100),
-           "link": "https://www.aviasales.com" + (o.get("link") or "")}
+           "link": "https://www.aviasales.com" + (o.get("link") or "") + "&marker=755800"}
     (deals if disc >= MIN_DISCOUNT else skips).append(row)
 
 deals.sort(key=lambda x: -x["disc"])

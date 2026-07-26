@@ -1,0 +1,4 @@
+secrets/
+*.zip
+deploy_result.json
+__pycache__/

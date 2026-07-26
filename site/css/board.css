@@ -1,0 +1,85 @@
+/* Departs Daily — shared board theme for guide & info pages */
+:root{
+  --navy:#0B1829; --panel:#12243C; --tile:#070F1B; --edge:#2E425E;
+  --amber:#FFB703; --sky:#6C9EDE; --green:#3EC97E; --white:#F0F4FA; --dim:#788CA5;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --disp:"Barlow Condensed",Arial Narrow,sans-serif;
+}
+*{margin:0;box-sizing:border-box}
+body{background:var(--navy);color:var(--white);font-family:var(--mono);font-size:16px}
+a{color:var(--sky)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+header{position:sticky;top:0;background:rgba(11,24,41,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--edge);z-index:9}
+.hbar{display:flex;align-items:center;gap:14px;padding:12px 0}
+.hbar img{width:46px;height:46px;border-radius:50%}
+.hbar .name{font-family:var(--disp);font-weight:700;font-size:26px;letter-spacing:.04em;color:var(--white);text-decoration:none}
+.hbar a.name:hover{text-decoration:none}
+.hnav{display:flex;gap:16px;margin-left:22px}
+.hnav a{color:var(--sky);font-size:12px;letter-spacing:.12em;text-decoration:none;font-weight:700}
+.hnav a:hover{color:var(--amber)}
+.hbar .tag{color:var(--sky);font-size:12px;margin-left:auto;text-align:right}
+@media(max-width:760px){.hnav{display:none}.hbar .tag{display:none}}
+
+.hero{padding:44px 0 8px}
+.kicker{color:var(--sky);font-size:13px;letter-spacing:.18em}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(38px,7vw,64px);line-height:1.02;margin:10px 0 6px}
+h1 .amber{color:var(--amber)}
+.sub{color:var(--dim);max-width:62ch;line-height:1.55;font-size:14px}
+
+section{padding:30px 0}
+h2{font-family:var(--disp);font-weight:700;font-size:32px;margin-bottom:8px}
+h2 .amber{color:var(--amber)}
+
+.tiles{display:inline-flex;gap:3px;align-items:center;vertical-align:middle}
+.tile{display:inline-flex;justify-content:center;align-items:center;width:1.45em;height:1.9em;background:var(--tile);border:1px solid var(--edge);border-radius:5px;color:var(--amber);font-weight:700;font-size:17px;position:relative}
+.tile::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--navy)}
+
+.board{border:2px solid var(--edge);border-radius:14px;overflow:hidden;margin:14px 0}
+.bhead{display:flex;justify-content:space-between;background:var(--tile);padding:12px 18px;color:var(--sky);font-size:13px;letter-spacing:.14em;border-bottom:2px solid var(--edge)}
+.bfoot{background:var(--tile);color:var(--dim);font-size:12px;padding:10px 18px;line-height:1.5}
+
+/* Recommendation rows (hotels / tours) */
+.rec{display:grid;grid-template-columns:auto 1fr auto;gap:8px 18px;align-items:center;padding:18px;background:var(--panel);border-bottom:1px solid var(--edge)}
+.rec:last-of-type{border-bottom:0}
+.rec .badge{font-size:11px;font-weight:700;letter-spacing:.14em;padding:6px 10px;border-radius:7px;border:2px solid var(--edge);background:var(--tile);min-width:96px;text-align:center}
+.badge.budget{color:var(--green);border-color:var(--green)}
+.badge.mid{color:var(--amber);border-color:var(--amber)}
+.badge.splurge{color:#E96D8D;border-color:#E96D8D}
+.badge.tour{color:var(--sky);border-color:var(--sky)}
+.rec .rname{color:var(--white);font-family:var(--disp);font-weight:600;font-size:22px;letter-spacing:.03em}
+.rec .rsub{color:var(--sky);font-size:12px;letter-spacing:.04em;margin-top:2px}
+.rec .rdesc{color:var(--dim);font-size:13px;line-height:1.55;margin-top:6px;max-width:64ch}
+.bookbtn{font-family:var(--disp);font-weight:700;font-size:16px;letter-spacing:.06em;padding:11px 18px;border-radius:8px;background:var(--amber);color:var(--navy);text-decoration:none;white-space:nowrap;text-align:center}
+.bookbtn:hover{background:#ffc733}
+.bookbtn.alt{background:var(--tile);color:var(--amber);border:2px solid var(--amber)}
+.bookbtn.alt:hover{background:var(--panel)}
+@media(max-width:640px){.rec{grid-template-columns:1fr}.rec .badge{justify-self:start}.bookbtn{justify-self:start}}
+
+/* Fact strip */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.fact{background:var(--panel);border:2px solid var(--edge);border-radius:12px;padding:14px}
+.fact .fl{color:var(--sky);font-size:11px;letter-spacing:.14em}
+.fact .fv{font-family:var(--disp);font-weight:700;font-size:24px;color:var(--amber);margin-top:4px}
+.fact .fn{color:var(--dim);font-size:12px;line-height:1.5;margin-top:4px}
+
+.mcard{background:var(--panel);border-left:4px solid var(--amber);border-radius:0 10px 10px 0;padding:16px;font-size:13px;line-height:1.6;color:var(--dim);margin:10px 0}
+.mcard b{color:var(--white)}
+
+.note{color:var(--dim);font-size:12px;line-height:1.6;background:var(--tile);border:1px dashed var(--edge);border-radius:10px;padding:12px 16px;margin:14px 0}
+
+/* CTA band */
+.ctaband{background:var(--panel);border:2px solid var(--edge);border-radius:14px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:8px 0}
+.ctaband .ct{font-family:var(--disp);font-weight:700;font-size:24px}
+.ctaband .cs{color:var(--dim);font-size:13px;margin-top:2px}
+
+/* Article prose (disclosure/privacy) */
+.prose p{color:var(--dim);font-size:14px;line-height:1.7;margin-bottom:14px;max-width:75ch}
+.prose h2{margin-top:26px}
+.prose b{color:var(--white)}
+.prose ul{margin:0 0 14px 22px;color:var(--dim);font-size:14px;line-height:1.7}
+
+footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);font-size:12px;line-height:1.7;margin-top:30px}
+.lights{display:flex;gap:44px;justify-content:center;padding:18px 0 0}
+.lights i{width:9px;height:9px;border-radius:50%;background:var(--amber);display:block}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

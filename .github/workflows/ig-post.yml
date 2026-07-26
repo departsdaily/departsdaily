@@ -1,0 +1,79 @@
+name: Morning Instagram post
+
+# Fired at ~7:10 AM ET by a push to the 'ig-trigger' branch (precise timing),
+# or manually from the Actions tab. No cron here on purpose: GitHub cron can
+# run hours late, and a second same-day firing would double-post.
+on:
+  push:
+    branches: [ig-trigger]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ig-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - name: Fetch and verify fares
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+        run: python pipeline/fetch_fares.py
+
+      - name: Render slides and stories
+        run: |
+          mkdir -p out
+          python pipeline/render_slides.py
+
+      - name: Stage slides into the site
+        run: |
+          D=$(date +%F)
+          mkdir -p "site/daily/$D"
+          cp out/*.png "site/daily/$D/"
+          # keep only the last 14 days of slide folders
+          ls -1d site/daily/*/ 2>/dev/null | sort | head -n -14 | xargs -r rm -rf
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git add -A
+          git commit -m "IG slides $D" || echo "no changes"
+          git push origin HEAD:main
+
+      - name: Deploy slides to Netlify (so Instagram can fetch them)
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          cd site && zip -rq ../deploy.zip . && cd ..
+          curl -sf -X POST "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys" \
+            -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            -H "Content-Type: application/zip" \
+            --data-binary "@deploy.zip" -o deploy_result.json
+          python3 -c "import json; d=json.load(open('deploy_result.json')); print('Netlify deploy:', d.get('state'), d.get('id'))"
+          # give the CDN a moment before Instagram fetches the images
+          for i in $(seq 1 20); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "https://departsdaily.com/daily/$(date +%F)/slide1_cover.png")
+            [ "$code" = "200" ] && echo "slides live" && break
+            sleep 6
+          done
+
+      - name: Publish to Instagram
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          export RAW_BASE="https://departsdaily.com/daily/$(date +%F)"
+          python pipeline/publish_instagram.py
