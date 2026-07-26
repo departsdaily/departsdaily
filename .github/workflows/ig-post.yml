@@ -51,6 +51,9 @@ jobs:
           git add -A
           git commit -m "IG slides $D" || echo "no changes"
           git push origin HEAD:main
+          # Mirror to the Cloudflare Pages production branch (see note in
+          # hourly-refresh.yml) so the story/carousel slide URLs resolve.
+          git push origin HEAD:cloudflare-migration || true
 
       - name: Deploy slides to Netlify (so Instagram can fetch them)
         env:

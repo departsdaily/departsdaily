@@ -76,6 +76,9 @@ jobs:
           git commit -q -m "fare index $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin ${{ github.ref_name }} || git rebase --abort || true
           git push origin HEAD:${{ github.ref_name }}
+          # Mirror to the Cloudflare Pages production branch (see note in
+          # hourly-refresh.yml) so fresh indexes reach the live site.
+          git push origin HEAD:cloudflare-migration || true
 
       - name: Summary
         if: always()

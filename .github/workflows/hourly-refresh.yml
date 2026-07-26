@@ -45,7 +45,12 @@ jobs:
             git fetch -q origin main
             git rebase -q origin/main || { git rebase --abort || true; }
             if git push -q origin HEAD:main; then
-              echo "pushed on attempt $attempt"; exit 0
+              echo "pushed on attempt $attempt"
+            # Cloudflare Pages currently builds from the cloudflare-migration
+            # branch — mirror main there so the live site picks this up.
+            # Remove once the Pages project tracks main (one click in CF).
+              git push -q origin HEAD:cloudflare-migration || true
+              exit 0
             fi
             echo "push rejected, retrying ($attempt)"; sleep 6
           done
