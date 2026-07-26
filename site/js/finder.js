@@ -36,18 +36,62 @@ window.Finder = (function () {
     !picked || !picked.length || min < 0 ||
     picked.some(v => { const s = SLOTS.find(x => x.v === v); return s && min >= s.lo && min < s.hi; });
 
+
+  /* -------------------------------------------------------------------
+     Schema adapter. The previous index (schema 1) stored one-way legs:
+       {meta:{}, dests:{CODE:{out:{date:[price,stops,"HH:MM"]}, back:{}}}}
+     The current one stores whole round trips. We read both, so a stale or
+     half-migrated index can never blank the search. Trips composed from two
+     one-way legs are flagged `composed` and labelled TWO ONE-WAYS on screen —
+     that sum is not a fare anyone sells as a single ticket, and the visitor
+     should know before they click.
+     ------------------------------------------------------------------- */
+  function adapt(d) {
+    if (!d || Array.isArray(d.dests) || d.rows) return d;      // already schema 2
+    if (!d.dests || typeof d.dests !== "object") return d;
+    var codes = Object.keys(d.dests), rows = [];
+    var base = null;
+    codes.forEach(function (c) {
+      var node = d.dests[c] || {};
+      Object.keys(node.out || {}).forEach(function (k) {
+        if (!base || k < base) base = k;
+      });
+    });
+    if (!base) return d;
+    var b0 = new Date(base + "T12:00");
+    var mins = function (t) { var p = String(t || "").split(":");
+      return p.length === 2 ? (+p[0]) * 60 + (+p[1]) : -1; };
+    codes.forEach(function (c, ci) {
+      var node = d.dests[c] || {}, out = node.out || {}, back = node.back || {};
+      Object.keys(out).forEach(function (dep) {
+        var o = out[dep], g = new Date(dep + "T12:00");
+        Object.keys(back).forEach(function (ret) {
+          var n = Math.round((new Date(ret + "T12:00") - g) / 864e5);
+          if (n < 1 || n > 30) return;
+          var r = back[ret];
+          rows.push([ci, Math.round((g - b0) / 864e5), n, o[0] + r[0],
+                     o[1] | 0, r[1] | 0, mins(o[2]), -1, mins(r[2]), -1, "", 1]);
+        });
+      });
+    });
+    return { origin: (d.meta && d.meta.origin) || "CLT", base: base,
+             generated: (d.meta && d.meta.built) || "", schema: 1,
+             dests: codes, names: {}, intl: [], airlines: {},
+             has_arrivals: false, rows: rows };
+  }
+
   const cache = {};
   async function loadIndex(origin) {
     if (cache[origin]) return cache[origin];
     try {
       const r = await fetch("data/idx-" + origin + ".json", { cache: "no-cache" });
       if (!r.ok) throw 0;
-      return cache[origin] = await r.json();
+      return cache[origin] = adapt(await r.json());
     } catch (e) {
       try {
         const r = await fetch("/api/fares?origin=" + origin);
         if (!r.ok) throw 0;
-        const d = await r.json(); d.live = true;
+        const d = adapt(await r.json()); d.live = true;
         return cache[origin] = d;
       } catch (e2) { return null; }
     }
@@ -84,7 +128,7 @@ window.Finder = (function () {
 
     const out = [];
     for (const r of IDX.rows) {
-      const [d, off, n, p, stO, stB, dOut, aOut, dBack, aBack, al] = r;
+      const [d, off, n, p, stO, stB, dOut, aOut, dBack, aBack, al, comp] = r;
       if (di >= 0 && d !== di) continue;
       if (off < loOff || off > hiOff) continue;
       if (n < S.lo || n > S.hi || p > S.bud) continue;
@@ -97,7 +141,7 @@ window.Finder = (function () {
       if (!S.out.includes(g.getDay())) continue;
       const rd = new Date(g); rd.setDate(rd.getDate() + n);
       if (!S.ret.includes(rd.getDay())) continue;
-      out.push({ c: IDX.dests[d], p, n, stO, stB, dOut, aOut, dBack, aBack, al, g, rd,
+      out.push({ c: IDX.dests[d], p, n, stO, stB, dOut, aOut, dBack, aBack, al, comp, g, rd,
                  intl: (IDX.intl || []).includes(IDX.dests[d]) });
     }
     out.sort((a,b) => a.p - b.p);
@@ -134,6 +178,9 @@ window.Finder = (function () {
     /* Airline is only shown when both legs are nonstop — otherwise the code the
        API returns is the first carrier, not the operator of the whole trip. */
     const airPill = (air && h.stO === 0 && h.stB === 0) ? `<span class="fpill">${air}</span>` : "";
+    /* Two separate one-way fares added together — not a single bookable ticket. */
+    const compPill = h.comp ? '<span class="fpill">TWO ONE-WAYS</span>'
+                            : '<span class="fpill">ROUND-TRIP FARE</span>';
     return `<div class="frow">
       <a class="fmain" href="${affLink(origin,h)}" target="_blank" rel="sponsored noopener">
         <div class="fnt"><div class="n">${h.n}</div><div class="l">${h.n===1?"NIGHT":"NIGHTS"}</div></div>
@@ -142,7 +189,7 @@ window.Finder = (function () {
             h.intl?'<span class="ipill">INTL</span>':""}</div>
           <div class="fdts"><b>${fmtDate(h.g)}</b> ${legHTML(h.dOut,h.aOut)}
             &nbsp;→&nbsp; <b>${fmtDate(h.rd)}</b> ${legHTML(h.dBack,h.aBack)}</div>
-          <div class="fmt">${stopPill(h.stO)}${h.stB!==h.stO?stopPill(h.stB):""}${airPill}</div>
+          <div class="fmt">${stopPill(h.stO)}${h.stB!==h.stO?stopPill(h.stB):""}${compPill}${airPill}</div>
         </div>
         <div class="fpr"><div class="p">$${h.p}</div><div class="u">ROUND TRIP</div></div>
       </a>${guide}</div>`;
