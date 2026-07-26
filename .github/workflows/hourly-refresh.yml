@@ -35,12 +35,21 @@ jobs:
           git config user.name "departs-daily-bot"
           git config user.email "board@departsdaily.com"
           git add site/js/deals-data.js state/
-          git commit -m "Board refresh $(date -u '+%F %H:%M UTC')" || echo "No changes to commit"
-          # Rebase before pushing: any concurrent commit to main (a manual
-          # push, or another workflow) otherwise rejects this as non-fast-
-          # forward and the whole refresh fails after the fares were fetched.
-          git pull --rebase origin main || git rebase --abort || true
-          git push origin HEAD:main
+          git commit -m "Board refresh $(date -u '+%F %H:%M UTC')" || {
+            echo "No changes to commit"; exit 0; }
+          # Retry the rebase-and-push: the fares are already fetched by this
+          # point, so losing the race to a concurrent commit must not throw
+          # the refresh away. A single rebase is not enough because another
+          # push can land between the rebase and the push.
+          for attempt in 1 2 3 4 5; do
+            git fetch -q origin main
+            git rebase -q origin/main || { git rebase --abort || true; }
+            if git push -q origin HEAD:main; then
+              echo "pushed on attempt $attempt"; exit 0
+            fi
+            echo "push rejected, retrying ($attempt)"; sleep 6
+          done
+          echo "could not push after 5 attempts"; exit 1
 
       # Still hosted on Netlify. When the Cloudflare Pages migration happens
       # (see GO-LIVE.md Part 1), delete this step — Cloudflare builds on push.
