@@ -639,13 +639,10 @@ function fmtTrip(d1,d2){
   return f(d1)+" → "+f(d2);
 }
 
-/* Offer the guide right on the row — the moment someone is planning that trip. */
-function guideBtn(code,x){
-  const rt=(ROUTES[code]||{})[x.to];
-  if(!rt||!rt.slug) return "";
-  return ` <a class="gbtn" href="destinations/${rt.slug}.html" onclick="event.stopPropagation()">CITY GUIDE</a>`;
-}
-
+/* NOTE: nothing inside rowHTML may be an <a>. The row itself is an <a>;
+   nesting another (the old CITY GUIDE chip) is invalid HTML — the parser
+   ejects it and the whole row grid collapses into stacked lines. Guides
+   are linked from the nav, the CITY GUIDES section and the Fare Finder rows. */
 function rowHTML(code,x){
   const rt=(ROUTES[code]||{})[x.to];
   const intl=rt&&rt.intl?' · <b class="st">INTL</b>':'';
@@ -659,7 +656,7 @@ function rowHTML(code,x){
   return `
    <a class="row" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener">
      <span class="tiles">${tiles(code)}<span class="arr">›</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span>${guideBtn(code,x)}<br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep}${al} · <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}</span></span>
+     <span><span class="city">${x.city}</span><br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep}${al} · <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span>
      <span class="price">$${x.price}</span>
      <span class="var">${dealVar(x)}</span>
    </a>`;
