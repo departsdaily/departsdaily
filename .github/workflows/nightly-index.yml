@@ -62,7 +62,12 @@ jobs:
           git config user.name  "departsdaily-bot"
           git config user.email "bot@departsdaily.com"
           git add site/data/
-          git diff --cached --quiet && echo "no change" && exit 0
+          # Steps run under `bash -e`, so `git diff --cached --quiet` exiting 1
+          # (which is what it does when there ARE changes) killed the step
+          # immediately after a successful build. Use an if-block instead.
+          if git diff --cached --quiet; then
+            echo "no change"; exit 0
+          fi
           git commit -q -m "fare index $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase -q origin ${{ github.ref_name }} || true
           git push origin HEAD:${{ github.ref_name }}
