@@ -51,6 +51,8 @@ AIRLINES = {
  "TP":"TAP Portugal","EI":"Aer Lingus","AC":"Air Canada","AM":"Aeroméxico",
  "Y4":"Volaris","VB":"Viva Aerobus","CM":"Copa","AV":"Avianca","BW":"Caribbean",
  "KL":"KLM","LX":"SWISS","TK":"Turkish","FI":"Icelandair","WS":"WestJet",
+ "YV":"American Eagle","OH":"American Eagle","MQ":"American Eagle","PT":"American Eagle",
+ "9E":"Delta Connection","OO":"SkyWest","YX":"Republic","ZW":"Air Wisconsin","C5":"CommuteAir",
 }
 
 def fetch(dest):
