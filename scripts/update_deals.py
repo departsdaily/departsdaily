@@ -35,9 +35,13 @@ ROUTES = {
  "SEA":("Seattle",694),"AUS":("Austin",648),
  "CUN":("Cancún",520),"PUJ":("Punta Cana",560),"MBJ":("Montego Bay",540),
  "NAS":("Nassau",480),"AUA":("Aruba",620),"SJU":("San Juan, PR",420),
- "GCM":("Grand Cayman",640),"LHR":("London",850),"CDG":("Paris",900),
- "FCO":("Rome",950),
+ "GCM":("Grand Cayman",640),"LON":("London",850),"PAR":("Paris",900),
+ "ROM":("Rome",950),
 }
+
+# International routes: city codes (LON not LHR — the fare cache keys on cities),
+# longer trip windows, and guaranteed board slots (higher-value bookings).
+INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM"}
 
 AIRLINES = {
  "AA":"American","DL":"Delta","UA":"United","WN":"Southwest","B6":"JetBlue",
@@ -66,7 +70,9 @@ def dep_time(dt):
     return f"{h}:{dt.minute:02d}{'AM' if dt.hour < 12 else 'PM'}"
 
 def pick(dest, fares, today):
-    """Cheapest sane round trip: leaves 3–90 days out, trip length 2–9 days."""
+    """Cheapest sane round trip. Domestic: 3-90 days out, 2-9 day trips.
+    International: 3-120 days out, 4-21 day trips (how people actually fly)."""
+    max_out, len_lo, len_hi = (120, 4, 21) if dest in INTL else (90, 2, 9)
     best = None
     for f in fares:
         try:
@@ -76,7 +82,7 @@ def pick(dest, fares, today):
         days_out = (d1.date() - today).days
         trip_len = (d2.date() - d1.date()).days
         price = f.get("price") or 0
-        if not (3 <= days_out <= 90 and 2 <= trip_len <= 9 and price > 0):
+        if not (3 <= days_out <= max_out and len_lo <= trip_len <= len_hi and price > 0):
             continue
         if best is None or price < best["price"]:
             stops = max(f.get("transfers", 0), f.get("return_transfers", 0))
@@ -123,8 +129,20 @@ def main():
         sys.exit(1)
 
     by_value = sorted(found, key=lambda d: -d["pct"])
-    daily  = by_value[:6]                      # today's board: 6 best values
-    weekly = by_value[:10]                     # weekly board: top 10
+    intl_found = [d for d in by_value if d["to"] in INTL]
+
+    # Daily board: 5 best values + the single best international deal.
+    daily = by_value[:5]
+    for d in intl_found:
+        if d not in daily:
+            daily.append(d); break
+    if len(daily) < 6:
+        daily = by_value[:6]
+
+    # Weekly top 10: guarantee up to 3 international slots.
+    intl_slots = intl_found[:3]
+    weekly = [d for d in by_value if d not in intl_slots][:10 - len(intl_slots)] + intl_slots
+    weekly = sorted(weekly, key=lambda d: -d["pct"])
     exp_daily = (today + timedelta(days=2)).isoformat()
 
     # Current Mon–Sun week label, e.g. "WEEK OF JUL 27–AUG 2"

@@ -328,9 +328,9 @@ const ROUTES={CLT:{
  AUA:{city:"Aruba",slug:"aruba",avg:620,src:"EST",pat:"beach",intl:true},
  SJU:{city:"San Juan, PR",slug:"san-juan",avg:420,src:"EST",pat:"beach",intl:true,note:"U.S. territory — outside DOT's contiguous-states table"},
  GCM:{city:"Grand Cayman",slug:"grand-cayman",avg:640,src:"EST",pat:"beach",intl:true},
- LHR:{city:"London",slug:"london",avg:850,src:"EST",pat:"europe",intl:true},
- CDG:{city:"Paris",slug:"paris",avg:900,src:"EST",pat:"europe",intl:true},
- FCO:{city:"Rome",slug:"rome",avg:950,src:"EST",pat:"europe",intl:true}}};
+ LON:{city:"London",slug:"london",avg:850,src:"EST",pat:"europe",intl:true},
+ PAR:{city:"Paris",slug:"paris",avg:900,src:"EST",pat:"europe",intl:true},
+ ROM:{city:"Rome",slug:"rome",avg:950,src:"EST",pat:"europe",intl:true}}};
 Object.values(ROUTES).forEach(o=>Object.values(o).forEach(r=>{r.m=PATTERNS[r.pat].map(x=>Math.round(r.avg*x));}));
 
 let curOrigin="CLT"; // the selected departure airport
