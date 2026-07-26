@@ -76,12 +76,22 @@ window.Finder = (function () {
     });
     return { origin: (d.meta && d.meta.origin) || "CLT", base: base,
              generated: (d.meta && d.meta.built) || "", schema: 1,
-             dests: codes, names: {}, intl: [], airlines: {},
+             dests: codes,
+             names: codes.reduce(function (m, c) { m[c] = CITY_NAMES[c] || c; return m; }, {}),
+             intl: codes.filter(function (c) { return INTL_CODES.indexOf(c) > -1; }),
+             airlines: {},
              has_arrivals: false, rows: rows };
   }
 
+  /* Canonical city names, mirroring scripts/update_deals.py ROUTES. Used when
+     an index does not carry its own names map (the legacy schema does not),
+     so a dropdown never has to read "NYC · NYC". */
+  const CITY_NAMES = { NYC:"New York City", BOS:"Boston", MIA:"Miami", FLL:"Ft. Lauderdale", DCA:"Washington DC", ORD:"Chicago", DFW:"Dallas", MCO:"Orlando", LAX:"Los Angeles", DEN:"Denver", PHL:"Philadelphia", HOU:"Houston", LAS:"Las Vegas", PHX:"Phoenix", TPA:"Tampa", BNA:"Nashville", MSY:"New Orleans", SFO:"San Francisco", SEA:"Seattle", AUS:"Austin", CUN:"Cancún", PUJ:"Punta Cana", MBJ:"Montego Bay", NAS:"Nassau", AUA:"Aruba", SJU:"San Juan, PR", GCM:"Grand Cayman", LON:"London", PAR:"Paris", ROM:"Rome" };
+
   const ORIGIN_NAMES = { CLT:"Charlotte", ATL:"Atlanta", ORD:"Chicago", DFW:"Dallas",
     DEN:"Denver", LAX:"Los Angeles", JFK:"New York", MIA:"Miami", SEA:"Seattle", BOS:"Boston" };
+
+  const INTL_CODES = ["CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM"];
 
   const cache = {};
   async function loadIndex(origin) {
@@ -176,7 +186,7 @@ window.Finder = (function () {
   function rowHTML(origin, IDX, h, showGuide) {
     const slug = GUIDES[h.c];
     const guide = showGuide && slug
-      ? `<a class="gchip" href="destinations/${slug}.html">${(IDX.names[h.c]||h.c).toUpperCase()} GUIDE →</a>` : "";
+      ? `<a class="gchip" href="destinations/${slug}.html">${((IDX.names&&IDX.names[h.c])||CITY_NAMES[h.c]||h.c).toUpperCase()} GUIDE →</a>` : "";
     const air = (IDX.airlines || {})[h.al];
     /* Airline is only shown when both legs are nonstop — otherwise the code the
        API returns is the first carrier, not the operator of the whole trip. */
@@ -188,7 +198,7 @@ window.Finder = (function () {
       <a class="fmain" href="${affLink(origin,h)}" target="_blank" rel="sponsored noopener">
         <div class="fnt"><div class="n">${h.n}</div><div class="l">${h.n===1?"NIGHT":"NIGHTS"}</div></div>
         <div class="fbody">
-          <div class="fcity"><span class="fcd">${h.c}</span>${IDX.names[h.c]||h.c}${
+          <div class="fcity"><span class="fcd">${h.c}</span>${(IDX.names&&IDX.names[h.c])||CITY_NAMES[h.c]||h.c}${
             h.intl?'<span class="ipill">INTL</span>':""}</div>
           <div class="fdts"><b>${fmtDate(h.g)}</b> ${legHTML(h.dOut,h.aOut)}
             &nbsp;→&nbsp; <b>${fmtDate(h.rd)}</b> ${legHTML(h.dBack,h.aBack)}</div>
@@ -207,6 +217,18 @@ window.Finder = (function () {
     return `<div class="fchips fslots" data-slot="${id}">` +
       SLOTS.map(s => `<button class="fch" data-v="${s.v}" aria-pressed="${
         sel && sel.includes(s.v) ? "true" : "false"}">${s.label}</button>`).join("") + `</div>`;
+  }
+
+  /* Each time filter is its own switch. Off means "any time" — that is the
+     default, because most people care about price first and only reach for
+     times once they have seen what is out there. */
+  function timeSec(key, title, note) {
+    return `<div class="fsec ftime" data-time="${key}">
+      <label class="ftg"><input type="checkbox" data-toggle="${key}">
+        <span>${title}</span></label>
+      ${note ? `<div class="fnote" data-note="${key}" hidden>${note}</div>` : ""}
+      <div class="fsub" data-block="${key}" hidden>${slotChips(key)}</div>
+    </div>`;
   }
 
   function panelHTML(monthOpts) {
@@ -257,11 +279,10 @@ window.Finder = (function () {
           <button class="fch" data-v="2">Up to 2 stops</button>
           <button class="fch" data-v="-1" aria-pressed="true">Any</button></div></div>
 
-      <div class="fsec"><div class="flbl"><span>OUTBOUND — DEPARTS</span>
-        <span class="hint">leave blank for any</span></div>${slotChips("tOutDep")}</div>
-      <div class="fsec fArr"><div class="flbl"><span>OUTBOUND — ARRIVES</span></div>${slotChips("tOutArr")}</div>
-      <div class="fsec"><div class="flbl"><span>RETURN — DEPARTS</span></div>${slotChips("tRetDep")}</div>
-      <div class="fsec fArr"><div class="flbl"><span>RETURN — ARRIVES</span></div>${slotChips("tRetArr")}</div>
+      ${timeSec("tOutDep", "Filter outbound departure time")}
+      ${timeSec("tOutArr", "Filter outbound arrival time", "Arrival times appear once tonight's index build runs — the fare API only returns them with a leg duration.")}
+      ${timeSec("tRetDep", "Filter return departure time")}
+      ${timeSec("tRetArr", "Filter return arrival time", "Arrival times appear once tonight's index build runs.")}
     </div>`;
   }
 
@@ -309,6 +330,21 @@ window.Finder = (function () {
       $("fHOut").textContent = f(S.out); $("fHRet").textContent = f(S.ret);
     }
     dows("fDOut","out"); dows("fDRet","ret"); hints();
+
+    /* A time filter only applies while its switch is on. Turning it off clears
+       the selection so a hidden filter can never silently exclude results. */
+    root.querySelectorAll("[data-toggle]").forEach(cb => {
+      const key = cb.dataset.toggle;
+      cb.addEventListener("change", () => {
+        const blk = root.querySelector('[data-block="' + key + '"]');
+        blk.hidden = !cb.checked;
+        if (!cb.checked) {
+          S[key] = [];
+          blk.querySelectorAll(".fch").forEach(b => b.setAttribute("aria-pressed", "false"));
+        }
+        render();
+      });
+    });
 
     /* Time slots are multi-select: pick two windows and both are allowed. */
     root.querySelectorAll(".fslots").forEach(box => {
@@ -377,10 +413,22 @@ window.Finder = (function () {
           ' right now. The board is still live — try again shortly.</div>';
         return;
       }
-      /* Hide both arrival filters when the index has no arrival times, rather
-         than showing controls that quietly do nothing. */
+      /* When the index carries no arrival times, the arrival switches stay
+         visible but disabled with a note. Hiding them made it look like the
+         feature did not exist; a disabled control with a reason is honest. */
       const hasArr = IDX.has_arrivals !== false;
-      root.querySelectorAll(".fArr").forEach(el => el.hidden = !hasArr);
+      ["tOutArr", "tRetArr"].forEach(k => {
+        const cb = root.querySelector('[data-toggle="' + k + '"]');
+        if (!cb) return;
+        cb.disabled = !hasArr;
+        if (!hasArr) { cb.checked = false; S[k] = []; }
+        const sec = cb.closest(".ftime");
+        if (sec) sec.classList.toggle("off", !hasArr);
+        const note = root.querySelector('[data-note="' + k + '"]');
+        if (note) note.hidden = hasArr;
+        const blk = root.querySelector('[data-block="' + k + '"]');
+        if (blk && !hasArr) blk.hidden = true;
+      });
 
       if (srcEl) srcEl.textContent = IDX.live ? "LIVE LOOKUP"
         : "UPDATED " + (IDX.generated || "").slice(0,10);
@@ -393,7 +441,7 @@ window.Finder = (function () {
       }).join("");
       const d = $("fDest");
       d.innerHTML = '<option value="*">Anywhere we track</option>' +
-        IDX.dests.map(c => `<option value="${c}">${(IDX.names&&IDX.names[c])||c} · ${c}</option>`).join("");
+        IDX.dests.map(c => `<option value="${c}">${(IDX.names&&IDX.names[c])||CITY_NAMES[c]||c} · ${c}</option>`).join("");
       const max = new Date(base); max.setDate(max.getDate() + 365);
       $("fFrom").min = $("fTo").min = IDX.base;
       $("fFrom").max = $("fTo").max = max.toISOString().slice(0,10);

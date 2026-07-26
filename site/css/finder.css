@@ -168,3 +168,12 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 @media(max-width:700px){.fquick3{grid-template-columns:1fr 1fr}
  .fquick3 .fq:last-child{grid-column:1 / -1}}
 @media(max-width:430px){.fquick3{grid-template-columns:1fr}}
+
+/* Time filter switches */
+.ftime .ftg{font-size:13px}
+.ftime .fsub{padding-left:51px;margin-top:8px}
+.ftime .fsub[hidden]{display:none}
+.fnote{padding-left:51px;margin-top:4px;color:var(--dim);font-size:11px;line-height:1.5;max-width:52ch}
+.fnote[hidden]{display:none}
+.ftime.off .ftg{opacity:.55}
+.ftime.off .ftg input{cursor:not-allowed}
