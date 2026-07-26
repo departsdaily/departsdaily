@@ -1,0 +1,13 @@
+{
+ "generated": "2026-07-26T17:10:33-04:00",
+ "base": "2026-07-26",
+ "origins": [
+  {
+   "origin": "CLT",
+   "cities": 25,
+   "offers": 241,
+   "kb": 11
+  }
+ ],
+ "skipped": []
+}
