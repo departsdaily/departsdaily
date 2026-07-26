@@ -46,6 +46,20 @@ def _get(url):
         return json.load(r).get("data", [])
 
 
+def fetch_matrix(origin, dest, month):
+    """v2 month-matrix: cheapest fare for every departure/return date pair in a
+    month. Far denser than prices_for_dates, which only returns its overall
+    cheapest handful per route — the reason the index kept coming out sparse.
+    Dates only, no departure times, so time fields come back unknown (-1).
+    """
+    url = ("https://api.travelpayouts.com/v2/prices/month-matrix"
+           f"?currency=usd&origin={origin}&destination={dest}"
+           f"&month={month}-01&show_to_affiliates=true&token={TOKEN}")
+    req = urllib.request.Request(url, headers={"User-Agent": "departsdaily-index"})
+    with urllib.request.urlopen(req, timeout=45) as r:
+        return json.load(r).get("data", [])
+
+
 def fetch_ow(origin, dest, month=None):
     """One-way legs. TP caches far more one-way data than round-trip data —
     which is why the original builder stored legs. We take both: real round
@@ -160,6 +174,35 @@ def build_origin(origin, today):
                         store[k] = row
                 time.sleep(SLEEP)
 
+        # Month-matrix sweep: the densest source we have.
+        matrix = 0
+        for month in months_ahead(today, MONTHS):
+            try:
+                for f in fetch_matrix(origin, dest, month):
+                    try:
+                        dep = f.get("depart_date", "")[:10]
+                        ret = f.get("return_date", "")[:10]
+                        price = int(f.get("value") or 0)
+                        if not dep or not ret or price <= 0:
+                            continue
+                        do = date.fromisoformat(dep)
+                        off = (do - today).days
+                        nights = (date.fromisoformat(ret) - do).days
+                    except (ValueError, TypeError):
+                        continue
+                    if off < 2 or not (LEN_LO <= nights <= LEN_HI):
+                        continue
+                    key = (dest, off, nights)
+                    if key in best and best[key][3] <= price:
+                        continue
+                    st = int(f.get("number_of_changes") or 0)
+                    best[key] = (dest, off, nights, price, st, st,
+                                 -1, -1, -1, -1, "", 0)
+                    matrix += 1
+            except Exception as e:
+                print(f"    {origin}->{dest} {month} MATRIX FAIL: {e}")
+            time.sleep(SLEEP)
+
         composed = 0
         for dk, o in out_legs.items():
             do = date.fromisoformat(dk)
@@ -177,9 +220,9 @@ def build_origin(origin, today):
                              o[2], -1, b[2], -1, "", 1)
                 composed += 1
 
-        diag[dest] = {"rt": got, "out_legs": len(out_legs),
+        diag[dest] = {"rt": got, "matrix": matrix, "out_legs": len(out_legs),
                       "back_legs": len(back_legs), "composed": composed}
-        print(f"    {origin}->{dest}: {got} round-trips, "
+        print(f"    {origin}->{dest}: {got} round-trips, {matrix} matrix, "
               f"{len(out_legs)}/{len(back_legs)} legs, {composed} composed")
     codes = sorted({k[0] for k in best})
     ix = {c: i for i, c in enumerate(codes)}
