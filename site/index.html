@@ -332,6 +332,14 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 .ftime .fsub[hidden]{display:none}
 .fnote{padding-left:51px;margin-top:4px;color:var(--dim);font-size:11px;line-height:1.5;max-width:52ch}
 .fnote[hidden]{display:none}
+/* FRESH PULL bar */
+.flive{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:10px 16px;
+ border-top:2px solid var(--edge);background:var(--tile)}
+.flive[hidden]{display:none}
+.flive .ftg{padding:4px 0}
+.flnote{color:var(--dim);font-size:11px;line-height:1.4}
+.flnote[hidden]{display:none}
+
 .ftime.off .ftg{opacity:.55}
 .ftime.off .ftg input{cursor:not-allowed}
 </style>
@@ -521,6 +529,12 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 
 <script src="js/affiliates.js"></script>
 <script src="js/deals-data.js"></script>
+<script>
+/* FRESH PULL endpoint — set to the deployed Cloudflare Worker base URL
+   (e.g. "https://departsdaily-fares.<account>.workers.dev") to enable the
+   live re-query toggle on the Fare Finder. Empty = toggle hidden. */
+window.DD_LIVE_URL="";
+</script>
 <script src="js/finder.js"></script>
 <script>
 const CITIES=[

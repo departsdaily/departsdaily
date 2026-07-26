@@ -1,0 +1,59 @@
+name: Deploy fares Worker
+
+# Deploys worker/ (the FRESH PULL + custom-origin fare endpoint) to
+# Cloudflare Workers. Does nothing until two repo secrets exist:
+#   CF_API_TOKEN  — Cloudflare dashboard → My Profile → API Tokens →
+#                   Create Token → "Edit Cloudflare Workers" template
+#   CF_ACCOUNT_ID — Cloudflare dashboard → Workers & Pages → right sidebar
+# TP_TOKEN is already a repo secret and is pushed to the Worker on deploy.
+#
+# After the first successful deploy, take the *.workers.dev URL from the run
+# output and paste it into window.DD_LIVE_URL in site/index.html and
+# site/search.html — that is what makes the FRESH PULL toggle appear.
+
+on:
+  push:
+    branches: [main]
+    paths: [worker/**, .github/workflows/deploy-worker.yml]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-worker
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Skip quietly until Joe adds the Cloudflare secrets.
+    if: ${{ vars.SKIP_WORKER != '1' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for Cloudflare secrets
+        id: gate
+        env:
+          HAS: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' }}
+        run: |
+          echo "ok=$HAS" >> "$GITHUB_OUTPUT"
+          if [ "$HAS" != "true" ]; then
+            echo "CF_API_TOKEN / CF_ACCOUNT_ID not set — skipping deploy." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Deploy with wrangler
+        if: steps.gate.outputs.ok == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          workingDirectory: worker
+          secrets: |
+            TP_TOKEN
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+
+      - name: Where it lives
+        if: steps.gate.outputs.ok == 'true'
+        run: |
+          echo "### Worker deployed" >> $GITHUB_STEP_SUMMARY
+          echo "URL: https://departsdaily-fares.<your-workers-subdomain>.workers.dev (exact URL in the wrangler output above)" >> $GITHUB_STEP_SUMMARY
+          echo "Next: paste it into window.DD_LIVE_URL in site/index.html + site/search.html." >> $GITHUB_STEP_SUMMARY

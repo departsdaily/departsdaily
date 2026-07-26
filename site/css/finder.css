@@ -177,3 +177,11 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 .fnote[hidden]{display:none}
 .ftime.off .ftg{opacity:.55}
 .ftime.off .ftg input{cursor:not-allowed}
+
+/* FRESH PULL bar */
+.flive{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:10px 16px;
+ border-top:2px solid var(--edge);background:var(--tile)}
+.flive[hidden]{display:none}
+.flive .ftg{padding:4px 0}
+.flnote{color:var(--dim);font-size:11px;line-height:1.4}
+.flnote[hidden]{display:none}

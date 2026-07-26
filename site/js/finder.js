@@ -14,6 +14,12 @@ window.Finder = (function () {
   const DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   const PREBUILT = ["CLT","ATL","ORD","DFW","DEN","LAX","JFK","MIA","SEA","BOS"];
 
+  /* FRESH PULL endpoint (Cloudflare Worker). Set window.DD_LIVE_URL to the
+     deployed Worker base URL (no trailing slash) in index.html/search.html to
+     light the feature up; empty = the toggle stays hidden and the finder runs
+     purely on the nightly index. */
+  const LIVE_API = (typeof window !== "undefined" && window.DD_LIVE_URL) || "";
+
   /* Only cities with a real hand-written guide. Never link to a page that
      doesn't exist. */
   const GUIDES = {
@@ -250,6 +256,12 @@ window.Finder = (function () {
       <div class="fq"><label for="fTo">LATEST DEPARTURE</label><input type="date" id="fTo"></div>
     </div>
 
+    <div class="flive" id="fLiveBar" hidden>
+      <label class="ftg"><input type="checkbox" id="fLive">
+        <span><b style="color:var(--amber)">FRESH PULL</b> — re-check the fare cache right now for this exact route</span></label>
+      <span class="flnote" id="fLiveNote" hidden></span>
+    </div>
+
     <div class="fpanel" id="fPanel">
       <div class="fsec"><div class="flbl"><span>TRIP LENGTH</span><span class="hint" id="fNHint"></span></div>
         <div class="fchips" id="fLen">
@@ -294,7 +306,7 @@ window.Finder = (function () {
        empty. Trip length, days of week and budget all default to "any". */
     const S = { orig: opts.origin || "CLT", dest:"*", mode:"window", mo:6, from:"", to:"",
                 lo:1, hi:30, out:[0,1,2,3,4,5,6], ret:[0,1,2,3,4,5,6], bud:1500, stops:-1,
-                tOutDep:[], tOutArr:[], tRetDep:[], tRetArr:[] };
+                tOutDep:[], tOutArr:[], tRetDep:[], tRetArr:[], fresh:false };
     let IDX = null;
     root.querySelector(".fwrap").innerHTML = panelHTML();
 
@@ -388,7 +400,46 @@ window.Finder = (function () {
     $("fBud").addEventListener("input", e => {
       S.bud = +e.target.value; $("fBVal").textContent = "$" + S.bud; render(); });
     $("fDest").addEventListener("change", e => { S.dest = e.target.value; render(); });
+    if (LIVE_API) {
+      const bar = $("fLiveBar");
+      if (bar) bar.hidden = false;
+      $("fLive").addEventListener("change", e => { S.fresh = e.target.checked; render(); });
+    }
     $("fOrig").addEventListener("change", e => { boot(e.target.value); });
+
+    /* ---------------- FRESH PULL (live re-query via Worker) ------------- */
+    const liveCache = {};           // "orig|dest|months" -> response | null(failed)
+    function monthsParam() {
+      if (S.mode === "dates" && S.from) {
+        const span = (new Date((S.to || S.from) + "T12:00") - new Date(IDX.base + "T12:00")) / 2592e6;
+        return Math.min(12, Math.max(1, Math.ceil(span) + 1));
+      }
+      return Math.min(12, S.mo);
+    }
+    async function fetchLive(key) {
+      const p = key.split("|");
+      try {
+        const r = await fetch(LIVE_API + "/api/fares?origin=" + p[0] + "&dest=" + p[1] +
+                              "&months=" + p[2] + "&fresh=1");
+        if (!r.ok) throw 0;
+        const d = await r.json();
+        liveCache[key] = (d && d.rows && d.rows.length) ? d : null;
+      } catch (e) { liveCache[key] = null; }
+      render();
+    }
+    /* Swap the live rows in for the selected destination. Live offsets are
+       relative to the Worker's base date, which can differ from the index's —
+       shift them so every row shares IDX.base. */
+    function withLive(L) {
+      const shift = Math.round((new Date(L.base + "T12:00") - new Date(IDX.base + "T12:00")) / 864e5);
+      let di = IDX.dests.indexOf(S.dest);
+      const dests = di < 0 ? IDX.dests.concat([S.dest]) : IDX.dests;
+      if (di < 0) di = dests.length - 1;
+      const rows = IDX.rows.filter(r => r[0] !== di)
+        .concat(L.rows.map(r => [di, r[1] + shift].concat(r.slice(2))));
+      return Object.assign({}, IDX, { dests: dests, rows: rows,
+        has_arrivals: IDX.has_arrivals !== false || L.has_arrivals });
+    }
 
     const rowsEl = root.querySelector("[data-rows]");
     const cntEl  = root.querySelector("[data-count]");
@@ -396,13 +447,30 @@ window.Finder = (function () {
 
     function render() {
       if (!IDX) { rowsEl.innerHTML = '<div class="fzero">Loading fares…</div>'; return; }
-      const r = search(IDX, S);
-      if (cntEl) cntEl.textContent = r.length
+      let idx = IDX, liveMsg = "", liveOn = false, pulling = false;
+      if (S.fresh && LIVE_API) {
+        if (S.dest === "*") {
+          liveMsg = "Fresh pull needs a specific destination — pick one under TO.";
+        } else {
+          const key = S.orig + "|" + S.dest + "|" + monthsParam();
+          const L = liveCache[key];
+          if (L === undefined) { fetchLive(key); pulling = true; liveMsg = "Pulling fresh fares…"; }
+          else if (L === null) { liveMsg = "Fresh pull unavailable right now — showing the nightly index."; }
+          else { idx = withLive(L); liveOn = true; }
+        }
+      }
+      const note = $("fLiveNote");
+      if (note) { note.textContent = liveMsg; note.hidden = !liveMsg; }
+      if (srcEl) srcEl.textContent = liveOn
+        ? "FRESH PULL " + new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })
+        : (IDX.live ? "LIVE LOOKUP" : "UPDATED " + (IDX.generated || "").slice(0, 10));
+      const r = search(idx, S);
+      if (cntEl) cntEl.textContent = pulling ? "PULLING FRESH FARES…" : r.length
         ? (r.length >= 25 ? "25+ TRIPS" : r.length + " TRIP" + (r.length > 1 ? "S" : "")) : "NO MATCHES";
       rowsEl.innerHTML = r.length
-        ? r.map(h => rowHTML(S.orig, IDX, h, true)).join("")
+        ? r.map(h => rowHTML(S.orig, idx, h, true)).join("")
         : `<div class="fzero">${
-            IDX.rows.length < 500
+            idx.rows.length < 500
               ? "We don't have many cached fares for " + S.orig + " yet — the index is still filling out.<br>" +
                 "Try <b>Anywhere</b> and a longer window, or check the board above for today's verified deals."
               : "Nothing matches all of those filters.<br>Budget and stops are usually the ones to move first."

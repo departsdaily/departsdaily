@@ -2,12 +2,11 @@ name = "departsdaily-fares"
 main = "custom-origin.js"
 compatibility_date = "2026-07-01"
 
-# KV cache for custom-origin lookups.
-# Create with:  npx wrangler kv namespace create FARES
-# then paste the returned id below.
-[[kv_namespaces]]
-binding = "FARES"
-id = "PASTE_KV_NAMESPACE_ID_HERE"
-
-# Secret (never put the token in this file):
-#   npx wrangler secret put TP_TOKEN
+# No KV needed — the Worker caches through the built-in Cache API
+# (caches.default): fresh pulls 10 min, custom-origin lookups 12 h.
+#
+# One secret (never in this file): TP_TOKEN.
+# Deployed by .github/workflows/deploy-worker.yml, which needs two repo
+# secrets from Cloudflare: CF_API_TOKEN ("Edit Workers" template) and
+# CF_ACCOUNT_ID (dashboard sidebar). Manual alternative:
+#   cd worker && npx wrangler secret put TP_TOKEN && npx wrangler deploy

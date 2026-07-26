@@ -53,6 +53,12 @@
 </div>
 
 <script src="js/affiliates.js"></script>
+<script>
+/* FRESH PULL endpoint — set to the deployed Cloudflare Worker base URL
+   (e.g. "https://departsdaily-fares.<account>.workers.dev") to enable the
+   live re-query toggle on the Fare Finder. Empty = toggle hidden. */
+window.DD_LIVE_URL="";
+</script>
 <script src="js/finder.js"></script>
 <script>
 Finder.mount(document.getElementById("app"),{origin:"CLT"});
