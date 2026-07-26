@@ -101,6 +101,6 @@ for i,x in enumerate(B["deals"],1):
     uw=d.textlength("DEPARTSDAILY.COM",font=COND(84))
     d.rounded_rectangle([60,1452,60+uw+64,1568],radius=16,fill=AMBER)
     d.text((92,1470),"DEPARTSDAILY.COM",font=COND(84),fill=NAVY)
-    d.text((60,1610),"TAP OUR PROFILE · LINK IN BIO",font=MONO(34),fill=WHITE)
+    d.text((60,1610),"LINK IN BIO",font=MONO(34),fill=WHITE)
     footer(d,SW,SH); img.save(f"out/story_{i}_{x['to']}.png")
 print("rendered")
