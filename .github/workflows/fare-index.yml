@@ -1,0 +1,51 @@
+name: Fare Finder index build
+
+# Rebuilds the Fare Finder's fare index (site/data/idx-CLT.json) once a day
+# before the morning rush, plus on demand. ~450 API calls, runs a few minutes.
+on:
+  schedule:
+    - cron: "30 9 * * *"   # 9:30 UTC = 5:30 AM ET (daylight time)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fare-index
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build fare index from live cached fares
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+        run: python scripts/build_fare_index.py site/data/idx-CLT.json
+
+      - name: Commit index
+        run: |
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git pull --rebase origin main || true
+          git add site/data/idx-CLT.json
+          git commit -m "Fare index $(date -u '+%F %H:%M UTC')" || echo "no changes"
+          git push origin HEAD:main
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          cd site && zip -rq ../deploy.zip . && cd ..
+          curl -sf -X POST "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys" \
+            -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            -H "Content-Type: application/zip" \
+            --data-binary "@deploy.zip" -o deploy_result.json
+          python3 -c "import json; d=json.load(open('deploy_result.json')); print('Netlify deploy:', d.get('state'), d.get('id'))"

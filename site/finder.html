@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fare Finder — Search by Trip Shape, Not Dates | Departs Daily</title>
+<meta name="description" content="Pick the shape of the trip — long weekend, a week, under $400 — and we check every departure and return combination from CLT in cached fare data.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/board.css">
+<script data-noptimize="1" data-cfasync="false" data-wpfc-render="false" data-no-defer="1">
+  (function () {
+    var script = document.createElement("script");
+    script.async = 1;
+    script.src = 'https://emrldtp.cc/NTU0NjU4.js?t=554658';
+    document.head.appendChild(script);
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPF0WKF1J5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YPF0WKF1J5');
+</script>
+<style>
+/* Fare Finder controls — board palette */
+.ffpanel{background:#12243C;border:2px solid #2E425E;border-radius:14px;margin-top:20px;overflow:visible}
+.prow{padding:16px;border-bottom:1px solid #2E425E;position:relative}
+.prow:last-child{border-bottom:0}
+.plabel{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#788CA5;
+  margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  font-family:"IBM Plex Mono",monospace}
+.plabel .hint{letter-spacing:0;font-size:11px;color:#FFB703;text-align:right;text-transform:none}
+.route{display:grid;grid-template-columns:1fr 30px 1fr;gap:8px;align-items:center}
+.arrow{text-align:center;color:#FFB703;font-size:18px}
+.field{position:relative}
+.field input{background:#070F1B;border:1px solid #2E425E;color:#F0F4FA;
+  padding:12px 11px;border-radius:8px;font-size:15px;font-family:"IBM Plex Mono",monospace;width:100%}
+.field input:focus{outline:2px solid #FFB703;outline-offset:1px}
+.field input[disabled]{color:#788CA5;cursor:not-allowed}
+.ac{position:absolute;z-index:9;top:calc(100% + 4px);left:0;right:0;background:#0B1829;
+  border:1px solid #2E425E;border-radius:8px;max-height:220px;overflow:auto}
+.ac[hidden]{display:none}
+.ac button{display:block;width:100%;text-align:left;background:none;border:0;color:#F0F4FA;
+  padding:10px 11px;font-size:13px;cursor:pointer;font-family:inherit;border-bottom:1px solid #16263E}
+.ac button:hover,.ac button:focus{background:#16263E;color:#FFB703;outline:none}
+.ac .c{color:#FFB703;font-weight:700;margin-right:8px;font-family:"IBM Plex Mono",monospace}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{appearance:none;background:transparent;border:1px solid #2E425E;color:#788CA5;
+  padding:8px 12px;border-radius:8px;font-size:12px;cursor:pointer;font-family:"IBM Plex Mono",monospace;
+  transition:border-color .12s,color .12s,background .12s}
+.chip:hover{border-color:#FFB703;color:#F0F4FA}
+.chip[aria-pressed="true"]{background:#FFB703;border-color:#FFB703;color:#0B1829;font-weight:700}
+.chip:focus-visible{outline:2px solid #FFB703;outline-offset:2px}
+.dow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.dow .chip{padding:10px 0;text-align:center}
+.nights{display:flex;align-items:center;gap:12px;margin-top:12px}
+.nights .rng{flex:1}
+.nights .val{font-size:14px;font-weight:700;color:#FFB703;white-space:nowrap;min-width:104px;
+  font-family:"IBM Plex Mono",monospace}
+input[type=range]{width:100%;accent-color:#FFB703;margin:0}
+.fbudget{display:flex;align-items:center;gap:14px}
+.fbudget .val{font-size:24px;font-weight:700;color:#FFB703;min-width:82px;font-family:"IBM Plex Mono",monospace}
+.toggle{display:flex;align-items:center;gap:10px;padding:8px 0;cursor:pointer;font-size:13px;color:#F0F4FA}
+.toggle input{appearance:none;width:40px;height:22px;border-radius:12px;background:#070F1B;
+  border:1px solid #2E425E;position:relative;cursor:pointer;flex:none;transition:background .15s;margin:0}
+.toggle input::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;
+  border-radius:50%;background:#788CA5;transition:transform .15s,background .15s}
+.toggle input:checked{background:#5b4a10}
+.toggle input:checked::after{transform:translateX(18px);background:#FFB703}
+.toggle input:focus-visible{outline:2px solid #FFB703;outline-offset:2px}
+.sublock{padding-left:50px}.sublock[hidden]{display:none}
+/* results */
+.fboard{background:#12243C;border:2px solid #2E425E;border-radius:14px;margin-top:20px;overflow:hidden}
+.fhead{display:flex;justify-content:space-between;align-items:baseline;padding:12px 16px;
+  background:#0E1C31;border-bottom:1px solid #2E425E;font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.fhead .t{color:#6C9EDE}.fhead .c{color:#788CA5}
+.frow{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;
+  padding:14px 16px;border-bottom:1px solid #16263E;text-decoration:none;color:inherit}
+.frow:last-child{border-bottom:0}
+.frow:hover{background:#16263E}
+.frow:focus-visible{outline:2px solid #FFB703;outline-offset:-2px}
+.nt{text-align:center;border:1px solid #5b4a10;border-radius:8px;padding:6px 2px;background:#0B1829}
+.nt .n{font-size:20px;font-weight:800;color:#FFB703;line-height:1;font-family:"IBM Plex Mono",monospace}
+.nt .l{font-size:8px;letter-spacing:.1em;color:#788CA5;text-transform:uppercase;margin-top:3px}
+.fdest{font-size:16px;font-weight:700;color:#F0F4FA}
+.fdest .code{color:#FFB703;margin-right:7px;font-family:"IBM Plex Mono",monospace}
+.legs{font-size:12px;color:#788CA5;margin-top:4px;line-height:1.55;font-family:"IBM Plex Mono",monospace}
+.legs b{color:#F0F4FA;font-weight:600}
+.ftags{margin-top:5px;display:flex;gap:6px;flex-wrap:wrap}
+.ftag{font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;
+  border:1px solid #2E425E;border-radius:4px;color:#788CA5;font-family:"IBM Plex Mono",monospace}
+.ftag.ns{border-color:#1F4A33;color:#3EC97E}
+.ftag.rt{border-color:#5b4a10;color:#FFB703}
+.fprice{text-align:right}
+.fprice .p{font-size:22px;font-weight:800;color:#F0F4FA;font-family:"IBM Plex Mono",monospace}
+.fprice .rt{font-size:9px;color:#788CA5;letter-spacing:.1em;text-transform:uppercase}
+.fempty{padding:38px 16px;text-align:center}
+.fempty p{color:#788CA5;font-size:14px;margin:0 0 14px;line-height:1.6}
+.fempty button{background:#FFB703;border:0;color:#0B1829;font-weight:700;padding:11px 18px;
+  border-radius:8px;font-size:13px;cursor:pointer;font-family:"IBM Plex Mono",monospace}
+</style>
+</head>
+<body>
+<header><div class="wrap hbar">
+  <img src="logo.png" alt="Departs Daily logo">
+  <a class="name" href="index.html">DEPARTS <span style="color:var(--amber)">DAILY</span></a>
+  <nav class="hnav" aria-label="Site">
+    <a href="index.html">DEAL BOARD</a>
+    <a href="index.html#guides">CITY GUIDES</a>
+    <a href="book.html">BOOKING DESK</a>
+    <a href="gear.html">GEAR</a>
+  </nav>
+  <span class="tag">FARE FINDER<br>SEARCH BY TRIP SHAPE</span>
+</div></header>
+
+<main class="wrap">
+<div class="hero">
+  <div class="kicker">■ FARE FINDER — CHARLOTTE (CLT)</div>
+  <h1>PICK THE TRIP, <span class="amber">NOT THE DATES.</span></h1>
+  <p class="sub">Tell us the shape of the trip — long weekend, a week, under $400, leave on a Friday —
+  and we check every departure and return combination in our fare data for the cheapest ones that fit.</p>
+</div>
+
+<div class="ffpanel">
+  <div class="prow">
+    <div class="plabel">Route <span class="hint">More home airports coming — CLT first</span></div>
+    <div class="route">
+      <div class="field"><input type="text" value="Charlotte · CLT" disabled aria-label="Origin: Charlotte CLT"></div>
+      <div class="arrow">→</div>
+      <div class="field">
+        <input id="dst" type="text" placeholder="Anywhere we track" autocomplete="off" aria-label="Destination">
+        <div class="ac" id="acD" hidden></div>
+      </div>
+    </div>
+  </div>
+  <div class="prow">
+    <div class="plabel">Search window</div>
+    <div class="chips" id="win">
+      <button class="chip" data-v="1">1 month</button>
+      <button class="chip" data-v="2" aria-pressed="true">2 months</button>
+      <button class="chip" data-v="3">3 months</button>
+      <button class="chip" data-v="5">5 months</button>
+    </div>
+  </div>
+  <div class="prow">
+    <div class="plabel">Trip length <span class="hint" id="lenHint">3–4 nights</span></div>
+    <div class="chips" id="len">
+      <button class="chip" data-lo="2" data-hi="3">Weekend</button>
+      <button class="chip" data-lo="3" data-hi="4" aria-pressed="true">Long weekend</button>
+      <button class="chip" data-lo="5" data-hi="8">A week</button>
+      <button class="chip" data-lo="9" data-hi="14">10 days–2 wks</button>
+      <button class="chip" data-lo="1" data-hi="30">Any</button>
+    </div>
+    <div class="nights">
+      <span class="val" id="nVal">3–4 nights</span>
+      <div class="rng"><input type="range" id="nLo" min="1" max="30" value="3" aria-label="Minimum nights"></div>
+      <div class="rng"><input type="range" id="nHi" min="1" max="30" value="4" aria-label="Maximum nights"></div>
+    </div>
+  </div>
+  <div class="prow">
+    <div class="plabel">Leave on <span class="hint" id="outHint"></span></div>
+    <div class="dow" id="dowOut"></div>
+  </div>
+  <div class="prow">
+    <div class="plabel">Come back <span class="hint" id="retHint"></span></div>
+    <div class="dow" id="dowRet"></div>
+  </div>
+  <div class="prow">
+    <div class="plabel">Max round-trip budget</div>
+    <div class="fbudget">
+      <span class="val" id="bVal">$400</span>
+      <input type="range" id="budget" min="80" max="1500" step="20" value="400" aria-label="Maximum budget">
+    </div>
+  </div>
+  <div class="prow">
+    <label class="toggle"><input type="checkbox" id="nsOnly"> Nonstop only</label>
+    <label class="toggle"><input type="checkbox" id="timeOn"> Filter by departure time</label>
+    <div class="sublock" id="timeBlock" hidden>
+      <div class="chips" id="tod">
+        <button class="chip" data-v="early" aria-pressed="true">Before 9a</button>
+        <button class="chip" data-v="mid">9a–4p</button>
+        <button class="chip" data-v="late">After 4p</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fboard">
+  <div class="fhead"><span class="t">CHEAPEST MATCHES — ROUND TRIP</span><span class="c" id="count"></span></div>
+  <div id="results"></div>
+</div>
+
+<div class="note" style="margin-top:16px">Lowest fares found in our cached search data — refreshed daily,
+not a guarantee of availability. Some prices combine two one-way fares; tapping a result runs a
+<b style="color:var(--white)">live search for those exact dates</b>, and the price at checkout is the only
+price that applies. <span id="stamp" style="color:var(--amber)"></span></div>
+</main>
+
+<footer><div class="wrap">
+  <p><b style="color:var(--white)">Departs Daily</b> · departsdaily.com · @CLTdeparts on Instagram, TikTok &amp; YouTube</p>
+  <p><a href="index.html">Deal Board</a> · <a href="book.html">Booking Desk</a> · <a href="gear.html">Travel Gear</a> · <a href="disclosure.html">Affiliate Disclosure</a> · <a href="terms.html">Terms of Use</a> · <a href="privacy.html">Privacy</a></p>
+  <p>We are not a travel agency and sell no travel; all bookings are with third parties under their terms. Some links are affiliate links — we may earn a commission at no extra cost to you.</p>
+  <div class="lights"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div></footer>
+
+<script src="js/affiliates.js"></script>
+<script>
+/* ============ Fare Finder — real data from data/idx-CLT.json ============ */
+const ORIGIN="CLT";
+const AIRPORTS=[["NYC","New York City"],["BOS","Boston"],["MIA","Miami"],["FLL","Ft. Lauderdale"],
+["DCA","Washington DC"],["ORD","Chicago"],["DFW","Dallas"],["MCO","Orlando"],["LAX","Los Angeles"],
+["DEN","Denver"],["PHL","Philadelphia"],["HOU","Houston"],["LAS","Las Vegas"],["PHX","Phoenix"],
+["TPA","Tampa"],["BNA","Nashville"],["MSY","New Orleans"],["SFO","San Francisco"],["SEA","Seattle"],
+["AUS","Austin"],["CUN","Cancún"],["PUJ","Punta Cana"],["MBJ","Montego Bay"],["NAS","Nassau"],
+["AUA","Aruba"],["SJU","San Juan"],["GCM","Grand Cayman"],["LON","London"],["PAR","Paris"],["ROM","Rome"]];
+const NAME=Object.fromEntries(AIRPORTS);
+const DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const S={dest:"*",months:2,lo:3,hi:4,out:[4,5],ret:[0,1],budget:400,ns:false,timeOn:false,tod:"early"};
+const $=s=>document.querySelector(s);
+let IDX=null;
+
+fetch("data/idx-CLT.json").then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{IDX=j;$("#stamp").textContent="Fare data built "+(j.meta&&j.meta.label||"today")+".";run();})
+  .catch(()=>{ $("#results").innerHTML=
+    `<div class="fempty"><p>The Fare Finder's data index is being built for the first time —<br>
+     check back within the hour. The <a href="index.html" style="color:var(--amber)">Deal Board</a> is live now.</p></div>`;});
+
+/* ---- destination autocomplete ---- */
+(function(){
+  const inp=$("#dst"), box=$("#acD");
+  const render=()=>{
+    const q=inp.value.trim().toLowerCase();
+    let list=AIRPORTS.filter(([c,n])=>!q||c.toLowerCase().startsWith(q)||n.toLowerCase().includes(q)).slice(0,7);
+    let html=(!q||"anywhere".startsWith(q))
+      ?`<button data-c="*"><span class="c">✱</span>Anywhere we track</button>`:"";
+    html+=list.map(([c,n])=>`<button data-c="${c}"><span class="c">${c}</span>${n}</button>`).join("");
+    box.innerHTML=html||`<button disabled style="color:#788CA5">No tracked airport matches “${inp.value}”</button>`;
+    box.hidden=false;
+  };
+  inp.onfocus=render; inp.oninput=render;
+  inp.onblur=()=>setTimeout(()=>box.hidden=true,180);
+  box.onmousedown=e=>{
+    const b=e.target.closest("button[data-c]"); if(!b)return;
+    e.preventDefault();
+    const c=b.dataset.c;
+    inp.value=c==="*"?"":NAME[c]+" · "+c;
+    box.hidden=true; S.dest=c; run();
+  };
+})();
+
+/* ---- day-of-week pickers ---- */
+function buildDow(id,key){
+  const el=$("#"+id);
+  el.innerHTML=DOW.map((d,i)=>`<button class="chip" data-i="${i}" aria-pressed="${S[key].includes(i)}">${d.slice(0,2)}</button>`).join("");
+  el.onclick=e=>{
+    const b=e.target.closest(".chip"); if(!b)return;
+    const i=+b.dataset.i,on=b.getAttribute("aria-pressed")==="true";
+    if(on){ if(S[key].length>1)S[key]=S[key].filter(x=>x!==i); else return; }
+    else S[key]=[...S[key],i].sort((a,z)=>a-z);
+    b.setAttribute("aria-pressed",String(!on)); hint(); run();
+  };
+}
+function hint(){
+  const f=a=>a.length===7?"Any day":a.map(i=>DOW[i]).join(", ");
+  $("#outHint").textContent=f(S.out); $("#retHint").textContent=f(S.ret);
+}
+buildDow("dowOut","out"); buildDow("dowRet","ret"); hint();
+
+/* ---- chip groups / sliders / toggles ---- */
+function group(id,fn){$("#"+id).onclick=e=>{const b=e.target.closest(".chip");if(!b)return;
+  [...b.parentNode.children].forEach(c=>c.setAttribute("aria-pressed","false"));
+  b.setAttribute("aria-pressed","true");fn(b);run();};}
+group("win",b=>S.months=+b.dataset.v);
+group("tod",b=>S.tod=b.dataset.v);
+group("len",b=>{S.lo=+b.dataset.lo;S.hi=+b.dataset.hi;$("#nLo").value=S.lo;$("#nHi").value=S.hi;nLabel()});
+function nLabel(){
+  const t=S.lo===S.hi?`${S.lo} night${S.lo>1?"s":""}`:`${S.lo}–${S.hi} nights`;
+  $("#nVal").textContent=t; $("#lenHint").textContent=t;
+}
+function nSync(){
+  let lo=+$("#nLo").value, hi=+$("#nHi").value;
+  if(lo>hi){[lo,hi]=[hi,lo];$("#nLo").value=lo;$("#nHi").value=hi}
+  S.lo=lo;S.hi=hi;nLabel();
+  [...$("#len").children].forEach(c=>c.setAttribute("aria-pressed",
+    String(+c.dataset.lo===lo&&+c.dataset.hi===hi)));
+  run();
+}
+$("#nLo").oninput=nSync; $("#nHi").oninput=nSync; nLabel();
+$("#budget").oninput=e=>{S.budget=+e.target.value;$("#bVal").textContent="$"+S.budget;run()};
+$("#nsOnly").onchange=e=>{S.ns=e.target.checked;run()};
+$("#timeOn").onchange=e=>{S.timeOn=e.target.checked;$("#timeBlock").hidden=!S.timeOn;run()};
+
+/* ---- search over the real index ---- */
+function inTod(t){ if(!S.timeOn)return true; const h=+t.slice(0,2);
+  return (S.tod==="early"&&h<9)||(S.tod==="mid"&&h>=9&&h<16)||(S.tod==="late"&&h>=16); }
+function addDays(iso,n){const d=new Date(iso+"T12:00:00");d.setDate(d.getDate()+n);
+  return d.toISOString().slice(0,10);}
+function dowOf(iso){return new Date(iso+"T12:00:00").getDay();}
+function search(){
+  if(!IDX)return[];
+  const horizon=new Date(); horizon.setMonth(horizon.getMonth()+S.months);
+  const hz=horizon.toISOString().slice(0,10);
+  const codes=S.dest==="*"?Object.keys(IDX.dests):(IDX.dests[S.dest]?[S.dest]:[]);
+  const hits=[];
+  for(const code of codes){
+    const F=IDX.dests[code];
+    const d1set=new Set(Object.keys(F.out));
+    for(const k in F.rt) d1set.add(k.slice(0,10));
+    for(const d1 of d1set){
+      if(d1>hz)continue;
+      if(!S.out.includes(dowOf(d1)))continue;
+      for(let n=S.lo;n<=S.hi;n++){
+        const d2=addDays(d1,n);
+        if(!S.ret.includes(dowOf(d2)))continue;
+        let best=null;
+        const o=F.out[d1], b=F.back[d2];
+        if(o&&b&&(!S.ns||(o[1]===0&&b[1]===0))&&inTod(o[2])){
+          best={price:o[0]+b[0],os:o[1],bs:b[1],ot:o[2],bt:b[2],kind:"ow"};
+        }
+        const r=F.rt[d1+"|"+d2];
+        if(r&&(!S.ns||r[1]===0)&&inTod(r[2])&&(!best||r[0]<best.price)){
+          best={price:r[0],os:r[1],bs:r[1],ot:r[2],bt:null,kind:"rt"};
+        }
+        if(!best||best.price>S.budget)continue;
+        hits.push({code,d1,d2,n,...best});
+      }
+    }
+  }
+  hits.sort((a,b)=>a.price-b.price);
+  const seen={},out=[];
+  for(const h of hits){ if(S.dest==="*"&&seen[h.code])continue; seen[h.code]=1; out.push(h); if(out.length>=25)break; }
+  return out;
+}
+const fmt=s=>{const d=new Date(s+"T12:00:00");
+  return DOW[d.getDay()].toUpperCase()+" "+d.toLocaleDateString("en-US",{month:"short",day:"numeric"}).toUpperCase()};
+const t12=t=>{if(!t)return"";let h=+t.slice(0,2);const m=t.slice(3,5),ap=h<12?"AM":"PM";h=h%12||12;
+  return" "+h+":"+m+ap;};
+function run(){
+  if(!IDX)return;
+  const r=search(), box=$("#results");
+  $("#count").textContent=r.length?r.length+(r.length===25?"+ TRIPS":" TRIPS"):"";
+  if(!r.length){
+    box.innerHTML=`<div class="fempty"><p>Nothing in the fare data matches all of that.<br>
+      Budget is usually the filter to loosen first.</p>
+      <button onclick="loosen()">Raise budget to $${Math.min(S.budget+200,1500)}</button></div>`;
+    return;
+  }
+  box.innerHTML=r.map(h=>{
+    const ns=h.os===0&&h.bs===0;
+    return `<a class="frow" href="${affFlightSearch(ORIGIN,h.code,h.d1,h.d2)}" target="_blank" rel="noopener">
+      <div class="nt"><div class="n">${h.n}</div><div class="l">${h.n===1?"night":"nights"}</div></div>
+      <div>
+        <div class="fdest"><span class="code">${h.code}</span>${NAME[h.code]||h.code}</div>
+        <div class="legs"><b>${fmt(h.d1)}</b>${t12(h.ot)} → <b>${fmt(h.d2)}</b>${t12(h.bt)}</div>
+        <div class="ftags">${ns?'<span class="ftag ns">NONSTOP BOTH WAYS</span>'
+          :'<span class="ftag">'+(Math.max(h.os,h.bs))+' STOP</span>'}
+          ${h.kind==="rt"?'<span class="ftag rt">ROUND-TRIP FARE</span>':'<span class="ftag">TWO ONE-WAYS</span>'}</div>
+      </div>
+      <div class="fprice"><div class="p">$${h.price}</div><div class="rt">ROUND TRIP</div></div>
+    </a>`}).join("");
+}
+function loosen(){S.budget=Math.min(S.budget+200,1500);$("#budget").value=S.budget;
+  $("#bVal").textContent="$"+S.budget;run()}
+</script>
+</body>
+</html>
