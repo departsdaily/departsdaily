@@ -4,10 +4,10 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-07-26 14:57 EDT · 20/30 routes returned fares.
+   Generated 2026-07-26 15:57 EDT · 20/30 routes returned fares.
    ===================================================================== */
 const BOARD={
- updated:"2026-07-26T14:57:06-04:00",
+ updated:"2026-07-26T15:57:31-04:00",
  weekOf:"WEEK OF JUL 20–26",
  weekExp:"2026-07-26"
 };

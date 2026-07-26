@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="css/board.css">
 <link rel="stylesheet" href="css/finder.css">
 <script src="js/nav.js" defer></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5064929428745790" crossorigin="anonymous"></script>
+<style>.adslot{margin:26px 0;min-height:90px}
+.adslot ins[data-ad-status="unfilled"]{display:none!important}</style>
 </head><body>
 
 <header><div class="wrap hbar">
@@ -26,15 +29,22 @@
     you'll accept and what you'll spend — we check every real fare we have and show what fits.</p>
   </div>
 
-  <div class="fq" style="max-width:320px;margin-bottom:14px">
-    <label for="origSel">LEAVING FROM</label>
-    <select id="origSel"></select>
-  </div>
-
   <div id="app">
     <div class="fwrap"></div>
     <div class="board"><div class="bhead"><span data-count>SEARCHING…</span><span data-src></span></div>
       <div data-rows></div></div>
+  </div>
+
+  
+  <!-- Ad sits below the results: the tool answers the question first. -->
+  <div class="adslot">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5064929428745790"
+         data-ad-slot="4192557686"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
   <div class="note">Fares are the cheapest we found in cached search data and are not a guarantee of
@@ -46,12 +56,6 @@
 <script src="js/affiliates.js"></script>
 <script src="js/finder.js"></script>
 <script>
-const ORIGINS=[["CLT","Charlotte"],["ATL","Atlanta"],["ORD","Chicago"],["DFW","Dallas"],
-["DEN","Denver"],["LAX","Los Angeles"],["JFK","New York"],["MIA","Miami"],["SEA","Seattle"],
-["BOS","Boston"]];
-const sel=document.getElementById("origSel");
-sel.innerHTML=ORIGINS.map(([c,n])=>`<option value="${c}">${n} · ${c}</option>`).join("");
-const app=Finder.mount(document.getElementById("app"),{origin:"CLT"});
-sel.addEventListener("change",e=>app.boot(e.target.value));
+Finder.mount(document.getElementById("app"),{origin:"CLT"});
 </script>
 </body></html>

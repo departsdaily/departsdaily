@@ -80,6 +80,9 @@ window.Finder = (function () {
              has_arrivals: false, rows: rows };
   }
 
+  const ORIGIN_NAMES = { CLT:"Charlotte", ATL:"Atlanta", ORD:"Chicago", DFW:"Dallas",
+    DEN:"Denver", LAX:"Los Angeles", JFK:"New York", MIA:"Miami", SEA:"Seattle", BOS:"Boston" };
+
   const cache = {};
   async function loadIndex(origin) {
     if (cache[origin]) return cache[origin];
@@ -210,19 +213,22 @@ window.Finder = (function () {
     const months = [1,2,3,4,6,9,12].map(m =>
       `<option value="${m}"${m===2?" selected":""}>Next ${m} month${m>1?"s":""}</option>`).join("");
     return `
-    <div class="fquick">
-      <div class="fq"><label for="fDest">WHERE TO</label>
+    <div class="fquick fquick3">
+      <div class="fq"><label for="fOrig">FROM</label>
+        <select id="fOrig"></select></div>
+      <div class="fq"><label for="fDest">TO</label>
         <select id="fDest"><option value="*">Anywhere we track</option></select></div>
       <div class="fq"><label for="fWhen">WHEN</label>
         <select id="fWhen">${months}<option value="dates">Specific dates…</option></select></div>
-      <button class="fmore" id="fMore" aria-expanded="false" aria-controls="fPanel">MORE FILTERS ▾</button>
+      <div class="fq"><label for="fWhen2">&nbsp;</label>
+        <button class="fmore" id="fMore" aria-expanded="true" aria-controls="fPanel">HIDE FILTERS ▴</button></div>
     </div>
     <div class="fdates" id="fDates" hidden>
       <div class="fq"><label for="fFrom">EARLIEST DEPARTURE</label><input type="date" id="fFrom"></div>
       <div class="fq"><label for="fTo">LATEST DEPARTURE</label><input type="date" id="fTo"></div>
     </div>
 
-    <div class="fpanel" id="fPanel" hidden>
+    <div class="fpanel" id="fPanel">
       <div class="fsec"><div class="flbl"><span>TRIP LENGTH</span><span class="hint" id="fNHint"></span></div>
         <div class="fchips" id="fLen">
           <button class="fch" data-lo="2" data-hi="3">Weekend</button>
@@ -343,6 +349,7 @@ window.Finder = (function () {
     $("fBud").addEventListener("input", e => {
       S.bud = +e.target.value; $("fBVal").textContent = "$" + S.bud; render(); });
     $("fDest").addEventListener("change", e => { S.dest = e.target.value; render(); });
+    $("fOrig").addEventListener("change", e => { boot(e.target.value); });
 
     const rowsEl = root.querySelector("[data-rows]");
     const cntEl  = root.querySelector("[data-count]");
@@ -378,6 +385,12 @@ window.Finder = (function () {
       if (srcEl) srcEl.textContent = IDX.live ? "LIVE LOOKUP"
         : "UPDATED " + (IDX.generated || "").slice(0,10);
       const base = new Date(IDX.base);
+      /* FROM list: the origins with a pre-built index, current one selected. */
+      const o = $("fOrig");
+      o.innerHTML = PREBUILT.map(function (c) {
+        return '<option value="' + c + '"' + (c === origin ? " selected" : "") + ">" +
+               (ORIGIN_NAMES[c] || c) + " · " + c + "</option>";
+      }).join("");
       const d = $("fDest");
       d.innerHTML = '<option value="*">Anywhere we track</option>' +
         IDX.dests.map(c => `<option value="${c}">${(IDX.names&&IDX.names[c])||c} · ${c}</option>`).join("");
