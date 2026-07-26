@@ -34,8 +34,10 @@ SLEEP  = float(os.environ.get("TP_SLEEP", "0.4"))
 MIN_ROWS_PER_ORIGIN = 200      # below this we refuse to overwrite
 
 # Origins we pre-build. Everything else falls back to the Worker (live lookup).
-ORIGINS = [o.strip().upper() for o in os.environ.get(
-    "ORIGINS", "CLT,ATL,ORD,DFW,DEN,LAX,JFK,MIA,SEA,BOS").split(",") if o.strip()]
+# `or` (not a .get default): the workflow exports ORIGINS="" on a blank
+# dispatch, and an empty-but-set env var must still mean "all ten".
+ORIGINS = [o.strip().upper() for o in (os.environ.get("ORIGINS")
+    or "CLT,ATL,ORD,DFW,DEN,LAX,JFK,MIA,SEA,BOS").split(",") if o.strip()]
 
 LEN_LO, LEN_HI = 1, 30         # trip lengths we keep, in nights
 
