@@ -1,0 +1,34 @@
+{
+  "_comment": "One entry per origin airport. Everything the daily Instagram pipeline needs to render and caption a board lives here, so adding city #11 is a config edit plus a token — no Python changes. `ig_enabled` gates the posting workflow: an origin with no live Instagram token stays false and is skipped by the matrix rather than failing the run.",
+  "_adding_a_city": [
+    "1. Add the block here (ig_enabled: false).",
+    "2. python scripts/seed_baselines.py <CODE>   -> writes state/baselines-<CODE>.json",
+    "3. Add <CODE> to ORIGINS in scripts/build_index.py so the nightly index covers it.",
+    "4. Create the Instagram account, authorize it in the Meta app, add the token as the repo secret named in token_secret.",
+    "5. Flip ig_enabled to true."
+  ],
+
+  "CLT": {
+    "city": "Charlotte",
+    "airport": "CHARLOTTE DOUGLAS INTL",
+    "cover_line": "OUT OF CLT",
+    "gate": "GATE C-19",
+    "handle": "cltdeparts",
+    "token_secret": "IG_TOKEN",
+    "ig_enabled": true,
+    "caption_lead": "CLT DEPARTURES",
+    "hashtags": ["#CLT", "#Charlotte", "#QueenCity", "#CharlotteNC", "#CLTAirport"]
+  },
+
+  "ATL": {
+    "city": "Atlanta",
+    "airport": "HARTSFIELD-JACKSON ATL INTL",
+    "cover_line": "OUT OF ATL",
+    "gate": "GATE B-24",
+    "handle": "atldeparts",
+    "token_secret": "IG_TOKEN_ATL",
+    "ig_enabled": false,
+    "caption_lead": "ATL DEPARTURES",
+    "hashtags": ["#ATL", "#Atlanta", "#ATLAirport", "#Hartsfield", "#AtlantaGA", "#404"]
+  }
+}

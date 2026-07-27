@@ -3,10 +3,18 @@ name: Morning Instagram post
 # Fired at ~7:10 AM ET by a push to the 'ig-trigger' branch (precise timing),
 # or manually from the Actions tab. No cron here on purpose: GitHub cron can
 # run hours late, and a second same-day firing would double-post.
+#
+# One job per origin whose config/origins.json block has ig_enabled: true.
+# An origin with no Instagram token yet stays false and is simply not in the
+# matrix — it costs nothing and cannot fail the run.
 on:
   push:
     branches: [ig-trigger]
   workflow_dispatch:
+    inputs:
+      origins:
+        description: "Comma-separated origins to post (blank = every ig_enabled origin)"
+        required: false
 
 permissions:
   contents: write
@@ -16,8 +24,57 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  post:
+  plan:
     runs-on: ubuntu-latest
+    outputs:
+      origins: ${{ steps.pick.outputs.origins }}
+      count: ${{ steps.pick.outputs.count }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Decide which origins post today
+        id: pick
+        env:
+          REQUESTED: ${{ github.event.inputs.origins }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          cfg = json.load(open("config/origins.json"))
+          req = [o.strip().upper() for o in os.environ.get("REQUESTED", "").split(",") if o.strip()]
+          picked = []
+          for code, o in cfg.items():
+              if code.startswith("_"):
+                  continue
+              if req and code not in req:
+                  continue
+              if not req and not o.get("ig_enabled"):
+                  continue
+              picked.append({"code": code, "handle": o["handle"],
+                             "secret": o["token_secret"]})
+          print("origins=" + json.dumps(picked))
+          print("count=" + str(len(picked)))
+          PY
+
+      - name: Report the plan
+        run: |
+          echo "Posting for: ${{ steps.pick.outputs.origins }}" >> $GITHUB_STEP_SUMMARY
+
+  post:
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    strategy:
+      # Serial on purpose: every job commits its slides to main, and parallel
+      # pushes to the same branch just race each other into rejections.
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        origin: ${{ fromJson(needs.plan.outputs.origins) }}
+
+    name: post ${{ matrix.origin.code }} (@${{ matrix.origin.handle }})
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,46 +86,75 @@ jobs:
 
       - run: pip install pillow
 
+      - name: Confirm the account token exists
+        env:
+          IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
+        run: |
+          if [ -z "$IG_TOKEN" ]; then
+            echo "::error::${{ matrix.origin.code }} is ig_enabled but repo secret ${{ matrix.origin.secret }} is empty."
+            exit 1
+          fi
+
       - name: Fetch and verify fares
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
+          ORIGIN: ${{ matrix.origin.code }}
         run: python pipeline/fetch_fares.py
 
       - name: Render slides and stories
-        run: |
-          mkdir -p out
-          python pipeline/render_slides.py
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
+        run: python pipeline/render_slides.py
 
       - name: Stage slides into the site
+        id: stage
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
         run: |
           D=$(date +%F)
-          mkdir -p "site/daily/$D"
-          cp out/*.png "site/daily/$D/"
-          # keep only the last 14 days of slide folders
-          ls -1d site/daily/*/ 2>/dev/null | sort | head -n -14 | xargs -r rm -rf
+          # CLT keeps its original unprefixed path so live slide URLs never move.
+          if [ "$ORIGIN" = "CLT" ]; then
+            SRC=out;            DEST="site/daily/$D";        KEEP="site/daily/*/"
+          else
+            SRC="out/$ORIGIN";  DEST="site/daily/$ORIGIN/$D"; KEEP="site/daily/$ORIGIN/*/"
+          fi
+          echo "dest=$DEST" >> "$GITHUB_OUTPUT"
+          mkdir -p "$DEST"
+          cp "$SRC"/*.png "$DEST/"
+          # keep only the last 14 days of slide folders for this origin
+          ls -1d $KEEP 2>/dev/null | grep -E '/[0-9]{4}-[0-9]{2}-[0-9]{2}/$' \
+            | sort | head -n -14 | xargs -r rm -rf
           git config user.name departs-bot
           git config user.email board@departsdaily.com
           git add -A
-          git commit -m "IG slides $D" || echo "no changes"
-          git push origin HEAD:main
+          git commit -m "IG slides $ORIGIN $D" || echo "no changes"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::could not push slides after 5 attempts"; exit 1
 
       - name: Wait for Cloudflare Pages to serve the slides
         run: |
           # The push above triggers the Pages build. Poll until the cover
           # slide is actually live — Instagram fetches these URLs, so posting
           # before they resolve would publish a broken carousel.
+          WEB="$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
+          URL="https://departsdaily.com/$WEB/slide1_cover.png"
+          echo "waiting on $URL"
           for i in $(seq 1 40); do
-            code=$(curl -s -o /dev/null -w "%{http_code}" "https://departsdaily.com/daily/$(date +%F)/slide1_cover.png")
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
             [ "$code" = "200" ] && echo "slides live" && exit 0
             sleep 10
           done
-          echo "slides never became reachable — aborting before a broken IG post"
+          echo "::error::slides never became reachable — aborting before a broken IG post"
           exit 1
 
       - name: Publish to Instagram
         env:
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          ORIGIN: ${{ matrix.origin.code }}
+          IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
         run: |
-          export RAW_BASE="https://departsdaily.com/daily/$(date +%F)"
+          export RAW_BASE="https://departsdaily.com/$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
+          echo "RAW_BASE=$RAW_BASE"
           python pipeline/publish_instagram.py

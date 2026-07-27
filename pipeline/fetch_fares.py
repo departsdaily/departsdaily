@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 """Departs Daily - fare fetch + verification. Runs daily via GitHub Actions.
 Pulls cheapest fares (Travelpayouts data API), scores vs monthly baselines,
-applies 6-day no-repeat, flags skips. Writes deals.json."""
-import os, json, datetime, urllib.request, urllib.parse
+applies 6-day no-repeat, flags skips. Writes deals.json.
+
+Origin comes from the ORIGIN env var and defaults to CLT, so an unqualified run
+behaves exactly as it did before the pipeline went multi-city."""
+import os, sys, json, datetime, urllib.request, urllib.parse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import origins
 
 TP_TOKEN = os.environ["TP_TOKEN"]
-ORIGIN = "CLT"
-ROUTES = json.load(open("state/baselines.json"))
-HISTORY_FILE = "state/history.json"
+ORIGIN = origins.origin_code()
+PATHS = origins.paths(ORIGIN)
+ROUTES = origins.baselines(ORIGIN)
+HISTORY_FILE = PATHS["history"]
 NO_REPEAT_DAYS = 6
 MIN_DISCOUNT = 0.12
 today = datetime.date.today()
@@ -62,9 +69,14 @@ for code in ROUTES:
 
 deals.sort(key=lambda x: -x["disc"])
 skips.sort(key=lambda x: x["disc"])
-board = {"date": today.isoformat(), "deals": deals[:4], "skip": skips[0] if skips else None}
-json.dump(board, open("deals.json", "w"), indent=1)
+board = {"date": today.isoformat(), "origin": ORIGIN,
+         "deals": deals[:4], "skip": skips[0] if skips else None}
+if not board["deals"]:
+    print(f"FATAL: {ORIGIN} produced no qualifying deals — not writing a board.")
+    raise SystemExit(1)
+json.dump(board, open(PATHS["deals"], "w"), indent=1)
 for d in board["deals"]:
     hist[d["to"]] = today.isoformat()
+os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
 json.dump(hist, open(HISTORY_FILE, "w"), indent=1)
-print("deals:", [d["to"] for d in board["deals"]])
+print(f"{ORIGIN} deals:", [d["to"] for d in board["deals"]])
