@@ -1,0 +1,81 @@
+name: Refresh DOT baselines
+
+# Pulls the DOT Consumer Airfare Report Table 6 for the most recent published
+# quarter, rewrites config/seasonality.json, and re-seeds every origin's
+# state/baselines-<CODE>.json from it.
+#
+# DOT publishes roughly a quarter behind, so this runs on the 20th of each
+# month and simply finds nothing new most of the time. It commits only when a
+# number actually moved, so a no-op month leaves no trace.
+#
+# Adding city #11 means adding its block to config/origins.json and running
+# this — no hand-transcribed fares, no per-city Python.
+
+on:
+  schedule:
+    - cron: "0 9 20 * *"
+  workflow_dispatch:
+    inputs:
+      origins:
+        description: "Comma-separated origins to reseed (blank = every origin in config/origins.json)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: baselines-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Pull DOT city-pair averages
+        run: python scripts/fetch_dot_fares.py
+
+      - name: Re-seed every origin
+        env:
+          REQUESTED: ${{ github.event.inputs.origins }}
+        run: |
+          python - <<'PY' > /tmp/origins.txt
+          import json, os
+          cfg = json.load(open("config/origins.json"))
+          req = [o.strip().upper() for o in os.environ.get("REQUESTED", "").split(",") if o.strip()]
+          for code in cfg:
+              if code.startswith("_"):
+                  continue
+              if req and code not in req:
+                  continue
+              print(code)
+          PY
+          while read -r code; do
+            echo "::group::$code"
+            python scripts/seed_baselines.py "$code"
+            echo "::endgroup::"
+          done < /tmp/origins.txt
+
+      - name: Commit if anything moved
+        run: |
+          git config user.name  "departsdaily-bot"
+          git config user.email "bot@departsdaily.com"
+          git add config/seasonality.json config/dot-source.json state/baselines-*.json
+          if git diff --cached --quiet; then
+            echo "no change — DOT has not published a new quarter"
+            exit 0
+          fi
+          git commit -m "Refresh DOT baselines"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --quiet && git push --quiet && exit 0
+            echo "push race, retry $i"
+            sleep $((i * 5))
+          done
+          exit 1

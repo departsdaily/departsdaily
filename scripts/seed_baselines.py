@@ -36,6 +36,9 @@ import json, os, statistics, sys
 from datetime import date, timedelta
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from update_deals import dests_for            # the origin's own top-30 list
+
 CFG = os.path.join(ROOT, "config", "seasonality.json")
 ORIGINS_CFG = os.path.join(ROOT, "config", "origins.json")
 CLT_LEGACY = os.path.join(ROOT, "state", "baselines.json")
@@ -65,6 +68,10 @@ def observed(origin):
 
 
 def build(origin, cfg, legacy_clt):
+    # state/baselines.json is Charlotte's original hand-seeded file. For CLT it
+    # is that origin's own tuned data; for anyone else it is only a source of
+    # international curves to reuse.
+    own_tuned = legacy_clt if origin == "CLT" else {}
     shapes = cfg["shapes"]
     factor = cfg["cheap_fare_factor"]
     dot = cfg.get("dot_round_trip", {}).get(origin, {})
@@ -72,10 +79,32 @@ def build(origin, cfg, legacy_clt):
     est = cfg["intl_estimate_round_trip"]
 
     routes, notes = {}, []
-    for code, meta in cfg["destinations"].items():
+    # Every destination this origin actually tracks — not the union of all of
+    # them. CLT's list and ATL's list differ (ATL flies DTW and AMS, CLT flies
+    # AUS and ROM), and seeding a curve for a route an origin does not track
+    # would put a city on its board that its own index never fetches fares for.
+    for code in dests_for(origin):
         if code == origin:
             continue
+        meta = cfg["destinations"].get(code)
+        if not meta:
+            notes.append(f"{code} is in this origin's top 30 but has no entry in "
+                         f"config/seasonality.json destinations — skipped")
+            continue
         shape = shapes[meta["shape"]]
+
+        # An origin's own hand-tuned curve always wins. Charlotte's ten curves
+        # are where this entire methodology came from; re-deriving them from
+        # DOT would move live badges for no gain.
+        if code in own_tuned:
+            routes[code] = {"city": meta["city"],
+                            "m": list(own_tuned[code]["m"]),
+                            "basis": "TUNED",
+                            "src": f"hand-tuned {origin} curve, unchanged — the "
+                                   f"original curves this methodology was "
+                                   f"derived from",
+                            "intl": bool(meta["intl"]), "ig_board": True}
+            continue
 
         if code in dot:
             level = dot[code] * factor["domestic"]
@@ -174,7 +203,8 @@ def main():
     by_basis = {}
     for r in routes.values():
         by_basis[r["basis"]] = by_basis.get(r["basis"], 0) + 1
-    print(f"\n{origin}: {len(routes)} routes — " +
+    tracked = len([d for d in dests_for(origin) if d != origin])
+    print(f"\n{origin}: {len(routes)}/{tracked} tracked destinations seeded — " +
           ", ".join(f"{v} {k}" for k, v in sorted(by_basis.items())))
 
     problems = sanity_check(origin, routes)

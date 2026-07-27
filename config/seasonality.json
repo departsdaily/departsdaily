@@ -1,67 +1,303 @@
 {
-  "_comment": "Baseline seeding inputs for scripts/seed_baselines.py. A route's 12 monthly 'typical cheap round trip' figures = annual_level x shape[month]. This is the Charlotte methodology written down so it reproduces for every new origin instead of being re-guessed by hand each time.",
-
-  "_shapes_note": "Normalised monthly multipliers (mean = 1.00). The first five were derived from the hand-seeded CLT curves in state/baselines.json (each curve divided by its own annual mean, then averaged within its group), so new cities inherit the same seasonality Charlotte was tuned to. 'europe' is hand-seeded: summer peak, deep Jan/Feb and November troughs.",
-  "shapes": {
-    "florida":   [0.975, 1.075, 1.321, 1.150, 0.948, 0.925, 0.988, 0.886, 0.777, 0.844, 0.948, 1.163],
-    "caribbean": [1.002, 1.110, 1.234, 1.138, 0.936, 0.919, 0.981, 0.925, 0.818, 0.872, 0.957, 1.109],
-    "vegas":     [0.882, 0.948, 1.104, 1.137, 1.076, 0.976, 1.020, 0.954, 0.848, 0.937, 1.004, 1.115],
-    "mountain":  [0.966, 0.903, 1.082, 1.020, 0.950, 1.043, 1.121, 1.020, 0.872, 0.927, 0.981, 1.114],
-    "shorthaul": [0.947, 1.044, 1.205, 1.123, 0.988, 0.957, 0.964, 0.908, 0.838, 0.905, 0.990, 1.131],
-    "europe":    [0.820, 0.830, 0.920, 0.980, 1.050, 1.180, 1.240, 1.200, 1.050, 0.950, 0.830, 0.950]
+ "_comment": "Baseline seeding inputs for scripts/seed_baselines.py. A route's 12 monthly 'typical cheap round trip' figures = annual_level x shape[month]. This is the Charlotte methodology written down so it reproduces for every new origin instead of being re-guessed by hand each time.",
+ "_shapes_note": "Normalised monthly multipliers (mean = 1.00). The first five were derived from the hand-seeded CLT curves in state/baselines.json (each curve divided by its own annual mean, then averaged within its group), so new cities inherit the same seasonality Charlotte was tuned to. 'europe' is hand-seeded: summer peak, deep Jan/Feb and November troughs.",
+ "shapes": {
+  "florida": [
+   0.975,
+   1.075,
+   1.321,
+   1.15,
+   0.948,
+   0.925,
+   0.988,
+   0.886,
+   0.777,
+   0.844,
+   0.948,
+   1.163
+  ],
+  "caribbean": [
+   1.002,
+   1.11,
+   1.234,
+   1.138,
+   0.936,
+   0.919,
+   0.981,
+   0.925,
+   0.818,
+   0.872,
+   0.957,
+   1.109
+  ],
+  "vegas": [
+   0.882,
+   0.948,
+   1.104,
+   1.137,
+   1.076,
+   0.976,
+   1.02,
+   0.954,
+   0.848,
+   0.937,
+   1.004,
+   1.115
+  ],
+  "mountain": [
+   0.966,
+   0.903,
+   1.082,
+   1.02,
+   0.95,
+   1.043,
+   1.121,
+   1.02,
+   0.872,
+   0.927,
+   0.981,
+   1.114
+  ],
+  "shorthaul": [
+   0.947,
+   1.044,
+   1.205,
+   1.123,
+   0.988,
+   0.957,
+   0.964,
+   0.908,
+   0.838,
+   0.905,
+   0.99,
+   1.131
+  ],
+  "europe": [
+   0.82,
+   0.83,
+   0.92,
+   0.98,
+   1.05,
+   1.18,
+   1.24,
+   1.2,
+   1.05,
+   0.95,
+   0.83,
+   0.95
+  ]
+ },
+ "_factor_note": "DOT/BTS city-pair averages are the average fare ALL passengers paid, including last-minute and full-fare tickets. The board compares against a typical CHEAP round trip, which is lower. The domestic factor 0.50 is not a guess: it is the median of the seven hand-tuned CLT domestic curves divided by their DOT round-trip averages (MIA .49, FLL .42, MCO .44, LAS .56, DEN .58, BNA .47, MSY .51). Applying it to a real DOT number for a new city reproduces Charlotte's own relationship rather than inventing a new one. The two international factors are calibrated the same way against the CLT curves that exist (CUN .96, SJU .78, AUA .68) and against the Europe fares the index actually returns; international discounting off list is shallower than domestic, which is why these sit far above 0.50.",
+ "cheap_fare_factor": {
+  "domestic": 0.5,
+  "caribbean": 0.95,
+  "europe": 0.9
+ },
+ "_dest_note": "shape = seasonality profile. intl routes have no DOT city-pair data (the Consumer Airfare Report covers contiguous-state markets only), so they carry the labelled estimate methodology used for Charlotte.",
+ "destinations": {
+  "NYC": {
+   "city": "New York City",
+   "shape": "shorthaul",
+   "intl": false
   },
-
-  "_factor_note": "DOT/BTS city-pair averages are the average fare ALL passengers paid, including last-minute and full-fare tickets. The board compares against a typical CHEAP round trip, which is lower. The domestic factor 0.50 is not a guess: it is the median of the seven hand-tuned CLT domestic curves divided by their DOT round-trip averages (MIA .49, FLL .42, MCO .44, LAS .56, DEN .58, BNA .47, MSY .51). Applying it to a real DOT number for a new city reproduces Charlotte's own relationship rather than inventing a new one. The two international factors are calibrated the same way against the CLT curves that exist (CUN .96, SJU .78, AUA .68) and against the Europe fares the index actually returns; international discounting off list is shallower than domestic, which is why these sit far above 0.50.",
-  "cheap_fare_factor": { "domestic": 0.50, "caribbean": 0.95, "europe": 0.90 },
-
-  "_dest_note": "shape = seasonality profile. intl routes have no DOT city-pair data (the Consumer Airfare Report covers contiguous-state markets only), so they carry the labelled estimate methodology used for Charlotte.",
-  "destinations": {
-    "NYC": {"city": "New York City",  "shape": "shorthaul", "intl": false},
-    "BOS": {"city": "Boston",         "shape": "shorthaul", "intl": false},
-    "MIA": {"city": "Miami",          "shape": "florida",   "intl": false},
-    "FLL": {"city": "Ft. Lauderdale", "shape": "florida",   "intl": false},
-    "DCA": {"city": "Washington DC",  "shape": "shorthaul", "intl": false},
-    "ORD": {"city": "Chicago",        "shape": "shorthaul", "intl": false},
-    "DFW": {"city": "Dallas",         "shape": "shorthaul", "intl": false},
-    "MCO": {"city": "Orlando",        "shape": "florida",   "intl": false},
-    "LAX": {"city": "Los Angeles",    "shape": "mountain",  "intl": false},
-    "DEN": {"city": "Denver",         "shape": "mountain",  "intl": false},
-    "PHL": {"city": "Philadelphia",   "shape": "shorthaul", "intl": false},
-    "HOU": {"city": "Houston",        "shape": "shorthaul", "intl": false},
-    "LAS": {"city": "Las Vegas",      "shape": "vegas",     "intl": false},
-    "PHX": {"city": "Phoenix",        "shape": "vegas",     "intl": false},
-    "TPA": {"city": "Tampa",          "shape": "florida",   "intl": false},
-    "BNA": {"city": "Nashville",      "shape": "shorthaul", "intl": false},
-    "MSY": {"city": "New Orleans",    "shape": "shorthaul", "intl": false},
-    "SFO": {"city": "San Francisco",  "shape": "mountain",  "intl": false},
-    "SEA": {"city": "Seattle",        "shape": "mountain",  "intl": false},
-    "AUS": {"city": "Austin",         "shape": "shorthaul", "intl": false},
-    "CUN": {"city": "Cancún",         "shape": "caribbean", "intl": true},
-    "PUJ": {"city": "Punta Cana",     "shape": "caribbean", "intl": true},
-    "MBJ": {"city": "Montego Bay",    "shape": "caribbean", "intl": true},
-    "NAS": {"city": "Nassau",         "shape": "caribbean", "intl": true},
-    "AUA": {"city": "Aruba",          "shape": "caribbean", "intl": true},
-    "SJU": {"city": "San Juan, PR",   "shape": "caribbean", "intl": true},
-    "GCM": {"city": "Grand Cayman",   "shape": "caribbean", "intl": true},
-    "LON": {"city": "London",         "shape": "europe",    "intl": true},
-    "PAR": {"city": "Paris",          "shape": "europe",    "intl": true},
-    "ROM": {"city": "Rome",           "shape": "europe",    "intl": true}
+  "BOS": {
+   "city": "Boston",
+   "shape": "shorthaul",
+   "intl": false
   },
-
-  "_dot_note": "DOT Consumer Airfare Report, Table 6 (contiguous-state city-pair markets), Q4 2025 — the most recent quarter published on data.transportation.gov (resource yj5y-b2ir). Values below are ROUND TRIP: DOT reports each-way fares, doubled here. Markets are metro areas, so ATL-FLL is not reported separately and carries the Miami metro figure (noted per route in the generated file). Puerto Rico is outside the report's scope, so SJU has no DOT figure.",
-  "dot_round_trip": {
-    "ATL": {
-      "NYC": 442, "BOS": 526, "MIA": 357, "FLL": 357, "DCA": 407, "ORD": 419,
-      "DFW": 448, "MCO": 408, "LAX": 693, "DEN": 484, "PHL": 447, "HOU": 410,
-      "LAS": 677, "PHX": 614, "TPA": 431, "BNA": 509, "MSY": 436, "SFO": 768,
-      "SEA": 665, "AUS": 509
-    }
+  "MIA": {
+   "city": "Miami",
+   "shape": "florida",
+   "intl": false
   },
-  "_dot_shared_market": { "ATL": { "FLL": "Miami, FL metro area — DOT does not report Ft. Lauderdale separately" } },
-
-  "_intl_note": "No DOT city-pair data exists for these. Same labelled-estimate approach used for Charlotte: a typical round-trip fare for the market, carried across origins unless a route has origin-specific service that clearly changes it. These are estimates, and the site must keep labelling them as such.",
-  "intl_estimate_round_trip": {
-    "CUN": 520, "PUJ": 560, "MBJ": 540, "NAS": 480, "AUA": 620,
-    "SJU": 420, "GCM": 640, "LON": 850, "PAR": 900, "ROM": 950
+  "FLL": {
+   "city": "Ft. Lauderdale",
+   "shape": "florida",
+   "intl": false
+  },
+  "DCA": {
+   "city": "Washington DC",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "ORD": {
+   "city": "Chicago",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "DFW": {
+   "city": "Dallas",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "MCO": {
+   "city": "Orlando",
+   "shape": "florida",
+   "intl": false
+  },
+  "LAX": {
+   "city": "Los Angeles",
+   "shape": "mountain",
+   "intl": false
+  },
+  "DEN": {
+   "city": "Denver",
+   "shape": "mountain",
+   "intl": false
+  },
+  "PHL": {
+   "city": "Philadelphia",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "HOU": {
+   "city": "Houston",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "LAS": {
+   "city": "Las Vegas",
+   "shape": "vegas",
+   "intl": false
+  },
+  "PHX": {
+   "city": "Phoenix",
+   "shape": "vegas",
+   "intl": false
+  },
+  "TPA": {
+   "city": "Tampa",
+   "shape": "florida",
+   "intl": false
+  },
+  "BNA": {
+   "city": "Nashville",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "MSY": {
+   "city": "New Orleans",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "SFO": {
+   "city": "San Francisco",
+   "shape": "mountain",
+   "intl": false
+  },
+  "SEA": {
+   "city": "Seattle",
+   "shape": "mountain",
+   "intl": false
+  },
+  "AUS": {
+   "city": "Austin",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "CUN": {
+   "city": "Cancún",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "PUJ": {
+   "city": "Punta Cana",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "MBJ": {
+   "city": "Montego Bay",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "NAS": {
+   "city": "Nassau",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "AUA": {
+   "city": "Aruba",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "SJU": {
+   "city": "San Juan, PR",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "GCM": {
+   "city": "Grand Cayman",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "LON": {
+   "city": "London",
+   "shape": "europe",
+   "intl": true
+  },
+  "PAR": {
+   "city": "Paris",
+   "shape": "europe",
+   "intl": true
+  },
+  "ROM": {
+   "city": "Rome",
+   "shape": "europe",
+   "intl": true
+  },
+  "DTW": {
+   "city": "Detroit",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "AMS": {
+   "city": "Amsterdam",
+   "shape": "europe",
+   "intl": true
   }
+ },
+ "_dot_note": "DOT Consumer Airfare Report, Table 6 (contiguous-state city-pair markets), Q4 2025 — the most recent quarter published on data.transportation.gov (resource yj5y-b2ir). Values below are ROUND TRIP: DOT reports each-way fares, doubled here. Markets are metro areas, so ATL-FLL is not reported separately and carries the Miami metro figure (noted per route in the generated file). Puerto Rico is outside the report's scope, so SJU has no DOT figure.",
+ "dot_round_trip": {
+  "ATL": {
+   "NYC": 442,
+   "BOS": 526,
+   "MIA": 357,
+   "FLL": 357,
+   "DCA": 407,
+   "ORD": 419,
+   "DFW": 448,
+   "MCO": 408,
+   "LAX": 693,
+   "DEN": 484,
+   "PHL": 447,
+   "HOU": 410,
+   "LAS": 677,
+   "PHX": 614,
+   "TPA": 431,
+   "BNA": 509,
+   "MSY": 436,
+   "SFO": 768,
+   "SEA": 665,
+   "AUS": 509
+  }
+ },
+ "_dot_shared_market": {
+  "ATL": {
+   "FLL": "Miami, FL metro area — DOT does not report Ft. Lauderdale separately"
+  }
+ },
+ "_intl_note": "No DOT city-pair data exists for these. Same labelled-estimate approach used for Charlotte: a typical round-trip fare for the market, carried across origins unless a route has origin-specific service that clearly changes it. These are estimates, and the site must keep labelling them as such.",
+ "intl_estimate_round_trip": {
+  "CUN": 520,
+  "PUJ": 560,
+  "MBJ": 540,
+  "NAS": 480,
+  "AUA": 620,
+  "SJU": 420,
+  "GCM": 640,
+  "LON": 850,
+  "PAR": 900,
+  "ROM": 950,
+  "AMS": 880
+ }
 }

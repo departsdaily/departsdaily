@@ -7,7 +7,6 @@
     "4. Create the Instagram account, authorize it in the Meta app, add the token as the repo secret named in token_secret.",
     "5. Flip ig_enabled to true."
   ],
-
   "CLT": {
     "city": "Charlotte",
     "airport": "CHARLOTTE DOUGLAS INTL",
@@ -17,9 +16,14 @@
     "token_secret": "IG_TOKEN",
     "ig_enabled": true,
     "caption_lead": "CLT DEPARTURES",
-    "hashtags": ["#CLT", "#Charlotte", "#QueenCity", "#CharlotteNC", "#CLTAirport"]
+    "hashtags": [
+      "#CLT",
+      "#Charlotte",
+      "#QueenCity",
+      "#CharlotteNC",
+      "#CLTAirport"
+    ]
   },
-
   "ATL": {
     "city": "Atlanta",
     "airport": "HARTSFIELD-JACKSON ATL INTL",
@@ -29,6 +33,149 @@
     "token_secret": "IG_TOKEN_ATL",
     "ig_enabled": false,
     "caption_lead": "ATL DEPARTURES",
-    "hashtags": ["#ATL", "#Atlanta", "#ATLAirport", "#Hartsfield", "#AtlantaGA", "#404"]
+    "hashtags": [
+      "#ATL",
+      "#Atlanta",
+      "#ATLAirport",
+      "#Hartsfield",
+      "#AtlantaGA",
+      "#404"
+    ]
+  },
+  "ORD": {
+    "city": "Chicago",
+    "airport": "CHICAGO O'HARE INTL",
+    "cover_line": "OUT OF ORD",
+    "gate": "GATE K-9",
+    "handle": "orddeparts",
+    "token_secret": "IG_TOKEN_ORD",
+    "ig_enabled": false,
+    "caption_lead": "ORD DEPARTURES",
+    "hashtags": [
+      "#ORD",
+      "#Chicago",
+      "#ChicagoIL",
+      "#OHare",
+      "#Chi"
+    ]
+  },
+  "DFW": {
+    "city": "Dallas",
+    "airport": "DALLAS/FORT WORTH INTL",
+    "cover_line": "OUT OF DFW",
+    "gate": "GATE D-22",
+    "handle": "dfwdeparts",
+    "token_secret": "IG_TOKEN_DFW",
+    "ig_enabled": false,
+    "caption_lead": "DFW DEPARTURES",
+    "hashtags": [
+      "#DFW",
+      "#Dallas",
+      "#DallasTX",
+      "#FortWorth",
+      "#DFWAirport"
+    ]
+  },
+  "DEN": {
+    "city": "Denver",
+    "airport": "DENVER INTL",
+    "cover_line": "OUT OF DEN",
+    "gate": "GATE B-51",
+    "handle": "dendeparts",
+    "token_secret": "IG_TOKEN_DEN",
+    "ig_enabled": false,
+    "caption_lead": "DEN DEPARTURES",
+    "hashtags": [
+      "#DEN",
+      "#Denver",
+      "#DenverCO",
+      "#MileHigh",
+      "#DIA"
+    ]
+  },
+  "LAX": {
+    "city": "Los Angeles",
+    "airport": "LOS ANGELES INTL",
+    "cover_line": "OUT OF LAX",
+    "gate": "GATE 6-A",
+    "handle": "laxdeparts",
+    "token_secret": "IG_TOKEN_LAX",
+    "ig_enabled": false,
+    "caption_lead": "LAX DEPARTURES",
+    "hashtags": [
+      "#LAX",
+      "#LosAngeles",
+      "#LA",
+      "#SoCal",
+      "#LAXAirport"
+    ]
+  },
+  "JFK": {
+    "city": "New York",
+    "airport": "JOHN F KENNEDY INTL",
+    "cover_line": "OUT OF JFK",
+    "gate": "GATE B-24",
+    "handle": "jfkdeparts",
+    "token_secret": "IG_TOKEN_JFK",
+    "ig_enabled": false,
+    "caption_lead": "JFK DEPARTURES",
+    "hashtags": [
+      "#JFK",
+      "#NYC",
+      "#NewYork",
+      "#NewYorkCity",
+      "#JFKAirport"
+    ]
+  },
+  "MIA": {
+    "city": "Miami",
+    "airport": "MIAMI INTL",
+    "cover_line": "OUT OF MIA",
+    "gate": "GATE D-14",
+    "handle": "miadeparts",
+    "token_secret": "IG_TOKEN_MIA",
+    "ig_enabled": false,
+    "caption_lead": "MIA DEPARTURES",
+    "hashtags": [
+      "#MIA",
+      "#Miami",
+      "#MiamiFL",
+      "#305",
+      "#MIAAirport"
+    ]
+  },
+  "SEA": {
+    "city": "Seattle",
+    "airport": "SEATTLE-TACOMA INTL",
+    "cover_line": "OUT OF SEA",
+    "gate": "GATE N-12",
+    "handle": "seadeparts",
+    "token_secret": "IG_TOKEN_SEA",
+    "ig_enabled": false,
+    "caption_lead": "SEA DEPARTURES",
+    "hashtags": [
+      "#SEA",
+      "#Seattle",
+      "#SeattleWA",
+      "#PNW",
+      "#SeaTac"
+    ]
+  },
+  "BOS": {
+    "city": "Boston",
+    "airport": "BOSTON LOGAN INTL",
+    "cover_line": "OUT OF BOS",
+    "gate": "GATE C-19",
+    "handle": "bosdeparts",
+    "token_secret": "IG_TOKEN_BOS",
+    "ig_enabled": false,
+    "caption_lead": "BOS DEPARTURES",
+    "hashtags": [
+      "#BOS",
+      "#Boston",
+      "#BostonMA",
+      "#Logan",
+      "#NewEngland"
+    ]
   }
 }
