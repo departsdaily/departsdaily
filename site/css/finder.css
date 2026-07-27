@@ -271,7 +271,8 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
    Each .row is its own grid, so `auto` columns were sized per row and the
    prices never lined up once "(OUR EST.)" made one note wider than another.
    Fixed widths make every row measure identically. */
-.row{grid-template-columns:minmax(150px,auto) 1fr 118px 208px;position:relative}
+.row{grid-template-columns:minmax(140px,auto) 1fr 108px 200px;gap:8px 14px;position:relative}
+.dates{font-size:12.5px}
 .var{white-space:normal}
 /* The row used to BE an <a>, which is why nothing inside it could be a link.
    It is now a div with a stretched overlay link, so the guide button can sit

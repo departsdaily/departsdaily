@@ -352,7 +352,13 @@ window.Finder = (function () {
       `<option value="${m}"${m===6?" selected":""}>Next ${m} month${m>1?"s":""}</option>`).join("");
     const lens = [["1-30","Any length"],["2-3","Weekend"],["3-4","Long weekend"],
                   ["5-8","A week"],["9-14","10 days – 2 wks"],["15-30","Extended"]]
-      .map(([v,l]) => `<option value="${v}">${l}</option>`).join("");
+      .map(([v,l]) => `<option value="${v}">${l}</option>`).join("") +
+      /* Shown when the sliders land on a range that is no preset. It needs a
+         real, non-empty value: `disabled` options cannot be selected by
+         assigning select.value, Chromium renders a selected `hidden` option as
+         an empty box, and assigning the empty string sets selectedIndex to -1
+         outright. All three left the control looking broken. */
+      '<option value="custom">Custom range</option>';
     return `
     <div class="fquick fquick3">
       <div class="fq"><label for="fOrig">FROM</label>
@@ -446,12 +452,17 @@ window.Finder = (function () {
     }));
 
     /* ---------------- TRIP LENGTH (one line, switchable) ---------------- */
+    const LEN_PRESETS = new Set(["1-30","2-3","3-4","5-8","9-14","15-30"]);
+    function setLenSel() {
+      const k = S.lo + "-" + S.hi;
+      $("fLenSel").value = LEN_PRESETS.has(k) ? k : "custom";
+    }
     const lenRng = wireRange(root, "len", (lo, hi) => {
       S.lo = lo; S.hi = hi;
-      $("fLenSel").value = lo + "-" + hi;                 // "" if not a preset
-      nlab(); syncRet(); render();
+      setLenSel(); nlab(); syncRet(); render();
     });
     $("fLenSel").addEventListener("change", e => {
+      if (e.target.value === "custom") return;     // a readout, not a command
       const p = e.target.value.split("-");
       S.lo = +p[0]; S.hi = +p[1];
       lenRng.set(S.lo, S.hi); nlab(); syncRet(); render();
@@ -531,7 +542,7 @@ window.Finder = (function () {
         if (blk) blk.hidden = !cb.checked;
         if (key === "len") {
           S.lenOn = cb.checked;
-          if (!cb.checked) { S.lo = 1; S.hi = 30; lenRng.set(1,30); $("fLenSel").value = "1-30"; }
+          if (!cb.checked) { S.lo = 1; S.hi = 30; lenRng.set(1,30); setLenSel(); }
           nlab(); syncRet();
         } else {
           S[key].on = cb.checked;
