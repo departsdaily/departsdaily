@@ -51,27 +51,19 @@ jobs:
           git add -A
           git commit -m "IG slides $D" || echo "no changes"
           git push origin HEAD:main
-          # Mirror to the Cloudflare Pages production branch (see note in
-          # hourly-refresh.yml) so the story/carousel slide URLs resolve.
-          git push origin HEAD:cloudflare-migration || true
 
-      - name: Deploy slides to Netlify (so Instagram can fetch them)
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      - name: Wait for Cloudflare Pages to serve the slides
         run: |
-          cd site && zip -rq ../deploy.zip . && cd ..
-          curl -sf -X POST "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys" \
-            -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
-            -H "Content-Type: application/zip" \
-            --data-binary "@deploy.zip" -o deploy_result.json
-          python3 -c "import json; d=json.load(open('deploy_result.json')); print('Netlify deploy:', d.get('state'), d.get('id'))"
-          # give the CDN a moment before Instagram fetches the images
-          for i in $(seq 1 20); do
+          # The push above triggers the Pages build. Poll until the cover
+          # slide is actually live — Instagram fetches these URLs, so posting
+          # before they resolve would publish a broken carousel.
+          for i in $(seq 1 40); do
             code=$(curl -s -o /dev/null -w "%{http_code}" "https://departsdaily.com/daily/$(date +%F)/slide1_cover.png")
-            [ "$code" = "200" ] && echo "slides live" && break
-            sleep 6
+            [ "$code" = "200" ] && echo "slides live" && exit 0
+            sleep 10
           done
+          echo "slides never became reachable — aborting before a broken IG post"
+          exit 1
 
       - name: Publish to Instagram
         env:
