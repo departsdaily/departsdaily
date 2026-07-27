@@ -135,7 +135,7 @@ jobs:
           git restore --staged state/history*.json 2>/dev/null || true
           git commit -m "IG slides $ORIGIN $D" || echo "no changes"
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
             sleep $((i * 5))
           done
           echo "::error::could not push slides after 5 attempts"; exit 1
@@ -174,7 +174,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "IG posted ${{ matrix.origin.code }}"
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
             sleep $((i * 5))
           done
           echo "::error::posted, but could not record the no-repeat history"; exit 1
@@ -191,6 +191,6 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "IG failure trail ${{ matrix.origin.code }}"
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
             sleep $((i * 5))
           done
