@@ -25,7 +25,7 @@ from datetime import datetime, date
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from update_deals import ROUTES, AIRLINES, INTL   # single source of truth
+from update_deals import ROUTES, AIRLINES, INTL, dests_for   # single source of truth
 
 ET     = ZoneInfo("America/New_York")
 TOKEN  = os.environ.get("TP_TOKEN", "")
@@ -107,7 +107,9 @@ def months_ahead(today, n):
 def build_origin(origin, today):
     best = {}                       # (dest, dayOffset, nights) -> row
     diag = {}                       # per-route counts, so a thin build is explainable
-    for dest in ROUTES:
+    # Each origin is indexed against ITS OWN top-30 list, so "Anywhere we
+    # track" means something specific and true per airport.
+    for dest in dests_for(origin):
         if dest == origin:
             continue
         got = 0
@@ -257,6 +259,10 @@ def main():
             "generated": now.isoformat(timespec="seconds"),
             "months": MONTHS,
             "dests": codes,
+            # The origin's curated top-30 list. `dests` is only those that
+            # actually returned fares, so the site can say "25 of the top 30"
+            # instead of quietly redefining what we track.
+            "tracked": len(dests_for(origin)),
             "names": {c: ROUTES[c][0] for c in codes},
             "intl": [c for c in codes if c in INTL],
             "airlines": AIRLINES,

@@ -23,8 +23,17 @@ ET = ZoneInfo("America/New_York")
 ORIGIN = "CLT"
 TOKEN = os.environ.get("TP_TOKEN", "")
 
-# 30 tracked destinations. avg/src mirror ROUTES in index.html (DOT/BTS 2025
-# each-way x2 for domestic; labeled estimates for international).
+# ---------------------------------------------------------------------------
+# DESTINATION CATALOG. One entry per city we can track from anywhere.
+# (name, annual_round_trip_avg)  -- avg mirrors ROUTES in index.html:
+#   DOT/BTS 2025 each-way x2 for domestic CLT routes, labeled estimates for
+#   international. avg=None means we do NOT have a defensible baseline for
+#   that city yet, so nothing may print a "% below average" badge for it —
+#   the site falls back to "HOT FARE" rather than inventing a comparison.
+#   Baselines are per ORIGIN, not global: CLT->AUS averaging $648 says nothing
+#   about ATL->AUS. New origins therefore ship searchable but un-badged until
+#   their own DOT figures are entered.
+# ---------------------------------------------------------------------------
 ROUTES = {
  "NYC":("New York City",382),"BOS":("Boston",492),"MIA":("Miami",426),
  "FLL":("Ft. Lauderdale",426),"DCA":("Washington DC",412),"ORD":("Chicago",416),
@@ -37,11 +46,42 @@ ROUTES = {
  "NAS":("Nassau",480),"AUA":("Aruba",620),"SJU":("San Juan, PR",420),
  "GCM":("Grand Cayman",640),"LON":("London",850),"PAR":("Paris",900),
  "ROM":("Rome",950),
+ # --- added for the ATL top-30. No baseline yet -> no % badge, by design. ---
+ "DTW":("Detroit",None),"AMS":("Amsterdam",None),
+ "CLT":("Charlotte",None),"MSP":("Minneapolis",None),
+ "SAN":("San Diego",None),"RDU":("Raleigh-Durham",None),"MDE":("Medellín",None),
 }
 
-# International routes: city codes (LON not LHR — the fare cache keys on cities),
-# longer trip windows, and guaranteed board slots (higher-value bookings).
-INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM"}
+# ---------------------------------------------------------------------------
+# TOP 30 DESTINATIONS PER ORIGIN. This is a coverage statement — "these are the
+# 30 destinations we track from this airport" — and the site says exactly that
+# on the page. Lists deliberately overlap between airports; the leisure markets
+# that matter out of CLT mostly matter out of ATL too. We expand ONE ORIGIN AT
+# A TIME, writing that origin's city guides as we go, rather than bolting 300
+# thin guides on at once.
+# Anything added here for one origin becomes searchable from EVERY origin in
+# the Fare Finder, because the nightly index is built per origin against that
+# origin's own list.
+# ---------------------------------------------------------------------------
+ORIGIN_DESTS = {
+ "CLT": ["NYC","BOS","MIA","FLL","DCA","ORD","DFW","MCO","LAX","DEN",
+         "PHL","HOU","LAS","PHX","TPA","BNA","MSY","SFO","SEA","AUS",
+         "CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM"],
+ # Atlanta is the next board to open (see site-notes). Delta's hub, so the
+ # domestic spread is wider and the transatlantic list leans AMS over ROM.
+ "ATL": ["NYC","BOS","MIA","FLL","DCA","ORD","DFW","MCO","LAX","DEN",
+         "PHL","HOU","LAS","PHX","TPA","BNA","MSY","SFO","SEA","DTW",
+         "CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","AMS"],
+}
+# Origins without their own curated list yet fall back to the CLT 30, which is
+# what every origin used before per-origin lists existed. No regression.
+DEFAULT_DESTS = ORIGIN_DESTS["CLT"]
+
+def dests_for(origin):
+    return ORIGIN_DESTS.get(origin.upper(), DEFAULT_DESTS)
+
+
+INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM","AMS","MDE"}
 
 # Board shape. International gets guaranteed slots because those bookings are
 # worth several times a domestic one — bigger fares, and the traveller goes on
@@ -175,12 +215,15 @@ def main():
     now = datetime.now(ET)
     today = now.date()
     found, failed = [], []
-    for dest in ROUTES:
+    for dest in dests_for(ORIGIN):
         try:
             fares = fetch(dest)
             deal = pick(dest, fares, today)
             if deal:
-                deal["pct"] = round((1 - deal["price"] / ROUTES[dest][1]) * 100)
+                avg = ROUTES[dest][1]
+                # No baseline -> no claim. pct 0 keeps it out of the "biggest
+                # saving" ranking instead of inventing a discount.
+                deal["pct"] = round((1 - deal["price"] / avg) * 100) if avg else 0
                 found.append(deal)
                 print(f"  {ORIGIN}->{dest} ${deal['price']} ({deal['pct']}% below avg) "
                       f"{deal['d1']} {deal['dep']} {deal['al']}")
@@ -238,7 +281,7 @@ def main():
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated {now.strftime("%Y-%m-%d %H:%M %Z")} · {len(found)}/30 routes returned fares.
+   Generated {now.strftime("%Y-%m-%d %H:%M %Z")} · {len(found)}/{len(dests_for(ORIGIN))} routes returned fares.
    ===================================================================== */
 const BOARD={{
  updated:"{updated}",

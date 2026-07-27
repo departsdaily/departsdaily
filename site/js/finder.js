@@ -4,8 +4,15 @@
    row = [destIdx, dayOffset, nights, price, stopsOut, stopsBack,
           depOutMin, arrOutMin, depBackMin, arrBackMin, airline]
    Arrival minutes are -1 when the fare API gave us no leg duration. In that
-   case the arrival filters are hidden entirely rather than silently doing
-   nothing — a filter that pretends to work is worse than no filter.
+   case the arrival filters are disabled with a stated reason rather than
+   silently doing nothing — a filter that pretends to work is worse than no
+   filter.
+
+   Arrival minutes are stored modulo 1440, so an arrival earlier on the clock
+   than its departure means the leg crossed midnight. We label that +1 and say
+   "next day or later", because a duration long enough to wrap twice is
+   indistinguishable from one that wrapped once in this data. We never claim
+   an exact arrival date we cannot prove.
 
    All filtering is client-side against one pre-built file per origin, so a
    visitor can run 200 searches with zero API calls and zero cost.
@@ -21,7 +28,8 @@ window.Finder = (function () {
   const LIVE_API = (typeof window !== "undefined" && window.DD_LIVE_URL) || "";
 
   /* Only cities with a real hand-written guide. Never link to a page that
-     doesn't exist. */
+     doesn't exist. Cities added to an origin's tracked list before their guide
+     is written simply have no guide link until it is. */
   const GUIDES = {
     NYC:"new-york", BOS:"boston", MIA:"miami", FLL:"fort-lauderdale", DCA:"washington-dc",
     ORD:"chicago", DFW:"dallas", MCO:"orlando", LAX:"los-angeles", DEN:"denver",
@@ -31,7 +39,9 @@ window.Finder = (function () {
     SJU:"san-juan", GCM:"grand-cayman", LON:"london", PAR:"paris", ROM:"rome"
   };
 
-  /* Time buckets used by all four time filters. */
+  /* Legacy coarse buckets. The finder now filters by the hour, but this table
+     and inSlots() stay exported because older saved links and the Worker's
+     test harness still speak in slot names. */
   const SLOTS = [
     { v:"early", label:"Before 6am",  lo:0,    hi:360  },
     { v:"am",    label:"6am – 12pm",  lo:360,  hi:720  },
@@ -41,6 +51,27 @@ window.Finder = (function () {
   const inSlots = (min, picked) =>
     !picked || !picked.length || min < 0 ||
     picked.some(v => { const s = SLOTS.find(x => x.v === v); return s && min >= s.lo && min < s.hi; });
+
+  /* ---------------------------------------------------------------
+     Hour-level window test.  w = {on, lo, hi, ovn}
+       lo/hi are clock HOURS, 0-23, inclusive at both ends — picking
+       6 to 11 means "any time from 6:00am up to 11:59am".
+       ovn (arrival windows only) allows itineraries that land the next
+       day. Off means same-calendar-day arrivals only.
+     A time we do not have (-1) is never filtered out. The switch is
+     disabled outright when the whole index lacks arrival times, so this
+     only bites on the odd row inside an otherwise complete index —
+     and dropping those silently would hide real fares.
+     --------------------------------------------------------------- */
+  function inWin(min, w, depMin) {
+    if (!w || !w.on) return true;
+    if (min < 0) return true;
+    if (w.ovn === false && depMin != null && depMin >= 0 && min < depMin) return false;
+    const h = Math.floor(min / 60);
+    return w.lo <= w.hi ? (h >= w.lo && h <= w.hi) : (h >= w.lo || h <= w.hi);
+  }
+  /* Arrival earlier on the clock than its departure = the leg crossed midnight. */
+  const nextDay = (dep, arr) => arr >= 0 && dep >= 0 && arr < dep;
 
 
   /* -------------------------------------------------------------------
@@ -89,15 +120,15 @@ window.Finder = (function () {
              has_arrivals: false, rows: rows };
   }
 
-  /* Canonical city names, mirroring scripts/update_deals.py ROUTES. Used when
+  /* Canonical city names, mirroring scripts/update_deals.py CATALOG. Used when
      an index does not carry its own names map (the legacy schema does not),
      so a dropdown never has to read "NYC · NYC". */
-  const CITY_NAMES = { NYC:"New York City", BOS:"Boston", MIA:"Miami", FLL:"Ft. Lauderdale", DCA:"Washington DC", ORD:"Chicago", DFW:"Dallas", MCO:"Orlando", LAX:"Los Angeles", DEN:"Denver", PHL:"Philadelphia", HOU:"Houston", LAS:"Las Vegas", PHX:"Phoenix", TPA:"Tampa", BNA:"Nashville", MSY:"New Orleans", SFO:"San Francisco", SEA:"Seattle", AUS:"Austin", CUN:"Cancún", PUJ:"Punta Cana", MBJ:"Montego Bay", NAS:"Nassau", AUA:"Aruba", SJU:"San Juan, PR", GCM:"Grand Cayman", LON:"London", PAR:"Paris", ROM:"Rome" };
+  const CITY_NAMES = { NYC:"New York City", BOS:"Boston", MIA:"Miami", FLL:"Ft. Lauderdale", DCA:"Washington DC", ORD:"Chicago", DFW:"Dallas", MCO:"Orlando", LAX:"Los Angeles", DEN:"Denver", PHL:"Philadelphia", HOU:"Houston", LAS:"Las Vegas", PHX:"Phoenix", TPA:"Tampa", BNA:"Nashville", MSY:"New Orleans", SFO:"San Francisco", SEA:"Seattle", AUS:"Austin", CLT:"Charlotte", DTW:"Detroit", MSP:"Minneapolis", SAN:"San Diego", RDU:"Raleigh-Durham", CUN:"Cancún", PUJ:"Punta Cana", MBJ:"Montego Bay", NAS:"Nassau", AUA:"Aruba", SJU:"San Juan, PR", GCM:"Grand Cayman", LON:"London", PAR:"Paris", ROM:"Rome", AMS:"Amsterdam", MDE:"Medellín" };
 
   const ORIGIN_NAMES = { CLT:"Charlotte", ATL:"Atlanta", ORD:"Chicago", DFW:"Dallas",
     DEN:"Denver", LAX:"Los Angeles", JFK:"New York", MIA:"Miami", SEA:"Seattle", BOS:"Boston" };
 
-  const INTL_CODES = ["CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM"];
+  const INTL_CODES = ["CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM","AMS","MDE"];
 
   const cache = {};
   async function loadIndex(origin) {
@@ -120,6 +151,7 @@ window.Finder = (function () {
     d.toLocaleDateString("en-US", { month:"short", day:"numeric" }).toUpperCase();
   const fmtTime = m => { if (m < 0) return ""; const h = Math.floor(m/60), x = h%12 || 12;
     return x + ":" + String(m%60).padStart(2,"0") + (h<12 ? "AM" : "PM"); };
+  const hourLab = h => (h % 12 || 12) + (h < 12 ? "AM" : "PM");
   const iso = d => d.toISOString().slice(0,10);
 
   function affLink(origin, h) {
@@ -130,7 +162,7 @@ window.Finder = (function () {
   }
 
   /* S = {dest, mode:"window"|"dates", mo, from, to, lo, hi, out[], ret[],
-          bud, stops, tOutDep[], tOutArr[], tRetDep[], tRetArr[]} */
+          bud, stops, tOutDep{}, tOutArr{}, tRetDep{}, tRetArr{}} */
   function search(IDX, S) {
     if (!IDX) return [];
     const base = new Date(IDX.base + "T12:00");
@@ -152,10 +184,10 @@ window.Finder = (function () {
       if (off < loOff || off > hiOff) continue;
       if (n < S.lo || n > S.hi || p > S.bud) continue;
       if (S.stops >= 0 && Math.max(stO, stB) > S.stops) continue;
-      if (!inSlots(dOut,  S.tOutDep)) continue;
-      if (!inSlots(aOut,  S.tOutArr)) continue;
-      if (!inSlots(dBack, S.tRetDep)) continue;
-      if (!inSlots(aBack, S.tRetArr)) continue;
+      if (!inWin(dOut,  S.tOutDep)) continue;
+      if (!inWin(aOut,  S.tOutArr, dOut)) continue;
+      if (!inWin(dBack, S.tRetDep)) continue;
+      if (!inWin(aBack, S.tRetArr, dBack)) continue;
       const g = new Date(base); g.setDate(g.getDate() + off);
       if (!S.out.includes(g.getDay())) continue;
       const rd = new Date(g); rd.setDate(rd.getDate() + n);
@@ -171,28 +203,34 @@ window.Finder = (function () {
 
     /* Interleave one international result every three domestic. International
        trips are worth more to a traveller planning a real holiday and to us.
-       Ordering only — no price or saving is ever altered. */
+       This decides WHICH 25 cities make the list — never their order on screen
+       and never a price. The caller re-sorts by price before rendering, so the
+       rank numbers a visitor reads are always true cheapest-first. */
     const intl = keep.filter(h => h.intl), dom = keep.filter(h => !h.intl), mix = [];
     let i = 0, j = 0;
     while (mix.length < 25 && (i < dom.length || j < intl.length)) {
       for (let k = 0; k < 3 && i < dom.length; k++) mix.push(dom[i++]);
       if (j < intl.length) mix.push(intl[j++]);
     }
-    return mix.slice(0,25);
+    return mix.slice(0,25).sort((a,b) => a.p - b.p);
   }
 
   function legHTML(dep, arr) {
-    return fmtTime(dep) + (arr >= 0 ? ' <span class="arrv">arr ' + fmtTime(arr) + "</span>" : "");
+    if (arr < 0) return fmtTime(dep);
+    return fmtTime(dep) + ' <span class="arrv">arr ' + fmtTime(arr) +
+      (nextDay(dep, arr)
+        ? '<span class="nxd" title="Lands the next day or later">+1</span>' : "") + "</span>";
   }
   function stopPill(n) {
     return n === 0 ? '<span class="fpill ns">NONSTOP</span>'
                    : '<span class="fpill">' + n + (n > 1 ? " STOPS" : " STOP") + "</span>";
   }
 
-  function rowHTML(origin, IDX, h, showGuide) {
+  function rowHTML(origin, IDX, h, showGuide, rank) {
     const slug = GUIDES[h.c];
+    const name = (IDX.names && IDX.names[h.c]) || CITY_NAMES[h.c] || h.c;
     const guide = showGuide && slug
-      ? `<a class="gchip" href="destinations/${slug}.html">${((IDX.names&&IDX.names[h.c])||CITY_NAMES[h.c]||h.c).toUpperCase()} GUIDE →</a>` : "";
+      ? `<a class="gchip" href="destinations/${slug}.html">${name.toUpperCase()} GUIDE →</a>` : "";
     const air = (IDX.airlines || {})[h.al];
     /* Airline is only shown when both legs are nonstop — otherwise the code the
        API returns is the first carrier, not the operator of the whole trip. */
@@ -200,11 +238,15 @@ window.Finder = (function () {
     /* Two separate one-way fares added together — not a single bookable ticket. */
     const compPill = h.comp ? '<span class="fpill">TWO ONE-WAYS</span>'
                             : '<span class="fpill">ROUND-TRIP FARE</span>';
+    /* Rank is position in a strictly price-sorted list — 1 is the cheapest
+       trip that meets every filter, not a rating. */
+    const rk = rank ? `<div class="frk" title="#${rank} cheapest trip matching your filters">${rank}</div>` : "";
     return `<div class="frow">
       <a class="fmain" href="${affLink(origin,h)}" target="_blank" rel="sponsored noopener">
+        ${rk}
         <div class="fnt"><div class="n">${h.n}</div><div class="l">${h.n===1?"NIGHT":"NIGHTS"}</div></div>
         <div class="fbody">
-          <div class="fcity"><span class="fcd">${h.c}</span>${(IDX.names&&IDX.names[h.c])||CITY_NAMES[h.c]||h.c}${
+          <div class="fcity"><span class="fcd">${h.c}</span>${name}${
             h.intl?'<span class="ipill">INTL</span>':""}</div>
           <div class="fdts"><b>${fmtDate(h.g)}</b> ${legHTML(h.dOut,h.aOut)}
             &nbsp;→&nbsp; <b>${fmtDate(h.rd)}</b> ${legHTML(h.dBack,h.aBack)}</div>
@@ -219,27 +261,98 @@ window.Finder = (function () {
      UI — built here so the homepage tab and /search.html can never drift
      out of sync. Call Finder.mount(container, {origin, onState}).
      =================================================================== */
-  function slotChips(id, sel) {
-    return `<div class="fchips fslots" data-slot="${id}">` +
-      SLOTS.map(s => `<button class="fch" data-v="${s.v}" aria-pressed="${
-        sel && sel.includes(s.v) ? "true" : "false"}">${s.label}</button>`).join("") + `</div>`;
-  }
 
-  /* Each time filter is its own switch. Off means "any time" — that is the
-     default, because most people care about price first and only reach for
-     times once they have seen what is out there. */
-  function timeSec(key, title, note) {
-    return `<div class="fsec ftime" data-time="${key}">
-      <label class="ftg"><input type="checkbox" data-toggle="${key}">
-        <span>${title}</span></label>
-      ${note ? `<div class="fnote" data-note="${key}" hidden>${note}</div>` : ""}
-      <div class="fsub" data-block="${key}" hidden>${slotChips(key)}</div>
+  /* Dual-handle range. Two stacked <input type=range>; only the thumbs take
+     pointer events, so the pair reads as one control with a filled span
+     between the handles. */
+  function rngHTML(key, min, max, lo, hi, labLo, labHi) {
+    return `<div class="rng" data-rng="${key}">
+      <div class="rtrack"></div><div class="rfill"></div>
+      <input type="range" min="${min}" max="${max}" value="${lo}" step="1" data-h="lo" aria-label="${labLo}">
+      <input type="range" min="${min}" max="${max}" value="${hi}" step="1" data-h="hi" aria-label="${labHi}">
     </div>`;
   }
 
-  function panelHTML(monthOpts) {
+  function wireRange(root, key, onChange) {
+    const box = root.querySelector('[data-rng="' + key + '"]');
+    if (!box) return null;
+    const a = box.querySelector('[data-h="lo"]'), b = box.querySelector('[data-h="hi"]');
+    const fill = box.querySelector(".rfill");
+    const MIN = +a.min, MAX = +a.max;
+    function paint() {
+      const lo = +a.value, hi = +b.value, span = (MAX - MIN) || 1;
+      fill.style.left  = ((lo - MIN) / span * 100) + "%";
+      fill.style.width = ((hi - lo) / span * 100) + "%";
+    }
+    /* Handles may not cross. Whichever one the visitor is dragging wins, so a
+       handle never jumps out from under the cursor. */
+    function sync(e) {
+      let lo = +a.value, hi = +b.value;
+      if (lo > hi) {
+        if (e && e.target === a) { hi = lo; b.value = hi; }
+        else { lo = hi; a.value = lo; }
+      }
+      paint(); if (onChange) onChange(lo, hi);
+    }
+    a.addEventListener("input", sync);
+    b.addEventListener("input", sync);
+    paint();
+    return {
+      get: () => [+a.value, +b.value],
+      set(lo, hi) { a.value = lo; b.value = hi; paint(); },
+      /* Used for the arrival↔departure link: an arrival window can never start
+         before the departure window does. */
+      floor(v) {
+        /* Read the handles BEFORE touching min: assigning a higher min makes
+           the browser silently clamp value, so reading afterwards would show
+           the new floor and we would report "nothing moved" while the control
+           had in fact jumped. That desync left the label saying "Any time"
+           over a window that started at 10AM. */
+        const was = [+a.value, +b.value];
+        a.min = b.min = v;
+        const lo = Math.max(was[0], v), hi = Math.max(was[1], v);
+        a.value = lo; b.value = hi; paint();
+        return (lo !== was[0] || hi !== was[1]) ? [lo, hi] : null;
+      }
+    };
+  }
+
+  /* One leg = one line. Departure sits on the left and is the primary control
+     (it is the decision most people actually make); arrival sits on the right
+     and is bounded by it. */
+  function legSec(leg, title, depKey, arrKey, arrNote) {
+    return `<div class="fsec ftime" data-leg="${leg}">
+      <div class="flbl"><span>${title}</span><span class="hint" data-hint="${leg}">Any time</span></div>
+      <div class="ftwo">
+        <div class="thalf tprimary" data-half="${depKey}">
+          <label class="ftg"><input type="checkbox" data-toggle="${depKey}">
+            <span>DEPART</span></label>
+          <div class="tbody" data-block="${depKey}" hidden>
+            <span class="tv" data-val="${depKey}">Any time</span>
+            ${rngHTML(depKey, 0, 23, 0, 23, "Earliest departure hour", "Latest departure hour")}
+          </div>
+        </div>
+        <div class="thalf" data-half="${arrKey}">
+          <label class="ftg"><input type="checkbox" data-toggle="${arrKey}">
+            <span>ARRIVE</span></label>
+          <div class="fnote" data-note="${arrKey}" hidden>${arrNote}</div>
+          <div class="tbody" data-block="${arrKey}" hidden>
+            <span class="tv" data-val="${arrKey}">Any time</span>
+            ${rngHTML(arrKey, 0, 23, 0, 23, "Earliest arrival hour", "Latest arrival hour")}
+            <label class="fovn"><input type="checkbox" data-ovn="${arrKey}" checked>
+              <span>Allow flights that land the next day <b>+1</b></span></label>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function panelHTML() {
     const months = [1,2,3,4,6,9,12].map(m =>
       `<option value="${m}"${m===6?" selected":""}>Next ${m} month${m>1?"s":""}</option>`).join("");
+    const lens = [["1-30","Any length"],["2-3","Weekend"],["3-4","Long weekend"],
+                  ["5-8","A week"],["9-14","10 days – 2 wks"],["15-30","Extended"]]
+      .map(([v,l]) => `<option value="${v}">${l}</option>`).join("");
     return `
     <div class="fquick fquick3">
       <div class="fq"><label for="fOrig">FROM</label>
@@ -251,6 +364,7 @@ window.Finder = (function () {
       <div class="fq"><label for="fWhen2">&nbsp;</label>
         <button class="fmore" id="fMore" aria-expanded="true" aria-controls="fPanel">HIDE FILTERS ▴</button></div>
     </div>
+    <div class="fcov" data-cov hidden></div>
     <div class="fdates" id="fDates" hidden>
       <div class="fq"><label for="fFrom">EARLIEST DEPARTURE</label><input type="date" id="fFrom"></div>
       <div class="fq"><label for="fTo">LATEST DEPARTURE</label><input type="date" id="fTo"></div>
@@ -263,22 +377,21 @@ window.Finder = (function () {
     </div>
 
     <div class="fpanel" id="fPanel">
-      <div class="fsec"><div class="flbl"><span>TRIP LENGTH</span><span class="hint" id="fNHint"></span></div>
-        <div class="fchips" id="fLen">
-          <button class="fch" data-lo="2" data-hi="3">Weekend</button>
-          <button class="fch" data-lo="3" data-hi="4">Long weekend</button>
-          <button class="fch" data-lo="5" data-hi="8">A week</button>
-          <button class="fch" data-lo="9" data-hi="14">10 days – 2 wks</button>
-          <button class="fch" data-lo="15" data-hi="30">Extended</button>
-          <button class="fch" data-lo="1" data-hi="30" aria-pressed="true">Any</button></div>
-        <div class="fsl" style="margin-top:12px"><span class="v" id="fNVal"></span>
-          <input type="range" id="fNLo" min="1" max="30" value="1" aria-label="Minimum nights">
-          <input type="range" id="fNHi" min="1" max="30" value="30" aria-label="Maximum nights"></div></div>
+      <div class="fsec fline" data-sec="len">
+        <label class="ftg"><input type="checkbox" data-toggle="len"><span>TRIP LENGTH</span></label>
+        <div class="flnbody" data-block="len" hidden>
+          <select id="fLenSel" aria-label="Trip length preset">${lens}</select>
+          <span class="v" id="fNVal">1–30 nights</span>
+          ${rngHTML("len", 1, 30, 1, 30, "Minimum nights", "Maximum nights")}
+        </div>
+        <span class="hint" id="fNHint">Any length</span>
+      </div>
 
       <div class="fsec"><div class="flbl"><span>LEAVE ON</span><span class="hint" id="fHOut"></span></div>
         <div class="fdow" id="fDOut"></div></div>
       <div class="fsec"><div class="flbl"><span>COME BACK</span><span class="hint" id="fHRet"></span></div>
-        <div class="fdow" id="fDRet"></div></div>
+        <div class="fdow" id="fDRet"></div>
+        <div class="fmini" id="fRetNote"></div></div>
 
       <div class="fsec"><div class="flbl"><span>MAX ROUND-TRIP BUDGET</span></div>
         <div class="fsl"><span class="v" id="fBVal">$1500</span>
@@ -291,10 +404,10 @@ window.Finder = (function () {
           <button class="fch" data-v="2">Up to 2 stops</button>
           <button class="fch" data-v="-1" aria-pressed="true">Any</button></div></div>
 
-      ${timeSec("tOutDep", "Filter outbound departure time")}
-      ${timeSec("tOutArr", "Filter outbound arrival time", "Arrival times appear once tonight's index build runs — the fare API only returns them with a leg duration.")}
-      ${timeSec("tRetDep", "Filter return departure time")}
-      ${timeSec("tRetArr", "Filter return arrival time", "Arrival times appear once tonight's index build runs.")}
+      ${legSec("out", "OUTBOUND FLIGHT", "tOutDep", "tOutArr",
+        "Arrival times appear once tonight's index build runs — the fare API only returns them with a leg duration.")}
+      ${legSec("ret", "RETURN FLIGHT", "tRetDep", "tRetArr",
+        "Arrival times appear once tonight's index build runs.")}
     </div>`;
   }
 
@@ -305,8 +418,12 @@ window.Finder = (function () {
        narrow — not land on four filters at once and conclude the tool is
        empty. Trip length, days of week and budget all default to "any". */
     const S = { orig: opts.origin || "CLT", dest:"*", mode:"window", mo:6, from:"", to:"",
-                lo:1, hi:30, out:[0,1,2,3,4,5,6], ret:[0,1,2,3,4,5,6], bud:1500, stops:-1,
-                tOutDep:[], tOutArr:[], tRetDep:[], tRetArr:[], fresh:false };
+                lenOn:false, lo:1, hi:30,
+                out:[0,1,2,3,4,5,6], ret:[0,1,2,3,4,5,6], retTouched:false,
+                bud:1500, stops:-1,
+                tOutDep:{on:false,lo:0,hi:23}, tOutArr:{on:false,lo:0,hi:23,ovn:true},
+                tRetDep:{on:false,lo:0,hi:23}, tRetArr:{on:false,lo:0,hi:23,ovn:true},
+                fresh:false };
     let IDX = null;
     root.querySelector(".fwrap").innerHTML = panelHTML();
 
@@ -314,7 +431,7 @@ window.Finder = (function () {
       const p = $("fPanel"), open = p.hidden;
       p.hidden = !open;
       this.setAttribute("aria-expanded", String(open));
-      this.textContent = open ? "FEWER FILTERS ▴" : "MORE FILTERS ▾";
+      this.textContent = open ? "HIDE FILTERS ▴" : "MORE FILTERS ▾";
     });
 
     $("fWhen").addEventListener("change", e => {
@@ -328,49 +445,150 @@ window.Finder = (function () {
       S.from = $("fFrom").value; S.to = $("fTo").value; render();
     }));
 
+    /* ---------------- TRIP LENGTH (one line, switchable) ---------------- */
+    const lenRng = wireRange(root, "len", (lo, hi) => {
+      S.lo = lo; S.hi = hi;
+      $("fLenSel").value = lo + "-" + hi;                 // "" if not a preset
+      nlab(); syncRet(); render();
+    });
+    $("fLenSel").addEventListener("change", e => {
+      const p = e.target.value.split("-");
+      S.lo = +p[0]; S.hi = +p[1];
+      lenRng.set(S.lo, S.hi); nlab(); syncRet(); render();
+    });
+    function nlab() {
+      const t = S.lo === S.hi ? S.lo + (S.lo > 1 ? " nights" : " night")
+                              : S.lo + "–" + S.hi + " nights";
+      $("fNVal").textContent = t;
+      $("fNHint").textContent = S.lenOn ? t : "Any length";
+    }
+
+    /* ---------------- LEAVE ON / COME BACK ---------------- */
+    /* Return days are a consequence of the days you can leave and how long you
+       want to be gone. We compute the set that is actually reachable, tick it
+       for you, and mark it AUTO so it is obvious the site chose it. Touch a
+       return chip and it becomes yours — we stop auto-filling and only keep
+       you off days that are arithmetically impossible. */
+    function reachableReturns() {
+      const s = new Set();
+      for (const d of S.out) for (let n = S.lo; n <= S.hi; n++) s.add((d + n) % 7);
+      return s;
+    }
     function dows(id, key) {
       const el = $(id);
       el.innerHTML = DOW.map((d,i) =>
         `<button class="fch" data-i="${i}" aria-pressed="${S[key].includes(i)}">${d.slice(0,2)}</button>`).join("");
       el.addEventListener("click", e => {
-        const b = e.target.closest(".fch"); if (!b) return;
+        const b = e.target.closest(".fch"); if (!b || b.disabled) return;
         const i = +b.dataset.i, on = b.getAttribute("aria-pressed") === "true";
         if (on) { if (S[key].length < 2) return; S[key] = S[key].filter(x => x !== i); }
         else S[key] = [...S[key], i].sort((a,z) => a-z);
-        b.setAttribute("aria-pressed", String(!on)); hints(); render();
+        b.setAttribute("aria-pressed", String(!on));
+        if (key === "ret") S.retTouched = true;
+        syncRet(); hints(); render();
       });
+    }
+    function syncRet() {
+      const poss = reachableReturns(), all = poss.size === 7;
+      if (!S.retTouched) S.ret = [...poss].sort((a,z) => a-z);
+      else {
+        /* Keep a hand-picked set honest: a day you cannot arrive back on must
+           not sit there silently killing every result. */
+        const kept = S.ret.filter(d => poss.has(d));
+        S.ret = kept.length ? kept : [...poss].sort((a,z) => a-z);
+        if (!kept.length) S.retTouched = false;
+      }
+      const box = $("fDRet");
+      [...box.children].forEach(b => {
+        const i = +b.dataset.i, ok = poss.has(i);
+        b.disabled = !ok;
+        b.classList.toggle("imp", !ok);
+        b.classList.toggle("auto", ok && !S.retTouched && S.ret.includes(i));
+        b.setAttribute("aria-pressed", String(S.ret.includes(i)));
+        b.title = ok ? "" : "Not reachable with these leave days and trip length";
+      });
+      $("fRetNote").textContent = all
+        ? ""
+        : (S.retTouched
+            ? "Greyed days can't happen with your leave days and trip length."
+            : "Auto-filled from LEAVE ON + TRIP LENGTH. Tap any day to take over.");
+      hints();
     }
     function hints() {
       const f = a => a.length === 7 ? "Any day" : a.map(i => DOW[i]).join(", ");
-      $("fHOut").textContent = f(S.out); $("fHRet").textContent = f(S.ret);
+      $("fHOut").textContent = f(S.out);
+      $("fHRet").textContent = f(S.ret) + (S.retTouched ? "" : " · auto");
     }
-    dows("fDOut","out"); dows("fDRet","ret"); hints();
+    dows("fDOut","out"); dows("fDRet","ret");
 
-    /* A time filter only applies while its switch is on. Turning it off clears
-       the selection so a hidden filter can never silently exclude results. */
+    /* ---------------- switches ---------------- */
+    /* A filter only applies while its switch is on. Turning it off resets it,
+       so a hidden filter can never silently exclude results. */
     root.querySelectorAll("[data-toggle]").forEach(cb => {
       const key = cb.dataset.toggle;
       cb.addEventListener("change", () => {
         const blk = root.querySelector('[data-block="' + key + '"]');
-        blk.hidden = !cb.checked;
-        if (!cb.checked) {
-          S[key] = [];
-          blk.querySelectorAll(".fch").forEach(b => b.setAttribute("aria-pressed", "false"));
+        if (blk) blk.hidden = !cb.checked;
+        if (key === "len") {
+          S.lenOn = cb.checked;
+          if (!cb.checked) { S.lo = 1; S.hi = 30; lenRng.set(1,30); $("fLenSel").value = "1-30"; }
+          nlab(); syncRet();
+        } else {
+          S[key].on = cb.checked;
+          if (!cb.checked) {
+            S[key].lo = 0; S[key].hi = 23;
+            const r = ranges[key]; if (r) r.set(0,23);
+          }
+          linkLeg(key);
+          tlab(key);
         }
         render();
       });
     });
 
-    /* Time slots are multi-select: pick two windows and both are allowed. */
-    root.querySelectorAll(".fslots").forEach(box => {
-      const key = box.dataset.slot;
-      box.addEventListener("click", e => {
-        const b = e.target.closest(".fch"); if (!b) return;
-        const v = b.dataset.v, on = b.getAttribute("aria-pressed") === "true";
-        S[key] = on ? S[key].filter(x => x !== v) : [...S[key], v];
-        b.setAttribute("aria-pressed", String(!on)); render();
+    /* Hour ranges + the arrival↔departure link. */
+    const ranges = {};
+    const LEGS = { tOutDep:["out","tOutArr"], tOutArr:["out",null],
+                   tRetDep:["ret","tRetArr"], tRetArr:["ret",null] };
+    Object.keys(LEGS).forEach(key => {
+      ranges[key] = wireRange(root, key, (lo, hi) => {
+        S[key].lo = lo; S[key].hi = hi;
+        linkLeg(key); tlab(key); render();
       });
     });
+    root.querySelectorAll("[data-ovn]").forEach(cb => {
+      cb.addEventListener("change", () => {
+        S[cb.dataset.ovn].ovn = cb.checked; tlab(cb.dataset.ovn); render();
+      });
+    });
+    /* An arrival window cannot open before its departure window does — you
+       cannot land at 7am on a flight that leaves at 9am, unless it ran
+       overnight, which is exactly what the +1 switch below it covers. */
+    function linkLeg(key) {
+      const arrKey = (LEGS[key] || [])[1];
+      if (!arrKey) return;
+      const r = ranges[arrKey]; if (!r) return;
+      const moved = r.floor(S[key].on ? S[key].lo : 0);
+      if (moved) { S[arrKey].lo = moved[0]; S[arrKey].hi = moved[1]; tlab(arrKey); }
+    }
+    function tlab(key) {
+      const w = S[key], el = root.querySelector('[data-val="' + key + '"]');
+      if (el) el.textContent = (w.lo === 0 && w.hi === 23)
+        ? "Any time"
+        : hourLab(w.lo) + " – " + hourLab(w.hi);
+      /* Leg-level summary on the right of the line. */
+      const leg = (LEGS[key] || [])[0];
+      if (!leg) return;
+      const dep = S[leg === "out" ? "tOutDep" : "tRetDep"];
+      const arr = S[leg === "out" ? "tOutArr" : "tRetArr"];
+      const part = [];
+      if (dep.on) part.push("dep " + hourLab(dep.lo) + "–" + hourLab(dep.hi));
+      if (arr.on) part.push("arr " + hourLab(arr.lo) + "–" + hourLab(arr.hi) +
+        (arr.ovn ? "" : ", same day"));
+      const h = root.querySelector('[data-hint="' + leg + '"]');
+      if (h) h.textContent = part.length ? part.join(" · ") : "Any time";
+    }
+    Object.keys(LEGS).forEach(tlab);
 
     function single(id, fn) {
       $(id).addEventListener("click", e => {
@@ -380,23 +598,7 @@ window.Finder = (function () {
       });
     }
     single("fStops", b => S.stops = +b.dataset.v);
-    single("fLen", b => { S.lo = +b.dataset.lo; S.hi = +b.dataset.hi;
-      $("fNLo").value = S.lo; $("fNHi").value = S.hi; nlab(); });
 
-    function nlab() {
-      const t = S.lo === S.hi ? S.lo + (S.lo > 1 ? " nights" : " night") : S.lo + "–" + S.hi + " nights";
-      $("fNVal").textContent = t; $("fNHint").textContent = t;
-    }
-    function nsync() {
-      let a = +$("fNLo").value, b = +$("fNHi").value;
-      if (a > b) { [a,b] = [b,a]; $("fNLo").value = a; $("fNHi").value = b; }
-      S.lo = a; S.hi = b; nlab();
-      [...$("fLen").children].forEach(c => c.setAttribute("aria-pressed",
-        String(+c.dataset.lo === a && +c.dataset.hi === b)));
-      render();
-    }
-    $("fNLo").addEventListener("input", nsync);
-    $("fNHi").addEventListener("input", nsync); nlab();
     $("fBud").addEventListener("input", e => {
       S.bud = +e.target.value; $("fBVal").textContent = "$" + S.bud; render(); });
     $("fDest").addEventListener("change", e => { S.dest = e.target.value; render(); });
@@ -406,6 +608,7 @@ window.Finder = (function () {
       $("fLive").addEventListener("change", e => { S.fresh = e.target.checked; render(); });
     }
     $("fOrig").addEventListener("change", e => { boot(e.target.value); });
+    nlab(); syncRet();
 
     /* ---------------- FRESH PULL (live re-query via Worker) ------------- */
     const liveCache = {};           // "orig|dest|months" -> response | null(failed)
@@ -466,9 +669,9 @@ window.Finder = (function () {
         : (IDX.live ? "LIVE LOOKUP" : "UPDATED " + (IDX.generated || "").slice(0, 10));
       const r = search(idx, S);
       if (cntEl) cntEl.textContent = pulling ? "PULLING FRESH FARES…" : r.length
-        ? (r.length >= 25 ? "25+ TRIPS" : r.length + " TRIP" + (r.length > 1 ? "S" : "")) : "NO MATCHES";
+        ? (r.length >= 25 ? "25+ TRIPS · CHEAPEST FIRST" : r.length + " TRIP" + (r.length > 1 ? "S" : "") + " · CHEAPEST FIRST") : "NO MATCHES";
       rowsEl.innerHTML = r.length
-        ? r.map(h => rowHTML(S.orig, idx, h, true)).join("")
+        ? r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("")
         : `<div class="fzero">${
             idx.rows.length < 500
               ? "We don't have many cached fares for " + S.orig + " yet — the index is still filling out.<br>" +
@@ -496,9 +699,9 @@ window.Finder = (function () {
         const cb = root.querySelector('[data-toggle="' + k + '"]');
         if (!cb) return;
         cb.disabled = !hasArr;
-        if (!hasArr) { cb.checked = false; S[k] = []; }
-        const sec = cb.closest(".ftime");
-        if (sec) sec.classList.toggle("off", !hasArr);
+        if (!hasArr) { cb.checked = false; S[k].on = false; }
+        const half = cb.closest(".thalf");
+        if (half) half.classList.toggle("off", !hasArr);
         const note = root.querySelector('[data-note="' + k + '"]');
         if (note) note.hidden = hasArr;
         const blk = root.querySelector('[data-block="' + k + '"]');
@@ -517,6 +720,23 @@ window.Finder = (function () {
       const d = $("fDest");
       d.innerHTML = '<option value="*">Anywhere we track</option>' +
         IDX.dests.map(c => `<option value="${c}">${(IDX.names&&IDX.names[c])||CITY_NAMES[c]||c} · ${c}</option>`).join("");
+      /* Say plainly what "Anywhere we track" actually covers for this airport.
+         The number is counted from the index, so it can never drift from the
+         truth of what is searchable. */
+      const cov = root.querySelector("[data-cov]");
+      if (cov) {
+        /* Two different numbers, and conflating them would be a small lie:
+           `tracked` is the origin's top-30 list, `dests.length` is how many of
+           those actually came back with cached fares in the last build. */
+        const have = IDX.dests.length, track = IDX.tracked || have;
+        const where = ((ORIGIN_NAMES[origin] || origin) + " (" + origin + ")").toUpperCase();
+        cov.innerHTML = (have < track
+            ? "SEARCHING <b>" + have + "</b> OF THE TOP <b>" + track + "</b> DESTINATIONS WE TRACK FROM " +
+              where + " — the rest returned no cached fares in the last build"
+            : "SEARCHING THE TOP <b>" + track + "</b> DESTINATIONS WE TRACK FROM " + where)
+          + ' · <a href="guides.html">city guides</a>';
+        cov.hidden = false;
+      }
       const max = new Date(base); max.setDate(max.getDate() + 365);
       $("fFrom").min = $("fTo").min = IDX.base;
       $("fFrom").max = $("fTo").max = max.toISOString().slice(0,10);
@@ -526,6 +746,7 @@ window.Finder = (function () {
     return { boot, state: S };
   }
 
-  return { DOW, SLOTS, PREBUILT, GUIDES, inSlots, loadIndex, search, rowHTML,
-           panelHTML, mount, affLink, fmtDate, fmtTime };
+  return { DOW, SLOTS, PREBUILT, GUIDES, CITY_NAMES, inSlots, inWin, nextDay,
+           loadIndex, search, rowHTML, panelHTML, mount, affLink,
+           fmtDate, fmtTime, hourLab };
 })();

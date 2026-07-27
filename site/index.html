@@ -342,6 +342,102 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 
 .ftime.off .ftg{opacity:.55}
 .ftime.off .ftg input{cursor:not-allowed}
+
+/* =====================================================================
+   JULY 27 2026 — hour-level time filters, one-line trip length,
+   result ranking, aligned board prices, guide buttons on board rows.
+   ===================================================================== */
+
+/* What "Anywhere we track" actually covers, stated plainly. */
+.fcov{padding:0 16px 14px;color:var(--dim);font-size:11px;letter-spacing:.1em;line-height:1.6}
+.fcov b{color:var(--amber)}
+.fcov[hidden]{display:none}
+
+/* ---- dual-handle range: two stacked sliders, one filled track ---- */
+.rng{position:relative;flex:1 1 160px;min-width:130px;height:26px}
+.rng .rtrack,.rng .rfill{position:absolute;top:11px;height:4px;border-radius:2px;pointer-events:none}
+.rng .rtrack{left:0;right:0;background:var(--edge)}
+.rng .rfill{background:var(--amber)}
+.rng input[type=range]{position:absolute;left:0;top:0;width:100%;height:26px;margin:0;padding:0;
+ background:transparent;pointer-events:none;-webkit-appearance:none;appearance:none}
+.rng input[type=range]:focus{outline:none}
+.rng input[type=range]::-webkit-slider-runnable-track{height:26px;background:transparent;border:0}
+.rng input[type=range]::-moz-range-track{height:26px;background:transparent;border:0}
+.rng input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;
+ width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--amber);
+ border:2px solid var(--navy);cursor:pointer;box-shadow:0 0 0 1px var(--edge)}
+.rng input[type=range]::-moz-range-thumb{pointer-events:auto;width:14px;height:14px;border-radius:50%;
+ background:var(--amber);border:2px solid var(--navy);cursor:pointer}
+.rng input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(--sky)}
+.rng input[type=range]:focus-visible::-moz-range-thumb{box-shadow:0 0 0 3px var(--sky)}
+
+/* ---- TRIP LENGTH on a single switchable line ---- */
+.fline{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.fline>.ftg{flex:none}
+.flnbody{display:flex;align-items:center;gap:12px;flex:1 1 300px;min-width:260px}
+.flnbody[hidden]{display:none}
+.flnbody select{background:var(--tile);border:2px solid var(--edge);border-radius:8px;
+ color:var(--white);font-family:var(--mono);font-size:12px;padding:8px 9px;flex:none}
+.flnbody select:focus{outline:none;border-color:var(--amber)}
+.flnbody .v{font-family:var(--disp);font-weight:700;font-size:20px;color:var(--amber);
+ min-width:104px;flex:none}
+.fline .hint{margin-left:auto;color:var(--amber);font-size:11px;letter-spacing:.02em;flex:none}
+
+/* ---- one leg per line: DEPART (primary, left) + ARRIVE (right) ---- */
+.ftwo{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;align-items:start}
+.thalf{background:var(--panel);border:1px solid var(--edge);border-radius:10px;padding:10px 12px}
+.thalf.tprimary{border-color:var(--amber);box-shadow:inset 3px 0 0 var(--amber)}
+.thalf .ftg{padding:2px 0;font-size:12px;letter-spacing:.12em}
+.thalf.tprimary .ftg>span{color:var(--amber);font-weight:700}
+.thalf.off{opacity:.55}
+.thalf.off .ftg input{cursor:not-allowed}
+.tbody{margin-top:9px;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.tbody[hidden]{display:none}
+.tv{font-family:var(--disp);font-weight:700;font-size:19px;color:var(--amber);
+ min-width:118px;flex:none}
+.fovn{flex-basis:100%;display:flex;align-items:center;gap:8px;color:var(--dim);font-size:11px;
+ line-height:1.4;cursor:pointer;margin-top:4px}
+.fovn input{width:15px;height:15px;accent-color:var(--amber);flex:none;margin:0}
+.fovn b{color:var(--sky)}
+.ftime .fnote{padding-left:0;margin-top:6px}
+@media(max-width:700px){.ftwo{grid-template-columns:1fr}}
+
+/* ---- LEAVE ON / COME BACK linkage ---- */
+.fmini{margin-top:8px;color:var(--dim);font-size:11px;line-height:1.5}
+/* Auto-filled reads as outlined-dashed; a day you picked yourself is solid. */
+.fch.auto[aria-pressed=true]{background:var(--tile);color:var(--amber);border-color:var(--amber);
+ border-style:dashed;font-weight:700}
+.fch.imp,.fch:disabled{opacity:.32;cursor:not-allowed;text-decoration:line-through}
+.fch.imp:hover{border-color:var(--edge);color:var(--dim)}
+
+/* ---- result rank + next-day arrival marker ---- */
+.frk{font-family:var(--disp);font-weight:700;font-size:20px;color:var(--dim);text-align:right;
+ line-height:1;letter-spacing:-.02em}
+.frow:first-child .frk{color:var(--amber)}
+.nxd{display:inline-block;margin-left:3px;font-size:9px;letter-spacing:.06em;color:var(--navy);
+ background:var(--sky);border-radius:3px;padding:1px 3px;vertical-align:top;font-weight:700}
+.fmain{grid-template-columns:28px 58px 1fr auto}
+.gchip{padding-left:118px}
+@media(max-width:640px){
+ .fmain{grid-template-columns:24px 50px 1fr}
+ .fpr{grid-column:2 / -1;text-align:left;margin-top:8px}
+ .gchip{padding-left:18px}
+}
+
+/* ---- board rows: prices in a fixed column, guide button beside the city ----
+   Each .row is its own grid, so `auto` columns were sized per row and the
+   prices never lined up once "(OUR EST.)" made one note wider than another.
+   Fixed widths make every row measure identically. */
+.row{grid-template-columns:minmax(150px,auto) 1fr 118px 208px;position:relative}
+.var{white-space:normal}
+/* The row used to BE an <a>, which is why nothing inside it could be a link.
+   It is now a div with a stretched overlay link, so the guide button can sit
+   right next to the city name and still be its own destination. */
+.rowlink{position:absolute;inset:0;z-index:1;text-decoration:none}
+.row:focus-within{outline:3px solid var(--sky);outline-offset:-3px}
+.row .gbtn{position:relative;z-index:2}
+@media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
+
 </style>
 <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false" data-no-defer="1">
   (function () {
@@ -456,22 +552,14 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 </section>
 <section>
   <h2>10 airports. One board.</h2>
-  <p class="sub">Charlotte is live now. The next nine boards open as we expand.</p>
+  <p class="sub">Charlotte is live now, with its own top 30 destinations. The next nine boards open as we expand — each one gets its own top-30 list and its own city guides. Atlanta is next.</p>
   <div class="grid" id="citygrid"></div>
 </section>
 
-<section>
-  <h2>How the numbers work</h2>
-  <div class="method">
-    <div class="mcard"><b>1 · Scan.</b> Every hour, around the clock, our system sweeps live airfare search data across all 30 tracked routes from CLT — real fares found in real searches.</div>
-    <div class="mcard"><b>2 · Compare.</b> Each fare is measured against the route's average price — official DOT/BTS government data on domestic routes, clearly-labeled estimates on international ones. No baseline, no post.</div>
-    <div class="mcard"><b>3 · Rank.</b> Only the top savings make the board — and nothing repeats within 6 days, so the board is always fresh.</div>
-  </div>
-</section>
 
 <section>
-  <h2>When is it cheap from <span class="amber" id="chartOrigin">CLT</span>? 30 routes, every month.</h2>
-  <p class="sub">All 30 destinations we track — 19 domestic and 11 international &amp; Caribbean. The amber line is the route's annual round-trip average; bars under the line are the months to book. Green dot = a deal on today's board. Pick your airport above — this section follows it.</p>
+  <h2>When is it cheap from <span class="amber" id="chartOrigin">CLT</span>?</h2>
+  <p class="sub"><b style="color:var(--white)">The top <span id="chartCount">30</span> destinations we track from <span id="chartOriginName">Charlotte (CLT)</span></b> — <span id="chartSplit">20 domestic and 10 international &amp; Caribbean</span>. Every airport gets its own top-30 list, so these are the routes that actually matter out of this city; lists overlap between airports and that is expected. The amber line is the route's annual round-trip average; bars under the line are the months to book. Green dot = a deal on today's board. Pick your airport above — this section follows it.</p>
   <div class="routesel" id="routesel"></div>
   <div class="empty" id="routesEmpty" style="display:none;border:2px solid var(--edge);border-radius:14px">Route pricing for this airport opens with its board.<br>Get on the email list below and you'll know the day it goes live.</div>
   <div class="chartbox">
@@ -514,6 +602,15 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
     </form>
   </div>
 </section>
+<section>
+  <h2 id="how">How the numbers work</h2>
+  <div class="method">
+    <div class="mcard"><b>1 · Scan.</b> Every hour, around the clock, our system sweeps live airfare search data across every route we track from the selected airport — real fares found in real searches.</div>
+    <div class="mcard"><b>2 · Compare.</b> Each fare is measured against the route's average price — official DOT/BTS government data on domestic routes, clearly-labeled estimates on international ones. No baseline, no post.</div>
+    <div class="mcard"><b>3 · Rank.</b> Only the top savings make the board — and nothing repeats within 6 days, so the board is always fresh.</div>
+  </div>
+</section>
+
 </main>
 
 <footer><div class="wrap">
@@ -653,27 +750,36 @@ function fmtTrip(d1,d2){
   return f(d1)+" → "+f(d2);
 }
 
-/* NOTE: nothing inside rowHTML may be an <a>. The row itself is an <a>;
-   nesting another (the old CITY GUIDE chip) is invalid HTML — the parser
-   ejects it and the whole row grid collapses into stacked lines. Guides
-   are linked from the nav, the CITY GUIDES section and the Fare Finder rows. */
+/* The row is a DIV with a stretched overlay link (.rowlink), not an <a>.
+   An <a> cannot contain another <a> — the parser ejects the inner one and the
+   row grid collapses into stacked lines, which is exactly what happened the
+   first time a CITY GUIDE chip was added here. The overlay pattern keeps the
+   whole row clickable to the fare search while letting the guide button beside
+   the city name be its own link. */
 function rowHTML(code,x){
   const rt=(ROUTES[code]||{})[x.to];
-  const intl=rt&&rt.intl?' · <b class="st">INTL</b>':'';
-  const dep=x.dep?` · <b style="color:var(--white)">DEP ${x.dep}</b>`:"";
+  const intl=rt&&rt.intl?' \u00b7 <b class="st">INTL</b>':'';
+  const dep=x.dep?` \u00b7 <b style="color:var(--white)">DEP ${x.dep}</b>`:"";
   /* Airline only when the updater could verify it (nonstop). On a connection the
      API returns the first carrier, not the operator of the whole trip. */
-  const al=x.al?` · ${x.al}`:"";
+  const al=x.al?` \u00b7 ${x.al}`:"";
   /* Cheap transatlantic fares are often self-transfer: if leg one is late, the
      second airline owes you nothing. Say so. */
-  const xfer=x.xfer?' · <b class="st" title="Separate tickets — a missed connection is not protected">SELF-TRANSFER</b>':"";
+  const xfer=x.xfer?' \u00b7 <b class="st" title="Separate tickets \u2014 a missed connection is not protected">SELF-TRANSFER</b>':"";
+  /* Only link a guide that actually exists. Finder.GUIDES is the single list of
+     written guides; a city we track but have not written up yet gets no button
+     rather than a 404. */
+  const slug=(rt&&rt.slug&&(!window.Finder||Finder.GUIDES[x.to]))?rt.slug:"";
+  const guide=slug?` <a class="gbtn" href="destinations/${slug}.html" title="${x.city} city guide \u2014 hotels, cars, what to do">GUIDE \u203a</a>`:"";
   return `
-   <a class="row" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener">
-     <span class="tiles">${tiles(code)}<span class="arr">›</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span><br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep}${al} · <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span>
+   <div class="row">
+     <a class="rowlink" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener"
+        aria-label="Search ${x.city} flights, $${x.price} round trip"></a>
+     <span class="tiles">${tiles(code)}<span class="arr">\u203a</span>${tiles(x.to)}</span>
+     <span><span class="city">${x.city}</span>${guide}<br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep}${al} \u00b7 <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span>
      <span class="price">$${x.price}</span>
      <span class="var">${dealVar(x)}</span>
-   </a>`;
+   </div>`;
 }
 
 function renderCity(code){
@@ -720,10 +826,26 @@ function renderChart(code){
   document.getElementById("chart").innerHTML=s;
   document.querySelectorAll("#routesel .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rt===code));
 }
+/* Full airport names, so the top-30 claim on the page names a city rather
+   than a code. Mirrors ORIGIN_NAMES in js/finder.js. */
+const ORIGIN_FULL={CLT:"Charlotte",ATL:"Atlanta",ORD:"Chicago",DFW:"Dallas",DEN:"Denver",
+ LAX:"Los Angeles",JFK:"New York",MIA:"Miami",SEA:"Seattle",BOS:"Boston",LAS:"Las Vegas",MCO:"Orlando"};
 function renderRoutes(origin){
   document.getElementById("chartOrigin").textContent=origin;
   const sel=document.getElementById("routesel"), box=document.querySelector(".chartbox");
   const R=ROUTES[origin];
+  /* The counts are read off the route table, never typed, so the sentence
+     cannot drift from the list it describes. */
+  const nameEl=document.getElementById("chartOriginName");
+  if(nameEl) nameEl.textContent=(ORIGIN_FULL[origin]||origin)+" ("+origin+")";
+  const cEl=document.getElementById("chartCount"), sEl=document.getElementById("chartSplit");
+  if(cEl&&sEl){
+    const keys=R?Object.keys(R):[], intl=keys.filter(c=>R[c].intl).length;
+    cEl.textContent=keys.length||30;
+    sEl.innerHTML=keys.length
+      ? (keys.length-intl)+" domestic and "+intl+" international &amp; Caribbean"
+      : "list published when this board opens";
+  }
   if(!R){
     sel.innerHTML="";
     box.style.display="none";

@@ -185,3 +185,98 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 .flive .ftg{padding:4px 0}
 .flnote{color:var(--dim);font-size:11px;line-height:1.4}
 .flnote[hidden]{display:none}
+
+/* =====================================================================
+   JULY 27 2026 — hour-level time filters, one-line trip length,
+   result ranking, aligned board prices, guide buttons on board rows.
+   ===================================================================== */
+
+/* What "Anywhere we track" actually covers, stated plainly. */
+.fcov{padding:0 16px 14px;color:var(--dim);font-size:11px;letter-spacing:.1em;line-height:1.6}
+.fcov b{color:var(--amber)}
+.fcov[hidden]{display:none}
+
+/* ---- dual-handle range: two stacked sliders, one filled track ---- */
+.rng{position:relative;flex:1 1 160px;min-width:130px;height:26px}
+.rng .rtrack,.rng .rfill{position:absolute;top:11px;height:4px;border-radius:2px;pointer-events:none}
+.rng .rtrack{left:0;right:0;background:var(--edge)}
+.rng .rfill{background:var(--amber)}
+.rng input[type=range]{position:absolute;left:0;top:0;width:100%;height:26px;margin:0;padding:0;
+ background:transparent;pointer-events:none;-webkit-appearance:none;appearance:none}
+.rng input[type=range]:focus{outline:none}
+.rng input[type=range]::-webkit-slider-runnable-track{height:26px;background:transparent;border:0}
+.rng input[type=range]::-moz-range-track{height:26px;background:transparent;border:0}
+.rng input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;
+ width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--amber);
+ border:2px solid var(--navy);cursor:pointer;box-shadow:0 0 0 1px var(--edge)}
+.rng input[type=range]::-moz-range-thumb{pointer-events:auto;width:14px;height:14px;border-radius:50%;
+ background:var(--amber);border:2px solid var(--navy);cursor:pointer}
+.rng input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(--sky)}
+.rng input[type=range]:focus-visible::-moz-range-thumb{box-shadow:0 0 0 3px var(--sky)}
+
+/* ---- TRIP LENGTH on a single switchable line ---- */
+.fline{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.fline>.ftg{flex:none}
+.flnbody{display:flex;align-items:center;gap:12px;flex:1 1 300px;min-width:260px}
+.flnbody[hidden]{display:none}
+.flnbody select{background:var(--tile);border:2px solid var(--edge);border-radius:8px;
+ color:var(--white);font-family:var(--mono);font-size:12px;padding:8px 9px;flex:none}
+.flnbody select:focus{outline:none;border-color:var(--amber)}
+.flnbody .v{font-family:var(--disp);font-weight:700;font-size:20px;color:var(--amber);
+ min-width:104px;flex:none}
+.fline .hint{margin-left:auto;color:var(--amber);font-size:11px;letter-spacing:.02em;flex:none}
+
+/* ---- one leg per line: DEPART (primary, left) + ARRIVE (right) ---- */
+.ftwo{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;align-items:start}
+.thalf{background:var(--panel);border:1px solid var(--edge);border-radius:10px;padding:10px 12px}
+.thalf.tprimary{border-color:var(--amber);box-shadow:inset 3px 0 0 var(--amber)}
+.thalf .ftg{padding:2px 0;font-size:12px;letter-spacing:.12em}
+.thalf.tprimary .ftg>span{color:var(--amber);font-weight:700}
+.thalf.off{opacity:.55}
+.thalf.off .ftg input{cursor:not-allowed}
+.tbody{margin-top:9px;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.tbody[hidden]{display:none}
+.tv{font-family:var(--disp);font-weight:700;font-size:19px;color:var(--amber);
+ min-width:118px;flex:none}
+.fovn{flex-basis:100%;display:flex;align-items:center;gap:8px;color:var(--dim);font-size:11px;
+ line-height:1.4;cursor:pointer;margin-top:4px}
+.fovn input{width:15px;height:15px;accent-color:var(--amber);flex:none;margin:0}
+.fovn b{color:var(--sky)}
+.ftime .fnote{padding-left:0;margin-top:6px}
+@media(max-width:700px){.ftwo{grid-template-columns:1fr}}
+
+/* ---- LEAVE ON / COME BACK linkage ---- */
+.fmini{margin-top:8px;color:var(--dim);font-size:11px;line-height:1.5}
+/* Auto-filled reads as outlined-dashed; a day you picked yourself is solid. */
+.fch.auto[aria-pressed=true]{background:var(--tile);color:var(--amber);border-color:var(--amber);
+ border-style:dashed;font-weight:700}
+.fch.imp,.fch:disabled{opacity:.32;cursor:not-allowed;text-decoration:line-through}
+.fch.imp:hover{border-color:var(--edge);color:var(--dim)}
+
+/* ---- result rank + next-day arrival marker ---- */
+.frk{font-family:var(--disp);font-weight:700;font-size:20px;color:var(--dim);text-align:right;
+ line-height:1;letter-spacing:-.02em}
+.frow:first-child .frk{color:var(--amber)}
+.nxd{display:inline-block;margin-left:3px;font-size:9px;letter-spacing:.06em;color:var(--navy);
+ background:var(--sky);border-radius:3px;padding:1px 3px;vertical-align:top;font-weight:700}
+.fmain{grid-template-columns:28px 58px 1fr auto}
+.gchip{padding-left:118px}
+@media(max-width:640px){
+ .fmain{grid-template-columns:24px 50px 1fr}
+ .fpr{grid-column:2 / -1;text-align:left;margin-top:8px}
+ .gchip{padding-left:18px}
+}
+
+/* ---- board rows: prices in a fixed column, guide button beside the city ----
+   Each .row is its own grid, so `auto` columns were sized per row and the
+   prices never lined up once "(OUR EST.)" made one note wider than another.
+   Fixed widths make every row measure identically. */
+.row{grid-template-columns:minmax(150px,auto) 1fr 118px 208px;position:relative}
+.var{white-space:normal}
+/* The row used to BE an <a>, which is why nothing inside it could be a link.
+   It is now a div with a stretched overlay link, so the guide button can sit
+   right next to the city name and still be its own destination. */
+.rowlink{position:absolute;inset:0;z-index:1;text-decoration:none}
+.row:focus-within{outline:3px solid var(--sky);outline-offset:-3px}
+.row .gbtn{position:relative;z-index:2}
+@media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
