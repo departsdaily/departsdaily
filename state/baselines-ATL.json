@@ -109,7 +109,7 @@
     230
    ],
    "basis": "DOT",
-   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, ATL-DCA $407 round trip x 0.5",
+   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, ATL-DCA $407 round trip x 0.5 (Washington, DC metro area — DOT does not report National separately)",
    "intl": false,
    "ig_board": false,
    "check": "n=15",
@@ -399,7 +399,7 @@
     428
    ],
    "basis": "DOT",
-   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, ATL-SFO $768 round trip x 0.5",
+   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, ATL-SFO $768 round trip x 0.5 (San Francisco, CA metro area — Bay Area airports are one DOT market)",
    "intl": false,
    "ig_board": true,
    "check": "n=25"
@@ -426,27 +426,27 @@
    "ig_board": true,
    "check": "n=6 — too thin to verify against the market"
   },
-  "AUS": {
-   "city": "Austin",
+  "DTW": {
+   "city": "Detroit",
    "m": [
-    241,
-    266,
-    307,
-    286,
-    251,
-    244,
-    245,
-    231,
-    213,
+    220,
+    243,
+    280,
+    261,
     230,
-    252,
-    288
+    223,
+    224,
+    211,
+    195,
+    210,
+    230,
+    263
    ],
    "basis": "DOT",
-   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, ATL-AUS $509 round trip x 0.5",
+   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, ATL-DTW $465 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=29"
+   "check": "n=0 — too thin to verify against the market"
   },
   "CUN": {
    "city": "Cancún",
@@ -646,27 +646,27 @@
    "ig_board": true,
    "check": "n=10"
   },
-  "ROM": {
-   "city": "Rome",
+  "AMS": {
+   "city": "Amsterdam",
    "m": [
-    701,
-    710,
-    787,
-    838,
-    898,
-    1009,
-    1060,
-    1026,
-    898,
-    812,
-    710,
-    812
+    649,
+    657,
+    729,
+    776,
+    832,
+    935,
+    982,
+    950,
+    832,
+    752,
+    657,
+    752
    ],
    "basis": "ESTIMATE",
-   "src": "labelled ESTIMATE $950 round trip x 0.9 (europe) — no DOT city-pair data for this market",
+   "src": "labelled ESTIMATE $880 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "check": "n=0 — too thin to verify against the market"
   }
  }
 }
