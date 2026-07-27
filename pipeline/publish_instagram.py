@@ -7,7 +7,7 @@ config/origins.json — the token decides which account is actually posted to,
 so a wrong secret posts to the wrong account. The guard below refuses to run
 when the token's account handle does not match the origin we rendered for.
 """
-import os, sys, json, time, datetime, urllib.request, urllib.parse
+import os, sys, json, time, datetime, urllib.request, urllib.parse, urllib.error
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import origins
@@ -20,17 +20,62 @@ TOKEN = os.environ["IG_TOKEN"]
 RAW_BASE = os.environ["RAW_BASE"]
 G = "https://graph.instagram.com/v21.0"
 
+# A publish failure used to surface as a bare HTTP 400 with the useful part —
+# Instagram's own explanation — thrown away inside the exception body. Every
+# call now records what it asked for and what came back, and the trail is
+# written to out/ig-error-<ORIGIN>.json when something goes wrong. The access
+# token is never recorded.
+TRAIL = []
+
+
+def _redact(params):
+    return {k: (v if k != "access_token" else "<redacted>") for k, v in params.items()}
+
+
+def _fail(path, params, err):
+    detail = {"call": path, "params": _redact(params)}
+    if isinstance(err, urllib.error.HTTPError):
+        raw = err.read().decode("utf-8", "replace")
+        try:
+            detail["response"] = json.loads(raw)
+        except ValueError:
+            detail["response"] = {"raw": raw[:1000]}
+        detail["status"] = err.code
+    else:
+        detail["error"] = type(err).__name__ + ": " + str(err)
+    TRAIL.append(detail)
+    try:
+        os.makedirs("out", exist_ok=True)
+        with open("out/ig-error-%s.json" % ORIGIN, "w") as fh:
+            json.dump({"origin": ORIGIN, "trail": TRAIL}, fh, indent=1)
+    except OSError:
+        pass
+    print("IG CALL FAILED:", json.dumps(detail)[:1200])
+
+
 def post(path, **params):
     params["access_token"] = TOKEN
     data = urllib.parse.urlencode(params).encode()
-    with urllib.request.urlopen(G + "/" + path, data=data, timeout=60) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(G + "/" + path, data=data, timeout=60) as r:
+            body = json.load(r)
+    except Exception as e:
+        _fail(path, params, e)
+        raise
+    TRAIL.append({"call": path, "params": _redact(params), "response": body})
+    return body
 
 def get(path, **params):
     params["access_token"] = TOKEN
     url = G + "/" + path + "?" + urllib.parse.urlencode(params)
-    with urllib.request.urlopen(url, timeout=30) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(url, timeout=30) as r:
+            body = json.load(r)
+    except Exception as e:
+        _fail(path, params, e)
+        raise
+    TRAIL.append({"call": path, "params": _redact(params), "response": body})
+    return body
 
 
 # Posting a city's board to the wrong account is not recoverable — it goes out

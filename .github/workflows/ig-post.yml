@@ -158,3 +158,19 @@ jobs:
           export RAW_BASE="https://departsdaily.com/$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
           echo "RAW_BASE=$RAW_BASE"
           python pipeline/publish_instagram.py
+
+      # Instagram's own explanation of a refusal is the one thing worth keeping
+      # from a failed run, and Actions logs age out. Commit it.
+      - name: Keep the failure trail
+        if: failure()
+        run: |
+          [ -f "out/ig-error-${{ matrix.origin.code }}.json" ] || exit 0
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git add -f "out/ig-error-${{ matrix.origin.code }}.json"
+          git diff --cached --quiet && exit 0
+          git commit -m "IG failure trail ${{ matrix.origin.code }}"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
