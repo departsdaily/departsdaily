@@ -1,0 +1,151 @@
+{
+ "date": "2026-07-27",
+ "origin": "CLT",
+ "routes_considered": 24,
+ "min_discount_pct": 12.0,
+ "summary": {
+  "not a deal": 9,
+  "locked out": 3,
+  "no fares in window": 5,
+  "no fares": 6,
+  "qualified": 1
+ },
+ "routes": {
+  "BOS": {
+   "outcome": "not a deal",
+   "price": 376,
+   "typical": 237,
+   "disc_pct": -59,
+   "d1": "2026-08-14",
+   "d2": "2026-08-16"
+  },
+  "MIA": {
+   "outcome": "locked out",
+   "why": "posted 2026-07-26"
+  },
+  "FLL": {
+   "outcome": "not a deal",
+   "price": 162,
+   "typical": 152,
+   "disc_pct": -7,
+   "d1": "2026-08-26",
+   "d2": "2026-08-30"
+  },
+  "DFW": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-90 days out for a 2-9 night trip"
+  },
+  "MCO": {
+   "outcome": "no fares in window",
+   "why": "2 offers, none leaving 3-90 days out for a 2-9 night trip"
+  },
+  "DEN": {
+   "outcome": "not a deal",
+   "price": 241,
+   "typical": 224,
+   "disc_pct": -8,
+   "d1": "2026-09-16",
+   "d2": "2026-09-20"
+  },
+  "PHL": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-90 days out for a 2-9 night trip"
+  },
+  "HOU": {
+   "outcome": "no fares in window",
+   "why": "3 offers, none leaving 3-90 days out for a 2-9 night trip"
+  },
+  "LAS": {
+   "outcome": "locked out",
+   "why": "posted 2026-07-26"
+  },
+  "PHX": {
+   "outcome": "not a deal",
+   "price": 310,
+   "typical": 340,
+   "disc_pct": 9,
+   "d1": "2026-07-31",
+   "d2": "2026-08-03"
+  },
+  "TPA": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "BNA": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "MSY": {
+   "outcome": "not a deal",
+   "price": 291,
+   "typical": 188,
+   "disc_pct": -55,
+   "d1": "2026-09-18",
+   "d2": "2026-09-21"
+  },
+  "SFO": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "SEA": {
+   "outcome": "not a deal",
+   "price": 350,
+   "typical": 377,
+   "disc_pct": 7,
+   "d1": "2026-08-20",
+   "d2": "2026-08-23"
+  },
+  "AUS": {
+   "outcome": "qualified",
+   "price": 201,
+   "typical": 296,
+   "disc_pct": 32,
+   "d1": "2026-08-07",
+   "d2": "2026-08-09"
+  },
+  "CUN": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-90 days out for a 2-9 night trip"
+  },
+  "PUJ": {
+   "outcome": "not a deal",
+   "price": 538,
+   "typical": 492,
+   "disc_pct": -9,
+   "d1": "2026-08-04",
+   "d2": "2026-08-11"
+  },
+  "MBJ": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "NAS": {
+   "outcome": "not a deal",
+   "price": 570,
+   "typical": 422,
+   "disc_pct": -35,
+   "d1": "2026-08-20",
+   "d2": "2026-08-23"
+  },
+  "AUA": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "SJU": {
+   "outcome": "locked out",
+   "why": "posted 2026-07-26"
+  },
+  "GCM": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "ROM": {
+   "outcome": "not a deal",
+   "price": 874,
+   "typical": 812,
+   "disc_pct": -8,
+   "d1": "2026-10-04",
+   "d2": "2026-10-10"
+  }
+ }
+}
