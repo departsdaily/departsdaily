@@ -32,19 +32,33 @@ jobs:
       - name: Check for Cloudflare secrets
         id: gate
         env:
-          HAS: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' }}
+          HAS: ${{ secrets.CF_API_TOKEN != '' }}
         run: |
           echo "ok=$HAS" >> "$GITHUB_OUTPUT"
           if [ "$HAS" != "true" ]; then
-            echo "CF_API_TOKEN / CF_ACCOUNT_ID not set — skipping deploy." >> $GITHUB_STEP_SUMMARY
+            echo "CF_API_TOKEN not set — skipping deploy." >> $GITHUB_STEP_SUMMARY
           fi
+
+      # CF_ACCOUNT_ID is optional — with only one account on the token we can
+      # just ask the API which account that is.
+      - name: Resolve Cloudflare account id
+        if: steps.gate.outputs.ok == 'true'
+        id: acct
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          if [ -n "$CF_ACCOUNT_ID" ]; then ID="$CF_ACCOUNT_ID"; else
+            ID=$(curl -sf -H "Authorization: Bearer $CF_API_TOKEN"               https://api.cloudflare.com/client/v4/accounts               | python3 -c "import json,sys;print(json.load(sys.stdin)['result'][0]['id'])")
+          fi
+          echo "id=$ID" >> "$GITHUB_OUTPUT"
 
       - name: Deploy with wrangler
         if: steps.gate.outputs.ok == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          accountId: ${{ steps.acct.outputs.id }}
           workingDirectory: worker
           secrets: |
             TP_TOKEN
@@ -53,7 +67,11 @@ jobs:
 
       - name: Where it lives
         if: steps.gate.outputs.ok == 'true'
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
+          SUB=$(curl -sf -H "Authorization: Bearer $CF_API_TOKEN"             "https://api.cloudflare.com/client/v4/accounts/${{ steps.acct.outputs.id }}/workers/subdomain"             | python3 -c "import json,sys;print(json.load(sys.stdin)['result']['subdomain'])")
+          echo "WORKER_URL=https://departsdaily-fares.$SUB.workers.dev"
           echo "### Worker deployed" >> $GITHUB_STEP_SUMMARY
-          echo "URL: https://departsdaily-fares.<your-workers-subdomain>.workers.dev (exact URL in the wrangler output above)" >> $GITHUB_STEP_SUMMARY
+          echo "URL: https://departsdaily-fares.$SUB.workers.dev" >> $GITHUB_STEP_SUMMARY
           echo "Next: paste it into window.DD_LIVE_URL in site/index.html + site/search.html." >> $GITHUB_STEP_SUMMARY
