@@ -1,0 +1,31 @@
+{
+ "origin": "CLT",
+ "token_len": 181,
+ "me": {
+  "ok": true,
+  "body": {
+   "id": "27636009739384440",
+   "username": "cltdeparts",
+   "account_type": "MEDIA_CREATOR"
+  }
+ },
+ "recent": {
+  "ok": true,
+  "body": {
+   "data": [
+    {
+     "id": "18000632375983541",
+     "media_type": "CAROUSEL_ALBUM",
+     "timestamp": "2026-07-26T17:08:30+0000",
+     "permalink": "https://www.instagram.com/p/DbQ5AyBGmnM/"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIU2pzRk1zNlRCckdxc2dyemlpR2JlWDQyWG1wYld3R2Yyel9qT09fY09Nc1NLT2lwUm1FYXVxZAV94a3k0ZA1FYYl9SV0VTMnhpZAWVGTHhfOFB1eUd3VUtR",
+     "after": "QVFIU2pzRk1zNlRCckdxc2dyemlpR2JlWDQyWG1wYld3R2Yyel9qT09fY09Nc1NLT2lwUm1FYXVxZAV94a3k0ZA1FYYl9SV0VTMnhpZAWVGTHhfOFB1eUd3VUtR"
+    }
+   }
+  }
+ }
+}
