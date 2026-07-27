@@ -1,0 +1,64 @@
+name: Fare scan (diagnostic)
+
+# Runs the same fare fetch the morning post runs, but only to report. Writes
+# out/scan-<ORIGIN>.json — every tracked route, its cheapest fare in the booking
+# window, the typical price it was scored against, and why it did or did not
+# qualify — and commits it. Nothing is posted and no board is written.
+#
+# This exists so "why was there no post today" is a file in the repo rather than
+# a log that expires.
+
+on:
+  workflow_dispatch:
+    inputs:
+      origins:
+        description: "Comma-separated origins to scan (blank = CLT)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fare-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Scan
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+          REQUESTED: ${{ github.event.inputs.origins }}
+        run: |
+          for code in $(echo "${REQUESTED:-CLT}" | tr ',' ' '); do
+            echo "::group::$code"
+            # The board guardrail exits non-zero when nothing qualifies. That is
+            # the answer we are here to read, not a reason to stop.
+            ORIGIN="$code" python pipeline/fetch_fares.py || true
+            echo "::endgroup::"
+          done
+          # A scan must never leave a real board behind.
+          git checkout -- deals.json state/history.json 2>/dev/null || true
+          git clean -f deals-*.json state/history-*.json 2>/dev/null || true
+
+      - name: Commit the scan
+        run: |
+          git config user.name  "departsdaily-bot"
+          git config user.email "bot@departsdaily.com"
+          git add -f out/scan-*.json
+          git diff --cached --quiet && { echo "no scan written"; exit 0; }
+          git commit -m "Fare scan"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --quiet && git push --quiet && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
