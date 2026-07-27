@@ -1,0 +1,79 @@
+name: Instagram account check
+
+# Answers two questions without touching the feed: is the token alive, and what
+# has actually been published recently. Writes out/ig-check-<ORIGIN>.json and
+# commits it. The token is never printed and never leaves the runner.
+
+on:
+  workflow_dispatch:
+    inputs:
+      origin:
+        description: "Origin to check (default CLT)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Check
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          ORIGIN: ${{ github.event.inputs.origin || 'CLT' }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, urllib.parse, urllib.error
+          G = "https://graph.instagram.com/v21.0"
+          tok = os.environ["IG_TOKEN"]
+          origin = os.environ["ORIGIN"]
+
+          def call(path, **p):
+              p["access_token"] = tok
+              url = G + "/" + path + "?" + urllib.parse.urlencode(p)
+              try:
+                  with urllib.request.urlopen(url, timeout=30) as r:
+                      return {"ok": True, "body": json.load(r)}
+              except urllib.error.HTTPError as e:
+                  raw = e.read().decode("utf-8", "replace")
+                  try:
+                      body = json.loads(raw)
+                  except ValueError:
+                      body = {"raw": raw[:800]}
+                  return {"ok": False, "status": e.code, "body": body}
+              except Exception as e:
+                  return {"ok": False, "error": type(e).__name__ + ": " + str(e)}
+
+          out = {"origin": origin,
+                 "token_len": len(tok),
+                 "me": call("me", fields="id,username,account_type"),
+                 "recent": call("me/media",
+                                fields="id,media_type,timestamp,permalink",
+                                limit=5)}
+          os.makedirs("out", exist_ok=True)
+          path = f"out/ig-check-{origin}.json"
+          json.dump(out, open(path, "w"), indent=1)
+          print(json.dumps(out, indent=1)[:2000])
+          PY
+
+      - name: Commit the check
+        run: |
+          git config user.name  "departsdaily-bot"
+          git config user.email "bot@departsdaily.com"
+          git add -f out/ig-check-*.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "Instagram account check"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --quiet && git push --quiet && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
