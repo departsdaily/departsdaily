@@ -4,10 +4,10 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-07-26 20:25 EDT · 20/30 routes returned fares.
+   Generated 2026-07-26 21:13 EDT · 20/30 routes returned fares.
    ===================================================================== */
 const BOARD={
- updated:"2026-07-26T20:25:33-04:00",
+ updated:"2026-07-26T21:13:51-04:00",
 };
 const DEALS={CLT:[
  {to:"AUS",city:"Austin",price:189,d1:"2026-08-07",d2:"2026-08-10",dep:"10:04PM",al:"Frontier",stops:1,exp:"2026-07-28"},
