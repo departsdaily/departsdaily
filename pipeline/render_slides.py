@@ -52,8 +52,13 @@ def header(d,k,r,w=W):
     d.text((w-60-d.textlength(r,font=MONO(30)),66),r,font=MONO(30),fill=DIM)
     d.line([60,120,w-60,120],fill=SKY,width=3)
 
-def footer(d,w=W,h=H):
-    t="DEPARTS DAILY · departsdaily.com · fares verified today, subject to change"
+def footer(d,w=W,h=H,url=False):
+    """Owner's rule (Jul 2026): departsdaily.com appears on ONE slide per post
+    and one slide only — the closing promo. Deal slides carry the honesty
+    disclaimer with no URL, because that line is a legal/accuracy statement,
+    not marketing, and it has to stay everywhere."""
+    t=("DEPARTS DAILY · departsdaily.com · fares verified today, subject to change"
+       if url else "Fares verified today · subject to change · not guaranteed")
     d.text(((w-d.textlength(t,font=SANS(24)))/2,h-104),t,font=SANS(24),fill=DIM)
 
 def fmt_dates(x):
@@ -71,52 +76,57 @@ def fmt_dates(x):
 # green badge it didn't earn.
 DEALS=[x for x in B["deals"] if x.get("deal",True)]
 
-# SLIDE 1 = THE BOARD. Owner's rule (Jul 2026): the fares are the first thing
-# anyone sees. There is no branded cover slide any more — a viewer who never
-# swipes has still seen the deals. The old cover's only load-bearing content
-# (airport, date, deal count) is folded into this slide's header strip.
-#
-# The row pitch adapts so up to 7 deal rows fit above the disclaimer and
-# footer instead of overflowing the canvas. 5 rows or fewer still lays out at
-# the historical 200px pitch.
-img,d=canvas(); header(d,ORG["airport"],DATE)
+# DEAL SLIDES COME FIRST, AS MANY AS THE DEALS NEED. Owner's rule (Jul 2026):
+# the fares lead every post, and more deal slides are a good thing. Only the
+# ROWS_PER_SLIDE legibility limit splits them — never a content decision.
+# Instagram allows 10 carousel items, so 9 board slides is the hard ceiling
+# and the closing promo always keeps the last spot.
+ROWS_PER_SLIDE = int(os.environ.get("ROWS_PER_SLIDE", "7"))
+pages=[DEALS[i:i+ROWS_PER_SLIDE] for i in range(0,len(DEALS),ROWS_PER_SLIDE)][:9]
+SLIDES=[]
 n=len(DEALS)
-d.text((60,146),"TODAY'S DEAL BOARD · ROUND TRIP",font=MONO(26),fill=SKY)
-badge=f"{n} VERIFIED DEAL{'S' if n!=1 else ''}"
-bf=MONO(26)
-d.rounded_rectangle([W-60-d.textlength(badge,font=bf)-40,136,W-60,190],radius=12,fill=GREEN)
-d.text((W-80-d.textlength(badge,font=bf),150),badge,font=bf,fill=NAVY)
-rows=DEALS
-pitch=min(200,(1212-210)//max(1,len(rows)))
-sc=pitch/200.0
-def S_(v): return int(v*sc)
-y=210
-for x in rows:
-    d.rounded_rectangle([48,y-16,W-48,y+S_(158)],radius=16,fill=PANEL)
-    xx=tiles(d,76,y,ORIGIN,size=S_(38)); d.text((xx+6,y+S_(8)),">",font=MONO(S_(38)),fill=SKY)
-    tiles(d,xx+S_(44),y,x["to"],size=S_(38))
-    d.text((76,y+S_(74)),x["city"].upper(),font=COND(S_(36)),fill=WHITE)
-    d.text((76,y+S_(116)),fmt_dates(x),font=MONO(S_(21)),fill=SKY)
-    p=f"${x['price']}"
-    d.text((W-90-d.textlength(p,font=COND(S_(76))),y-6),p,font=COND(S_(76)),fill=AMBER)
-    # Badge honesty, defensive: green % only for rows flagged as real deals.
-    # The fetch ships deals only, so the other branches should never fire —
-    # but if a mislabelled row ever slipped through it would state its true
-    # number in amber/grey rather than wear an unearned green badge.
-    if x.get("deal",True): tag,col=f"{x['disc']}% BELOW TYPICAL",GREEN
-    elif x["disc"]>0:      tag,col=f"{x['disc']}% BELOW TYPICAL",AMBER
-    elif x["disc"]>=-2:    tag,col="TYPICAL FARE",DIM
-    else:                  tag,col=f"{-x['disc']}% ABOVE TYPICAL",DIM
-    d.text((W-90-d.textlength(tag,font=MONO(S_(22))),y+S_(96)),tag,font=MONO(S_(22)),fill=col)
-    y+=pitch
-d.text((60,y+4),"Verified in Google Flights today. Fares change fast and are not guaranteed.",font=SANS(23),fill=DIM)
-footer(d); img.save(f"{OUT}/slide1_board.png")
 
-# SLIDE 2 = THE ONLY SELL SLIDE, AND IT IS LAST. Owner's rule (Jul 2026):
-# one promo page per post, never more. The old finder promo and the old
-# follow CTA were two separate slides doing one job, so they are merged
-# here. Do not reintroduce a third slide — if something new needs saying,
-# it goes on this slide or in the caption.
+for pi,rows in enumerate(pages,1):
+    img,d=canvas(); header(d,ORG["airport"],DATE)
+    left="TODAY'S DEAL BOARD · ROUND TRIP" if pi==1 else f"MORE DEALS · {pi} OF {len(pages)}"
+    d.text((60,146),left,font=MONO(26),fill=SKY)
+    badge=f"{n} VERIFIED DEAL{'S' if n!=1 else ''}"
+    bf=MONO(26)
+    d.rounded_rectangle([W-60-d.textlength(badge,font=bf)-40,136,W-60,190],radius=12,fill=GREEN)
+    d.text((W-80-d.textlength(badge,font=bf),150),badge,font=bf,fill=NAVY)
+    pitch=min(200,(1212-210)//max(1,len(rows)))
+    sc=pitch/200.0
+    def S_(v,_sc=sc): return int(v*_sc)
+    y=210
+    for x in rows:
+        d.rounded_rectangle([48,y-16,W-48,y+S_(158)],radius=16,fill=PANEL)
+        xx=tiles(d,76,y,ORIGIN,size=S_(38)); d.text((xx+6,y+S_(8)),">",font=MONO(S_(38)),fill=SKY)
+        tiles(d,xx+S_(44),y,x["to"],size=S_(38))
+        d.text((76,y+S_(74)),x["city"].upper(),font=COND(S_(36)),fill=WHITE)
+        d.text((76,y+S_(116)),fmt_dates(x),font=MONO(S_(21)),fill=SKY)
+        p=f"${x['price']}"
+        d.text((W-90-d.textlength(p,font=COND(S_(76))),y-6),p,font=COND(S_(76)),fill=AMBER)
+        # Badge honesty, defensive: green % only for rows flagged as real deals.
+        # The fetch ships deals only, so the other branches should never fire —
+        # but if a mislabelled row ever slipped through it would state its true
+        # number in amber/grey rather than wear an unearned green badge.
+        if x.get("deal",True): tag,col=f"{x['disc']}% BELOW TYPICAL",GREEN
+        elif x["disc"]>0:      tag,col=f"{x['disc']}% BELOW TYPICAL",AMBER
+        elif x["disc"]>=-2:    tag,col="TYPICAL FARE",DIM
+        else:                  tag,col=f"{-x['disc']}% ABOVE TYPICAL",DIM
+        d.text((W-90-d.textlength(tag,font=MONO(S_(22))),y+S_(96)),tag,font=MONO(S_(22)),fill=col)
+        y+=pitch
+    d.text((60,y+4),"Verified in Google Flights today. Fares change fast and are not guaranteed.",font=SANS(23),fill=DIM)
+    footer(d)
+    name=f"slide{pi}_board.png"; img.save(f"{OUT}/{name}"); SLIDES.append(name)
+
+
+# THE ONE PROMO SLIDE, ALWAYS LAST. Owner's rule (Jul 2026): a post can carry
+# as many deal slides as it has deals, but exactly ONE slide sells the site.
+# This is it. departsdaily.com does not appear on any other slide. The old
+# finder promo and the old follow CTA were two slides doing one job, so they
+# are merged here. If something new needs saying it goes on this slide or in
+# the caption — never on a new slide.
 def fit(text,maker,size,maxw):
     f=maker(size)
     while d.textlength(text,font=f)>maxw and f.size>16: f=maker(f.size-2)
@@ -136,7 +146,13 @@ for j,t in enumerate(["Tell the Fare Finder your trip shape —",
 bw=d.textlength("FOLLOW · BOOKING LINKS IN BIO",font=COND(46))
 d.rounded_rectangle([60,1020,60+bw+64,1106],radius=14,fill=AMBER)
 d.text((92,1038),"FOLLOW · BOOKING LINKS IN BIO",font=COND(46),fill=NAVY)
-footer(d); img.save(f"{OUT}/slide2_cta.png")
+footer(d,url=True)
+name=f"slide{len(pages)+1}_cta.png"; img.save(f"{OUT}/{name}"); SLIDES.append(name)
+
+# Manifest so the publisher never has to guess how many board slides there
+# were. Carousel order = this list, top to bottom.
+json.dump({"slides":SLIDES,"n_deals":n,"board_slides":len(pages)},
+          open(f"{OUT}/slides.json","w"),indent=1)
 
 # per-deal STORY slides (IG API can't add link stickers, so the CTA is baked
 # into the art). Only true deals get a story — a filler fare wearing a green
@@ -158,5 +174,5 @@ for i,x in enumerate(DEALS,1):
     d.rounded_rectangle([60,1452,60+uw+64,1568],radius=16,fill=AMBER)
     d.text((92,1470),"DEPARTSDAILY.COM",font=COND(84),fill=NAVY)
     d.text((60,1610),"LINK IN BIO",font=MONO(34),fill=WHITE)
-    footer(d,SW,SH); img.save(f"{OUT}/story_{i}_{x['to']}.png")
-print(f"rendered {ORIGIN} -> {OUT}")
+    footer(d,SW,SH,url=True); img.save(f"{OUT}/story_{i}_{x['to']}.png")
+print(f"rendered {ORIGIN} -> {OUT}: {len(SLIDES)} slides {SLIDES}")

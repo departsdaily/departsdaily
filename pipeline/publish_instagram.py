@@ -131,9 +131,15 @@ for d in B["deals"]:
 cap += " ".join(tags)
 
 children = []
-# Board first, one sell slide last (owner's rule, Jul 2026). Order here is
-# the order Instagram shows them — slide1_board.png must stay index 0.
-for s in ["slide1_board.png", "slide2_cta.png"]:
+# Deal slides first, one promo slide last (owner's rule, Jul 2026). The
+# renderer writes the exact order to slides.json because the number of board
+# slides varies with the number of deals. Fallback covers a stale render.
+try:
+    SLIDES = json.load(open(os.path.join(origins.paths(ORIGIN)["out"], "slides.json")))["slides"]
+except Exception:
+    SLIDES = ["slide1_board.png", "slide2_cta.png"]
+print("carousel:", SLIDES)
+for s in SLIDES:
     r = post(IG_USER + "/media", image_url=RAW_BASE + "/" + s, is_carousel_item="true")
     children.append(r["id"])
     time.sleep(2)

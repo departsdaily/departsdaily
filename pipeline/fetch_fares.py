@@ -22,15 +22,21 @@ MIN_DISCOUNT = 0.12
 # DEALS ONLY — owner's rule (Jul 2026): the board never shows a fare that
 # isn't a real deal. No filler rows, no "typical fare" rows, and no SKIP row
 # (it showcased an overpayment). Every fare clearing MIN_DISCOUNT makes the
-# board, up to BOARD_MAX = 7 — the most rows the board slide can hold legibly.
+# board, up to BOARD_MAX. That cap is no longer a slide-space limit: the
+# renderer paginates the board across as many slides as the deals need
+# (7 rows each), so a 14-deal day simply posts two deal slides. More real
+# deals is always better — the only fixed rule is that exactly one slide in
+# the post sells the site, and it is the last one.
 #
-# TARGET: a FULL 7-row board every day (owner's rule, Jul 28 2026). We reach it
+# TARGET: at least a full 7-row first slide every day (owner's rule, Jul 28). We reach it
 # by casting a WIDER NET for genuine deals — a deeper month scan, longer trips,
 # and a further-out departure window (see cheapest() and the trip-window filter
 # below) — NEVER by lowering the 12% bar or padding with non-deals. On a
 # genuinely thin market day it still posts fewer real deals rather than an
 # overpayment; a day with zero deals posts nothing.
-BOARD_MAX = int(os.environ.get("BOARD_MAX", "7"))
+# 14 = two full deal slides. Supply is the real limiter (a thin day still
+# clears only 2-3 routes), so this is headroom, not a quota. Never padded.
+BOARD_MAX = int(os.environ.get("BOARD_MAX", "14"))
 today = datetime.date.today()
 
 def tp(url, params):
