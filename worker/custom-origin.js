@@ -89,7 +89,12 @@ async function freshPull(origin, dest, months, env) {
     best.set(k, [0, off, nights, price, stO, stB, dO, aO, dB, aB, al, composed]);
   };
 
-  const monthsList = monthsAhead(base, months);
+  /* A "2 month" window runs ~61 days out, which lands in the THIRD calendar
+     month. Pull one extra month or the tail of the visitor's own window never
+     gets queried. Capped at 6 so a 12-month search can't blow past the
+     Worker's 50-subrequest ceiling — the unscoped (null-month) calls below
+     still reach further out than that. */
+  const monthsList = monthsAhead(base, Math.min(months + 1, 6));
 
   // 1) real round trips, month-scoped (times + durations → arrivals)
   for (const m of [null, ...monthsList]) {
@@ -104,26 +109,38 @@ async function freshPull(origin, dest, months, env) {
     }
   }
 
-  // 2) month-matrix round trips (dates only — unknown times stay -1, honest)
+  /* Cheapest one-way leg per calendar date, per direction. [price, stops, dep
+     minutes] — dep minutes is -1 when the source gave us dates only. */
+  const legsOut = {}, legsBack = {};
+  const leg = (store, date, price, stops, min) => {
+    if (!date || !(price | 0)) return;
+    const cur = store[date];
+    if (!cur || cur[0] > (price | 0)) store[date] = [price | 0, stops | 0, min];
+  };
+
+  // 2) month-matrix. Round trips go straight in; the rows it returns with an
+  //    empty return_date are one-way legs — they used to be dropped on the
+  //    floor. They are date-only, so their times stay -1 rather than invented.
   for (const m of monthsList) {
-    for (const f of await matrix(origin, dest, m, env)) {
-      const dep = (f.depart_date || "").slice(0, 10), ret = (f.return_date || "").slice(0, 10);
-      if (!dep || !ret) continue;
-      const st = f.number_of_changes | 0;
-      put(dayDiff(base, dep), dayDiff(dep, ret), f.value | 0, st, st, -1, -1, -1, -1, "", 0);
+    for (const [o, d, store] of [[origin, dest, legsOut], [dest, origin, legsBack]]) {
+      for (const f of await matrix(o, d, m, env)) {
+        const dep = (f.depart_date || "").slice(0, 10), ret = (f.return_date || "").slice(0, 10);
+        const st = f.number_of_changes | 0;
+        if (!dep) continue;
+        if (!ret) { leg(store, dep, f.value, st, -1); continue; }
+        if (o !== origin) continue;                 // only our direction's RTs
+        put(dayDiff(base, dep), dayDiff(dep, ret), f.value | 0, st, st, -1, -1, -1, -1, "", 0);
+      }
     }
   }
 
   // 3) one-way legs both directions → compose pairs we still lack
-  const legsOut = {}, legsBack = {};
   for (const m of [null, ...monthsList]) {
     for (const [o, d, store] of [[origin, dest, legsOut], [dest, origin, legsBack]]) {
       for (const f of await v3(o, d, true, m, env)) {
         const t = parseTs(f.departure_at);
-        if (!t || !(f.price | 0)) continue;
-        const cur = store[t.date];
-        if (!cur || cur[0] > f.price)
-          store[t.date] = [f.price | 0, f.transfers | 0, t.min];
+        if (!t) continue;
+        leg(store, t.date, f.price, f.transfers, t.min);
       }
     }
   }
@@ -144,6 +161,12 @@ async function freshPull(origin, dest, months, env) {
     generated: new Date().toISOString(),
     dests: [dest],
     has_arrivals: rows.some(r => r[7] >= 0 || r[9] >= 0),
+    /* How thin the well is for this route, so a zero-result report can be
+       diagnosed without guessing. Not read by the page. */
+    counts: { rows: rows.length,
+              legs_out: Object.keys(legsOut).length,
+              legs_back: Object.keys(legsBack).length,
+              months: monthsList.length },
     rows,
   });
 }

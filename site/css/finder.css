@@ -61,6 +61,11 @@
  text-decoration:none;background:var(--tile)}
 .gchip:hover{color:var(--amber)}
 .fzero{padding:36px 20px;text-align:center;color:var(--dim);font-size:14px;line-height:1.6}
+/* Sits above the results whenever the search had to be loosened to find any.
+   Amber left edge so it reads as "we changed something", not as a result. */
+.frlx{padding:11px 14px;margin-bottom:2px;font-size:12.5px;line-height:1.5;color:var(--dim);
+ background:var(--tile);border-left:3px solid var(--amber)}
+.frlx b{color:var(--white)}
 @media(max-width:640px){
  .fquick{grid-template-columns:1fr}
  .fmain{grid-template-columns:50px 1fr;gap:11px}

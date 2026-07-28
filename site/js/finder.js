@@ -21,6 +21,11 @@ window.Finder = (function () {
   const DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   const PREBUILT = ["CLT","ATL","ORD","DFW","DEN","LAX","JFK","MIA","SEA","BOS"];
 
+  /* How many trips we show. Ten is a list a person actually reads to the
+     bottom; twenty-five was a scroll. Everything that matched still counts
+     toward the total we report, so the cap is never a hidden filter. */
+  const CAP = 10;
+
   /* FRESH PULL endpoint (Cloudflare Worker). Set window.DD_LIVE_URL to the
      deployed Worker base URL (no trailing slash) in index.html/search.html to
      light the feature up; empty = the toggle stays hidden and the finder runs
@@ -199,20 +204,82 @@ window.Finder = (function () {
 
     const seen = {}, keep = [];
     for (const h of out) { if (S.dest === "*" && seen[h.c]) continue; seen[h.c] = 1; keep.push(h); }
-    if (S.dest !== "*") return keep.slice(0,25);
+    if (S.dest !== "*") { const r = keep.slice(0,CAP); r.total = keep.length; return r; }
 
     /* Interleave one international result every three domestic. International
        trips are worth more to a traveller planning a real holiday and to us.
-       This decides WHICH 25 cities make the list — never their order on screen
+       This decides WHICH cities make the list — never their order on screen
        and never a price. The caller re-sorts by price before rendering, so the
        rank numbers a visitor reads are always true cheapest-first. */
     const intl = keep.filter(h => h.intl), dom = keep.filter(h => !h.intl), mix = [];
     let i = 0, j = 0;
-    while (mix.length < 25 && (i < dom.length || j < intl.length)) {
+    while (mix.length < CAP && (i < dom.length || j < intl.length)) {
       for (let k = 0; k < 3 && i < dom.length; k++) mix.push(dom[i++]);
       if (j < intl.length) mix.push(intl[j++]);
     }
-    return mix.slice(0,25).sort((a,b) => a.p - b.p);
+    const r = mix.slice(0,CAP).sort((a,b) => a.p - b.p);
+    r.total = keep.length;
+    return r;
+  }
+
+  /* -------------------------------------------------------------------
+     RELAXATION LADDER
+
+     A search that matches nothing should hand back the nearest real trips
+     and say exactly what it loosened to find them. "No matches" tells a
+     visitor nothing about which of eight filters is the one in the way,
+     and on a thin route (a fare cache holds what people actually searched,
+     not every seat that exists) an exact match is often just absent.
+
+     Rungs are applied cumulatively, smallest concession first, and we stop
+     at the first rung that finds anything. Every rung that was applied is
+     named on screen — we never quietly widen a search and present the
+     result as if it met the filters.
+     ------------------------------------------------------------------- */
+  const TKEYS = ["tOutDep","tOutArr","tRetDep","tRetArr"];
+  const RELAX = [
+    { grp:"len", lab: "trip length opened up by 3 nights either side",
+      on: o => o.lenOn && (o.lo > 1 || o.hi < 30),
+      fn: (s, o) => { s.lo = Math.max(1, o.lo - 3); s.hi = Math.min(30, o.hi + 3); } },
+    { grp:"dow", lab: "any day of the week",
+      on: o => o.out.length < 7 || o.ret.length < 7,
+      fn: s => { s.out = [0,1,2,3,4,5,6]; s.ret = [0,1,2,3,4,5,6]; } },
+    { grp:"time", lab: "time-of-day filters off",
+      on: o => TKEYS.some(k => o[k].on),
+      fn: s => TKEYS.forEach(k => { s[k] = Object.assign({}, s[k], { on:false }); }) },
+    { grp:"stops", lab: "any number of stops",
+      on: o => o.stops >= 0,
+      fn: s => { s.stops = -1; } },
+    /* Same group as the first rung — its label replaces that one rather than
+       standing next to it, so we never say "widened by 3 nights AND any
+       length" in the same breath. */
+    { grp:"len", lab: "any trip length",
+      on: o => o.lenOn && (o.lo > 1 || o.hi < 30),
+      fn: s => { s.lo = 1; s.hi = 30; } },
+    { grp:"bud", lab: "no budget cap",
+      on: o => o.bud < 3000,
+      fn: s => { s.bud = 1e9; } },
+    { grp:"win", lab: "a wider date window",
+      on: () => true,
+      fn: s => { s.mode = "window"; s.mo = 12; s.from = ""; s.to = ""; } }
+  ];
+
+  /* Returns {rows, relaxed:[labels]}. relaxed is empty when the search
+     matched on its own terms. */
+  function searchBest(IDX, S) {
+    const exact = search(IDX, S);
+    if (exact.length) return { rows: exact, relaxed: [], total: exact.total || exact.length };
+    const s = JSON.parse(JSON.stringify(S));   // plain data — no Dates in S
+    let used = [];
+    for (const r of RELAX) {
+      if (!r.on(S)) continue;
+      r.fn(s, S);
+      used = used.filter(u => u.grp !== r.grp).concat([{ grp:r.grp, lab:r.lab }]);
+      const got = search(IDX, s);
+      if (got.length)
+        return { rows: got, relaxed: used.map(u => u.lab), total: got.total || got.length };
+    }
+    return { rows: [], relaxed: used.map(u => u.lab), total: 0 };
   }
 
   function legHTML(dep, arr) {
@@ -377,8 +444,9 @@ window.Finder = (function () {
     </div>
 
     <div class="flive" id="fLiveBar" hidden>
-      <label class="ftg"><input type="checkbox" id="fLive">
-        <span><b style="color:var(--amber)">FRESH PULL</b> — re-check the fare cache right now for this exact route</span></label>
+      <label class="ftg"><input type="checkbox" id="fLive" checked>
+        <span><b style="color:var(--amber)">FRESH PULL</b> — re-check the fare cache the moment you pick a
+        destination. On by default; untick to search last night's index only.</span></label>
       <span class="flnote" id="fLiveNote" hidden></span>
     </div>
 
@@ -429,7 +497,12 @@ window.Finder = (function () {
                 bud:1500, stops:-1,
                 tOutDep:{on:false,lo:0,hi:23}, tOutArr:{on:false,lo:0,hi:23,ovn:true},
                 tRetDep:{on:false,lo:0,hi:23}, tRetArr:{on:false,lo:0,hi:23,ovn:true},
-                fresh:false };
+                /* On by default. The nightly index is one cheapest fare per
+                   date pair per city — thin enough that a specific route plus
+                   a trip-length filter can land on nothing at all. Re-reading
+                   the cache for the chosen route is the difference between a
+                   result and an empty page, and it costs one Worker call. */
+                fresh:true, freshTouched:false };
     let IDX = null;
     root.querySelector(".fwrap").innerHTML = panelHTML();
 
@@ -616,7 +689,9 @@ window.Finder = (function () {
     if (LIVE_API) {
       const bar = $("fLiveBar");
       if (bar) bar.hidden = false;
-      $("fLive").addEventListener("change", e => { S.fresh = e.target.checked; render(); });
+      $("fLive").checked = S.fresh;
+      $("fLive").addEventListener("change", e => {
+        S.fresh = e.target.checked; S.freshTouched = true; render(); });
     }
     $("fOrig").addEventListener("change", e => { boot(e.target.value); });
     nlab(); syncRet();
@@ -644,18 +719,34 @@ window.Finder = (function () {
       } catch (e) { liveCache[key] = "fail"; }
       render();
     }
-    /* Swap the live rows in for the selected destination. Live offsets are
+    /* Merge the live rows in for the selected destination. Live offsets are
        relative to the Worker's base date, which can differ from the index's —
-       shift them so every row shares IDX.base. */
+       shift them so every row shares IDX.base.
+
+       Live wins any date pair it covers. Where it covers nothing, last
+       night's row stays: a fare that has rotated out of the cache today is
+       still a fare we saw yesterday, and throwing it away narrows the search
+       for no reason. Both are cached fares either way — the click-through
+       runs the real search and checkout price is the only price. */
     function withLive(L) {
       const shift = Math.round((new Date(L.base + "T12:00") - new Date(IDX.base + "T12:00")) / 864e5);
       let di = IDX.dests.indexOf(S.dest);
       const dests = di < 0 ? IDX.dests.concat([S.dest]) : IDX.dests;
       if (di < 0) di = dests.length - 1;
-      const rows = IDX.rows.filter(r => r[0] !== di)
-        .concat(L.rows.map(r => [di, r[1] + shift].concat(r.slice(2))));
+      const live = L.rows.map(r => [di, r[1] + shift].concat(r.slice(2)));
+      const pair = r => r[1] + "|" + r[2];
+      const covered = new Set(live.map(pair));
+      const rows = IDX.rows.filter(r => r[0] !== di || !covered.has(pair(r))).concat(live);
       return Object.assign({}, IDX, { dests: dests, rows: rows,
         has_arrivals: IDX.has_arrivals !== false || L.has_arrivals });
+    }
+
+    /* Say what we loosened, in the visitor's words, above the results. */
+    function relaxHTML(list) {
+      const t = list.length < 2 ? list[0]
+        : list.slice(0, -1).join(", ") + " and " + list[list.length - 1];
+      return '<div class="frlx"><b>Nothing matched every filter.</b> ' +
+        'Closest trips we have, with ' + t + '.</div>';
     }
 
     const rowsEl = root.querySelector("[data-rows]");
@@ -667,7 +758,11 @@ window.Finder = (function () {
       let idx = IDX, liveMsg = "", liveOn = false, pulling = false;
       if (S.fresh && LIVE_API) {
         if (S.dest === "*") {
-          liveMsg = "Fresh pull needs a specific destination — pick one under TO.";
+          /* Only worth saying when the visitor ticked the box themselves.
+             It is on by default now, so shouting about it on a plain
+             Anywhere search would be noise. */
+          if (S.freshTouched)
+            liveMsg = "Fresh pull needs a specific destination — pick one under TO.";
         } else {
           const key = S.orig + "|" + S.dest + "|" + monthsParam();
           const L = liveCache[key];
@@ -677,7 +772,7 @@ window.Finder = (function () {
           else { idx = withLive(L); liveOn = true; }
         }
       }
-      let r = search(idx, S);
+      let best = searchBest(idx, S), r = best.rows;
       /* A specific destination with zero cached matches quietly re-checks the
          Worker ONCE (same cache the FRESH PULL toggle uses) before the UI
          says anything. The index is last night's cached snapshot — an empty
@@ -690,8 +785,8 @@ window.Finder = (function () {
           fetchLive(key); pulling = true;
           liveMsg = "Nothing cached in that window — checking live fares…";
         } else if (L && L !== "fail") {
-          const idx2 = withLive(L), r2 = search(idx2, S);
-          if (r2.length) { idx = idx2; r = r2; liveOn = true; }
+          const idx2 = withLive(L), b2 = searchBest(idx2, S);
+          if (b2.rows.length) { idx = idx2; best = b2; r = b2.rows; liveOn = true; }
           else liveTried = true;
         } else if (L === null) liveTried = true;
         /* L === "fail": the live check never answered — claim nothing. */
@@ -701,10 +796,18 @@ window.Finder = (function () {
       if (srcEl) srcEl.textContent = liveOn
         ? "FRESH PULL " + new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })
         : (IDX.live ? "LIVE LOOKUP" : "UPDATED " + (IDX.generated || "").slice(0, 10));
-      if (cntEl) cntEl.textContent = pulling ? "PULLING FRESH FARES…" : r.length
-        ? (r.length >= 25 ? "25+ TRIPS · CHEAPEST FIRST" : r.length + " TRIP" + (r.length > 1 ? "S" : "") + " · CHEAPEST FIRST") : "NO MATCHES";
+      const total = best.total || r.length;
+      /* The count is what MATCHED, not what we printed. Saying "10 trips"
+         when 24 matched understates the search; saying "24" with ten on
+         screen and no explanation overstates the page. Say both. */
+      if (cntEl) cntEl.textContent = pulling ? "PULLING FRESH FARES…"
+        : !r.length ? "NO MATCHES"
+        : best.relaxed.length ? "NEAREST " + r.length + " · CHEAPEST FIRST"
+        : total > r.length ? total + " TRIPS · TOP " + r.length + " CHEAPEST"
+        : total + " TRIP" + (total > 1 ? "S" : "") + " · CHEAPEST FIRST";
       rowsEl.innerHTML = r.length
-        ? r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("")
+        ? (best.relaxed.length ? relaxHTML(best.relaxed) : "") +
+          r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("")
         : (pulling ? '<div class="fzero">Checking live fares for ' +
              ((idx.names && idx.names[S.dest]) || CITY_NAMES[S.dest] || S.dest) + "…</div>"
                    : `<div class="fzero">${zeroHTML(idx, liveTried)}</div>`);
