@@ -22,8 +22,14 @@ MIN_DISCOUNT = 0.12
 # DEALS ONLY — owner's rule (Jul 2026): the board never shows a fare that
 # isn't a real deal. No filler rows, no "typical fare" rows, and no SKIP row
 # (it showcased an overpayment). Every fare clearing MIN_DISCOUNT makes the
-# board, up to BOARD_MAX = 7 — the most rows the board slide can hold
-# legibly. A thin day posts fewer rows; a day with zero deals posts nothing.
+# board, up to BOARD_MAX = 7 — the most rows the board slide can hold legibly.
+#
+# TARGET: a FULL 7-row board every day (owner's rule, Jul 28 2026). We reach it
+# by casting a WIDER NET for genuine deals — a deeper month scan, longer trips,
+# and a further-out departure window (see cheapest() and the trip-window filter
+# below) — NEVER by lowering the 12% bar or padding with non-deals. On a
+# genuinely thin market day it still posts fewer real deals rather than an
+# overpayment; a day with zero deals posts nothing.
 BOARD_MAX = int(os.environ.get("BOARD_MAX", "7"))
 today = datetime.date.today()
 
@@ -49,12 +55,16 @@ def cheapest(dest):
     on 2026-07-27 left 11 of CLT's 24 routes with zero usable candidates.
     Month-scoped queries (same trick as build_index.py) surface the cheapest
     fares in each month of the posting window, so a route with nothing in the
-    global top-30 can still field its best August fare."""
+    global top-30 can still field its best August fare.
+
+    WIDER NET (Jul 28 2026): scan 6 months out (was 4) and pull 50 candidates
+    per query (was 30), so more routes can field a fare that clears the 12%
+    deal bar and the board fills to its 7-row target more often."""
     seen, out, last_err = set(), [], None
-    for month in [None] + months_ahead(4):
+    for month in [None] + months_ahead(6):
         params = {"origin": ORIGIN, "destination": dest, "unique": "false",
                   "sorting": "price", "direct": "false", "currency": "usd",
-                  "limit": 30, "one_way": "false"}
+                  "limit": 50, "one_way": "false"}
         if month:
             params["departure_at"] = month
         try:
@@ -96,7 +106,11 @@ for code in ROUTES:
     if not offers:
         scan[code] = {"outcome": "no fares", "why": "the fare cache returned nothing"}
         continue
-    # sanity filter: leaves 3-90 days out, sensible 2-9 day round trip
+    # sanity filter: leaves 3-150 days out, sensible 2-14 day round trip.
+    # WIDER NET (Jul 28 2026): departure window 90->150 days and trip length
+    # 9->14 nights. offers are price-sorted, so this only ever admits a CHEAPER
+    # real fare that the tighter window was discarding — it lifts the discount,
+    # never lowers the bar — recovering routes that had fares but "none in window".
     o = None
     for cand in offers:
         try:
@@ -104,12 +118,12 @@ for code in ROUTES:
             rr = datetime.date.fromisoformat((cand.get("return_at") or "")[:10])
         except ValueError:
             continue
-        if 3 <= (dd - today).days <= 90 and 2 <= (rr - dd).days <= 9:
+        if 3 <= (dd - today).days <= 150 and 2 <= (rr - dd).days <= 14:
             o = cand; break
     if o is None:
         scan[code] = {"outcome": "no fares in window",
-                      "why": f"{len(offers)} offers, none leaving 3-90 days out "
-                             f"for a 2-9 night trip"}
+                      "why": f"{len(offers)} offers, none leaving 3-150 days out "
+                             f"for a 2-14 night trip"}
         continue
     price = round(o["price"])
     dep = datetime.date.fromisoformat(o["departure_at"][:10])
