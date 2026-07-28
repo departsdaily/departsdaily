@@ -205,6 +205,20 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
    ===================================================================== */
 
 /* What "Anywhere we track" actually covers, stated plainly. */
+/* WHEN, second row: the two date boxes plus one sentence saying which
+   question they are answering in the mode you're currently in. `display:grid`
+   beats the hidden attribute, so [hidden] has to be restated. */
+.fdates{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 14px;align-items:end}
+.fdates[hidden]{display:none}
+.fdnote{grid-column:1 / -1;color:var(--dim);font-size:11.5px;line-height:1.5}
+@media(max-width:430px){.fdates{grid-template-columns:1fr}}
+
+/* TRIP LENGTH is always on now, so its label is a label, not a switch. */
+.flnlbl{flex:none;color:var(--sky);font-size:11px;letter-spacing:.14em}
+/* Dimmed when EXACT dates have already decided the number of nights. */
+.flnbody.lock{opacity:.5}
+.flnbody.lock select,.flnbody.lock input{cursor:not-allowed}
+
 .fcov{padding:0 16px 14px;color:var(--dim);font-size:11px;letter-spacing:.1em;line-height:1.6}
 .fcov b{color:var(--amber)}
 .fcov[hidden]{display:none}

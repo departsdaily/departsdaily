@@ -192,14 +192,18 @@ window.Finder = (function () {
     if (rows && rows.length) return { c: rows[0].c, g: rows[0].g, rd: rows[0].rd };
     if (S.dest === "*") return null;                 // no single route to search
     const base = new Date(IDX.base + "T12:00");
-    const nights = S.lenOn ? S.lo : 7;
+    /* Exact dates are already a trip — use them as given. Otherwise take the
+       shortest stay they asked for, or a week if they didn't ask. */
+    if (S.mode === "exact" && S.from && S.to)
+      return { c: S.dest, g: new Date(S.from + "T12:00"), rd: new Date(S.to + "T12:00") };
+    const nights = (S.lo > 1 || S.hi < 30) ? S.lo : 7;
     let g = null;
-    if (S.mode === "dates" && S.from) g = new Date(S.from + "T12:00");
+    if ((S.mode === "range" || S.mode === "dates") && S.from) g = new Date(S.from + "T12:00");
     else {
       const span = Math.round((S.mo || 6) * 30.44);
       for (let off = 2; off <= span; off++) {
         const d = new Date(base); d.setDate(d.getDate() + off);
-        if (S.out.includes(d.getDay())) { g = d; break; }
+        if (!S.out.length || S.out.includes(d.getDay())) { g = d; break; }
       }
     }
     if (!g) return null;
@@ -224,10 +228,21 @@ window.Finder = (function () {
     const di = S.dest === "*" ? -1 : IDX.dests.indexOf(S.dest);
     if (S.dest !== "*" && di < 0) return [];
 
+    /* Three ways to say WHEN:
+         window — anywhere in the next N months
+         range  — depart any day between two dates ("3 nights sometime
+                  between July 31 and Nov 1"), length comes from TRIP LENGTH
+         exact  — depart THIS day, return THAT day; the caller has already
+                  pinned TRIP LENGTH to the gap between them
+       "dates" is the old name for range; still honoured so a saved link
+       from before this change keeps working. */
+    const dayOff = s => Math.round((new Date(s + "T12:00") - base) / 864e5);
     let loOff = 0, hiOff = 999;
-    if (S.mode === "dates" && S.from) {
-      loOff = Math.round((new Date(S.from + "T12:00") - base) / 864e5);
-      hiOff = S.to ? Math.round((new Date(S.to + "T12:00") - base) / 864e5) : loOff;
+    if (S.mode === "exact" && S.from) {
+      loOff = hiOff = dayOff(S.from);
+    } else if ((S.mode === "range" || S.mode === "dates") && S.from) {
+      loOff = dayOff(S.from);
+      hiOff = S.to ? dayOff(S.to) : loOff;
     } else {
       hiOff = S.mo * 30.44;
     }
@@ -243,10 +258,11 @@ window.Finder = (function () {
       if (!inWin(aOut,  S.tOutArr, dOut)) continue;
       if (!inWin(dBack, S.tRetDep)) continue;
       if (!inWin(aBack, S.tRetArr, dBack)) continue;
+      /* An empty day list is no restriction, not an impossible one. */
       const g = new Date(base); g.setDate(g.getDate() + off);
-      if (!S.out.includes(g.getDay())) continue;
+      if (S.out.length && !S.out.includes(g.getDay())) continue;
       const rd = new Date(g); rd.setDate(rd.getDate() + n);
-      if (!S.ret.includes(rd.getDay())) continue;
+      if (S.ret.length && !S.ret.includes(rd.getDay())) continue;
       out.push({ c: IDX.dests[d], p, n, stO, stB, dOut, aOut, dBack, aBack, al, comp, g, rd,
                  intl: (IDX.intl || []).includes(IDX.dests[d]) });
     }
@@ -289,11 +305,11 @@ window.Finder = (function () {
   const TKEYS = ["tOutDep","tOutArr","tRetDep","tRetArr"];
   const RELAX = [
     { grp:"len", lab: "trip length opened up by 3 nights either side",
-      on: o => o.lenOn && (o.lo > 1 || o.hi < 30),
+      on: o => o.lo > 1 || o.hi < 30,
       fn: (s, o) => { s.lo = Math.max(1, o.lo - 3); s.hi = Math.min(30, o.hi + 3); } },
     { grp:"dow", lab: "any day of the week",
-      on: o => o.out.length < 7 || o.ret.length < 7,
-      fn: s => { s.out = [0,1,2,3,4,5,6]; s.ret = [0,1,2,3,4,5,6]; } },
+      on: o => o.out.length || o.ret.length,
+      fn: s => { s.out = []; s.ret = []; } },
     { grp:"time", lab: "time-of-day filters off",
       on: o => TKEYS.some(k => o[k].on),
       fn: s => TKEYS.forEach(k => { s[k] = Object.assign({}, s[k], { on:false }); }) },
@@ -304,7 +320,7 @@ window.Finder = (function () {
        standing next to it, so we never say "widened by 3 nights AND any
        length" in the same breath. */
     { grp:"len", lab: "any trip length",
-      on: o => o.lenOn && (o.lo > 1 || o.hi < 30),
+      on: o => o.lo > 1 || o.hi < 30,
       fn: s => { s.lo = 1; s.hi = 30; } },
     { grp:"bud", lab: "no budget cap",
       on: o => o.bud < 3000,
@@ -483,14 +499,20 @@ window.Finder = (function () {
       <div class="fq"><label for="fDest">TO</label>
         <select id="fDest"><option value="*">Anywhere we track</option></select></div>
       <div class="fq"><label for="fWhen">WHEN</label>
-        <select id="fWhen">${months}<option value="dates">Specific dates…</option></select></div>
+        <select id="fWhen">${months}<option value="range">Between two dates…</option><option value="exact">Exact dates…</option></select></div>
       <div class="fq"><label for="fWhen2">&nbsp;</label>
         <button class="fmore" id="fMore" aria-expanded="true" aria-controls="fPanel">HIDE FILTERS ▴</button></div>
     </div>
     <div class="fcov" data-cov hidden></div>
+    <!-- Two different questions, so two different modes rather than one set of
+         boxes that means something different depending on what else is set.
+         RANGE = "leave any time between these two dates, stay TRIP LENGTH."
+         EXACT = "leave this day, come home that day." The labels on the inputs
+         change with the mode so nobody has to guess which one they're in. -->
     <div class="fdates" id="fDates" hidden>
-      <div class="fq"><label for="fFrom">EARLIEST DEPARTURE</label><input type="date" id="fFrom"></div>
-      <div class="fq"><label for="fTo">LATEST DEPARTURE</label><input type="date" id="fTo"></div>
+      <div class="fq"><label for="fFrom" id="fFromL">EARLIEST DEPARTURE</label><input type="date" id="fFrom"></div>
+      <div class="fq"><label for="fTo" id="fToL">LATEST DEPARTURE</label><input type="date" id="fTo"></div>
+      <div class="fdnote" id="fDNote"></div>
     </div>
 
     <div class="flive" id="fLiveBar" hidden>
@@ -502,10 +524,13 @@ window.Finder = (function () {
 
     <div class="fpanel" id="fPanel">
       <div class="fsec fline" data-sec="len">
-        <label class="ftg"><input type="checkbox" data-toggle="len"><span>TRIP LENGTH</span></label>
-        <div class="flnbody" data-block="len" hidden>
+        <!-- No on/off switch. "Any length" is the first option in the
+             dropdown, which is the same thing without making anyone flip a
+             toggle to reach a filter they already opened the panel to use. -->
+        <span class="flnlbl">TRIP LENGTH</span>
+        <div class="flnbody" data-block="len">
           <select id="fLenSel" aria-label="Trip length preset">${lens}</select>
-          <span class="v" id="fNVal">1–30 nights</span>
+          <span class="v" id="fNVal">Any length</span>
           ${rngHTML("len", 1, 30, 1, 30, "Minimum nights", "Maximum nights")}
         </div>
         <span class="hint" id="fNHint">Any length</span>
@@ -542,8 +567,13 @@ window.Finder = (function () {
        narrow — not land on four filters at once and conclude the tool is
        empty. Trip length, days of week and budget all default to "any". */
     const S = { orig: opts.origin || "CLT", dest:"*", mode:"window", mo:6, from:"", to:"",
-                lenOn:false, lo:1, hi:30,
-                out:[0,1,2,3,4,5,6], ret:[0,1,2,3,4,5,6], retTouched:false,
+                lo:1, hi:30,
+                /* EMPTY MEANS ANY DAY. Starting with all seven lit made the
+                   control look like a filter that was already doing something,
+                   and made "I only want Fridays" a chore of six taps to turn
+                   things off. Nothing selected reads as no restriction, which
+                   is what it is. */
+                out:[], ret:[], retTouched:false,
                 bud:1500, stops:-1,
                 tOutDep:{on:false,lo:0,hi:23}, tOutArr:{on:false,lo:0,hi:23,ovn:true},
                 tRetDep:{on:false,lo:0,hi:23}, tRetArr:{on:false,lo:0,hi:23,ovn:true},
@@ -565,16 +595,50 @@ window.Finder = (function () {
 
     $("fWhen").addEventListener("change", e => {
       const v = e.target.value;
-      S.mode = v === "dates" ? "dates" : "window";
-      $("fDates").hidden = S.mode !== "dates";
+      S.mode = (v === "range" || v === "exact") ? v : "window";
+      $("fDates").hidden = S.mode === "window";
       if (S.mode === "window") S.mo = +v;
-      render();
+      dateLabels(); applyExact(); render();
     });
     ["fFrom","fTo"].forEach(id => $(id).addEventListener("change", () => {
-      S.from = $("fFrom").value; S.to = $("fTo").value; render();
+      S.from = $("fFrom").value; S.to = $("fTo").value;
+      applyExact(); render();
     }));
 
-    /* ---------------- TRIP LENGTH (one line, switchable) ---------------- */
+    /* The same two boxes answer two different questions, so they say which
+       one they are answering. */
+    function dateLabels() {
+      const ex = S.mode === "exact";
+      $("fFromL").textContent = ex ? "DEPART" : "EARLIEST DEPARTURE";
+      $("fToL").textContent   = ex ? "RETURN" : "LATEST DEPARTURE";
+      $("fDNote").textContent = ex
+        ? "One exact trip. We show what we have for those two days, cheapest first."
+        : "Leave any day between these two. Set TRIP LENGTH below for how long you want to stay.";
+    }
+
+    /* EXACT mode derives trip length from the two dates and locks the control,
+       because two exact dates already answer "how many nights". Locked rather
+       than hidden so the number is visible and the reason is stated. */
+    function applyExact() {
+      const ex = S.mode === "exact";
+      const body = root.querySelector('[data-block="len"]');
+      body.classList.toggle("lock", ex);
+      body.querySelectorAll("select,input").forEach(el => { el.disabled = ex; });
+      if (!ex) { $("fNHint").classList.remove("lockhint"); nlab(); syncRet(); return; }
+      if (!S.from || !S.to) { $("fDNote").textContent =
+        "Pick both dates — the day you leave and the day you come home."; return; }
+      const n = Math.round((new Date(S.to + "T12:00") - new Date(S.from + "T12:00")) / 864e5);
+      if (n < 1) { $("fDNote").textContent =
+        "Your return date is on or before your departure date."; return; }
+      if (n > 30) { $("fDNote").textContent =
+        "We only track trips up to 30 nights. Try Between two dates for a longer stay."; return; }
+      S.lo = S.hi = n;
+      lenRng.set(n, n); setLenSel(); nlab(); syncRet();
+      $("fDNote").textContent = "One exact trip, " + n + (n === 1 ? " night." : " nights.") +
+        " Trip length is set by your dates.";
+    }
+
+    /* ---------------- TRIP LENGTH (always on, no switch) ---------------- */
     const LEN_PRESETS = new Set(["1-30","2-3","3-4","5-8","9-14","15-30"]);
     function setLenSel() {
       const k = S.lo + "-" + S.hi;
@@ -591,20 +655,28 @@ window.Finder = (function () {
       lenRng.set(S.lo, S.hi); nlab(); syncRet(); render();
     });
     function nlab() {
-      const t = S.lo === S.hi ? S.lo + (S.lo > 1 ? " nights" : " night")
-                              : S.lo + "–" + S.hi + " nights";
+      const any = S.lo === 1 && S.hi === 30;
+      const t = any ? "Any length"
+        : S.lo === S.hi ? S.lo + (S.lo > 1 ? " nights" : " night")
+                        : S.lo + "–" + S.hi + " nights";
       $("fNVal").textContent = t;
-      $("fNHint").textContent = S.lenOn ? t : "Any length";
+      $("fNHint").textContent = S.mode === "exact" ? t + " · set by your dates" : t;
     }
 
     /* ---------------- LEAVE ON / COME BACK ---------------- */
-    /* Return days are a consequence of the days you can leave and how long you
-       want to be gone. We compute the set that is actually reachable, tick it
-       for you, and mark it AUTO so it is obvious the site chose it. Touch a
-       return chip and it becomes yours — we stop auto-filling and only keep
-       you off days that are arithmetically impossible. */
+    /* NOTHING SELECTED = ANY DAY. Both rows start empty. Tapping a day narrows
+       to it; tapping it off widens back out. There is no "all seven lit" state
+       to undo, and no minimum you have to keep selected.
+
+       Return days remain a consequence of the leave days and the trip length.
+       Once, and only once, the visitor has picked leave days, we compute the
+       reachable return days, tick them, and mark them AUTO so it is obvious
+       the site chose them. Touch a return chip and it becomes yours — we stop
+       auto-filling and only keep you off days that are arithmetically
+       impossible. */
     function reachableReturns() {
       const s = new Set();
+      if (!S.out.length) { for (let i = 0; i < 7; i++) s.add(i); return s; }
       for (const d of S.out) for (let n = S.lo; n <= S.hi; n++) s.add((d + n) % 7);
       return s;
     }
@@ -615,21 +687,24 @@ window.Finder = (function () {
       el.addEventListener("click", e => {
         const b = e.target.closest(".fch"); if (!b || b.disabled) return;
         const i = +b.dataset.i, on = b.getAttribute("aria-pressed") === "true";
-        if (on) { if (S[key].length < 2) return; S[key] = S[key].filter(x => x !== i); }
+        /* Deselecting the last one is allowed — it means "any day" again. */
+        if (on) S[key] = S[key].filter(x => x !== i);
         else S[key] = [...S[key], i].sort((a,z) => a-z);
         b.setAttribute("aria-pressed", String(!on));
-        if (key === "ret") S.retTouched = true;
+        if (key === "ret") S.retTouched = S[key].length > 0;
+        if (key === "out" && !S[key].length && !S.retTouched) S.ret = [];
         syncRet(); hints(); render();
       });
     }
     function syncRet() {
-      const poss = reachableReturns(), all = poss.size === 7;
-      if (!S.retTouched) S.ret = [...poss].sort((a,z) => a-z);
+      const poss = reachableReturns();
+      const free = !S.out.length;              // no leave days picked = no constraint
+      if (!S.retTouched) S.ret = free ? [] : [...poss].sort((a,z) => a-z);
       else {
         /* Keep a hand-picked set honest: a day you cannot arrive back on must
            not sit there silently killing every result. */
         const kept = S.ret.filter(d => poss.has(d));
-        S.ret = kept.length ? kept : [...poss].sort((a,z) => a-z);
+        S.ret = kept;
         if (!kept.length) S.retTouched = false;
       }
       const box = $("fDRet");
@@ -641,17 +716,17 @@ window.Finder = (function () {
         b.setAttribute("aria-pressed", String(S.ret.includes(i)));
         b.title = ok ? "" : "Not reachable with these leave days and trip length";
       });
-      $("fRetNote").textContent = all
-        ? ""
+      $("fRetNote").textContent = free
+        ? "Leave blank for any day back. Pick LEAVE ON days and we'll fill in what's reachable."
         : (S.retTouched
             ? "Greyed days can't happen with your leave days and trip length."
             : "Auto-filled from LEAVE ON + TRIP LENGTH. Tap any day to take over.");
       hints();
     }
     function hints() {
-      const f = a => a.length === 7 ? "Any day" : a.map(i => DOW[i]).join(", ");
+      const f = a => !a.length || a.length === 7 ? "Any day" : a.map(i => DOW[i]).join(", ");
       $("fHOut").textContent = f(S.out);
-      $("fHRet").textContent = f(S.ret) + (S.retTouched ? "" : " · auto");
+      $("fHRet").textContent = f(S.ret) + (S.ret.length && !S.retTouched ? " · auto" : "");
     }
     dows("fDOut","out"); dows("fDRet","ret");
 
@@ -661,21 +736,17 @@ window.Finder = (function () {
     root.querySelectorAll("[data-toggle]").forEach(cb => {
       const key = cb.dataset.toggle;
       cb.addEventListener("change", () => {
+        /* TRIP LENGTH no longer has a switch — the only toggles left are the
+           four hour-window ones. */
         const blk = root.querySelector('[data-block="' + key + '"]');
         if (blk) blk.hidden = !cb.checked;
-        if (key === "len") {
-          S.lenOn = cb.checked;
-          if (!cb.checked) { S.lo = 1; S.hi = 30; lenRng.set(1,30); setLenSel(); }
-          nlab(); syncRet();
-        } else {
-          S[key].on = cb.checked;
-          if (!cb.checked) {
-            S[key].lo = 0; S[key].hi = 23;
-            const r = ranges[key]; if (r) r.set(0,23);
-          }
-          linkLeg(key);
-          tlab(key);
+        S[key].on = cb.checked;
+        if (!cb.checked) {
+          S[key].lo = 0; S[key].hi = 23;
+          const r = ranges[key]; if (r) r.set(0,23);
         }
+        linkLeg(key);
+        tlab(key);
         render();
       });
     });
@@ -744,13 +815,17 @@ window.Finder = (function () {
         S.fresh = e.target.checked; S.freshTouched = true; render(); });
     }
     $("fOrig").addEventListener("change", e => { boot(e.target.value); });
-    nlab(); syncRet();
+    dateLabels(); nlab(); syncRet();
 
     /* ---------------- FRESH PULL (live re-query via Worker) ------------- */
     const liveCache = {};           // "orig|dest|months" -> response | null(failed)
     function monthsParam() {
-      if (S.mode === "dates" && S.from) {
-        const span = (new Date((S.to || S.from) + "T12:00") - new Date(IDX.base + "T12:00")) / 2592e6;
+      if (S.mode !== "window" && S.from) {
+        /* Reach far enough to cover the LAST day they'd travel: the latest
+           departure they'll accept plus the longest stay they'd take. */
+        const last = new Date((S.to || S.from) + "T12:00");
+        last.setDate(last.getDate() + (S.mode === "exact" ? 0 : S.hi));
+        const span = (last - new Date(IDX.base + "T12:00")) / 2592e6;
         return Math.min(12, Math.max(1, Math.ceil(span) + 1));
       }
       return Math.min(12, S.mo);
