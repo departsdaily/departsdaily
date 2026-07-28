@@ -143,10 +143,10 @@ jobs:
       - name: Wait for Cloudflare Pages to serve the slides
         run: |
           # The push above triggers the Pages build. Poll until the cover
-          # slide is actually live — Instagram fetches these URLs, so posting
+          # board slide is actually live — Instagram fetches these URLs, so posting
           # before they resolve would publish a broken carousel.
           WEB="$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
-          URL="https://departsdaily.com/$WEB/slide1_cover.png"
+          URL="https://departsdaily.com/$WEB/slide1_board.png"
           echo "waiting on $URL"
           for i in $(seq 1 40); do
             code=$(curl -s -o /dev/null -w "%{http_code}" "$URL")

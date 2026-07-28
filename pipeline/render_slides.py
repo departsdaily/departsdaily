@@ -71,30 +71,26 @@ def fmt_dates(x):
 # green badge it didn't earn.
 DEALS=[x for x in B["deals"] if x.get("deal",True)]
 
-# cover
+# SLIDE 1 = THE BOARD. Owner's rule (Jul 2026): the fares are the first thing
+# anyone sees. There is no branded cover slide any more — a viewer who never
+# swipes has still seen the deals. The old cover's only load-bearing content
+# (airport, date, deal count) is folded into this slide's header strip.
+#
+# The row pitch adapts so up to 7 deal rows fit above the disclaimer and
+# footer instead of overflowing the canvas. 5 rows or fewer still lays out at
+# the historical 200px pitch.
 img,d=canvas(); header(d,ORG["airport"],DATE)
-tiles(d,60,210,"DEPARTURES",size=80)
-d.text((60,390),"TODAY'S VERIFIED",font=COND(100),fill=WHITE)
-d.text((60,494),"FLIGHT DEALS",font=COND(100),fill=AMBER)
-d.text((60,598),ORG["cover_line"],font=COND(100),fill=AMBER)
 n=len(DEALS)
-badge=f"{n} VERIFIED DEAL{'S' if n!=1 else ''} TODAY"
-bf=COND(44)
-while d.textlength(badge,font=bf)>W-176: bf=COND(bf.size-2)
-d.rounded_rectangle([60,780,60+d.textlength(badge,font=bf)+56,860],radius=14,fill=GREEN)
-d.text((88,820-bf.size//2-2),badge,font=bf,fill=NAVY)
-d.text((60,910),"Swipe for the board  >>>",font=SANS(34),fill=SKY)
-footer(d); img.save(f"{OUT}/slide1_cover.png")
-
-# board — the row pitch adapts so up to 7 deal rows fit above the disclaimer
-# and footer instead of overflowing the canvas. 5 rows or fewer reproduces
-# the historical 200px layout pixel-for-pixel.
-img,d=canvas(); header(d,"TODAY'S DEAL BOARD","ROUND TRIP")
+d.text((60,146),"TODAY'S DEAL BOARD · ROUND TRIP",font=MONO(26),fill=SKY)
+badge=f"{n} VERIFIED DEAL{'S' if n!=1 else ''}"
+bf=MONO(26)
+d.rounded_rectangle([W-60-d.textlength(badge,font=bf)-40,136,W-60,190],radius=12,fill=GREEN)
+d.text((W-80-d.textlength(badge,font=bf),150),badge,font=bf,fill=NAVY)
 rows=DEALS
-pitch=min(200,(1212-180)//max(1,len(rows)))
+pitch=min(200,(1212-210)//max(1,len(rows)))
 sc=pitch/200.0
 def S_(v): return int(v*sc)
-y=180
+y=210
 for x in rows:
     d.rounded_rectangle([48,y-16,W-48,y+S_(158)],radius=16,fill=PANEL)
     xx=tiles(d,76,y,ORIGIN,size=S_(38)); d.text((xx+6,y+S_(8)),">",font=MONO(S_(38)),fill=SKY)
@@ -114,37 +110,33 @@ for x in rows:
     d.text((W-90-d.textlength(tag,font=MONO(S_(22))),y+S_(96)),tag,font=MONO(S_(22)),fill=col)
     y+=pitch
 d.text((60,y+4),"Verified in Google Flights today. Fares change fast and are not guaranteed.",font=SANS(23),fill=DIM)
-footer(d); img.save(f"{OUT}/slide2_board.png")
+footer(d); img.save(f"{OUT}/slide1_board.png")
 
-# fare finder promo — "you pick the trip shape, we find the cheapest fare"
-img,d=canvas(); header(d,"FARE FINDER","DEPARTSDAILY.COM")
-d.text((60,180),"YOU PICK THE TRIP.",font=COND(88),fill=WHITE)
-f2=COND(88)
-while d.textlength("WE FIND THE CHEAPEST FARE.",font=f2)>W-120: f2=COND(f2.size-4)
-d.text((60,278),"WE FIND THE CHEAPEST FARE.",font=f2,fill=AMBER)
-d.rounded_rectangle([48,430,W-48,806],radius=16,fill=PANEL)
-d.text((76,458),"EXAMPLE SEARCH",font=MONO(24),fill=DIM)
-for j,t in enumerate(["LEAVE: FRIDAY  ·  BACK: MONDAY",
-                      "WINDOW: ANYTIME IN THE NEXT 3 MONTHS",
-                      "BUDGET: UNDER $200  ·  NONSTOP ONLY"]):
-    d.text((76,510+j*62),t,font=MONO(30),fill=WHITE)
-d.line([76,716,W-76,716],fill=EDGE,width=2)
-d.text((76,740),">> THE CHEAPEST WEEKEND THAT FITS, INSTANTLY",font=MONO(27),fill=GREEN)
-d.text((60,860),"Mix any criteria: date window, trip length, day of",font=SANS(36),fill=WHITE)
-d.text((60,910),"the week, budget, nonstop, departure time.",font=SANS(36),fill=WHITE)
-bw=d.textlength("TRY THE FARE FINDER · LINK IN BIO",font=COND(46))
-d.rounded_rectangle([60,1020,60+bw+64,1106],radius=14,fill=AMBER)
-d.text((92,1038),"TRY THE FARE FINDER · LINK IN BIO",font=COND(46),fill=NAVY)
-footer(d); img.save(f"{OUT}/slide3_finder.png")
+# SLIDE 2 = THE ONLY SELL SLIDE, AND IT IS LAST. Owner's rule (Jul 2026):
+# one promo page per post, never more. The old finder promo and the old
+# follow CTA were two separate slides doing one job, so they are merged
+# here. Do not reintroduce a third slide — if something new needs saying,
+# it goes on this slide or in the caption.
+def fit(text,maker,size,maxw):
+    f=maker(size)
+    while d.textlength(text,font=f)>maxw and f.size>16: f=maker(f.size-2)
+    return f
 
-# CTA
 img,d=canvas(); header(d,ORG["airport"],ORG["gate"])
-tiles(d,60,300,"NOW",size=80); tiles(d,60,430,"BOARDING",size=80)
-d.text((60,620),"New verified board",font=COND(64),fill=WHITE)
-d.text((60,696),"every morning at 7AM.",font=COND(64),fill=WHITE)
-d.rounded_rectangle([60,840,760,926],radius=14,fill=AMBER)
-d.text((92,858),"FOLLOW · BOOKING LINKS IN BIO",font=COND(44),fill=NAVY)
-footer(d); img.save(f"{OUT}/slide4_cta.png")
+tiles(d,60,196,"NOW",size=76); tiles(d,60,316,"BOARDING",size=76)
+d.text((60,470),"New verified board",font=COND(64),fill=WHITE)
+d.text((60,546),"every morning at 7AM.",font=COND(64),fill=AMBER)
+d.rounded_rectangle([48,660,W-48,952],radius=16,fill=PANEL)
+d.text((76,690),"FLEXIBLE DATES?",font=MONO(28),fill=DIM)
+for j,t in enumerate(["Tell the Fare Finder your trip shape —",
+                      "leave Friday, back Monday, anytime in the",
+                      "next 3 months, under $200 — and it finds",
+                      "the cheapest fare that fits."]):
+    d.text((76,740+j*44),t,font=fit(t,SANS,32,W-152),fill=WHITE)
+bw=d.textlength("FOLLOW · BOOKING LINKS IN BIO",font=COND(46))
+d.rounded_rectangle([60,1020,60+bw+64,1106],radius=14,fill=AMBER)
+d.text((92,1038),"FOLLOW · BOOKING LINKS IN BIO",font=COND(46),fill=NAVY)
+footer(d); img.save(f"{OUT}/slide2_cta.png")
 
 # per-deal STORY slides (IG API can't add link stickers, so the CTA is baked
 # into the art). Only true deals get a story — a filler fare wearing a green

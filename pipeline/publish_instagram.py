@@ -131,7 +131,9 @@ for d in B["deals"]:
 cap += " ".join(tags)
 
 children = []
-for s in ["slide1_cover.png", "slide2_board.png", "slide3_finder.png", "slide4_cta.png"]:
+# Board first, one sell slide last (owner's rule, Jul 2026). Order here is
+# the order Instagram shows them — slide1_board.png must stay index 0.
+for s in ["slide1_board.png", "slide2_cta.png"]:
     r = post(IG_USER + "/media", image_url=RAW_BASE + "/" + s, is_carousel_item="true")
     children.append(r["id"])
     time.sleep(2)
