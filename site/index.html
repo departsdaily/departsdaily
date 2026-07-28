@@ -1124,7 +1124,10 @@ document.getElementById("citybar").innerHTML=CITIES.map(c=>
  `<button class="citybtn ${c.live?"":"soon"}" role="tab" data-code="${c.code}" aria-pressed="${c.live?"true":"false"}" ${c.live?"":'title="Coming soon"'}>${c.code}</button>`).join("");
 document.getElementById("citygrid").innerHTML=CITIES.map(c=>
  `<div class="gcard ${c.live?"live":""}"><div class="code">${c.code}</div><div class="st">${c.live?"● LIVE NOW":"COMING SOON"}</div></div>`).join("");
-document.querySelectorAll("#citybar .citybtn").forEach(b=>b.addEventListener("click",()=>renderCity(b.dataset.code)));
+document.querySelectorAll("#citybar .citybtn").forEach(b=>b.addEventListener("click",()=>{
+  renderCity(b.dataset.code);
+  try{history.replaceState(null,"","?from="+encodeURIComponent(b.dataset.code));}catch(e){}
+}));
 /* initial render happens at the end of this script, after the chart code is defined */
 
 /* Route seasonality chart (SVG, no libraries) */
@@ -1206,8 +1209,25 @@ function wireForm(id, okHTML){
 wireForm("sugform",'<p style="color:var(--green)">Thanks — suggestion received. ✈</p>');
 wireForm("signupform",'<p style="color:var(--green)">You are on the list. ✈</p>');
 
-/* Initial render — after all sections above are defined */
-renderCity("CLT");
+/* Initial render — after all sections above are defined.
+
+   The board opens on whichever city the URL asks for, so each city's
+   Instagram bio can link straight at its own board:
+       departsdaily.com/?from=ATL     (what the bio links use)
+       departsdaily.com/#ATL          (also works, easy to say out loud)
+   An unknown or not-yet-live code falls back to Charlotte rather than
+   rendering an empty page. Clicking a chip rewrites the URL with
+   replaceState, so a visitor can copy what is on screen and share it,
+   without filling their back button with every chip they tried. */
+function cityFromURL(){
+  var p=new URLSearchParams(location.search);
+  var want=(p.get("from")||p.get("origin")||location.hash.replace("#","")||"")
+             .trim().toUpperCase();
+  var hit=CITIES.filter(function(c){return c.code===want && c.live;})[0];
+  return hit ? hit.code : "CLT";
+}
+renderCity(cityFromURL());
+window.addEventListener("hashchange",function(){renderCity(cityFromURL());});
 
 
 /* Booking strip through the affiliate engine. */

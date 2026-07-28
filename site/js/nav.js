@@ -8,7 +8,6 @@
 (function () {
   var LINKS = [
     { href: "index.html",     label: "DEAL BOARD"  },
-    { href: "index.html#search", label: "FARE FINDER" },
     { href: "guides.html",    label: "CITY GUIDES" },
     { href: "gear.html",      label: "GEAR"        }
   ];
@@ -21,7 +20,6 @@
   function isCurrent(l) {
     var target = l.href.split("#")[0];
     if (deep) return l.href === "guides.html";     // a guide page IS city guides
-    if (file === "search.html") return l.href === "index.html#search";
     if (target === "index.html") return (file === "index.html" || file === "")
       && l.href.indexOf("#") < 0;
     return file === target;
