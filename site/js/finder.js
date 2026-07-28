@@ -297,10 +297,12 @@ window.Finder = (function () {
      and on a thin route (a fare cache holds what people actually searched,
      not every seat that exists) an exact match is often just absent.
 
-     Rungs are applied cumulatively, smallest concession first, and we stop
-     at the first rung that finds anything. Every rung that was applied is
-     named on screen — we never quietly widen a search and present the
-     result as if it met the filters.
+     Rungs are applied cumulatively, smallest concession first. We keep
+     loosening until the list is FULL (CAP rows), not merely non-empty —
+     owner's rule (Jul 28 2026): the visitor always gets ten flights to look
+     at, deal or not, ranked cheapest first. Every rung that was applied is
+     named on screen, and when some trips DID match we say how many, so a
+     topped-up list is never passed off as ten exact matches.
      ------------------------------------------------------------------- */
   const TKEYS = ["tOutDep","tOutArr","tRetDep","tRetArr"];
   const RELAX = [
@@ -330,22 +332,35 @@ window.Finder = (function () {
       fn: s => { s.mode = "window"; s.mo = 12; s.from = ""; s.to = ""; } }
   ];
 
-  /* Returns {rows, relaxed:[labels]}. relaxed is empty when the search
-     matched on its own terms. */
+  /* Returns {rows, relaxed:[labels], exact:n}. `exact` is how many trips met
+     the visitor's filters untouched — 0 means nothing matched, a number below
+     CAP means we widened to fill the rest of the ten. `relaxed` is empty only
+     when the search filled the list on its own terms. */
   function searchBest(IDX, S) {
     const exact = search(IDX, S);
-    if (exact.length) return { rows: exact, relaxed: [], total: exact.total || exact.length };
+    const nExact = exact.length;
+    /* Full list on the visitor's own terms: nothing to loosen. */
+    if (nExact >= CAP) return { rows: exact, relaxed: [], exact: nExact,
+                                total: exact.total || nExact };
     const s = JSON.parse(JSON.stringify(S));   // plain data — no Dates in S
     let used = [];
+    let best = { rows: exact, relaxed: [], exact: nExact, total: exact.total || nExact };
     for (const r of RELAX) {
       if (!r.on(S)) continue;
       r.fn(s, S);
       used = used.filter(u => u.grp !== r.grp).concat([{ grp:r.grp, lab:r.lab }]);
       const got = search(IDX, s);
-      if (got.length)
-        return { rows: got, relaxed: used.map(u => u.lab), total: got.total || got.length };
+      if (got.length > best.rows.length)
+        best = { rows: got, relaxed: used.map(u => u.lab), exact: nExact,
+                 total: got.total || got.length };
+      /* Stop the moment the list is full. Rungs widen cumulatively, so
+         carrying on would only swap in trips further from what was asked. */
+      if (best.rows.length >= CAP) break;
     }
-    return { rows: [], relaxed: used.map(u => u.lab), total: 0 };
+    /* Fewer than ten even with every rung applied means the cache genuinely
+       holds no more for this route. We show what exists and say so rather
+       than inventing rows. */
+    return best;
   }
 
   function legHTML(dep, arr) {
@@ -881,11 +896,22 @@ window.Finder = (function () {
     }
 
     /* Say what we loosened, in the visitor's words, above the results. */
-    function relaxHTML(list) {
+    /* Four honest shapes, because "we filled the ten for you" and "this is
+       everything the cache has" are different promises and must not share
+       wording. `shown` is what actually made it onto the page. */
+    function relaxHTML(list, nExact, shown) {
       const t = list.length < 2 ? list[0]
         : list.slice(0, -1).join(", ") + " and " + list[list.length - 1];
-      return '<div class="frlx"><b>Nothing matched every filter.</b> ' +
-        'Closest trips we have, with ' + t + '.</div>';
+      const full = shown >= CAP;
+      const only = '<b>Only ' + nExact + ' trip' + (nExact === 1 ? "" : "s") +
+                   ' matched every filter.</b> ';
+      const body = nExact
+        ? (full ? only + 'Rest of the ten found with ' + t + '.'
+                : only + 'Loosening ' + t + ' found ' + shown +
+                  ' in total, which is everything we hold for this route.')
+        : ('<b>Nothing matched every filter.</b> Closest ' +
+           (full ? 'ten' : shown) + ' we have, with ' + t + '.');
+      return '<div class="frlx">' + body + '</div>';
     }
 
     const rowsEl = root.querySelector("[data-rows]");
@@ -968,7 +994,7 @@ window.Finder = (function () {
 
       rowsEl.innerHTML = (r.length
         ? thinMsg + (thin ? every : "") +
-          (best.relaxed.length ? relaxHTML(best.relaxed) : "") +
+          (best.relaxed.length ? relaxHTML(best.relaxed, best.exact, r.length) : "") +
           r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("") +
           (thin ? "" : every)
         : (pulling ? '<div class="fzero">Checking live fares for ' +
