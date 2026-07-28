@@ -369,3 +369,11 @@ document.addEventListener("DOMContentLoaded", () => {
     el.setAttribute("rel", "sponsored noopener");
   });
 });
+
+/* MONEY BUG, fixed July 28. `const AFF = {...}` at the top level of a classic
+   script binds in the global DECLARATIVE scope — it never lands on `window`.
+   Any consumer that guarded with `window.AFF && ...` therefore saw undefined
+   and silently fell back to an untracked link. That is exactly what the Fare
+   Finder was doing: every flight click left the site with no marker on it and
+   earned nothing. Publish the object properly and keep the guard honest. */
+window.AFF = AFF;

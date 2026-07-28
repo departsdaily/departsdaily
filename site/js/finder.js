@@ -160,10 +160,60 @@ window.Finder = (function () {
   const iso = d => d.toISOString().slice(0,10);
 
   function affLink(origin, h) {
-    const mk = (window.AFF && AFF.tpMarker) || "";
+    /* Belt and braces: affiliates.js now publishes window.AFF, but a classic
+       `const AFF` is also reachable bare. Read both — an untracked flight
+       click is money on the floor and it fails silently. */
+    const A = (typeof window !== "undefined" && window.AFF) ||
+              (typeof AFF !== "undefined" ? AFF : null);
+    const mk = (A && A.tpMarker) || "";
     const p = d => iso(d).slice(8,10) + iso(d).slice(5,7);
     return "https://www.aviasales.com/search/" + origin + p(h.g) + h.c + p(h.rd) + "1" +
       (mk ? "?marker=" + mk : "");
+  }
+
+  /* --------------------------------------------------------------------
+     SEE EVERY FLIGHT
+
+     Our index and the fresh pull are a fare CACHE — the cheapest fare per
+     date pair that Aviasales has seen searched recently, not the full
+     departure list for a day. No affiliate feed carries the full list; a
+     real live search does. So we hand the visitor a real Aviasales search
+     already filled in with their route and dates, cheapest first. They get
+     the complete answer, the click is still ours, and we never have to
+     pretend our cache is exhaustive.
+
+     The date pair on the button, in priority order: the trip they are
+     looking at (the cheapest row on screen) → the dates they typed → the
+     first day in their window they said they'd leave on, at their minimum
+     trip length. Whichever it picks is PRINTED ON THE BUTTON, so it is
+     never a guess made behind their back.
+     -------------------------------------------------------------------- */
+  function buttonTrip(IDX, S, rows) {
+    if (rows && rows.length) return { c: rows[0].c, g: rows[0].g, rd: rows[0].rd };
+    if (S.dest === "*") return null;                 // no single route to search
+    const base = new Date(IDX.base + "T12:00");
+    const nights = S.lenOn ? S.lo : 7;
+    let g = null;
+    if (S.mode === "dates" && S.from) g = new Date(S.from + "T12:00");
+    else {
+      const span = Math.round((S.mo || 6) * 30.44);
+      for (let off = 2; off <= span; off++) {
+        const d = new Date(base); d.setDate(d.getDate() + off);
+        if (S.out.includes(d.getDay())) { g = d; break; }
+      }
+    }
+    if (!g) return null;
+    const rd = new Date(g); rd.setDate(rd.getDate() + nights);
+    return { c: S.dest, g: g, rd: rd };
+  }
+
+  function everyHTML(origin, IDX, t) {
+    const name = (IDX.names && IDX.names[t.c]) || CITY_NAMES[t.c] || t.c;
+    return '<a class="fall" href="' + affLink(origin, t) +
+      '" target="_blank" rel="sponsored noopener">' +
+      '<span class="fal1">SEE EVERY FLIGHT · ' + origin + ' → ' + name.toUpperCase() + '</span>' +
+      '<span class="fal2">' + fmtDate(t.g) + ' → ' + fmtDate(t.rd) +
+      ' · live search, cheapest first</span></a>';
   }
 
   /* S = {dest, mode:"window"|"dates", mo, from, to, lo, hi, out[], ret[],
@@ -805,12 +855,19 @@ window.Finder = (function () {
         : best.relaxed.length ? "NEAREST " + r.length + " · CHEAPEST FIRST"
         : total > r.length ? total + " TRIPS · TOP " + r.length + " CHEAPEST"
         : total + " TRIP" + (total > 1 ? "S" : "") + " · CHEAPEST FIRST";
-      rowsEl.innerHTML = r.length
+      /* The full departure list for a day is not something any fare cache
+         holds. Rather than imply ours does, every result set ends with a
+         real live search on the route and dates in front of the visitor.
+         Suppressed while a fresh pull is still in flight — offering the
+         escape hatch before our own answer lands would be premature. */
+      const trip = pulling ? null : buttonTrip(idx, S, r);
+      const every = trip ? everyHTML(S.orig, idx, trip) : "";
+      rowsEl.innerHTML = (r.length
         ? (best.relaxed.length ? relaxHTML(best.relaxed) : "") +
           r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("")
         : (pulling ? '<div class="fzero">Checking live fares for ' +
              ((idx.names && idx.names[S.dest]) || CITY_NAMES[S.dest] || S.dest) + "…</div>"
-                   : `<div class="fzero">${zeroHTML(idx, liveTried)}</div>`);
+                   : `<div class="fzero">${zeroHTML(idx, liveTried)}</div>`)) + every;
       if (opts.onState) opts.onState(S, r);
     }
 

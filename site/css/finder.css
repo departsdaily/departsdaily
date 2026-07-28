@@ -61,6 +61,14 @@
  text-decoration:none;background:var(--tile)}
 .gchip:hover{color:var(--amber)}
 .fzero{padding:36px 20px;text-align:center;color:var(--dim);font-size:14px;line-height:1.6}
+/* The live-search escape hatch under every result set. Deliberately reads as
+   an action, not as a fare row — it leaves our page. */
+.fall{display:block;padding:15px 18px;margin-top:2px;background:var(--tile);
+ border-top:2px solid var(--amber);text-decoration:none}
+.fall:hover{background:#1a1f27}
+.fal1{display:block;font-family:var(--disp);font-weight:700;font-size:14px;
+ letter-spacing:.06em;color:var(--amber)}
+.fal2{display:block;margin-top:4px;font-size:12px;color:var(--dim)}
 /* Sits above the results whenever the search had to be loosened to find any.
    Amber left edge so it reads as "we changed something", not as a result. */
 .frlx{padding:11px 14px;margin-bottom:2px;font-size:12.5px;line-height:1.5;color:var(--dim);
