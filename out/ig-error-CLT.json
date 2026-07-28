@@ -1,0 +1,21 @@
+{
+ "origin": "CLT",
+ "trail": [
+  {
+   "call": "me",
+   "params": {
+    "fields": "username",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "error": {
+     "message": "API access blocked.",
+     "type": "OAuthException",
+     "code": 200,
+     "fbtrace_id": "AhEUdyrUaqdbp_dIXLnFgRi"
+    }
+   },
+   "status": 400
+  }
+ ]
+}
