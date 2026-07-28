@@ -1,0 +1,78 @@
+{
+  "_doc": [
+    "Weekly Instagram posting plan (owner's rule, Jul 28 2026).",
+    "People dream on weekends and buy on weekdays, so we sell early in the week",
+    "and inspire late. This file is the ONLY place the plan lives. Retune it",
+    "after four weeks against real analytics; no code change needed.",
+    "",
+    "A 'shape' describes the TRIP we want the board to lean toward that day:",
+    "  nights     [min, max] round trip length in nights",
+    "  depart_in  [min, max] days from today the outbound leg may leave",
+    "It is a PREFERENCE, never a filter that costs a real deal. fetch_fares.py",
+    "picks a route's shape-matching fare when that fare still clears the 12%",
+    "bar, and otherwise falls back to the route's cheapest fare in the wide",
+    "window. The shape can change WHICH honest deal is shown. It can never",
+    "lower the bar, pad the board, or drop a route that had a genuine deal."
+  ],
+
+  "wide": { "nights": [2, 14], "depart_in": [3, 150] },
+
+  "shapes": {
+    "week": {
+      "nights": [6, 9],
+      "depart_in": [3, 150],
+      "cover": "WEEK LONG ESCAPES",
+      "angle": "A full week away, round trip, verified this morning."
+    },
+    "weekend": {
+      "nights": [2, 4],
+      "depart_in": [3, 90],
+      "cover": "WEEKEND GETAWAYS",
+      "angle": "Long weekend shaped. Out and back before you burn real vacation days."
+    },
+    "urgent": {
+      "nights": [2, 4],
+      "depart_in": [2, 21],
+      "cover": "GOING SOON",
+      "angle": "These leave inside three weeks. Short window, short trip, real prices."
+    },
+    "friday": {
+      "nights": [2, 9],
+      "depart_in": [3, 150],
+      "cover": "FRIDAY FARES",
+      "angle": "Expedia's 2026 Air Hacks Report puts Friday as the cheapest day of the week to book a flight, about 3% under Sunday, and the cheapest day to fly overall, up to 8% under a Sunday departure. Worth knowing: for US domestic routes specifically that report still has Tuesday as the cheapest day to actually fly, roughly 14% under Sunday."
+    },
+    "twoweek": {
+      "nights": [12, 16],
+      "depart_in": [14, 150],
+      "cover": "TWO WEEKS GONE",
+      "angle": "The big one. Honeymoon, anniversary, the trip you keep putting off."
+    }
+  },
+
+  "week": {
+    "0": { "shape": "week",     "note": "Monday. Peak booking day. The money post." },
+    "1": { "shape": "weekend",  "note": "Tuesday. Low stakes, easy yes." },
+    "2": { "shape": "weekend",  "note": "Wednesday. Same, different cities." },
+    "3": { "shape": "urgent",   "note": "Thursday. Weekend getaways with urgency." },
+    "4": { "shape": "friday",   "note": "Friday. Cheapest day to book and fly, per Expedia 2026." },
+    "5": { "shape": "weekend",  "content": "guide",
+           "note": "Saturday. PLAN: city guide carousel, build trust, do not sell. The guide renderer does not exist yet, so this still posts a normal board. Flip content to guide once it does." },
+    "6": { "shape": "week",     "content": "inspiration",
+           "note": "Sunday. PLAN: inspiration plus a Monday teaser. Renderer does not exist yet, so this still posts a normal board." }
+  },
+
+  "alternating": {
+    "_doc": "Every other Sunday the two week post replaces the usual Sunday content. Twice a month max, on purpose, so it stays special. Parity is on the ISO week number.",
+    "weekday": 6,
+    "when_iso_week_is": "even",
+    "shape": "twoweek"
+  },
+
+  "content_mix_target": {
+    "_doc": "Not enforced by code. Written down so drift is visible when you review analytics.",
+    "weekend": 0.6,
+    "week": 0.4,
+    "twoweek": "twice a month, maximum"
+  }
+}

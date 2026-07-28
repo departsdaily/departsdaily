@@ -8,7 +8,15 @@ behaves exactly as it did before the pipeline went multi-city."""
 import os, sys, json, datetime, urllib.request, urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import origins
+import origins, day_plan
+
+# WEEKLY PLAN (owner's rule, Jul 28 2026). Monday sells week long trips,
+# Tue/Wed sell weekends, Thursday sells urgency, Friday leans on Friday being
+# the cheapest day to book, and every other Sunday goes two weeks. The shape
+# steers WHICH honest fare each route contributes. It never lowers
+# MIN_DISCOUNT, never pads, and never drops a route that had a real deal —
+# see pick_offer() below. Config: config/schedule.json.
+PLAN = day_plan.plan()
 
 TP_TOKEN = os.environ["TP_TOKEN"]
 ORIGIN = origins.origin_code()
@@ -90,6 +98,25 @@ def cheapest(dest):
     out.sort(key=lambda o: o.get("price") or 1e9)
     return out
 
+def pick_offer(offers, nights, depart_in):
+    """Cheapest offer whose trip length and departure date fit a window.
+
+    `offers` is already price-sorted, so the first match is the cheapest match.
+    Returns None when nothing in the list fits.
+    """
+    n_lo, n_hi = nights
+    d_lo, d_hi = depart_in
+    for cand in offers:
+        try:
+            dd = datetime.date.fromisoformat(cand["departure_at"][:10])
+            rr = datetime.date.fromisoformat((cand.get("return_at") or "")[:10])
+        except ValueError:
+            continue
+        if d_lo <= (dd - today).days <= d_hi and n_lo <= (rr - dd).days <= n_hi:
+            return cand
+    return None
+
+
 hist = json.load(open(HISTORY_FILE)) if os.path.exists(HISTORY_FILE) else {}
 recent = {d for d, ts in hist.items()
           if (today - datetime.date.fromisoformat(ts)).days < NO_REPEAT_DAYS}
@@ -112,37 +139,52 @@ for code in ROUTES:
     if not offers:
         scan[code] = {"outcome": "no fares", "why": "the fare cache returned nothing"}
         continue
-    # sanity filter: leaves 3-150 days out, sensible 2-14 day round trip.
-    # WIDER NET (Jul 28 2026): departure window 90->150 days and trip length
-    # 9->14 nights. offers are price-sorted, so this only ever admits a CHEAPER
-    # real fare that the tighter window was discarding — it lifts the discount,
-    # never lowers the bar — recovering routes that had fares but "none in window".
-    o = None
-    for cand in offers:
-        try:
-            dd = datetime.date.fromisoformat(cand["departure_at"][:10])
-            rr = datetime.date.fromisoformat((cand.get("return_at") or "")[:10])
-        except ValueError:
-            continue
-        if 3 <= (dd - today).days <= 150 and 2 <= (rr - dd).days <= 14:
-            o = cand; break
-    if o is None:
+    # Two candidates per route, both real fares from the same price-sorted list:
+    #   shaped — cheapest fare matching TODAY'S trip shape (Monday wants a week,
+    #            Tuesday wants a long weekend, and so on)
+    #   wide   — cheapest fare in the broad sanity window (2-14 nights, leaving
+    #            3-150 days out), which is exactly what the board used before
+    #            the weekly plan existed
+    # We show the shaped fare when it still clears the 12% bar. If it doesn't,
+    # we fall back to the wide fare. So the plan can change WHICH honest deal
+    # appears, but a route that had a genuine deal can never lose its place
+    # because of what day of the week it is.
+    shaped = pick_offer(offers, PLAN["nights"], PLAN["depart_in"])
+    wide = pick_offer(offers, PLAN["wide"]["nights"], PLAN["wide"]["depart_in"])
+    if shaped is None and wide is None:
+        n0, n1 = PLAN["wide"]["nights"]
+        d0, d1 = PLAN["wide"]["depart_in"]
         scan[code] = {"outcome": "no fares in window",
-                      "why": f"{len(offers)} offers, none leaving 3-150 days out "
-                             f"for a 2-14 night trip"}
+                      "why": f"{len(offers)} offers, none leaving {d0}-{d1} days out "
+                             f"for a {n0}-{n1} night trip"}
         continue
-    price = round(o["price"])
-    dep = datetime.date.fromisoformat(o["departure_at"][:10])
-    base = ROUTES[code]["m"][dep.month - 1]
-    disc = 1 - price / base
+
+    def score(cand):
+        p = round(cand["price"])
+        dp = datetime.date.fromisoformat(cand["departure_at"][:10])
+        b = ROUTES[code]["m"][dp.month - 1]
+        return p, dp, b, 1 - p / b
+
+    on_shape = False
+    if shaped is not None and score(shaped)[3] >= MIN_DISCOUNT:
+        o, on_shape = shaped, True
+    elif wide is not None:
+        o = wide
+    else:
+        o, on_shape = shaped, True
+    price, dep, base, disc = score(o)
+    ret = (o.get("return_at") or "")[:10]
+    nights = (datetime.date.fromisoformat(ret) - dep).days if ret else None
     row = {"to": code, "city": ROUTES[code]["city"], "price": price,
-           "d1": o["departure_at"][:10], "d2": (o.get("return_at") or "")[:10],
+           "d1": o["departure_at"][:10], "d2": ret,
            "airline": o.get("airline", ""), "stops": o.get("transfers", 0),
            "baseline": base, "disc": round(disc * 100),
+           "nights": nights, "on_shape": on_shape,
            "link": "https://www.aviasales.com" + (o.get("link") or "") + "&marker=755800"}
     scan[code] = {"outcome": "qualified" if disc >= MIN_DISCOUNT else "not a deal",
                   "price": price, "typical": base, "disc_pct": round(disc * 100),
-                  "d1": row["d1"], "d2": row["d2"]}
+                  "d1": row["d1"], "d2": row["d2"],
+                  "nights": nights, "on_shape": on_shape}
     (deals if disc >= MIN_DISCOUNT else skips).append(row)
 
 deals.sort(key=lambda x: -x["disc"])
@@ -153,7 +195,11 @@ for d in deals:
 # exist solely in the scan diagnostics — never on the board.
 board = {"date": today.isoformat(), "origin": ORIGIN,
          "deals": deals[:BOARD_MAX], "n_deals": len(deals[:BOARD_MAX]),
-         "skip": None}
+         "skip": None,
+         "plan": {"shape": PLAN["shape"], "cover": PLAN["cover"],
+                  "angle": PLAN["angle"], "content": PLAN["content"],
+                  "nights": list(PLAN["nights"]),
+                  "on_shape": sum(1 for d in deals[:BOARD_MAX] if d.get("on_shape"))}}
 os.makedirs("out", exist_ok=True)
 counts = {}
 for v in scan.values():
@@ -162,6 +208,9 @@ json.dump({"date": today.isoformat(), "origin": ORIGIN,
            "routes_considered": len(ROUTES), "min_discount_pct": MIN_DISCOUNT * 100,
            "summary": counts, "routes": scan},
           open(f"out/scan-{ORIGIN}.json", "w"), indent=1)
+print(f"{ORIGIN} plan: {PLAN['weekday']} -> {PLAN['shape']} "
+      f"({PLAN['nights'][0]}-{PLAN['nights'][1]} nights, leaving "
+      f"{PLAN['depart_in'][0]}-{PLAN['depart_in'][1]} days out) — {PLAN['note']}")
 print(f"{ORIGIN} scan:", counts)
 for c, v in sorted(scan.items(), key=lambda kv: kv[1].get("disc_pct", -999), reverse=True):
     print(f"  {c:4} {v['outcome']:18}", v.get("why") or

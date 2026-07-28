@@ -88,7 +88,11 @@ n=len(DEALS)
 
 for pi,rows in enumerate(pages,1):
     img,d=canvas(); header(d,ORG["airport"],DATE)
-    left="TODAY'S DEAL BOARD · ROUND TRIP" if pi==1 else f"MORE DEALS · {pi} OF {len(pages)}"
+    # The weekly plan (config/schedule.json) names what today's board is for:
+    # week long trips on Monday, weekend getaways midweek, and so on. Older
+    # deals.json files have no "plan" key, so the original line is the default.
+    _cover=(B.get("plan") or {}).get("cover") or "TODAY'S DEAL BOARD"
+    left=f"{_cover} · ROUND TRIP" if pi==1 else f"MORE DEALS · {pi} OF {len(pages)}"
     d.text((60,146),left,font=MONO(26),fill=SKY)
     badge=f"{n} VERIFIED DEAL{'S' if n!=1 else ''}"
     bf=MONO(26)

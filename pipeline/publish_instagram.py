@@ -104,26 +104,41 @@ date_h = datetime.date.fromisoformat(B["date"]).strftime("%a, %b %d").upper()
 def line(d):
     """Deals earned their % claim; fillers are labelled as what they are —
     the best verified fare we found today, not a deal."""
+    n = d.get("nights")
+    stay = " · {} night{}".format(n, "" if n == 1 else "s") if n else ""
     if d.get("deal", True):
-        return "{} {} — ${} round trip ({}% below typical)".format(
-            EMOJI.get(d["to"], "✈️"), d["city"], d["price"], d["disc"])
+        return "{} {} — ${} round trip{} ({}% below typical)".format(
+            EMOJI.get(d["to"], "✈️"), d["city"], d["price"], stay, d["disc"])
     return "{} {} — ${} round trip (best fare we found today)".format(
         EMOJI.get(d["to"], "✈️"), d["city"], d["price"])
 
-cap = "✈️ {} — today's verified board · {}\n\n".format(ORG["caption_lead"], date_h)
+# Today's angle comes from the weekly plan (config/schedule.json) via
+# deals.json. Older boards have no "plan" key and fall back to the original
+# generic lead, so a replayed run can never crash on a missing key.
+PLAN = B.get("plan") or {}
+HEAD = PLAN.get("cover") or "today's verified board"
+
+cap = "✈️ {} — {} · {}\n\n".format(ORG["caption_lead"], HEAD.lower(), date_h)
 cap += "\n".join(line(d) for d in B["deals"])
+if PLAN.get("angle"):
+    cap += "\n\n" + PLAN["angle"]
 cap += ("\n\n📅 Exact dates on every slide"
         "\n✅ Every fare verified before posting — fares move fast and aren't guaranteed"
-        "\n🎯 Flexible dates? Tell the Fare Finder your trip shape — leave Friday,"
-        " back Monday, anytime in the next 3 months, under $200 — and it finds the"
-        " cheapest fare that fits. On departsdaily.com"
+        "\n🔎 Want different dates? Search every flight out of {} from the button"
+        " on departsdaily.com"
         "\n🔗 Booking links in bio"
-        "\n🌅 New board every morning at 7AM\n\n")
+        "\n🌅 New board every morning at 7AM\n\n").format(ORIGIN)
 
 tags = list(ORG["hashtags"]) + [
         "#CheapFlights", "#FlightDeals", "#FlightDeal", "#TravelDeals",
         "#AirfareDeals", "#BudgetTravel", "#CheapTravel", "#TravelHacks",
-        "#VacationDeals", "#WeekendTrip", "#Travel", "#TravelGram", "#Wanderlust"]
+        "#VacationDeals", "#Travel", "#TravelGram", "#Wanderlust"]
+tags += {"weekend":  ["#WeekendTrip", "#WeekendGetaway", "#LongWeekend"],
+         "urgent":   ["#WeekendTrip", "#LastMinuteTravel", "#SpontaneousTravel"],
+         "week":     ["#WeekLongTrip", "#VacationMode", "#TripPlanning"],
+         "friday":   ["#WeekendTrip", "#FlyFriday", "#TravelTips"],
+         "twoweek":  ["#TripOfALifetime", "#Honeymoon", "#BigTrip"],
+         }.get(PLAN.get("shape"), ["#WeekendTrip"])
 for d in B["deals"]:
     t = "#" + "".join(c for c in d["city"] if c.isalnum())
     if t not in tags:
