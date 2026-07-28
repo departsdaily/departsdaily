@@ -28,14 +28,24 @@ jobs:
 
       - name: Check
         env:
-          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          # The token is looked up by the origin's own token_secret, not
+          # hardcoded — checking ATL while reading CLT's token would report a
+          # healthy account that has nothing to do with the one being launched.
+          ALL_SECRETS: ${{ toJSON(secrets) }}
           ORIGIN: ${{ github.event.inputs.origin || 'CLT' }}
         run: |
           python - <<'PY'
-          import json, os, urllib.request, urllib.parse, urllib.error
+          import json, os, sys, urllib.request, urllib.parse, urllib.error
           G = "https://graph.instagram.com/v21.0"
-          tok = os.environ["IG_TOKEN"]
-          origin = os.environ["ORIGIN"]
+          origin = os.environ["ORIGIN"].strip().upper()
+
+          cfg = json.load(open("config/origins.json"))
+          if origin not in cfg:
+              sys.exit(f"FATAL: {origin} is not in config/origins.json")
+          name = cfg[origin]["token_secret"]
+          tok = (json.loads(os.environ["ALL_SECRETS"]).get(name) or "").strip()
+          if not tok:
+              sys.exit(f"FATAL: {origin} has no {name} repo secret yet.")
 
           def call(path, **p):
               p["access_token"] = tok
@@ -54,6 +64,8 @@ jobs:
                   return {"ok": False, "error": type(e).__name__ + ": " + str(e)}
 
           out = {"origin": origin,
+                 "secret": name,
+                 "expected_handle": cfg[origin]["handle"],
                  "token_len": len(tok),
                  "me": call("me", fields="id,username,account_type"),
                  "recent": call("me/media",

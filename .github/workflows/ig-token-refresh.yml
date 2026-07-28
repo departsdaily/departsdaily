@@ -1,8 +1,13 @@
 name: IG token keep-alive
 
-# Instagram access tokens expire after 60 days. This refreshes the token on
-# the 1st and 15th of every month and writes the new one back into the
-# IG_TOKEN repo secret, so the morning post never dies of an expired key.
+# Instagram access tokens expire after 60 days. This refreshes them on the 1st
+# and 15th of every month and writes each new one back into its own repo secret,
+# so no city's morning post ever dies of an expired key.
+#
+# Multi-city rule: it refreshes EVERY origin in config/origins.json whose
+# token_secret exists as a repo secret — deliberately NOT just the ig_enabled
+# ones. A token added ahead of launch (ATL sits like this) would otherwise go
+# 60 days without a refresh and be dead on the day it was switched on.
 on:
   schedule:
     - cron: "0 5 1,15 * *"
@@ -12,32 +17,78 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Refresh token and update secret
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Refresh every live token and update its secret
         env:
-          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          # Secret values are masked in logs by the runner. This is the only way
+          # to look up a secret whose NAME comes from a config file.
+          ALL_SECRETS: ${{ toJSON(secrets) }}
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           pip install -q pynacl requests
           python3 - <<'EOF'
-          import os, json, requests
+          import os, json, sys, requests
           from base64 import b64encode
           from nacl import public, encoding
 
-          old = os.environ["IG_TOKEN"]
-          r = requests.get("https://graph.instagram.com/refresh_access_token",
-                           params={"grant_type": "ig_refresh_token", "access_token": old}, timeout=30)
-          r.raise_for_status()
-          new = r.json()["access_token"]
-          print("Got refreshed token, expires_in:", r.json().get("expires_in"))
-
+          secrets = json.loads(os.environ["ALL_SECRETS"])
+          cfg = json.load(open("config/origins.json"))
+          repo = "departsdaily/departsdaily"
           H = {"Authorization": "Bearer " + os.environ["GH_PAT"],
                "Accept": "application/vnd.github+json"}
-          repo = "departsdaily/departsdaily"
-          k = requests.get(f"https://api.github.com/repos/{repo}/actions/secrets/public-key", headers=H, timeout=30).json()
-          pk = public.PublicKey(k["key"].encode(), encoding.Base64Encoder())
-          enc = b64encode(public.SealedBox(pk).encrypt(new.encode())).decode()
-          u = requests.put(f"https://api.github.com/repos/{repo}/actions/secrets/IG_TOKEN", headers=H,
-                           json={"encrypted_value": enc, "key_id": k["key_id"]}, timeout=30)
-          u.raise_for_status()
-          print("IG_TOKEN secret updated:", u.status_code)
+
+          key = requests.get(
+              f"https://api.github.com/repos/{repo}/actions/secrets/public-key",
+              headers=H, timeout=30)
+          key.raise_for_status()
+          key = key.json()
+          pk = public.PublicKey(key["key"].encode(), encoding.Base64Encoder())
+
+          summary, failed = [], []
+          for code, o in cfg.items():
+              if code.startswith("_") or not isinstance(o, dict):
+                  continue
+              name = o.get("token_secret")
+              tok = (secrets.get(name) or "").strip() if name else ""
+              if not tok:
+                  summary.append(f"- {code}: no {name} secret yet, skipped")
+                  continue
+              try:
+                  r = requests.get(
+                      "https://graph.instagram.com/refresh_access_token",
+                      params={"grant_type": "ig_refresh_token",
+                              "access_token": tok}, timeout=30)
+                  r.raise_for_status()
+                  new = r.json()["access_token"]
+                  days = int(r.json().get("expires_in", 0)) // 86400
+              except Exception as e:
+                  # One bad token must not stop the other cities refreshing.
+                  detail = getattr(getattr(e, "response", None), "text", "")[:300]
+                  summary.append(f"- {code}: REFRESH FAILED — {e} {detail}")
+                  failed.append(code)
+                  continue
+
+              enc = b64encode(public.SealedBox(pk).encrypt(new.encode())).decode()
+              u = requests.put(
+                  f"https://api.github.com/repos/{repo}/actions/secrets/{name}",
+                  headers=H,
+                  json={"encrypted_value": enc, "key_id": key["key_id"]},
+                  timeout=30)
+              if u.status_code >= 300:
+                  summary.append(f"- {code}: refreshed but SECRET WRITE FAILED "
+                                 f"({u.status_code}) {u.text[:200]}")
+                  failed.append(code)
+                  continue
+              summary.append(f"- {code}: {name} refreshed, good for ~{days} days")
+
+          body = "## IG token keep-alive\n" + "\n".join(summary) + "\n"
+          print(body)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as fh:
+              fh.write(body)
+          if failed:
+              print("::error::token refresh failed for: " + ", ".join(failed))
+              sys.exit(1)
           EOF
