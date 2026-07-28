@@ -866,6 +866,20 @@ window.Finder = (function () {
         has_arrivals: IDX.has_arrivals !== false || L.has_arrivals });
     }
 
+    /* Said out loud, before the results, when a route is thin. The number is
+       the real count of cached trips we hold for that city — no rounding, no
+       softening. A visitor who reads this and clicks through is better served
+       than one who reads a short list and assumes those are all the flights
+       that exist. */
+    function thinHTML(idx, held) {
+      const name = (idx.names && idx.names[S.dest]) || CITY_NAMES[S.dest] || S.dest;
+      const n = held === 1 ? "one cached fare" : held + " cached fares";
+      return '<div class="fthin"><b>We only hold ' + n + ' for ' + name + ' right now.</b> ' +
+        'Our list is a snapshot of fares people have recently searched — not ' + name +
+        "'s flight schedule. There are more flights than this, most likely a lot more. " +
+        'The live search below pulls the full list for your dates.</div>';
+    }
+
     /* Say what we loosened, in the visitor's words, above the results. */
     function relaxHTML(list) {
       const t = list.length < 2 ? list[0]
@@ -937,12 +951,29 @@ window.Finder = (function () {
          escape hatch before our own answer lands would be premature. */
       const trip = pulling ? null : buttonTrip(idx, S, r);
       const every = trip ? everyHTML(S.orig, idx, trip) : "";
+
+      /* THIN ROUTE. Some routes are almost empty in the fare cache — CLT to
+         Cancún holds two fares total, for a beach city with flights most days
+         of the week. Showing one lonely row and saying nothing invites the
+         only reasonable conclusion a visitor can draw, which is that our
+         search is broken. So when a specific route comes back thin, the page
+         says how little we hold, says plainly that it is our snapshot and not
+         the airline's schedule, and puts the live search FIRST instead of at
+         the bottom of a list of one. */
+      const di2 = S.dest === "*" ? -1 : idx.dests.indexOf(S.dest);
+      const held = di2 < 0 ? 0 : idx.rows.filter(rr => rr[0] === di2).length;
+      const thin = !pulling && S.dest !== "*" && r.length &&
+                   (held <= 4 || r.length <= 2 || best.relaxed.length);
+      const thinMsg = thin ? thinHTML(idx, held) : "";
+
       rowsEl.innerHTML = (r.length
-        ? (best.relaxed.length ? relaxHTML(best.relaxed) : "") +
-          r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("")
+        ? thinMsg + (thin ? every : "") +
+          (best.relaxed.length ? relaxHTML(best.relaxed) : "") +
+          r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("") +
+          (thin ? "" : every)
         : (pulling ? '<div class="fzero">Checking live fares for ' +
              ((idx.names && idx.names[S.dest]) || CITY_NAMES[S.dest] || S.dest) + "…</div>"
-                   : `<div class="fzero">${zeroHTML(idx, liveTried)}</div>`)) + every;
+                   : `<div class="fzero">${zeroHTML(idx, liveTried)}</div>`) + every);
       if (opts.onState) opts.onState(S, r);
     }
 

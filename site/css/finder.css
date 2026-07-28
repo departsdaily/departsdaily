@@ -69,6 +69,12 @@
 .fal1{display:block;font-family:var(--disp);font-weight:700;font-size:14px;
  letter-spacing:.06em;color:var(--amber)}
 .fal2{display:block;margin-top:4px;font-size:12px;color:var(--dim)}
+/* Shown before the results when the cache is nearly empty for that route.
+   Sky-blue edge, distinct from the amber "we loosened your filters" note —
+   this one is about our data, not about your search. */
+.fthin{padding:13px 15px;margin-bottom:2px;font-size:12.5px;line-height:1.55;color:var(--dim);
+ background:var(--tile);border-left:3px solid var(--sky)}
+.fthin b{color:var(--white)}
 /* Sits above the results whenever the search had to be loosened to find any.
    Amber left edge so it reads as "we changed something", not as a result. */
 .frlx{padding:11px 14px;margin-bottom:2px;font-size:12.5px;line-height:1.5;color:var(--dim);
