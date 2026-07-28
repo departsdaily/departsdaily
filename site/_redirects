@@ -1,1 +1,6 @@
-/finder.html /search.html 301
+#/finder.html /search.html 301
+
+# Fare Finder archived Jul 28 2026 (see FARE-FINDER-ARCHIVE.md). Both old
+# entry points land on the board, which now carries the big search link.
+/finder.html   /   301
+/search.html   /   301

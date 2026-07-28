@@ -439,6 +439,19 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 .row .gbtn{position:relative;z-index:2}
 @media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
 
+
+/* BIG SEARCH — the one flight search on the site now that the Fare Finder is
+   archived. Deliberately loud: on thin routes this is a better answer than
+   anything our own cache could return, and the click is tracked. */
+.bigsearch{display:block;margin:22px 0 0;padding:26px 28px;border:2px solid var(--amber);
+  border-radius:16px;background:linear-gradient(180deg,#16294a,var(--panel));text-decoration:none;
+  transition:transform .12s ease,box-shadow .12s ease}
+.bigsearch:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,183,3,.18)}
+.bigsearch .bsk{display:block;font:700 15px/1 "IBM Plex Mono",monospace;letter-spacing:2px;color:var(--sky)}
+.bigsearch .bst{display:block;margin-top:10px;font:700 40px/1.05 "Barlow Condensed",sans-serif;
+  letter-spacing:1px;color:var(--amber);text-transform:uppercase}
+.bigsearch .bsd{display:block;margin-top:12px;max-width:66ch;font-size:15px;line-height:1.5;color:var(--dim)}
+@media(max-width:560px){.bigsearch{padding:20px}.bigsearch .bst{font-size:29px}}
 </style>
 <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false" data-no-defer="1">
   (function () {
@@ -466,7 +479,6 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
   <nav class="hnav" aria-label="Site">
     <a href="#guides">CITY GUIDES</a>
     <a href="book.html">BOOKING DESK</a>
-    <a href="finder.html">FARE FINDER</a>
     <a href="gear.html">GEAR</a>
     <a href="disclosure.html">DISCLOSURE</a>
   </nav>
@@ -480,11 +492,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
   <p class="sub">Every fare below is compared against its route's typical price, so you know a deal is actually a deal. Tapping a row runs a <b style="color:var(--white)">live search</b> for those exact dates — the price you book is always today's price, never a cached one.</p>
 </div>
 
-<div class="tabs" role="tablist" aria-label="Board or search">
-  <button class="tab" id="tabBoard" role="tab" aria-selected="true" aria-controls="paneBoard">DEAL BOARD</button>
-  <button class="tab" id="tabFind" role="tab" aria-selected="false" aria-controls="paneFind">FARE FINDER</button>
-</div>
-<div id="paneBoard" role="tabpanel" aria-labelledby="tabBoard">
+<div id="paneBoard">
 <div class="citybar" id="citybar" role="tablist" aria-label="Choose your airport"></div>
 
 <div class="board">
@@ -492,6 +500,15 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
   <div id="rows"></div>
   <div class="bfoot">Every fare was verified at the board's last update (shown above). Tapping a row opens a <b style="color:var(--white)">live search for those exact dates</b> — so what you book is today's real price. Deals expire off this board automatically; if a fare jumped since our check, the live search shows you the current best. Averages based on typical route pricing. Some links are affiliate links — we may earn a commission at no cost to you. <a href="disclosure.html">Details</a>.</div>
 </div>
+
+
+<a class="bigsearch" id="bigSearch" target="_blank" rel="sponsored noopener">
+  <span class="bsk">■ DON'T SEE YOUR TRIP ON THE BOARD?</span>
+  <span class="bst">Search every flight from <span id="bsCity">CLT</span> &rsaquo;</span>
+  <span class="bsd">A full live search across hundreds of airlines and booking sites. Any dates,
+  any destination, sorted cheapest first. We may earn a commission if you book, at no extra cost
+  to you &mdash; the price at checkout is the only price.</span>
+</a>
 
 <!-- weekly board removed; the daily board rotates instead -->
 
@@ -523,18 +540,6 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
      Full list at /guides.html -->
 
 
-</div>
-<div id="paneFind" role="tabpanel" aria-labelledby="tabFind" hidden>
-
-<section id="finder">
-  <h2>Search <span class="amber">your</span> trip</h2>
-  <p class="sub">The board is today's best. This searches every fare we have — set the shape of the
-  trip and we'll find the cheapest that fits.</p>
-  <div class="fwrap"></div>
-  <div class="board"><div class="bhead"><span data-count>SEARCHING…</span><span data-src></span></div>
-    <div data-rows></div></div>
-  <p class="sub" style="margin-top:10px"><a href="search.html">Open the full Fare Finder page →</a></p>
-</section>
 </div>
 
 <section id="rest">
@@ -631,9 +636,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 /* FRESH PULL endpoint — set to the deployed Cloudflare Worker base URL
    (e.g. "https://departsdaily-fares.<account>.workers.dev") to enable the
    live re-query toggle on the Fare Finder. Empty = toggle hidden. */
-window.DD_LIVE_URL="https://departsdaily-fares.jmmcle95.workers.dev";
 </script>
-<script src="js/finder.js"></script>
 <script>
 const CITIES=[
  {code:"CLT",name:"CHARLOTTE (CLT)",live:true},
@@ -785,6 +788,9 @@ function rowHTML(code,x){
 
 function renderCity(code){
   curOrigin=code;
+  /* Before any early return — a city with no board yet still needs the
+     search link, and that is exactly when a visitor most wants it. */
+  setBigSearch(code);
   document.getElementById("heroCity").textContent=code;
   const c=CITIES.find(x=>x.code===code);
   document.getElementById("boardCity").textContent=c.name;
@@ -795,6 +801,20 @@ function renderCity(code){
   const deals=liveDeals(DEALS[code]);
   if(!deals.length){rows.innerHTML=`<div class="empty">Today's deals have expired — the board refreshes every hour.<br>Get on the email list below so tomorrow's fares land in your inbox.</div>`;return;}
   rows.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
+}
+
+/* The one flight-search link on the site. Reads the marker off BOTH spellings
+   because `const AFF` in a classic script never lands on window — that exact
+   trap silently unmonetized every Fare Finder click for weeks (see
+   FARE-FINDER-ARCHIVE.md). An untracked click here fails silently too. */
+function setBigSearch(code){
+  var mk="";
+  try{ mk=(window.AFF&&window.AFF.tpMarker)||(typeof AFF!=="undefined"&&AFF.tpMarker)||""; }catch(e){}
+  var a=document.getElementById("bigSearch");
+  var c=document.getElementById("bsCity");
+  if(c) c.textContent=code;
+  if(a) a.href="https://www.aviasales.com/?origin_iata="+encodeURIComponent(code)+
+                (mk?"&marker="+encodeURIComponent(mk):"");
 }
 
 document.getElementById("citybar").innerHTML=CITIES.map(c=>
@@ -828,7 +848,7 @@ function renderChart(code){
   document.querySelectorAll("#routesel .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rt===code));
 }
 /* Full airport names, so the top-30 claim on the page names a city rather
-   than a code. Mirrors ORIGIN_NAMES in js/finder.js. */
+   than a code. */
 const ORIGIN_FULL={CLT:"Charlotte",ATL:"Atlanta",ORD:"Chicago",DFW:"Dallas",DEN:"Denver",
  LAX:"Los Angeles",JFK:"New York",MIA:"Miami",SEA:"Seattle",BOS:"Boston",LAS:"Las Vegas",MCO:"Orlando"};
 function renderRoutes(origin){
@@ -886,26 +906,6 @@ wireForm("signupform",'<p style="color:var(--green)">You are on the list. ✈</p
 /* Initial render — after all sections above are defined */
 renderCity("CLT");
 
-/* Fare Finder tab. All filter UI and logic live in js/finder.js so this tab
-   and /search.html cannot drift apart. */
-(function(){
-  if(!window.Finder) return;
-  var pane=document.getElementById("paneFind");
-  var app=Finder.mount(pane,{origin:(window.curOrigin||"CLT")});
-  window.addEventListener("dd:city",function(e){app.boot(e.detail)});
-  var tb=document.getElementById("tabBoard"), tf=document.getElementById("tabFind");
-  var pb=document.getElementById("paneBoard"), pf=document.getElementById("paneFind");
-  function show(which){
-    var board=which==="board";
-    pb.hidden=!board; pf.hidden=board;
-    tb.setAttribute("aria-selected",String(board));
-    tf.setAttribute("aria-selected",String(!board));
-    history.replaceState(null,"",board?location.pathname:"#search");
-  }
-  tb.addEventListener("click",function(){show("board")});
-  tf.addEventListener("click",function(){show("find")});
-  if(location.hash==="#search") show("find");
-})();
 
 /* Booking strip through the affiliate engine. */
 (function(){
