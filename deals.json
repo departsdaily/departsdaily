@@ -1,30 +1,34 @@
 {
- "date": "2026-07-27",
+ "date": "2026-07-28",
  "origin": "CLT",
  "deals": [
   {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 201,
-   "d1": "2026-08-07",
-   "d2": "2026-08-09",
-   "airline": "F9",
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 336,
+   "d1": "2026-07-31",
+   "d2": "2026-08-02",
+   "airline": "UA",
    "stops": 1,
-   "baseline": 296,
-   "disc": 32,
-   "link": "https://www.aviasales.com/search/CLT0708AUS09081?t=F917861402401786215480001314CLTDENAUS17863045801786396740001476AUSDENCLT_ec43d6b579d859a6a6b50836fd4f68f5_15667&search_date=26072026&expected_price_uuid=019fa02e-64b1-8040-6b4f-0ed6e41e7549&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=p-HYULSjloZbJnwCN8iU3g&expected_price_source=share&expected_price_currency=usd&expected_price=201&marker=755800"
+   "baseline": 454,
+   "disc": 26,
+   "link": "https://www.aviasales.com/search/CLT3107SFO02081?t=UA17854817401785497700000446CLTIAHSFO17856315001785668520000437SFOIAHCLT_8e42ddeceb4d1c088378a29d2c4eff24_26198&search_date=27072026&expected_price_uuid=019fa58a-d570-8040-6e58-85d9ed73aeb8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2xMSnIaoI_IHXBRoY1u7sQ&expected_price_source=share&expected_price_currency=usd&expected_price=336&marker=755800",
+   "deal": true
+  },
+  {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 223,
+   "d1": "2026-08-19",
+   "d2": "2026-08-22",
+   "airline": "F9",
+   "stops": 0,
+   "baseline": 262,
+   "disc": 15,
+   "link": "https://www.aviasales.com/search/CLT1908DEN22081?t=F917871600601787166960000235CLTDEN17873964001787415960000206DENCLT_0f5586df7a362a3d67a4b30c04b187ff_17428&search_date=27072026&expected_price_uuid=019fa5f3-c116-8040-a856-cb50827ae1b1&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=jEt_a1IvsDVJGSozvsuGDQ&expected_price_source=share&expected_price_currency=usd&expected_price=223&marker=755800",
+   "deal": true
   }
  ],
- "skip": {
-  "to": "BOS",
-  "city": "Boston",
-  "price": 376,
-  "d1": "2026-08-14",
-  "d2": "2026-08-16",
-  "airline": "F9",
-  "stops": 1,
-  "baseline": 237,
-  "disc": -59,
-  "link": "https://www.aviasales.com/search/CLT1408BOS16081?t=F917867152801786784940001161CLTMCOBOS17868746401786953060001307BOSMCOCLT_371596d050ca2347409bf2c6b8b37d30_29544&search_date=20072026&expected_price_uuid=019f81e8-f058-8040-239e-2d0d48ac35c8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=uLX6dgy1nL2iXFQ8sFZOlw&expected_price_source=share&expected_price_currency=usd&expected_price=376&marker=755800"
- }
+ "n_deals": 2,
+ "skip": null
 }
