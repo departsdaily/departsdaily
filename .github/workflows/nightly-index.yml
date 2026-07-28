@@ -3,14 +3,19 @@ name: Nightly fare index
 # Rebuilds the Fare Finder index for every pre-built origin.
 # Runs at 03:10 ET. Fares this far out do not move hour to hour, so nightly
 # is plenty — and it keeps us far inside every rate limit and free tier.
+# DISABLED July 28 2026. The Fare Finder was the only consumer of these index
+# files and it has been archived (see FARE-FINDER-ARCHIVE.md), so this job was
+# spending ~6-9k Travelpayouts calls a night to feed nothing. The schedule and
+# the push trigger are commented out rather than deleted: restoring the Finder
+# means uncommenting five lines, not rewriting a workflow.
+#
+# Still runnable by hand from the Actions tab if the index is ever needed.
 on:
-  schedule:
-    - cron: "10 7 * * *"      # 03:10 EDT / 02:10 EST
-  # A push that changes the builder rebuilds CLT only — quick proof the
-  # builder still works before the next full nightly run.
-  push:
-    branches: [main]
-    paths: [scripts/build_index.py, .github/workflows/nightly-index.yml]
+#  schedule:
+#    - cron: "10 7 * * *"      # 03:10 EDT / 02:10 EST
+#  push:
+#    branches: [main]
+#    paths: [scripts/build_index.py, .github/workflows/nightly-index.yml]
   workflow_dispatch:
     inputs:
       origins:

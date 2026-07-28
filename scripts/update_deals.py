@@ -15,13 +15,41 @@ Design rules (match the site's honesty guarantees):
 
 Usage:  TP_TOKEN=... python scripts/update_deals.py site/js/deals-data.js
 """
-import json, os, sys, time, urllib.request, urllib.error
+import json, os, re, sys, time, urllib.request, urllib.error
 from datetime import datetime, timedelta, date
 from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
-ORIGIN = "CLT"
 TOKEN = os.environ.get("TP_TOKEN", "")
+
+# Every origin we hold a defensible baseline for. Boards are generated for all
+# of them in one run and written into a single DEALS object keyed by origin.
+# Override with ORIGINS=CLT,ATL to rebuild a subset by hand.
+ALL_ORIGINS = ["CLT", "ATL", "ORD", "DFW", "DEN", "LAX", "JFK", "MIA", "SEA", "BOS"]
+ORIGINS = [o.strip().upper() for o in
+           (os.environ.get("ORIGINS") or ",".join(ALL_ORIGINS)).split(",") if o.strip()]
+ORIGIN = ORIGINS[0]   # kept for log lines and any single-origin caller
+
+# Baselines come from config/seasonality.json — the SAME file the Instagram
+# pipeline seeds its curves from, so the site board and the IG board can never
+# disagree about what "typical" means on a route.
+#   dot_round_trip[origin][dest]  = DOT Consumer Airfare Report Table 6 city-pair
+#                                   average, each-way doubled to round trip
+#   intl_estimate_round_trip[dest] = labelled estimate (DOT covers contiguous
+#                                    states only, so no city-pair data exists)
+_CFG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "seasonality.json")
+with open(_CFG, encoding="utf-8") as _fh:
+    _SEAS = json.load(_fh)
+DOT_AVG  = _SEAS["dot_round_trip"]
+INTL_AVG = _SEAS["intl_estimate_round_trip"]
+
+def avg_for(origin, dest):
+    """Annual round-trip average for THIS origin. None means no defensible
+    baseline, which means no percentage claim — the board shows HOT FARE."""
+    o = DOT_AVG.get(origin.upper(), {})
+    if dest in o:
+        return o[dest]
+    return INTL_AVG.get(dest)
 
 # ---------------------------------------------------------------------------
 # DESTINATION CATALOG. One entry per city we can track from anywhere.
@@ -63,22 +91,15 @@ ROUTES = {
 # the Fare Finder, because the nightly index is built per origin against that
 # origin's own list.
 # ---------------------------------------------------------------------------
-ORIGIN_DESTS = {
- "CLT": ["NYC","BOS","MIA","FLL","DCA","ORD","DFW","MCO","LAX","DEN",
-         "PHL","HOU","LAS","PHX","TPA","BNA","MSY","SFO","SEA","AUS",
-         "CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM"],
- # Atlanta is the next board to open (see site-notes). Delta's hub, so the
- # domestic spread is wider and the transatlantic list leans AMS over ROM.
- "ATL": ["NYC","BOS","MIA","FLL","DCA","ORD","DFW","MCO","LAX","DEN",
-         "PHL","HOU","LAS","PHX","TPA","BNA","MSY","SFO","SEA","DTW",
-         "CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","AMS"],
-}
-# Origins without their own curated list yet fall back to the CLT 30, which is
-# what every origin used before per-origin lists existed. No regression.
-DEFAULT_DESTS = ORIGIN_DESTS["CLT"]
-
+# Destinations per origin = every city we hold a real baseline for out of that
+# airport. Derived, not hand-typed: a route can never appear on a board without
+# the number that justifies its badge. Adding DOT pairs to config/seasonality.json
+# widens every affected origin automatically.
 def dests_for(origin):
-    return ORIGIN_DESTS.get(origin.upper(), DEFAULT_DESTS)
+    o = origin.upper()
+    dom = sorted(DOT_AVG.get(o, {}).keys())
+    intl = sorted(INTL_AVG.keys())
+    return [d for d in dom + intl if d != o]
 
 
 INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM","AMS","MDE"}
@@ -87,6 +108,7 @@ INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM","AMS","MDE"}
 # worth several times a domestic one — bigger fares, and the traveller goes on
 # to book hotels and tours through the city guide. Ordering only: prices and
 # computed discount badges are never adjusted to favour them.
+MIN_ROUTES  = 8   # too few live routes -> keep the previous board
 DAILY_ROWS  = 8
 DAILY_INTL  = 3
 
@@ -154,9 +176,9 @@ def carrier_label(code, stops, dest):
         return "", True
     return name, False
 
-def fetch(dest):
+def fetch(origin, dest):
     url = ("https://api.travelpayouts.com/aviasales/v3/prices_for_dates"
-           f"?origin={ORIGIN}&destination={dest}&currency=usd&market=us"
+           f"?origin={origin}&destination={dest}&currency=usd&market=us"
            f"&one_way=false&sorting=price&limit=30&token={TOKEN}")
     req = urllib.request.Request(url, headers={"User-Agent": "departsdaily-updater"})
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -207,43 +229,47 @@ def js_deal(d, exp=None):
     if exp: s += f',exp:"{exp}"'
     return s + "}"
 
-def main():
-    out_path = sys.argv[1] if len(sys.argv) > 1 else "site/js/deals-data.js"
-    if not TOKEN:
-        print("FATAL: TP_TOKEN env var not set"); sys.exit(1)
+PREV_RX = re.compile(r"([A-Z]{3}):\[(.*?)\](?=,\s*[A-Z]{3}:\[|\}\s*;)", re.S)
 
-    now = datetime.now(ET)
-    today = now.date()
+def previous_boards(path):
+    """Last run's board for each origin, so one origin's API blip cannot blank
+    its board. A carried-forward row still expires on its own `exp` date, so
+    this can never resurrect a fare nobody can book."""
+    try:
+        with open(path, encoding="utf-8") as fh:
+            txt = fh.read()
+    except OSError:
+        return {}
+    i = txt.find("const DEALS={")
+    return dict(PREV_RX.findall(txt[i:])) if i >= 0 else {}
+
+
+def board_for(origin, today):
+    """Build one origin's daily board. Returns [] if the cache was too thin."""
     found, failed = [], []
-    for dest in dests_for(ORIGIN):
+    for dest in dests_for(origin):
         try:
-            fares = fetch(dest)
-            deal = pick(dest, fares, today)
+            deal = pick(dest, fetch(origin, dest), today)
             if deal:
-                avg = ROUTES[dest][1]
+                avg = avg_for(origin, dest)
                 # No baseline -> no claim. pct 0 keeps it out of the "biggest
                 # saving" ranking instead of inventing a discount.
                 deal["pct"] = round((1 - deal["price"] / avg) * 100) if avg else 0
                 found.append(deal)
-                print(f"  {ORIGIN}->{dest} ${deal['price']} ({deal['pct']}% below avg) "
+                print(f"  {origin}->{dest} ${deal['price']} ({deal['pct']}% below avg) "
                       f"{deal['d1']} {deal['dep']} {deal['al']}")
             else:
-                print(f"  {ORIGIN}->{dest} no qualifying fare in cache")
+                print(f"  {origin}->{dest} no qualifying fare in cache")
         except Exception as e:
-            failed.append(dest); print(f"  {ORIGIN}->{dest} FETCH FAIL: {e}")
+            failed.append(dest); print(f"  {origin}->{dest} FETCH FAIL: {e}")
         time.sleep(0.4)  # be polite to the API
 
-    if len(found) < 10:
-        print(f"FATAL: only {len(found)} routes returned fares "
-              f"({len(failed)} failed) — keeping yesterday's board.")
-        sys.exit(1)
-
-    # Daily rows expire after 2 days: cheap fares rarely live longer, and an
-    # expired row removes itself rather than showing a price nobody can book.
-    exp_daily = (today + timedelta(days=2)).isoformat()
+    if len(found) < MIN_ROUTES:
+        print(f"  {origin}: only {len(found)} routes returned fares "
+              f"({len(failed)} failed) — keeping the previous board.")
+        return []
 
     by_value = sorted(found, key=lambda d: -d["pct"])
-    intl_found = [d for d in by_value if d["to"] in INTL]
 
     # Daily board: 8 rows, with 3 guaranteed international slots.
     # International trips are worth more to us (bigger fares, and the traveller
@@ -254,9 +280,12 @@ def main():
     cfg = load_weights()
     try:
         with open(ROTATION_STATE, encoding="utf-8") as fh:
-            last_shown = json.load(fh)
+            state = json.load(fh)
     except (OSError, ValueError):
-        last_shown = {}
+        state = {}
+    # Rotation is per origin: showing Cancún out of Charlotte says nothing
+    # about whether Atlanta's board has shown it.
+    last_shown = state.get(origin, {}) if isinstance(state.get(origin), dict) else {}
 
     ranked = sorted(found, key=lambda d: -rotation_score(d, cfg, last_shown, today))
     intl_slots = [d for d in ranked if d["to"] in INTL][:DAILY_INTL]
@@ -267,12 +296,42 @@ def main():
 
     for d in daily:
         last_shown[d["to"]] = today.isoformat()
+    state[origin] = last_shown
     os.makedirs(os.path.dirname(ROTATION_STATE), exist_ok=True)
     with open(ROTATION_STATE, "w", encoding="utf-8") as fh:
-        json.dump(last_shown, fh, indent=1)
+        json.dump(state, fh, indent=1)
+    return daily
 
-    sep = ",\n "
-    daily_js = sep.join(js_deal(d, exp_daily) for d in daily)
+
+def main():
+    out_path = sys.argv[1] if len(sys.argv) > 1 else "site/js/deals-data.js"
+    if not TOKEN:
+        print("FATAL: TP_TOKEN env var not set"); sys.exit(1)
+
+    now = datetime.now(ET)
+    today = now.date()
+    # Daily rows expire after 2 days: cheap fares rarely live longer, and an
+    # expired row removes itself rather than showing a price nobody can book.
+    exp_daily = (today + timedelta(days=2)).isoformat()
+
+    prev = previous_boards(out_path)
+    blocks, fresh, carried, counts = [], [], [], {}
+
+    for origin in ORIGINS:
+        print(f"--- {origin} ({len(dests_for(origin))} destinations) ---")
+        daily = board_for(origin, today)
+        if daily:
+            sep = ",\n "
+            blocks.append(f'{origin}:[\n ' + sep.join(js_deal(d, exp_daily) for d in daily) + "]")
+            fresh.append(origin); counts[origin] = len(daily)
+        elif origin in prev:
+            blocks.append(f'{origin}:[{prev[origin]}]')
+            carried.append(origin)
+
+    if not fresh:
+        print("FATAL: no origin produced a board — leaving the file untouched.")
+        sys.exit(1)
+
     tz = now.strftime("%z")
     updated = now.strftime("%Y-%m-%dT%H:%M:%S") + tz[:3] + ":" + tz[3:]
     body = f"""/* =====================================================================
@@ -281,18 +340,20 @@ def main():
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated {now.strftime("%Y-%m-%d %H:%M %Z")} · {len(found)}/{len(dests_for(ORIGIN))} routes returned fares.
+   Generated {now.strftime("%Y-%m-%d %H:%M %Z")}
+   Rebuilt this run: {", ".join(f"{o} ({counts[o]})" for o in fresh) or "none"}
+   Carried forward:  {", ".join(carried) or "none"}
    ===================================================================== */
 const BOARD={{
  updated:"{updated}",
 }};
-const DEALS={{CLT:[
- {daily_js}]}};
+const DEALS={{{",".join(blocks)}}};
 """
     with open(out_path, "w", encoding="utf-8") as fh:
         fh.write(body)
-    print(f"WROTE {out_path}: {len(daily)} daily deals, "
+    print(f"WROTE {out_path}: {len(fresh)} boards rebuilt, {len(carried)} carried, "
           f"stamp {now.strftime('%a %b %d %I:%M%p ET')}")
+
 
 if __name__ == "__main__":
     main()
