@@ -100,14 +100,18 @@ EMOJI = {
 
 B = json.load(open(origins.paths(ORIGIN)["deals"]))
 date_h = datetime.date.fromisoformat(B["date"]).strftime("%a, %b %d").upper()
-skip = B.get("skip")
+
+def line(d):
+    """Deals earned their % claim; fillers are labelled as what they are —
+    the best verified fare we found today, not a deal."""
+    if d.get("deal", True):
+        return "{} {} — ${} round trip ({}% below typical)".format(
+            EMOJI.get(d["to"], "✈️"), d["city"], d["price"], d["disc"])
+    return "{} {} — ${} round trip (best fare we found today)".format(
+        EMOJI.get(d["to"], "✈️"), d["city"], d["price"])
 
 cap = "✈️ {} — today's verified board · {}\n\n".format(ORG["caption_lead"], date_h)
-cap += "\n".join("{} {} — ${} round trip ({}% below typical)".format(
-    EMOJI.get(d["to"], "✈️"), d["city"], d["price"], d["disc"]) for d in B["deals"])
-if skip:
-    cap += "\n🚫 SKIP: {} — ${}+ right now, above typical. Wait it out.".format(
-        skip["city"], skip["price"])
+cap += "\n".join(line(d) for d in B["deals"])
 cap += ("\n\n📅 Exact dates on every slide"
         "\n✅ Every fare verified before posting — fares move fast and aren't guaranteed"
         "\n🎯 Flexible dates? Tell the Fare Finder your trip shape — leave Friday,"
@@ -136,7 +140,9 @@ carousel = post(IG_USER + "/media", media_type="CAROUSEL",
 time.sleep(5)
 print("published:", post(IG_USER + "/media_publish", creation_id=carousel["id"]))
 
-for i, d in enumerate(B["deals"], 1):
+# Stories exist only for true deals — the renderer numbers them 1..N over the
+# deal-flagged rows, so this loop must walk exactly the same list.
+for i, d in enumerate([x for x in B["deals"] if x.get("deal", True)], 1):
     try:
         r = post(IG_USER + "/media",
                  image_url="{}/story_{}_{}.png".format(RAW_BASE, i, d["to"]),

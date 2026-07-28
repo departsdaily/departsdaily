@@ -13,6 +13,13 @@ ORG = origins.config()
 ORIGIN = ORG["code"]
 OUT = origins.paths(ORIGIN)["out"]
 os.makedirs(OUT, exist_ok=True)
+# Story count now varies day to day (stories are rendered for true deals
+# only), so stale slide/story PNGs from a previous run must be cleared or
+# the workflow's cp out/*.png would carry yesterday's leftovers into
+# today's site/daily folder.
+for f in os.listdir(OUT):
+    if f.endswith(".png") and (f.startswith("slide") or f.startswith("story_")):
+        os.remove(os.path.join(OUT, f))
 
 W, H = 1080, 1350
 SW, SH = 1080, 1920  # story size
@@ -58,34 +65,54 @@ def fmt_dates(x):
     # an empty slot from printing as a stray " · · ".
     return " · ".join(p for p in (f"{a}–{b}", x["airline"], stops) if p)
 
+# DEALS ONLY — owner's rule (Jul 2026): every row on the board is a real
+# deal. No fillers, no skip row, no overpayments. The defensive non-deal
+# badge branches below stay only so a mislabelled row could never wear a
+# green badge it didn't earn.
+DEALS=[x for x in B["deals"] if x.get("deal",True)]
+
 # cover
 img,d=canvas(); header(d,ORG["airport"],DATE)
 tiles(d,60,210,"DEPARTURES",size=80)
 d.text((60,390),"TODAY'S VERIFIED",font=COND(100),fill=WHITE)
 d.text((60,494),"FLIGHT DEALS",font=COND(100),fill=AMBER)
 d.text((60,598),ORG["cover_line"],font=COND(100),fill=AMBER)
-n=len(B["deals"]); s=" + 1 TO SKIP" if B.get("skip") else ""
-d.rounded_rectangle([60,780,820,860],radius=14,fill=GREEN)
-d.text((88,798),f"{n} VERIFIED DEALS{s}",font=COND(44),fill=NAVY)
+n=len(DEALS)
+badge=f"{n} VERIFIED DEAL{'S' if n!=1 else ''} TODAY"
+bf=COND(44)
+while d.textlength(badge,font=bf)>W-176: bf=COND(bf.size-2)
+d.rounded_rectangle([60,780,60+d.textlength(badge,font=bf)+56,860],radius=14,fill=GREEN)
+d.text((88,820-bf.size//2-2),badge,font=bf,fill=NAVY)
 d.text((60,910),"Swipe for the board  >>>",font=SANS(34),fill=SKY)
 footer(d); img.save(f"{OUT}/slide1_cover.png")
 
-# board
+# board — the row pitch adapts so up to 7 deal rows fit above the disclaimer
+# and footer instead of overflowing the canvas. 5 rows or fewer reproduces
+# the historical 200px layout pixel-for-pixel.
 img,d=canvas(); header(d,"TODAY'S DEAL BOARD","ROUND TRIP")
-rows=B["deals"]+([{**B["skip"],"SKIP":True}] if B.get("skip") else [])
+rows=DEALS
+pitch=min(200,(1212-180)//max(1,len(rows)))
+sc=pitch/200.0
+def S_(v): return int(v*sc)
 y=180
 for x in rows:
-    skip=x.get("SKIP")
-    d.rounded_rectangle([48,y-16,W-48,y+158],radius=16,fill=PANEL)
-    xx=tiles(d,76,y,ORIGIN,size=38); d.text((xx+6,y+8),">",font=MONO(38),fill=SKY)
-    tiles(d,xx+44,y,x["to"],size=38)
-    d.text((76,y+74),x["city"].upper(),font=COND(36),fill=WHITE)
-    d.text((76,y+116),fmt_dates(x),font=MONO(21),fill=SKY)
+    d.rounded_rectangle([48,y-16,W-48,y+S_(158)],radius=16,fill=PANEL)
+    xx=tiles(d,76,y,ORIGIN,size=S_(38)); d.text((xx+6,y+S_(8)),">",font=MONO(S_(38)),fill=SKY)
+    tiles(d,xx+S_(44),y,x["to"],size=S_(38))
+    d.text((76,y+S_(74)),x["city"].upper(),font=COND(S_(36)),fill=WHITE)
+    d.text((76,y+S_(116)),fmt_dates(x),font=MONO(S_(21)),fill=SKY)
     p=f"${x['price']}"
-    d.text((W-90-d.textlength(p,font=COND(76)),y-6),p,font=COND(76),fill=AMBER)
-    tag=("SKIP · ABOVE TYPICAL" if skip else f"{x['disc']}% BELOW TYPICAL")
-    d.text((W-90-d.textlength(tag,font=MONO(22)),y+96),tag,font=MONO(22),fill=(DIM if skip else GREEN))
-    y+=200
+    d.text((W-90-d.textlength(p,font=COND(S_(76))),y-6),p,font=COND(S_(76)),fill=AMBER)
+    # Badge honesty, defensive: green % only for rows flagged as real deals.
+    # The fetch ships deals only, so the other branches should never fire —
+    # but if a mislabelled row ever slipped through it would state its true
+    # number in amber/grey rather than wear an unearned green badge.
+    if x.get("deal",True): tag,col=f"{x['disc']}% BELOW TYPICAL",GREEN
+    elif x["disc"]>0:      tag,col=f"{x['disc']}% BELOW TYPICAL",AMBER
+    elif x["disc"]>=-2:    tag,col="TYPICAL FARE",DIM
+    else:                  tag,col=f"{-x['disc']}% ABOVE TYPICAL",DIM
+    d.text((W-90-d.textlength(tag,font=MONO(S_(22))),y+S_(96)),tag,font=MONO(S_(22)),fill=col)
+    y+=pitch
 d.text((60,y+4),"Verified in Google Flights today. Fares change fast and are not guaranteed.",font=SANS(23),fill=DIM)
 footer(d); img.save(f"{OUT}/slide2_board.png")
 
@@ -119,9 +146,12 @@ d.rounded_rectangle([60,840,760,926],radius=14,fill=AMBER)
 d.text((92,858),"FOLLOW · BOOKING LINKS IN BIO",font=COND(44),fill=NAVY)
 footer(d); img.save(f"{OUT}/slide4_cta.png")
 
-# per-deal STORY slides (IG API can't add link stickers, so the CTA is baked into the art)
-for i,x in enumerate(B["deals"],1):
-    img,d=canvas(SW,SH); header(d,"DEAL "+str(i)+" OF "+str(len(B["deals"])),DATE,w=SW)
+# per-deal STORY slides (IG API can't add link stickers, so the CTA is baked
+# into the art). Only true deals get a story — a filler fare wearing a green
+# "% BELOW TYPICAL" story would be exactly the lie the deal flag exists to
+# prevent.
+for i,x in enumerate(DEALS,1):
+    img,d=canvas(SW,SH); header(d,"DEAL "+str(i)+" OF "+str(len(DEALS)),DATE,w=SW)
     tiles(d,60,260,ORIGIN,size=64); d.text((328,282),">",font=MONO(64),fill=SKY); tiles(d,400,260,x["to"],size=64)
     d.text((60,440),x["city"].upper(),font=COND(96),fill=WHITE)
     d.text((60,570),f"${x['price']}",font=COND(220),fill=AMBER)

@@ -32,6 +32,9 @@ TOKEN  = os.environ.get("TP_TOKEN", "")
 MONTHS = int(os.environ.get("INDEX_MONTHS", "6"))   # 6 = where the fare cache is actually dense
 SLEEP  = float(os.environ.get("TP_SLEEP", "0.4"))
 MIN_ROWS_PER_ORIGIN = 200      # below this we refuse to overwrite
+# Composed (two one-way) rows kept per destination, cheapest first. Caps the
+# index file size now that the month-matrix sweep makes the leg stores dense.
+MAX_COMPOSED_PER_DEST = int(os.environ.get("MAX_COMPOSED_PER_DEST", "500"))
 
 # Origins we pre-build. Everything else falls back to the Worker (live lookup).
 # `or` (not a .get default): the workflow exports ORIGINS="" on a blank
@@ -49,10 +52,14 @@ def _get(url):
 
 
 def fetch_matrix(origin, dest, month):
-    """v2 month-matrix: cheapest fare for every departure/return date pair in a
-    month. Far denser than prices_for_dates, which only returns its overall
-    cheapest handful per route — the reason the index kept coming out sparse.
-    Dates only, no departure times, so time fields come back unknown (-1).
+    """v2 month-matrix: cheapest cached fare per departure DAY for a month.
+
+    Verified 2026-07-28: every row this endpoint returns carries an EMPTY
+    return_date — they are one-way prices, not round trips. The original code
+    required a return_date and therefore counted matrix: 0 on every route,
+    which is why the index kept coming out sparse. These rows are one-way
+    LEGS and are consumed as such (fed into the leg stores and composed),
+    never as round-trip prices.
     """
     url = ("https://api.travelpayouts.com/v2/prices/month-matrix"
            f"?currency=usd&origin={origin}&destination={dest}"
@@ -178,36 +185,43 @@ def build_origin(origin, today):
                         store[k] = row
                 time.sleep(SLEEP)
 
-        # Month-matrix sweep: the densest source we have.
+        # Month-matrix sweep: the densest source we have — one-way legs,
+        # cheapest per departure day (see fetch_matrix docstring). Fed into
+        # the same leg stores the one-way fetch fills, so the compose step
+        # below turns them into labelled TWO ONE-WAYS round trips. No
+        # departure time on this endpoint, so a matrix-only date keeps
+        # depMin -1 and the site shows the time as unknown; a leg the
+        # one-way fetch also saw keeps its real departure time unless the
+        # matrix found it strictly cheaper.
         matrix = 0
         for month in months_ahead(today, MONTHS):
-            try:
-                for f in fetch_matrix(origin, dest, month):
-                    try:
-                        dep = f.get("depart_date", "")[:10]
-                        ret = f.get("return_date", "")[:10]
-                        price = int(f.get("value") or 0)
-                        if not dep or not ret or price <= 0:
+            for a, b, store in ((origin, dest, out_legs), (dest, origin, back_legs)):
+                try:
+                    for f in fetch_matrix(a, b, month):
+                        try:
+                            dep = f.get("depart_date", "")[:10]
+                            price = int(f.get("value") or 0)
+                            if not dep or price <= 0:
+                                continue
+                            date.fromisoformat(dep)   # validate
+                        except (ValueError, TypeError):
                             continue
-                        do = date.fromisoformat(dep)
-                        off = (do - today).days
-                        nights = (date.fromisoformat(ret) - do).days
-                    except (ValueError, TypeError):
-                        continue
-                    if off < 2 or not (LEN_LO <= nights <= LEN_HI):
-                        continue
-                    key = (dest, off, nights)
-                    if key in best and best[key][3] <= price:
-                        continue
-                    st = int(f.get("number_of_changes") or 0)
-                    best[key] = (dest, off, nights, price, st, st,
-                                 -1, -1, -1, -1, "", 0)
-                    matrix += 1
-            except Exception as e:
-                print(f"    {origin}->{dest} {month} MATRIX FAIL: {e}")
-            time.sleep(SLEEP)
+                        st = int(f.get("number_of_changes") or 0)
+                        if dep not in store or store[dep][0] > price:
+                            store[dep] = (price, st, -1)
+                            matrix += 1
+                except Exception as e:
+                    print(f"    {a}->{b} {month} MATRIX FAIL: {e}")
+                time.sleep(SLEEP)
 
-        composed = 0
+        # Compose. The matrix sweep can make the leg stores dense (one leg per
+        # day, six months, both directions), and all-pairs would then bloat
+        # the index file the browser has to download — so composed rows are
+        # capped per destination, cheapest first. Cheapest-first is the same
+        # order the finder surfaces results in, so the rows dropped are the
+        # ones least likely to ever be shown. Real round trips are never
+        # capped and always win their (dest, off, nights) key.
+        cand = []
         for dk, o in out_legs.items():
             do = date.fromisoformat(dk)
             off = (do - today).days
@@ -217,12 +231,15 @@ def build_origin(origin, today):
                 nights = (date.fromisoformat(rk) - do).days
                 if not (LEN_LO <= nights <= LEN_HI):
                     continue
-                key = (dest, off, nights)
-                if key in best:                       # a real round trip wins
+                if (dest, off, nights) in best:       # a real round trip wins
                     continue
-                best[key] = (dest, off, nights, o[0] + b[0], o[1], b[1],
-                             o[2], -1, b[2], -1, "", 1)
-                composed += 1
+                cand.append((o[0] + b[0], off, nights, o, b))
+        cand.sort(key=lambda x: x[0])
+        composed = 0
+        for price, off, nights, o, b in cand[:MAX_COMPOSED_PER_DEST]:
+            best[(dest, off, nights)] = (dest, off, nights, price, o[1], b[1],
+                                         o[2], -1, b[2], -1, "", 1)
+            composed += 1
 
         diag[dest] = {"rt": got, "matrix": matrix, "out_legs": len(out_legs),
                       "back_legs": len(back_legs), "composed": composed}

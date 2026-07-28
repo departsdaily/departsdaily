@@ -637,8 +637,11 @@ window.Finder = (function () {
                               "&months=" + p[2] + "&fresh=1");
         if (!r.ok) throw 0;
         const d = await r.json();
+        /* null = the Worker answered and genuinely has nothing.
+           "fail" = we never got an answer. The difference matters: only a
+           real answer may be reported as "we checked live". */
         liveCache[key] = (d && d.rows && d.rows.length) ? d : null;
-      } catch (e) { liveCache[key] = null; }
+      } catch (e) { liveCache[key] = "fail"; }
       render();
     }
     /* Swap the live rows in for the selected destination. Live offsets are
@@ -669,27 +672,80 @@ window.Finder = (function () {
           const key = S.orig + "|" + S.dest + "|" + monthsParam();
           const L = liveCache[key];
           if (L === undefined) { fetchLive(key); pulling = true; liveMsg = "Pulling fresh fares…"; }
-          else if (L === null) { liveMsg = "Fresh pull unavailable right now — showing the nightly index."; }
+          else if (L === null) { liveMsg = "The live check found no extra fares — showing the nightly index."; }
+          else if (L === "fail") { liveMsg = "Fresh pull unavailable right now — showing the nightly index."; }
           else { idx = withLive(L); liveOn = true; }
         }
+      }
+      let r = search(idx, S);
+      /* A specific destination with zero cached matches quietly re-checks the
+         Worker ONCE (same cache the FRESH PULL toggle uses) before the UI
+         says anything. The index is last night's cached snapshot — an empty
+         result here must never be allowed to read as "no flights exist". */
+      let liveTried = false;
+      if (!r.length && S.dest !== "*" && LIVE_API && !liveOn && !pulling) {
+        const key = S.orig + "|" + S.dest + "|" + monthsParam();
+        const L = liveCache[key];
+        if (L === undefined) {
+          fetchLive(key); pulling = true;
+          liveMsg = "Nothing cached in that window — checking live fares…";
+        } else if (L && L !== "fail") {
+          const idx2 = withLive(L), r2 = search(idx2, S);
+          if (r2.length) { idx = idx2; r = r2; liveOn = true; }
+          else liveTried = true;
+        } else if (L === null) liveTried = true;
+        /* L === "fail": the live check never answered — claim nothing. */
       }
       const note = $("fLiveNote");
       if (note) { note.textContent = liveMsg; note.hidden = !liveMsg; }
       if (srcEl) srcEl.textContent = liveOn
         ? "FRESH PULL " + new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })
         : (IDX.live ? "LIVE LOOKUP" : "UPDATED " + (IDX.generated || "").slice(0, 10));
-      const r = search(idx, S);
       if (cntEl) cntEl.textContent = pulling ? "PULLING FRESH FARES…" : r.length
         ? (r.length >= 25 ? "25+ TRIPS · CHEAPEST FIRST" : r.length + " TRIP" + (r.length > 1 ? "S" : "") + " · CHEAPEST FIRST") : "NO MATCHES";
       rowsEl.innerHTML = r.length
         ? r.map((h, i) => rowHTML(S.orig, idx, h, true, i + 1)).join("")
-        : `<div class="fzero">${
-            idx.rows.length < 500
-              ? "We don't have many cached fares for " + S.orig + " yet — the index is still filling out.<br>" +
-                "Try <b>Anywhere</b> and a longer window, or check the board above for today's verified deals."
-              : "Nothing matches all of those filters.<br>Budget and stops are usually the ones to move first."
-          }</div>`;
+        : (pulling ? '<div class="fzero">Checking live fares for ' +
+             ((idx.names && idx.names[S.dest]) || CITY_NAMES[S.dest] || S.dest) + "…</div>"
+                   : `<div class="fzero">${zeroHTML(idx, liveTried)}</div>`);
       if (opts.onState) opts.onState(S, r);
+    }
+
+    /* The truth when nothing matched. Says exactly what the cache DOES hold
+       for the chosen city — count, date span, cheapest — so "no matches"
+       reads as a statement about our snapshot, never a claim that no
+       flights exist. */
+    function zeroHTML(idx, liveTried) {
+      if (S.dest === "*") {
+        return idx.rows.length < 500
+          ? "We don't have many cached fares for " + S.orig + " yet — the index is still filling out.<br>" +
+            "Try a longer window, or check the board above for today's verified deals."
+          : "Nothing matches all of those filters.<br>Budget and stops are usually the ones to move first.";
+      }
+      const name = (idx.names && idx.names[S.dest]) || CITY_NAMES[S.dest] || S.dest;
+      const di = idx.dests.indexOf(S.dest);
+      const rows = di < 0 ? [] : idx.rows.filter(rr => rr[0] === di);
+      const live = liveTried
+        ? " We re-checked live fares just now too — still nothing that fits."
+        : "";
+      const disclaimer = "<br>That's about our fare snapshot, not the airlines — more flights than we track " +
+        "almost certainly exist" + (LIVE_API && !liveTried ? "; the FRESH PULL switch re-queries live." : ".");
+      if (!rows.length)
+        return "Our current snapshot holds <b>no</b> cached " + name + " trips from " + S.orig + "." +
+               live + disclaimer;
+      const base = new Date(idx.base + "T12:00");
+      let lo = Infinity, hi = -Infinity, cheap = Infinity;
+      for (const rr of rows) {
+        if (rr[1] < lo) lo = rr[1];
+        if (rr[1] > hi) hi = rr[1];
+        if (rr[3] < cheap) cheap = rr[3];
+      }
+      const d1 = new Date(base); d1.setDate(d1.getDate() + lo);
+      const d2 = new Date(base); d2.setDate(d2.getDate() + hi);
+      return "We have <b>" + rows.length + "</b> cached " + name + " trip" + (rows.length > 1 ? "s" : "") +
+             " from " + S.orig + " — departing " + fmtDate(d1) +
+             (hi > lo ? " to " + fmtDate(d2) : "") + ", from $" + cheap +
+             " — but none fit your window and filters." + live + disclaimer;
     }
 
     async function boot(origin) {

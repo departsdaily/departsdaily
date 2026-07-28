@@ -15,8 +15,16 @@ ORIGIN = origins.origin_code()
 PATHS = origins.paths(ORIGIN)
 ROUTES = origins.baselines(ORIGIN)
 HISTORY_FILE = PATHS["history"]
-NO_REPEAT_DAYS = 6
+# 3, not 6: the board now carries 5+ cities a day from a ~24-city pool, and a
+# 6-day lockout at that rate (5 x 6 = 30) would starve it mathematically.
+NO_REPEAT_DAYS = int(os.environ.get("NO_REPEAT_DAYS", "3"))
 MIN_DISCOUNT = 0.12
+# DEALS ONLY — owner's rule (Jul 2026): the board never shows a fare that
+# isn't a real deal. No filler rows, no "typical fare" rows, and no SKIP row
+# (it showcased an overpayment). Every fare clearing MIN_DISCOUNT makes the
+# board, up to BOARD_MAX = 7 — the most rows the board slide can hold
+# legibly. A thin day posts fewer rows; a day with zero deals posts nothing.
+BOARD_MAX = int(os.environ.get("BOARD_MAX", "7"))
 today = datetime.date.today()
 
 def tp(url, params):
@@ -24,11 +32,47 @@ def tp(url, params):
     with urllib.request.urlopen(url + "?" + urllib.parse.urlencode(params), timeout=30) as r:
         return json.load(r)
 
+def months_ahead(n):
+    out, y, m = [], today.year, today.month
+    for _ in range(n):
+        out.append(f"{y:04d}-{m:02d}")
+        m += 1
+        if m == 13:
+            m, y = 1, y + 1
+    return out
+
+
 def cheapest(dest):
-    data = tp("https://api.travelpayouts.com/aviasales/v3/prices_for_dates", {
-        "origin": ORIGIN, "destination": dest, "unique": "false", "sorting": "price",
-        "direct": "false", "currency": "usd", "limit": 30, "one_way": "false"})
-    return data.get("data", [])
+    """Cheapest round-trip candidates, cheapest first.
+
+    One unscoped query returns only the API's overall-cheapest handful, which
+    on 2026-07-27 left 11 of CLT's 24 routes with zero usable candidates.
+    Month-scoped queries (same trick as build_index.py) surface the cheapest
+    fares in each month of the posting window, so a route with nothing in the
+    global top-30 can still field its best August fare."""
+    seen, out, last_err = set(), [], None
+    for month in [None] + months_ahead(4):
+        params = {"origin": ORIGIN, "destination": dest, "unique": "false",
+                  "sorting": "price", "direct": "false", "currency": "usd",
+                  "limit": 30, "one_way": "false"}
+        if month:
+            params["departure_at"] = month
+        try:
+            data = tp("https://api.travelpayouts.com/aviasales/v3/prices_for_dates",
+                      params)
+        except Exception as e:
+            last_err = e
+            continue
+        for o in data.get("data", []):
+            key = (o.get("departure_at"), o.get("return_at"), o.get("price"))
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(o)
+    if not out and last_err is not None:
+        raise last_err
+    out.sort(key=lambda o: o.get("price") or 1e9)
+    return out
 
 hist = json.load(open(HISTORY_FILE)) if os.path.exists(HISTORY_FILE) else {}
 recent = {d for d, ts in hist.items()
@@ -82,9 +126,14 @@ for code in ROUTES:
     (deals if disc >= MIN_DISCOUNT else skips).append(row)
 
 deals.sort(key=lambda x: -x["disc"])
-skips.sort(key=lambda x: x["disc"])
+for d in deals:
+    d["deal"] = True
+
+# Deals only, best first, as many as the slide holds. Non-qualifying fares
+# exist solely in the scan diagnostics — never on the board.
 board = {"date": today.isoformat(), "origin": ORIGIN,
-         "deals": deals[:4], "skip": skips[0] if skips else None}
+         "deals": deals[:BOARD_MAX], "n_deals": len(deals[:BOARD_MAX]),
+         "skip": None}
 os.makedirs("out", exist_ok=True)
 counts = {}
 for v in scan.values():
@@ -99,11 +148,13 @@ for c, v in sorted(scan.items(), key=lambda kv: kv[1].get("disc_pct", -999), rev
           f"${v.get('price')} vs typical ${v.get('typical')} = {v.get('disc_pct')}%")
 
 if not board["deals"]:
-    print(f"FATAL: {ORIGIN} produced no qualifying deals — not writing a board.")
+    print(f"FATAL: {ORIGIN} produced no qualifying deals — deals-only board, "
+          f"so there is nothing to post today.")
     raise SystemExit(1)
 json.dump(board, open(PATHS["deals"], "w"), indent=1)
 for d in board["deals"]:
     hist[d["to"]] = today.isoformat()
 os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
 json.dump(hist, open(HISTORY_FILE, "w"), indent=1)
-print(f"{ORIGIN} deals:", [d["to"] for d in board["deals"]])
+print(f"{ORIGIN} board:", [(d["to"], "DEAL" if d["deal"] else "fare")
+                           for d in board["deals"]])
