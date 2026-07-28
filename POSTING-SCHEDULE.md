@@ -8,27 +8,42 @@ Everything below is driven by `config/schedule.json`. Retune that file after fou
 
 | Day | Shape | Trip | Why |
 |---|---|---|---|
-| Monday | `week` | 6 to 9 nights | Peak booking day. Back at the desk, ready to escape. The money post. |
-| Tuesday | `weekend` | 2 to 4 nights | Low stakes, easy yes. |
-| Wednesday | `weekend` | 2 to 4 nights | Same, different cities. |
-| Thursday | `urgent` | 2 to 4 nights, leaving within 21 days | Weekend getaways with urgency. |
-| Friday | `friday` | 2 to 9 nights | Leans on Friday being the cheapest day to book and fly. |
+| Monday | `week` | 7 to 10 nights, out Thu to Sun, back Fri to Mon | Peak booking day. The money post. |
+| Tuesday | `weekend` | 2 to 4 nights, out Thu or Fri, back Sun or Mon | Low stakes, easy yes. |
+| Wednesday | `weekend` | same | Same, different cities. |
+| Thursday | `urgent` | same shape, leaving within 30 days | Weekend getaways with urgency. |
+| Friday | `friday` | 2 to 9 nights, out Thu to Sat | Leans on Friday being the cheapest day to book and fly. |
 | Saturday | *guide* | falls back to `weekend` | Planned city guide carousel. Renderer not built yet. |
 | Sunday | *inspiration* | falls back to `week` | Planned inspiration plus Monday teaser. Renderer not built yet. |
-| Every other Sunday | `twoweek` | 12 to 16 nights | ISO even weeks. Twice a month max so it stays special. |
+| Every other Sunday | `twoweek` | 12 to 17 nights, out Thu to Sun, back Fri to Mon | ISO even weeks. Twice a month max so it stays special. |
 
-## The safety property that matters
+## The three rung ladder
 
-A shape is a **preference, never a filter that costs a deal.**
+A shape is a **preference, never a filter that costs a deal.** For every route, `fetch_fares.py` finds the cheapest real fare at each of three rungs and takes the best one that still clears the 12% bar:
 
-For every route, `fetch_fares.py` finds two real fares from the same price sorted list:
+1. **shape** — the full thing. Trip length *and* the days of the week it flies out and back on.
+2. **nights** — right trip length, any days.
+3. **wide** — 2 to 14 nights leaving 3 to 150 days out. Exactly what the board used before any of this existed.
 
-- the cheapest fare matching today's shape
-- the cheapest fare in the wide sanity window, 2 to 14 nights leaving 3 to 150 days out, which is exactly what the board used before this existed
+Day of week rules are what make a long weekend an actual long weekend. They are also the thinnest filter, so they must never be the reason a route with a genuine deal falls off. Hence the ladder. Every row records which rung it landed on in `row["rung"]`, and the board reports the split, so drift is visible instead of silent.
 
-It shows the shaped fare **only when that fare still clears the 12% bar**. Otherwise it falls back to the wide one. So the plan changes *which* honest deal appears. It cannot lower `MIN_DISCOUNT`, pad the board, or knock a route off for having the wrong trip length on a Tuesday.
+## Measured on real fares
 
-Verified offline against identical synthetic fares: deal count held at 14 across all four shapes, and `twoweek` fell back on the routes where a long trip did not clear the bar rather than dropping them. Each row carries `on_shape` true or false, and `deals.json` reports how many rows hit the shape, so drift is visible instead of silent.
+Replayed against the cached fare index for all ten cities (Jul 28, 263 routes). **Deal count came out at 70 in every single shape** — the ladder fully protects supply. What changes is how often the board hits the shape exactly:
+
+| shape | on shape | right length, wrong days | fallback |
+|---|---|---|---|
+| friday | 86% | 11% | 3% |
+| weekend | 69% | 16% | 16% |
+| week | 50% | 19% | 31% |
+| urgent | 47% | 19% | 34% |
+| twoweek | 41% | 7% | 51% |
+
+Thursday's urgency post was the weak one at 30% until the departure window went from 21 days to 30. The tight window was the problem, not the day rules. Thirty days still reads as soon.
+
+## The two week guard
+
+Two week trips are genuinely scarce in the fare cache. Charlotte specifically had **zero** on shape in every variant tested. A cover slide reading TWO WEEKS GONE over a pile of long weekend fares is a claim the board does not support, so `twoweek` carries `min_on_shape: 2` and `fallback_shape: "week"`. Under two matching rows, the whole board rebuilds on the week shape and the cover changes with it. Verified: with no qualifying two week fare, the run printed the step down and posted WEEK LONG ESCAPES instead.
 
 ## The Friday claim, sourced
 

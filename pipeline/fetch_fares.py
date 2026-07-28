@@ -98,11 +98,12 @@ def cheapest(dest):
     out.sort(key=lambda o: o.get("price") or 1e9)
     return out
 
-def pick_offer(offers, nights, depart_in):
-    """Cheapest offer whose trip length and departure date fit a window.
+def pick_offer(offers, nights, depart_in, depart_dow=None, return_dow=None):
+    """Cheapest offer whose trip length, departure date and (optionally) the
+    days of the week it flies out and back on all fit.
 
     `offers` is already price-sorted, so the first match is the cheapest match.
-    Returns None when nothing in the list fits.
+    A dow set of None means any day. Returns None when nothing fits.
     """
     n_lo, n_hi = nights
     d_lo, d_hi = depart_in
@@ -112,8 +113,15 @@ def pick_offer(offers, nights, depart_in):
             rr = datetime.date.fromisoformat((cand.get("return_at") or "")[:10])
         except ValueError:
             continue
-        if d_lo <= (dd - today).days <= d_hi and n_lo <= (rr - dd).days <= n_hi:
-            return cand
+        if not (d_lo <= (dd - today).days <= d_hi):
+            continue
+        if not (n_lo <= (rr - dd).days <= n_hi):
+            continue
+        if depart_dow is not None and dd.weekday() not in depart_dow:
+            continue
+        if return_dow is not None and rr.weekday() not in return_dow:
+            continue
+        return cand
     return None
 
 
@@ -126,7 +134,7 @@ recent = {d for d, ts in hist.items()
 # from a log that expires.
 scan = {}
 
-deals, skips = [], []
+OFFERS = {}
 for code in ROUTES:
     if code in recent:
         scan[code] = {"outcome": "locked out", "why": f"posted {hist.get(code)}"}
@@ -139,58 +147,96 @@ for code in ROUTES:
     if not offers:
         scan[code] = {"outcome": "no fares", "why": "the fare cache returned nothing"}
         continue
-    # Two candidates per route, both real fares from the same price-sorted list:
-    #   shaped — cheapest fare matching TODAY'S trip shape (Monday wants a week,
-    #            Tuesday wants a long weekend, and so on)
-    #   wide   — cheapest fare in the broad sanity window (2-14 nights, leaving
-    #            3-150 days out), which is exactly what the board used before
-    #            the weekly plan existed
-    # We show the shaped fare when it still clears the 12% bar. If it doesn't,
-    # we fall back to the wide fare. So the plan can change WHICH honest deal
-    # appears, but a route that had a genuine deal can never lose its place
-    # because of what day of the week it is.
-    shaped = pick_offer(offers, PLAN["nights"], PLAN["depart_in"])
-    wide = pick_offer(offers, PLAN["wide"]["nights"], PLAN["wide"]["depart_in"])
-    if shaped is None and wide is None:
-        n0, n1 = PLAN["wide"]["nights"]
-        d0, d1 = PLAN["wide"]["depart_in"]
-        scan[code] = {"outcome": "no fares in window",
-                      "why": f"{len(offers)} offers, none leaving {d0}-{d1} days out "
-                             f"for a {n0}-{n1} night trip"}
-        continue
+    OFFERS[code] = offers
 
-    def score(cand):
-        p = round(cand["price"])
-        dp = datetime.date.fromisoformat(cand["departure_at"][:10])
-        b = ROUTES[code]["m"][dp.month - 1]
-        return p, dp, b, 1 - p / b
 
-    on_shape = False
-    if shaped is not None and score(shaped)[3] >= MIN_DISCOUNT:
-        o, on_shape = shaped, True
-    elif wide is not None:
-        o = wide
-    else:
-        o, on_shape = shaped, True
-    price, dep, base, disc = score(o)
-    ret = (o.get("return_at") or "")[:10]
-    nights = (datetime.date.fromisoformat(ret) - dep).days if ret else None
-    row = {"to": code, "city": ROUTES[code]["city"], "price": price,
-           "d1": o["departure_at"][:10], "d2": ret,
-           "airline": o.get("airline", ""), "stops": o.get("transfers", 0),
-           "baseline": base, "disc": round(disc * 100),
-           "nights": nights, "on_shape": on_shape,
-           "link": "https://www.aviasales.com" + (o.get("link") or "") + "&marker=755800"}
-    scan[code] = {"outcome": "qualified" if disc >= MIN_DISCOUNT else "not a deal",
-                  "price": price, "typical": base, "disc_pct": round(disc * 100),
-                  "d1": row["d1"], "d2": row["d2"],
-                  "nights": nights, "on_shape": on_shape}
-    (deals if disc >= MIN_DISCOUNT else skips).append(row)
+def build(plan):
+    """Score every fetched route against one day plan. Returns
+    (deals, skips, scan_rows). Pure: safe to call twice with different plans,
+    which is what lets a shape that cannot be honoured step aside."""
+    deals, skips, rows = [], [], {}
+    for code, offers in OFFERS.items():
+        # THREE RUNGS, cheapest real fare at each, all from the same
+        # price-sorted list. We take the best rung that still clears the bar:
+        #   shape  — today's full shape: trip length AND the days of the week
+        #            it flies out and back on (out Thu/Fri, back Sun/Mon for a
+        #            long weekend, and so on)
+        #   nights — same trip length, any days of the week
+        #   wide   — 2-14 nights leaving 3-150 days out, exactly what the
+        #            board used before the weekly plan existed
+        # Day-of-week rules are what make a "long weekend" an actual long
+        # weekend, but they are also the thinnest filter, so they must never
+        # be the reason a route with a genuine deal falls off. Hence the ladder.
+        rungs = [
+            ("shape", pick_offer(offers, plan["nights"], plan["depart_in"],
+                                 plan["depart_dow"], plan["return_dow"])),
+            ("nights", pick_offer(offers, plan["nights"], plan["depart_in"])),
+            ("wide", pick_offer(offers, plan["wide"]["nights"],
+                                plan["wide"]["depart_in"])),
+        ]
+        if all(c is None for _, c in rungs):
+            n0, n1 = plan["wide"]["nights"]
+            d0, d1 = plan["wide"]["depart_in"]
+            rows[code] = {"outcome": "no fares in window",
+                          "why": f"{len(offers)} offers, none leaving {d0}-{d1} "
+                                 f"days out for a {n0}-{n1} night trip"}
+            continue
 
-deals.sort(key=lambda x: -x["disc"])
-for d in deals:
-    d["deal"] = True
+        def score(cand, _code=code):
+            p = round(cand["price"])
+            dp = datetime.date.fromisoformat(cand["departure_at"][:10])
+            b = ROUTES[_code]["m"][dp.month - 1]
+            return p, dp, b, 1 - p / b
 
+        o = rung = None
+        for name, cand in rungs:
+            if cand is not None and score(cand)[3] >= MIN_DISCOUNT:
+                o, rung = cand, name
+                break
+        if o is None:                   # nothing clears the bar anywhere;
+            for name, cand in rungs:    # keep the best available so the scan
+                if cand is not None:    # can still report why it missed
+                    o, rung = cand, name
+                    break
+        on_shape = rung == "shape"
+        price, dep, base, disc = score(o)
+        ret = (o.get("return_at") or "")[:10]
+        nights = (datetime.date.fromisoformat(ret) - dep).days if ret else None
+        row = {"to": code, "city": ROUTES[code]["city"], "price": price,
+               "d1": o["departure_at"][:10], "d2": ret,
+               "airline": o.get("airline", ""), "stops": o.get("transfers", 0),
+               "baseline": base, "disc": round(disc * 100),
+               "nights": nights, "on_shape": on_shape, "rung": rung,
+               "link": "https://www.aviasales.com" + (o.get("link") or "") + "&marker=755800"}
+        rows[code] = {"outcome": "qualified" if disc >= MIN_DISCOUNT else "not a deal",
+                      "price": price, "typical": base, "disc_pct": round(disc * 100),
+                      "d1": row["d1"], "d2": row["d2"],
+                      "nights": nights, "on_shape": on_shape, "rung": rung}
+        (deals if disc >= MIN_DISCOUNT else skips).append(row)
+    deals.sort(key=lambda x: -x["disc"])
+    for d in deals:
+        d["deal"] = True
+    return deals, skips, rows
+
+
+deals, skips, rows = build(PLAN)
+
+# A shape that cannot be honoured must step aside rather than mislabel the
+# board. "TWO WEEKS GONE" printed over a pile of long-weekend fares is worse
+# than not running the two-week post at all — the cover slide would be making
+# a claim the fares don't support. If fewer than min_on_shape rows actually
+# land on the shape, we rebuild on the fallback shape and say so.
+if PLAN.get("min_on_shape") and PLAN.get("fallback_shape"):
+    got = sum(1 for d in deals[:BOARD_MAX] if d.get("on_shape"))
+    if got < PLAN["min_on_shape"]:
+        alt = day_plan.plan_for_shape(PLAN["fallback_shape"], PLAN)
+        print(f"{ORIGIN}: only {got} row(s) matched the {PLAN['shape']} shape "
+              f"(needed {PLAN['min_on_shape']}) — falling back to "
+              f"{alt['shape']} rather than mislabelling the board.")
+        PLAN = alt
+        deals, skips, rows = build(PLAN)
+
+scan.update(rows)
 # Deals only, best first, as many as the slide holds. Non-qualifying fares
 # exist solely in the scan diagnostics — never on the board.
 board = {"date": today.isoformat(), "origin": ORIGIN,
@@ -199,7 +245,9 @@ board = {"date": today.isoformat(), "origin": ORIGIN,
          "plan": {"shape": PLAN["shape"], "cover": PLAN["cover"],
                   "angle": PLAN["angle"], "content": PLAN["content"],
                   "nights": list(PLAN["nights"]),
-                  "on_shape": sum(1 for d in deals[:BOARD_MAX] if d.get("on_shape"))}}
+                  "on_shape": sum(1 for d in deals[:BOARD_MAX] if d.get("on_shape")),
+                  "rungs": {r: sum(1 for d in deals[:BOARD_MAX] if d.get("rung") == r)
+                            for r in ("shape", "nights", "wide")}}}
 os.makedirs("out", exist_ok=True)
 counts = {}
 for v in scan.values():

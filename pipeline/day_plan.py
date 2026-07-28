@@ -60,19 +60,42 @@ def plan(day=None):
         reason = f"POST_SHAPE override: {forced}"
 
     shape = cfg["shapes"][shape_key]
+    return _shape_plan(cfg, shape_key, shape, day, content, reason)
+
+
+def _shape_plan(cfg, shape_key, shape, day, content, reason):
     return {
         "day": day.isoformat(),
         "weekday": day.strftime("%A"),
         "shape": shape_key,
         "nights": tuple(shape["nights"]),
         "depart_in": tuple(shape["depart_in"]),
+        "depart_dow": set(shape["depart_dow"]) if shape.get("depart_dow") else None,
+        "return_dow": set(shape["return_dow"]) if shape.get("return_dow") else None,
         "cover": shape["cover"],
         "angle": shape["angle"],
         "content": content,
         "note": reason,
+        "min_on_shape": shape.get("min_on_shape"),
+        "fallback_shape": shape.get("fallback_shape"),
         "wide": {"nights": tuple(cfg["wide"]["nights"]),
                  "depart_in": tuple(cfg["wide"]["depart_in"])},
     }
+
+
+def plan_for_shape(shape_key, like):
+    """The same day, rebuilt on a different shape. Used when a shape cannot be
+    honoured by the day's real fares and has to step aside rather than let the
+    cover slide claim something the board does not show."""
+    cfg = _cfg()
+    if shape_key not in cfg["shapes"]:
+        raise SystemExit(f"FATAL: fallback_shape {shape_key} is not in "
+                         f"config/schedule.json")
+    day = datetime.date.fromisoformat(like["day"])
+    return _shape_plan(cfg, shape_key, cfg["shapes"][shape_key], day,
+                       like.get("content", "board"),
+                       f"stepped down from {like['shape']}: too few real fares "
+                       f"matched that shape today")
 
 
 if __name__ == "__main__":
