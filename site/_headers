@@ -1,0 +1,28 @@
+# Cloudflare Pages response headers.
+#
+# WHY THIS FILE EXISTS: Pages was serving js/ and css/ with
+# `max-age=14400` (4 hours). A deploy therefore did not reach anyone who
+# had loaded the site in the last four hours — including us, five minutes
+# after shipping a fix, which reads exactly like the fix didn't work.
+#
+# max-age=0 + must-revalidate does NOT mean "download it every time". The
+# browser still keeps the file; it just asks "changed?" on each load and
+# gets a 304 with no body when it hasn't. Costs one tiny conditional
+# request, buys instant deploys. Worth it while the site is under daily
+# development.
+
+/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Fare indexes are rebuilt nightly and the finder fetches them on load.
+# Five minutes of edge cache, then revalidate.
+/data/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Daily Instagram slides are content-addressed by date and never change
+# once written.
+/daily/*
+  Cache-Control: public, max-age=86400
