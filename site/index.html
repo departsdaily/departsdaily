@@ -428,10 +428,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
    Each .row is its own grid, so `auto` columns were sized per row and the
    prices never lined up once "(OUR EST.)" made one note wider than another.
    Fixed widths make every row measure identically. */
-.row{grid-template-columns:minmax(140px,auto) auto 1fr 108px 200px;gap:8px 14px;position:relative}
-/* The shape box column owns the row's free space and centers the box in it,
-   so WEEKEND floats midway between the trip text and the price. */
-.shpcol{display:flex;align-items:center;justify-content:center}
+.row{grid-template-columns:minmax(140px,auto) 1fr 108px 200px;gap:8px 14px;position:relative}
 .dates{font-size:12.5px}
 .var{white-space:normal}
 /* The row used to BE an <a>, which is why nothing inside it could be a link.
@@ -461,7 +458,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 .shp{display:inline-block;border:2px solid var(--amber);color:var(--amber);
      padding:3px 9px;border-radius:7px;font-size:12.5px;font-weight:800;
      letter-spacing:1.5px;line-height:1;align-self:center}
-@media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}.shpcol{grid-column:1;justify-content:flex-start}}
+@media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
 
 
 /* BIG SEARCH — the one flight search on the site now that the Fare Finder is
@@ -1147,8 +1144,7 @@ function rowHTML(code,x){
      <a class="rowlink" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener"
         aria-label="Search ${x.city} flights, $${x.price} round trip"></a>
      <span class="tiles">${tiles(code)}<span class="arr">\u203a</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span>${guide}<br><span class="dates"><span class="trip">${legCol(x.d1,x.dep,x.arr)}<span class="arr2">\u2192</span>${legCol(x.d2,x.rdep,x.rarr)}</span><span class="leg">${ts.nights?`<b class="nts">${ts.nights}</b> \u00b7 `:""}${al?al+" \u00b7 ":""}<b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span></span>
-     <span class="shpcol">${ts.shape?`<span class="shp">${ts.shape}</span>`:""}</span>
+     <span><span class="city">${x.city}</span>${guide}<br><span class="dates"><span class="trip">${legCol(x.d1,x.dep,x.arr)}<span class="arr2">\u2192</span>${legCol(x.d2,x.rdep,x.rarr)}${ts.shape?`<span class="shp">${ts.shape}</span>`:""}</span><span class="leg">${ts.nights?`<b class="nts">${ts.nights}</b> \u00b7 `:""}${al?al+" \u00b7 ":""}<b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span></span>
      <span class="price">$${x.price}</span>
      <span class="var">${dealVar(x)}</span>
    </div>`;
