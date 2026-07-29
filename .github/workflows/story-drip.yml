@@ -54,9 +54,14 @@ jobs:
           cfg = json.load(open("config/origins.json"))
           ask = "${{ inputs.origins }}".strip()
           want = [c.strip().upper() for c in ask.split(",") if c.strip()] if ask else None
+          # origins.json carries _comment/_adding_a_city metadata whose values
+          # are strings — .get() on those crashed this job silently on every
+          # run (today's missed 13:05 and 16:05 slots). Same filter ig-post
+          # uses: underscore keys are not cities.
           out = [{"code": c, "token_secret": v["token_secret"]}
                  for c, v in cfg.items()
-                 if (want and c in want) or (not want and v.get("ig_enabled"))]
+                 if isinstance(v, dict) and not c.startswith("_")
+                 and ((want and c in want) or (not want and v.get("ig_enabled")))]
           print("matrix=" + json.dumps(out))
           EOF
 
