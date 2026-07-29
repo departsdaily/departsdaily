@@ -95,10 +95,30 @@ jobs:
             exit 1
           fi
 
+      # Refresh THIS origin's site board first, so the post is built from fares
+      # that are minutes old rather than from whenever the hourly cron last
+      # managed to run. GitHub drops and delays scheduled runs (measured Jul 28:
+      # gaps up to 11.4 hours), and the overnight gap means a dropped 6:23am
+      # refresh would otherwise leave the 10:23pm board as the freshest thing on
+      # disk. Doing it here removes the dependency on the cron entirely.
+      #
+      # continue-on-error on purpose: a Travelpayouts blip must not kill the
+      # morning post. If this step fails, fetch_fares falls back to the
+      # committed snapshot — and site_fares.py refuses that snapshot outright
+      # unless it is from today and inside MAX_FARE_AGE_MIN, so the worst case
+      # is a post built from the pipeline's own fetch, never from last night.
+      - name: Refresh the site board for this origin (fares the post will use)
+        continue-on-error: true
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+          ORIGINS: ${{ matrix.origin.code }}
+        run: python scripts/update_deals.py site/js/deals-data.js
+
       - name: Fetch and verify fares
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
           ORIGIN: ${{ matrix.origin.code }}
+          MAX_FARE_AGE_MIN: "180"
         run: python pipeline/fetch_fares.py
 
       - name: Render slides and stories

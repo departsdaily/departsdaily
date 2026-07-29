@@ -244,6 +244,35 @@ def previous_boards(path):
     return dict(PREV_RX.findall(txt[i:])) if i >= 0 else {}
 
 
+SNAPSHOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "..", "state")
+
+
+def snapshot_path(origin):
+    return os.path.join(SNAPSHOT_DIR, f"fares-{origin.upper()}.json")
+
+
+def write_snapshot(origin, found, failed):
+    """Every route this run actually priced, not just the 8 that made the board.
+
+    `generated` is a timezone-aware ET stamp and the consumer is required to
+    check it — the whole point is that the Instagram post must never be built
+    from last night's fares. See pipeline/site_fares.py.
+    """
+    now = datetime.now(ET)
+    doc = {"origin": origin.upper(),
+           "generated": now.isoformat(timespec="seconds"),
+           "source": "scripts/update_deals.py",
+           "routes_priced": len(found),
+           "routes_failed": sorted(failed),
+           "fares": {d["to"]: d for d in found}}
+    os.makedirs(SNAPSHOT_DIR, exist_ok=True)
+    with open(snapshot_path(origin), "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=1)
+    print(f"  {origin}: fare snapshot written — {len(found)} routes priced "
+          f"({len(failed)} failed) at {now.strftime('%H:%M %Z')}")
+
+
 def board_for(origin, today):
     """Build one origin's daily board. Returns [] if the cache was too thin."""
     found, failed = [], []
@@ -263,6 +292,16 @@ def board_for(origin, today):
         except Exception as e:
             failed.append(dest); print(f"  {origin}->{dest} FETCH FAIL: {e}")
         time.sleep(0.4)  # be polite to the API
+
+    # FARE SNAPSHOT (Jul 29 2026). This run just priced EVERY tracked route for
+    # this origin and is about to throw ~22 of ~30 results away, because only 8
+    # fit the board. The Instagram pipeline was separately re-querying the same
+    # API minutes later and getting a thinner answer (Jul 29: the IG fetch saw
+    # 1 DFW offer while the index held 162). So we write the whole set down.
+    # pipeline/site_fares.py reads it, which means the post and the site are
+    # built from ONE set of fares and can never disagree again.
+    # Costs nothing: not a single extra API call, just data we already paid for.
+    write_snapshot(origin, found, failed)
 
     if len(found) < MIN_ROUTES:
         print(f"  {origin}: only {len(found)} routes returned fares "

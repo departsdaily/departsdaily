@@ -8,7 +8,7 @@ behaves exactly as it did before the pipeline went multi-city."""
 import os, sys, json, datetime, urllib.request, urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import origins, day_plan
+import origins, day_plan, site_fares
 
 # WEEKLY PLAN (owner's rule, Jul 28 2026). Monday sells week long trips,
 # Tue/Wed sell weekends, Thursday sells urgency, Friday leans on Friday being
@@ -134,6 +134,19 @@ recent = {d for d, ts in hist.items()
 # from a log that expires.
 scan = {}
 
+# ONE SET OF FARES (Jul 29 2026, owner's rule). The site board is rebuilt for
+# this origin immediately before this script runs (see ig-post.yml), and it
+# prices EVERY tracked route. We take that whole set as candidates instead of
+# re-querying the API and getting a thinner, different answer — which is how
+# the site came to publish 8 rows on a morning the post published 3.
+# site_fares refuses anything not stamped today and inside MAX_FARE_AGE_MIN,
+# so this can only ever add THIS MORNING's fares.
+SITE_OFFERS, site_note = site_fares.load(ORIGIN)
+print(f"{ORIGIN} site fares: {site_note}")
+if not SITE_OFFERS:
+    print(f"::warning::{ORIGIN} is posting without the site snapshot "
+          f"({site_note}). Falling back to this pipeline's own fetch.")
+
 OFFERS = {}
 for code in ROUTES:
     if code in recent:
@@ -142,12 +155,28 @@ for code in ROUTES:
     try:
         offers = cheapest(code)
     except Exception as e:
-        scan[code] = {"outcome": "fetch failed", "why": str(e)}
-        print(code, "fetch failed", e); continue
-    if not offers:
+        offers = []
+        if code not in SITE_OFFERS:
+            scan[code] = {"outcome": "fetch failed", "why": str(e)}
+            print(code, "fetch failed", e); continue
+        print(code, "own fetch failed, using site snapshot:", e)
+    # Merge, dedupe on (out, back, price), keep cheapest first. Two sources of
+    # the same underlying cache, queried differently, so the union is strictly
+    # more supply than either alone. A merged offer is still just a CANDIDATE:
+    # it has to clear MIN_DISCOUNT against this origin's baseline below.
+    merged, seen_keys = [], set()
+    for o in offers + SITE_OFFERS.get(code, []):
+        key = (o.get("departure_at", "")[:10], (o.get("return_at") or "")[:10],
+               o.get("price"))
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        merged.append(o)
+    merged.sort(key=lambda o: o.get("price") or 1e9)
+    if not merged:
         scan[code] = {"outcome": "no fares", "why": "the fare cache returned nothing"}
         continue
-    OFFERS[code] = offers
+    OFFERS[code] = merged
 
 
 def build(plan):
