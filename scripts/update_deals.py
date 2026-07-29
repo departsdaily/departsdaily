@@ -192,6 +192,24 @@ def dep_time(dt):
     h = dt.hour % 12 or 12
     return f"{h}:{dt.minute:02d}{'AM' if dt.hour < 12 else 'PM'}"
 
+def arr_time(dt, duration_min):
+    """Arrival clock time, derived dep + leg duration — the same derivation the
+    nightly index and the Fare Finder already use. Returns "" when the API gave
+    no duration: an unknown arrival is shown as unknown, never invented. A leg
+    landing after midnight carries "+1", the site's established label for
+    "next day or later"."""
+    try:
+        m = int(duration_min)
+    except (TypeError, ValueError):
+        return ""
+    if m <= 0:
+        return ""
+    total = dt.hour * 60 + dt.minute + m
+    h24, mm = (total % 1440) // 60, total % 60
+    h = h24 % 12 or 12
+    return (f"{h}:{mm:02d}{'AM' if h24 < 12 else 'PM'}"
+            + ("+1" if total >= 1440 else ""))
+
 def pick(dest, fares, today):
     """Cheapest sane round trip. Domestic: 3-90 days out, 2-9 day trips.
     International: 3-120 days out, 4-21 day trips (how people actually fly)."""
@@ -227,6 +245,12 @@ def pick(dest, fares, today):
                     "xfer": 1 if self_transfer else 0}
             if d2.hour or d2.minute:
                 best["rdep"] = dep_time(d2)
+            # Arrivals: derived from the durations when the API supplies them,
+            # absent when it doesn't — identical policy to the Fare Finder.
+            a1 = arr_time(d1, f.get("duration_to"))
+            a2 = arr_time(d2, f.get("duration_back"))
+            if a1: best["arr"] = a1
+            if a2: best["rarr"] = a2
     return best
 
 def js_deal(d, exp=None):
@@ -234,6 +258,8 @@ def js_deal(d, exp=None):
          f'price:{d["price"]},d1:"{d["d1"]}",d2:"{d["d2"]}",dep:"{d["dep"]}",'
          f'al:{json.dumps(d["al"], ensure_ascii=False)},stops:{d["stops"]}')
     if d.get("rdep"): s += f',rdep:"{d["rdep"]}"'
+    if d.get("arr"): s += f',arr:"{d["arr"]}"'
+    if d.get("rarr"): s += f',rarr:"{d["rarr"]}"'
     if d.get("xfer"): s += ',xfer:1' 
     if exp: s += f',exp:"{exp}"'
     return s + "}"

@@ -253,6 +253,7 @@ def build(plan):
                # Times only when the fare actually carried them. A slide has
                # never printed an invented time and must not start now.
                "dep": o.get("dep_time", ""), "rdep": o.get("ret_time", ""),
+               "arr": o.get("arr_time", ""), "rarr": o.get("ret_arr", ""),
                "baseline": base, "disc": round(disc * 100),
                "nights": nights, "on_shape": on_shape, "rung": rung,
                "link": "https://www.aviasales.com" + (o.get("link") or "") + "&marker=755800"}

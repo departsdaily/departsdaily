@@ -100,6 +100,8 @@ def as_offer(origin, dest, f):
             # post should say the same thing the site says.
             "dep_time": f.get("dep") or "",
             "ret_time": f.get("rdep") or "",
+            "arr_time": f.get("arr") or "",
+            "ret_arr":  f.get("rarr") or "",
             "link": search_link(origin, dest, d1, d2),
             "_src": "site"}
 

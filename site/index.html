@@ -445,9 +445,19 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 
 /* Nights sit under the price, nudged left of it: the price is the headline and
    this is the qualifier on it. */
+/* Trip line: one column per leg, date over that leg's own times. */
+.trip{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin:2px 0}
+.lgc{display:inline-flex;flex-direction:column}
+.ld{color:var(--sky)}
+.lt{color:var(--white);font-size:12px;margin-top:1px}
+.arr2{color:var(--dim);padding-top:1px}
 .nts{color:var(--white)}
-.tm{color:var(--white)}
-.tl{color:var(--amber);letter-spacing:.5px}
+/* The trip-shape box. Deliberately louder than the chips around it: amber
+   outline, amber text, sitting inline with the dates it describes. Only
+   earned claims wear it — WEEKEND still means out Thu/Fri, back Sun/Mon. */
+.shp{display:inline-block;border:2px solid var(--amber);color:var(--amber);
+     padding:3px 9px;border-radius:7px;font-size:12.5px;font-weight:800;
+     letter-spacing:1.5px;line-height:1;align-self:center}
 @media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
 
 
@@ -1072,32 +1082,23 @@ function dealVar(x){
 const gf=(o,t,a,b)=>affFlightSearch(o,t,a,b);
 const tiles=t=>[...t].map(c=>`<span class="tile">${c}</span>`).join("");
 
-/* LINE 1 of the trip: the dates, with the day of week computed from the date
-   itself so it can never contradict it, then the night count.
-   e.g. "WED AUG 19 -> SAT AUG 22 · 3 NIGHTS · WEEKEND" */
-function dateLine(d1,d2){
-  const f=iso=>new Date(iso+"T12:00:00-04:00")
+/* THE TRIP, laid out as two columns — one per leg. The date sits on top and
+   that leg's times sit DIRECTLY UNDER IT: departure first, then the arrival
+   we derived from the leg duration (same derivation the Fare Finder uses).
+   Missing pieces simply don't print: dep only when the return time is
+   unknown, date alone when the fare carried no times at all. An arrival
+   after midnight keeps its +1 — "next day or later" — exactly as the
+   finder labels it. */
+function legCol(iso,dep,arr){
+  const d=new Date(iso+"T12:00:00-04:00")
     .toLocaleDateString("en-US",{timeZone:"America/New_York",weekday:"short",
                                  month:"short",day:"numeric"})
     .toUpperCase().replace(",","");
-  const t=tripShape(d1,d2);
-  const shape=t.shape?' \u00b7 <b class="tl">'+t.shape+'</b>':"";
-  const nights=t.nights?' \u00b7 <b class="nts">'+t.nights+'</b>':"";
-  return '<span class="leg">'+f(d1)+' \u2192 '+f(d2)+nights+shape+'</span>';
-}
-
-/* LINE 2: the times each leg departs, then who flies it and how many stops.
-   Times are read off the fare, never derived. A leg with no time in the data
-   is simply absent from this line — the board has never invented a time and
-   is not going to start. */
-function timeLine(x,al){
-  const tail=(al?al+' \u00b7 ':'')+
-    '<b class="'+(x.stops===0?'ns':'st')+'">'+
-    (x.stops===0?'NONSTOP':x.stops+' STOP')+'</b>';
-  let times="";
-  if(x.dep&&x.rdep)   times='<b class="tm">'+x.dep+' \u2192 '+x.rdep+'</b> \u00b7 ';
-  else if(x.dep)      times='<b class="tm">DEPARTS '+x.dep+'</b> \u00b7 ';
-  return '<span class="leg">'+times+tail+'</span>';
+  let t="";
+  if(dep&&arr)      t=dep+" \u2013 "+arr;
+  else if(dep)      t="DEP "+dep;
+  return '<span class="lgc"><b class="ld">'+d+'</b>'+
+         (t?'<span class="lt">'+t+'</span>':'')+'</span>';
 }
 
 /* Trip length + the shape the weekly plan sells. A "weekend" is a claim about
@@ -1125,13 +1126,14 @@ function tripShape(d1,d2){
    the city name be its own link. */
 function rowHTML(code,x){
   const rt=(ROUTES[code]||{})[x.to];
-  const intl=rt&&rt.intl?'<b class="st">INTL</b>':'';
+  const ts=tripShape(x.d1,x.d2);
+  const intl=rt&&rt.intl?' \u00b7 <b class="st">INTL</b>':'';
   /* Airline only when the updater could verify it (nonstop). On a connection the
      API returns the first carrier, not the operator of the whole trip. */
-  const al=x.al?` \u00b7 ${x.al}`:"";
+  const al=x.al||"";
   /* Cheap transatlantic fares are often self-transfer: if leg one is late, the
      second airline owes you nothing. Say so. */
-  const xfer=x.xfer?' <b class="st" title="Separate tickets \u2014 a missed connection is not protected">SELF-TRANSFER</b>':"";
+  const xfer=x.xfer?' \u00b7 <b class="st" title="Separate tickets \u2014 a missed connection is not protected">SELF-TRANSFER</b>':"";
   /* Only link a guide that actually exists. Finder.GUIDES is the single list of
      written guides; a city we track but have not written up yet gets no button
      rather than a 404. */
@@ -1142,7 +1144,7 @@ function rowHTML(code,x){
      <a class="rowlink" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener"
         aria-label="Search ${x.city} flights, $${x.price} round trip"></a>
      <span class="tiles">${tiles(code)}<span class="arr">\u203a</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span>${guide}<br><span class="dates">${dateLine(x.d1,x.d2)}${timeLine(x,x.al)}${intl||xfer?`<span class="leg">${intl}${xfer}</span>`:""}</span></span>
+     <span><span class="city">${x.city}</span>${guide}<br><span class="dates"><span class="trip">${legCol(x.d1,x.dep,x.arr)}<span class="arr2">\u2192</span>${legCol(x.d2,x.rdep,x.rarr)}${ts.shape?`<span class="shp">${ts.shape}</span>`:""}</span><span class="leg">${ts.nights?`<b class="nts">${ts.nights}</b> \u00b7 `:""}${al?al+" \u00b7 ":""}<b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span></span>
      <span class="price">$${x.price}</span>
      <span class="var">${dealVar(x)}</span>
    </div>`;

@@ -70,9 +70,11 @@ def fmt_dates(x):
     # an empty slot from printing as a stray " · · ".
     # Times mirror the website row: both legs when we have both, the outbound
     # alone when that is all the fare carried, nothing when it carried neither.
-    if x.get("dep") and x.get("rdep"): t = f"{x['dep']} → {x['rdep']}"
-    elif x.get("dep"):                 t = f"DEP {x['dep']}"
-    else:                              t = ""
+    # Full leg detail, mirroring the website row: dep–arr per leg when we
+    # have it, dep alone when that is all the fare carried, nothing invented.
+    def leg(d, a): return f"{d}–{a}" if d and a else (f"DEP {d}" if d else "")
+    l1, l2 = leg(x.get("dep",""), x.get("arr","")), leg(x.get("rdep",""), x.get("rarr",""))
+    t = " / ".join(p for p in (l1, l2) if p)
     return " · ".join(p for p in (f"{a}–{b}", t, x["airline"], stops) if p)
 
 # DEALS ONLY — owner's rule (Jul 2026): every row on the board is a real
