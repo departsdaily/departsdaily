@@ -29,6 +29,7 @@ Usage:
     python scripts/fetch_dot_fares.py              # every origin, writes config
     python scripts/fetch_dot_fares.py CLT ATL      # just these
     python scripts/fetch_dot_fares.py --dry-run    # print, write nothing
+    python scripts/fetch_dot_fares.py CLT --discover   # what ELSE DOT publishes
 """
 import json, os, sys, urllib.parse, urllib.request
 
@@ -76,6 +77,60 @@ MARKET = {
     "MSP": "Minneapolis/St. Paul, MN",
     "SAN": "San Diego, CA",
     "RDU": "Raleigh/Durham, NC",
+    # --- Added Jul 29 2026 for --discover. These are reference facts (which
+    # DOT city market an airport sits in), not estimates. A code here does not
+    # put a route on any board: it only lets --discover PRINT a real DOT number
+    # for a market we can name, so the pool can grow on published data instead
+    # of on guesses. Anything DOT does not publish stays absent.
+    "PIT": "Pittsburgh, PA",
+    "STL": "St. Louis, MO",
+    "MCI": "Kansas City, MO",
+    "SLC": "Salt Lake City, UT",
+    "PDX": "Portland, OR",
+    "SAT": "San Antonio, TX",
+    "CLE": "Cleveland, OH",
+    "CMH": "Columbus, OH",
+    "IND": "Indianapolis, IN",
+    "MKE": "Milwaukee, WI",
+    "CVG": "Cincinnati, OH",
+    "SMF": "Sacramento, CA",
+    "PBI": "West Palm Beach/Palm Beach, FL",
+    "RSW": "Fort Myers, FL",
+    "JAX": "Jacksonville, FL",
+    "SRQ": "Sarasota/Bradenton, FL",
+    "SAV": "Savannah, GA",
+    "CHS": "Charleston, SC",
+    "MYR": "Myrtle Beach, SC",
+    "RIC": "Richmond, VA",
+    "ORF": "Norfolk, VA",
+    "GSP": "Greenville/Spartanburg, SC",
+    "MEM": "Memphis, TN",
+    "OKC": "Oklahoma City, OK",
+    "TUL": "Tulsa, OK",
+    "ABQ": "Albuquerque, NM",
+    "TUS": "Tucson, AZ",
+    "BOI": "Boise, ID",
+    "RNO": "Reno, NV",
+    "BUF": "Buffalo, NY",
+    "ROC": "Rochester, NY",
+    "ALB": "Albany, NY",
+    "PVD": "Providence, RI",
+    "BDL": "Hartford, CT",
+    "PWM": "Portland, ME",
+    "BHM": "Birmingham, AL",
+    "JAN": "Jackson, MS",
+    "LIT": "Little Rock, AR",
+    "DSM": "Des Moines, IA",
+    "OMA": "Omaha, NE",
+    "ICT": "Wichita, KS",
+    "GRR": "Grand Rapids, MI",
+    "MSN": "Madison, WI",
+    "BZN": "Bozeman, MT",
+    "JAC": "Jackson, WY",
+    "ASE": "Aspen, CO",
+    "EGE": "Vail/Eagle, CO",
+    "MTJ": "Montrose/Delta, CO",
+    "PSP": "Palm Springs, CA",
 }
 
 # Airports the market label should name explicitly, because the market name
@@ -133,6 +188,60 @@ def norm(name):
     return name.split(" (")[0].strip()
 
 
+def discover(pair, origin, top=80):
+    """Every market DOT publishes from this origin, busiest first.
+
+    THE POOL PROBLEM (Jul 29 2026). The board targets 7 deals a day but CLT has
+    only 24 board-eligible routes, and 7 x a 3-day variety window needs ~28 just
+    to not starve. The pool cannot grow while this script only re-prices the
+    destinations we already track — `dests_for()` is derived from the very
+    config this writes, so it can refresh a number but never find a new route.
+
+    This lists what DOT actually publishes instead, so expansion is a review of
+    real government data rather than a guess about which cities to add. It
+    writes nothing. Every candidate carries its published fare and daily
+    passenger count, and markets we cannot yet name an airport for are listed
+    separately so the MARKET table can be extended deliberately.
+    """
+    home = MARKET.get(origin)
+    if not home:
+        print(f"{origin}: no DOT market mapping")
+        return
+    by_market = {}
+    for key, (fare, pax) in pair.items():
+        if home not in key:
+            continue
+        other = next((m for m in key if m != home), None)
+        if other:
+            by_market[other] = (fare, pax)
+
+    known = {v: k for k, v in MARKET.items() if v != home}
+    have = set(json.load(open(CFG, encoding="utf-8"))["dot_round_trip"]
+               .get(origin, {}))
+
+    ranked = sorted(by_market.items(), key=lambda kv: -kv[1][1])[:top]
+    new, unmapped = [], []
+    for market, (fare, pax) in ranked:
+        code = known.get(market)
+        if not code:
+            unmapped.append((market, fare, pax))
+        elif code not in have:
+            new.append((code, market, fare, pax))
+
+    print(f"\n=== {origin} ({home}) — DOT publishes {len(by_market)} markets ===")
+    print(f"already tracked: {len(have)}")
+    print(f"\nCANDIDATES we can name an airport for ({len(new)}), busiest first:")
+    print(f"{'code':5} {'market':34} {'rt_avg':>7} {'pax/day':>8}")
+    for code, market, fare, pax in new:
+        print(f"{code:5} {market:34} {int(round(fare*2)):>7} {pax:>8.0f}")
+    if unmapped:
+        print(f"\nDOT markets with no airport code in MARKET ({len(unmapped)} of "
+              f"the top {top}) — add the ones worth flying to:")
+        for market, fare, pax in unmapped[:30]:
+            print(f"      {market:34} {int(round(fare*2)):>7} {pax:>8.0f}")
+    print(f"\nPool if every candidate above is adopted: {len(have) + len(new)}")
+
+
 def main():
     args = [a.upper() for a in sys.argv[1:] if not a.startswith("-")]
     dry = "--dry-run" in sys.argv
@@ -146,6 +255,7 @@ def main():
     rows = pull_quarter(f, year, q)
     print(f"pulled {len(rows)} city-pair markets\n")
 
+
     # Directionless: DOT adds both directions together, so key on the pair.
     pair = {}
     for r in rows:
@@ -155,6 +265,11 @@ def main():
                                        float(r.get(f.get("passengers", ""), 0) or 0))
         except (KeyError, TypeError, ValueError):
             continue
+
+    if "--discover" in sys.argv:
+        for origin in origins:
+            discover(pair, origin)
+        return
 
     cfg = json.load(open(CFG, encoding="utf-8"))
     audit = {"_source": ("DOT Consumer Airfare Report Table 6, "
