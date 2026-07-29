@@ -1,66 +1,12 @@
 {
- "generated": "2026-07-28T09:17:53-04:00",
- "base": "2026-07-28",
+ "generated": "2026-07-29T11:21:37-04:00",
+ "base": "2026-07-29",
  "origins": [
   {
    "origin": "CLT",
-   "cities": 25,
-   "offers": 1252,
+   "cities": 23,
+   "offers": 1248,
    "kb": 46
-  },
-  {
-   "origin": "ATL",
-   "cities": 28,
-   "offers": 2459,
-   "kb": 88
-  },
-  {
-   "origin": "ORD",
-   "cities": 28,
-   "offers": 6986,
-   "kb": 250
-  },
-  {
-   "origin": "DFW",
-   "cities": 26,
-   "offers": 1061,
-   "kb": 40
-  },
-  {
-   "origin": "DEN",
-   "cities": 20,
-   "offers": 1769,
-   "kb": 63
-  },
-  {
-   "origin": "LAX",
-   "cities": 27,
-   "offers": 9053,
-   "kb": 323
-  },
-  {
-   "origin": "JFK",
-   "cities": 29,
-   "offers": 11755,
-   "kb": 427
-  },
-  {
-   "origin": "MIA",
-   "cities": 28,
-   "offers": 8106,
-   "kb": 290
-  },
-  {
-   "origin": "SEA",
-   "cities": 24,
-   "offers": 2763,
-   "kb": 100
-  },
-  {
-   "origin": "BOS",
-   "cities": 28,
-   "offers": 4097,
-   "kb": 147
   }
  ],
  "skipped": []
