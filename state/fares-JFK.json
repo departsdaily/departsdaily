@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-07-29T12:16:15-04:00",
+ "generated": "2026-07-29T14:16:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 177,
-   "d1": "2026-08-18",
-   "d2": "2026-08-23",
-   "dep": "9:29PM",
+   "price": 214,
+   "d1": "2026-08-21",
+   "d2": "2026-08-24",
+   "dep": "4:59PM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "12:36AM+1",
-   "rarr": "8:49AM",
-   "pct": 49
+   "rdep": "6:24PM",
+   "arr": "9:41PM",
+   "rarr": "10:41PM",
+   "pct": 38
   },
   "MIA": {
    "to": "MIA",
@@ -218,17 +218,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 365,
-   "d1": "2026-08-07",
-   "d2": "2026-08-09",
-   "dep": "7:05PM",
+   "price": 329,
+   "d1": "2026-08-03",
+   "d2": "2026-08-06",
+   "dep": "7:19PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "11:06PM",
-   "arr": "12:46AM+1",
+   "arr": "12:59AM+1",
    "rarr": "3:59AM+1",
-   "pct": 45
+   "pct": 50
   },
   "SEA": {
    "to": "SEA",

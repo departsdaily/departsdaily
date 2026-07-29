@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-07-29T12:14:37-04:00",
+ "generated": "2026-07-29T14:14:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 552,
+   "price": 511,
    "d1": "2026-10-24",
    "d2": "2026-10-28",
-   "dep": "6:37PM",
+   "dep": "10:48PM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
    "rdep": "2:29PM",
-   "arr": "2:45AM+1",
+   "arr": "5:20AM+1",
    "rarr": "7:34PM",
-   "pct": 11
+   "pct": 18
   },
   "CUN": {
    "to": "CUN",

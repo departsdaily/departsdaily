@@ -1,10 +1,25 @@
 {
  "origin": "SEA",
- "generated": "2026-07-29T12:16:52-04:00",
+ "generated": "2026-07-29T14:16:41-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
+  "AUS": {
+   "to": "AUS",
+   "city": "Austin",
+   "price": 351,
+   "d1": "2026-08-17",
+   "d2": "2026-08-19",
+   "dep": "7:06PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:15PM",
+   "arr": "12:13AM+1",
+   "rarr": "1:48AM+1",
+   "pct": 34
+  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
@@ -38,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 343,
-   "d1": "2026-08-24",
-   "d2": "2026-08-26",
-   "dep": "7:06PM",
+   "price": 267,
+   "d1": "2026-09-14",
+   "d2": "2026-09-20",
+   "dep": "4:27PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:59PM",
-   "arr": "1:29AM+1",
-   "rarr": "8:57PM",
-   "pct": 48
+   "rdep": "7:00AM",
+   "arr": "10:57PM",
+   "rarr": "2:04PM",
+   "pct": 59
   },
   "FLL": {
    "to": "FLL",
@@ -188,17 +203,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 157,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "9:25PM",
-   "al": "Alaska",
+   "price": 199,
+   "d1": "2026-08-24",
+   "d2": "2026-08-28",
+   "dep": "5:20PM",
+   "al": "United",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:22PM",
-   "arr": "11:40PM",
-   "rarr": "9:40PM",
-   "pct": 60
+   "rdep": "9:07PM",
+   "arr": "7:42PM",
+   "rarr": "11:26PM",
+   "pct": 50
   },
   "TPA": {
    "to": "TPA",
