@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-07-29T11:24:06-04:00",
+ "generated": "2026-07-29T12:16:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -139,6 +139,21 @@
    "arr": "8:15AM",
    "rarr": "9:34PM",
    "pct": 37
+  },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 180,
+   "d1": "2026-08-29",
+   "d2": "2026-09-02",
+   "dep": "8:10AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:11PM",
+   "arr": "12:12PM",
+   "rarr": "11:10PM",
+   "pct": 44
   },
   "NYC": {
    "to": "NYC",
@@ -278,17 +293,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 518,
-   "d1": "2026-09-18",
-   "d2": "2026-09-27",
-   "dep": "12:14PM",
-   "al": "American",
-   "stops": 0,
+   "price": 242,
+   "d1": "2026-09-10",
+   "d2": "2026-09-16",
+   "dep": "5:14PM",
+   "al": "Copa",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:16PM",
-   "arr": "1:53PM",
-   "rarr": "7:05PM",
-   "pct": 4
+   "rdep": "12:22PM",
+   "arr": "10:23PM",
+   "rarr": "5:38PM",
+   "pct": 55
   },
   "PAR": {
    "to": "PAR",
