@@ -1,0 +1,37 @@
+{
+ "origin": "ATL",
+ "trail": [
+  {
+   "call": "me",
+   "params": {
+    "fields": "username",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "username": "atldeparts",
+    "id": "28351649267752623"
+   }
+  },
+  {
+   "call": "me/media",
+   "params": {
+    "image_url": "https://departsdaily.com/daily/ATL/2026-07-29/slide1_board.png",
+    "is_carousel_item": "true",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "error": {
+     "message": "The image format is not supported.",
+     "type": "OAuthException",
+     "code": 36001,
+     "error_subcode": 2207083,
+     "is_transient": false,
+     "error_user_title": "Unknown Image Format",
+     "error_user_msg": "The image could not be processed because its format could not be recognized. This usually means the file is corrupted, not a valid image, or the URL returned an error page instead of an image. Please verify that the image_url points to a valid image file in a supported format (JPEG, PNG, GIF, WebP, HEIC, or AVIF). For more information on supported formats and media specifications, see: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating",
+     "fbtrace_id": "A7pjIFyaT_fk6AD2x5LtKg_"
+    }
+   },
+   "status": 400
+  }
+ ]
+}
