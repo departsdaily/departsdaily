@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-07-29 10:01 EDT
+   Generated 2026-07-29 10:14 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-07-29T10:01:01-04:00",
+ updated:"2026-07-29T10:14:02-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:244,d1:"2026-08-19",d2:"2026-08-22",dep:"5:21PM",al:"Frontier",stops:1,rdep:"6:00AM",arr:"11:14PM",rarr:"11:31AM",exp:"2026-07-31"},
@@ -47,7 +47,7 @@ const DEALS={CLT:[
  {to:"LAX",city:"Los Angeles",price:55,d1:"2026-08-24",d2:"2026-08-29",dep:"7:00AM",al:"Frontier",stops:0,rdep:"9:09PM",arr:"9:30AM",rarr:"11:44PM",exp:"2026-07-31"},
  {to:"LAS",city:"Las Vegas",price:76,d1:"2026-08-22",d2:"2026-08-26",dep:"10:49PM",al:"Frontier",stops:0,rdep:"6:00AM",arr:"12:47AM+1",rarr:"8:05AM",exp:"2026-07-31"},
  {to:"MCO",city:"Orlando",price:124,d1:"2026-09-12",d2:"2026-09-15",dep:"6:30AM",al:"Frontier",stops:1,rdep:"5:29PM",arr:"11:05AM",rarr:"10:59PM",exp:"2026-07-31"},
- {to:"ORD",city:"Chicago",price:102,d1:"2026-09-29",d2:"2026-10-05",dep:"8:55PM",al:"Frontier",stops:0,rdep:"6:30AM",arr:"11:23PM",rarr:"9:15AM",exp:"2026-07-31"},
+ {to:"ORD",city:"Chicago",price:105,d1:"2026-09-29",d2:"2026-10-05",dep:"8:55PM",al:"Frontier",stops:0,rdep:"6:30AM",arr:"11:23PM",rarr:"9:15AM",exp:"2026-07-31"},
  {to:"NYC",city:"New York City",price:201,d1:"2026-09-01",d2:"2026-09-04",dep:"2:04PM",al:"JetBlue",stops:1,rdep:"4:50PM",arr:"6:04PM",rarr:"11:36PM",exp:"2026-07-31"},
  {to:"PAR",city:"Paris",price:751,d1:"2026-09-30",d2:"2026-10-07",dep:"4:40PM",al:"Icelandair",stops:1,rdep:"2:00PM",arr:"3:25AM+1",rarr:"1:45AM+1",exp:"2026-07-31"},
  {to:"SJU",city:"San Juan, PR",price:365,d1:"2026-08-01",d2:"2026-08-08",dep:"11:52PM",al:"Frontier",stops:1,rdep:"12:13PM",arr:"6:34AM+1",rarr:"7:44PM",exp:"2026-07-31"},
