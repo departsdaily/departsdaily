@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-07-29T08:38:11-04:00",
+ "generated": "2026-07-29T08:47:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -15,6 +15,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "11:28AM",
    "pct": 64
   },
   "DCA": {
@@ -27,6 +28,7 @@
    "al": "Southwest",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:55PM",
    "pct": 61
   },
   "DEN": {
@@ -39,6 +41,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:10PM",
    "pct": 79
   },
   "DFW": {
@@ -51,6 +54,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:48PM",
    "pct": 81
   },
   "DTW": {
@@ -63,6 +67,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "5:35PM",
    "pct": 44
   },
   "FLL": {
@@ -75,6 +80,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:13PM",
    "pct": 78
   },
   "HOU": {
@@ -87,6 +93,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:28AM",
    "pct": 82
   },
   "LAS": {
@@ -99,6 +106,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "7:36AM",
    "pct": 73
   },
   "LAX": {
@@ -111,6 +119,7 @@
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
+   "rdep": "6:00AM",
    "pct": 61
   },
   "MCO": {
@@ -123,6 +132,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "3:21PM",
    "pct": 88
   },
   "MIA": {
@@ -135,6 +145,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "8:10AM",
    "pct": 78
   },
   "NYC": {
@@ -147,6 +158,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "1:00PM",
    "pct": 67
   },
   "ORD": {
@@ -159,6 +171,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:05AM",
    "pct": 69
   },
   "PHL": {
@@ -171,6 +184,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "1:32PM",
    "pct": 81
   },
   "SEA": {
@@ -183,6 +197,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "8:53PM",
    "pct": 33
   },
   "SFO": {
@@ -195,6 +210,7 @@
    "al": "United",
    "stops": 1,
    "xfer": 0,
+   "rdep": "9:20PM",
    "pct": 59
   },
   "TPA": {
@@ -207,6 +223,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "12:59PM",
    "pct": 91
   },
   "AMS": {
@@ -219,6 +236,7 @@
    "al": "Turkish",
    "stops": 1,
    "xfer": 0,
+   "rdep": "10:20PM",
    "pct": -5
   },
   "AUA": {
@@ -231,6 +249,7 @@
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
+   "rdep": "2:29PM",
    "pct": 11
   },
   "CUN": {
@@ -243,6 +262,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "3:06PM",
    "pct": 65
   },
   "LON": {
@@ -255,6 +275,7 @@
    "al": "",
    "stops": 2,
    "xfer": 1,
+   "rdep": "2:00PM",
    "pct": 12
   },
   "MBJ": {
@@ -267,6 +288,7 @@
    "al": "American",
    "stops": 2,
    "xfer": 0,
+   "rdep": "3:23PM",
    "pct": 12
   },
   "PAR": {
@@ -279,6 +301,7 @@
    "al": "",
    "stops": 1,
    "xfer": 1,
+   "rdep": "1:35PM",
    "pct": 9
   },
   "PUJ": {
@@ -291,6 +314,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "3:31PM",
    "pct": 56
   },
   "ROM": {
@@ -303,6 +327,7 @@
    "al": "",
    "stops": 2,
    "xfer": 1,
+   "rdep": "8:00PM",
    "pct": 9
   },
   "SJU": {
@@ -315,6 +340,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "4:39PM",
    "pct": 54
   }
  }

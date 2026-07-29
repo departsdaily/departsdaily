@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-07-29T08:40:19-04:00",
+ "generated": "2026-07-29T08:49:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -15,6 +15,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "12:55PM",
    "pct": 55
   },
   "BOS": {
@@ -27,6 +28,7 @@
    "al": "American",
    "stops": 1,
    "xfer": 0,
+   "rdep": "12:57PM",
    "pct": 54
   },
   "DCA": {
@@ -39,6 +41,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "1:59PM",
    "pct": 48
   },
   "FLL": {
@@ -51,6 +54,7 @@
    "al": "Alaska",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:22PM",
    "pct": 42
   },
   "HOU": {
@@ -63,6 +67,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "10:09PM",
    "pct": 35
   },
   "LAS": {
@@ -75,18 +80,20 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:50AM",
    "pct": 71
   },
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
    "price": 83,
-   "d1": "2026-09-12",
-   "d2": "2026-09-14",
+   "d1": "2026-09-10",
+   "d2": "2026-09-13",
    "dep": "8:15PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "3:35PM",
    "pct": 81
   },
   "MCO": {
@@ -99,6 +106,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "8:43PM",
    "pct": 67
   },
   "MIA": {
@@ -111,6 +119,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "5:50AM",
    "pct": 50
   },
   "NYC": {
@@ -123,6 +132,7 @@
    "al": "United",
    "stops": 0,
    "xfer": 0,
+   "rdep": "8:33PM",
    "pct": 49
   },
   "ORD": {
@@ -135,6 +145,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "9:57PM",
    "pct": 68
   },
   "PHL": {
@@ -147,6 +158,7 @@
    "al": "United",
    "stops": 1,
    "xfer": 0,
+   "rdep": "1:31PM",
    "pct": 62
   },
   "SFO": {
@@ -159,6 +171,7 @@
    "al": "Alaska",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:22PM",
    "pct": 60
   },
   "TPA": {
@@ -171,6 +184,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "6:15AM",
    "pct": 58
   },
   "CUN": {
@@ -183,6 +197,7 @@
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
+   "rdep": "5:25AM",
    "pct": -5
   },
   "LON": {
@@ -195,6 +210,7 @@
    "al": "SK",
    "stops": 1,
    "xfer": 0,
+   "rdep": "7:30PM",
    "pct": 17
   },
   "PAR": {
@@ -207,6 +223,7 @@
    "al": "DE",
    "stops": 1,
    "xfer": 0,
+   "rdep": "4:50PM",
    "pct": 10
   },
   "ROM": {
@@ -219,6 +236,7 @@
    "al": "DE",
    "stops": 1,
    "xfer": 0,
+   "rdep": "8:10AM",
    "pct": 34
   }
  }

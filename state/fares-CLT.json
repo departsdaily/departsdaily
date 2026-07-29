@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-07-29T08:37:51-04:00",
+ "generated": "2026-07-29T08:47:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -15,6 +15,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "7:43PM",
    "pct": 69
   },
   "BOS": {
@@ -27,6 +28,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "7:00AM",
    "pct": 36
   },
   "DCA": {
@@ -39,6 +41,7 @@
    "al": "American",
    "stops": 0,
    "xfer": 0,
+   "rdep": "5:00AM",
    "pct": 34
   },
   "DEN": {
@@ -51,6 +54,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "11:00AM",
    "pct": 51
   },
   "FLL": {
@@ -63,6 +67,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:24PM",
    "pct": 60
   },
   "LAS": {
@@ -75,6 +80,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "6:00AM",
    "pct": 67
   },
   "LAX": {
@@ -87,6 +93,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "9:40PM",
    "pct": 63
   },
   "MIA": {
@@ -99,6 +106,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "2:27PM",
    "pct": 62
   },
   "MSY": {
@@ -111,6 +119,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "10:48AM",
    "pct": 39
   },
   "NYC": {
@@ -123,6 +132,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:39PM",
    "pct": 57
   },
   "ORD": {
@@ -135,6 +145,7 @@
    "al": "American",
    "stops": 1,
    "xfer": 0,
+   "rdep": "12:44AM",
    "pct": 38
   },
   "PHX": {
@@ -147,6 +158,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "9:10AM",
    "pct": 51
   },
   "SEA": {
@@ -159,6 +171,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "7:06PM",
    "pct": 51
   },
   "SFO": {
@@ -171,6 +184,7 @@
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
+   "rdep": "12:29AM",
    "pct": 61
   },
   "CUN": {
@@ -183,6 +197,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "1:59PM",
    "pct": 26
   },
   "LON": {
@@ -195,6 +210,7 @@
    "al": "",
    "stops": 1,
    "xfer": 1,
+   "rdep": "2:00PM",
    "pct": 15
   },
   "PAR": {
@@ -207,6 +223,7 @@
    "al": "",
    "stops": 1,
    "xfer": 0,
+   "rdep": "6:25AM",
    "pct": 10
   },
   "PUJ": {
@@ -219,6 +236,7 @@
    "al": "Air Canada",
    "stops": 2,
    "xfer": 0,
+   "rdep": "7:45PM",
    "pct": 5
   },
   "SJU": {
@@ -231,6 +249,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "8:57PM",
    "pct": 37
   }
  }

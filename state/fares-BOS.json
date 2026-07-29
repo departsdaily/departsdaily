@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-07-29T08:40:37-04:00",
+ "generated": "2026-07-29T08:49:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -15,6 +15,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "10:58AM",
    "pct": 48
   },
   "BNA": {
@@ -27,6 +28,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "10:30AM",
    "pct": 45
   },
   "DEN": {
@@ -39,6 +41,7 @@
    "al": "United",
    "stops": 1,
    "xfer": 0,
+   "rdep": "11:59PM",
    "pct": 61
   },
   "DFW": {
@@ -51,6 +54,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "8:35AM",
    "pct": 57
   },
   "FLL": {
@@ -63,6 +67,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "5:47PM",
    "pct": 45
   },
   "HOU": {
@@ -75,6 +80,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "8:02PM",
    "pct": 14
   },
   "LAS": {
@@ -87,6 +93,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "11:41PM",
    "pct": 61
   },
   "LAX": {
@@ -99,6 +106,7 @@
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
+   "rdep": "9:50PM",
    "pct": 79
   },
   "MCO": {
@@ -111,6 +119,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:00AM",
    "pct": 49
   },
   "MIA": {
@@ -123,6 +132,7 @@
    "al": "American",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:45PM",
    "pct": 61
   },
   "NYC": {
@@ -135,6 +145,7 @@
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:40AM",
    "pct": 51
   },
   "ORD": {
@@ -147,6 +158,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "10:59AM",
    "pct": 47
   },
   "PHL": {
@@ -159,6 +171,7 @@
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:48PM",
    "pct": 39
   },
   "PHX": {
@@ -171,6 +184,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "11:52PM",
    "pct": 39
   },
   "SEA": {
@@ -183,6 +197,7 @@
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
+   "rdep": "11:45PM",
    "pct": 21
   },
   "SFO": {
@@ -195,6 +210,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "10:05PM",
    "pct": 67
   },
   "TPA": {
@@ -207,6 +223,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "6:35PM",
    "pct": 51
   },
   "AMS": {
@@ -219,6 +236,7 @@
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
+   "rdep": "12:15PM",
    "pct": 13
   },
   "AUA": {
@@ -231,6 +249,7 @@
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
+   "rdep": "12:20PM",
    "pct": 24
   },
   "CUN": {
@@ -243,6 +262,7 @@
    "al": "Aerom\u00e9xico",
    "stops": 1,
    "xfer": 0,
+   "rdep": "1:30PM",
    "pct": 20
   },
   "LON": {
@@ -255,6 +275,7 @@
    "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
+   "rdep": "3:40PM",
    "pct": 28
   },
   "PAR": {
@@ -267,6 +288,7 @@
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
+   "rdep": "9:55AM",
    "pct": 36
   },
   "PUJ": {
@@ -279,6 +301,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "1:25PM",
    "pct": 59
   },
   "ROM": {
@@ -291,6 +314,7 @@
    "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
+   "rdep": "3:55PM",
    "pct": 33
   },
   "SJU": {
@@ -303,6 +327,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "6:00AM",
    "pct": 36
   }
  }

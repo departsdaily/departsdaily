@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-07-29T08:39:05-04:00",
+ "generated": "2026-07-29T08:48:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -15,6 +15,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:30PM",
    "pct": 63
   },
   "BOS": {
@@ -27,6 +28,7 @@
    "al": "Southwest",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:20AM",
    "pct": 63
   },
   "DCA": {
@@ -39,6 +41,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:00AM",
    "pct": 22
   },
   "FLL": {
@@ -51,6 +54,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "9:54PM",
    "pct": 65
   },
   "LAS": {
@@ -63,6 +67,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:00AM",
    "pct": 79
   },
   "LAX": {
@@ -75,6 +80,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "9:09PM",
    "pct": 86
   },
   "MCO": {
@@ -87,6 +93,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "5:29PM",
    "pct": 75
   },
   "MIA": {
@@ -99,6 +106,7 @@
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
+   "rdep": "8:10AM",
    "pct": 57
   },
   "MSY": {
@@ -111,6 +119,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "6:17PM",
    "pct": 48
   },
   "NYC": {
@@ -123,6 +132,7 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
+   "rdep": "4:50PM",
    "pct": 63
   },
   "ORD": {
@@ -135,6 +145,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "6:30AM",
    "pct": 75
   },
   "SEA": {
@@ -147,6 +158,7 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
+   "rdep": "7:07PM",
    "pct": 67
   },
   "SFO": {
@@ -159,6 +171,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "8:56PM",
    "pct": 40
   },
   "PAR": {
@@ -171,6 +184,7 @@
    "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
+   "rdep": "2:00PM",
    "pct": 17
   },
   "PUJ": {
@@ -183,6 +197,7 @@
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
+   "rdep": "5:05PM",
    "pct": -2
   },
   "SJU": {
@@ -195,6 +210,7 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
+   "rdep": "12:13PM",
    "pct": 13
   }
  }
