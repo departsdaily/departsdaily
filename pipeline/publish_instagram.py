@@ -129,20 +129,22 @@ cap += ("\n\n📅 Exact dates on every slide"
         "\n🔗 Booking links in bio"
         "\n🌅 New board every morning at 7AM\n\n").format(ORIGIN)
 
+# Owner rule (Jul 2026): top hashtags only, across ALL accounts — enough for
+# discovery, never spammy. Also a hard technical reason: with 31+ tags the
+# CAROUSEL container call returns id "0" and media_publish 500s (hit at ATL launch).
 tags = list(ORG["hashtags"]) + [
-        "#CheapFlights", "#FlightDeals", "#FlightDeal", "#TravelDeals",
-        "#AirfareDeals", "#BudgetTravel", "#CheapTravel", "#TravelHacks",
-        "#VacationDeals", "#Travel", "#TravelGram", "#Wanderlust"]
-tags += {"weekend":  ["#WeekendTrip", "#WeekendGetaway", "#LongWeekend"],
-         "urgent":   ["#WeekendTrip", "#LastMinuteTravel", "#SpontaneousTravel"],
-         "week":     ["#WeekLongTrip", "#VacationMode", "#TripPlanning"],
-         "friday":   ["#WeekendTrip", "#FlyFriday", "#TravelTips"],
-         "twoweek":  ["#TripOfALifetime", "#Honeymoon", "#BigTrip"],
+        "#CheapFlights", "#FlightDeals", "#TravelDeals", "#BudgetTravel"]
+tags += {"weekend":  ["#WeekendGetaway"],
+         "urgent":   ["#LastMinuteTravel"],
+         "week":     ["#VacationMode"],
+         "friday":   ["#WeekendTrip"],
+         "twoweek":  ["#BigTrip"],
          }.get(PLAN.get("shape"), ["#WeekendTrip"])
-for d in B["deals"]:
+for d in B["deals"][:4]:
     t = "#" + "".join(c for c in d["city"] if c.isalnum())
     if t not in tags:
         tags.append(t)
+tags = tags[:15]
 cap += " ".join(tags)
 
 children = []
