@@ -1,0 +1,72 @@
+{
+ "date": "2026-07-29",
+ "origin": "CLT",
+ "deals": [
+  {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 266,
+   "d1": "2026-08-14",
+   "d2": "2026-08-18",
+   "airline": "F9",
+   "stops": 0,
+   "baseline": 318,
+   "disc": 16,
+   "nights": 4,
+   "on_shape": false,
+   "rung": "nights",
+   "link": "https://www.aviasales.com/search/CLT1408SJU18081?t=F917867392801786753380000235CLTSJU17870866201787126460000664SJUMCOCLT_5ce3cd5efd683e890475caba972d3812_20655&search_date=24072026&expected_price_uuid=019f95c4-c030-8040-241c-560a63460ea9&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rGO8LR3-qAMWy8riLD9kQQ&expected_price_source=share&expected_price_currency=usd&expected_price=266&marker=755800",
+   "deal": true
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 261,
+   "d1": "2026-09-18",
+   "d2": "2026-09-21",
+   "airline": "F9",
+   "stops": 1,
+   "baseline": 306,
+   "disc": 15,
+   "nights": 3,
+   "on_shape": true,
+   "rung": "shape",
+   "link": "https://www.aviasales.com/search/CLT1809LAS21091?t=F917897604601789774260000410CLTDENLAS17900214001790075700000725LASDFWCLT_bd935ace0c3ec09b33d9f6fa2beaba8c_20352&search_date=22072026&expected_price_uuid=019f8bd9-595b-8040-2743-29435a34c511&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=4GcJPKHsHdNnU1O_tGfjBw&expected_price_source=share&expected_price_currency=usd&expected_price=261&marker=755800",
+   "deal": true
+  },
+  {
+   "to": "MIA",
+   "city": "Miami",
+   "price": 156,
+   "d1": "2026-08-13",
+   "d2": "2026-08-20",
+   "airline": "F9",
+   "stops": 0,
+   "baseline": 178,
+   "disc": 12,
+   "nights": 7,
+   "on_shape": false,
+   "rung": "wide",
+   "link": "https://www.aviasales.com/search/CLT1308MIA20081?t=F917866468801786655100000137CLTMIA17872360201787244360000139MIACLT_701203823b7f47316bc30ac62ddde9af_12172&search_date=27072026&expected_price_uuid=019fa52e-dd96-8040-ad58-e04abd0a8527&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=XIRaU1_Za_ScwknfyxLxUg&expected_price_source=share&expected_price_currency=usd&expected_price=156&marker=755800",
+   "deal": true
+  }
+ ],
+ "n_deals": 3,
+ "skip": null,
+ "plan": {
+  "shape": "weekend",
+  "cover": "WEEKEND GETAWAYS",
+  "angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.",
+  "content": "board",
+  "nights": [
+   2,
+   4
+  ],
+  "on_shape": 1,
+  "rungs": {
+   "shape": 1,
+   "nights": 1,
+   "wide": 1
+  }
+ }
+}
