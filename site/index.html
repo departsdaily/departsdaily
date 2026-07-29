@@ -506,6 +506,19 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 <div id="paneBoard">
 <div class="citybar" id="citybar" role="tablist" aria-label="Choose your airport"></div>
 
+<!-- TODAY'S POST. The exact board that went out on Instagram this morning,
+     read from site/data/post-<ORIGIN>.json, which the posting workflow writes
+     at publish time. It sits ABOVE the live board on purpose: most visitors
+     arrive from the bio link having just seen these fares, and landing them on
+     a different set of deals wastes the click. Hidden entirely when there is
+     no post for the selected city, so ATL shows nothing rather than an empty
+     promise. -->
+<div class="board" id="postBoard" hidden>
+  <div class="bhead"><span>■ TODAY&#39;S INSTAGRAM POST — <span id="postCity"></span></span><span id="postStamp"></span></div>
+  <div id="postRows"></div>
+  <div class="bfoot">These are the exact fares from this morning&#39;s post, in the same order. Tapping a row runs a <b style="color:var(--white)">live search</b> for those dates — the price you book is today&#39;s price. Fares move; if one has gone, the live search shows the current best.</div>
+</div>
+
 <div class="board">
   <div class="bhead"><span>DEPARTURES — <span id="boardCity">CHARLOTTE (CLT)</span></span><span id="boardStamp">ROUND TRIP</span></div>
   <div id="rows"></div>
@@ -1135,6 +1148,32 @@ function rowHTML(code,x){
    </div>`;
 }
 
+/* Load and render the morning post for one origin. Fails silently and stays
+   hidden: a missing post is the normal state for a city that has not launched
+   its Instagram yet, and must never render an error at a visitor. */
+async function loadPost(code){
+  const box=document.getElementById("postBoard");
+  box.hidden=true;
+  try{
+    const r=await fetch("data/post-"+code+".json",{cache:"no-store"});
+    if(!r.ok) return;
+    const b=await r.json();
+    if(!b || !Array.isArray(b.deals) || !b.deals.length) return;
+    // Only show TODAY's post. Yesterday's board is not "today's post", and the
+    // rotating board below is the honest thing to show instead.
+    const today=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+    if(b.date!==today) return;
+    document.getElementById("postCity").textContent=
+      (document.getElementById("boardCity").textContent||code);
+    document.getElementById("postStamp").textContent=
+      b.deals.length+" DEAL"+(b.deals.length===1?"":"S")+" · POSTED THIS MORNING";
+    document.getElementById("postRows").innerHTML=
+      b.deals.map(d=>rowHTML(code,{to:d.to,city:d.city,price:d.price,d1:d.d1,d2:d.d2,
+                                   dep:d.dep,rdep:d.rdep,al:d.airline,stops:d.stops})).join("");
+    box.hidden=false;
+  }catch(e){/* stay hidden */}
+}
+
 function renderCity(code){
   curOrigin=code;
   /* Before any early return — a city with no board yet still needs the
@@ -1143,6 +1182,7 @@ function renderCity(code){
   document.getElementById("heroCity").textContent=code;
   const c=CITIES.find(x=>x.code===code);
   document.getElementById("boardCity").textContent=c.name;
+  loadPost(code);          // async, renders above the live board when it lands
   const rows=document.getElementById("rows");
   document.querySelectorAll("#citybar .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===code));
   renderRoutes(code);

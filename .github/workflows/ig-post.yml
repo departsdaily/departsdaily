@@ -141,6 +141,15 @@ jobs:
           echo "dest=$DEST" >> "$GITHUB_OUTPUT"
           mkdir -p "$DEST"
           cp "$SRC"/*.png "$DEST/"
+          # Publish the EXACT board that is about to be posted, so the website
+          # can show it. Someone who taps the bio link after seeing a fare on
+          # Instagram was landing on the rotating board, which is chosen by a
+          # different rule and frequently does not contain the fare they came
+          # for. Same file, dated copy kept so an old post still converts.
+          mkdir -p site/data site/daily
+          if [ "$ORIGIN" = "CLT" ]; then DEALS=deals.json; else DEALS="deals-$ORIGIN.json"; fi
+          cp "$DEALS" "site/data/post-$ORIGIN.json"
+          cp "$DEALS" "$DEST/board.json"
           # keep only the last 14 days of slide folders for this origin
           ls -1d $KEEP 2>/dev/null | grep -E '/[0-9]{4}-[0-9]{2}-[0-9]{2}/$' \
             | sort | head -n -14 | xargs -r rm -rf
