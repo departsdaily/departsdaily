@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-07-29T09:41:06-04:00",
+ "generated": "2026-07-29T10:01:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
