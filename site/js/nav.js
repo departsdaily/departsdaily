@@ -7,9 +7,10 @@
    ===================================================================== */
 (function () {
   var LINKS = [
-    { href: "index.html",     label: "DEAL BOARD"  },
-    { href: "guides.html",    label: "CITY GUIDES" },
-    { href: "gear.html",      label: "GEAR"        }
+    { href: "index.html",     label: "DEAL BOARD"   },
+    { href: "guides.html",    label: "CITY GUIDES"  },
+    { href: "book.html",      label: "BOOKING DESK" },
+    { href: "gear.html",      label: "GEAR"         }
   ];
 
   var path  = location.pathname;
