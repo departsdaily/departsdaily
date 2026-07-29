@@ -31,7 +31,7 @@
     "gate": "GATE B-24",
     "handle": "atldeparts",
     "token_secret": "IG_TOKEN_ATL",
-    "ig_enabled": false,
+    "ig_enabled": true,
     "caption_lead": "ATL DEPARTURES",
     "hashtags": [
       "#ATL",
