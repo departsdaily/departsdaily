@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-07-29T14:16:41-04:00",
+ "generated": "2026-07-29T16:16:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 382,
-   "d1": "2026-08-05",
+   "price": 611,
+   "d1": "2026-08-03",
    "d2": "2026-08-07",
-   "dep": "2:22PM",
-   "al": "Frontier",
+   "dep": "11:46PM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:09PM",
-   "arr": "7:52PM",
+   "arr": "9:12AM+1",
    "rarr": "4:02AM+1",
-   "pct": 35
+   "pct": -4
   },
   "LAS": {
    "to": "LAS",
@@ -113,17 +113,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 83,
-   "d1": "2026-09-10",
-   "d2": "2026-09-13",
-   "dep": "8:15PM",
+   "price": 74,
+   "d1": "2026-09-04",
+   "d2": "2026-09-09",
+   "dep": "10:34AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "3:35PM",
-   "arr": "11:04PM",
-   "rarr": "6:36PM",
-   "pct": 81
+   "rdep": "3:09PM",
+   "arr": "1:34PM",
+   "rarr": "6:10PM",
+   "pct": 83
   },
   "MCO": {
    "to": "MCO",

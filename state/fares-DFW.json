@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-07-29T14:15:11-04:00",
+ "generated": "2026-07-29T16:15:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 114,
-   "d1": "2026-10-12",
-   "d2": "2026-10-16",
-   "dep": "10:39AM",
+   "price": 108,
+   "d1": "2026-09-26",
+   "d2": "2026-09-28",
+   "dep": "12:17PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:00AM",
-   "arr": "1:29PM",
-   "rarr": "11:33AM",
-   "pct": 76
+   "rdep": "3:22PM",
+   "arr": "3:06PM",
+   "rarr": "5:59PM",
+   "pct": 77
   },
   "SEA": {
    "to": "SEA",
@@ -248,17 +248,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 816,
-   "d1": "2026-09-15",
-   "d2": "2026-09-30",
-   "dep": "7:50AM",
-   "al": "Frontier",
-   "stops": 3,
+   "price": 994,
+   "d1": "2026-08-16",
+   "d2": "2026-08-30",
+   "dep": "9:30PM",
+   "al": "Turkish",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:10PM",
-   "arr": "9:32PM",
-   "rarr": "3:09AM+1",
-   "pct": 7
+   "rdep": "7:20AM",
+   "arr": "1:00PM+1",
+   "rarr": "11:45PM",
+   "pct": -13
   },
   "CUN": {
    "to": "CUN",

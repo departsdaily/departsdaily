@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-07-29T14:16:07-04:00",
+ "generated": "2026-07-29T16:16:03-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -98,16 +98,16 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 146,
-   "d1": "2026-08-19",
+   "price": 147,
+   "d1": "2026-08-23",
    "d2": "2026-08-25",
-   "dep": "11:30AM",
+   "dep": "5:50AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "9:10PM",
-   "arr": "2:45PM",
-   "rarr": "1:46AM+1",
+   "rdep": "10:15PM",
+   "arr": "8:50AM",
+   "rarr": "1:18AM+1",
    "pct": 65
   },
   "HOU": {
