@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Departs Daily — Cheap flights from your airport. Every day.</title>
-<meta name="description" content="Data-driven flight deals from CLT and 9 more US airports. Every fare compared against its route average. Updated every hour, around the clock.">
+<meta name="description" content="Data-driven flight deals from CLT and 9 more US airports. Every fare compared against its route average. Refreshed through the day, every day.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -482,7 +482,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
     <a href="gear.html">GEAR</a>
     <a href="disclosure.html">DISCLOSURE</a>
   </nav>
-  <span class="tag">CHEAP FLIGHTS. EVERY DAY.<br>UPDATED EVERY HOUR</span>
+  <span class="tag">CHEAP FLIGHTS. EVERY DAY.<br>REFRESHED THROUGH THE DAY</span>
 </div></header>
 
 <main class="wrap">
@@ -611,7 +611,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 <section>
   <h2 id="how">How the numbers work</h2>
   <div class="method">
-    <div class="mcard"><b>1 · Scan.</b> Every hour, around the clock, our system sweeps live airfare search data across every route we track from the selected airport — real fares found in real searches.</div>
+    <div class="mcard"><b>1 · Scan.</b> Several times a day, our system sweeps live airfare search data across every route we track from the selected airport — real fares found in real searches.</div>
     <div class="mcard"><b>2 · Compare.</b> Each fare is measured against the route's average price — official DOT/BTS government data on domestic routes, clearly-labeled estimates on international ones. No baseline, no post.</div>
     <div class="mcard"><b>3 · Rank.</b> Only the top savings make the board — and nothing repeats within 6 days, so the board is always fresh.</div>
   </div>
@@ -652,7 +652,7 @@ const CITIES=[
 
 /* =====================================================================
    DAILY BOARD DATA now lives in js/deals-data.js — a small generated
-   file rewritten automatically every hour from live
+   file rewritten automatically through the day from live
    Travelpayouts fare data (see scripts/update_deals.py in the repo).
    Never hand-edit deals here; the generator owns that file.
    ===================================================================== */
@@ -1102,7 +1102,7 @@ function renderCity(code){
   renderRoutes(code);
   if(!DEALS[code]){rows.innerHTML=`<div class="empty">This board opens soon.<br>Get on the email list below and you'll know the day ${code} goes live.</div>`;return;}
   const deals=liveDeals(DEALS[code]);
-  if(!deals.length){rows.innerHTML=`<div class="empty">Today's deals have expired — the board refreshes every hour.<br>Get on the email list below so tomorrow's fares land in your inbox.</div>`;return;}
+  if(!deals.length){rows.innerHTML=`<div class="empty">Today's deals have expired — the board refreshes through the day.<br>Get on the email list below so tomorrow's fares land in your inbox.</div>`;return;}
   rows.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
 }
 

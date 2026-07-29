@@ -1,8 +1,19 @@
-name: Hourly board refresh
+name: Board refresh
 
+# MEASURED Jul 28 2026: the old hourly cron ("7 * * * *") delivered 36 runs in
+# a 56 hour window, with gaps up to 11.4 hours. Two reasons:
+#   1. GitHub delays or DROPS scheduled runs under load, and the worst slot is
+#      the top of the hour. Minute :07 sat right in it. Now :23.
+#   2. Hourly across 10 origins was also ~7,200 Travelpayouts calls a day for
+#      a board almost nobody reads at 4am.
+# So: every 2 hours through waking hours, nothing overnight. 9 runs a day,
+# roughly 2,700 calls, and a single dropped run now costs 2 hours instead of 6.
+# Times are UTC and shift by an hour at DST. In November move these to
+# 1,3,11,13,15,17,19,21,23 to keep the same local hours.
+#   10:23 UTC = 6:23am ET  ...  02:23 UTC = 10:23pm ET
 on:
   schedule:
-    - cron: "7 * * * *"    # hourly — Cloudflare Pages deploys on push, free
+    - cron: "23 0,2,10,12,14,16,18,20,22 * * *"
   workflow_dispatch:        # allows manual "Run workflow" button too
   push:                     # any site/script change pushed to main auto-deploys
     branches: [main]
