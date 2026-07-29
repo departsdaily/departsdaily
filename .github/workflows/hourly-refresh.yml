@@ -1,23 +1,37 @@
 name: Board refresh
 
-# MEASURED Jul 28 2026: the old hourly cron ("7 * * * *") delivered 36 runs in
-# a 56 hour window, with gaps up to 11.4 hours. Two reasons:
-#   1. GitHub delays or DROPS scheduled runs under load, and the worst slot is
-#      the top of the hour. Minute :07 sat right in it. Now :23.
-#   2. Hourly across 10 origins was also ~7,200 Travelpayouts calls a day for
-#      a board almost nobody reads at 4am.
-# So: every 2 hours through waking hours, nothing overnight. 9 runs a day,
-# roughly 2,700 calls, and a single dropped run now costs 2 hours instead of 6.
-# Times are UTC and shift by an hour at DST. In November move these to
-# 1,3,11,13,15,17,19,21,23 to keep the same local hours.
-#   10:23 UTC = 6:23am ET  ...  02:23 UTC = 10:23pm ET
+# THE SCHEDULE DOES NOT LIVE HERE ANY MORE. It lives in worker/wrangler.toml.
+#
+# WHY. GitHub's cron is best effort and openly drops runs. Measured Jul 28
+# 2026: 36 of 56 hourly slots actually delivered, with gaps up to 11.4 hours.
+# Retiming it to every 2 hours on Jul 29 made it worse, not better — GitHub
+# delivered ZERO of the next two slots and the board sat at the previous
+# evening's stamp until an unrelated push happened to shake it loose.
+#
+# So the heartbeat is now a Cloudflare cron trigger on the departsdaily-fares
+# Worker, firing every 2 hours at :13 around the clock and POSTing
+# repository_dispatch (event_type: board-refresh) to start this workflow.
+# Cloudflare fires on time. A plain 2 hour interval also means DST never
+# needs a code change and there is no overnight hole.
+#
+# The cron below is a BACKUP for the case where Cloudflare or the dispatch
+# token is down. It runs on the odd hours at :43, an hour off the Worker, and
+# the freshness gate makes it a no-op whenever the board is already current —
+# so it costs nothing while the primary path works.
 on:
+  repository_dispatch:
+    types: [board-refresh]   # <- the Cloudflare Worker cron. PRIMARY.
   schedule:
-    - cron: "23 0,2,10,12,14,16,18,20,22 * * *"
+    - cron: "43 1-23/2 * * *"   # backup only; skipped if the board is fresh
   workflow_dispatch:        # allows manual "Run workflow" button too
   push:                     # any site/script change pushed to main auto-deploys
     branches: [main]
     paths: ["site/**", "scripts/**", ".github/workflows/hourly-refresh.yml"]
+
+# Two triggers landing together must not race each other's push.
+concurrency:
+  group: board-refresh
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -32,12 +46,35 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Freshness gate (backup cron only)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import re, datetime, sys
+          src = open("site/js/deals-data.js").read()
+          m = re.search(r'updated:"([^"]+)"', src)
+          if not m:
+              print("run=yes"); sys.exit(0)
+          age = (datetime.datetime.now(datetime.timezone.utc)
+                 - datetime.datetime.fromisoformat(m.group(1))).total_seconds() / 60
+          print(f"run={'yes' if age > 100 else 'no'}")
+          print(f"age={age:.0f}", file=sys.stderr)
+          EOF
+      - name: Note when the backup stands down
+        if: steps.gate.outputs.run != 'yes'
+        run: echo "Board is under 100 minutes old - the Worker cron is doing its job. Nothing to do." >> $GITHUB_STEP_SUMMARY
+
       - name: Pull live fares and rewrite board data
+        if: steps.gate.outputs.run == 'yes'
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
         run: python scripts/update_deals.py site/js/deals-data.js
 
       - name: Commit refreshed board
+        if: steps.gate.outputs.run == 'yes'
         run: |
           git config user.name "departs-daily-bot"
           git config user.email "board@departsdaily.com"

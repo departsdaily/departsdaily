@@ -5,8 +5,23 @@ compatibility_date = "2026-07-01"
 # No KV needed — the Worker caches through the built-in Cache API
 # (caches.default): fresh pulls 10 min, custom-origin lookups 12 h.
 #
-# One secret (never in this file): TP_TOKEN.
+# Two secrets (never in this file): TP_TOKEN, GH_DISPATCH_TOKEN.
 # Deployed by .github/workflows/deploy-worker.yml, which needs two repo
 # secrets from Cloudflare: CF_API_TOKEN ("Edit Workers" template) and
 # CF_ACCOUNT_ID (dashboard sidebar). Manual alternative:
 #   cd worker && npx wrangler secret put TP_TOKEN && npx wrangler deploy
+
+# ---- CRON: the board refresh heartbeat ------------------------------------
+# GitHub Actions' scheduler drops runs (measured: 36 of 56 slots delivered,
+# then 0 of 2 right after a retime). Cloudflare cron fires on time, so the
+# schedule lives here and GitHub only reacts to repository_dispatch.
+#
+# Every 2 hours at :13, around the clock. A plain interval on purpose: no list
+# of local hours means DST never needs a code change and there is no overnight
+# gap. 12 runs a day, roughly 3,600 Travelpayouts calls — well under the 7,200
+# the old hourly schedule was already spending.
+#
+# Needs a second secret: GH_DISPATCH_TOKEN (the GH_PAT), pushed by
+# .github/workflows/deploy-worker.yml on every deploy.
+[triggers]
+crons = ["13 */2 * * *"]

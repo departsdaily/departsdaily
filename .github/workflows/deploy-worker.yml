@@ -62,8 +62,12 @@ jobs:
           workingDirectory: worker
           secrets: |
             TP_TOKEN
+            GH_DISPATCH_TOKEN
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
+          # The Worker's cron trigger POSTs repository_dispatch back here to
+          # start the board refresh. Same PAT, no new credential to manage.
+          GH_DISPATCH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Where it lives
         if: steps.gate.outputs.ok == 'true'

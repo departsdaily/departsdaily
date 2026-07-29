@@ -72,7 +72,63 @@ export default {
       ctx.waitUntil(cache.put(cacheKey, res.clone()));
     return res;
   },
+
+  /* ---- CRON TRIGGER: the board refresh heartbeat -------------------------
+     GitHub Actions' own scheduler is best effort and openly drops runs.
+     MEASURED Jul 28 2026: 36 of 56 hourly slots delivered, gaps up to 11.4
+     hours. After the schedule was retimed on Jul 29 it delivered ZERO of the
+     next two slots, and the board sat at last night's stamp until an
+     unrelated push happened to shake it loose.
+
+     Cloudflare cron triggers fire on time, so the schedule lives HERE now and
+     GitHub only ever reacts. Every 2 hours around the clock (see wrangler.toml)
+     — a plain interval, not a list of local hours, so DST never needs a code
+     change and there is no overnight hole to explain.
+
+     GitHub keeps a staggered cron of its own as a fallback, but it no-ops
+     when the board is already fresh, so it costs nothing while this works. */
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(dispatchBoardRefresh(env, event.cron));
+  },
 };
+
+/* POST repository_dispatch → the "Board refresh" workflow.
+   Retried: a single failed fetch here would cost a 2 hour board gap. */
+async function dispatchBoardRefresh(env, cron) {
+  if (!env.GH_DISPATCH_TOKEN) {
+    console.log("BOARD-REFRESH: no GH_DISPATCH_TOKEN secret — cannot trigger");
+    return;
+  }
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const r = await fetch(
+        "https://api.github.com/repos/departsdaily/departsdaily/dispatches",
+        {
+          method: "POST",
+          headers: {
+            authorization: `Bearer ${env.GH_DISPATCH_TOKEN}`,
+            accept: "application/vnd.github+json",
+            "content-type": "application/json",
+            "user-agent": "departsdaily-fares-worker",
+          },
+          body: JSON.stringify({
+            event_type: "board-refresh",
+            client_payload: { cron, at: new Date().toISOString() },
+          }),
+        });
+      if (r.status === 204) {
+        console.log(`BOARD-REFRESH: dispatched on attempt ${attempt} (cron ${cron})`);
+        return;
+      }
+      console.log(`BOARD-REFRESH: HTTP ${r.status} — ${(await r.text()).slice(0, 300)}`);
+      if (r.status === 401 || r.status === 403 || r.status === 404) return; // token problem, retrying won't help
+    } catch (e) {
+      console.log(`BOARD-REFRESH: attempt ${attempt} threw — ${e}`);
+    }
+    await new Promise((s) => setTimeout(s, 4000 * attempt));
+  }
+  console.log("BOARD-REFRESH: gave up after 3 attempts");
+}
 
 /* ---------------- fresh pull: one route, deep, schema-2 rows -------------- */
 
