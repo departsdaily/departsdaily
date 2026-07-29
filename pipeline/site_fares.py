@@ -96,6 +96,10 @@ def as_offer(origin, dest, f):
             # defend.
             "airline": f.get("al") or "",
             "transfers": int(f.get("stops") or 0),
+            # Departure times for both legs, straight off the site row. The
+            # post should say the same thing the site says.
+            "dep_time": f.get("dep") or "",
+            "ret_time": f.get("rdep") or "",
             "link": search_link(origin, dest, d1, d2),
             "_src": "site"}
 

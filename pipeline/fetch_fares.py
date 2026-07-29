@@ -250,6 +250,9 @@ def build(plan):
         row = {"to": code, "city": ROUTES[code]["city"], "price": price,
                "d1": o["departure_at"][:10], "d2": ret,
                "airline": o.get("airline", ""), "stops": o.get("transfers", 0),
+               # Times only when the fare actually carried them. A slide has
+               # never printed an invented time and must not start now.
+               "dep": o.get("dep_time", ""), "rdep": o.get("ret_time", ""),
                "baseline": base, "disc": round(disc * 100),
                "nights": nights, "on_shape": on_shape, "rung": rung,
                "link": "https://www.aviasales.com" + (o.get("link") or "") + "&marker=755800"}

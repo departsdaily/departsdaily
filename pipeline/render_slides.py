@@ -68,7 +68,12 @@ def fmt_dates(x):
     # Airline is omitted entirely when the API did not give us one (or gave us a
     # code we refuse to vouch for). Joining only the parts we actually have keeps
     # an empty slot from printing as a stray " · · ".
-    return " · ".join(p for p in (f"{a}–{b}", x["airline"], stops) if p)
+    # Times mirror the website row: both legs when we have both, the outbound
+    # alone when that is all the fare carried, nothing when it carried neither.
+    if x.get("dep") and x.get("rdep"): t = f"{x['dep']} → {x['rdep']}"
+    elif x.get("dep"):                 t = f"DEP {x['dep']}"
+    else:                              t = ""
+    return " · ".join(p for p in (f"{a}–{b}", t, x["airline"], stops) if p)
 
 # DEALS ONLY — owner's rule (Jul 2026): every row on the board is a real
 # deal. No fillers, no skip row, no overpayments. The defensive non-deal
