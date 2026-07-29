@@ -53,6 +53,21 @@ def call(path, params, method="POST"):
         return json.load(r)
 
 
+def _trail(stage, err):
+    """A drip that dies unattended must leave evidence a git fetch can see —
+    same philosophy as the morning publisher's out/ig-error files."""
+    os.makedirs("out", exist_ok=True)
+    detail = {"stage": stage, "error": type(err).__name__ + ": " + str(err)}
+    if isinstance(err, urllib.error.HTTPError):
+        try:
+            detail["response"] = json.loads(err.read().decode("utf-8", "replace"))
+        except Exception:
+            pass
+    json.dump({"origin": ORIGIN, "when": datetime.datetime.now(ET).isoformat(),
+               "detail": detail},
+              open("out/story-drip-error-%s.json" % ORIGIN, "w"), indent=1)
+
+
 def main():
     now = datetime.datetime.now(ET)
     today = now.date().isoformat()
@@ -97,9 +112,13 @@ def main():
 
     for i, d in batch:
         url = "%s/story_%d_%s.png" % (RAW_BASE, i, d["to"])
-        r = call("me/media", {"image_url": url, "media_type": "STORIES"})
-        time.sleep(3)
-        call("me/media_publish", {"creation_id": r["id"]})
+        try:
+            r = call("me/media", {"image_url": url, "media_type": "STORIES"})
+            time.sleep(3)
+            call("me/media_publish", {"creation_id": r["id"]})
+        except Exception as e:
+            _trail("publish " + d["to"], e)
+            raise
         print("story posted:", d["to"])
         st["posted"].append(d["to"])
         # Persist after EACH publish, not at the end — a crash between two

@@ -14,6 +14,13 @@ name: Story drip
 # shift them +1 hour alongside the morning task.
 
 on:
+  # Push-to-branch trigger, same pattern as ig-trigger for the morning post:
+  # a force-push of main -> story-trigger fires a drip immediately. Exists
+  # because (a) GitHub cron on a newly added workflow can silently not run
+  # for a while, and (b) the ops sandbox can reach git but not the Actions
+  # API, so this is its only reliable manual fire.
+  push:
+    branches: [story-trigger]
   schedule:
     - cron: "5 14 * * *"   # 10:05 ET
     - cron: "5 17 * * *"   # 1:05 PM ET
@@ -82,11 +89,14 @@ jobs:
           python pipeline/post_story.py
 
       - name: Commit drip state
+        if: always()
         run: |
           git config user.name "departs-bot"
           git config user.email "board@departsdaily.com"
-          git add state/story-drip-*.json 2>/dev/null || true
+          git add state/story-drip-*.json out/story-drip-error-*.json 2>/dev/null || true
           git diff --cached --quiet && exit 0
           git pull --rebase origin main
-          git commit -m "Story drip ${{ matrix.origin.code }} $(TZ=America/New_York date '+%F %H:%M ET')"
+          MSG="Story drip ${{ matrix.origin.code }}"
+          [ -f "out/story-drip-error-${{ matrix.origin.code }}.json" ] && MSG="Story drip FAILURE ${{ matrix.origin.code }}"
+          git commit -m "$MSG $(TZ=America/New_York date '+%F %H:%M ET')"
           git push origin HEAD:main
