@@ -20,18 +20,58 @@
     "access_token": "<redacted>"
    },
    "response": {
+    "id": "18076317842367957"
+   }
+  },
+  {
+   "call": "me/media",
+   "params": {
+    "image_url": "https://departsdaily.com/daily/ATL/2026-07-29/slide2_board.png",
+    "is_carousel_item": "true",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "id": "18076317854367957"
+   }
+  },
+  {
+   "call": "me/media",
+   "params": {
+    "image_url": "https://departsdaily.com/daily/ATL/2026-07-29/slide3_cta.png",
+    "is_carousel_item": "true",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "id": "18076317884367957"
+   }
+  },
+  {
+   "call": "me/media",
+   "params": {
+    "media_type": "CAROUSEL",
+    "children": "18076317842367957,18076317854367957,18076317884367957",
+    "caption": "\u2708\ufe0f ATL DEPARTURES \u2014 weekend getaways \u00b7 WED, JUL 29\n\n\ud83c\udff4\u200d\u2620\ufe0f Tampa \u2014 $40 round trip \u00b7 4 nights (78% below typical)\n\ud83c\udfa2 Orlando \u2014 $73 round trip \u00b7 3 nights (60% below typical)\n\ud83c\udfd6\ufe0f Canc\u00fan \u2014 $182 round trip \u00b7 10 nights (58% below typical)\n\u26f1\ufe0f Ft. Lauderdale \u2014 $78 round trip \u00b7 2 nights (51% below typical)\n\ud83c\udfd4\ufe0f Denver \u2014 $103 round trip \u00b7 4 nights (51% below typical)\n\ud83e\udd65 Punta Cana \u2014 $248 round trip \u00b7 4 nights (50% below typical)\n\ud83d\udd14 Philadelphia \u2014 $100 round trip \u00b7 4 nights (47% below typical)\n\ud83c\udfb0 Las Vegas \u2014 $193 round trip \u00b7 3 nights (40% below typical)\n\ud83c\udfdd\ufe0f San Juan, PR \u2014 $192 round trip \u00b7 4 nights (34% below typical)\n\ud83c\udf34 Miami \u2014 $103 round trip \u00b7 3 nights (32% below typical)\n\u2602\ufe0f London \u2014 $632 round trip \u00b7 2 nights (21% below typical)\n\ud83c\udf09 San Francisco \u2014 $312 round trip \u00b7 3 nights (20% below typical)\n\ud83d\uddfd New York City \u2014 $174 round trip \u00b7 3 nights (13% below typical)\n\nOut Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.\n\n\ud83d\udcc5 Exact dates on every slide\n\u2705 Every fare verified before posting \u2014 fares move fast and aren't guaranteed\n\ud83d\udd0e Want different dates? Search every flight out of ATL from the button on departsdaily.com\n\ud83d\udd17 Booking links in bio\n\ud83c\udf05 New board every morning at 7AM\n\n#ATL #Atlanta #ATLAirport #Hartsfield #AtlantaGA #404 #CheapFlights #FlightDeals #FlightDeal #TravelDeals #AirfareDeals #BudgetTravel #CheapTravel #TravelHacks #VacationDeals #Travel #TravelGram #Wanderlust #WeekendTrip #WeekendGetaway #LongWeekend #Tampa #Orlando #Canc\u00fan #FtLauderdale #Denver #PuntaCana #Philadelphia #LasVegas #SanJuanPR #Miami #London #SanFrancisco #NewYorkCity",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "id": "0"
+   }
+  },
+  {
+   "call": "me/media_publish",
+   "params": {
+    "creation_id": "0",
+    "access_token": "<redacted>"
+   },
+   "response": {
     "error": {
-     "message": "The image format is not supported.",
+     "message": "An unknown error has occurred.",
      "type": "OAuthException",
-     "code": 36001,
-     "error_subcode": 2207083,
-     "is_transient": false,
-     "error_user_title": "Unknown Image Format",
-     "error_user_msg": "The image could not be processed because its format could not be recognized. This usually means the file is corrupted, not a valid image, or the URL returned an error page instead of an image. Please verify that the image_url points to a valid image file in a supported format (JPEG, PNG, GIF, WebP, HEIC, or AVIF). For more information on supported formats and media specifications, see: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating",
-     "fbtrace_id": "A7pjIFyaT_fk6AD2x5LtKg_"
+     "code": 1,
+     "fbtrace_id": "AkOmzUs4n7HoAAAereu8fXt"
     }
    },
-   "status": 400
+   "status": 500
   }
  ]
 }
