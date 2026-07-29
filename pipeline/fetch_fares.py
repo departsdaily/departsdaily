@@ -8,7 +8,7 @@ behaves exactly as it did before the pipeline went multi-city."""
 import os, sys, json, datetime, urllib.request, urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import origins, day_plan, site_fares
+import origins, day_plan, site_fares, index_fares
 
 # WEEKLY PLAN (owner's rule, Jul 28 2026). Monday sells week long trips,
 # Tue/Wed sell weekends, Thursday sells urgency, Friday leans on Friday being
@@ -25,7 +25,19 @@ ROUTES = origins.baselines(ORIGIN)
 HISTORY_FILE = PATHS["history"]
 # 3, not 6: the board now carries 5+ cities a day from a ~24-city pool, and a
 # 6-day lockout at that rate (5 x 6 = 30) would starve it mathematically.
+# NO-REPEAT IS A PREFERENCE, NOT AN HONESTY RULE (Jul 29 2026).
+# It exists so the board doesn't show Miami seven days running. It was
+# implemented as a HARD filter, and at a 7-row target that quietly guarantees
+# failure: 7 rows x 3 days = 21 of CLT's 24 eligible routes locked out, leaving
+# 3 routes to fill 7 slots. That is most of why today posted 3.
+#
+# So: variety first, deals always. Routes not shown recently are preferred, and
+# a recently-shown route is only re-used when the board would otherwise come up
+# short of BOARD_TARGET. A repeated route is still a REAL deal that still
+# cleared the 12% bar — nothing about re-showing it is dishonest, whereas an
+# empty slot filled with an overpayment would be. The 12% bar is untouched.
 NO_REPEAT_DAYS = int(os.environ.get("NO_REPEAT_DAYS", "3"))
+BOARD_TARGET = int(os.environ.get("BOARD_TARGET", "7"))
 MIN_DISCOUNT = 0.12
 # DEALS ONLY — owner's rule (Jul 2026): the board never shows a fare that
 # isn't a real deal. No filler rows, no "typical fare" rows, and no SKIP row
@@ -147,25 +159,29 @@ if not SITE_OFFERS:
     print(f"::warning::{ORIGIN} is posting without the site snapshot "
           f"({site_note}). Falling back to this pipeline's own fetch.")
 
+INDEX_OFFERS, index_note = index_fares.load(ORIGIN)
+print(f"{ORIGIN} index fares: {index_note}")
+
 OFFERS = {}
 for code in ROUTES:
-    if code in recent:
-        scan[code] = {"outcome": "locked out", "why": f"posted {hist.get(code)}"}
-        continue
+    # Recently-shown routes are still PRICED. They are ranked last later, and
+    # only reach the board if it would otherwise be short. Skipping them here
+    # is what made a short board unrecoverable.
     try:
         offers = cheapest(code)
     except Exception as e:
         offers = []
-        if code not in SITE_OFFERS:
+        if code not in SITE_OFFERS and code not in INDEX_OFFERS:
             scan[code] = {"outcome": "fetch failed", "why": str(e)}
             print(code, "fetch failed", e); continue
-        print(code, "own fetch failed, using site snapshot:", e)
-    # Merge, dedupe on (out, back, price), keep cheapest first. Two sources of
-    # the same underlying cache, queried differently, so the union is strictly
-    # more supply than either alone. A merged offer is still just a CANDIDATE:
-    # it has to clear MIN_DISCOUNT against this origin's baseline below.
+        print(code, "own fetch failed, using site/index fares:", e)
+    # Three sources, deduped on (out, back, price), cheapest first. All three
+    # are reads of the same underlying Aviasales cache queried differently, so
+    # the union is strictly more supply than any one of them alone. Every
+    # merged offer is still only a CANDIDATE: it has to clear MIN_DISCOUNT
+    # against this origin's baseline below to reach the board.
     merged, seen_keys = [], set()
-    for o in offers + SITE_OFFERS.get(code, []):
+    for o in offers + SITE_OFFERS.get(code, []) + INDEX_OFFERS.get(code, []):
         key = (o.get("departure_at", "")[:10], (o.get("return_at") or "")[:10],
                o.get("price"))
         if key in seen_keys:
@@ -243,6 +259,16 @@ def build(plan):
                       "nights": nights, "on_shape": on_shape, "rung": rung}
         (deals if disc >= MIN_DISCOUNT else skips).append(row)
     deals.sort(key=lambda x: -x["disc"])
+    # Variety first, then fill. Every deal here already cleared MIN_DISCOUNT, so
+    # a backfilled repeat is a genuine deal — just one we also showed recently.
+    # Showing Miami twice in a week beats showing an overpayment once.
+    fresh = [d for d in deals if d["to"] not in recent]
+    again = [d for d in deals if d["to"] in recent]
+    need = max(0, BOARD_TARGET - len(fresh))
+    for d in again[:need]:
+        d["repeat"] = True
+        d["last_shown"] = hist.get(d["to"])
+    deals = fresh + again[:need]
     for d in deals:
         d["deal"] = True
     return deals, skips, rows
@@ -289,6 +315,13 @@ print(f"{ORIGIN} plan: {PLAN['weekday']} -> {PLAN['shape']} "
       f"({PLAN['nights'][0]}-{PLAN['nights'][1]} nights, leaving "
       f"{PLAN['depart_in'][0]}-{PLAN['depart_in'][1]} days out) — {PLAN['note']}")
 print(f"{ORIGIN} scan:", counts)
+n = len(board["deals"])
+if n < BOARD_TARGET:
+    print(f"::warning::{ORIGIN} board has {n} deals, target is {BOARD_TARGET}. "
+          f"Not padded — every row cleared the {MIN_DISCOUNT*100:.0f}% bar. "
+          f"Short boards are a SUPPLY problem: {len(ROUTES)} routes eligible, "
+          f"pool needs ~{BOARD_TARGET*(NO_REPEAT_DAYS+1)} to sustain "
+          f"{BOARD_TARGET}/day with variety.")
 for c, v in sorted(scan.items(), key=lambda kv: kv[1].get("disc_pct", -999), reverse=True):
     print(f"  {c:4} {v['outcome']:18}", v.get("why") or
           f"${v.get('price')} vs typical ${v.get('typical')} = {v.get('disc_pct')}%")
