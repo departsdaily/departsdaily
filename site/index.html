@@ -437,6 +437,9 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 .rowlink{position:absolute;inset:0;z-index:1;text-decoration:none}
 .row:focus-within{outline:3px solid var(--sky);outline-offset:-3px}
 .row .gbtn{position:relative;z-index:2}
+/* Trip-length chip. Amber so it reads as trip SHAPE, distinct from the
+   green/blue nonstop-vs-stops chip that sits next to it. */
+.tl{color:var(--amber)}
 @media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
 
 
@@ -1057,6 +1060,23 @@ function fmtTrip(d1,d2){
   return f(d1)+" → "+f(d2);
 }
 
+/* Trip length, computed from d1/d2 — never typed, so it can't disagree with
+   the dates printed beside it. The named shapes are the ones the weekly
+   posting plan actually sells (long weekend / week / two weeks); anything
+   else just states its night count rather than being forced into a bucket
+   it doesn't fit. Singular "1 NIGHT" because "1 NIGHTS" looks broken. */
+function tripLen(d1,d2){
+  const MS=86400000;
+  const n=Math.round((new Date(d2+"T12:00:00-04:00")-new Date(d1+"T12:00:00-04:00"))/MS);
+  if(!isFinite(n)||n<1) return "";
+  const nights=n+" NIGHT"+(n===1?"":"S");
+  let shape="";
+  if(n>=2&&n<=4)       shape="LONG WEEKEND";
+  else if(n>=5&&n<=9)  shape="WEEK LONG";
+  else if(n>=12&&n<=16)shape="TWO WEEKS";
+  return ' \u00b7 <b class="tl">'+nights+(shape?" \u00b7 "+shape:"")+'</b>';
+}
+
 /* The row is a DIV with a stretched overlay link (.rowlink), not an <a>.
    An <a> cannot contain another <a> — the parser ejects the inner one and the
    row grid collapses into stacked lines, which is exactly what happened the
@@ -1083,7 +1103,7 @@ function rowHTML(code,x){
      <a class="rowlink" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener"
         aria-label="Search ${x.city} flights, $${x.price} round trip"></a>
      <span class="tiles">${tiles(code)}<span class="arr">\u203a</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span>${guide}<br><span class="dates">${fmtTrip(x.d1,x.d2)}${dep}${al} \u00b7 <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span>
+     <span><span class="city">${x.city}</span>${guide}<br><span class="dates">${fmtTrip(x.d1,x.d2)}${tripLen(x.d1,x.d2)}${dep}${al} \u00b7 <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span>
      <span class="price">$${x.price}</span>
      <span class="var">${dealVar(x)}</span>
    </div>`;
