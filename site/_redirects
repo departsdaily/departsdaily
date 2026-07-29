@@ -4,3 +4,10 @@
 # entry points land on the board, which now carries the big search link.
 /finder.html   /   301
 /search.html   /   301
+
+# Instagram bio links — one per account, so GA4 splits traffic by which
+# account sent it. Joe sets each bio to departsdaily.com/ig/<city>; the UTM
+# lands automatically and nobody has to paste a 90-character URL into a bio.
+/ig/clt  /?utm_source=instagram&utm_medium=bio&utm_campaign=cltdeparts  302
+/ig/atl  /?utm_source=instagram&utm_medium=bio&utm_campaign=atldeparts  302
+/ig      /?utm_source=instagram&utm_medium=bio&utm_campaign=unknown     302

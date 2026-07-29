@@ -1,0 +1,92 @@
+name: Story drip
+
+# Posts ONE story (two when the backlog demands it) per slot, per city, from
+# today's board — owner's rule Jul 29 2026: stories spaced through the day,
+# never piled at 6:52AM. Slides were staged to site/daily by the morning run
+# and are served by Cloudflare Pages all day, so nothing needs re-rendering.
+#
+# Slots are 10AM / 1PM / 4PM / 7PM ET. GitHub cron drifts late, which is fine
+# here: the script computes remaining slots from the actual clock, so a late
+# fire just posts a little late — it can never double-post (state file) and a
+# missed slot's story rolls into the next one via the backlog math.
+#
+# DST note, same as the 6:52 task: these crons are UTC (EDT-4). In November
+# shift them +1 hour alongside the morning task.
+
+on:
+  schedule:
+    - cron: "5 14 * * *"   # 10:05 ET
+    - cron: "5 17 * * *"   # 1:05 PM ET
+    - cron: "5 20 * * *"   # 4:05 PM ET
+    - cron: "5 23 * * *"   # 7:05 PM ET
+  workflow_dispatch:
+    inputs:
+      origins:
+        description: "Comma-separated origins (blank = every ig_enabled city)"
+        required: false
+
+permissions:
+  contents: write
+
+# Serial like ig-post: each city commits its drip state to main.
+concurrency:
+  group: story-drip
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          python - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json, os
+          cfg = json.load(open("config/origins.json"))
+          ask = "${{ inputs.origins }}".strip()
+          want = [c.strip().upper() for c in ask.split(",") if c.strip()] if ask else None
+          out = [{"code": c, "token_secret": v["token_secret"]}
+                 for c, v in cfg.items()
+                 if (want and c in want) or (not want and v.get("ig_enabled"))]
+          print("matrix=" + json.dumps(out))
+          EOF
+
+  drip:
+    needs: plan
+    if: needs.plan.outputs.matrix != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        origin: ${{ fromJSON(needs.plan.outputs.matrix) }}
+      max-parallel: 1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Post next story
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
+          IG_TOKEN: ${{ secrets[matrix.origin.token_secret] }}
+        run: |
+          # RAW_BASE must point at today's staged slides. CLT lives at
+          # site/daily/<date>/, other cities at site/daily/<CODE>/<date>/.
+          D=$(TZ=America/New_York date +%F)
+          if [ "$ORIGIN" = "CLT" ]; then
+            export RAW_BASE="https://departsdaily.com/daily/$D"
+          else
+            export RAW_BASE="https://departsdaily.com/daily/$ORIGIN/$D"
+          fi
+          python pipeline/post_story.py
+
+      - name: Commit drip state
+        run: |
+          git config user.name "departs-bot"
+          git config user.email "board@departsdaily.com"
+          git add state/story-drip-*.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git pull --rebase origin main
+          git commit -m "Story drip ${{ matrix.origin.code }} $(TZ=America/New_York date '+%F %H:%M ET')"
+          git push origin HEAD:main

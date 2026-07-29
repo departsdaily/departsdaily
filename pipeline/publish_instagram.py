@@ -165,9 +165,12 @@ carousel = post(IG_USER + "/media", media_type="CAROUSEL",
 time.sleep(5)
 print("published:", post(IG_USER + "/media_publish", creation_id=carousel["id"]))
 
-# Stories exist only for true deals — the renderer numbers them 1..N over the
-# deal-flagged rows, so this loop must walk exactly the same list.
-for i, d in enumerate([x for x in B["deals"] if x.get("deal", True)], 1):
+# Stories are the DRIP's job now (pipeline/post_story.py, owner's rule Jul 29:
+# spaced through the day, not piled at 6:52). The loop stays for manual runs
+# with STORIES=1. The renderer numbers stories 1..N over the deal-flagged
+# rows, so this loop must walk exactly the same list.
+_want_stories = os.environ.get("STORIES", "0") == "1"
+for i, d in enumerate([x for x in B["deals"] if x.get("deal", True)] if _want_stories else [], 1):
     try:
         r = post(IG_USER + "/media",
                  image_url="{}/story_{}_{}.png".format(RAW_BASE, i, d["to"]),

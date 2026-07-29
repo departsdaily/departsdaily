@@ -327,10 +327,16 @@ function affResolve(type, destKey, destName) {
    With a Travelpayouts marker → tracked Aviasales search for the exact
    route & dates (this is how the board itself gets monetized).
    Without → falls back to Google Flights (untracked). */
-function affFlightSearch(orig, dest, d1, d2) {
+function affFlightSearch(orig, dest, d1, d2, surface) {
   if (AFF.tpMarker) {
     const ddmm = (s) => { const p = s.split("-"); return p[2] + p[1]; };
-    return `https://www.aviasales.com/search/${orig}${ddmm(d1)}${dest}${ddmm(d2)}1?marker=${encodeURIComponent(AFF.tpMarker)}`;
+    /* ".surface" suffix = Travelpayouts sub-ID. Same commission, but the TP
+       dashboard splits conversions by where the click happened (board row,
+       today's-post row, big search button), so we finally learn what earns
+       instead of guessing. Unknown/absent surface falls back to the bare
+       marker — a tracking refinement must never cost a tracked click. */
+    const mk = AFF.tpMarker + (surface ? "." + surface.replace(/[^a-z0-9_]/gi, "") : "");
+    return `https://www.aviasales.com/search/${orig}${ddmm(d1)}${dest}${ddmm(d2)}1?marker=${encodeURIComponent(mk)}`;
   }
   return `https://www.google.com/travel/flights?q=Flights%20from%20${orig}%20to%20${dest}%20on%20${d1}%20through%20${d2}`;
 }

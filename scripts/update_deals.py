@@ -402,6 +402,19 @@ def main():
             blocks.append(f'{origin}:[{prev[origin]}]')
             carried.append(origin)
 
+    # A SCOPED RUN MUST NOT ERASE EVERYONE ELSE. Found the hard way Jul 29:
+    # the ATL posting job ran this script with ORIGINS=ATL and the file was
+    # rewritten containing only ATL — Charlotte's board vanished from the
+    # site until the next full hourly refresh. The loop above only visits the
+    # origins it was asked to rebuild, so every other origin already in the
+    # file is carried forward verbatim here. Their rows keep their own exp
+    # dates and still expire themselves client-side, so nothing stale can
+    # outlive its stamp.
+    for origin, rows in prev.items():
+        if origin not in ORIGINS:
+            blocks.append(f'{origin}:[{rows}]')
+            carried.append(origin)
+
     if not fresh:
         print("FATAL: no origin produced a board — leaving the file untouched.")
         sys.exit(1)

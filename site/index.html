@@ -1079,7 +1079,7 @@ function dealVar(x){
 
 /* Row links go through the affiliate engine (js/affiliates.js):
    with your Travelpayouts marker set, every row is a tracked search. */
-const gf=(o,t,a,b)=>affFlightSearch(o,t,a,b);
+const gf=(o,t,a,b,srf)=>affFlightSearch(o,t,a,b,srf);
 const tiles=t=>[...t].map(c=>`<span class="tile">${c}</span>`).join("");
 
 /* THE TRIP, laid out as two columns — one per leg. The date sits on top and
@@ -1124,7 +1124,7 @@ function tripShape(d1,d2){
    first time a CITY GUIDE chip was added here. The overlay pattern keeps the
    whole row clickable to the fare search while letting the guide button beside
    the city name be its own link. */
-function rowHTML(code,x){
+function rowHTML(code,x,surface){
   const rt=(ROUTES[code]||{})[x.to];
   const ts=tripShape(x.d1,x.d2);
   const intl=rt&&rt.intl?' \u00b7 <b class="st">INTL</b>':'';
@@ -1141,7 +1141,7 @@ function rowHTML(code,x){
   const guide=slug?` <a class="gbtn" href="destinations/${slug}.html" title="${x.city} city guide \u2014 hotels, cars, what to do">GUIDE \u203a</a>`:"";
   return `
    <div class="row">
-     <a class="rowlink" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener"
+     <a class="rowlink" href="${gf(code,x.to,x.d1,x.d2,surface||"board")}" target="_blank" rel="noopener"
         aria-label="Search ${x.city} flights, $${x.price} round trip"></a>
      <span class="tiles">${tiles(code)}<span class="arr">\u203a</span>${tiles(x.to)}</span>
      <span><span class="city">${x.city}</span>${guide}<br><span class="dates"><span class="trip">${legCol(x.d1,x.dep,x.arr)}<span class="arr2">\u2192</span>${legCol(x.d2,x.rdep,x.rarr)}${ts.shape?`<span class="shp">${ts.shape}</span>`:""}</span><span class="leg">${ts.nights?`<b class="nts">${ts.nights}</b> \u00b7 `:""}${al?al+" \u00b7 ":""}<b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span></span>
@@ -1171,7 +1171,8 @@ async function loadPost(code){
       b.deals.length+" DEAL"+(b.deals.length===1?"":"S")+" · POSTED THIS MORNING";
     document.getElementById("postRows").innerHTML=
       b.deals.map(d=>rowHTML(code,{to:d.to,city:d.city,price:d.price,d1:d.d1,d2:d.d2,
-                                   dep:d.dep,rdep:d.rdep,al:d.airline,stops:d.stops})).join("");
+                                   dep:d.dep,rdep:d.rdep,arr:d.arr,rarr:d.rarr,
+                                   al:d.airline,stops:d.stops},"post")).join("");
     box.hidden=false;
   }catch(e){/* stay hidden */}
 }
@@ -1185,6 +1186,7 @@ function renderCity(code){
   const c=CITIES.find(x=>x.code===code);
   document.getElementById("boardCity").textContent=c.name;
   loadPost(code);          // async, renders above the live board when it lands
+  /* installed once */
   const rows=document.getElementById("rows");
   document.querySelectorAll("#citybar .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===code));
   renderRoutes(code);
@@ -1327,6 +1329,21 @@ window.addEventListener("hashchange",function(){renderCity(cityFromURL());});
   }
 })();
 
+
+/* Outbound affiliate click tracking -> GA4. Delegated so it covers rows that
+   render later (post section, board refreshes). gtag missing (blocked) is
+   fine — the click itself must never depend on analytics. */
+document.addEventListener("click",function(e){
+  const a=e.target.closest&&e.target.closest('a[href*="marker="]');
+  if(!a||typeof gtag!=="function")return;
+  try{
+    const u=new URL(a.href);
+    const mk=(u.searchParams.get("marker")||"").split(".");
+    gtag("event","affiliate_click",{surface:mk[1]||"board",
+      route:(u.pathname.match(/search\/([A-Z0-9]+)/)||[])[1]||"",
+      transport_type:"beacon"});
+  }catch(err){}
+},true);
 </script>
 </body>
 </html>

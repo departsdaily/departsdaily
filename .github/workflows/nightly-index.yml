@@ -10,12 +10,17 @@ name: Nightly fare index
 # means uncommenting five lines, not rewriting a workflow.
 #
 # Still runnable by hand from the Actions tab if the index is ever needed.
+# RE-ENABLED July 29 2026, board cities only. The index has a consumer again:
+# pipeline/index_fares.py feeds it into the Instagram board as a third fare
+# source (same-day-only guard, composed rows dropped). The 10-origin version
+# fed the archived Finder at 6-9k TP calls/night; ig_enabled cities alone run
+# ~1-2k. If the Finder ever comes back, widen ORIGINS again.
 on:
-#  schedule:
-#    - cron: "10 7 * * *"      # 03:10 EDT / 02:10 EST
-#  push:
-#    branches: [main]
-#    paths: [scripts/build_index.py, .github/workflows/nightly-index.yml]
+  schedule:
+    - cron: "10 7 * * *"      # 03:10 EDT / 02:10 EST
+  push:
+    branches: [main]
+    paths: [scripts/build_index.py, .github/workflows/nightly-index.yml]
   workflow_dispatch:
     inputs:
       origins:
@@ -54,7 +59,8 @@ jobs:
           # A push to the migration branch builds CLT only: ~630 calls, a few
           # minutes, and enough to prove what the fare API actually returns
           # before committing to a 10-origin run.
-          ORIGINS: ${{ github.event.inputs.origins || (github.event_name == 'push' && 'CLT' || '') }}
+          # Board cities only — that's who consumes the index now (index_fares).
+          ORIGINS: ${{ github.event.inputs.origins || (github.event_name == 'push' && 'CLT' || 'CLT,ATL') }}
           INDEX_MONTHS: ${{ github.event.inputs.months || '6' }}
           TP_SLEEP: "0.4"
         run: |

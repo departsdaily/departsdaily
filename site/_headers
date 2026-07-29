@@ -26,3 +26,21 @@
 # once written.
 /daily/*
   Cache-Control: public, max-age=86400
+
+# Security headers (Jul 29 2026). What each buys:
+#   nosniff        — browsers can't reinterpret a response as a different type
+#   DENY framing   — nobody can wrap the site in an iframe (clickjacking,
+#                    fake "deal overlay" scams trading on our name)
+#   referrer       — outbound clicks tell affiliates the page, not full URLs
+#                    with query strings
+#   HSTS           — browsers refuse plain-HTTP after first visit
+#   permissions    — the site declares it never wants camera/mic/location,
+#                    so injected third-party script can't quietly ask
+# No CSP: the page legitimately runs inline JS + GA + AdSense; a strict policy
+# breaks them and a permissive one adds nothing but false comfort.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
