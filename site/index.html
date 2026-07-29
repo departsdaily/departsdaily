@@ -439,7 +439,15 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 .row .gbtn{position:relative;z-index:2}
 /* Trip-length chip. Amber so it reads as trip SHAPE, distinct from the
    green/blue nonstop-vs-stops chip that sits next to it. */
-.tl{color:var(--amber)}
+/* Legs stack, one per line, so the eye reads OUT then BACK instead of parsing
+   a single run-on string. */
+.leg{display:block}
+.lg{color:var(--dim);letter-spacing:1px;font-size:11px;margin-right:4px}
+/* Nights sit under the price, nudged left of it: the price is the headline and
+   this is the qualifier on it. */
+.nts{display:block;font-size:11.5px;color:var(--dim);font-weight:600;
+     letter-spacing:.5px;margin-top:2px;padding-right:6px;white-space:nowrap}
+.tl{display:block;color:var(--amber)}
 @media(max-width:640px){.row{grid-template-columns:1fr auto}.dates{grid-column:1}.var{grid-column:2}}
 
 
@@ -1051,30 +1059,34 @@ function dealVar(x){
 const gf=(o,t,a,b)=>affFlightSearch(o,t,a,b);
 const tiles=t=>[...t].map(c=>`<span class="tile">${c}</span>`).join("");
 
-/* Full date display with day of week, computed from the exact dates —
-   e.g. "WED SEP 9 → MON SEP 14". Never hand-typed, so it can't be wrong. */
-function fmtTrip(d1,d2){
-  const f=s=>new Date(s+"T12:00:00-04:00")
-    .toLocaleDateString("en-US",{timeZone:"America/New_York",weekday:"short",month:"short",day:"numeric"})
+/* One line per LEG: day of week, date, and the time that leg departs.
+   Everything is computed from d1/d2 or read straight off the fare — a time is
+   printed only when the fare actually carried one. An unknown time prints
+   nothing rather than a plausible guess. */
+function legLine(label,iso,time){
+  const d=new Date(iso+"T12:00:00-04:00")
+    .toLocaleDateString("en-US",{timeZone:"America/New_York",weekday:"short",
+                                 month:"short",day:"numeric"})
     .toUpperCase().replace(",","");
-  return f(d1)+" → "+f(d2);
+  const t=time?' \u00b7 <b style="color:var(--white)">'+time+'</b>':"";
+  return '<span class="leg"><b class="lg">'+label+'</b> '+d+t+'</span>';
 }
 
-/* Trip length, computed from d1/d2 — never typed, so it can't disagree with
-   the dates printed beside it. The named shapes are the ones the weekly
-   posting plan actually sells (long weekend / week / two weeks); anything
-   else just states its night count rather than being forced into a bucket
-   it doesn't fit. Singular "1 NIGHT" because "1 NIGHTS" looks broken. */
-function tripLen(d1,d2){
-  const MS=86400000;
-  const n=Math.round((new Date(d2+"T12:00:00-04:00")-new Date(d1+"T12:00:00-04:00"))/MS);
-  if(!isFinite(n)||n<1) return "";
+/* Trip length + the shape the weekly plan sells. A "long weekend" is a real
+   claim about WHICH DAYS you fly, not just how many nights: out Thu/Fri, back
+   Sun/Mon. A Tue-to-Fri 3-nighter is 3 nights and is not a long weekend, so it
+   does not get the label. Dates decide, never the night count alone. */
+function tripShape(d1,d2){
+  const MS=86400000,D=s=>new Date(s+"T12:00:00-04:00");
+  const a=D(d1),b=D(d2),n=Math.round((b-a)/MS);
+  if(!isFinite(n)||n<1) return {nights:"",shape:""};
   const nights=n+" NIGHT"+(n===1?"":"S");
+  const out=a.getDay(),back=b.getDay();          // 0=Sun .. 6=Sat
   let shape="";
-  if(n>=2&&n<=4)       shape="LONG WEEKEND";
-  else if(n>=5&&n<=9)  shape="WEEK LONG";
-  else if(n>=12&&n<=16)shape="TWO WEEKS";
-  return ' \u00b7 <b class="tl">'+nights+(shape?" \u00b7 "+shape:"")+'</b>';
+  if(n>=2&&n<=4&&(out===4||out===5)&&(back===0||back===1)) shape="LONG WEEKEND";
+  else if(n>=6&&n<=8) shape="WEEK LONG";
+  else if(n>=13&&n<=15) shape="TWO WEEKS";
+  return {nights:nights,shape:shape};
 }
 
 /* The row is a DIV with a stretched overlay link (.rowlink), not an <a>.
@@ -1086,7 +1098,7 @@ function tripLen(d1,d2){
 function rowHTML(code,x){
   const rt=(ROUTES[code]||{})[x.to];
   const intl=rt&&rt.intl?' \u00b7 <b class="st">INTL</b>':'';
-  const dep=x.dep?` \u00b7 <b style="color:var(--white)">DEP ${x.dep}</b>`:"";
+  const ts=tripShape(x.d1,x.d2);
   /* Airline only when the updater could verify it (nonstop). On a connection the
      API returns the first carrier, not the operator of the whole trip. */
   const al=x.al?` \u00b7 ${x.al}`:"";
@@ -1103,8 +1115,8 @@ function rowHTML(code,x){
      <a class="rowlink" href="${gf(code,x.to,x.d1,x.d2)}" target="_blank" rel="noopener"
         aria-label="Search ${x.city} flights, $${x.price} round trip"></a>
      <span class="tiles">${tiles(code)}<span class="arr">\u203a</span>${tiles(x.to)}</span>
-     <span><span class="city">${x.city}</span>${guide}<br><span class="dates">${fmtTrip(x.d1,x.d2)}${tripLen(x.d1,x.d2)}${dep}${al} \u00b7 <b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span>
-     <span class="price">$${x.price}</span>
+     <span><span class="city">${x.city}</span>${guide}<br><span class="dates">${legLine("OUT",x.d1,x.dep)}${legLine("BACK",x.d2,x.rdep)}<span class="leg">${al?al+" \u00b7 ":""}<b class="${x.stops===0?"ns":"st"}">${x.stops===0?"NONSTOP":x.stops+" STOP"}</b>${intl}${xfer}</span></span></span>
+     <span class="price">$${x.price}${ts.nights?`<span class="nts">${ts.nights}${ts.shape?`<b class="tl">${ts.shape}</b>`:""}</span>`:""}</span>
      <span class="var">${dealVar(x)}</span>
    </div>`;
 }

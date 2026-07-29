@@ -215,16 +215,25 @@ def pick(dest, fares, today):
             # whose first hop is Frontier), so we only claim an airline when the
             # trip is nonstop and the carrier is therefore verifiable.
             al, self_transfer = carrier_label(f.get("airline", ""), int(stops), dest)
+            # rdep = the RETURN leg's departure time, straight from the fare.
+            # It was always in the API response and always thrown away, so the
+            # board could only ever tell you when you left, never when you flew
+            # home. Carried, not invented: if the fare has no usable return
+            # timestamp the key is omitted and the site prints no time rather
+            # than guessing one.
             best = {"to": dest, "city": ROUTES[dest][0], "price": int(price),
                     "d1": d1.date().isoformat(), "d2": d2.date().isoformat(),
                     "dep": dep_time(d1), "al": al, "stops": int(stops),
                     "xfer": 1 if self_transfer else 0}
+            if d2.hour or d2.minute:
+                best["rdep"] = dep_time(d2)
     return best
 
 def js_deal(d, exp=None):
     s = (f'{{to:"{d["to"]}",city:{json.dumps(d["city"], ensure_ascii=False)},'
          f'price:{d["price"]},d1:"{d["d1"]}",d2:"{d["d2"]}",dep:"{d["dep"]}",'
          f'al:{json.dumps(d["al"], ensure_ascii=False)},stops:{d["stops"]}')
+    if d.get("rdep"): s += f',rdep:"{d["rdep"]}"'
     if d.get("xfer"): s += ',xfer:1' 
     if exp: s += f',exp:"{exp}"'
     return s + "}"
