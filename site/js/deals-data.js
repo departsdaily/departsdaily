@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-07-29 10:24 EDT
+   Generated 2026-07-29 10:28 EDT
    Rebuilt this run: ATL (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-07-29T10:24:50-04:00",
+ updated:"2026-07-29T10:28:35-04:00",
 };
 const DEALS={ATL:[
  {to:"TPA",city:"Tampa",price:40,d1:"2026-10-01",d2:"2026-10-05",dep:"3:51PM",al:"Frontier",stops:0,rdep:"12:59PM",arr:"5:25PM",rarr:"2:46PM",exp:"2026-07-31"},
