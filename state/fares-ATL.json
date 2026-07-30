@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-07-29T20:14:34-04:00",
+ "generated": "2026-07-29T22:14:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 511,
+   "price": 520,
    "d1": "2026-10-24",
    "d2": "2026-10-28",
-   "dep": "10:48PM",
+   "dep": "4:39PM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "2:29PM",
-   "arr": "5:20AM+1",
-   "rarr": "7:34PM",
-   "pct": 18
+   "rdep": "5:50PM",
+   "arr": "9:59PM",
+   "rarr": "2:06AM+1",
+   "pct": 16
   },
   "CUN": {
    "to": "CUN",
@@ -383,17 +383,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 207,
-   "d1": "2026-10-02",
-   "d2": "2026-10-06",
-   "dep": "3:51PM",
+   "price": 197,
+   "d1": "2026-09-15",
+   "d2": "2026-09-19",
+   "dep": "6:35PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:45AM",
-   "arr": "8:32PM",
-   "rarr": "1:39PM",
-   "pct": 51
+   "rdep": "10:30AM",
+   "arr": "11:21PM",
+   "rarr": "3:42PM",
+   "pct": 53
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-07-29T20:15:12-04:00",
+ "generated": "2026-07-29T22:15:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 156,
-   "d1": "2026-10-02",
-   "d2": "2026-10-10",
-   "dep": "5:22PM",
+   "price": 145,
+   "d1": "2026-10-07",
+   "d2": "2026-10-12",
+   "dep": "4:58PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "8:07AM",
-   "arr": "8:39PM",
+   "arr": "8:16PM",
    "rarr": "11:12AM",
-   "pct": 70
+   "pct": 72
   },
   "MCO": {
    "to": "MCO",
@@ -113,16 +113,16 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 159,
-   "d1": "2026-08-18",
-   "d2": "2026-08-20",
-   "dep": "10:02AM",
+   "price": 158,
+   "d1": "2026-09-13",
+   "d2": "2026-09-19",
+   "dep": "6:15PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:50AM",
-   "arr": "1:12PM",
-   "rarr": "10:07AM",
+   "rdep": "2:37PM",
+   "arr": "9:17PM",
+   "rarr": "6:00PM",
    "pct": 65
   },
   "MSY": {

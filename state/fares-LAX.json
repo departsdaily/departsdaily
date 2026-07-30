@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-07-29T20:15:51-04:00",
+ "generated": "2026-07-29T22:15:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 302,
-   "d1": "2026-08-28",
-   "d2": "2026-09-02",
+   "price": 145,
+   "d1": "2026-10-03",
+   "d2": "2026-10-05",
    "dep": "5:05AM",
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:45PM",
-   "arr": "11:35AM",
-   "rarr": "12:35AM+1",
-   "pct": 59
+   "rdep": "6:05PM",
+   "arr": "11:30AM",
+   "rarr": "1:20AM+1",
+   "pct": 80
   },
   "DCA": {
    "to": "DCA",

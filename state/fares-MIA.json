@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-07-29T20:16:29-04:00",
+ "generated": "2026-07-29T22:16:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -143,7 +143,7 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 180,
+   "price": 200,
    "d1": "2026-08-29",
    "d2": "2026-09-02",
    "dep": "8:10AM",
@@ -152,8 +152,8 @@
    "xfer": 0,
    "rdep": "7:11PM",
    "arr": "12:12PM",
-   "rarr": "11:10PM",
-   "pct": 44
+   "rarr": "11:14PM",
+   "pct": 38
   },
   "NYC": {
    "to": "NYC",
