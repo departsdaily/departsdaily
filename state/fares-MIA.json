@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-07-29T18:16:26-04:00",
+ "generated": "2026-07-29T20:16:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 164,
-   "d1": "2026-08-14",
-   "d2": "2026-08-17",
-   "dep": "10:15PM",
+   "price": 200,
+   "d1": "2026-08-22",
+   "d2": "2026-08-26",
+   "dep": "1:15PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:29PM",
-   "arr": "3:22AM+1",
-   "rarr": "3:30AM+1",
-   "pct": 72
+   "rdep": "1:40PM",
+   "arr": "7:41PM",
+   "rarr": "7:53PM",
+   "pct": 66
   },
   "LAX": {
    "to": "LAX",
@@ -188,17 +188,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 215,
-   "d1": "2026-08-06",
-   "d2": "2026-08-10",
-   "dep": "9:21PM",
+   "price": 180,
+   "d1": "2026-08-28",
+   "d2": "2026-08-31",
+   "dep": "11:10AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:25PM",
-   "arr": "12:27AM+1",
-   "rarr": "8:26PM",
-   "pct": 43
+   "rdep": "4:45PM",
+   "arr": "3:38PM",
+   "rarr": "9:27PM",
+   "pct": 53
   },
   "SFO": {
    "to": "SFO",

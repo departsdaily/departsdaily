@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-07-29T18:15:35-04:00",
+ "generated": "2026-07-29T20:15:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 751,
+   "price": 795,
    "d1": "2026-09-30",
    "d2": "2026-10-07",
-   "dep": "4:40PM",
-   "al": "Icelandair",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:00PM",
-   "arr": "3:25AM+1",
-   "rarr": "1:45AM+1",
-   "pct": 17
+   "dep": "9:16PM",
+   "al": "",
+   "stops": 2,
+   "xfer": 1,
+   "rdep": "6:50PM",
+   "arr": "11:19AM+1",
+   "rarr": "10:20AM+1",
+   "pct": 12
   },
   "PUJ": {
    "to": "PUJ",
