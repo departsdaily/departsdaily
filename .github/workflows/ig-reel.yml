@@ -140,9 +140,29 @@ jobs:
             exit 1
           fi
 
-      # ffmpeg is preinstalled on ubuntu-latest. Assert it rather than discover
-      # it missing after spending a minute drawing 400 frames.
-      - run: ffmpeg -version | head -1
+      # ffmpeg is NOT on the ubuntu-latest image, contrary to what this step
+      # used to assume. Runs #1-#3 all died here.
+      #
+      # And the old assertion was `ffmpeg -version | head -1`, which passed
+      # green every time: a shell pipeline exits with the status of its LAST
+      # command, so head's success masked "ffmpeg: command not found". An
+      # assertion that cannot fail is worse than no assertion — it cost three
+      # runs and sent me looking at fonts and audio files. Use `command -v`,
+      # unpiped.
+      - name: Install ffmpeg
+        run: |
+          if command -v ffmpeg >/dev/null 2>&1; then
+            echo "already present"
+          else
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
+          command -v ffmpeg
+          ffmpeg -version | head -1
+          # libx264 is what we encode with; a stripped ffmpeg build would pass
+          # the check above and still fail on the first frame.
+          ffmpeg -hide_banner -encoders 2>/dev/null | grep -q libx264 \
+            || { echo "::error::ffmpeg has no libx264 encoder"; exit 1; }
 
       - name: Render the reel
         env:
