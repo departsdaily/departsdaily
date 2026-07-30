@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-07-30T02:16:53-04:00",
+ "generated": "2026-07-30T04:16:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -155,6 +155,21 @@
    "rarr": "1:20PM",
    "pct": 50
   },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 323,
+   "d1": "2026-08-11",
+   "d2": "2026-08-17",
+   "dep": "11:13PM",
+   "al": "Alaska",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "5:19PM",
+   "arr": "3:49AM+1",
+   "rarr": "10:25PM",
+   "pct": 42
+  },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
@@ -218,17 +233,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 544,
-   "d1": "2026-09-11",
-   "d2": "2026-09-20",
-   "dep": "8:15PM",
+   "price": 495,
+   "d1": "2026-11-13",
+   "d2": "2026-11-20",
+   "dep": "7:41PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 3,
    "xfer": 0,
-   "rdep": "5:25AM",
-   "arr": "4:58AM+1",
-   "rarr": "2:30PM",
-   "pct": -5
+   "rdep": "10:20AM",
+   "arr": "5:40AM+1",
+   "rarr": "6:28PM",
+   "pct": 5
   },
   "LON": {
    "to": "LON",
