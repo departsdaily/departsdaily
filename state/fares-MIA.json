@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-07-30T14:53:48-04:00",
+ "generated": "2026-07-30T16:16:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 234,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
-   "dep": "5:00PM",
-   "al": "American",
-   "stops": 0,
+   "price": 306,
+   "d1": "2026-08-14",
+   "d2": "2026-08-16",
+   "dep": "6:00AM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:25AM",
-   "arr": "7:32PM",
-   "rarr": "7:48AM",
-   "pct": 41
+   "rdep": "12:25PM",
+   "arr": "12:59PM",
+   "rarr": "7:42PM",
+   "pct": 23
   },
   "BOS": {
    "to": "BOS",
