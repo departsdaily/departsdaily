@@ -1,0 +1,220 @@
+name: Instagram reel
+
+# Two reels a day per account (owner's rule, Jul 29 2026), rotating through the
+# three shapes in config/reels.json so an account never posts the same kind of
+# video twice in one day.
+#
+# WHY THESE TIMES. The morning carousel fires at ~6:52 and the story drip runs
+# at 10:05 / 13:05 / 16:05 / 19:05 ET. The reel slots sit in the gaps, at
+# 11:40 AM and 5:40 PM ET, so the account is doing something new roughly every
+# two or three hours instead of dumping everything at breakfast.
+#
+# The reel is built from the SAME board the morning carousel posted. It never
+# re-fetches fares. One verified board a day, several different edits of it.
+#
+# DST note, same as the morning task and the story drip: these crons are UTC
+# (EDT-4). In November shift them +1 hour.
+
+on:
+  # Push-to-branch fire, same pattern as ig-trigger and story-trigger. The ops
+  # sandbox can reach git but not the Actions API, so this is its only reliable
+  # manual trigger. It is also the retry path when a slot fails.
+  push:
+    branches: [reel-trigger]
+  schedule:
+    - cron: "40 15 * * *"   # 11:40 AM ET — slot 0
+    - cron: "40 21 * * *"   # 5:40 PM ET  — slot 1
+  workflow_dispatch:
+    inputs:
+      origins:
+        description: "Comma-separated origins (blank = every ig_enabled city)"
+        required: false
+      slot:
+        description: "Slot number (blank = pick from the clock)"
+        required: false
+      shape:
+        description: "Force a shape: board | spotlight | destination (blank = rotation)"
+        required: false
+
+permissions:
+  contents: write
+
+# Serial: every job commits its MP4 and its state to main, and parallel pushes
+# to one branch just race each other into rejections.
+concurrency:
+  group: ig-reel
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+      count: ${{ steps.m.outputs.count }}
+      slot: ${{ steps.m.outputs.slot }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - id: m
+        env:
+          REQUESTED: ${{ inputs.origins }}
+          ASK_SLOT: ${{ inputs.slot }}
+          # Which cron fired is the most reliable slot signal there is: it does
+          # not drift when GitHub runs the job late, which GitHub does often.
+          SCHED: ${{ github.event.schedule }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, datetime
+          from zoneinfo import ZoneInfo
+
+          cfg = json.load(open("config/origins.json"))
+          ask = (os.environ.get("REQUESTED") or "").strip()
+          want = [c.strip().upper() for c in ask.split(",") if c.strip()]
+
+          # origins.json carries _comment/_adding_a_city metadata whose values
+          # are strings, and .get() on a string raises. Underscore keys are not
+          # cities — the story drip job died silently on exactly this once.
+          picked = [{"code": c, "handle": v["handle"], "secret": v["token_secret"]}
+                    for c, v in cfg.items()
+                    if isinstance(v, dict) and not c.startswith("_")
+                    and ((want and c in want) or (not want and v.get("ig_enabled")))]
+
+          # Slot: explicit input wins, then the cron that fired, then the clock
+          # (for a push to reel-trigger, which carries neither).
+          crons = {"40 15 * * *": 0, "40 21 * * *": 1}
+          asked = (os.environ.get("ASK_SLOT") or "").strip()
+          if asked:
+              slot = int(asked)
+          elif os.environ.get("SCHED") in crons:
+              slot = crons[os.environ["SCHED"]]
+          else:
+              slot = 0 if datetime.datetime.now(ZoneInfo("America/New_York")).hour < 14 else 1
+
+          print("matrix=" + json.dumps(picked))
+          print("count=" + str(len(picked)))
+          print("slot=" + str(slot))
+          PY
+
+      - run: |
+          echo "slot ${{ steps.m.outputs.slot }} · ${{ steps.m.outputs.matrix }}" >> $GITHUB_STEP_SUMMARY
+
+  reel:
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        origin: ${{ fromJson(needs.plan.outputs.matrix) }}
+    name: reel ${{ matrix.origin.code }} slot ${{ needs.plan.outputs.slot }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - name: Confirm the account token exists
+        env:
+          IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
+        run: |
+          if [ -z "$IG_TOKEN" ]; then
+            echo "::error::${{ matrix.origin.code }} is ig_enabled but repo secret ${{ matrix.origin.secret }} is empty."
+            exit 1
+          fi
+
+      # ffmpeg is preinstalled on ubuntu-latest. Assert it rather than discover
+      # it missing after spending a minute drawing 400 frames.
+      - run: ffmpeg -version | head -1
+
+      - name: Render the reel
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
+          REEL_SLOT: ${{ needs.plan.outputs.slot }}
+          REEL_SHAPE: ${{ inputs.shape }}
+        run: python pipeline/render_reel.py
+
+      - name: Stage the MP4 into the site
+        id: stage
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
+          SLOT: ${{ needs.plan.outputs.slot }}
+        run: |
+          D=$(TZ=America/New_York date +%F)
+          # Same layout the morning slides use: CLT keeps the unprefixed path.
+          if [ "$ORIGIN" = "CLT" ]; then
+            SRC=out;           DEST="site/daily/$D"
+          else
+            SRC="out/$ORIGIN"; DEST="site/daily/$ORIGIN/$D"
+          fi
+          echo "dest=$DEST" >> "$GITHUB_OUTPUT"
+          mkdir -p "$DEST"
+          cp "$SRC/reel_$SLOT.mp4" "$SRC/reel_$SLOT.json" "$DEST/"
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git add -A "$DEST"
+          git commit -m "IG reel $ORIGIN slot $SLOT $D" || echo "no changes"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::could not push the reel after 5 attempts"; exit 1
+
+      - name: Wait for Cloudflare Pages to serve the MP4
+        env:
+          SLOT: ${{ needs.plan.outputs.slot }}
+        run: |
+          # Instagram fetches this URL itself. On 2026-07-29 the morning
+          # carousel failed because publish beat the Pages build by two seconds
+          # (code 36001). A video is a bigger file, so wait on the real thing:
+          # a 200 with a video content type, not just a 200.
+          WEB="$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
+          URL="https://departsdaily.com/$WEB/reel_$SLOT.mp4"
+          echo "waiting on $URL"
+          for i in $(seq 1 45); do
+            probe=$(curl -sIL -o /dev/null -w "%{http_code} %{content_type}" "$URL")
+            case "$probe" in
+              "200 video"*) echo "MP4 live ($probe)"; exit 0 ;;
+            esac
+            echo "  attempt $i: $probe"
+            sleep 10
+          done
+          echo "::error::MP4 never became reachable — aborting before Instagram sees a 404"
+          exit 1
+
+      - name: Publish the reel
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
+          REEL_SLOT: ${{ needs.plan.outputs.slot }}
+          IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
+        run: |
+          export RAW_BASE="https://departsdaily.com/$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
+          echo "RAW_BASE=$RAW_BASE"
+          python pipeline/publish_reel.py
+
+      # Only now is the slot really spent. Committed after the publish, never
+      # before — the same lesson the no-repeat history taught on 2026-07-27.
+      - name: Record the slot
+        if: always()
+        run: |
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git add -f state/reel-log-*.json out/reel-error-*.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          MSG="IG reel posted ${{ matrix.origin.code }}"
+          [ -f "out/reel-error-${{ matrix.origin.code }}.json" ] && MSG="IG reel FAILURE ${{ matrix.origin.code }}"
+          git commit -m "$MSG slot ${{ needs.plan.outputs.slot }} $(TZ=America/New_York date '+%F %H:%M ET')"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::could not record the reel slot"; exit 1

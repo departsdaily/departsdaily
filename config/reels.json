@@ -1,0 +1,74 @@
+{
+  "_doc": [
+    "Instagram Reels plan (owner's rule, Jul 29 2026): two reels per day per",
+    "account, rotating through three shapes so the same account never posts the",
+    "same kind of video twice in one day.",
+    "",
+    "Reels are built from the SAME board the morning carousel used. That is",
+    "deliberate: the fares were verified once, at 6:52, and everything posted",
+    "all day points at that one verified board. A reel never re-fetches, so it",
+    "can never show a number the carousel and the site disagree with.",
+    "",
+    "ROTATION. index = (date.toordinal() * slots_per_day + slot) % 3 over the",
+    "'order' list below. Deterministic, so a rerun of the same slot rebuilds the",
+    "same reel instead of quietly switching shape mid-day, and every shape comes",
+    "up equally often across the week.",
+    "",
+    "AUDIO. The Instagram content publishing API cannot attach a track from",
+    "Instagram's music library. No API can. So a reel is silent unless an audio",
+    "file is sitting in assets/reel-audio/ — drop .mp3/.m4a files there and the",
+    "renderer picks one per reel and mixes it under the video at the level in",
+    "'audio'. Until then a silent AAC track is muxed in anyway, because a video",
+    "with no audio stream at all is the kind of edge case Meta's transcoder",
+    "sometimes rejects."
+  ],
+  "slots_per_day": 2,
+  "order": ["board", "spotlight", "destination"],
+  "fps": 30,
+  "audio": {
+    "dir": "assets/reel-audio",
+    "volume": 0.55,
+    "fade_out_sec": 1.5
+  },
+  "shapes": {
+    "board": {
+      "label": "THE WHOLE BOARD",
+      "hook": "EVERY DEAL WE FOUND TODAY",
+      "hold_sec": 2.0,
+      "per_row_sec": 1.15,
+      "cta_sec": 3.0,
+      "max_rows": 7,
+      "caption_lead": "Today's whole board, out of {origin}."
+    },
+    "spotlight": {
+      "label": "ONE BIG DEAL",
+      "hook": "THE BIGGEST DROP TODAY",
+      "hold_sec": 1.6,
+      "count_sec": 2.6,
+      "detail_sec": 3.2,
+      "cta_sec": 3.0,
+      "caption_lead": "The single biggest drop out of {origin} today."
+    },
+    "destination": {
+      "label": "THREE CITIES",
+      "hook": "THREE PLACES, UNDER TYPICAL",
+      "cards": 3,
+      "per_card_sec": 3.4,
+      "cta_sec": 3.0,
+      "caption_lead": "Three cities from {origin}, all under their typical fare."
+    }
+  },
+  "safe_area": {
+    "_doc": "Instagram draws its own UI over a reel. Top ~200px carries the account row, the bottom ~430px carries caption and buttons, the right ~150px carries the action rail. Nothing that must be read goes outside this box.",
+    "top": 250,
+    "bottom": 1440,
+    "left": 60,
+    "right": 930
+  },
+  "limits": {
+    "_doc": "Reels accept 3s to 15min; the algorithm rewards short and complete. Anything the renderer builds outside this range is a bug, so it fails loudly instead of uploading.",
+    "min_sec": 5,
+    "max_sec": 30,
+    "max_mb": 45
+  }
+}

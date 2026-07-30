@@ -17,6 +17,22 @@ Everything below is driven by `config/schedule.json`. Retune that file after fou
 | Sunday | *inspiration* | falls back to `week` | Planned inspiration plus Monday teaser. Renderer not built yet. |
 | Every other Sunday | `twoweek` | 12 to 17 nights, out Thu to Sun, back Fri to Mon | ISO even weeks. Twice a month max so it stays special. |
 
+## Reels — two a day, per account
+
+Added Jul 29 2026. Separate from the board plan above, on its own config
+(`config/reels.json`) and its own workflow (`ig-reel.yml`), firing at
+**11:40 AM and 5:40 PM ET** — the gaps between the morning carousel and the
+story drip slots.
+
+Reels are built from the SAME board the morning carousel posted, never a fresh
+fetch, so nothing in a day's feed can contradict anything else in it. Three
+shapes rotate: the whole board, one spotlight deal with the price counting down
+from typical, and three destination cards. Full writeup and failure modes in
+`REELS.md`.
+
+One thing to know going in: the publishing API cannot attach Instagram music,
+so reels are silent until licensed audio is dropped into `assets/reel-audio/`.
+
 ## The three rung ladder
 
 A shape is a **preference, never a filter that costs a deal.** For every route, `fetch_fares.py` finds the cheapest real fare at each of three rungs and takes the best one that still clears the 12% bar:
