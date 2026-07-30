@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gate closed · Departs Daily</title>
+<meta name="robots" content="noindex">
+<!--
+  WHY THIS FILE EXISTS, beyond being a nicer dead end.
+
+  Cloudflare Pages, with no 404.html, answers ANY unknown path with index.html
+  and HTTP 200. That broke the Instagram pipeline on 2026-07-30: the workflow
+  step that waits for freshly deployed slides checked only for a 200, got one
+  instantly from the index page, and handed Instagram a URL that served HTML.
+  Meta answered code 36001, "the URL returned an error page instead of an
+  image", and because /daily/* is cached for a day, the bad response stuck at
+  the edge and no re-fire could clear it.
+
+  With this file present, a missing path returns a real 404. The pipeline's
+  content-type check is the primary fix; this removes the trap underneath it.
+  Do not delete it.
+-->
+<style>
+  :root{--navy:#0B1829;--panel:#12243C;--edge:#2E425E;--amber:#FFB703;
+        --white:#F0F4FA;--dim:#788CA5;--sky:#6C9EDE}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
+       background:radial-gradient(120% 90% at 50% 0%,#16294a 0%,var(--panel) 55%,var(--navy) 100%);
+       color:var(--white);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  .card{width:100%;max-width:560px;background:rgba(7,15,27,.55);
+        border:1px solid var(--edge);border-radius:18px;padding:34px 30px}
+  .kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;
+          letter-spacing:.18em;color:var(--sky);text-transform:uppercase}
+  h1{margin:14px 0 6px;font-size:clamp(34px,9vw,52px);line-height:1.02;letter-spacing:-.5px}
+  h1 span{color:var(--amber)}
+  p{margin:0 0 22px;color:var(--dim);font-size:17px;line-height:1.55}
+  .flap{display:flex;gap:6px;margin:22px 0 26px}
+  .flap b{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;
+          font-size:30px;color:var(--amber);background:#070F1B;border:1px solid var(--edge);
+          border-radius:7px;padding:8px 11px;position:relative}
+  .flap b::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--navy)}
+  a.btn{display:inline-block;background:var(--amber);color:#0B1829;text-decoration:none;
+        font-weight:800;font-size:18px;padding:15px 26px;border-radius:12px}
+  .foot{margin-top:24px;font-size:12.5px;color:var(--dim)}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="kicker">Departs Daily · status</div>
+    <h1>Gate <span>closed</span>.</h1>
+    <div class="flap"><b>4</b><b>0</b><b>4</b></div>
+    <p>This page never existed, or it was a dated deal board that has since
+       rolled off. The fares move too fast to keep old ones up.</p>
+    <a class="btn" href="/">See today's board</a>
+    <div class="foot">New verified board every morning at 7AM ET.</div>
+  </main>
+</body>
+</html>

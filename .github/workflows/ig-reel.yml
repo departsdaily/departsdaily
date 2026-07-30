@@ -170,6 +170,7 @@ jobs:
           echo "::error::could not push the reel after 5 attempts"; exit 1
 
       - name: Wait for Cloudflare Pages to serve the MP4
+        id: wait
         env:
           SLOT: ${{ needs.plan.outputs.slot }}
         run: |
@@ -179,9 +180,13 @@ jobs:
           # a 200 with a video content type, not just a 200.
           WEB="$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
           URL="https://departsdaily.com/$WEB/reel_$SLOT.mp4"
+          VER="${{ github.run_id }}-${{ github.run_attempt }}"
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
           echo "waiting on $URL"
           for i in $(seq 1 45); do
-            probe=$(curl -sIL -o /dev/null -w "%{http_code} %{content_type}" "$URL")
+            # Throwaway query string: /daily/* is max-age=86400, so a probe that
+            # gets index.html must not cache that under the canonical URL.
+            probe=$(curl -sIL -o /dev/null -w "%{http_code} %{content_type}" "$URL?probe=$VER-$i")
             case "$probe" in
               "200 video"*) echo "MP4 live ($probe)"; exit 0 ;;
             esac
@@ -196,6 +201,7 @@ jobs:
           ORIGIN: ${{ matrix.origin.code }}
           REEL_SLOT: ${{ needs.plan.outputs.slot }}
           IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
+          ASSET_VER: ${{ steps.wait.outputs.ver }}
         run: |
           export RAW_BASE="https://departsdaily.com/$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
           echo "RAW_BASE=$RAW_BASE"

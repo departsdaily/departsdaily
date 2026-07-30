@@ -20,6 +20,23 @@ TOKEN = os.environ["IG_TOKEN"]
 RAW_BASE = os.environ["RAW_BASE"]
 G = "https://graph.instagram.com/v21.0"
 
+# WHY EVERY ASSET URL CARRIES ?v=  (root cause of the 2026-07-30 outage)
+# Cloudflare Pages has no 404.html, so a path that does not exist YET returns
+# HTTP 200 with index.html. The wait-for-Pages step only checked for 200, so it
+# passed instantly, every time — there was effectively no wait at all. Meta then
+# fetched the URL, got HTML, and returned code 36001 "the URL returned an error
+# page instead of an image".
+# Worse: /daily/* is served with max-age=86400, so that HTML response got cached
+# at the edge UNDER THE CANONICAL URL for 24 hours. Once poisoned, no re-fire
+# could ever succeed for that date — which is exactly the "re-fire no longer
+# clears it" symptom. A version token puts every fetch on a fresh cache key, so
+# a poisoned entry can never be handed to Instagram again.
+ASSET_VER = os.environ.get("ASSET_VER") or str(int(time.time()))
+
+
+def asset(name):
+    return "%s/%s?v=%s" % (RAW_BASE, name, ASSET_VER)
+
 # A publish failure used to surface as a bare HTTP 400 with the useful part —
 # Instagram's own explanation — thrown away inside the exception body. Every
 # call now records what it asked for and what came back, and the trail is
@@ -157,7 +174,7 @@ except Exception:
     SLIDES = ["slide1_board.png", "slide2_cta.png"]
 print("carousel:", SLIDES)
 for s in SLIDES:
-    r = post(IG_USER + "/media", image_url=RAW_BASE + "/" + s, is_carousel_item="true")
+    r = post(IG_USER + "/media", image_url=asset(s), is_carousel_item="true")
     children.append(r["id"])
     time.sleep(2)
 carousel = post(IG_USER + "/media", media_type="CAROUSEL",
@@ -173,7 +190,7 @@ _want_stories = os.environ.get("STORIES", "0") == "1"
 for i, d in enumerate([x for x in B["deals"] if x.get("deal", True)] if _want_stories else [], 1):
     try:
         r = post(IG_USER + "/media",
-                 image_url="{}/story_{}_{}.png".format(RAW_BASE, i, d["to"]),
+                 image_url=asset("story_{}_{}.png".format(i, d["to"])),
                  media_type="STORIES")
         time.sleep(3)
         post(IG_USER + "/media_publish", creation_id=r["id"])

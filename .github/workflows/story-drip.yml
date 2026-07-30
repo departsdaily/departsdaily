@@ -82,6 +82,7 @@ jobs:
         env:
           ORIGIN: ${{ matrix.origin.code }}
           IG_TOKEN: ${{ secrets[matrix.origin.token_secret] }}
+          ASSET_VER: ${{ github.run_id }}-${{ github.run_attempt }}
         run: |
           # RAW_BASE must point at today's staged slides. CLT lives at
           # site/daily/<date>/, other cities at site/daily/<CODE>/<date>/.

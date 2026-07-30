@@ -169,29 +169,47 @@ jobs:
           done
           echo "::error::could not push slides after 5 attempts"; exit 1
 
-      - name: Wait for Cloudflare Pages to serve the slides
+      - name: Wait for Cloudflare Pages to actually serve the slides
+        id: wait
         run: |
-          # The push above triggers the Pages build. Poll until the cover
-          # board slide is actually live — Instagram fetches these URLs, so posting
-          # before they resolve would publish a broken carousel.
+          # THE 2026-07-30 OUTAGE LIVED HERE. This loop used to check only for
+          # HTTP 200. Pages has no 404.html, so a path it has not deployed yet
+          # returns 200 with index.html — the check passed on the first attempt,
+          # in under a second, on every run. There was no wait at all, and Meta
+          # got HTML and answered code 36001 "the URL returned an error page
+          # instead of an image".
+          #
+          # Two changes: verify the CONTENT TYPE is an image, not just the
+          # status; and probe on a throwaway query string, because /daily/* is
+          # served max-age=86400 and a probe that gets HTML would otherwise
+          # cache that HTML at the edge under the canonical URL for 24 hours —
+          # poisoning the exact URL we are about to hand Instagram.
           WEB="$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
+          VER="${{ github.run_id }}-${{ github.run_attempt }}"
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
           URL="https://departsdaily.com/$WEB/slide1_board.png"
           echo "waiting on $URL"
-          for i in $(seq 1 40); do
-            code=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
-            [ "$code" = "200" ] && echo "slides live" && exit 0
+          for i in $(seq 1 45); do
+            probe=$(curl -s -o /dev/null -L \
+              -w "%{http_code} %{content_type} %{size_download}" \
+              "$URL?probe=$VER-$i")
+            case "$probe" in
+              "200 image/"*) echo "slides live and served as an image ($probe)"; exit 0 ;;
+            esac
+            echo "  attempt $i: $probe"
             sleep 10
           done
-          echo "::error::slides never became reachable — aborting before a broken IG post"
+          echo "::error::slides never served as an image — aborting before a broken IG post"
           exit 1
 
       - name: Publish to Instagram
         env:
           ORIGIN: ${{ matrix.origin.code }}
           IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
+          ASSET_VER: ${{ steps.wait.outputs.ver }}
         run: |
           export RAW_BASE="https://departsdaily.com/$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
-          echo "RAW_BASE=$RAW_BASE"
+          echo "RAW_BASE=$RAW_BASE ASSET_VER=$ASSET_VER"
           python pipeline/publish_instagram.py
 
       # Only now is the city really spent.

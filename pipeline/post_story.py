@@ -33,6 +33,10 @@ ORIGIN = ORG["code"]
 TOKEN = os.environ["IG_TOKEN"]
 RAW_BASE = os.environ["RAW_BASE"]
 G = "https://graph.instagram.com/v21.0"
+# See publish_instagram.py for why: an undeployed path returns 200+HTML and that
+# response gets edge-cached under the canonical URL for a day. ?v= keeps every
+# fetch on a fresh cache key.
+ASSET_VER = os.environ.get("ASSET_VER") or str(int(time.time()))
 
 # Drip slots, ET hours. The workflow cron should fire once inside each. Used
 # only to know how many slots REMAIN, which drives the doubling rule.
@@ -111,7 +115,7 @@ def main():
                          % (me.get("username"), ORG["handle"]))
 
     for i, d in batch:
-        url = "%s/story_%d_%s.png" % (RAW_BASE, i, d["to"])
+        url = "%s/story_%d_%s.png?v=%s" % (RAW_BASE, i, d["to"], ASSET_VER)
         try:
             r = call("me/media", {"image_url": url, "media_type": "STORIES"})
             time.sleep(3)

@@ -45,6 +45,9 @@ SLOT = int(os.environ.get("REEL_SLOT") or 0)
 TOKEN = os.environ["IG_TOKEN"]
 RAW_BASE = os.environ["RAW_BASE"].rstrip("/")
 G = "https://graph.instagram.com/v21.0"
+# Same reason as the carousel: an undeployed /daily/ path returns 200 + index.html
+# and gets edge-cached under the canonical URL for 24h. ?v= sidesteps it.
+ASSET_VER = os.environ.get("ASSET_VER") or str(int(time.time()))
 
 STATE = os.path.join("state", "reel-log-%s.json" % ORIGIN)
 TRAIL = []
@@ -162,6 +165,8 @@ def wait_for_video(url, tries=40, gap=10):
             with urllib.request.urlopen(req, timeout=20) as r:
                 ctype = r.headers.get("Content-Type", "")
                 clen = int(r.headers.get("Content-Length") or 0)
+                # A 200 is NOT enough — Pages returns 200 + index.html for a
+                # path it has not deployed. The content type is the real signal.
                 if r.status == 200 and "video" in ctype and clen > 50000:
                     print("video live: %s (%s, %.1fMB)" % (url, ctype, clen / 1e6))
                     return
@@ -198,7 +203,7 @@ def main():
     if st.get("date") != today:
         st = {"date": today, "slots": {}}
 
-    url = "%s/%s" % (RAW_BASE, man["file"])
+    url = "%s/%s?v=%s" % (RAW_BASE, man["file"], ASSET_VER)
     wait_for_video(url)
 
     # Wrong-account guard first, before a single container exists.
