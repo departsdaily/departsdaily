@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-07-29T22:15:29-04:00",
+ "generated": "2026-07-30T00:15:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -38,17 +38,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 412,
-   "d1": "2026-08-01",
-   "d2": "2026-08-05",
-   "dep": "7:30AM",
+   "price": 238,
+   "d1": "2026-08-27",
+   "d2": "2026-08-30",
+   "dep": "4:28PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "10:51AM",
-   "rarr": "11:01AM",
-   "pct": 22
+   "rdep": "1:59PM",
+   "arr": "7:59PM",
+   "rarr": "5:53PM",
+   "pct": 55
   },
   "FLL": {
    "to": "FLL",
@@ -158,7 +158,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 102,
+   "price": 103,
    "d1": "2026-09-29",
    "d2": "2026-10-05",
    "dep": "8:55PM",
@@ -229,21 +229,6 @@
    "arr": "7:38PM",
    "rarr": "1:56AM+1",
    "pct": -2
-  },
-  "SJU": {
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 365,
-   "d1": "2026-08-01",
-   "d2": "2026-08-08",
-   "dep": "11:52PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:13PM",
-   "arr": "6:34AM+1",
-   "rarr": "7:44PM",
-   "pct": 13
   }
  }
 }

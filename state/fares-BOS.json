@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-07-29T22:16:56-04:00",
+ "generated": "2026-07-30T00:17:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 199,
-   "d1": "2026-09-06",
-   "d2": "2026-09-08",
-   "dep": "8:41AM",
-   "al": "JetBlue",
+   "price": 192,
+   "d1": "2026-08-22",
+   "d2": "2026-08-27",
+   "dep": "12:45PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:35PM",
-   "arr": "1:00PM",
-   "rarr": "11:00PM",
-   "pct": 51
+   "rdep": "8:07PM",
+   "arr": "5:18PM",
+   "rarr": "12:45AM+1",
+   "pct": 53
   },
   "AMS": {
    "to": "AMS",

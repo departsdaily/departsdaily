@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-07-29T22:14:18-04:00",
+ "generated": "2026-07-30T00:14:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 336,
-   "d1": "2026-08-01",
-   "d2": "2026-08-04",
-   "dep": "8:02PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 368,
+   "d1": "2026-10-28",
+   "d2": "2026-11-01",
+   "dep": "6:35PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "1:10AM+1",
-   "rarr": "9:31AM",
-   "pct": 36
+   "rdep": "5:56AM",
+   "arr": "8:56PM",
+   "rarr": "8:25AM",
+   "pct": 30
   },
   "DCA": {
    "to": "DCA",

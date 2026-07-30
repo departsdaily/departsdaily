@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-07-29T22:16:38-04:00",
+ "generated": "2026-07-30T00:16:41-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,21 +184,6 @@
    "arr": "5:52PM",
    "rarr": "4:01AM+1",
    "pct": 68
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 243,
-   "d1": "2026-08-01",
-   "d2": "2026-08-10",
-   "dep": "10:29AM",
-   "al": "United",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:31PM",
-   "arr": "6:28PM",
-   "rarr": "8:41PM",
-   "pct": 62
   },
   "SFO": {
    "to": "SFO",
