@@ -1,0 +1,88 @@
+{
+ "origin": "ATL",
+ "date": "2026-07-30",
+ "slot": 0,
+ "shape": "board",
+ "label": "THE WHOLE BOARD",
+ "caption_lead": "Today's whole board, out of ATL.",
+ "file": "reel_0.mp4",
+ "seconds": 13.05,
+ "size_mb": 0.84,
+ "fps": 30,
+ "audio": "gate-a12@1.9.mp3",
+ "audio_start": 1.9,
+ "plan_shape": "urgent",
+ "plan_angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices.",
+ "featured": [
+  {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 73,
+   "disc": 60,
+   "baseline": 181,
+   "nights": 3,
+   "d1": "2026-08-20",
+   "d2": "2026-08-23"
+  },
+  {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 182,
+   "disc": 58,
+   "baseline": 430,
+   "nights": 10,
+   "d1": "2026-08-10",
+   "d2": "2026-08-20"
+  },
+  {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 102,
+   "disc": 52,
+   "baseline": 211,
+   "nights": 4,
+   "d1": "2026-09-19",
+   "d2": "2026-09-23"
+  },
+  {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 78,
+   "disc": 51,
+   "baseline": 158,
+   "nights": 2,
+   "d1": "2026-08-21",
+   "d2": "2026-08-23"
+  },
+  {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 254,
+   "disc": 48,
+   "baseline": 492,
+   "nights": 4,
+   "d1": "2026-08-13",
+   "d2": "2026-08-17"
+  },
+  {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 110,
+   "disc": 46,
+   "baseline": 203,
+   "nights": 2,
+   "d1": "2026-08-25",
+   "d2": "2026-08-27"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 193,
+   "disc": 40,
+   "baseline": 323,
+   "nights": 3,
+   "d1": "2026-08-14",
+   "d2": "2026-08-17"
+  }
+ ]
+}
