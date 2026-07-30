@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-07-30T12:14:50-04:00",
+ "generated": "2026-07-30T14:14:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 189,
-   "d1": "2026-09-12",
-   "d2": "2026-09-15",
-   "dep": "7:11AM",
+   "price": 152,
+   "d1": "2026-08-27",
+   "d2": "2026-09-02",
+   "dep": "1:59PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:47PM",
-   "arr": "11:28AM",
-   "rarr": "9:19PM",
-   "pct": 53
+   "rdep": "2:25PM",
+   "arr": "5:57PM",
+   "rarr": "6:46PM",
+   "pct": 62
   },
   "AMS": {
    "to": "AMS",
@@ -383,17 +383,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 587,
-   "d1": "2026-10-07",
-   "d2": "2026-10-17",
-   "dep": "11:25AM",
-   "al": "Turkish",
+   "price": 622,
+   "d1": "2026-11-04",
+   "d2": "2026-11-17",
+   "dep": "7:00PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:00PM",
-   "arr": "12:25AM+1",
-   "rarr": "9:45AM+1",
-   "pct": 38
+   "rdep": "7:35PM",
+   "arr": "6:10AM+1",
+   "rarr": "8:25AM+1",
+   "pct": 35
   },
   "SJU": {
    "to": "SJU",

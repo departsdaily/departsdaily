@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-07-30T12:14:13-04:00",
+ "generated": "2026-07-30T14:14:20-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -110,6 +110,21 @@
    "rarr": "4:31AM+1",
    "pct": 64
   },
+  "MCO": {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 138,
+   "d1": "2026-08-20",
+   "d2": "2026-08-24",
+   "dep": "11:50AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:10AM",
+   "arr": "4:00PM",
+   "rarr": "8:01AM",
+   "pct": 67
+  },
   "MIA": {
    "to": "MIA",
    "city": "Miami",
@@ -143,7 +158,7 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 179,
+   "price": 177,
    "d1": "2026-08-28",
    "d2": "2026-08-31",
    "dep": "5:43PM",

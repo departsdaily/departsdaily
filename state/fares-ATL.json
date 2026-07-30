@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-07-30T12:14:32-04:00",
+ "generated": "2026-07-30T14:14:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,7 +38,7 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 116,
+   "price": 110,
    "d1": "2026-09-19",
    "d2": "2026-09-23",
    "dep": "7:59PM",
@@ -48,7 +48,7 @@
    "rdep": "12:24PM",
    "arr": "11:24PM",
    "rarr": "3:31PM",
-   "pct": 76
+   "pct": 77
   },
   "DFW": {
    "to": "DFW",
@@ -68,17 +68,17 @@
   "DTW": {
    "to": "DTW",
    "city": "Detroit",
-   "price": 254,
-   "d1": "2026-08-07",
-   "d2": "2026-08-10",
-   "dep": "10:35PM",
+   "price": 87,
+   "d1": "2026-08-28",
+   "d2": "2026-09-01",
+   "dep": "10:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:35PM",
-   "arr": "12:40AM+1",
-   "rarr": "7:49PM",
-   "pct": 45
+   "rdep": "6:00AM",
+   "arr": "1:04AM+1",
+   "rarr": "8:20AM",
+   "pct": 81
   },
   "FLL": {
    "to": "FLL",
@@ -113,17 +113,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 182,
-   "d1": "2026-08-15",
-   "d2": "2026-08-18",
-   "dep": "12:42PM",
+   "price": 175,
+   "d1": "2026-08-18",
+   "d2": "2026-08-20",
+   "dep": "9:00PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:36AM",
-   "arr": "7:28PM",
+   "arr": "2:31AM+1",
    "rarr": "1:30PM",
-   "pct": 73
+   "pct": 74
   },
   "LAX": {
    "to": "LAX",

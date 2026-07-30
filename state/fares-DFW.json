@@ -1,10 +1,25 @@
 {
  "origin": "DFW",
- "generated": "2026-07-30T12:15:10-04:00",
+ "generated": "2026-07-30T14:15:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
+  "BOS": {
+   "to": "BOS",
+   "city": "Boston",
+   "price": 306,
+   "d1": "2026-10-10",
+   "d2": "2026-10-14",
+   "dep": "4:10PM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:05AM",
+   "arr": "10:25PM",
+   "rarr": "5:51PM",
+   "pct": 43
+  },
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
@@ -173,17 +188,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 148,
-   "d1": "2026-10-01",
-   "d2": "2026-10-04",
-   "dep": "8:55PM",
+   "price": 236,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
+   "dep": "1:23PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:28PM",
-   "arr": "1:17AM+1",
-   "rarr": "10:46PM",
-   "pct": 75
+   "rdep": "5:32PM",
+   "arr": "5:52PM",
+   "rarr": "10:34PM",
+   "pct": 59
   },
   "PHX": {
    "to": "PHX",
@@ -275,6 +290,21 @@
    "rarr": "2:56AM+1",
    "pct": 41
   },
+  "GCM": {
+   "to": "GCM",
+   "city": "Grand Cayman",
+   "price": 562,
+   "d1": "2026-10-12",
+   "d2": "2026-10-16",
+   "dep": "8:39AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "4:45PM",
+   "arr": "2:34PM",
+   "rarr": "9:46PM",
+   "pct": 12
+  },
   "LON": {
    "to": "LON",
    "city": "London",
@@ -289,6 +319,21 @@
    "arr": "12:07AM+1",
    "rarr": "2:24AM+1",
    "pct": 19
+  },
+  "MBJ": {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 533,
+   "d1": "2026-10-12",
+   "d2": "2026-10-16",
+   "dep": "8:39AM",
+   "al": "Frontier",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "2:49PM",
+   "arr": "4:20PM",
+   "rarr": "8:32PM",
+   "pct": 1
   },
   "PAR": {
    "to": "PAR",
