@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-07-30T14:14:20-04:00",
+ "generated": "2026-07-30T14:51:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 328,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "dep": "5:31PM",
+   "price": 306,
+   "d1": "2026-08-21",
+   "d2": "2026-08-28",
+   "dep": "5:21PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:10AM",
-   "arr": "11:09PM",
-   "rarr": "2:47PM",
-   "pct": 51
+   "rdep": "4:40PM",
+   "arr": "11:07PM",
+   "rarr": "10:07PM",
+   "pct": 54
   },
   "SEA": {
    "to": "SEA",
