@@ -562,14 +562,25 @@ print("rendering %s reel for %s: shape=%s slot=%d %.1fs %d frames audio=%s"
          if track else "silent"))
 
 proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+broke = False
 try:
     for i in range(nframes):
         proc.stdin.write(FRAME(i / FPS).tobytes())
+except BrokenPipeError:
+    # ffmpeg rejected an argument and exited before we finished feeding frames.
+    # Without this the traceback points at a pipe write, which says nothing
+    # about the real cause — ffmpeg's own stderr, above, is the message.
+    broke = True
 finally:
-    proc.stdin.close()
+    try:
+        proc.stdin.close()
+    except BrokenPipeError:
+        broke = True
     rc = proc.wait()
-if rc != 0:
-    raise SystemExit("FATAL: ffmpeg exited %d" % rc)
+if rc != 0 or broke:
+    raise SystemExit("FATAL: ffmpeg exited %s%s. Command was:\n  %s"
+                     % (rc, " (broken pipe — it quit before the frames ran out)"
+                        if broke else "", " ".join(cmd)))
 
 size_mb = os.path.getsize(MP4) / 1e6
 if size_mb > lim["max_mb"]:

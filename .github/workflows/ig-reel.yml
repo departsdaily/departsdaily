@@ -239,7 +239,13 @@ jobs:
         run: |
           git config user.name departs-bot
           git config user.email board@departsdaily.com
-          git add -f state/reel-log-*.json out/reel-error-*.json out/reel-render-*.log 2>/dev/null || true
+          # One glob per `git add` — a single pathspec that matches nothing makes
+          # git abort the WHOLE command and stage none of the others. That is why
+          # runs #1 and #2 committed no diagnostics: the reel-log and reel-error
+          # globs were empty, so the render log that DID exist never got staged.
+          for f in state/reel-log-*.json out/reel-error-*.json out/reel-render-*.log; do
+            [ -e "$f" ] && git add -f "$f"
+          done
           git diff --cached --quiet && exit 0
           MSG="IG reel posted ${{ matrix.origin.code }}"
           [ "${{ job.status }}" != "success" ] && MSG="IG reel FAILURE ${{ matrix.origin.code }}"
