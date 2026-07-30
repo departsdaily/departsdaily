@@ -495,6 +495,20 @@ if not (lim["min_sec"] <= TOTAL <= lim["max_sec"]):
 # ----------------------------------------------------------------- encode
 
 
+def audio_start(path):
+    """Most tracks open with a slow intro, and a reel is 10 to 13 seconds — by
+    the time the hook lands the video is over. Put the offset in the FILENAME:
+    `sunset-drive@12.mp3` starts that track at 12 seconds. No offset means 0."""
+    stem = os.path.splitext(os.path.basename(path))[0]
+    if "@" in stem:
+        tail = stem.rsplit("@", 1)[1]
+        try:
+            return max(0.0, float(tail))
+        except ValueError:
+            pass
+    return 0.0
+
+
 def pick_audio():
     """Instagram's own music library is not reachable through the publishing
     API — for any app, not just ours. So the only real track a reel can carry
@@ -520,9 +534,14 @@ cmd = ["ffmpeg", "-y", "-loglevel", "error",
        "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", "%dx%d" % (W, H),
        "-framerate", str(FPS), "-i", "-"]
 if track:
-    cmd += ["-i", track,
+    start = audio_start(track)
+    # -ss BEFORE -i seeks the input, so the track starts at its hook rather
+    # than at whatever intro the artist put in front of it. afade in as well as
+    # out, because cutting into the middle of a track otherwise starts on a
+    # hard edge.
+    cmd += ["-ss", "%.2f" % start, "-i", track,
             "-filter_complex",
-            "[1:a]volume=%s,afade=t=out:st=%.2f:d=%s[a]"
+            "[1:a]volume=%s,afade=t=in:st=0:d=0.35,afade=t=out:st=%.2f:d=%s[a]"
             % (CFG["audio"]["volume"], max(0.0, TOTAL - CFG["audio"]["fade_out_sec"]),
                CFG["audio"]["fade_out_sec"]),
             "-map", "0:v", "-map", "[a]"]
@@ -539,7 +558,8 @@ cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "23",
 
 print("rendering %s reel for %s: shape=%s slot=%d %.1fs %d frames audio=%s"
       % (ORIGIN, B["date"], SHAPE, SLOT, TOTAL, nframes,
-         os.path.basename(track) if track else "silent"))
+         ("%s@%gs" % (os.path.basename(track), audio_start(track)))
+         if track else "silent"))
 
 proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
 try:
@@ -566,6 +586,7 @@ json.dump({"origin": ORIGIN, "date": B["date"], "slot": SLOT, "shape": SHAPE,
            "file": os.path.basename(MP4), "seconds": round(TOTAL, 2),
            "size_mb": round(size_mb, 2), "fps": FPS,
            "audio": os.path.basename(track) if track else None,
+           "audio_start": audio_start(track) if track else None,
            "plan_shape": PLAN.get("shape"), "plan_angle": PLAN.get("angle"),
            "featured": [{"to": d["to"], "city": d["city"], "price": d["price"],
                          "disc": d["disc"], "baseline": d.get("baseline"),
