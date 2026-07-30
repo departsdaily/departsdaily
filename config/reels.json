@@ -1,8 +1,12 @@
 {
   "_doc": [
-    "Instagram Reels plan (owner's rule, Jul 29 2026): two reels per day per",
-    "account, rotating through three shapes so the same account never posts the",
-    "same kind of video twice in one day.",
+    "Instagram Reels plan. Owner's rule Jul 30 2026: ONE reel per day per",
+    "account, rotating through the three shapes so each comes up every third",
+    "day. Started at two a day and stepped down deliberately: @cltdeparts took",
+    "a precautionary Meta restriction on Jul 28 and @atldeparts is days old, so",
+    "going from one post a day to four was more volume change than either",
+    "account should absorb at once. To go back up, set slots_per_day to 2 and",
+    "restore the second cron in .github/workflows/ig-reel.yml.",
     "",
     "Reels are built from the SAME board the morning carousel used. That is",
     "deliberate: the fares were verified once, at 6:52, and everything posted",
@@ -22,7 +26,7 @@
     "with no audio stream at all is the kind of edge case Meta's transcoder",
     "sometimes rejects."
   ],
-  "slots_per_day": 2,
+  "slots_per_day": 1,
   "order": ["board", "spotlight", "destination"],
   "fps": 30,
   "audio": {

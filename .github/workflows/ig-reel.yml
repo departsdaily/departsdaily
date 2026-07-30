@@ -1,13 +1,17 @@
 name: Instagram reel
 
-# Two reels a day per account (owner's rule, Jul 29 2026), rotating through the
-# three shapes in config/reels.json so an account never posts the same kind of
-# video twice in one day.
+# ONE reel a day per account (owner's rule, Jul 30 2026), rotating through the
+# three shapes in config/reels.json so each shape comes up every third day.
 #
-# WHY THESE TIMES. The morning carousel fires at ~6:52 and the story drip runs
-# at 10:05 / 13:05 / 16:05 / 19:05 ET. The reel slots sit in the gaps, at
-# 11:40 AM and 5:40 PM ET, so the account is doing something new roughly every
-# two or three hours instead of dumping everything at breakfast.
+# WHY ONE AND NOT TWO. It shipped as two, and stepped down the same day on
+# purpose: @cltdeparts took a precautionary Meta restriction on Jul 28 and
+# @atldeparts is days old. Going from one post a day to four is a volume change
+# automation flags notice. To go back up, set slots_per_day to 2 in
+# config/reels.json and restore the "40 21 * * *" cron below.
+#
+# WHY THIS TIME. The morning carousel fires at ~6:52 and the story drip runs at
+# 10:05 / 13:05 / 16:05 / 19:05 ET. 11:40 AM sits in a gap, so the account is
+# doing something new through the day rather than everything at breakfast.
 #
 # The reel is built from the SAME board the morning carousel posted. It never
 # re-fetches fares. One verified board a day, several different edits of it.
@@ -22,8 +26,7 @@ on:
   push:
     branches: [reel-trigger]
   schedule:
-    - cron: "40 15 * * *"   # 11:40 AM ET — slot 0
-    - cron: "40 21 * * *"   # 5:40 PM ET  — slot 1
+    - cron: "40 15 * * *"   # 11:40 AM ET — slot 0 (the only slot while slots_per_day is 1)
   workflow_dispatch:
     inputs:
       origins:
@@ -83,14 +86,19 @@ jobs:
 
           # Slot: explicit input wins, then the cron that fired, then the clock
           # (for a push to reel-trigger, which carries neither).
-          crons = {"40 15 * * *": 0, "40 21 * * *": 1}
+          # Which cron fired is the most reliable slot signal: it does not
+          # drift when GitHub runs the job late, which GitHub does often.
+          # Re-add "40 21 * * *": 1 here if the second daily reel comes back.
+          crons = {"40 15 * * *": 0}
           asked = (os.environ.get("ASK_SLOT") or "").strip()
           if asked:
               slot = int(asked)
           elif os.environ.get("SCHED") in crons:
               slot = crons[os.environ["SCHED"]]
           else:
-              slot = 0 if datetime.datetime.now(ZoneInfo("America/New_York")).hour < 14 else 1
+              per_day = json.load(open("config/reels.json"))["slots_per_day"]
+              hour = datetime.datetime.now(ZoneInfo("America/New_York")).hour
+              slot = 0 if per_day < 2 or hour < 14 else 1
 
           print("matrix=" + json.dumps(picked))
           print("count=" + str(len(picked)))

@@ -1,7 +1,8 @@
-# Instagram Reels — two a day, per account
+# Instagram Reels — one a day, per account
 
-**Shipped July 29 2026.** Owner's rule: every account posts **two reels a day**,
-rotating through three shapes. Live for `@cltdeparts` and `@atldeparts`, and
+**Shipped July 29 2026, stepped down to one a day on July 30.** Owner's rule:
+every account posts **one reel a day**, rotating through three shapes so each
+comes up every third day. Live for `@cltdeparts` and `@atldeparts`, and
 automatic for any city the moment its `ig_enabled` flips to true. No per city
 work at all — reels ride the same origin config the carousel does.
 
@@ -11,11 +12,14 @@ work at all — reels ride the same origin config the carousel does.
 |---|---|---|
 | 6:52 AM | board fetch, slides, carousel | `ig-post.yml` |
 | 10:05 / 1:05 / 4:05 / 7:05 | story drip | `story-drip.yml` |
-| **11:40 AM** | **reel, slot 0** | **`ig-reel.yml`** |
-| **5:40 PM** | **reel, slot 1** | **`ig-reel.yml`** |
+| **11:40 AM** | **reel** | **`ig-reel.yml`** |
 
-Reel slots sit in the gaps deliberately. The account now does something new
-every two or three hours instead of everything at breakfast.
+The reel slot sits in a gap deliberately, so the account does something new
+through the day instead of everything at breakfast.
+
+To go back to two a day: `slots_per_day: 2` in `config/reels.json`, restore the
+`"40 21 * * *"` cron in `ig-reel.yml`, and put `"40 21 * * *": 1` back in the
+`crons` map in its plan job. Three edits, one file each.
 
 ## One board, several edits
 
@@ -122,14 +126,15 @@ manual run.
 ## Rate limits
 
 Instagram allows 50 published posts per rolling 24 hours. A full day per account
-is now 1 carousel + up to 7 stories + 2 reels = 10. Not close.
+is 1 carousel + up to 7 stories + 1 reel = 9. Not close.
 
 **Volume risk is the real one, not rate limits.** `@cltdeparts` took a
 precautionary Meta restriction on Jul 28 and `@atldeparts` is days old. Going
 from one post a day to four is the kind of step change automation flags notice.
-If either account gets restricted, the first thing to try is dropping to one
-reel a day: set `slots_per_day: 1` in `config/reels.json` and delete the
-5:40 PM cron from `ig-reel.yml`.
+That is why this
+shipped at two and was cut to one the same day, before either account had a
+chance to react to the new volume. Hold here for a few weeks and read the
+account health before adding anything back.
 
 ## Worth building next
 
