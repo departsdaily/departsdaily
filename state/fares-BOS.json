@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-07-30T06:17:36-04:00",
+ "generated": "2026-07-30T08:17:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 231,
-   "d1": "2026-09-03",
-   "d2": "2026-09-05",
-   "dep": "9:36AM",
+   "price": 281,
+   "d1": "2026-09-15",
+   "d2": "2026-09-21",
+   "dep": "12:52PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:35AM",
-   "arr": "2:58PM",
-   "rarr": "1:44PM",
-   "pct": 57
+   "rdep": "12:15PM",
+   "arr": "6:45PM",
+   "rarr": "6:40PM",
+   "pct": 48
   },
   "FLL": {
    "to": "FLL",
