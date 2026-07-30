@@ -1,0 +1,78 @@
+{
+ "origin": "CLT",
+ "date": "2026-07-30",
+ "slot": 0,
+ "shape": "board",
+ "label": "THE WHOLE BOARD",
+ "caption_lead": "Today's whole board, out of CLT.",
+ "file": "reel_0.mp4",
+ "seconds": 11.9,
+ "size_mb": 0.79,
+ "fps": 30,
+ "audio": "red-eye@2.4.mp3",
+ "audio_start": 2.4,
+ "plan_shape": "urgent",
+ "plan_angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices.",
+ "featured": [
+  {
+   "to": "AUS",
+   "city": "Austin",
+   "price": 201,
+   "disc": 32,
+   "baseline": 296,
+   "nights": 2,
+   "d1": "2026-08-07",
+   "d2": "2026-08-09"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 244,
+   "disc": 29,
+   "baseline": 344,
+   "nights": 3,
+   "d1": "2026-08-19",
+   "d2": "2026-08-22"
+  },
+  {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 313,
+   "disc": 24,
+   "baseline": 413,
+   "nights": 2,
+   "d1": "2026-08-25",
+   "d2": "2026-08-27"
+  },
+  {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 266,
+   "disc": 16,
+   "baseline": 318,
+   "nights": 4,
+   "d1": "2026-08-14",
+   "d2": "2026-08-18"
+  },
+  {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 223,
+   "disc": 15,
+   "baseline": 262,
+   "nights": 3,
+   "d1": "2026-08-19",
+   "d2": "2026-08-22"
+  },
+  {
+   "to": "MIA",
+   "city": "Miami",
+   "price": 156,
+   "disc": 12,
+   "baseline": 178,
+   "nights": 7,
+   "d1": "2026-08-13",
+   "d2": "2026-08-20"
+  }
+ ]
+}

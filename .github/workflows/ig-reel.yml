@@ -149,7 +149,24 @@ jobs:
           ORIGIN: ${{ matrix.origin.code }}
           REEL_SLOT: ${{ needs.plan.outputs.slot }}
           REEL_SHAPE: ${{ inputs.shape }}
-        run: python pipeline/render_reel.py
+        run: |
+          # WHY THE TEE. Actions logs live on a blob host the ops sandbox cannot
+          # reach, so a failure here was completely invisible from outside the
+          # web UI — the job just said "failure" and committed nothing. Every
+          # other failure path in this repo leaves a trail in git for exactly
+          # this reason; the render step was the one that did not.
+          set -o pipefail
+          mkdir -p out
+          {
+            echo "=== env ==="
+            python -c "import sys,PIL; print('python', sys.version.split()[0], '| pillow', PIL.__version__)"
+            ffmpeg -version | head -1
+            echo "fonts: $(ls /usr/share/fonts/truetype/dejavu/ 2>/dev/null | wc -l) dejavu files"
+            ls /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf 2>&1 || echo "MISSING condensed-bold"
+            echo "audio: $(ls assets/reel-audio/*.mp3 2>/dev/null | wc -l) tracks"
+            echo "=== render ==="
+          } > "out/reel-render-$ORIGIN.log" 2>&1
+          python pipeline/render_reel.py 2>&1 | tee -a "out/reel-render-$ORIGIN.log"
 
       - name: Stage the MP4 into the site
         id: stage
@@ -222,10 +239,10 @@ jobs:
         run: |
           git config user.name departs-bot
           git config user.email board@departsdaily.com
-          git add -f state/reel-log-*.json out/reel-error-*.json 2>/dev/null || true
+          git add -f state/reel-log-*.json out/reel-error-*.json out/reel-render-*.log 2>/dev/null || true
           git diff --cached --quiet && exit 0
           MSG="IG reel posted ${{ matrix.origin.code }}"
-          [ -f "out/reel-error-${{ matrix.origin.code }}.json" ] && MSG="IG reel FAILURE ${{ matrix.origin.code }}"
+          [ "${{ job.status }}" != "success" ] && MSG="IG reel FAILURE ${{ matrix.origin.code }}"
           git commit -m "$MSG slot ${{ needs.plan.outputs.slot }} $(TZ=America/New_York date '+%F %H:%M ET')"
           for i in 1 2 3 4 5; do
             git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
