@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-07-30T10:15:39-04:00",
+ "generated": "2026-07-30T12:15:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 15,
+ "routes_priced": 14,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -18,21 +18,6 @@
    "rdep": "6:30PM",
    "arr": "6:37PM",
    "rarr": "9:27PM",
-   "pct": 63
-  },
-  "BOS": {
-   "to": "BOS",
-   "city": "Boston",
-   "price": 195,
-   "d1": "2026-08-31",
-   "d2": "2026-09-05",
-   "dep": "6:30PM",
-   "al": "Southwest",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:20AM",
-   "arr": "10:30PM",
-   "rarr": "10:53AM",
    "pct": 63
   },
   "DCA": {

@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-07-30T10:14:39-04:00",
+ "generated": "2026-07-30T12:14:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -45,9 +45,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:10PM",
+   "rdep": "12:24PM",
    "arr": "11:24PM",
-   "rarr": "10:10PM",
+   "rarr": "3:31PM",
    "pct": 76
   },
   "DFW": {
