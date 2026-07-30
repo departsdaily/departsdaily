@@ -4,19 +4,19 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-07-30 06:13 EDT
-   Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
-   Carried forward:  none
+   Generated 2026-07-30 06:53 EDT
+   Rebuilt this run: CLT (8)
+   Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-07-30T06:13:55-04:00",
+ updated:"2026-07-30T06:53:28-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:244,d1:"2026-08-19",d2:"2026-08-22",dep:"5:21PM",al:"Frontier",stops:1,rdep:"6:00AM",arr:"11:14PM",rarr:"11:31AM",exp:"2026-08-01"},
  {to:"LAX",city:"Los Angeles",price:256,d1:"2026-09-16",d2:"2026-09-23",dep:"1:34PM",al:"Frontier",stops:1,rdep:"9:40PM",arr:"7:59PM",rarr:"4:31AM+1",exp:"2026-08-01"},
  {to:"MIA",city:"Miami",price:156,d1:"2026-08-13",d2:"2026-08-20",dep:"6:48PM",al:"Frontier",stops:0,rdep:"2:27PM",arr:"9:05PM",rarr:"4:46PM",exp:"2026-08-01"},
  {to:"NYC",city:"New York City",price:179,d1:"2026-08-28",d2:"2026-08-31",dep:"5:43PM",al:"Frontier",stops:0,rdep:"6:39PM",arr:"7:44PM",rarr:"9:07PM",exp:"2026-08-01"},
- {to:"ORD",city:"Chicago",price:245,d1:"2026-08-13",d2:"2026-08-15",dep:"7:42AM",al:"American",stops:1,rdep:"12:44AM",arr:"10:00AM",rarr:"9:41AM",exp:"2026-08-01"},
+ {to:"MSY",city:"New Orleans",price:291,d1:"2026-09-18",d2:"2026-09-21",dep:"9:32AM",al:"Frontier",stops:1,rdep:"10:48AM",arr:"1:32PM",rarr:"5:04PM",exp:"2026-08-01"},
  {to:"SJU",city:"San Juan, PR",price:266,d1:"2026-08-14",d2:"2026-08-18",dep:"8:28PM",al:"Frontier",stops:1,rdep:"8:57PM",arr:"12:23AM+1",rarr:"1:48AM+1",exp:"2026-08-01"},
  {to:"CUN",city:"Cancún",price:387,d1:"2026-08-08",d2:"2026-08-15",dep:"10:14PM",al:"Frontier",stops:1,rdep:"1:59PM",arr:"6:07AM+1",rarr:"7:15PM",exp:"2026-08-01"},
  {to:"LON",city:"London",price:723,d1:"2026-09-05",d2:"2026-09-11",dep:"5:43PM",al:"",stops:1,rdep:"2:00PM",arr:"2:44AM+1",rarr:"1:20AM+1",xfer:1,exp:"2026-08-01"}],ATL:[
