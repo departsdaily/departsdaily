@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-07-30T16:15:45-04:00",
+ "generated": "2026-07-30T18:15:43-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -259,21 +259,6 @@
    "arr": "9:18PM",
    "rarr": "9:01PM",
    "pct": 80
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 1274,
-   "d1": "2026-08-13",
-   "d2": "2026-08-19",
-   "dep": "1:55PM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:20AM",
-   "arr": "2:39AM+1",
-   "rarr": "1:46AM+1",
-   "pct": -45
   },
   "CUN": {
    "to": "CUN",
