@@ -1,3 +1,9 @@
 === env ===
 python 3.12.13 | pillow 12.3.0
-/home/runner/work/_temp/49a42a66-7f5b-47cb-8b84-94639f866c0b.sh: line 11: ffmpeg: command not found
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+fonts: 22 dejavu files
+/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
+audio: 4 tracks
+=== render ===
+rendering ATL reel for 2026-07-30: shape=board slot=0 13.0s 391 frames audio=gate-a12@1.9.mp3@1.9s
+wrote out/ATL/reel_0.mp4 (0.8MB, 13.0s)
