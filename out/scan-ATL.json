@@ -1,12 +1,12 @@
 {
- "date": "2026-07-29",
+ "date": "2026-07-30",
  "origin": "ATL",
  "routes_considered": 25,
  "min_discount_pct": 12.0,
  "summary": {
   "no fares": 3,
-  "qualified": 13,
-  "not a deal": 9
+  "qualified": 12,
+  "not a deal": 10
  },
  "routes": {
   "PHX": {
@@ -23,25 +23,25 @@
   },
   "NYC": {
    "outcome": "qualified",
-   "price": 174,
-   "typical": 201,
-   "disc_pct": 13,
-   "d1": "2026-08-31",
-   "d2": "2026-09-03",
-   "nights": 3,
+   "price": 145,
+   "typical": 185,
+   "disc_pct": 22,
+   "d1": "2026-09-04",
+   "d2": "2026-09-09",
+   "nights": 5,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
   },
   "MIA": {
    "outcome": "qualified",
-   "price": 103,
-   "typical": 151,
-   "disc_pct": 32,
-   "d1": "2026-10-09",
-   "d2": "2026-10-12",
+   "price": 101,
+   "typical": 158,
+   "disc_pct": 36,
+   "d1": "2026-08-15",
+   "d2": "2026-08-18",
    "nights": 3,
-   "on_shape": true,
-   "rung": "shape"
+   "on_shape": false,
+   "rung": "nights"
   },
   "FLL": {
    "outcome": "qualified",
@@ -78,25 +78,25 @@
   },
   "DEN": {
    "outcome": "qualified",
-   "price": 103,
+   "price": 102,
    "typical": 211,
-   "disc_pct": 51,
+   "disc_pct": 52,
    "d1": "2026-09-19",
    "d2": "2026-09-23",
    "nights": 4,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
   },
   "PHL": {
    "outcome": "qualified",
-   "price": 100,
-   "typical": 187,
-   "disc_pct": 47,
-   "d1": "2026-09-10",
-   "d2": "2026-09-14",
-   "nights": 4,
-   "on_shape": true,
-   "rung": "shape"
+   "price": 110,
+   "typical": 203,
+   "disc_pct": 46,
+   "d1": "2026-08-25",
+   "d2": "2026-08-27",
+   "nights": 2,
+   "on_shape": false,
+   "rung": "nights"
   },
   "LAS": {
    "outcome": "qualified",
@@ -111,12 +111,12 @@
   },
   "TPA": {
    "outcome": "qualified",
-   "price": 40,
-   "typical": 182,
-   "disc_pct": 78,
-   "d1": "2026-10-01",
-   "d2": "2026-10-05",
-   "nights": 4,
+   "price": 117,
+   "typical": 191,
+   "disc_pct": 39,
+   "d1": "2026-08-07",
+   "d2": "2026-08-10",
+   "nights": 3,
    "on_shape": true,
    "rung": "shape"
   },
@@ -177,9 +177,9 @@
   },
   "PUJ": {
    "outcome": "qualified",
-   "price": 248,
+   "price": 254,
    "typical": 492,
-   "disc_pct": 50,
+   "disc_pct": 48,
    "d1": "2026-08-13",
    "d2": "2026-08-17",
    "nights": 4,
@@ -210,36 +210,36 @@
   },
   "AUA": {
    "outcome": "not a deal",
-   "price": 552,
+   "price": 520,
    "typical": 378,
-   "disc_pct": -46,
+   "disc_pct": -38,
    "d1": "2026-10-24",
    "d2": "2026-10-28",
    "nights": 4,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
   },
   "SJU": {
    "outcome": "qualified",
-   "price": 192,
-   "typical": 292,
-   "disc_pct": 34,
-   "d1": "2026-10-22",
-   "d2": "2026-10-26",
+   "price": 197,
+   "typical": 276,
+   "disc_pct": 29,
+   "d1": "2026-09-15",
+   "d2": "2026-09-19",
    "nights": 4,
-   "on_shape": true,
-   "rung": "shape"
+   "on_shape": false,
+   "rung": "wide"
   },
   "LON": {
-   "outcome": "qualified",
-   "price": 632,
-   "typical": 803,
-   "disc_pct": 21,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "nights": 2,
-   "on_shape": true,
-   "rung": "shape"
+   "outcome": "not a deal",
+   "price": 749,
+   "typical": 727,
+   "disc_pct": -3,
+   "d1": "2026-10-08",
+   "d2": "2026-10-15",
+   "nights": 7,
+   "on_shape": false,
+   "rung": "wide"
   },
   "PAR": {
    "outcome": "not a deal",
