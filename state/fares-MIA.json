@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-07-30T00:16:24-04:00",
+ "generated": "2026-07-30T02:16:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -199,6 +199,21 @@
    "arr": "3:38PM",
    "rarr": "9:27PM",
    "pct": 53
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 342,
+   "d1": "2026-08-15",
+   "d2": "2026-08-19",
+   "dep": "6:00AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:37PM",
+   "arr": "1:24PM",
+   "rarr": "9:36PM",
+   "pct": 46
   },
   "SFO": {
    "to": "SFO",
