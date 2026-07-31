@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-07-30T20:16:45-04:00",
+ "generated": "2026-07-30T22:16:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 265,
-   "d1": "2026-08-23",
-   "d2": "2026-08-27",
+   "price": 250,
+   "d1": "2026-09-01",
+   "d2": "2026-09-09",
    "dep": "12:45PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:41PM",
-   "arr": "8:06PM",
-   "rarr": "6:32AM+1",
-   "pct": 61
+   "rdep": "10:06PM",
+   "arr": "7:59PM",
+   "rarr": "5:36AM+1",
+   "pct": 63
   },
   "LAX": {
    "to": "LAX",
@@ -278,17 +278,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 469,
+   "price": 476,
    "d1": "2026-09-05",
    "d2": "2026-09-12",
-   "dep": "10:16AM",
+   "dep": "6:08AM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:20PM",
-   "arr": "3:10PM",
-   "rarr": "5:22PM",
-   "pct": 24
+   "rdep": "3:05PM",
+   "arr": "11:00AM",
+   "rarr": "10:05PM",
+   "pct": 23
   },
   "CUN": {
    "to": "CUN",

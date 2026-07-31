@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-07-30T20:14:44-04:00",
+ "generated": "2026-07-30T22:14:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 178,
-   "d1": "2026-08-19",
-   "d2": "2026-08-23",
-   "dep": "8:45AM",
+   "price": 129,
+   "d1": "2026-10-08",
+   "d2": "2026-10-13",
+   "dep": "2:46PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:58PM",
-   "arr": "11:56AM",
-   "rarr": "12:49AM+1",
-   "pct": 58
+   "rdep": "6:42PM",
+   "arr": "5:47PM",
+   "rarr": "9:34PM",
+   "pct": 70
   },
   "LAS": {
    "to": "LAS",
@@ -308,7 +308,7 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 650,
+   "price": 616,
    "d1": "2026-11-20",
    "d2": "2026-11-29",
    "dep": "8:50PM",
@@ -318,7 +318,7 @@
    "rdep": "12:05PM",
    "arr": "3:47AM+1",
    "rarr": "8:25PM",
-   "pct": -5
+   "pct": 1
   },
   "CUN": {
    "to": "CUN",

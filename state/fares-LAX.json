@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-07-30T20:15:38-04:00",
+ "generated": "2026-07-30T22:15:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 286,
+   "price": 145,
    "d1": "2026-10-03",
    "d2": "2026-10-05",
    "dep": "5:05AM",
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:00PM",
+   "rdep": "6:05PM",
    "arr": "11:30AM",
-   "rarr": "5:05AM+1",
-   "pct": 61
+   "rarr": "1:20AM+1",
+   "pct": 80
   },
   "DCA": {
    "to": "DCA",
@@ -83,17 +83,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 284,
-   "d1": "2026-10-01",
-   "d2": "2026-10-05",
-   "dep": "12:38PM",
+   "price": 272,
+   "d1": "2026-08-15",
+   "d2": "2026-08-17",
+   "dep": "6:25PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "4:23PM",
-   "arr": "7:06PM",
-   "rarr": "12:34AM+1",
-   "pct": 62
+   "rdep": "6:00AM",
+   "arr": "12:41AM+1",
+   "rarr": "12:55PM",
+   "pct": 63
   },
   "HOU": {
    "to": "HOU",
@@ -234,15 +234,15 @@
    "to": "SEA",
    "city": "Seattle",
    "price": 76,
-   "d1": "2026-09-30",
-   "d2": "2026-10-08",
-   "dep": "3:09PM",
+   "d1": "2026-09-11",
+   "d2": "2026-09-17",
+   "dep": "5:44PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:06AM",
-   "arr": "6:10PM",
-   "rarr": "2:01PM",
+   "rdep": "8:15PM",
+   "arr": "8:40PM",
+   "rarr": "11:04PM",
    "pct": 82
   },
   "SFO": {
