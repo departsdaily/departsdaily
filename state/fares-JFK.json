@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-07-31T12:16:04-04:00",
+ "generated": "2026-07-31T14:16:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 474,
-   "d1": "2026-09-16",
-   "d2": "2026-09-22",
-   "dep": "7:29AM",
+   "price": 196,
+   "d1": "2026-09-13",
+   "d2": "2026-09-19",
+   "dep": "10:30AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "11:35AM",
-   "arr": "11:34AM",
+   "arr": "2:50PM",
    "rarr": "3:19PM",
-   "pct": 12
+   "pct": 64
   },
   "NAS": {
    "to": "NAS",
@@ -353,17 +353,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 496,
-   "d1": "2026-10-29",
-   "d2": "2026-11-05",
-   "dep": "8:25PM",
-   "al": "Icelandair",
+   "price": 391,
+   "d1": "2026-09-27",
+   "d2": "2026-10-10",
+   "dep": "10:05PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:00PM",
-   "arr": "5:35AM+1",
-   "rarr": "10:50PM",
-   "pct": 45
+   "rdep": "12:00PM",
+   "arr": "7:40AM+1",
+   "rarr": "10:40PM",
+   "pct": 57
   },
   "PUJ": {
    "to": "PUJ",

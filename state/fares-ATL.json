@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-07-31T12:14:30-04:00",
+ "generated": "2026-07-31T14:14:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -169,6 +169,21 @@
    "arr": "11:05PM",
    "rarr": "10:30AM",
    "pct": 78
+  },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 80,
+   "d1": "2026-09-12",
+   "d2": "2026-09-14",
+   "dep": "3:45PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "5:17PM",
+   "arr": "5:22PM",
+   "rarr": "7:01PM",
+   "pct": 82
   },
   "NYC": {
    "to": "NYC",
