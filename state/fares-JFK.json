@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-07-31T00:16:04-04:00",
+ "generated": "2026-07-31T02:16:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -203,16 +203,16 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 220,
-   "d1": "2026-08-25",
-   "d2": "2026-09-02",
-   "dep": "6:55AM",
+   "price": 219,
+   "d1": "2026-09-29",
+   "d2": "2026-10-05",
+   "dep": "8:10AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30PM",
-   "arr": "9:43AM",
-   "rarr": "9:06PM",
+   "rdep": "7:00AM",
+   "arr": "10:58AM",
+   "rarr": "9:27AM",
    "pct": 47
   },
   "PHX": {
@@ -233,17 +233,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 370,
-   "d1": "2026-09-10",
-   "d2": "2026-09-12",
-   "dep": "5:29PM",
-   "al": "Alaska",
+   "price": 297,
+   "d1": "2026-08-25",
+   "d2": "2026-08-28",
+   "dep": "5:45PM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:35AM",
-   "arr": "12:47AM+1",
-   "rarr": "3:19PM",
-   "pct": 42
+   "rdep": "11:45PM",
+   "arr": "12:08AM+1",
+   "rarr": "6:19AM+1",
+   "pct": 54
   },
   "SFO": {
    "to": "SFO",

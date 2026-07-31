@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-07-31T00:14:50-04:00",
+ "generated": "2026-07-31T02:14:54-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 199,
-   "d1": "2026-10-22",
-   "d2": "2026-10-25",
-   "dep": "2:00PM",
-   "al": "United",
-   "stops": 0,
+   "price": 171,
+   "d1": "2026-08-20",
+   "d2": "2026-08-24",
+   "dep": "2:41PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:55PM",
-   "arr": "6:32PM",
-   "rarr": "4:08AM+1",
-   "pct": 64
+   "rdep": "9:33AM",
+   "arr": "8:06PM",
+   "rarr": "3:44PM",
+   "pct": 69
   },
   "MCO": {
    "to": "MCO",
@@ -293,17 +293,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 869,
-   "d1": "2026-08-19",
-   "d2": "2026-08-26",
+   "price": 824,
+   "d1": "2026-09-05",
+   "d2": "2026-09-15",
    "dep": "7:25PM",
    "al": "Icelandair",
-   "stops": 2,
+   "stops": 3,
    "xfer": 0,
-   "rdep": "5:45PM",
-   "arr": "6:15AM+1",
-   "rarr": "3:50AM+1",
-   "pct": 1
+   "rdep": "9:05PM",
+   "arr": "5:40AM+1",
+   "rarr": "12:53PM+1",
+   "pct": 6
   },
   "AUA": {
    "to": "AUA",
