@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-07-30T22:16:18-04:00",
+ "generated": "2026-07-31T00:16:21-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -49,21 +49,6 @@
    "arr": "4:30PM",
    "rarr": "10:05AM",
    "pct": 55
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 320,
-   "d1": "2026-08-02",
-   "d2": "2026-08-07",
-   "dep": "6:00AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:40PM",
-   "arr": "10:23AM",
-   "rarr": "3:51AM+1",
-   "pct": 43
   },
   "DFW": {
    "to": "DFW",
@@ -248,17 +233,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 818,
-   "d1": "2026-10-11",
-   "d2": "2026-10-17",
-   "dep": "9:30PM",
-   "al": "UX",
+   "price": 680,
+   "d1": "2026-10-17",
+   "d2": "2026-10-28",
+   "dep": "12:20AM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:00AM",
-   "arr": "8:40AM+1",
-   "rarr": "11:00PM",
-   "pct": 7
+   "rdep": "7:00AM",
+   "arr": "11:50AM",
+   "rarr": "8:00PM",
+   "pct": 23
   },
   "AUA": {
    "to": "AUA",

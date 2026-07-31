@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-07-30T22:14:29-04:00",
+ "generated": "2026-07-31T00:14:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -53,17 +53,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 83,
-   "d1": "2026-10-01",
-   "d2": "2026-10-07",
-   "dep": "5:05PM",
+   "price": 91,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
+   "dep": "6:00AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:48PM",
-   "arr": "7:43PM",
-   "rarr": "10:08PM",
-   "pct": 81
+   "rdep": "8:39AM",
+   "arr": "8:34AM",
+   "rarr": "11:01AM",
+   "pct": 80
   },
   "DTW": {
    "to": "DTW",
@@ -334,6 +334,21 @@
    "arr": "1:21AM+1",
    "rarr": "9:33PM",
    "pct": 12
+  },
+  "PAR": {
+   "to": "PAR",
+   "city": "Paris",
+   "price": 586,
+   "d1": "2026-08-15",
+   "d2": "2026-08-24",
+   "dep": "9:50PM",
+   "al": "Turkish",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:50PM",
+   "arr": "12:20PM+1",
+   "rarr": "11:05AM+1",
+   "pct": 35
   },
   "PUJ": {
    "to": "PUJ",

@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-07-30T22:16:52-04:00",
+ "generated": "2026-07-31T00:16:57-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -38,17 +38,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 210,
-   "d1": "2026-08-24",
-   "d2": "2026-08-31",
-   "dep": "7:45AM",
-   "al": "United",
-   "stops": 0,
+   "price": 194,
+   "d1": "2026-08-13",
+   "d2": "2026-08-17",
+   "dep": "11:59AM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:47PM",
-   "arr": "12:22PM",
-   "rarr": "9:54PM",
-   "pct": 60
+   "rdep": "11:59PM",
+   "arr": "6:28PM",
+   "rarr": "6:03AM+1",
+   "pct": 63
   },
   "DFW": {
    "to": "DFW",
@@ -79,21 +79,6 @@
    "arr": "5:36PM",
    "rarr": "11:23PM",
    "pct": 38
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 497,
-   "d1": "2026-08-02",
-   "d2": "2026-08-06",
-   "dep": "9:18AM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:02PM",
-   "arr": "1:26PM",
-   "rarr": "1:05AM+1",
-   "pct": 14
   },
   "LAS": {
    "to": "LAS",
