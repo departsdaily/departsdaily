@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-07-30T18:16:52-04:00",
+ "generated": "2026-07-30T20:16:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 258,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "1:05PM",
-   "al": "JetBlue",
+   "price": 261,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30",
+   "dep": "12:45PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:37PM",
-   "arr": "5:32PM",
-   "rarr": "9:44PM",
-   "pct": 39
+   "rdep": "6:55PM",
+   "arr": "5:36PM",
+   "rarr": "11:23PM",
+   "pct": 38
   },
   "HOU": {
    "to": "HOU",
@@ -293,17 +293,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 414,
+   "price": 434,
    "d1": "2026-10-15",
    "d2": "2026-10-21",
    "dep": "9:41AM",
    "al": "Aerom\u00e9xico",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:30PM",
+   "rdep": "2:05PM",
    "arr": "6:18PM",
-   "rarr": "7:15PM",
-   "pct": 20
+   "rarr": "7:05PM",
+   "pct": 17
   },
   "LON": {
    "to": "LON",

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-07-30T18:16:01-04:00",
+ "generated": "2026-07-30T20:15:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 214,
-   "d1": "2026-08-21",
-   "d2": "2026-08-24",
-   "dep": "4:59PM",
+   "price": 203,
+   "d1": "2026-09-26",
+   "d2": "2026-09-30",
+   "dep": "7:30AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:24PM",
-   "arr": "9:41PM",
-   "rarr": "10:41PM",
-   "pct": 38
+   "rdep": "9:30AM",
+   "arr": "10:30AM",
+   "rarr": "12:07PM",
+   "pct": 41
   },
   "MIA": {
    "to": "MIA",
@@ -233,17 +233,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 363,
-   "d1": "2026-09-20",
-   "d2": "2026-09-24",
-   "dep": "3:30PM",
-   "al": "JetBlue",
+   "price": 370,
+   "d1": "2026-09-10",
+   "d2": "2026-09-12",
+   "dep": "5:29PM",
+   "al": "Alaska",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:40PM",
-   "arr": "11:38PM",
-   "rarr": "3:04AM+1",
-   "pct": 43
+   "rdep": "8:35AM",
+   "arr": "12:47AM+1",
+   "rarr": "3:19PM",
+   "pct": 42
   },
   "SFO": {
    "to": "SFO",
@@ -323,17 +323,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 486,
-   "d1": "2026-08-21",
-   "d2": "2026-09-01",
-   "dep": "6:20PM",
-   "al": "Z0",
+   "price": 446,
+   "d1": "2026-09-16",
+   "d2": "2026-09-23",
+   "dep": "10:05PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:50PM",
-   "arr": "1:20AM+1",
-   "rarr": "4:46AM+1",
-   "pct": 43
+   "rdep": "10:35AM",
+   "arr": "8:00AM+1",
+   "rarr": "9:30PM",
+   "pct": 48
   },
   "MBJ": {
    "to": "MBJ",

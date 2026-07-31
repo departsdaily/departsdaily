@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-07-30T18:14:49-04:00",
+ "generated": "2026-07-30T20:14:44-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -98,7 +98,7 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 76,
+   "price": 77,
    "d1": "2026-09-09",
    "d2": "2026-09-14",
    "dep": "7:11AM",
@@ -108,12 +108,12 @@
    "rdep": "12:18PM",
    "arr": "10:23AM",
    "rarr": "3:45PM",
-   "pct": 83
+   "pct": 82
   },
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 177,
+   "price": 178,
    "d1": "2026-08-19",
    "d2": "2026-08-23",
    "dep": "8:45AM",

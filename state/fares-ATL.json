@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-07-30T18:14:29-04:00",
+ "generated": "2026-07-30T20:14:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -45,9 +45,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:24PM",
+   "rdep": "7:10PM",
    "arr": "11:24PM",
-   "rarr": "3:31PM",
+   "rarr": "10:10PM",
    "pct": 77
   },
   "DFW": {
@@ -113,17 +113,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 175,
+   "price": 185,
    "d1": "2026-08-18",
    "d2": "2026-08-20",
-   "dep": "9:00PM",
+   "dep": "8:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:36AM",
-   "arr": "2:31AM+1",
+   "arr": "3:19PM",
    "rarr": "1:30PM",
-   "pct": 74
+   "pct": 73
   },
   "LAX": {
    "to": "LAX",
@@ -334,21 +334,6 @@
    "arr": "1:21AM+1",
    "rarr": "9:33PM",
    "pct": 12
-  },
-  "PAR": {
-   "to": "PAR",
-   "city": "Paris",
-   "price": 820,
-   "d1": "2026-11-02",
-   "d2": "2026-11-06",
-   "dep": "1:00PM",
-   "al": "",
-   "stops": 1,
-   "xfer": 1,
-   "rdep": "1:35PM",
-   "arr": "10:41PM",
-   "rarr": "12:43AM+1",
-   "pct": 9
   },
   "PUJ": {
    "to": "PUJ",
