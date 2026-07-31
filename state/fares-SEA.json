@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-07-31T08:17:12-04:00",
+ "generated": "2026-07-31T10:16:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -64,6 +64,21 @@
    "arr": "10:57PM",
    "rarr": "2:04PM",
    "pct": 59
+  },
+  "DFW": {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 443,
+   "d1": "2026-08-08",
+   "d2": "2026-08-16",
+   "dep": "7:06PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:35AM",
+   "arr": "12:02AM+1",
+   "rarr": "1:30PM",
+   "pct": 6
   },
   "FLL": {
    "to": "FLL",
@@ -259,21 +274,6 @@
    "arr": "1:40PM+1",
    "rarr": "6:43AM+1",
    "pct": 17
-  },
-  "PAR": {
-   "to": "PAR",
-   "city": "Paris",
-   "price": 814,
-   "d1": "2026-11-01",
-   "d2": "2026-11-11",
-   "dep": "4:15PM",
-   "al": "DE",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "4:50PM",
-   "arr": "3:45AM+1",
-   "rarr": "5:00AM+1",
-   "pct": 10
   },
   "ROM": {
    "to": "ROM",
