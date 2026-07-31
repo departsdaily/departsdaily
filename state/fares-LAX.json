@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-07-31T02:15:53-04:00",
+ "generated": "2026-07-31T04:15:54-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 253,
-   "d1": "2026-08-15",
-   "d2": "2026-08-19",
-   "dep": "6:25PM",
+   "price": 229,
+   "d1": "2026-10-07",
+   "d2": "2026-10-13",
+   "dep": "2:01PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:10AM",
-   "arr": "12:40AM+1",
-   "rarr": "6:01PM",
-   "pct": 66
+   "rdep": "10:03AM",
+   "arr": "8:22PM",
+   "rarr": "5:13PM",
+   "pct": 69
   },
   "MSY": {
    "to": "MSY",
@@ -176,13 +176,13 @@
    "price": 235,
    "d1": "2026-10-03",
    "d2": "2026-10-05",
-   "dep": "8:50PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "dep": "11:50PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "8:40PM",
-   "arr": "2:14AM+1",
-   "rarr": "2:59AM+1",
+   "rdep": "6:15AM",
+   "arr": "6:24AM+1",
+   "rarr": "1:51PM",
    "pct": 75
   },
   "ORD": {
