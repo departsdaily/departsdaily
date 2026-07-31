@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-07-31T14:17:05-04:00",
+ "generated": "2026-07-31T16:20:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -98,7 +98,7 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 250,
+   "price": 252,
    "d1": "2026-09-01",
    "d2": "2026-09-09",
    "dep": "12:45PM",
@@ -184,6 +184,21 @@
    "arr": "9:15AM",
    "rarr": "3:11PM",
    "pct": 47
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 147,
+   "d1": "2026-08-28",
+   "d2": "2026-09-02",
+   "dep": "3:20PM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "10:41AM",
+   "arr": "5:03PM",
+   "rarr": "12:14PM",
+   "pct": 62
   },
   "PHX": {
    "to": "PHX",

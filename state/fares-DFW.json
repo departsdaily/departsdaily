@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-07-31T14:15:17-04:00",
+ "generated": "2026-07-31T16:18:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -353,32 +353,32 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 725,
-   "d1": "2026-09-12",
-   "d2": "2026-09-20",
-   "dep": "9:30PM",
-   "al": "Turkish",
+   "price": 1016,
+   "d1": "2026-08-30",
+   "d2": "2026-09-04",
+   "dep": "8:00AM",
+   "al": "",
    "stops": 1,
-   "xfer": 0,
-   "rdep": "10:45AM",
-   "arr": "12:05PM+1",
-   "rarr": "2:20AM+1",
-   "pct": 24
+   "xfer": 1,
+   "rdep": "7:05PM",
+   "arr": "7:31PM",
+   "rarr": "8:22AM+1",
+   "pct": -7
   },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 369,
-   "d1": "2026-08-11",
-   "d2": "2026-08-15",
-   "dep": "8:28AM",
+   "price": 294,
+   "d1": "2026-09-21",
+   "d2": "2026-09-25",
+   "dep": "1:45PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "5:22PM",
-   "arr": "2:35PM",
-   "rarr": "11:16PM",
-   "pct": 12
+   "rdep": "7:00AM",
+   "arr": "7:29PM",
+   "rarr": "3:49PM",
+   "pct": 30
   }
  }
 }

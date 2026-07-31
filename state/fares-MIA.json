@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-07-31T14:16:29-04:00",
+ "generated": "2026-07-31T16:19:51-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -83,17 +83,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 194,
-   "d1": "2026-09-29",
-   "d2": "2026-10-01",
-   "dep": "11:25AM",
+   "price": 200,
+   "d1": "2026-08-22",
+   "d2": "2026-08-26",
+   "dep": "1:15PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:53AM",
-   "arr": "5:58PM",
-   "rarr": "6:43AM",
-   "pct": 67
+   "rdep": "1:40PM",
+   "arr": "7:41PM",
+   "rarr": "7:53PM",
+   "pct": 66
   },
   "LAX": {
    "to": "LAX",
@@ -289,6 +289,21 @@
    "arr": "10:23PM",
    "rarr": "5:38PM",
    "pct": 55
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 307,
+   "d1": "2026-09-21",
+   "d2": "2026-09-30",
+   "dep": "7:45PM",
+   "al": "UP",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:45AM",
+   "arr": "8:40PM",
+   "rarr": "8:50AM",
+   "pct": 36
   },
   "PAR": {
    "to": "PAR",
