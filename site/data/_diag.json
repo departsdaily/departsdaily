@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-30T09:10:30-04:00",
+ "generated": "2026-07-31T09:17:50-04:00",
  "origins": {
   "CLT": {
    "AUS": {
@@ -17,21 +17,21 @@
     "composed": 0
    },
    "BOS": {
-    "rt": 4,
-    "matrix": 3,
-    "out_legs": 6,
+    "rt": 3,
+    "matrix": 11,
+    "out_legs": 16,
     "back_legs": 0,
     "composed": 0
    },
    "DCA": {
-    "rt": 3,
-    "matrix": 19,
+    "rt": 2,
+    "matrix": 22,
     "out_legs": 11,
-    "back_legs": 24,
+    "back_legs": 23,
     "composed": 36
    },
    "DEN": {
-    "rt": 3,
+    "rt": 2,
     "matrix": 0,
     "out_legs": 1,
     "back_legs": 1,
@@ -39,23 +39,23 @@
    },
    "DFW": {
     "rt": 1,
-    "matrix": 2,
-    "out_legs": 8,
-    "back_legs": 1,
-    "composed": 6
+    "matrix": 12,
+    "out_legs": 3,
+    "back_legs": 15,
+    "composed": 27
    },
    "FLL": {
     "rt": 3,
-    "matrix": 0,
+    "matrix": 6,
     "out_legs": 0,
-    "back_legs": 1,
+    "back_legs": 8,
     "composed": 0
    },
    "HOU": {
     "rt": 0,
     "matrix": 1,
     "out_legs": 1,
-    "back_legs": 2,
+    "back_legs": 3,
     "composed": 0
    },
    "LAS": {
@@ -67,13 +67,13 @@
    },
    "LAX": {
     "rt": 8,
-    "matrix": 13,
-    "out_legs": 16,
-    "back_legs": 2,
+    "matrix": 0,
+    "out_legs": 2,
+    "back_legs": 1,
     "composed": 0
    },
    "MCO": {
-    "rt": 0,
+    "rt": 1,
     "matrix": 2,
     "out_legs": 5,
     "back_legs": 1,
@@ -90,22 +90,22 @@
     "rt": 1,
     "matrix": 0,
     "out_legs": 0,
-    "back_legs": 0,
+    "back_legs": 1,
     "composed": 0
    },
    "NYC": {
-    "rt": 19,
-    "matrix": 83,
-    "out_legs": 51,
-    "back_legs": 60,
+    "rt": 17,
+    "matrix": 80,
+    "out_legs": 49,
+    "back_legs": 61,
     "composed": 500
    },
    "ORD": {
     "rt": 4,
     "matrix": 34,
-    "out_legs": 22,
+    "out_legs": 23,
     "back_legs": 24,
-    "composed": 207
+    "composed": 227
    },
    "PHL": {
     "rt": 0,
@@ -115,9 +115,9 @@
     "composed": 0
    },
    "PHX": {
-    "rt": 1,
-    "matrix": 1,
-    "out_legs": 1,
+    "rt": 2,
+    "matrix": 5,
+    "out_legs": 6,
     "back_legs": 4,
     "composed": 0
    },
@@ -129,11 +129,11 @@
     "composed": 0
    },
    "SFO": {
-    "rt": 1,
-    "matrix": 1,
-    "out_legs": 4,
+    "rt": 2,
+    "matrix": 6,
+    "out_legs": 10,
     "back_legs": 1,
-    "composed": 3
+    "composed": 4
    },
    "TPA": {
     "rt": 0,
@@ -159,7 +159,7 @@
    "CUN": {
     "rt": 2,
     "matrix": 0,
-    "out_legs": 1,
+    "out_legs": 2,
     "back_legs": 0,
     "composed": 0
    },
@@ -171,14 +171,14 @@
     "composed": 0
    },
    "LON": {
-    "rt": 12,
-    "matrix": 12,
+    "rt": 10,
+    "matrix": 13,
     "out_legs": 9,
-    "back_legs": 10,
+    "back_legs": 12,
     "composed": 41
    },
    "MBJ": {
-    "rt": 0,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 0,
@@ -192,30 +192,30 @@
     "composed": 0
    },
    "PAR": {
-    "rt": 4,
-    "matrix": 15,
+    "rt": 2,
+    "matrix": 7,
     "out_legs": 11,
-    "back_legs": 10,
-    "composed": 44
+    "back_legs": 1,
+    "composed": 0
    },
    "PUJ": {
-    "rt": 3,
-    "matrix": 19,
+    "rt": 2,
+    "matrix": 0,
     "out_legs": 0,
-    "back_legs": 21,
+    "back_legs": 1,
     "composed": 0
    },
    "ROM": {
     "rt": 1,
     "matrix": 0,
-    "out_legs": 1,
+    "out_legs": 0,
     "back_legs": 1,
     "composed": 0
    },
    "SJU": {
-    "rt": 3,
+    "rt": 4,
     "matrix": 0,
-    "out_legs": 7,
+    "out_legs": 2,
     "back_legs": 0,
     "composed": 0
    }
@@ -229,18 +229,18 @@
     "composed": 0
    },
    "BOS": {
-    "rt": 5,
-    "matrix": 7,
-    "out_legs": 6,
-    "back_legs": 13,
-    "composed": 6
+    "rt": 4,
+    "matrix": 21,
+    "out_legs": 3,
+    "back_legs": 28,
+    "composed": 20
    },
    "DCA": {
     "rt": 1,
-    "matrix": 41,
+    "matrix": 40,
     "out_legs": 32,
     "back_legs": 17,
-    "composed": 221
+    "composed": 204
    },
    "DEN": {
     "rt": 4,
@@ -250,14 +250,14 @@
     "composed": 0
    },
    "DFW": {
-    "rt": 5,
-    "matrix": 25,
-    "out_legs": 17,
-    "back_legs": 18,
-    "composed": 89
+    "rt": 4,
+    "matrix": 8,
+    "out_legs": 2,
+    "back_legs": 14,
+    "composed": 11
    },
    "DTW": {
-    "rt": 1,
+    "rt": 3,
     "matrix": 14,
     "out_legs": 0,
     "back_legs": 17,
@@ -265,97 +265,97 @@
    },
    "FLL": {
     "rt": 2,
-    "matrix": 0,
-    "out_legs": 2,
-    "back_legs": 1,
+    "matrix": 12,
+    "out_legs": 16,
+    "back_legs": 3,
     "composed": 1
    },
    "HOU": {
     "rt": 5,
-    "matrix": 33,
-    "out_legs": 25,
-    "back_legs": 16,
-    "composed": 77
+    "matrix": 29,
+    "out_legs": 20,
+    "back_legs": 14,
+    "composed": 27
    },
    "LAS": {
-    "rt": 13,
-    "matrix": 30,
-    "out_legs": 28,
-    "back_legs": 11,
-    "composed": 19
+    "rt": 16,
+    "matrix": 36,
+    "out_legs": 12,
+    "back_legs": 32,
+    "composed": 252
    },
    "LAX": {
-    "rt": 3,
-    "matrix": 26,
+    "rt": 2,
+    "matrix": 25,
     "out_legs": 10,
-    "back_legs": 31,
-    "composed": 161
+    "back_legs": 29,
+    "composed": 134
    },
    "MCO": {
     "rt": 9,
     "matrix": 34,
-    "out_legs": 20,
+    "out_legs": 23,
     "back_legs": 21,
-    "composed": 150
+    "composed": 187
    },
    "MIA": {
-    "rt": 9,
-    "matrix": 62,
+    "rt": 11,
+    "matrix": 65,
     "out_legs": 40,
     "back_legs": 61,
-    "composed": 500
+    "composed": 473
    },
    "MSY": {
     "rt": 0,
     "matrix": 5,
     "out_legs": 2,
-    "back_legs": 7,
+    "back_legs": 8,
     "composed": 1
    },
    "NYC": {
-    "rt": 21,
-    "matrix": 85,
-    "out_legs": 56,
-    "back_legs": 78,
+    "rt": 20,
+    "matrix": 84,
+    "out_legs": 54,
+    "back_legs": 76,
     "composed": 500
    },
    "ORD": {
-    "rt": 7,
-    "matrix": 45,
-    "out_legs": 17,
-    "back_legs": 47,
-    "composed": 370
+    "rt": 6,
+    "matrix": 44,
+    "out_legs": 16,
+    "back_legs": 46,
+    "composed": 345
    },
    "PHL": {
-    "rt": 5,
+    "rt": 7,
     "matrix": 22,
-    "out_legs": 22,
+    "out_legs": 23,
     "back_legs": 9,
-    "composed": 177
+    "composed": 182
    },
    "PHX": {
     "rt": 0,
-    "matrix": 21,
+    "matrix": 0,
     "out_legs": 2,
-    "back_legs": 24,
+    "back_legs": 2,
     "composed": 1
    },
    "SEA": {
     "rt": 2,
-    "matrix": 13,
-    "out_legs": 5,
+    "matrix": 34,
+    "out_legs": 27,
     "back_legs": 13,
-    "composed": 5
+    "composed": 67
    },
    "SFO": {
     "rt": 3,
-    "matrix": 11,
-    "out_legs": 16,
-    "back_legs": 0,
-    "composed": 0
+    "matrix": 34,
+    "out_legs": 19,
+    "back_legs": 23,
+    "composed": 136
    },
    "TPA": {
-    "rt": 3,
+    "rt": 4,
     "matrix": 11,
     "out_legs": 14,
     "back_legs": 3,
@@ -366,10 +366,10 @@
     "matrix": 0,
     "out_legs": 1,
     "back_legs": 2,
-    "composed": 1
+    "composed": 2
    },
    "AUA": {
-    "rt": 2,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 0,
@@ -378,7 +378,7 @@
    "CUN": {
     "rt": 4,
     "matrix": 0,
-    "out_legs": 2,
+    "out_legs": 3,
     "back_legs": 0,
     "composed": 0
    },
@@ -391,15 +391,15 @@
    },
    "LON": {
     "rt": 3,
-    "matrix": 2,
-    "out_legs": 1,
+    "matrix": 18,
+    "out_legs": 18,
     "back_legs": 6,
-    "composed": 0
+    "composed": 27
    },
    "MBJ": {
-    "rt": 7,
+    "rt": 8,
     "matrix": 3,
-    "out_legs": 3,
+    "out_legs": 1,
     "back_legs": 9,
     "composed": 1
    },
@@ -411,28 +411,28 @@
     "composed": 0
    },
    "PAR": {
-    "rt": 1,
+    "rt": 3,
     "matrix": 17,
     "out_legs": 25,
-    "back_legs": 3,
-    "composed": 12
+    "back_legs": 2,
+    "composed": 7
    },
    "PUJ": {
-    "rt": 6,
+    "rt": 5,
     "matrix": 15,
     "out_legs": 0,
     "back_legs": 17,
     "composed": 0
    },
    "ROM": {
-    "rt": 1,
+    "rt": 2,
     "matrix": 0,
-    "out_legs": 2,
-    "back_legs": 2,
+    "out_legs": 0,
+    "back_legs": 1,
     "composed": 0
    },
    "SJU": {
-    "rt": 14,
+    "rt": 13,
     "matrix": 0,
     "out_legs": 1,
     "back_legs": 0,
