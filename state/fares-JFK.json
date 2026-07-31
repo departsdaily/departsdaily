@@ -1,8 +1,8 @@
 {
  "origin": "JFK",
- "generated": "2026-07-31T04:16:13-04:00",
+ "generated": "2026-07-31T06:03:07-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 28,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,21 +184,6 @@
    "arr": "10:02PM",
    "rarr": "9:29AM",
    "pct": 63
-  },
-  "MSY": {
-   "to": "MSY",
-   "city": "New Orleans",
-   "price": 256,
-   "d1": "2026-08-27",
-   "d2": "2026-08-31",
-   "dep": "1:00PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:11PM",
-   "arr": "5:32PM",
-   "rarr": "11:33PM",
-   "pct": 46
   },
   "ORD": {
    "to": "ORD",
