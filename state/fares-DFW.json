@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-07-31T22:15:33-04:00",
+ "generated": "2026-08-01T00:18:30-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -274,6 +274,21 @@
    "arr": "1:00PM+1",
    "rarr": "11:45PM",
    "pct": -13
+  },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 597,
+   "d1": "2026-08-25",
+   "d2": "2026-09-04",
+   "dep": "10:00AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "11:50AM",
+   "arr": "5:15PM",
+   "rarr": "8:57PM",
+   "pct": 4
   },
   "CUN": {
    "to": "CUN",

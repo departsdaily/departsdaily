@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-07-31T22:16:30-04:00",
+ "generated": "2026-08-01T00:19:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 329,
-   "d1": "2026-08-03",
-   "d2": "2026-08-06",
-   "dep": "7:19PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 376,
+   "d1": "2026-10-30",
+   "d2": "2026-11-02",
+   "dep": "8:25PM",
+   "al": "Alaska",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:06PM",
-   "arr": "12:59AM+1",
-   "rarr": "3:59AM+1",
-   "pct": 50
+   "rdep": "12:59AM",
+   "arr": "5:55AM+1",
+   "rarr": "6:45AM",
+   "pct": 43
   },
   "SEA": {
    "to": "SEA",
@@ -368,17 +368,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 395,
-   "d1": "2026-10-02",
+   "price": 425,
+   "d1": "2026-10-05",
    "d2": "2026-10-09",
-   "dep": "6:42AM",
+   "dep": "9:35AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "11:45AM",
-   "arr": "10:43AM",
+   "arr": "1:44PM",
    "rarr": "3:40PM",
-   "pct": 29
+   "pct": 24
   },
   "ROM": {
    "to": "ROM",

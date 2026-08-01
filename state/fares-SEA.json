@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-07-31T22:17:07-04:00",
+ "generated": "2026-08-01T00:19:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -94,21 +94,6 @@
    "arr": "2:26PM",
    "rarr": "12:55AM+1",
    "pct": 42
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 611,
-   "d1": "2026-08-03",
-   "d2": "2026-08-07",
-   "dep": "11:46PM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:09PM",
-   "arr": "9:12AM+1",
-   "rarr": "4:02AM+1",
-   "pct": -4
   },
   "LAS": {
    "to": "LAS",
