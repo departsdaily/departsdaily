@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-01 14:14 EDT
+   Generated 2026-08-01 16:14 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-01T14:14:07-04:00",
+ updated:"2026-08-01T16:14:08-04:00",
 };
 const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:138,d1:"2026-08-20",d2:"2026-08-24",dep:"11:50AM",al:"Frontier",stops:1,rdep:"6:10AM",arr:"4:00PM",rarr:"8:01AM",exp:"2026-08-03"},
@@ -66,8 +66,8 @@ const DEALS={CLT:[
  {to:"MIA",city:"Miami",price:153,d1:"2026-09-10",d2:"2026-09-13",dep:"6:45PM",al:"American",stops:0,rdep:"6:35AM",arr:"10:02PM",rarr:"9:29AM",exp:"2026-08-03"},
  {to:"PAR",city:"Paris",price:391,d1:"2026-09-27",d2:"2026-10-10",dep:"10:05PM",al:"TAP Portugal",stops:1,rdep:"12:00PM",arr:"7:40AM+1",rarr:"10:40PM",exp:"2026-08-03"},
  {to:"ROM",city:"Rome",price:430,d1:"2026-10-19",d2:"2026-10-23",dep:"12:30AM",al:"N0",stops:0,rdep:"7:05PM",arr:"8:30AM",rarr:"4:30AM+1",exp:"2026-08-03"},
- {to:"LON",city:"London",price:446,d1:"2026-09-16",d2:"2026-09-23",dep:"10:05PM",al:"TAP Portugal",stops:1,rdep:"10:35AM",arr:"8:00AM+1",rarr:"9:30PM",exp:"2026-08-03"},
- {to:"PHX",city:"Phoenix",price:376,d1:"2026-10-30",d2:"2026-11-02",dep:"8:25PM",al:"Alaska",stops:1,rdep:"12:59AM",arr:"5:55AM+1",rarr:"6:45AM",exp:"2026-08-03"}],MIA:[
+ {to:"MCO",city:"Orlando",price:168,d1:"2026-09-19",d2:"2026-09-27",dep:"8:45PM",al:"JetBlue",stops:0,rdep:"6:00AM",arr:"11:55PM",rarr:"8:37AM",exp:"2026-08-03"},
+ {to:"LON",city:"London",price:446,d1:"2026-09-16",d2:"2026-09-23",dep:"10:05PM",al:"TAP Portugal",stops:1,rdep:"10:35AM",arr:"8:00AM+1",rarr:"9:30PM",exp:"2026-08-03"}],MIA:[
  {to:"NYC",city:"New York City",price:90,d1:"2026-09-03",d2:"2026-09-06",dep:"3:30PM",al:"Allegiant",stops:0,rdep:"7:30PM",arr:"6:40PM",rarr:"10:52PM",exp:"2026-08-03"},
  {to:"SJU",city:"San Juan, PR",price:120,d1:"2026-09-07",d2:"2026-09-14",dep:"9:48PM",al:"Frontier",stops:0,rdep:"11:23AM",arr:"12:43AM+1",rarr:"2:09PM",exp:"2026-08-03"},
  {to:"LAX",city:"Los Angeles",price:230,d1:"2026-10-14",d2:"2026-10-17",dep:"10:03AM",al:"Frontier",stops:1,rdep:"11:50PM",arr:"5:13PM",rarr:"6:19AM+1",exp:"2026-08-03"},
