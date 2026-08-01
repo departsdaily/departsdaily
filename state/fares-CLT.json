@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-01T16:14:30-04:00",
+ "generated": "2026-08-01T18:17:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
