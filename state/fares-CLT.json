@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-01T04:14:31-04:00",
+ "generated": "2026-08-01T06:14:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,21 +184,6 @@
    "arr": "7:44PM",
    "rarr": "9:07PM",
    "pct": 57
-  },
-  "ORD": {
-   "to": "ORD",
-   "city": "Chicago",
-   "price": 272,
-   "d1": "2026-08-13",
-   "d2": "2026-08-16",
-   "dep": "5:57PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:13PM",
-   "arr": "11:43PM",
-   "rarr": "10:16PM",
-   "pct": 31
   },
   "PHX": {
    "to": "PHX",
