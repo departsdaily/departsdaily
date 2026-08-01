@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-07-31T18:16:02-04:00",
+ "generated": "2026-07-31T20:15:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 254,
+   "price": 181,
    "d1": "2026-08-24",
-   "d2": "2026-08-26",
-   "dep": "10:49AM",
+   "d2": "2026-08-28",
+   "dep": "6:30AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:10AM",
-   "arr": "4:41PM",
-   "rarr": "1:27PM",
-   "pct": 62
+   "rdep": "6:00PM",
+   "arr": "12:34PM",
+   "rarr": "12:39AM+1",
+   "pct": 73
   },
   "DEN": {
    "to": "DEN",
@@ -263,32 +263,32 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 315,
+   "price": 314,
    "d1": "2026-08-27",
    "d2": "2026-09-03",
-   "dep": "9:36PM",
+   "dep": "12:55AM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
    "rdep": "4:32PM",
-   "arr": "3:23AM+1",
+   "arr": "6:42AM",
    "rarr": "10:32PM",
-   "pct": 39
+   "pct": 40
   },
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 628,
-   "d1": "2026-11-20",
-   "d2": "2026-11-28",
-   "dep": "9:20AM",
-   "al": "AT",
+   "price": 524,
+   "d1": "2026-08-15",
+   "d2": "2026-09-05",
+   "dep": "4:55PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:30AM",
-   "arr": "11:30PM",
-   "rarr": "11:15PM",
-   "pct": 26
+   "rdep": "6:00AM",
+   "arr": "6:40AM+1",
+   "rarr": "9:15PM",
+   "pct": 38
   },
   "PAR": {
    "to": "PAR",

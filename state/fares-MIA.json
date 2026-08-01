@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-07-31T18:16:39-04:00",
+ "generated": "2026-07-31T20:16:38-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -185,6 +185,21 @@
    "rarr": "9:27PM",
    "pct": 53
   },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 276,
+   "d1": "2026-09-07",
+   "d2": "2026-09-14",
+   "dep": "9:17PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:24PM",
+   "arr": "4:40AM+1",
+   "rarr": "10:45PM",
+   "pct": 50
+  },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
@@ -353,17 +368,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 129,
-   "d1": "2026-10-05",
-   "d2": "2026-10-10",
-   "dep": "8:10AM",
+   "price": 120,
+   "d1": "2026-09-07",
+   "d2": "2026-09-14",
+   "dep": "9:48PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "10:53AM",
-   "rarr": "8:50AM",
-   "pct": 69
+   "rdep": "11:23AM",
+   "arr": "12:43AM+1",
+   "rarr": "2:09PM",
+   "pct": 71
   }
  }
 }

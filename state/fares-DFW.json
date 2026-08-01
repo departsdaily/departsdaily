@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-07-31T18:15:26-04:00",
+ "generated": "2026-07-31T20:15:23-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 227,
-   "d1": "2026-10-11",
-   "d2": "2026-10-15",
-   "dep": "5:20PM",
+   "price": 237,
+   "d1": "2026-08-15",
+   "d2": "2026-08-19",
+   "dep": "5:18PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:55PM",
    "arr": "9:00PM",
-   "rarr": "2:39AM+1",
-   "pct": 59
+   "rarr": "2:34AM+1",
+   "pct": 57
   },
   "ORD": {
    "to": "ORD",
@@ -353,17 +353,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 1016,
+   "price": 1045,
    "d1": "2026-08-30",
-   "d2": "2026-09-04",
-   "dep": "8:00AM",
-   "al": "",
-   "stops": 1,
-   "xfer": 1,
-   "rdep": "7:05PM",
-   "arr": "7:31PM",
-   "rarr": "8:22AM+1",
-   "pct": -7
+   "d2": "2026-09-05",
+   "dep": "7:20AM",
+   "al": "United",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "8:15PM",
+   "arr": "7:03PM",
+   "rarr": "10:14AM+1",
+   "pct": -10
   },
   "SJU": {
    "to": "SJU",

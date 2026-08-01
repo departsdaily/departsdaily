@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-07-31T18:15:05-04:00",
+ "generated": "2026-07-31T20:15:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 499,
-   "d1": "2026-08-10",
-   "d2": "2026-08-12",
-   "dep": "6:00AM",
-   "al": "United",
+   "price": 277,
+   "d1": "2026-10-23",
+   "d2": "2026-10-26",
+   "dep": "8:00AM",
+   "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:46AM",
-   "arr": "7:54AM",
-   "rarr": "10:00AM",
-   "pct": -15
+   "rdep": "10:14PM",
+   "arr": "9:59AM",
+   "rarr": "12:36AM+1",
+   "pct": 36
   },
   "DEN": {
    "to": "DEN",
@@ -353,17 +353,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 399,
-   "d1": "2026-09-28",
-   "d2": "2026-10-05",
-   "dep": "5:30AM",
+   "price": 369,
+   "d1": "2026-09-26",
+   "d2": "2026-09-30",
+   "dep": "12:12PM",
    "al": "DM",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:05PM",
-   "arr": "10:15AM",
-   "rarr": "12:17AM+1",
-   "pct": 29
+   "rdep": "3:35PM",
+   "arr": "4:57PM",
+   "rarr": "9:35PM",
+   "pct": 34
   },
   "ROM": {
    "to": "ROM",
