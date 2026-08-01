@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-01T08:15:18-04:00",
+ "generated": "2026-08-01T10:15:56-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -184,21 +184,6 @@
    "arr": "4:00PM",
    "rarr": "3:20AM+1",
    "pct": 64
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 236,
-   "d1": "2026-09-18",
-   "d2": "2026-09-20",
-   "dep": "1:23PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:32PM",
-   "arr": "5:52PM",
-   "rarr": "10:34PM",
-   "pct": 59
   },
   "PHX": {
    "to": "PHX",
