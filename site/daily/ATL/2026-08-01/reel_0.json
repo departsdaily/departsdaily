@@ -1,0 +1,48 @@
+{
+ "origin": "ATL",
+ "date": "2026-08-01",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from ATL, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 0.97,
+ "fps": 30,
+ "audio": "tarmac-sunrise@2.1.mp3",
+ "audio_start": 2.1,
+ "plan_shape": "weekend",
+ "plan_angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.",
+ "featured": [
+  {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 80,
+   "disc": 56,
+   "baseline": 183,
+   "nights": 2,
+   "d1": "2026-09-12",
+   "d2": "2026-09-14"
+  },
+  {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 267,
+   "disc": 36,
+   "baseline": 420,
+   "nights": 2,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06"
+  },
+  {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 252,
+   "disc": 32,
+   "baseline": 373,
+   "nights": 5,
+   "d1": "2026-09-22",
+   "d2": "2026-09-27"
+  }
+ ]
+}
