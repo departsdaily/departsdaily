@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-01T00:19:58-04:00",
+ "generated": "2026-08-01T02:17:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -173,17 +173,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 340,
-   "d1": "2026-09-21",
-   "d2": "2026-09-30",
-   "dep": "10:04AM",
-   "al": "Alaska",
+   "price": 320,
+   "d1": "2026-08-23",
+   "d2": "2026-08-30",
+   "dep": "6:45PM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:20AM",
-   "arr": "4:56PM",
-   "rarr": "1:22PM",
-   "pct": 47
+   "rdep": "6:55AM",
+   "arr": "1:05AM+1",
+   "rarr": "2:05PM",
+   "pct": 50
   },
   "ORD": {
    "to": "ORD",
@@ -199,6 +199,21 @@
    "arr": "5:52PM",
    "rarr": "4:01AM+1",
    "pct": 68
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 358,
+   "d1": "2026-09-24",
+   "d2": "2026-10-01",
+   "dep": "9:27PM",
+   "al": "Alaska",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "2:40AM+1",
+   "rarr": "12:51PM",
+   "pct": 44
   },
   "SFO": {
    "to": "SFO",
