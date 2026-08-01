@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-01T02:15:51-04:00",
+ "generated": "2026-08-01T04:15:30-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 133,
-   "d1": "2026-08-22",
-   "d2": "2026-08-24",
-   "dep": "5:18AM",
+   "price": 135,
+   "d1": "2026-08-18",
+   "d2": "2026-08-20",
+   "dep": "9:31PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "2:55PM",
-   "arr": "7:28AM",
-   "rarr": "5:03PM",
-   "pct": 65
+   "rdep": "5:23PM",
+   "arr": "11:55PM",
+   "rarr": "7:36PM",
+   "pct": 64
   },
   "FLL": {
    "to": "FLL",
@@ -218,17 +218,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 222,
-   "d1": "2026-08-22",
-   "d2": "2026-08-24",
-   "dep": "6:58PM",
+   "price": 244,
+   "d1": "2026-09-03",
+   "d2": "2026-09-09",
+   "dep": "7:32AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:29PM",
-   "arr": "12:21AM+1",
-   "rarr": "3:00AM+1",
-   "pct": 53
+   "rdep": "4:27PM",
+   "arr": "1:23PM",
+   "rarr": "9:22PM",
+   "pct": 48
   },
   "SFO": {
    "to": "SFO",
