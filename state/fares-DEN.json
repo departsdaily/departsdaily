@@ -1,25 +1,10 @@
 {
  "origin": "DEN",
- "generated": "2026-07-31T20:15:41-04:00",
+ "generated": "2026-07-31T22:15:51-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 14,
+ "routes_priced": 13,
  "routes_failed": [],
  "fares": {
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 163,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
-   "dep": "3:55PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:30PM",
-   "arr": "6:37PM",
-   "rarr": "9:27PM",
-   "pct": 63
-  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -173,7 +158,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 130,
+   "price": 142,
    "d1": "2026-08-27",
    "d2": "2026-08-31",
    "dep": "7:15AM",
@@ -183,7 +168,7 @@
    "rdep": "7:06PM",
    "arr": "10:19AM",
    "rarr": "9:58PM",
-   "pct": 66
+   "pct": 63
   },
   "PAR": {
    "to": "PAR",

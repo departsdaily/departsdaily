@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-07-31T20:15:23-04:00",
+ "generated": "2026-07-31T22:15:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -113,16 +113,16 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 119,
-   "d1": "2026-09-08",
-   "d2": "2026-09-11",
-   "dep": "8:05PM",
+   "price": 122,
+   "d1": "2026-09-09",
+   "d2": "2026-09-16",
+   "dep": "9:54PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:13AM",
-   "arr": "10:59PM",
-   "rarr": "1:22PM",
+   "rdep": "6:00AM",
+   "arr": "12:45AM+1",
+   "rarr": "9:07AM",
    "pct": 72
   },
   "MIA": {
@@ -158,17 +158,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 237,
-   "d1": "2026-08-15",
-   "d2": "2026-08-19",
-   "dep": "5:18PM",
+   "price": 134,
+   "d1": "2026-09-14",
+   "d2": "2026-09-16",
+   "dep": "3:08PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:55PM",
-   "arr": "9:00PM",
-   "rarr": "2:34AM+1",
-   "pct": 57
+   "rdep": "8:29PM",
+   "arr": "6:44PM",
+   "rarr": "12:23AM+1",
+   "pct": 76
   },
   "ORD": {
    "to": "ORD",
@@ -349,21 +349,6 @@
    "arr": "2:49AM+1",
    "rarr": "7:38AM+1",
    "pct": -2
-  },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 1045,
-   "d1": "2026-08-30",
-   "d2": "2026-09-05",
-   "dep": "7:20AM",
-   "al": "United",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "8:15PM",
-   "arr": "7:03PM",
-   "rarr": "10:14AM+1",
-   "pct": -10
   },
   "SJU": {
    "to": "SJU",

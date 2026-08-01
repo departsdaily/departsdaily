@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-07-31T20:15:04-04:00",
+ "generated": "2026-07-31T22:15:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 248,
-   "d1": "2026-10-25",
-   "d2": "2026-10-31",
-   "dep": "4:00PM",
+   "price": 251,
+   "d1": "2026-09-05",
+   "d2": "2026-09-08",
+   "dep": "7:11AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55PM",
-   "arr": "7:59PM",
-   "rarr": "10:56PM",
-   "pct": 49
+   "rdep": "9:10AM",
+   "arr": "1:42PM",
+   "rarr": "2:57PM",
+   "pct": 48
   },
   "SEA": {
    "to": "SEA",
@@ -338,17 +338,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 578,
-   "d1": "2026-10-02",
-   "d2": "2026-10-09",
+   "price": 597,
+   "d1": "2026-10-04",
+   "d2": "2026-10-16",
    "dep": "6:00PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:45PM",
+   "rdep": "7:40AM",
    "arr": "4:35AM+1",
-   "rarr": "7:45AM+1",
-   "pct": 36
+   "rarr": "7:40PM",
+   "pct": 34
   },
   "PUJ": {
    "to": "PUJ",
