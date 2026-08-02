@@ -1,25 +1,10 @@
 {
  "origin": "MIA",
- "generated": "2026-08-01T20:19:45-04:00",
+ "generated": "2026-08-01T22:16:50-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 219,
-   "d1": "2026-08-21",
-   "d2": "2026-08-24",
-   "dep": "9:47PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:37PM",
-   "arr": "2:28AM+1",
-   "rarr": "10:17PM",
-   "pct": 45
-  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
@@ -263,9 +248,9 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 168,
-   "d1": "2026-09-09",
-   "d2": "2026-09-16",
+   "price": 170,
+   "d1": "2026-09-04",
+   "d2": "2026-09-08",
    "dep": "5:12PM",
    "al": "Volaris",
    "stops": 1,
@@ -273,7 +258,7 @@
    "rdep": "5:25AM",
    "arr": "10:58PM",
    "rarr": "10:56AM",
-   "pct": 68
+   "pct": 67
   },
   "LON": {
    "to": "LON",
@@ -323,17 +308,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 450,
-   "d1": "2026-10-10",
-   "d2": "2026-10-24",
-   "dep": "12:20AM",
-   "al": "TAP Portugal",
-   "stops": 1,
+   "price": 568,
+   "d1": "2026-09-17",
+   "d2": "2026-09-22",
+   "dep": "9:35PM",
+   "al": "BF",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "9:15PM",
-   "arr": "11:10AM",
-   "rarr": "9:40AM+1",
-   "pct": 50
+   "rdep": "3:30PM",
+   "arr": "6:30AM+1",
+   "rarr": "1:20AM+1",
+   "pct": 37
   },
   "PUJ": {
    "to": "PUJ",
