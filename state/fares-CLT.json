@@ -1,24 +1,24 @@
 {
  "origin": "CLT",
- "generated": "2026-08-02T16:13:38-04:00",
+ "generated": "2026-08-02T18:13:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 201,
-   "d1": "2026-08-07",
-   "d2": "2026-08-09",
-   "dep": "10:04PM",
+   "price": 289,
+   "d1": "2026-08-13",
+   "d2": "2026-08-17",
+   "dep": "9:43PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:43PM",
-   "arr": "4:01AM+1",
-   "rarr": "1:36AM+1",
-   "pct": 69
+   "rdep": "6:30AM",
+   "arr": "2:27AM+1",
+   "rarr": "12:16PM",
+   "pct": 56
   },
   "BNA": {
    "to": "BNA",
@@ -109,6 +109,21 @@
    "arr": "12:04PM",
    "rarr": "8:43PM",
    "pct": 62
+  },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 272,
+   "d1": "2026-08-07",
+   "d2": "2026-08-10",
+   "dep": "5:57PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "9:09AM",
+   "arr": "8:52PM",
+   "rarr": "11:53AM",
+   "pct": 37
   },
   "LAS": {
    "to": "LAS",

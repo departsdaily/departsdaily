@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-02T16:15:07-04:00",
+ "generated": "2026-08-02T18:14:57-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -125,21 +125,6 @@
    "rarr": "10:39PM",
    "pct": 87
   },
-  "MCO": {
-   "to": "MCO",
-   "city": "Orlando",
-   "price": 303,
-   "d1": "2026-08-06",
-   "d2": "2026-08-08",
-   "dep": "5:45AM",
-   "al": "United",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:30AM",
-   "arr": "11:51AM",
-   "rarr": "1:47PM",
-   "pct": 47
-  },
   "MIA": {
    "to": "MIA",
    "city": "Miami",
@@ -248,17 +233,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 72,
-   "d1": "2026-10-15",
-   "d2": "2026-10-17",
-   "dep": "7:43PM",
+   "price": 87,
+   "d1": "2026-09-09",
+   "d2": "2026-09-13",
+   "dep": "8:44AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:30PM",
-   "arr": "9:18PM",
-   "rarr": "9:01PM",
-   "pct": 80
+   "rdep": "12:07PM",
+   "arr": "10:22AM",
+   "rarr": "1:43PM",
+   "pct": 76
   },
   "CUN": {
    "to": "CUN",
