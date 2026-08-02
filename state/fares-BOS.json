@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-02T02:22:54-04:00",
+ "generated": "2026-08-02T04:17:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,6 +19,21 @@
    "arr": "5:26PM",
    "rarr": "4:40PM",
    "pct": 48
+  },
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 259,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "2:45PM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:25PM",
+   "arr": "8:34PM",
+   "rarr": "8:08PM",
+   "pct": 41
   },
   "DEN": {
    "to": "DEN",
