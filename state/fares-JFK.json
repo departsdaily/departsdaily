@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-02T08:16:42-04:00",
+ "generated": "2026-08-02T10:16:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 150,
-   "d1": "2026-08-14",
-   "d2": "2026-08-17",
-   "dep": "12:00PM",
+   "price": 148,
+   "d1": "2026-09-25",
+   "d2": "2026-09-27",
+   "dep": "10:35AM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:13AM",
-   "arr": "3:06PM",
-   "rarr": "9:00AM",
-   "pct": 59
+   "rdep": "8:30AM",
+   "arr": "1:48PM",
+   "rarr": "12:31PM",
+   "pct": 60
   },
   "AMS": {
    "to": "AMS",

@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-02T08:15:39-04:00",
+ "generated": "2026-08-02T10:15:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -275,21 +275,6 @@
    "rarr": "10:08PM",
    "pct": 43
   },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 994,
-   "d1": "2026-08-16",
-   "d2": "2026-08-30",
-   "dep": "9:30PM",
-   "al": "Turkish",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:20AM",
-   "arr": "1:00PM+1",
-   "rarr": "11:45PM",
-   "pct": -13
-  },
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
@@ -364,6 +349,21 @@
    "arr": "4:20PM",
    "rarr": "8:32PM",
    "pct": 1
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 451,
+   "d1": "2026-09-04",
+   "d2": "2026-09-08",
+   "dep": "7:05PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:45AM",
+   "arr": "11:08PM",
+   "rarr": "12:12PM",
+   "pct": 6
   },
   "PAR": {
    "to": "PAR",
