@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-02T14:16:49-04:00",
+ "generated": "2026-08-02T16:16:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 258,
-   "d1": "2026-09-11",
-   "d2": "2026-09-18",
-   "dep": "6:30AM",
-   "al": "American",
-   "stops": 0,
+   "price": 145,
+   "d1": "2026-08-18",
+   "d2": "2026-08-25",
+   "dep": "5:35AM",
+   "al": "Southwest",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "3:00PM",
-   "arr": "12:49PM",
-   "rarr": "8:28PM",
-   "pct": 65
+   "rdep": "6:50AM",
+   "arr": "1:35PM",
+   "rarr": "1:00PM",
+   "pct": 80
   },
   "MCO": {
    "to": "MCO",

@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-02T14:14:45-04:00",
+ "generated": "2026-08-02T16:14:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -356,13 +356,13 @@
    "price": 451,
    "d1": "2026-09-04",
    "d2": "2026-09-08",
-   "dep": "7:05PM",
+   "dep": "8:14PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:45AM",
-   "arr": "11:08PM",
-   "rarr": "12:12PM",
+   "rdep": "6:45PM",
+   "arr": "1:06AM+1",
+   "rarr": "11:18PM",
    "pct": 6
   },
   "PAR": {
