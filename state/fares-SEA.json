@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-02T10:16:47-04:00",
+ "generated": "2026-08-02T12:16:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -274,6 +274,21 @@
    "arr": "5:35AM+1",
    "rarr": "8:25PM",
    "pct": 34
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 611,
+   "d1": "2026-08-14",
+   "d2": "2026-08-21",
+   "dep": "8:53PM",
+   "al": "Frontier",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "6:35AM",
+   "arr": "7:30AM+1",
+   "rarr": "6:01PM",
+   "pct": -45
   }
  }
 }
