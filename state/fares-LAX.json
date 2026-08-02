@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-01T18:19:30-04:00",
+ "generated": "2026-08-01T20:19:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 272,
-   "d1": "2026-08-15",
-   "d2": "2026-08-17",
-   "dep": "6:25PM",
+   "price": 247,
+   "d1": "2026-09-26",
+   "d2": "2026-10-03",
+   "dep": "6:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "12:41AM+1",
-   "rarr": "12:55PM",
-   "pct": 63
+   "rdep": "6:37PM",
+   "arr": "12:11PM",
+   "rarr": "1:33AM+1",
+   "pct": 67
   },
   "HOU": {
    "to": "HOU",
@@ -293,17 +293,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 652,
-   "d1": "2026-11-14",
-   "d2": "2026-12-03",
-   "dep": "5:15PM",
-   "al": "TAP Portugal",
+   "price": 657,
+   "d1": "2026-10-11",
+   "d2": "2026-10-19",
+   "dep": "4:45PM",
+   "al": "DE",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:40AM",
-   "arr": "6:55AM+1",
-   "rarr": "10:00PM",
-   "pct": 28
+   "rdep": "8:25AM",
+   "arr": "5:20AM+1",
+   "rarr": "9:55PM",
+   "pct": 27
   },
   "ROM": {
    "to": "ROM",

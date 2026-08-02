@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-01T18:18:35-04:00",
+ "generated": "2026-08-01T20:18:09-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -24,15 +24,15 @@
    "to": "BOS",
    "city": "Boston",
    "price": 145,
-   "d1": "2026-08-21",
-   "d2": "2026-08-23",
-   "dep": "6:05AM",
+   "d1": "2026-09-16",
+   "d2": "2026-09-19",
+   "dep": "3:50PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:27AM",
-   "arr": "8:37AM",
-   "rarr": "11:30AM",
+   "rdep": "12:05PM",
+   "arr": "6:30PM",
+   "rarr": "3:07PM",
    "pct": 63
   },
   "DCA": {
@@ -353,17 +353,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 369,
+   "price": 388,
    "d1": "2026-09-26",
    "d2": "2026-09-30",
    "dep": "12:12PM",
    "al": "DM",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:35PM",
+   "rdep": "1:50PM",
    "arr": "4:57PM",
-   "rarr": "9:35PM",
-   "pct": 34
+   "rarr": "8:43PM",
+   "pct": 31
   },
   "ROM": {
    "to": "ROM",

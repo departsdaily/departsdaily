@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-01T18:17:55-04:00",
+ "generated": "2026-08-01T20:17:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
@@ -98,8 +98,8 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 162,
-   "d1": "2026-08-26",
+   "price": 154,
+   "d1": "2026-08-28",
    "d2": "2026-08-30",
    "dep": "9:46AM",
    "al": "Frontier",
@@ -108,7 +108,7 @@
    "rdep": "6:24PM",
    "arr": "12:04PM",
    "rarr": "8:43PM",
-   "pct": 60
+   "pct": 62
   },
   "LAS": {
    "to": "LAS",

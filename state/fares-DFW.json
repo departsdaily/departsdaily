@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-01T18:18:54-04:00",
+ "generated": "2026-08-01T20:18:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 307,
+   "price": 353,
    "d1": "2026-08-06",
    "d2": "2026-08-09",
-   "dep": "8:55AM",
-   "al": "American",
-   "stops": 0,
+   "dep": "12:15PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
    "rdep": "2:14PM",
-   "arr": "10:26AM",
+   "arr": "5:17PM",
    "rarr": "4:07PM",
-   "pct": 19
+   "pct": 7
   },
   "NYC": {
    "to": "NYC",

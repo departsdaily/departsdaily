@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-01T18:20:09-04:00",
+ "generated": "2026-08-01T20:19:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -173,7 +173,7 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 180,
+   "price": 177,
    "d1": "2026-08-28",
    "d2": "2026-08-31",
    "dep": "11:10AM",
