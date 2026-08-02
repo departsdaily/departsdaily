@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-01T22:17:08-04:00",
+ "generated": "2026-08-02T00:20:20-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -80,21 +80,6 @@
    "rarr": "1:30PM",
    "pct": 6
   },
-  "FLL": {
-   "to": "FLL",
-   "city": "Ft. Lauderdale",
-   "price": 367,
-   "d1": "2026-10-02",
-   "d2": "2026-10-06",
-   "dep": "8:18AM",
-   "al": "Alaska",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:22PM",
-   "arr": "2:26PM",
-   "rarr": "12:55AM+1",
-   "pct": 42
-  },
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
@@ -143,8 +128,8 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 311,
-   "d1": "2026-10-02",
+   "price": 338,
+   "d1": "2026-10-01",
    "d2": "2026-10-06",
    "dep": "4:27PM",
    "al": "Frontier",
@@ -153,7 +138,7 @@
    "rdep": "5:50AM",
    "arr": "11:11PM",
    "rarr": "1:20PM",
-   "pct": 50
+   "pct": 46
   },
   "MSY": {
    "to": "MSY",

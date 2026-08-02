@@ -1,24 +1,24 @@
 {
  "origin": "JFK",
- "generated": "2026-08-01T22:16:31-04:00",
+ "generated": "2026-08-02T00:19:44-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 313,
-   "d1": "2026-08-19",
-   "d2": "2026-08-22",
-   "dep": "5:50AM",
+   "price": 454,
+   "d1": "2026-09-10",
+   "d2": "2026-09-14",
+   "dep": "9:45PM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "6:05PM",
-   "arr": "11:53AM",
-   "rarr": "11:26PM",
-   "pct": 49
+   "rdep": "6:20AM",
+   "arr": "5:22AM+1",
+   "rarr": "11:58AM",
+   "pct": 26
   },
   "BNA": {
    "to": "BNA",
@@ -184,6 +184,21 @@
    "arr": "10:02PM",
    "rarr": "9:29AM",
    "pct": 63
+  },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 305,
+   "d1": "2026-08-27",
+   "d2": "2026-08-30",
+   "dep": "8:59AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:01AM",
+   "arr": "1:18PM",
+   "rarr": "1:30PM",
+   "pct": 36
   },
   "ORD": {
    "to": "ORD",
