@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-02T06:14:59-04:00",
+ "generated": "2026-08-02T08:14:52-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 178,
+   "price": 182,
    "d1": "2026-08-24",
    "d2": "2026-08-26",
-   "dep": "10:52AM",
+   "dep": "7:41PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:50PM",
-   "arr": "3:05PM",
-   "rarr": "3:59AM+1",
-   "pct": 74
+   "rdep": "6:40AM",
+   "arr": "12:00AM+1",
+   "rarr": "10:50AM",
+   "pct": 73
   },
   "LAX": {
    "to": "LAX",
@@ -289,21 +289,6 @@
    "arr": "10:15PM",
    "rarr": "9:02AM",
    "pct": 75
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 926,
-   "d1": "2026-11-21",
-   "d2": "2026-11-30",
-   "dep": "9:50PM",
-   "al": "Turkish",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:20PM",
-   "arr": "12:20PM+1",
-   "rarr": "2:00PM+1",
-   "pct": -5
   },
   "AUA": {
    "to": "AUA",
