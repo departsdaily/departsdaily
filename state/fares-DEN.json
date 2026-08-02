@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-02T12:15:48-04:00",
+ "generated": "2026-08-02T14:15:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 13,
+ "routes_priced": 14,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -199,6 +199,21 @@
    "arr": "7:38PM",
    "rarr": "1:56AM+1",
    "pct": -2
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 560,
+   "d1": "2026-10-16",
+   "d2": "2026-10-28",
+   "dep": "8:29PM",
+   "al": "United",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "6:40AM",
+   "arr": "11:59AM+1",
+   "rarr": "9:50PM",
+   "pct": 41
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-02T12:16:24-04:00",
+ "generated": "2026-08-02T14:15:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 231,
-   "d1": "2026-09-02",
-   "d2": "2026-09-08",
-   "dep": "6:00AM",
-   "al": "JetBlue",
+   "price": 161,
+   "d1": "2026-09-25",
+   "d2": "2026-09-28",
+   "dep": "1:00PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:59PM",
-   "arr": "12:15PM",
-   "rarr": "6:55AM+1",
-   "pct": 78
+   "rdep": "10:05PM",
+   "arr": "9:07PM",
+   "rarr": "5:13AM+1",
+   "pct": 84
   },
   "TPA": {
    "to": "TPA",
@@ -338,17 +338,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 196,
-   "d1": "2026-09-13",
-   "d2": "2026-09-19",
-   "dep": "10:30AM",
+   "price": 174,
+   "d1": "2026-11-11",
+   "d2": "2026-11-16",
+   "dep": "6:30AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:35AM",
-   "arr": "2:50PM",
-   "rarr": "3:19PM",
-   "pct": 64
+   "rdep": "11:30AM",
+   "arr": "10:26AM",
+   "rarr": "3:17PM",
+   "pct": 68
   },
   "NAS": {
    "to": "NAS",
@@ -383,17 +383,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 425,
-   "d1": "2026-10-05",
-   "d2": "2026-10-09",
-   "dep": "9:35AM",
+   "price": 396,
+   "d1": "2026-10-24",
+   "d2": "2026-10-31",
+   "dep": "9:55AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:45AM",
-   "arr": "1:44PM",
-   "rarr": "3:40PM",
-   "pct": 24
+   "rdep": "12:05PM",
+   "arr": "1:55PM",
+   "rarr": "4:08PM",
+   "pct": 29
   },
   "ROM": {
    "to": "ROM",

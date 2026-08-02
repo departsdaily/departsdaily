@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-02T12:15:30-04:00",
+ "generated": "2026-08-02T14:14:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -53,17 +53,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 135,
-   "d1": "2026-08-18",
-   "d2": "2026-08-20",
-   "dep": "9:31PM",
+   "price": 183,
+   "d1": "2026-08-30",
+   "d2": "2026-09-04",
+   "dep": "5:18AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:23PM",
-   "arr": "11:55PM",
-   "rarr": "7:36PM",
-   "pct": 64
+   "rdep": "5:05AM",
+   "arr": "7:28AM",
+   "rarr": "7:09AM",
+   "pct": 52
   },
   "FLL": {
    "to": "FLL",
@@ -379,6 +379,21 @@
    "arr": "2:49AM+1",
    "rarr": "7:38AM+1",
    "pct": -2
+  },
+  "PUJ": {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 477,
+   "d1": "2026-10-05",
+   "d2": "2026-10-16",
+   "dep": "8:05AM",
+   "al": "Frontier",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "9:15PM",
+   "arr": "4:18PM",
+   "rarr": "5:46AM+1",
+   "pct": 15
   },
   "SJU": {
    "to": "SJU",
