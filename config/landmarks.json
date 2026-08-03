@@ -1,57 +1,218 @@
 {
-  "_doc": [
-    "The thing people picture when they picture the place.",
-    "",
-    "Everything automatic we tried produced photos that were technically correct",
-    "and commercially useless. Text search matched the word, not the place",
-    "(a moth for Rome). Geosearch fixed the location and gave us photos that were",
-    "genuinely shot in the city and still worthless: a bus stop for Houston, a",
-    "police car for Grand Cayman, a bike rack for Nashville. Nothing in a",
-    "coordinate or a licence tells you which view of a city makes someone want to",
-    "go there.",
-    "",
-    "So that judgement is written down instead of inferred. Each city lists the",
-    "views worth showing, best first, and the fetcher tries them in order. Curated",
-    "is the honest answer here: it is 32 cities, they change on the timescale of",
-    "decades, and a human naming Pike Place Market beats any ranking function we",
-    "could write.",
-    "",
-    "Adding a city: add its code with 3-6 entries, most iconic first. Prefer views",
-    "with scale (skylines, coastlines, plazas) over interiors and close-ups, and",
-    "name the landmark the way Commons would title it."
+ "_doc": [
+  "The thing people picture when they picture the place.",
+  "",
+  "Everything automatic we tried produced photos that were technically correct",
+  "and commercially useless. Text search matched the word, not the place",
+  "(a moth for Rome). Geosearch fixed the location and gave us photos that were",
+  "genuinely shot in the city and still worthless: a bus stop for Houston, a",
+  "police car for Grand Cayman, a bike rack for Nashville. Nothing in a",
+  "coordinate or a licence tells you which view of a city makes someone want to",
+  "go there.",
+  "",
+  "So that judgement is written down instead of inferred. Each city lists the",
+  "views worth showing, best first, and the fetcher tries them in order. Curated",
+  "is the honest answer here: it is 32 cities, they change on the timescale of",
+  "decades, and a human naming Pike Place Market beats any ranking function we",
+  "could write.",
+  "",
+  "Adding a city: add its code with 3-6 entries, most iconic first. Prefer views",
+  "with scale (skylines, coastlines, plazas) over interiors and close-ups, and",
+  "name the landmark the way Commons would title it.",
+  "A NOTE ON WHAT SCORING CANNOT DO. Denver's first pick was a satellite terrain render whose FILENAME was 'Denver Skyline (4801).jpg'. No amount of title scoring catches that — the title is a perfect description of what we wanted and the image is not it. Where a term keeps returning something wrong, retarget the term at a view that cannot be confused (Red Rocks, the Lincoln Memorial, Santa Monica Pier) rather than trying to describe the badness."
+ ],
+ "cities": {
+  "AMS": [
+   "Amsterdam canals",
+   "Amsterdam Herengracht",
+   "Rijksmuseum Amsterdam",
+   "Amsterdam skyline"
   ],
-  "cities": {
-    "AMS": ["Amsterdam canals", "Amsterdam Herengracht", "Rijksmuseum Amsterdam", "Amsterdam skyline"],
-    "AUA": ["Eagle Beach Aruba", "Palm Beach Aruba", "Oranjestad Aruba waterfront", "Aruba coastline"],
-    "AUS": ["Austin Texas skyline", "Texas State Capitol Austin", "Lady Bird Lake Austin", "Congress Avenue Bridge Austin"],
-    "BNA": ["Nashville skyline", "Broadway Nashville neon", "Ryman Auditorium", "Nashville Cumberland River"],
-    "BOS": ["Boston skyline", "Boston Public Garden", "Acorn Street Boston", "Boston Harbor"],
-    "CUN": ["Cancun beach hotel zone", "Cancun turquoise sea", "Chichen Itza", "Isla Mujeres beach"],
-    "DCA": ["Lincoln Memorial reflecting pool", "United States Capitol", "Washington Monument cherry blossoms", "Jefferson Memorial"],
-    "DEN": ["Denver skyline Rocky Mountains", "Red Rocks Amphitheatre", "Denver Union Station", "Denver Larimer Square"],
-    "DFW": ["Dallas skyline", "Reunion Tower Dallas", "Dallas Margaret Hunt Hill Bridge", "Dallas Arts District"],
-    "DTW": ["Detroit skyline", "Detroit RiverWalk", "Guardian Building Detroit", "Detroit Renaissance Center"],
-    "FLL": ["Fort Lauderdale beach", "Fort Lauderdale Intracoastal", "Las Olas Boulevard", "Fort Lauderdale marina"],
-    "GCM": ["Seven Mile Beach Grand Cayman", "Stingray City Cayman", "Grand Cayman turquoise water", "Rum Point Cayman"],
-    "HOU": ["Houston skyline", "Houston Water Wall", "Buffalo Bayou Park Houston", "Houston Museum District"],
-    "LAS": ["Las Vegas Strip night", "Bellagio fountains", "Las Vegas skyline", "Fremont Street Experience"],
-    "LAX": ["Los Angeles skyline", "Santa Monica Pier", "Griffith Observatory", "Venice Beach California"],
-    "LON": ["London skyline Thames", "Tower Bridge London", "Big Ben Westminster", "London Eye"],
-    "MBJ": ["Montego Bay beach", "Doctor's Cave Beach Jamaica", "Montego Bay coastline", "Jamaica turquoise sea"],
-    "MCO": ["Orlando skyline Lake Eola", "Orlando downtown", "Winter Park Florida", "Orlando cityscape"],
-    "MIA": ["Miami skyline", "South Beach Miami", "Ocean Drive Art Deco Miami", "Miami Beach aerial"],
-    "MSY": ["French Quarter New Orleans", "Jackson Square New Orleans", "Bourbon Street balconies", "New Orleans streetcar"],
-    "NAS": ["Nassau Bahamas beach", "Paradise Island Bahamas", "Nassau harbour Bahamas", "Bahamas turquoise water"],
-    "NYC": ["Manhattan skyline", "Brooklyn Bridge Manhattan", "Central Park New York autumn", "Times Square New York"],
-    "ORD": ["Chicago skyline", "Chicago River architecture", "Cloud Gate Millennium Park", "Navy Pier Chicago"],
-    "PAR": ["Eiffel Tower Paris", "Paris skyline Seine", "Louvre Pyramid", "Montmartre Sacre-Coeur"],
-    "PHL": ["Philadelphia skyline", "Philadelphia City Hall", "Benjamin Franklin Parkway", "Philadelphia Boathouse Row"],
-    "PHX": ["Phoenix Arizona skyline", "Camelback Mountain Phoenix", "Papago Park Phoenix", "Sonoran Desert saguaro"],
-    "PUJ": ["Punta Cana beach", "Bavaro Beach Dominican Republic", "Punta Cana palm beach", "Dominican Republic coastline"],
-    "ROM": ["Colosseum Rome", "Rome skyline", "Trevi Fountain", "St Peter's Basilica Rome"],
-    "SEA": ["Seattle skyline Mount Rainier", "Space Needle Seattle", "Pike Place Market", "Seattle waterfront"],
-    "SFO": ["Golden Gate Bridge", "San Francisco skyline", "Painted Ladies San Francisco", "Lombard Street San Francisco"],
-    "SJU": ["Old San Juan Puerto Rico", "Castillo San Felipe del Morro", "Old San Juan colorful streets", "San Juan coastline"],
-    "TPA": ["Tampa skyline", "Tampa Riverwalk", "Ybor City Tampa", "Tampa Bay waterfront"]
-  }
+  "AUA": [
+   "Eagle Beach Aruba",
+   "Palm Beach Aruba",
+   "Oranjestad Aruba waterfront",
+   "Aruba coastline"
+  ],
+  "AUS": [
+   "Austin Texas skyline",
+   "Texas State Capitol Austin",
+   "Lady Bird Lake Austin",
+   "Congress Avenue Bridge Austin"
+  ],
+  "BNA": [
+   "Nashville skyline",
+   "Broadway Nashville neon",
+   "Ryman Auditorium",
+   "Nashville Cumberland River"
+  ],
+  "BOS": [
+   "Boston skyline",
+   "Boston Public Garden",
+   "Acorn Street Boston",
+   "Boston Harbor"
+  ],
+  "CUN": [
+   "Cancun beach hotel zone",
+   "Cancun turquoise sea",
+   "Chichen Itza",
+   "Isla Mujeres beach"
+  ],
+  "DCA": [
+   "Lincoln Memorial Washington",
+   "United States Capitol dome",
+   "Washington Monument cherry blossoms",
+   "Jefferson Memorial tidal basin"
+  ],
+  "DEN": [
+   "Red Rocks Amphitheatre Colorado",
+   "Denver Union Station night",
+   "Denver Larimer Square",
+   "Denver downtown skyline mountains"
+  ],
+  "DFW": [
+   "Dallas skyline",
+   "Reunion Tower Dallas",
+   "Dallas Margaret Hunt Hill Bridge",
+   "Dallas Arts District"
+  ],
+  "DTW": [
+   "Detroit skyline",
+   "Detroit RiverWalk",
+   "Guardian Building Detroit",
+   "Detroit Renaissance Center"
+  ],
+  "FLL": [
+   "Fort Lauderdale beach",
+   "Fort Lauderdale Intracoastal",
+   "Las Olas Boulevard",
+   "Fort Lauderdale marina"
+  ],
+  "GCM": [
+   "Seven Mile Beach Grand Cayman",
+   "Stingray City Cayman",
+   "Grand Cayman turquoise water",
+   "Rum Point Cayman"
+  ],
+  "HOU": [
+   "Houston skyline",
+   "Houston Water Wall",
+   "Buffalo Bayou Park Houston",
+   "Houston Museum District"
+  ],
+  "LAS": [
+   "Las Vegas Strip night",
+   "Bellagio fountains",
+   "Las Vegas skyline",
+   "Fremont Street Experience"
+  ],
+  "LAX": [
+   "Santa Monica Pier sunset",
+   "Griffith Observatory Los Angeles",
+   "Venice Beach California",
+   "Los Angeles downtown skyline sunset"
+  ],
+  "LON": [
+   "London skyline Thames",
+   "Tower Bridge London",
+   "Big Ben Westminster",
+   "London Eye"
+  ],
+  "MBJ": [
+   "Montego Bay beach",
+   "Doctor's Cave Beach Jamaica",
+   "Montego Bay coastline",
+   "Jamaica turquoise sea"
+  ],
+  "MCO": [
+   "Lake Eola Park Orlando fountain",
+   "Orlando downtown skyline sunset",
+   "Winter Park Florida",
+   "Orlando cityscape night"
+  ],
+  "MIA": [
+   "Miami skyline",
+   "South Beach Miami",
+   "Ocean Drive Art Deco Miami",
+   "Miami Beach aerial"
+  ],
+  "MSY": [
+   "French Quarter New Orleans",
+   "Jackson Square New Orleans",
+   "Bourbon Street balconies",
+   "New Orleans streetcar"
+  ],
+  "NAS": [
+   "Nassau Bahamas beach",
+   "Paradise Island Bahamas",
+   "Nassau harbour Bahamas",
+   "Bahamas turquoise water"
+  ],
+  "NYC": [
+   "Manhattan skyline",
+   "Brooklyn Bridge Manhattan",
+   "Central Park New York autumn",
+   "Times Square New York"
+  ],
+  "ORD": [
+   "Chicago skyline",
+   "Chicago River architecture",
+   "Cloud Gate Millennium Park",
+   "Navy Pier Chicago"
+  ],
+  "PAR": [
+   "Eiffel Tower Paris",
+   "Paris skyline Seine",
+   "Louvre Pyramid",
+   "Montmartre Sacre-Coeur"
+  ],
+  "PHL": [
+   "Philadelphia skyline",
+   "Philadelphia City Hall",
+   "Benjamin Franklin Parkway",
+   "Philadelphia Boathouse Row"
+  ],
+  "PHX": [
+   "Phoenix Arizona skyline",
+   "Camelback Mountain Phoenix",
+   "Papago Park Phoenix",
+   "Sonoran Desert saguaro"
+  ],
+  "PUJ": [
+   "Punta Cana beach",
+   "Bavaro Beach Dominican Republic",
+   "Punta Cana palm beach",
+   "Dominican Republic coastline"
+  ],
+  "ROM": [
+   "Colosseum Rome",
+   "Rome skyline",
+   "Trevi Fountain",
+   "St Peter's Basilica Rome"
+  ],
+  "SEA": [
+   "Seattle skyline Mount Rainier",
+   "Space Needle Seattle",
+   "Pike Place Market",
+   "Seattle waterfront"
+  ],
+  "SFO": [
+   "Golden Gate Bridge",
+   "San Francisco skyline",
+   "Painted Ladies San Francisco",
+   "Lombard Street San Francisco"
+  ],
+  "SJU": [
+   "Old San Juan Puerto Rico",
+   "Castillo San Felipe del Morro",
+   "Old San Juan colorful streets",
+   "San Juan coastline"
+  ],
+  "TPA": [
+   "Tampa skyline",
+   "Tampa Riverwalk",
+   "Ybor City Tampa",
+   "Tampa Bay waterfront"
+  ]
+ }
 }
