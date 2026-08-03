@@ -147,9 +147,14 @@ def coords(city):
     return None
 
 
-def geosearch(lat, lon, radius=12000, limit=80):
-    """Every file Commons holds that was TAKEN within `radius` of the city
-    centre. Geography instead of spelling."""
+def geosearch(lat, lon, radius=10000, limit=100):
+    """Every file Commons holds that was TAKEN within `radius` metres of the
+    city centre. Geography instead of spelling.
+
+    RADIUS MUST NOT EXCEED 10000. The MediaWiki API caps gsradius at 10km and
+    rejects anything larger. The first geosearch run passed 12000, so every
+    single call errored, returned [], and fell through to the text search —
+    which is why the 'fixed' fetch produced the same wrong photos as before.""" 
     try:
         d = api({"action": "query", "list": "geosearch",
                  "gscoord": "%s|%s" % (lat, lon), "gsradius": str(radius),
@@ -223,11 +228,18 @@ def search(city, country=""):
     if ll:
         titles = geosearch(*ll)
         print("    %s -> %.3f,%.3f · %d nearby files" % (city, ll[0], ll[1], len(titles)))
-        hits = [u for u in (usable(p) for p in imageinfo(titles)) if u]
+        hits = [dict(u, how="geo") for u in
+                (usable(p) for p in imageinfo(titles)) if u]
         if hits:
             return hits
         print("    nothing usable nearby, falling back to text search")
+    # TEXT FALLBACK. Only reached when a city has no geotagged coverage at all.
+    # It must never again hand back a photo of somewhere else, so results are
+    # required to actually name the place: Aruba got the I-35W bridge collapse
+    # in Minneapolis and Rome got a cathedral in Breda purely because the
+    # ranking liked them.
     where = ("%s %s" % (city, country)).strip()
+    must = [w.lower() for w in re.split(r"[ ,]+", city) if len(w) > 3]
     queries = ["%s %s %s" % (where, s, QUALITY) for s in SUBJECTS[:3]]
     queries += ["%s %s" % (where, s) for s in SUBJECTS]
     seen = []
@@ -244,7 +256,9 @@ def search(city, country=""):
             continue
         for page in (d.get("query", {}) or {}).get("pages", []) or []:
             u = usable(page)
-            if u:
+            # The title has to mention the place. Without this the fallback is
+            # a popularity contest that any well-photographed subject wins.
+            if u and (not must or any(m in u["title"].lower() for m in must)):
                 seen.append(dict(u, query=q))
         if seen:
             return seen
@@ -329,6 +343,7 @@ def main():
                      "licence": pick["licence"],
                      "needs_credit": pick["needs_credit"],
                      "credit": pick["credit"],
+                     "how": pick.get("how", "text"),
                      "fetched": time.strftime("%Y-%m-%d")}
         print("    %s  %s  %.0fKB" % (pick["licence"], pick["credit"][:52], size / 1024))
         time.sleep(0.5)
