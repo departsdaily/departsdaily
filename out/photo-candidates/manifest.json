@@ -440,20 +440,108 @@
  "MBJ": [
   {
    "n": 0,
-   "title": "File:Iberostar Rose Hall Beach, Montego Bay, Jamaica 2011.jpg",
-   "term": "Montego Bay beach",
+   "title": "File:Bury at the Beach Negril, Westmoreland, Jamaica.jpg",
+   "term": "Negril Jamaica beach",
    "licence": "CC BY 2.0",
-   "subject": 8,
+   "subject": 5,
+   "quality": 0
+  },
+  {
+   "n": 1,
+   "title": "File:Negril-Beach.jpg",
+   "term": "Negril Jamaica beach",
+   "licence": "CC BY-SA 4.0",
+   "subject": 5,
+   "quality": 0
+  },
+  {
+   "n": 2,
+   "title": "File:Street in Montigo Bay Jamaica Photo Don Ramey Logan.jpg",
+   "term": "Montego Bay Jamaica",
+   "licence": "CC BY-SA 3.0",
+   "subject": 4,
+   "quality": 0
+  },
+  {
+   "n": 3,
+   "title": "File:Montego Bay Military Ship Jamaica Photo Don Ramey Logan.jpg",
+   "term": "Montego Bay Jamaica",
+   "licence": "CC BY-SA 3.0",
+   "subject": 3,
+   "quality": 0
+  },
+  {
+   "n": 4,
+   "title": "File:Montego Bay East Photo Don Ramey Logan.jpg",
+   "term": "Montego Bay Jamaica",
+   "licence": "CC BY-SA 3.0",
+   "subject": 3,
+   "quality": 0
+  },
+  {
+   "n": 5,
+   "title": "File:2024 01 31 Montego Bay Jamaica 1 (53951710246).jpg",
+   "term": "Montego Bay Jamaica",
+   "licence": "CC BY 2.0",
+   "subject": 3,
+   "quality": 0
+  },
+  {
+   "n": 6,
+   "title": "File:2024 01 31 Montego Bay Jamaica 2 (53950813507).jpg",
+   "term": "Montego Bay Jamaica",
+   "licence": "CC BY 2.0",
+   "subject": 3,
+   "quality": 0
+  },
+  {
+   "n": 7,
+   "title": "File:Jamaica, Negril, Bloody Bay 2013 (8488947867).jpg",
+   "term": "Negril Jamaica beach",
+   "licence": "CC BY 2.0",
+   "subject": 3,
    "quality": 0
   }
  ],
  "MCO": [
   {
    "n": 0,
+   "title": "File:I-4 East - Orlando Downtown City Skyline (43720081585).jpg",
+   "term": "Orlando Florida downtown skyline",
+   "licence": "CC BY-SA 2.0",
+   "subject": 11,
+   "quality": 0
+  },
+  {
+   "n": 1,
    "title": "File:Lake Eola and Orlando Skyline seen in 2024.jpg",
-   "term": "Lake Eola Park Orlando fountain",
+   "term": "Lake Eola Orlando",
    "licence": "CC BY 4.0",
    "subject": 6,
+   "quality": 0
+  },
+  {
+   "n": 2,
+   "title": "File:Lake Eola -- Downtown Orlando (19932084106).png",
+   "term": "Orlando Florida downtown skyline",
+   "licence": "CC BY 2.0",
+   "subject": 4,
+   "quality": 0
+  },
+  {
+   "n": 3,
+   "title": "File:Orlando, Florida - Downtown from I-4 East.jpg",
+   "term": "Orlando Florida downtown skyline",
+   "licence": "CC BY-SA 3.0",
+   "subject": 4,
+   "quality": 0
+  },
+  {
+   "n": 4,
+   "title": "File:Miami sunset from Cruise ship - panoramio.jpg",
+   "term": "Orlando skyline sunset",
+   "licence": "CC BY-SA 3.0",
+   "subject": 3,
    "quality": 0
   }
  ],
@@ -790,67 +878,67 @@
  "SEA": [
   {
    "n": 0,
-   "title": "File:Seattle (WA, USA), Skyline -- 2022 -- 1803.jpg",
-   "term": "Pike Place Market",
+   "title": "File:Kerry Park & Seattle skyline 01.jpg",
+   "term": "Kerry Park Seattle",
    "licence": "CC BY-SA 4.0",
    "subject": 6,
-   "quality": 1
+   "quality": 0
   },
   {
    "n": 1,
-   "title": "File:Space Needle panorama large.jpg",
-   "term": "Space Needle Seattle",
+   "title": "File:Seattle skyline from Kerry Park, March 2019.jpg",
+   "term": "Kerry Park Seattle",
    "licence": "CC BY-SA 4.0",
-   "subject": 5,
-   "quality": 1
+   "subject": 6,
+   "quality": 0
   },
   {
    "n": 2,
-   "title": "File:Seattle (WA, USA), Waterfront, Geländer -- 2022 -- 1782.jpg",
-   "term": "Seattle waterfront",
+   "title": "File:Seattle Skyline Kerry Park.jpg",
+   "term": "Seattle skyline Rainier",
    "licence": "CC BY-SA 4.0",
-   "subject": 4,
-   "quality": 1
+   "subject": 6,
+   "quality": 0
   },
   {
    "n": 3,
-   "title": "File:Seattle (WA, USA), Waterfront, Geländer -- 2022 -- 1776.jpg",
-   "term": "Seattle waterfront",
-   "licence": "CC BY-SA 4.0",
-   "subject": 4,
-   "quality": 1
+   "title": "File:Moonrise Mt Rainier skyline Seattle dusk.jpg",
+   "term": "Seattle skyline Rainier",
+   "licence": "CC BY 4.0",
+   "subject": 6,
+   "quality": 0
   },
   {
    "n": 4,
-   "title": "File:Seattle (WA, USA), Bell Harbor Marina -- 2022 -- 1795.jpg",
-   "term": "Seattle waterfront",
-   "licence": "CC BY-SA 4.0",
-   "subject": 4,
-   "quality": 1
+   "title": "File:Seattle skyline and Mount Rainier from Kerry Park, 1992 (51719842636).jpg",
+   "term": "Seattle skyline Rainier",
+   "licence": "CC BY 2.0",
+   "subject": 6,
+   "quality": 0
   },
   {
    "n": 5,
-   "title": "File:Seattle (WA, USA), Waterfront, Blick auf Space Needle -- 2022 -- 1694.jpg",
-   "term": "Seattle waterfront",
-   "licence": "CC BY-SA 4.0",
-   "subject": 4,
-   "quality": 1
+   "title": "File:Seattle Kerry Park Skyline.jpg",
+   "term": "Kerry Park Seattle",
+   "licence": "CC0",
+   "subject": 6,
+   "quality": 0
   },
   {
    "n": 6,
-   "title": "File:Seattle (WA, USA), Pier 66, Norwegian Bliss -- 2022 -- 1794.jpg",
-   "term": "Seattle waterfront",
+   "title": "File:MV Suquamish, Mount Rainier, and the Seattle skyline.jpg",
+   "term": "Seattle skyline Rainier",
    "licence": "CC BY-SA 4.0",
-   "subject": 2,
-   "quality": 1
+   "subject": 6,
+   "quality": 0
   },
   {
    "n": 7,
-   "title": "File:Seattle (WA, USA), Pier 66, Norwegian Bliss -- 2022 -- 1802.jpg",
-   "term": "Seattle waterfront",
-   "licence": "CC BY-SA 4.0",
-   "subject": 2,
-   "quality": 1
+   "title": "File:Seattle skyline (472778842).jpg",
+   "term": "Seattle skyline Rainier",
+   "licence": "CC BY 2.0",
+   "subject": 6,
+   "quality": 0
   }
  ],
  "TPA": [
@@ -973,6 +1061,16 @@
    "title": "File:San Juan Islands, Washington State - panoramio.jpg",
    "term": "San Juan coastline",
    "licence": "CC BY 3.0",
+   "subject": 3,
+   "quality": 0
+  }
+ ],
+ "DCA": [
+  {
+   "n": 0,
+   "title": "File:View of the Washington Monument with Flags.jpg",
+   "term": "Washington Monument DC",
+   "licence": "CC BY-SA 4.0",
    "subject": 3,
    "quality": 0
   }
