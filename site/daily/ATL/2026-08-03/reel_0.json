@@ -1,0 +1,28 @@
+{
+ "origin": "ATL",
+ "date": "2026-08-03",
+ "slot": 0,
+ "shape": "spotlight",
+ "label": "ONE BIG DEAL",
+ "caption_lead": "The single biggest drop out of ATL today.",
+ "file": "reel_0.mp4",
+ "seconds": 10.4,
+ "size_mb": 0.63,
+ "fps": 30,
+ "audio": "gate-a12@1.9.mp3",
+ "audio_start": 1.9,
+ "plan_shape": "week",
+ "plan_angle": "A full week away, round trip, verified this morning.",
+ "featured": [
+  {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 78,
+   "disc": 51,
+   "baseline": 158,
+   "nights": 2,
+   "d1": "2026-08-21",
+   "d2": "2026-08-23"
+  }
+ ]
+}
