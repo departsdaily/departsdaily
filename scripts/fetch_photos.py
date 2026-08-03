@@ -24,6 +24,7 @@ Usage:
 """
 import io
 import json
+import re
 import os
 import sys
 import time
@@ -111,10 +112,121 @@ def credit_line(meta, licence):
                                   licence, "VIA WIKIMEDIA COMMONS") if p)
 
 
+# Titles that are not photographs of a place, however well they match the name.
+# The first run pulled a Claude Monet painting for Amsterdam and a botanical
+# plate for Phoenix.
+NOT_A_PHOTO = ("painting", "portrait", "museum", "engraving", "lithograph",
+               "drawing", "sketch", "etching", "map of", "poster", "logo",
+               "flag of", "coat of arms", "seal of", "banknote", "stamp",
+               "diagram", "chart", "illustration", "manuscript", "fresco",
+               "sculpture", "statue of", "specimen", "herbarium", "insect",
+               "moth", "beetle", "butterfly", "plantae", "flower")
+
+
+def coords(city):
+    """Where the city actually IS, from Wikipedia.
+
+    The first run searched Commons by text and got: a street in Poland for
+    Aruba, a moth for Rome, a palm species for Phoenix, a plane leaving Boston
+    for Punta Cana, Cambridge for London, Manhattan for Nassau. A full-text
+    match on a city NAME is not a match on the city — 8 of 32 were wrong.
+    Coordinates are unambiguous."""
+    try:
+        url = ("https://en.wikipedia.org/w/api.php?" + urllib.parse.urlencode({
+            "action": "query", "titles": city, "prop": "coordinates",
+            "redirects": "1", "format": "json", "formatversion": "2"}))
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            d = json.load(r)
+        for page in d.get("query", {}).get("pages", []):
+            c = (page.get("coordinates") or [None])[0]
+            if c:
+                return c["lat"], c["lon"]
+    except Exception as e:
+        print("    coords lookup failed: %s: %s" % (type(e).__name__, e))
+    return None
+
+
+def geosearch(lat, lon, radius=12000, limit=80):
+    """Every file Commons holds that was TAKEN within `radius` of the city
+    centre. Geography instead of spelling."""
+    try:
+        d = api({"action": "query", "list": "geosearch",
+                 "gscoord": "%s|%s" % (lat, lon), "gsradius": str(radius),
+                 "gsnamespace": "6", "gslimit": str(limit)})
+    except Exception as e:
+        print("    geosearch failed: %s: %s" % (type(e).__name__, e))
+        return []
+    return [g["title"] for g in d.get("query", {}).get("geosearch", [])]
+
+
+def imageinfo(titles):
+    """imageinfo for up to 50 titles per call, the API's batch limit."""
+    out = []
+    for i in range(0, len(titles), 50):
+        try:
+            d = api({"action": "query", "titles": "|".join(titles[i:i + 50]),
+                     "prop": "imageinfo",
+                     "iiprop": "url|extmetadata|size|mime", "iiurlwidth": "1600"})
+        except Exception as e:
+            print("    imageinfo failed: %s: %s" % (type(e).__name__, e))
+            continue
+        out += d.get("query", {}).get("pages", []) or []
+        time.sleep(0.3)
+    return out
+
+
+def usable(page):
+    """One candidate, or None. Rejects on licence, size, orientation, or not
+    being a photograph of a place at all."""
+    info = (page.get("imageinfo") or [{}])[0]
+    if not info or info.get("mime") not in ("image/jpeg", "image/png"):
+        return None
+    title = page.get("title", "")
+    low = title.lower()
+    if any(w in low for w in NOT_A_PHOTO):
+        return None
+    # Two patterns the keyword list cannot catch, both seen in the first run:
+    #   "Low Tide at Pourville, by Claude Monet.jpg"  — artwork credited in the
+    #   title, and "Bactra stultorum 01.jpg" / "Phoenix canariensis 01.jpg" —
+    #   a species binomial, which is what a city named Phoenix collides with.
+    if ", by " in low:
+        return None
+    stem = re.sub(r"\.[a-z]+$", "", title[5:] if title.startswith("File:") else title)
+    if re.match(r"^[A-Z][a-z]{2,} [a-z]{3,}(\s+\d+)?$", stem.strip()):
+        return None
+    w, h = info.get("width", 0), info.get("height", 0)
+    # Landscape and big enough to crop to a 1080-wide portrait frame without
+    # upscaling into mush.
+    if w < 1400 or h < 800 or w < h:
+        return None
+    meta = info.get("extmetadata", {}) or {}
+    ok, lic, needs = licence_ok(meta)
+    if not ok:
+        return None
+    cats = clean(meta.get("Categories", {}).get("value", "")).lower()
+    return {"title": page.get("title", ""),
+            "url": info.get("thumburl") or info.get("url"),
+            "descurl": info.get("descriptionurl", ""), "width": w, "height": h,
+            "licence": lic, "needs_credit": needs,
+            "credit": credit_line(meta, lic),
+            "quality": 1 if ("quality image" in cats or "featured picture" in cats) else 0}
+
+
 def search(city, country=""):
-    """Try the quality-gated searches first, then fall back to an ungated one.
-    A Quality Image of Punta Cana may simply not exist; a decent ordinary photo
-    of it does, and that beats no photo."""
+    """Geography first, text only as a last resort.
+
+    A photo taken within ~12km of the city centre is a photo OF the city. A file
+    whose title merely contains the city's name is not, which is how Amsterdam
+    ended up with a Monet and Rome with a moth."""
+    ll = coords(city)
+    if ll:
+        titles = geosearch(*ll)
+        print("    %s -> %.3f,%.3f · %d nearby files" % (city, ll[0], ll[1], len(titles)))
+        hits = [u for u in (usable(p) for p in imageinfo(titles)) if u]
+        if hits:
+            return hits
+        print("    nothing usable nearby, falling back to text search")
     where = ("%s %s" % (city, country)).strip()
     queries = ["%s %s %s" % (where, s, QUALITY) for s in SUBJECTS[:3]]
     queries += ["%s %s" % (where, s) for s in SUBJECTS]
@@ -131,29 +243,9 @@ def search(city, country=""):
             time.sleep(2)
             continue
         for page in (d.get("query", {}) or {}).get("pages", []) or []:
-            info = (page.get("imageinfo") or [{}])[0]
-            if not info:
-                continue
-            if info.get("mime") not in ("image/jpeg", "image/png"):
-                continue
-            w, h = info.get("width", 0), info.get("height", 0)
-            # Landscape and big enough to crop to a 1080-wide portrait frame
-            # without upscaling into mush.
-            if w < 1400 or h < 800 or w < h:
-                continue
-            meta = info.get("extmetadata", {}) or {}
-            ok, lic, needs = licence_ok(meta)
-            if not ok:
-                continue
-            seen.append({
-                "title": page.get("title", ""),
-                "url": info.get("thumburl") or info.get("url"),
-                "descurl": info.get("descriptionurl", ""),
-                "width": w, "height": h,
-                "licence": lic, "needs_credit": needs,
-                "credit": credit_line(meta, lic),
-                "query": q,
-            })
+            u = usable(page)
+            if u:
+                seen.append(dict(u, query=q))
         if seen:
             return seen
         time.sleep(0.4)
@@ -225,7 +317,7 @@ def main():
         if not hits:
             print("    no usable freely-licensed photo found — skipping")
             continue
-        pick = max(hits, key=lambda h: h["width"] * h["height"])
+        pick = max(hits, key=lambda h: (h.get("quality", 0), h["width"] * h["height"]))
         dest = os.path.join(PHOTO_DIR, "%s.jpg" % code)
         try:
             size = download(pick["url"], dest)
