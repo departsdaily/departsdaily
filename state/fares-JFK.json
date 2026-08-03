@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-03T06:15:26-04:00",
+ "generated": "2026-08-03T08:15:44-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -308,7 +308,7 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 358,
+   "price": 368,
    "d1": "2026-10-18",
    "d2": "2026-10-22",
    "dep": "9:26AM",
@@ -318,7 +318,7 @@
    "rdep": "12:40PM",
    "arr": "5:28PM",
    "rarr": "8:10PM",
-   "pct": 31
+   "pct": 29
   },
   "LON": {
    "to": "LON",

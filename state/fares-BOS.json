@@ -1,25 +1,10 @@
 {
  "origin": "BOS",
- "generated": "2026-08-03T06:16:21-04:00",
+ "generated": "2026-08-03T08:16:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 283,
-   "d1": "2026-09-17",
-   "d2": "2026-09-20",
-   "dep": "11:17AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:58AM",
-   "arr": "5:26PM",
-   "rarr": "4:40PM",
-   "pct": 48
-  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
@@ -233,7 +218,7 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 263,
+   "price": 247,
    "d1": "2026-09-04",
    "d2": "2026-09-08",
    "dep": "12:45PM",
@@ -243,7 +228,7 @@
    "rdep": "10:35PM",
    "arr": "8:59PM",
    "rarr": "6:06AM+1",
-   "pct": 66
+   "pct": 68
   },
   "TPA": {
    "to": "TPA",
