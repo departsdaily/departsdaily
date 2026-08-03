@@ -1,0 +1,28 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-03",
+ "slot": 0,
+ "shape": "spotlight",
+ "label": "ONE BIG DEAL",
+ "caption_lead": "The single biggest drop out of CLT today.",
+ "file": "reel_0.mp4",
+ "seconds": 10.4,
+ "size_mb": 0.63,
+ "fps": 30,
+ "audio": "runway-lights@2.0.mp3",
+ "audio_start": 2.0,
+ "plan_shape": "week",
+ "plan_angle": "A full week away, round trip, verified this morning.",
+ "featured": [
+  {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 119,
+   "disc": 50,
+   "baseline": 237,
+   "nights": 6,
+   "d1": "2026-09-16",
+   "d2": "2026-09-22"
+  }
+ ]
+}
