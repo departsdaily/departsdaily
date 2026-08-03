@@ -1,28 +1,20 @@
 {
- "date": "2026-08-01",
+ "date": "2026-08-03",
  "origin": "CLT",
  "routes_considered": 24,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 6,
-  "not a deal": 9,
+  "no fares": 4,
+  "not a deal": 10,
   "qualified": 8,
-  "no fares in window": 1
+  "no fares in window": 2
  },
  "routes": {
-  "PHL": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "HOU": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
   "TPA": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
-  "BNA": {
+  "NAS": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -42,8 +34,8 @@
    "d1": "2026-08-28",
    "d2": "2026-08-31",
    "nights": 3,
-   "on_shape": true,
-   "rung": "shape"
+   "on_shape": false,
+   "rung": "wide"
   },
   "MIA": {
    "outcome": "qualified",
@@ -54,40 +46,40 @@
    "d2": "2026-08-20",
    "nights": 7,
    "on_shape": false,
-   "rung": "wide"
+   "rung": "nights"
   },
   "FLL": {
    "outcome": "not a deal",
-   "price": 162,
+   "price": 154,
    "typical": 152,
-   "disc_pct": -7,
-   "d1": "2026-08-26",
+   "disc_pct": -1,
+   "d1": "2026-08-28",
    "d2": "2026-08-30",
-   "nights": 4,
+   "nights": 2,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
   },
   "DFW": {
    "outcome": "qualified",
-   "price": 204,
-   "typical": 257,
-   "disc_pct": 21,
-   "d1": "2026-08-20",
-   "d2": "2026-08-22",
-   "nights": 2,
+   "price": 119,
+   "typical": 237,
+   "disc_pct": 50,
+   "d1": "2026-09-16",
+   "d2": "2026-09-22",
+   "nights": 6,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
   },
   "MCO": {
    "outcome": "qualified",
-   "price": 138,
+   "price": 135,
    "typical": 176,
-   "disc_pct": 22,
-   "d1": "2026-08-20",
+   "disc_pct": 23,
+   "d1": "2026-08-19",
    "d2": "2026-08-24",
-   "nights": 4,
-   "on_shape": true,
-   "rung": "shape"
+   "nights": 5,
+   "on_shape": false,
+   "rung": "wide"
   },
   "DEN": {
    "outcome": "qualified",
@@ -98,84 +90,110 @@
    "d2": "2026-08-22",
    "nights": 3,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
+  },
+  "PHL": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out for a 2-14 night trip"
+  },
+  "HOU": {
+   "outcome": "not a deal",
+   "price": 272,
+   "typical": 196,
+   "disc_pct": -39,
+   "d1": "2026-08-07",
+   "d2": "2026-08-10",
+   "nights": 3,
+   "on_shape": false,
+   "rung": "wide"
   },
   "LAS": {
    "outcome": "qualified",
-   "price": 265,
-   "typical": 306,
-   "disc_pct": 13,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "nights": 4,
+   "price": 293,
+   "typical": 344,
+   "disc_pct": 15,
+   "d1": "2026-08-21",
+   "d2": "2026-08-29",
+   "nights": 8,
    "on_shape": true,
    "rung": "shape"
   },
   "PHX": {
    "outcome": "not a deal",
-   "price": 328,
-   "typical": 282,
-   "disc_pct": -16,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "nights": 4,
+   "price": 306,
+   "typical": 318,
+   "disc_pct": 4,
+   "d1": "2026-08-21",
+   "d2": "2026-08-28",
+   "nights": 7,
    "on_shape": true,
    "rung": "shape"
+  },
+  "BNA": {
+   "outcome": "not a deal",
+   "price": 339,
+   "typical": 198,
+   "disc_pct": -71,
+   "d1": "2026-08-10",
+   "d2": "2026-08-17",
+   "nights": 7,
+   "on_shape": false,
+   "rung": "nights"
   },
   "MSY": {
    "outcome": "not a deal",
-   "price": 291,
-   "typical": 188,
-   "disc_pct": -55,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
+   "price": 235,
+   "typical": 198,
+   "disc_pct": -19,
+   "d1": "2026-08-21",
+   "d2": "2026-08-24",
    "nights": 3,
-   "on_shape": true,
-   "rung": "shape"
+   "on_shape": false,
+   "rung": "wide"
   },
   "SFO": {
    "outcome": "qualified",
-   "price": 313,
-   "typical": 413,
-   "disc_pct": 24,
-   "d1": "2026-08-25",
-   "d2": "2026-08-27",
-   "nights": 2,
-   "on_shape": false,
-   "rung": "nights"
+   "price": 272,
+   "typical": 375,
+   "disc_pct": 27,
+   "d1": "2026-10-11",
+   "d2": "2026-10-18",
+   "nights": 7,
+   "on_shape": true,
+   "rung": "shape"
   },
   "SEA": {
    "outcome": "not a deal",
-   "price": 397,
-   "typical": 377,
-   "disc_pct": -5,
-   "d1": "2026-08-20",
-   "d2": "2026-08-23",
+   "price": 386,
+   "typical": 343,
+   "disc_pct": -13,
+   "d1": "2026-10-27",
+   "d2": "2026-10-30",
    "nights": 3,
-   "on_shape": true,
-   "rung": "shape"
+   "on_shape": false,
+   "rung": "wide"
   },
   "AUS": {
-   "outcome": "qualified",
-   "price": 201,
+   "outcome": "not a deal",
+   "price": 289,
    "typical": 296,
-   "disc_pct": 32,
-   "d1": "2026-08-07",
-   "d2": "2026-08-09",
-   "nights": 2,
-   "on_shape": true,
-   "rung": "shape"
+   "disc_pct": 2,
+   "d1": "2026-08-13",
+   "d2": "2026-08-17",
+   "nights": 4,
+   "on_shape": false,
+   "rung": "wide"
   },
   "CUN": {
    "outcome": "not a deal",
-   "price": 421,
-   "typical": 382,
-   "disc_pct": -10,
-   "d1": "2026-09-15",
-   "d2": "2026-09-19",
-   "nights": 4,
-   "on_shape": false,
-   "rung": "nights"
+   "price": 387,
+   "typical": 430,
+   "disc_pct": 10,
+   "d1": "2026-08-08",
+   "d2": "2026-08-15",
+   "nights": 7,
+   "on_shape": true,
+   "rung": "shape"
   },
   "PUJ": {
    "outcome": "qualified",
@@ -186,7 +204,7 @@
    "d2": "2026-08-30",
    "nights": 4,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
   },
   "MBJ": {
    "outcome": "not a deal",
@@ -196,34 +214,23 @@
    "d1": "2026-08-13",
    "d2": "2026-08-16",
    "nights": 3,
-   "on_shape": true,
-   "rung": "shape"
-  },
-  "NAS": {
-   "outcome": "not a deal",
-   "price": 570,
-   "typical": 422,
-   "disc_pct": -35,
-   "d1": "2026-08-20",
-   "d2": "2026-08-23",
-   "nights": 3,
-   "on_shape": true,
-   "rung": "shape"
+   "on_shape": false,
+   "rung": "wide"
   },
   "SJU": {
-   "outcome": "not a deal",
-   "price": 310,
-   "typical": 318,
-   "disc_pct": 3,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
+   "outcome": "qualified",
+   "price": 212,
+   "typical": 292,
+   "disc_pct": 27,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
    "nights": 3,
-   "on_shape": true,
-   "rung": "shape"
+   "on_shape": false,
+   "rung": "wide"
   },
   "ROM": {
    "outcome": "no fares in window",
-   "why": "2 offers, none leaving 3-150 days out for a 2-14 night trip"
+   "why": "3 offers, none leaving 3-150 days out for a 2-14 night trip"
   }
  }
 }
