@@ -19,7 +19,8 @@
   "Adding a city: add its code with 3-6 entries, most iconic first. Prefer views",
   "with scale (skylines, coastlines, plazas) over interiors and close-ups, and",
   "name the landmark the way Commons would title it.",
-  "A NOTE ON WHAT SCORING CANNOT DO. Denver's first pick was a satellite terrain render whose FILENAME was 'Denver Skyline (4801).jpg'. No amount of title scoring catches that — the title is a perfect description of what we wanted and the image is not it. Where a term keeps returning something wrong, retarget the term at a view that cannot be confused (Red Rocks, the Lincoln Memorial, Santa Monica Pier) rather than trying to describe the badness."
+  "A NOTE ON WHAT SCORING CANNOT DO. Denver's first pick was a satellite terrain render whose FILENAME was 'Denver Skyline (4801).jpg'. No amount of title scoring catches that — the title is a perfect description of what we wanted and the image is not it. Where a term keeps returning something wrong, retarget the term at a view that cannot be confused (Red Rocks, the Lincoln Memorial, Santa Monica Pier) rather than trying to describe the badness.",
+  "Watch for terms that name a place inside another place: 'Venice Beach California' returned St Mark's Square and the Rialto Bridge, because Commons has far more of Venice, Italy. Prefer a term that is unique on its own."
  ],
  "cities": {
   "AMS": [
@@ -59,10 +60,10 @@
    "Isla Mujeres beach"
   ],
   "DCA": [
-   "Lincoln Memorial Washington",
-   "United States Capitol dome",
-   "Washington Monument cherry blossoms",
-   "Jefferson Memorial tidal basin"
+   "Lincoln Memorial",
+   "United States Capitol building",
+   "Washington Monument",
+   "Cherry blossoms Tidal Basin Washington"
   ],
   "DEN": [
    "Red Rocks Amphitheatre Colorado",
@@ -109,8 +110,8 @@
   "LAX": [
    "Santa Monica Pier sunset",
    "Griffith Observatory Los Angeles",
-   "Venice Beach California",
-   "Los Angeles downtown skyline sunset"
+   "Los Angeles downtown skyline sunset",
+   "Hollywood Sign"
   ],
   "LON": [
    "London skyline Thames",
@@ -119,16 +120,16 @@
    "London Eye"
   ],
   "MBJ": [
-   "Montego Bay beach",
-   "Doctor's Cave Beach Jamaica",
-   "Montego Bay coastline",
-   "Jamaica turquoise sea"
+   "Doctor's Cave Beach Montego Bay",
+   "Montego Bay Jamaica coast",
+   "Jamaica beach turquoise sea",
+   "Rose Hall Jamaica"
   ],
   "MCO": [
-   "Lake Eola Park Orlando fountain",
-   "Orlando downtown skyline sunset",
-   "Winter Park Florida",
-   "Orlando cityscape night"
+   "Orlando Florida skyline",
+   "Lake Eola Orlando swan boats",
+   "Winter Park Florida canal",
+   "Orlando downtown night"
   ],
   "MIA": [
    "Miami skyline",
@@ -191,10 +192,10 @@
    "St Peter's Basilica Rome"
   ],
   "SEA": [
-   "Seattle skyline Mount Rainier",
    "Space Needle Seattle",
-   "Pike Place Market",
-   "Seattle waterfront"
+   "Seattle skyline Mount Rainier",
+   "Pike Place Market Seattle",
+   "Kerry Park Seattle view"
   ],
   "SFO": [
    "Golden Gate Bridge",

@@ -1,20 +1,34 @@
 {
-  "_doc": [
-    "Exact Wikimedia Commons file titles, chosen by looking at the picture.",
-    "",
-    "A pin always beats the automatic search. Scoring a title gets you most of",
-    "the way and then fails in ways no rule can catch: Denver's automatic pick",
-    "was a satellite terrain render titled 'Denver Skyline (4801).jpg', and",
-    "Amsterdam's was parked cars under a bare tree. Both scored well. Both were",
-    "wrong. The only reliable fix is a human looking.",
-    "",
-    "A pin does NOT override the licence gate. Liking a photo is not permission",
-    "to publish it, so a pinned file whose licence fails still gets rejected and",
-    "the city falls back to the automatic search.",
-    "",
-    "To change one: run scripts/photo_candidates.py <CODE>, look at the sheet in",
-    "out/photo-candidates/<CODE>.png, and copy the title of the tile you want",
-    "from the manifest beside it."
-  ],
-  "picks": {}
+ "_doc": [
+  "Exact Wikimedia Commons file titles, chosen by looking at the picture.",
+  "",
+  "A pin always beats the automatic search. Scoring a title gets you most of",
+  "the way and then fails in ways no rule can catch: Denver's automatic pick",
+  "was a satellite terrain render titled 'Denver Skyline (4801).jpg', and",
+  "Amsterdam's was parked cars under a bare tree. Both scored well. Both were",
+  "wrong. The only reliable fix is a human looking.",
+  "",
+  "A pin does NOT override the licence gate. Liking a photo is not permission",
+  "to publish it, so a pinned file whose licence fails still gets rejected and",
+  "the city falls back to the automatic search.",
+  "",
+  "To change one: run scripts/photo_candidates.py <CODE>, look at the sheet in",
+  "out/photo-candidates/<CODE>.png, and copy the title of the tile you want",
+  "from the manifest beside it."
+ ],
+ "picks": {
+  "AMS": "File:Amsterdam Skyline View.jpg",
+  "BNA": "File:Nashville Skyline from Ft Negly 2024.jpg",
+  "BOS": "File:Boston skyline from Longfellow Bridge September 2017 panorama 2.jpg",
+  "DEN": "File:Larimer Square, Denver 1.jpg",
+  "DFW": "File:Dallas Skyline with Arts District at night.jpg",
+  "GCM": "File:Seven Mile Beach Facing South.jpg",
+  "LAX": "File:Downtown L.A. as seen from Highland Park.jpg",
+  "MSY": "File:Jackson Square.jpg",
+  "NAS": "File:Nassau Cruise port as seen from the Western Esplande Beach, Bahamas (March 14, 2024) 01.jpg",
+  "ORD": "File:Chicago Skyline Sunrise March 15 2026 - 01.jpg",
+  "PHL": "File:Philadelphia skyline panorama.jpg",
+  "ROM": "File:Rome Skyline (8012016319).jpg",
+  "TPA": "File:Skyline of Tampa, Florida from Bayshore Blvd.jpg"
+ }
 }
