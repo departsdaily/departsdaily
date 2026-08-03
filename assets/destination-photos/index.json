@@ -1,124 +1,124 @@
 {
  "AMS": {
   "city": "Amsterdam",
-  "credit": "PHOTO: Bybbisch94, Christian Gebhardt \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Txllxt TxllxT \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AMS.jpg",
-  "how": "geo",
+  "how": "text",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:20220525.Trams_in_Amsterdam.-013.jpg",
-  "title": "File:20220525.Trams in Amsterdam.-013.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_-_Crabschuystraat_-_Skyline_Panorama_of_Amsterdam_from_a_skyscraper_in_Amsterdam-Noord,_which_focuses_on_the_IJ_waterfront_and_follows_it_from_the_far_east_to_the_far_west_-_All_the_high-rises_of_Amsterdam_are_shown.jpg",
+  "title": "File:Amsterdam - Crabschuystraat - Skyline Panorama of Amsterdam from a skyscraper in Amsterdam-Noord, which focuses on the IJ waterfront and follows it from the far east to the far west - All the high-rises of Amsterdam are shown.jpg"
  },
  "AUA": {
   "city": "Aruba",
-  "credit": "PHOTO: Lesly B. Juarez jblesly \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Natekammerer \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AUA.jpg",
   "how": "geo",
-  "licence": "CC0",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Aruba_(Unsplash).jpg",
-  "title": "File:Aruba (Unsplash).jpg"
+  "licence": "CC BY-SA 4.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Panoramic_view_from_Hooiberg.jpg",
+  "title": "File:Panoramic view from Hooiberg.jpg"
  },
  "AUS": {
   "city": "Austin",
-  "credit": "PHOTO: Quintin Soloviev \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Scott218 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AUS.jpg",
   "how": "text",
-  "licence": "CC BY 4.0",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Austin,_TX_skyline_2026.jpg",
-  "title": "File:Austin, TX skyline 2026.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Austin_Skyline_from_Montopolis_Bridge.jpg",
+  "title": "File:Austin Skyline from Montopolis Bridge.jpg"
  },
  "BNA": {
   "city": "Nashville",
-  "credit": "PHOTO: dconvertini \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Michael Rivera \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "BNA.jpg",
   "how": "geo",
-  "licence": "CC BY-SA 2.0",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Broadway_(Nashville)_lights.jpg",
-  "title": "File:Broadway (Nashville) lights.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Rental_bicycles_and_rack,_downtown_Nashville.JPG",
+  "title": "File:Rental bicycles and rack, downtown Nashville.JPG"
  },
  "BOS": {
   "city": "Boston",
-  "credit": "PHOTO: Joshua Qualls/Governor\u2019s Press Office \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Paulo JC Nogueira \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "BOS.jpg",
   "how": "geo",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Governor-baker-boston-mayor-janey-highlight-new-interactive-new-england-holocaust-memorial-experiences-with-local-faith-leaders-survivors_51299297788_o.jpg",
-  "title": "File:Governor-baker-boston-mayor-janey-highlight-new-interactive-new-england-holocaust-memorial-experiences-with-local-faith-leaders-survivors 51299297788 o.jpg"
+  "licence": "CC BY-SA 3.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Downtown,_Boston,_MA,_USA_-_panoramio_(42).jpg",
+  "title": "File:Downtown, Boston, MA, USA - panoramio (42).jpg"
  },
  "CUN": {
   "city": "Canc\u00fan",
-  "credit": "PHOTO: Joe Cooke joecooke \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Luis Aviles \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "CUN.jpg",
   "how": "geo",
-  "licence": "CC0",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Ocean_washing_ashore_(Unsplash).jpg",
-  "title": "File:Ocean washing ashore (Unsplash).jpg"
+  "licence": "CC BY-SA 3.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Sunset_In_The_Park_(70189573).jpeg",
+  "title": "File:Sunset In The Park (70189573).jpeg"
  },
  "DCA": {
   "city": "Washington DC",
-  "credit": "PHOTO: Elvert Barnes \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Rimstone \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DCA.jpg",
-  "how": "geo",
-  "licence": "CC BY-SA 2.0",
-  "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:02.RidgeStreet.WDC.February1983_(16799559309).jpg",
-  "title": "File:02.RidgeStreet.WDC.February1983 (16799559309).jpg"
+  "how": "text",
+  "licence": "CC0",
+  "needs_credit": false,
+  "source": "https://commons.wikimedia.org/wiki/File:Skyline_from_Washington_National_Cathedral.jpg",
+  "title": "File:Skyline from Washington National Cathedral.jpg"
  },
  "DEN": {
   "city": "Denver",
-  "credit": "PHOTO: Ed Ogle \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Alex Gray \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DEN.jpg",
   "how": "geo",
-  "licence": "CC BY 2.0",
+  "licence": "CC BY 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Democracy_in_Action_(32299457352).jpg",
-  "title": "File:Democracy in Action (32299457352).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Denver_Skyline_(147779451).jpeg",
+  "title": "File:Denver Skyline (147779451).jpeg"
  },
  "DFW": {
   "city": "Dallas",
-  "credit": "PHOTO: Soumyaroop \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Adam Jones from Kelowna, BC, Canada \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DFW.jpg",
   "how": "geo",
-  "licence": "CC BY-SA 4.0",
+  "licence": "CC BY-SA 2.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Texas_-_Dealey_Plaza_-_20190519194739.jpg",
-  "title": "File:Texas - Dealey Plaza - 20190519194739.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:View_of_Grassy_Knoll_and_Fence_-_Dealey_Plaza_-_Dallas_-_Texas_-_USA_(20071677606).jpg",
+  "title": "File:View of Grassy Knoll and Fence - Dealey Plaza - Dallas - Texas - USA (20071677606).jpg"
  },
  "DTW": {
   "city": "Detroit",
-  "credit": "PHOTO: File made available by varnent through\u2026 \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Crisco 1492 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DTW.jpg",
-  "how": "geo",
-  "licence": "CC BY-SA 3.0",
+  "how": "text",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Motor_City_Pride_2013_-_panorama1.jpg",
-  "title": "File:Motor City Pride 2013 - panorama1.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Skyline_of_Detroit,_Michigan_from_S_2014-12-07.jpg",
+  "title": "File:Skyline of Detroit, Michigan from S 2014-12-07.jpg"
  },
  "FLL": {
   "city": "Ft. Lauderdale",
-  "credit": "PHOTO: Anton Jackson \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Ianar\u00e9 S\u00e9vi \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "FLL.jpg",
-  "how": "geo",
-  "licence": "CC BY-SA 2.0",
+  "how": "text",
+  "licence": "CC BY-SA 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Chairs_for_Generico_and_Steen.jpg",
-  "title": "File:Chairs for Generico and Steen.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:New_River_Ft_Lauderdale.jpg",
+  "title": "File:New River Ft Lauderdale.jpg"
  },
  "GCM": {
   "city": "Grand Cayman",
@@ -128,173 +128,173 @@
   "how": "geo",
   "licence": "CC BY 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Sand_Point_Rd,_Rum_Point,_Cayman_Islands_-_panoramio_(2).jpg",
-  "title": "File:Sand Point Rd, Rum Point, Cayman Islands - panoramio (2).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Ocean_view_from_Pedro_Castle_Road,_Savannah,_Cayman_Islands_-_panoramio.jpg",
+  "title": "File:Ocean view from Pedro Castle Road, Savannah, Cayman Islands - panoramio.jpg"
  },
  "HOU": {
   "city": "Houston",
-  "credit": "PHOTO: Eric Fischer \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: WhisperToMe \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "HOU.jpg",
   "how": "geo",
-  "licence": "CC BY-SA 2.0",
-  "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Locals_and_Tourists_-91_(GTWA_-209)_Houston_(4683875569).jpg",
-  "title": "File:Locals and Tourists -91 (GTWA -209) Houston (4683875569).jpg"
+  "licence": "CC0",
+  "needs_credit": false,
+  "source": "https://commons.wikimedia.org/wiki/File:Metrobusstopdowntownhtown.jpg",
+  "title": "File:Metrobusstopdowntownhtown.jpg"
  },
  "LAS": {
   "city": "Las Vegas",
-  "credit": "PHOTO: Diplomatic Security Service from Washin\u2026 \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Rmvisuals \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "LAS.jpg",
   "how": "geo",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:DSS_runs_Baker_to_Vegas_2022_(52018218161).jpg",
-  "title": "File:DSS runs Baker to Vegas 2022 (52018218161).jpg"
+  "licence": "CC BY-SA 4.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:DowntownLasVegas.jpg",
+  "title": "File:DowntownLasVegas.jpg"
  },
  "LAX": {
   "city": "Los Angeles",
-  "credit": "PHOTO: Missvain \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: The Erica Chang \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "LAX.jpg",
   "how": "geo",
-  "licence": "CC BY 4.0",
+  "licence": "CC BY 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Atmospheric_River_at_Grand_Central_Market_-_February_2024_-_Sarah_Stierch.jpg",
-  "title": "File:Atmospheric River at Grand Central Market - February 2024 - Sarah Stierch.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:4th_Street_and_Broadway,_Downtown_LA_USA_-_panoramio.jpg",
+  "title": "File:4th Street and Broadway, Downtown LA USA - panoramio.jpg"
  },
  "LON": {
   "city": "London",
-  "credit": "PHOTO: Alisdare Hickson from Woolwich, United\u2026 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Diliff \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "LON.jpg",
-  "how": "geo",
-  "licence": "CC BY-SA 4.0",
+  "how": "text",
+  "licence": "CC BY-SA 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Performance_at_Boiling_Point,_Trafalgar_Square._-_Flickr_-_alisdare1.jpg",
-  "title": "File:Performance at Boiling Point, Trafalgar Square. - Flickr - alisdare1.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:London_Skyline_from_Waterloo_Bridge,_London,_UK_-_Diliff.jpg",
+  "title": "File:London Skyline from Waterloo Bridge, London, UK - Diliff.jpg"
  },
  "MBJ": {
   "city": "Montego Bay",
-  "credit": "PHOTO: NOAA / NODD \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: rh43 \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MBJ.jpg",
   "how": "geo",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:2025_Hurricane_Melissa-20251106b_RGB-raw-183298_1106251724482_043_RGB1.jpg",
-  "title": "File:2025 Hurricane Melissa-20251106b RGB-raw-183298 1106251724482 043 RGB1.jpg"
+  "licence": "CC BY 3.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Sunset_Dr,_Montego_Bay,_Jamaica_-_panoramio.jpg",
+  "title": "File:Sunset Dr, Montego Bay, Jamaica - panoramio.jpg"
  },
  "MCO": {
   "city": "Orlando",
-  "credit": "PHOTO: JER3L1337 \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: formulanone from Huntsville, United States \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MCO.jpg",
   "how": "text",
-  "licence": "CC BY 4.0",
+  "licence": "CC BY-SA 2.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg",
-  "title": "File:Lake Eola and Orlando Skyline seen in 2024.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:I-4_East_-_Orlando_Downtown_City_Skyline_(43720081585).jpg",
+  "title": "File:I-4 East - Orlando Downtown City Skyline (43720081585).jpg"
  },
  "MIA": {
   "city": "Miami",
-  "credit": "PHOTO: Tamanoeconomico \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Phillip Pessar \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MIA.jpg",
   "how": "geo",
-  "licence": "CC BY-SA 4.0",
+  "licence": "CC BY 2.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Woolworth_(Miami,_Florida).jpg",
-  "title": "File:Woolworth (Miami, Florida).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Paul_S._Walker_Urbanscape_Downtown_Miami_-_Street_view_May_2024.jpg",
+  "title": "File:Paul S. Walker Urbanscape Downtown Miami - Street view May 2024.jpg"
  },
  "MSY": {
   "city": "New Orleans",
-  "credit": "PHOTO: Jourdan.barnes \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: pasa47 \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MSY.jpg",
   "how": "geo",
-  "licence": "CC BY-SA 4.0",
+  "licence": "CC BY 2.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Politics_of_Gender_%26_Sexuality1.jpg",
-  "title": "File:Politics of Gender & Sexuality1.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Neighborhood_Church_-_Bayou_Road_New_Orleans_March_2015.jpg",
+  "title": "File:Neighborhood Church - Bayou Road New Orleans March 2015.jpg"
  },
  "NAS": {
   "city": "Nassau",
-  "credit": "PHOTO: James Zwadlo jzwadlo \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Kiran891 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "NAS.jpg",
   "how": "text",
-  "licence": "CC0",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Jaw%27s_Beach,_Nassau,_The_Bahamas_(Unsplash).jpg",
-  "title": "File:Jaw's Beach, Nassau, The Bahamas (Unsplash).jpg"
+  "licence": "CC BY-SA 4.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Nassau_Cruise_port_as_seen_from_the_Western_Esplande_Beach,_Bahamas_(March_14,_2024)_01.jpg",
+  "title": "File:Nassau Cruise port as seen from the Western Esplande Beach, Bahamas (March 14, 2024) 01.jpg"
  },
  "NYC": {
   "city": "New York City",
-  "credit": "PHOTO: A# U# ah_uh \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Chris Cook \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "NYC.jpg",
   "how": "geo",
-  "licence": "CC0",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Woman_in_orange_sport_jacket_(Unsplash).jpg",
-  "title": "File:Woman in orange sport jacket (Unsplash).jpg"
+  "licence": "CC BY 3.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Colorful_Cityscape_(183492277).jpeg",
+  "title": "File:Colorful Cityscape (183492277).jpeg"
  },
  "ORD": {
   "city": "Chicago",
-  "credit": "PHOTO: Gaurav \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Joe+Jeanette Archie \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "ORD.jpg",
   "how": "geo",
-  "licence": "CC BY 4.0",
+  "licence": "CC BY 2.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Mango_Pineapple_Cheesecake_from_above.jpg",
-  "title": "File:Mango Pineapple Cheesecake from above.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:1952_street_view_in_downtown_Chicago_(3552179897).jpg",
+  "title": "File:1952 street view in downtown Chicago (3552179897).jpg"
  },
  "PAR": {
   "city": "Paris",
-  "credit": "PHOTO: Anthony DELANOIX anthonydelanoix \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Greta Sch\u00f6lderle M\u00f8ller schoelderle \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PAR.jpg",
   "how": "geo",
   "licence": "CC0",
   "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Breakfast_table_with_pancakes_(Unsplash).jpg",
-  "title": "File:Breakfast table with pancakes (Unsplash).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:A_desaturated_shot_of_the_Paris_skyline_on_an_overcast_day_from_Montmartre.jpg",
+  "title": "File:A desaturated shot of the Paris skyline on an overcast day from Montmartre.jpg"
  },
  "PHL": {
   "city": "Philadelphia",
-  "credit": "PHOTO: Daniel Case \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Molly Des Jardin \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PHL.jpg",
   "how": "geo",
-  "licence": "CC BY-SA 4.0",
+  "licence": "CC BY 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:View_up_Broad_Street_from_Philadelphia_City_Hall.jpg",
-  "title": "File:View up Broad Street from Philadelphia City Hall.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:One_City_Plaza_(211102381).jpeg",
+  "title": "File:One City Plaza (211102381).jpeg"
  },
  "PHX": {
   "city": "Phoenix",
-  "credit": "PHOTO: H. Zell \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Marco Almbauer \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PHX.jpg",
   "how": "text",
-  "licence": "CC BY-SA 3.0",
-  "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Haria_-_Phoenix_canariensis_01.jpg",
-  "title": "File:Haria - Phoenix canariensis 01.jpg"
+  "licence": "CC0",
+  "needs_credit": false,
+  "source": "https://commons.wikimedia.org/wiki/File:By%C5%8Dd%C5%8D-in,_Phoenix_Hall.jpg",
+  "title": "File:By\u014dd\u014d-in, Phoenix Hall.jpg"
  },
  "PUJ": {
   "city": "Punta Cana",
-  "credit": "PHOTO: Oleg Yunakov \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: DimiTalen \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PUJ.jpg",
-  "how": "geo",
-  "licence": "CC BY-SA 4.0",
-  "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Wooden_spoons_and_forks.jpg",
-  "title": "File:Wooden spoons and forks.jpg"
+  "how": "text",
+  "licence": "CC0",
+  "needs_credit": false,
+  "source": "https://commons.wikimedia.org/wiki/File:Natura_Park_beach,_view_towards_the_southeast,_Punta_Cana,_2004.jpg",
+  "title": "File:Natura Park beach, view towards the southeast, Punta Cana, 2004.jpg"
  },
  "ROM": {
   "city": "Rome",
@@ -315,40 +315,40 @@
   "how": "geo",
   "licence": "CC0",
   "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Pike_Place_Market_Farmers_Market_Express_August_6,_2013_(9450875817).jpg",
-  "title": "File:Pike Place Market Farmers Market Express August 6, 2013 (9450875817).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Pike_Place_Farmers_Market_Express_@_City_Hall_Plaza,_July_23,_2013_(9351188569).jpg",
+  "title": "File:Pike Place Farmers Market Express @ City Hall Plaza, July 23, 2013 (9351188569).jpg"
  },
  "SFO": {
   "city": "San Francisco",
-  "credit": "PHOTO: 9yz \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Dllu \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "SFO.jpg",
-  "how": "geo",
+  "how": "text",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:X_(Twitter)_Headquarters,_San_Francisco_-_Debadged.jpg",
-  "title": "File:X (Twitter) Headquarters, San Francisco - Debadged.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:San_Francisco_skyline_of_April_2017_seen_from_Treasure_Island.jpg",
+  "title": "File:San Francisco skyline of April 2017 seen from Treasure Island.jpg"
  },
  "SJU": {
   "city": "San Juan, PR",
-  "credit": "PHOTO: Forest Service Photography \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: JPP \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "SJU.jpg",
   "how": "geo",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:International_Institute_of_Tropical_Forestry_Employees_(20230410-FS-PJK-7000).jpg",
-  "title": "File:International Institute of Tropical Forestry Employees (20230410-FS-PJK-7000).jpg"
+  "licence": "CC BY-SA 4.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Side-view_of_el_Museo_de_Historia,_Antropolog%C3%ADa_y_Arte.jpg",
+  "title": "File:Side-view of el Museo de Historia, Antropolog\u00eda y Arte.jpg"
  },
  "TPA": {
   "city": "Tampa",
-  "credit": "PHOTO: Lewis Hine \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Kplans \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "TPA.jpg",
   "how": "geo",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Lewis_Hine,_Western_Union_messengers,_Tampa,_Florida,_1911.jpg",
-  "title": "File:Lewis Hine, Western Union messengers, Tampa, Florida, 1911.jpg"
+  "licence": "CC BY-SA 4.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:DowntownTampa_Fog.jpg",
+  "title": "File:DowntownTampa Fog.jpg"
  }
 }
