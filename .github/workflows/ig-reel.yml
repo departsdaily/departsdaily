@@ -164,6 +164,28 @@ jobs:
           ffmpeg -hide_banner -encoders 2>/dev/null | grep -q libx264 \
             || { echo "::error::ffmpeg has no libx264 encoder"; exit 1; }
 
+      # The reel quotes the SAME board the morning carousel posted. But on
+      # 2026-08-02 the morning post did not run at all, so deals.json still held
+      # Aug 1, and the reel refused (correctly — stale prices must never post).
+      # The result was that one missed carousel silently took the reel down with
+      # it. Refresh the board here if today's is missing, so the reel stands on
+      # its own. Same fetcher, same 12% deal bar, same verified fares.
+      - name: Ensure today's board exists
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+          MAX_FARE_AGE_MIN: "180"
+        run: |
+          if [ "$ORIGIN" = "CLT" ]; then DEALS=deals.json; else DEALS="deals-$ORIGIN.json"; fi
+          TODAY=$(TZ=America/New_York date +%F)
+          HAVE=$(python -c "import json;print(json.load(open('$DEALS'))['date'])" 2>/dev/null || echo none)
+          if [ "$HAVE" = "$TODAY" ]; then
+            echo "board is today's ($HAVE) — reusing exactly what the carousel posted"
+          else
+            echo "board is $HAVE, need $TODAY — refetching"
+            python pipeline/fetch_fares.py
+          fi
+
       - name: Render the reel
         env:
           ORIGIN: ${{ matrix.origin.code }}
@@ -233,7 +255,10 @@ jobs:
             # gets index.html must not cache that under the canonical URL.
             probe=$(curl -sIL -o /dev/null -w "%{http_code} %{content_type}" "$URL?probe=$VER-$i")
             case "$probe" in
-              "200 video"*) echo "MP4 live ($probe)"; exit 0 ;;
+              "200 video"*)
+                echo "MP4 live ($probe)"
+                echo "verified=1" >> "$GITHUB_OUTPUT"
+                exit 0 ;;
             esac
             echo "  attempt $i: $probe"
             sleep 10
@@ -247,6 +272,10 @@ jobs:
           REEL_SLOT: ${{ needs.plan.outputs.slot }}
           IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
           ASSET_VER: ${{ steps.wait.outputs.ver }}
+          # Tells publish_reel.py that curl already fetched this URL
+          # successfully, so its own probe is a second opinion rather than a
+          # gate. Runs #5-#7 all died on that disagreement.
+          REEL_URL_VERIFIED: ${{ steps.wait.outputs.verified }}
         run: |
           export RAW_BASE="https://departsdaily.com/$(echo '${{ steps.stage.outputs.dest }}' | sed 's|^site/||')"
           echo "RAW_BASE=$RAW_BASE"

@@ -153,28 +153,68 @@ def caption(man):
     return cap + " ".join(tags[:15])
 
 
-def wait_for_video(url, tries=40, gap=10):
+def probe_video(url, timeout=20):
+    """One reachability probe. Returns (ok, description).
+
+    A ranged GET, not a HEAD. Cloudflare's edge treats the two differently and
+    is far more willing to answer an anonymous HEAD with something unhelpful,
+    and a HEAD does not always carry Content-Length. Range: bytes=0-1023 costs
+    a kilobyte and proves the object is really there.
+
+    The User-Agent matters too: urllib's default announces itself as
+    Python-urllib, which is exactly the shape of client an edge WAF is most
+    willing to challenge. The workflow's curl sailed through the same URL that
+    this function kept failing on for three straight days."""
+    req = urllib.request.Request(url, method="GET", headers={
+        "User-Agent": "Mozilla/5.0 (compatible; DepartsDailyBot/1.0; +https://departsdaily.com)",
+        "Range": "bytes=0-1023",
+        "Accept": "*/*",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            ctype = (r.headers.get("Content-Type") or "").lower()
+            chunk = r.read(1024)
+            # A 200/206 is NOT enough on its own: Pages answers an
+            # undeployed path with 200 + index.html. The content type is the
+            # real signal, and the magic bytes are the backstop — an MP4
+            # carries "ftyp" in its first box header.
+            looks_mp4 = b"ftyp" in chunk[:64]
+            if r.status in (200, 206) and ("video" in ctype or looks_mp4):
+                return True, "%s %s%s" % (r.status, ctype or "?",
+                                          "" if "video" in ctype else " (ftyp)")
+            return False, "%s %s (%d bytes read)" % (r.status, ctype or "?", len(chunk))
+    except Exception as e:
+        return False, "%s: %s" % (type(e).__name__, e)
+
+
+def wait_for_video(url, tries=30, gap=10):
     """Cloudflare Pages has to have deployed the MP4 before Meta fetches it.
     On 2026-07-29 the morning carousel failed exactly this way (code 36001,
     'the URL returned an error page instead of an image') because publish beat
-    the Pages build by two seconds. A video is a bigger file, so the race is
-    wider, and Meta's error for it is vaguer. Check ourselves first."""
-    req = urllib.request.Request(url, method="HEAD")
+    the Pages build by two seconds.
+
+    When the workflow has ALREADY verified the URL with curl, this is a second
+    opinion, not a gate. Three runs (Jul 30 - Aug 1) died right here on a file
+    that was demonstrably being served: the workflow's curl saw 200 video, then
+    this function disagreed and aborted. A disagreement between two HTTP
+    clients about a file the first one just fetched is not evidence the file is
+    missing. So with REEL_URL_VERIFIED=1 set, a failure warns and proceeds."""
+    verified = os.environ.get("REEL_URL_VERIFIED") == "1"
     for i in range(tries):
-        try:
-            with urllib.request.urlopen(req, timeout=20) as r:
-                ctype = r.headers.get("Content-Type", "")
-                clen = int(r.headers.get("Content-Length") or 0)
-                # A 200 is NOT enough — Pages returns 200 + index.html for a
-                # path it has not deployed. The content type is the real signal.
-                if r.status == 200 and "video" in ctype and clen > 50000:
-                    print("video live: %s (%s, %.1fMB)" % (url, ctype, clen / 1e6))
-                    return
-                print("attempt %d: %s len=%s" % (i + 1, ctype or r.status, clen))
-        except Exception as e:
-            print("attempt %d: %s" % (i + 1, e))
+        ok, why = probe_video(url)
+        if ok:
+            print("video live: %s (%s)" % (url, why))
+            return
+        print("attempt %d: %s" % (i + 1, why))
+        # Already curl-verified upstream: probe a couple of times for the log,
+        # then trust the step that actually fetched the bytes.
+        if verified and i >= 2:
+            print("NOTE: the workflow already verified this URL with curl; "
+                  "proceeding despite the local probe. Last: %s" % why)
+            return
         time.sleep(gap)
-    _trail_write("wait_for_video", None, {"url": url})
+    _trail_write("wait_for_video", None, {"url": url, "last": why,
+                                          "workflow_verified": verified})
     raise SystemExit("FATAL: %s never served as video — refusing to hand "
                      "Instagram a URL that 404s" % url)
 
