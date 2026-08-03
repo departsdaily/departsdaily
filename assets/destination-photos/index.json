@@ -1,15 +1,15 @@
 {
  "AMS": {
   "city": "Amsterdam",
-  "credit": "PHOTO: Basile Morin \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Txllxt TxllxT \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AMS.jpg",
   "how": "landmark",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Amsterdam canals",
-  "source": "https://commons.wikimedia.org/wiki/File:Colorful_windows_and_canal_houses_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg",
-  "title": "File:Colorful windows and canal houses at blue hour with water reflection in Damrak Amsterdam Netherlands.jpg"
+  "shows": "Amsterdam Herengracht",
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_-_Herengracht_-_Vijzelstraat_-_360%C2%B0_Panorama_01.jpg",
+  "title": "File:Amsterdam - Herengracht - Vijzelstraat - 360\u00b0 Panorama 01.jpg"
  },
  "AUA": {
   "city": "Aruba",
@@ -37,15 +37,15 @@
  },
  "BNA": {
   "city": "Nashville",
-  "credit": "PHOTO: Daniel Schwen \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Cessna86 \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "BNA.jpg",
   "how": "landmark",
-  "licence": "CC BY-SA 4.0",
-  "needs_credit": true,
+  "licence": "Public domain",
+  "needs_credit": false,
   "shows": "Nashville skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Nashville_pano_Opry_Broadway.jpg",
-  "title": "File:Nashville pano Opry Broadway.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Nashville_Skyline_at_Night_I-65.jpeg",
+  "title": "File:Nashville Skyline at Night I-65.jpeg"
  },
  "BOS": {
   "city": "Boston",
@@ -73,15 +73,15 @@
  },
  "DCA": {
   "city": "Washington DC",
-  "credit": "PHOTO: G. Edward Johnson \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Rimstone \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DCA.jpg",
-  "how": "landmark",
-  "licence": "CC BY 4.0",
-  "needs_credit": true,
-  "shows": "Lincoln Memorial reflecting pool",
-  "source": "https://commons.wikimedia.org/wiki/File:2026-06-17_Lincol_Memorial_Reflecting_Pool_nanobubblers_Washington_DC_18-55-56_1.jpg",
-  "title": "File:2026-06-17 Lincol Memorial Reflecting Pool nanobubblers Washington DC 18-55-56 1.jpg"
+  "how": "text",
+  "licence": "CC0",
+  "needs_credit": false,
+  "shows": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Skyline_from_Washington_National_Cathedral.jpg",
+  "title": "File:Skyline from Washington National Cathedral.jpg"
  },
  "DEN": {
   "city": "Denver",
@@ -229,15 +229,15 @@
  },
  "MSY": {
   "city": "New Orleans",
-  "credit": "PHOTO: Diego Delso \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Michael Gaylard \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MSY.jpg",
   "how": "landmark",
-  "licence": "CC BY-SA 3.0",
+  "licence": "CC BY 2.0",
   "needs_credit": true,
-  "shows": "French Quarter New Orleans",
-  "source": "https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans,_USA1.jpg",
-  "title": "File:Jackson Square, New Orleans, USA1.jpg"
+  "shows": "Jackson Square New Orleans",
+  "source": "https://commons.wikimedia.org/wiki/File:Jackson_Square_Costumed_Street_Performers_-_New_Orleans_Sept_2018.jpg",
+  "title": "File:Jackson Square Costumed Street Performers - New Orleans Sept 2018.jpg"
  },
  "NAS": {
   "city": "Nassau",
@@ -325,62 +325,62 @@
  },
  "ROM": {
   "city": "Rome",
-  "credit": "PHOTO: Diliff \u00b7 CC BY-SA 2.5 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Nicholas Hartmann \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "ROM.jpg",
   "how": "landmark",
-  "licence": "CC BY-SA 2.5",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Colosseum Rome",
-  "source": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg",
-  "title": "File:Colosseum in Rome, Italy - April 2007.jpg"
+  "shows": "Rome skyline",
+  "source": "https://commons.wikimedia.org/wiki/File:Rome_skyline_panorama.jpg",
+  "title": "File:Rome skyline panorama.jpg"
  },
  "SEA": {
   "city": "Seattle",
-  "credit": "PHOTO: Daniel Schwen \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Sajad Mohamad \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "SEA.jpg",
   "how": "landmark",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
   "shows": "Seattle skyline Mount Rainier",
-  "source": "https://commons.wikimedia.org/wiki/File:Seattle_7.jpg",
-  "title": "File:Seattle 7.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Seattle_Skyline_Kerry_Park.jpg",
+  "title": "File:Seattle Skyline Kerry Park.jpg"
  },
  "SFO": {
   "city": "San Francisco",
-  "credit": "PHOTO: Daniel L. Lu (user:dllu) \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Frank Schulenburg \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "SFO.jpg",
   "how": "landmark",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
   "shows": "Golden Gate Bridge",
-  "source": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Golden_Gate_Bridge_from_the_south_dllu.jpg",
-  "title": "File:Aerial view of Golden Gate Bridge from the south dllu.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach,_March_2018.jpg",
+  "title": "File:Golden Gate Bridge as seen from Marshall\u2019s Beach, March 2018.jpg"
  },
  "SJU": {
   "city": "San Juan, PR",
-  "credit": "PHOTO: Godot13 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: JacksonvilleDistrict \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "SJU.jpg",
   "how": "landmark",
-  "licence": "CC BY-SA 4.0",
+  "licence": "CC BY 2.0",
   "needs_credit": true,
   "shows": "Old San Juan Puerto Rico",
-  "source": "https://commons.wikimedia.org/wiki/File:USA-2016-Puerto_Rico-San_Juan-Castillo_San_Felipe_del_Morro_10.jpg",
-  "title": "File:USA-2016-Puerto Rico-San Juan-Castillo San Felipe del Morro 10.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Aerial_view_from_San_Juan_Bay_of_western_end_of_Old_San_Juan_historic_district_in_San_Juan_Islet,_San_Juan_Municipality,_Puerto_Rico_(2013).jpg",
+  "title": "File:Aerial view from San Juan Bay of western end of Old San Juan historic district in San Juan Islet, San Juan Municipality, Puerto Rico (2013).jpg"
  },
  "TPA": {
   "city": "Tampa",
-  "credit": "PHOTO: Alvesgaspar \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Cl\u00e9ment Bardot \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "TPA.jpg",
   "how": "landmark",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
   "shows": "Tampa skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Tampa_Florida_November_2013-3g.jpg",
-  "title": "File:Tampa Florida November 2013-3g.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Downtown_Tampa,_Florida.jpg",
+  "title": "File:Downtown Tampa, Florida.jpg"
  }
 }
