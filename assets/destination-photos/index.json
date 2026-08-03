@@ -73,15 +73,15 @@
  },
  "DCA": {
   "city": "Washington DC",
-  "credit": "PHOTO: Rimstone \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Rizka \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DCA.jpg",
-  "how": "text",
-  "licence": "CC0",
-  "needs_credit": false,
-  "shows": "",
-  "source": "https://commons.wikimedia.org/wiki/File:Skyline_from_Washington_National_Cathedral.jpg",
-  "title": "File:Skyline from Washington National Cathedral.jpg"
+  "how": "pinned",
+  "licence": "CC BY-SA 4.0",
+  "needs_credit": true,
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:View_of_the_Washington_Monument_with_Flags.jpg",
+  "title": "File:View of the Washington Monument with Flags.jpg"
  },
  "DEN": {
   "city": "Denver",
@@ -193,27 +193,27 @@
  },
  "MBJ": {
   "city": "Montego Bay",
-  "credit": "PHOTO: Todd Stafford \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: wardyboy400 \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MBJ.jpg",
-  "how": "landmark",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "shows": "Montego Bay Jamaica coast",
-  "source": "https://commons.wikimedia.org/wiki/File:Trinidad_and_Tobago_Ship_Quinam,_mooring_in_Montego_Bay,_Jamaica_-_160619-N-FE728-122.jpg",
-  "title": "File:Trinidad and Tobago Ship Quinam, mooring in Montego Bay, Jamaica - 160619-N-FE728-122.jpg"
+  "how": "pinned",
+  "licence": "CC BY 2.0",
+  "needs_credit": true,
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Jamaica,_Negril,_Bloody_Bay_2013_(8488947867).jpg",
+  "title": "File:Jamaica, Negril, Bloody Bay 2013 (8488947867).jpg"
  },
  "MCO": {
   "city": "Orlando",
-  "credit": "PHOTO: JER3L1337 \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Athena Iluz \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MCO.jpg",
-  "how": "landmark",
-  "licence": "CC BY 4.0",
+  "how": "pinned",
+  "licence": "CC BY 2.0",
   "needs_credit": true,
-  "shows": "Orlando Florida skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg",
-  "title": "File:Lake Eola and Orlando Skyline seen in 2024.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Lake_Eola_--_Downtown_Orlando_(19932084106).png",
+  "title": "File:Lake Eola -- Downtown Orlando (19932084106).png"
  },
  "MIA": {
   "city": "Miami",
@@ -337,15 +337,15 @@
  },
  "SEA": {
   "city": "Seattle",
-  "credit": "PHOTO: photographed by S. Bach, stitched by A.\u2026 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: SounderBruce \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "SEA.jpg",
-  "how": "landmark",
+  "how": "pinned",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Space Needle Seattle",
-  "source": "https://commons.wikimedia.org/wiki/File:Space_Needle_panorama_large.jpg",
-  "title": "File:Space Needle panorama large.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Seattle_skyline_from_Kerry_Park,_March_2019.jpg",
+  "title": "File:Seattle skyline from Kerry Park, March 2019.jpg"
  },
  "SFO": {
   "city": "San Francisco",
