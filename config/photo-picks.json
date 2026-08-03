@@ -1,0 +1,20 @@
+{
+  "_doc": [
+    "Exact Wikimedia Commons file titles, chosen by looking at the picture.",
+    "",
+    "A pin always beats the automatic search. Scoring a title gets you most of",
+    "the way and then fails in ways no rule can catch: Denver's automatic pick",
+    "was a satellite terrain render titled 'Denver Skyline (4801).jpg', and",
+    "Amsterdam's was parked cars under a bare tree. Both scored well. Both were",
+    "wrong. The only reliable fix is a human looking.",
+    "",
+    "A pin does NOT override the licence gate. Liking a photo is not permission",
+    "to publish it, so a pinned file whose licence fails still gets rejected and",
+    "the city falls back to the automatic search.",
+    "",
+    "To change one: run scripts/photo_candidates.py <CODE>, look at the sheet in",
+    "out/photo-candidates/<CODE>.png, and copy the title of the tile you want",
+    "from the manifest beside it."
+  ],
+  "picks": {}
+}

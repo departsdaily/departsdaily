@@ -296,6 +296,46 @@ def usable(page):
 LANDMARKS = json.load(open(os.path.join(ROOT, "config", "landmarks.json"),
                           encoding="utf-8"))["cities"]
 
+# Exact Commons file titles chosen by eye. A pin always wins: it is the one
+# signal in this whole script that came from someone actually looking at the
+# picture, which no title score can replace.
+try:
+    PICKS = json.load(open(os.path.join(ROOT, "config", "photo-picks.json"),
+                           encoding="utf-8")).get("picks", {})
+except (OSError, ValueError):
+    PICKS = {}
+
+
+def pinned(code):
+    """The pinned file for a city, fetched by exact title."""
+    title = PICKS.get(code)
+    if not title:
+        return []
+    try:
+        d = api({"action": "query", "titles": title, "prop": "imageinfo",
+                 "iiprop": "url|extmetadata|size|mime", "iiurlwidth": "1600"})
+    except Exception as e:
+        print("    pinned lookup failed (%s) — falling back" % e)
+        return []
+    for page in d.get("query", {}).get("pages", []) or []:
+        info = (page.get("imageinfo") or [{}])[0]
+        if not info:
+            continue
+        meta = info.get("extmetadata", {}) or {}
+        ok, lic, needs = licence_ok(meta)
+        if not ok:
+            # A pin cannot override the licence gate. Someone liking a photo is
+            # not permission to publish it.
+            print("    PINNED FILE REJECTED on licence (%s): %s" % (lic, title))
+            return []
+        return [{"title": title, "url": info.get("thumburl") or info.get("url"),
+                 "descurl": info.get("descriptionurl", ""),
+                 "width": info.get("width", 0), "height": info.get("height", 0),
+                 "licence": lic, "needs_credit": needs,
+                 "credit": credit_line(meta, lic), "subject": 99,
+                 "quality": 1, "rank": 99, "how": "pinned", "term": "hand-picked"}]
+    return []
+
 
 def landmark_search(code):
     """Photos of the views a city is actually known for.
@@ -348,6 +388,10 @@ def search(city, code="", country=""):
     A photo taken within ~12km of the city centre is a photo OF the city. A file
     whose title merely contains the city's name is not, which is how Amsterdam
     ended up with a Monet and Rome with a moth."""
+    hits = pinned(code)
+    if hits:
+        print("    pinned: %s" % hits[0]["title"][5:])
+        return hits
     hits = landmark_search(code)
     if hits:
         best = max(hits, key=lambda h: (h["rank"], h["subject"]))

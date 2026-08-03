@@ -1,0 +1,38 @@
+name: Photo candidates
+
+# Builds contact sheets of candidate destination photos and commits them, so
+# picks can be made by looking rather than by trusting a title score.
+on:
+  workflow_dispatch:
+    inputs:
+      codes:
+        description: "Airport codes, space separated"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: photo-candidates
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow
+      - run: python scripts/photo_candidates.py ${{ inputs.codes }}
+      - run: |
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git add -A out/photo-candidates
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -m "Photo candidate sheets: ${{ inputs.codes }}"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
