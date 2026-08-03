@@ -181,6 +181,36 @@ def imageinfo(titles):
     return out
 
 
+# WHAT MAKES A GOOD DESTINATION SHOT, scored from the title.
+#
+# Geosearch answers "was this taken in Paris". It does NOT answer "is this a
+# photo of Paris". The first geo run proved the difference: pancakes for Paris,
+# cheesecake for Chicago, wooden spoons for Punta Cana, a woman in a jacket for
+# New York, X's headquarters for San Francisco. Every one genuinely shot in the
+# right city, and every one useless as a backdrop for a fare.
+WANT = {"skyline": 6, "cityscape": 6, "panorama": 5, "panoramic": 5,
+        "aerial": 5, "beach": 5, "waterfront": 4, "harbour": 4, "harbor": 4,
+        "downtown": 4, "old town": 4, "seen from": 3, "view of": 3,
+        "view from": 3, "sunset": 3, "coast": 3, "bay": 3, "island": 3,
+        "bridge": 2, "plaza": 2, "piazza": 2, "square": 2, "cathedral": 2,
+        "castle": 2, "tower": 2, "pier": 2, "resort": 3, "lagoon": 3,
+        "vista": 3, "overlook": 3, "night": 1, "street": 1, "city": 1}
+
+AVOID = {"employee": 6, "meeting": 6, "conference": 6, "protest": 6,
+         "parade": 5, "festival": 4, "pride": 5, "rally": 6, "politics": 6,
+         "headquarters": 5, "interior": 5, "cheesecake": 8, "pancake": 8,
+         "breakfast": 6, "spoon": 8, "fork": 8, "plate of": 6, "recipe": 6,
+         "woman": 5, "man in": 5, "portrait": 6, "wedding": 6, "hurricane": 6,
+         "collapse": 8, "crash": 8, "fire": 5, "damage": 6, "funeral": 8,
+         "messenger": 5, "jacket": 5, "chairs": 5, "sign": 3, "logo": 6}
+
+
+def subject_score(title):
+    low = title.lower()
+    return (sum(v for k, v in WANT.items() if k in low)
+            - sum(v for k, v in AVOID.items() if k in low))
+
+
 def usable(page):
     """One candidate, or None. Rejects on licence, size, orientation, or not
     being a photograph of a place at all."""
@@ -200,6 +230,12 @@ def usable(page):
     stem = re.sub(r"\.[a-z]+$", "", title[5:] if title.startswith("File:") else title)
     if re.match(r"^[A-Z][a-z]{2,} [a-z]{3,}(\s+\d+)?$", stem.strip()):
         return None
+    # ...and the same binomial ANYWHERE in the title, not just as the whole of
+    # it: "Haria - Phoenix canariensis 01.jpg" got through the anchored form and
+    # then passed the city-name check, because the species genus IS the city.
+    if re.search(r"\b[A-Z][a-z]{2,} (?:[a-z]+(?:ensis|iensis|orum|ifolia|"
+                 r"oides|ata|osa|icus|iana|ana|alis|aria))\b", stem):
+        return None
     w, h = info.get("width", 0), info.get("height", 0)
     # Landscape and big enough to crop to a 1080-wide portrait frame without
     # upscaling into mush.
@@ -215,7 +251,8 @@ def usable(page):
             "descurl": info.get("descriptionurl", ""), "width": w, "height": h,
             "licence": lic, "needs_credit": needs,
             "credit": credit_line(meta, lic),
-            "quality": 1 if ("quality image" in cats or "featured picture" in cats) else 0}
+            "quality": 1 if ("quality image" in cats or "featured picture" in cats) else 0,
+            "subject": subject_score(page.get("title", ""))}
 
 
 def search(city, country=""):
@@ -228,11 +265,15 @@ def search(city, country=""):
     if ll:
         titles = geosearch(*ll)
         print("    %s -> %.3f,%.3f · %d nearby files" % (city, ll[0], ll[1], len(titles)))
-        hits = [dict(u, how="geo") for u in
-                (usable(p) for p in imageinfo(titles)) if u]
+        near = [u for u in (usable(p) for p in imageinfo(titles)) if u]
+        hits = [dict(u, how="geo") for u in near if u["subject"] >= 3]
         if hits:
+            best = max(h["subject"] for h in hits)
+            print("    %d nearby usable, %d look like the place (best score %d)"
+                  % (len(near), len(hits), best))
             return hits
-        print("    nothing usable nearby, falling back to text search")
+        print("    %d nearby usable but none read as a destination shot — "
+              "falling back to text search" % len(near))
     # TEXT FALLBACK. Only reached when a city has no geotagged coverage at all.
     # It must never again hand back a photo of somewhere else, so results are
     # required to actually name the place: Aruba got the I-35W bridge collapse
@@ -331,7 +372,8 @@ def main():
         if not hits:
             print("    no usable freely-licensed photo found — skipping")
             continue
-        pick = max(hits, key=lambda h: (h.get("quality", 0), h["width"] * h["height"]))
+        pick = max(hits, key=lambda h: (h["subject"], h.get("quality", 0),
+                                        h["width"] * h["height"]))
         dest = os.path.join(PHOTO_DIR, "%s.jpg" % code)
         try:
             size = download(pick["url"], dest)
