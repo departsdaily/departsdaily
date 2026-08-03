@@ -188,14 +188,14 @@
   },
   "PUJ": {
    "outcome": "not a deal",
-   "price": 495,
-   "typical": 492,
-   "disc_pct": -1,
-   "d1": "2026-08-10",
-   "d2": "2026-08-17",
-   "nights": 7,
+   "price": 418,
+   "typical": 464,
+   "disc_pct": 10,
+   "d1": "2026-10-23",
+   "d2": "2026-10-27",
+   "nights": 4,
    "on_shape": false,
-   "rung": "nights"
+   "rung": "wide"
   },
   "MBJ": {
    "outcome": "qualified",
