@@ -5,4 +5,5 @@ fonts: 22 dejavu files
 /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
 audio: 4 tracks
 === render ===
-FATAL: board is dated 2026-08-01, not today — refusing to build a reel from a stale board (REEL_ALLOW_STALE=1 to override)
+rendering ATL reel for 2026-08-03: shape=spotlight slot=0 10.4s 312 frames audio=gate-a12@1.9.mp3@1.9s
+wrote out/ATL/reel_0.mp4 (0.6MB, 10.4s)
