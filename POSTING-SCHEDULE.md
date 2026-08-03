@@ -17,12 +17,13 @@ Everything below is driven by `config/schedule.json`. Retune that file after fou
 | Sunday | *inspiration* | falls back to `week` | Planned inspiration plus Monday teaser. Renderer not built yet. |
 | Every other Sunday | `twoweek` | 12 to 17 nights, out Thu to Sun, back Fri to Mon | ISO even weeks. Twice a month max so it stays special. |
 
-## Reels — two a day, per account
+## Reels — one a day, per account
 
 Added Jul 29 2026. Separate from the board plan above, on its own config
 (`config/reels.json`) and its own workflow (`ig-reel.yml`), firing at
-**11:40 AM and 5:40 PM ET** — the gaps between the morning carousel and the
-story drip slots.
+**11:40 AM ET** — a gap between the morning carousel and the story drip slots.
+Shipped at two a day and cut to one on Jul 30, to keep the volume step change
+small while both accounts are young. Live on both accounts since Aug 3.
 
 Reels are built from the SAME board the morning carousel posted, never a fresh
 fetch, so nothing in a day's feed can contradict anything else in it. Three
