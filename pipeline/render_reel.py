@@ -205,13 +205,31 @@ def flap_text(code, p, fi):
     return "".join(out)
 
 
-def fmt_dates(x):
-    """Mirrors render_slides.fmt_dates: never invents a time or an airline."""
+def leg_times(x):
+    """Departure–arrival per leg, exactly as render_slides.fmt_dates and the
+    website row build it. Nothing is invented: a leg with no arrival prints
+    "DEP 9:52PM", a leg with neither prints nothing at all."""
+    def leg(d, a):
+        return "%s–%s" % (d, a) if d and a else ("DEP %s" % d if d else "")
+    l1 = leg(x.get("dep", ""), x.get("arr", ""))
+    l2 = leg(x.get("rdep", ""), x.get("rarr", ""))
+    return " / ".join(p for p in (l1, l2) if p)
+
+
+def fmt_dates(x, times=True):
+    """Mirrors render_slides.fmt_dates: never invents a time or an airline.
+
+    `times=False` is for the tight board rows, where the full leg detail does
+    not fit at 7 rows and gets its own line instead."""
     a = datetime.date.fromisoformat(x["d1"]).strftime("%b %d").upper()
     b = datetime.date.fromisoformat(x["d2"]).strftime("%b %d").upper() if x.get("d2") else ""
     stops = "NONSTOP" if x.get("stops") == 0 else "%s STOP" % x.get("stops")
     span = "%s–%s" % (a, b) if b else a
-    return " · ".join(p for p in (span, x.get("airline") or "", stops) if p)
+    parts = [span]
+    if times:
+        parts.append(leg_times(x))
+    parts += [x.get("airline") or "", stops]
+    return " · ".join(p for p in parts if p)
 
 
 def nights_line(x):
@@ -300,8 +318,12 @@ def row(d, x0, y, deal, pitch, alpha=1.0):
     tiles(d, xx + s(52), y, deal["to"], size=s(42), color=mix(NAVY, AMBER, alpha))
     d.text((x0 + 26, y + s(82)), deal["city"].upper(), font=COND(s(42)),
            fill=mix(NAVY, WHITE, alpha))
-    d.text((x0 + 26, y + s(130)), fmt_dates(deal), font=MONO(s(22)),
+    d.text((x0 + 26, y + s(130)), fmt_dates(deal, times=False), font=MONO(s(22)),
            fill=mix(NAVY, SKY, alpha))
+    lt = leg_times(deal)
+    if lt and pitch >= 150:
+        d.text((x0 + 26, y + s(156)), lt, font=MONO(s(20)),
+               fill=mix(NAVY, DIM, alpha))
     p = "$%s" % deal["price"]
     right = x0 + (SAFE["right"] - SAFE["left"]) - 10
     d.text((right - d.textlength(p, font=COND(s(84))), y - 4), p,
@@ -412,10 +434,15 @@ def shape_spotlight():
             d.text((SAFE["left"] + 28, y + 704), tag, font=f, fill=NAVY)
             if t > hold + cnt + 0.5:
                 c = ease_out((t - hold - cnt - 0.5) / 0.5)
-                d.text((SAFE["left"], y + 830), fmt_dates(best), font=MONO(34),
-                       fill=mix(NAVY, WHITE, c))
-                d.text((SAFE["left"], y + 890), "EXACT DATES ON THE SITE",
-                       font=MONO(28), fill=mix(NAVY, DIM, c))
+                d.text((SAFE["left"], y + 830), fmt_dates(best, times=False),
+                       font=MONO(34), fill=mix(NAVY, WHITE, c))
+                lt = leg_times(best)
+                if lt:
+                    d.text((SAFE["left"], y + 878), lt, font=MONO(29),
+                           fill=mix(NAVY, SKY, c))
+                d.text((SAFE["left"], y + (926 if lt else 890)),
+                       "EXACT DATES ON THE SITE", font=MONO(28),
+                       fill=mix(NAVY, DIM, c))
         footer(d)
         return img
 
@@ -461,9 +488,13 @@ def shape_destination():
                              y + 630 + 86], radius=14,
                             fill=mix(NAVY, GREEN, min(a, ease_out(bt))))
         d.text((SAFE["left"] + 28, y + 646), tag, font=fb, fill=NAVY)
-        d.text((SAFE["left"], y + 760), fmt_dates(deal), font=MONO(32),
-               fill=mix(NAVY, SKY, a))
-        d.text((SAFE["left"], y + 812), nights_line(deal),
+        d.text((SAFE["left"], y + 760), fmt_dates(deal, times=False),
+               font=MONO(32), fill=mix(NAVY, SKY, a))
+        lt = leg_times(deal)
+        if lt:
+            d.text((SAFE["left"], y + 808), lt, font=MONO(28),
+                   fill=mix(NAVY, WHITE, a))
+        d.text((SAFE["left"], y + (856 if lt else 812)), nights_line(deal),
                font=MONO(30), fill=mix(NAVY, DIM, a))
 
     def frame(t):

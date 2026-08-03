@@ -110,6 +110,43 @@ def cheapest(dest):
     out.sort(key=lambda o: o.get("price") or 1e9)
     return out
 
+def _clock(dt):
+    """12-hour clock, same format the site board prints."""
+    h = dt.hour % 12 or 12
+    return "%d:%02d%s" % (h, dt.minute, "AM" if dt.hour < 12 else "PM")
+
+
+def dep_time(stamp):
+    """Departure clock time straight off the fare's own timestamp."""
+    try:
+        dt = datetime.datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+    except (AttributeError, ValueError):
+        return ""
+    return "" if (dt.hour == 0 and dt.minute == 0) else _clock(dt)
+
+
+def arr_time(stamp, duration_min):
+    """Arrival = departure + leg duration. Identical derivation to
+    scripts/update_deals.py and the Fare Finder, so a fare shown on the site
+    and the same fare shown on a slide can never disagree.
+
+    Returns "" when the API gave no duration. An unknown arrival is shown as
+    unknown, never invented. A leg landing after midnight carries "+1", the
+    site's established label for "next day or later"."""
+    try:
+        dt = datetime.datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+        m = int(duration_min)
+    except (AttributeError, TypeError, ValueError):
+        return ""
+    if m <= 0:
+        return ""
+    total = dt.hour * 60 + dt.minute + m
+    h24, mm = (total % 1440) // 60, total % 60
+    h = h24 % 12 or 12
+    return "%d:%02d%s%s" % (h, mm, "AM" if h24 < 12 else "PM",
+                            "+1" if total >= 1440 else "")
+
+
 def pick_offer(offers, nights, depart_in, depart_dow=None, return_dow=None):
     """Cheapest offer whose trip length, departure date and (optionally) the
     days of the week it flies out and back on all fit.
@@ -252,8 +289,17 @@ def build(plan):
                "airline": o.get("airline", ""), "stops": o.get("transfers", 0),
                # Times only when the fare actually carried them. A slide has
                # never printed an invented time and must not start now.
-               "dep": o.get("dep_time", ""), "rdep": o.get("ret_time", ""),
-               "arr": o.get("arr_time", ""), "rarr": o.get("ret_arr", ""),
+               #
+               # These used to read o["dep_time"] / o["ret_time"] / o["arr_time"]
+               # / o["ret_arr"] — none of which are keys Travelpayouts returns.
+               # Every one was silently "" on every deal ever posted, so the
+               # Instagram board showed dates while the website showed full
+               # departure and arrival times for the same fare. Derived here
+               # exactly the way scripts/update_deals.py derives them.
+               "dep": dep_time(o.get("departure_at")),
+               "rdep": dep_time(o.get("return_at")),
+               "arr": arr_time(o.get("departure_at"), o.get("duration_to")),
+               "rarr": arr_time(o.get("return_at"), o.get("duration_back")),
                "baseline": base, "disc": round(disc * 100),
                "nights": nights, "on_shape": on_shape, "rung": rung,
                "link": "https://www.aviasales.com" + (o.get("link") or "") + "&marker=755800"}
