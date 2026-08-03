@@ -15,20 +15,31 @@
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/ATL/2026-07-30/slide1_board.png",
+    "image_url": "https://departsdaily.com/daily/ATL/2026-08-03/slide1_board.png?v=30811573890-1",
+    "is_carousel_item": "true",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "id": "18077843723367957"
+   }
+  },
+  {
+   "call": "me/media",
+   "params": {
+    "image_url": "https://departsdaily.com/daily/ATL/2026-08-03/slide2_board.png?v=30811573890-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
    "response": {
     "error": {
-     "message": "The image format is not supported.",
+     "message": "Only photo or video can be accepted as media type.",
      "type": "OAuthException",
-     "code": 36001,
-     "error_subcode": 2207083,
+     "code": 9004,
+     "error_subcode": 2207052,
      "is_transient": false,
-     "error_user_title": "Unknown Image Format",
-     "error_user_msg": "The image could not be processed because its format could not be recognized. This usually means the file is corrupted, not a valid image, or the URL returned an error page instead of an image. Please verify that the image_url points to a valid image file in a supported format (JPEG, PNG, GIF, WebP, HEIC, or AVIF). For more information on supported formats and media specifications, see: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating",
-     "fbtrace_id": "AOq9mhXxB50wx3n3dm3bQxb"
+     "error_user_title": "Media download has failed. The media URI doesn't meet our requirements.",
+     "error_user_msg": "The media could not be fetched from this URI: https://departsdaily.com/daily/ATL/2026-08-03/slide2_board.png?v=30811573890-1.Please check the limitations section in our development document for more information: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating",
+     "fbtrace_id": "Ay8-cVOqoM6QW5f0xN_5nY1"
     }
    },
    "status": 400
