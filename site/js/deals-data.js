@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-03 17:38 EDT
+   Generated 2026-08-03 17:58 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-03T17:38:37-04:00",
+ updated:"2026-08-03T17:58:04-04:00",
 };
 const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:135,d1:"2026-08-19",d2:"2026-08-24",dep:"9:52PM",al:"Frontier",stops:0,rdep:"6:10AM",arr:"11:44PM",rarr:"8:01AM",exp:"2026-08-05"},
@@ -80,7 +80,7 @@ const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:81,d1:"2026-09-05",d2:"2026-09-12",dep:"9:36PM",al:"Frontier",stops:0,rdep:"6:50AM",arr:"12:18AM+1",rarr:"9:42AM",exp:"2026-08-05"},
  {to:"MCO",city:"Orlando",price:160,d1:"2026-10-17",d2:"2026-10-26",dep:"2:15PM",al:"Southwest",stops:1,rdep:"7:50AM",arr:"9:10PM",rarr:"4:05PM",exp:"2026-08-05"},
  {to:"ORD",city:"Chicago",price:159,d1:"2026-08-08",d2:"2026-08-12",dep:"10:34AM",al:"Frontier",stops:1,rdep:"9:57PM",arr:"5:52PM",rarr:"4:01AM+1",exp:"2026-08-05"},
- {to:"NYC",city:"New York City",price:320,d1:"2026-08-23",d2:"2026-08-30",dep:"6:45PM",al:"Southwest",stops:1,rdep:"6:55AM",arr:"1:05AM+1",rarr:"2:05PM",exp:"2026-08-05"},
+ {to:"SFO",city:"San Francisco",price:165,d1:"2026-09-18",d2:"2026-09-21",dep:"4:27PM",al:"Frontier",stops:1,rdep:"9:00AM",arr:"10:06PM",rarr:"1:38PM",exp:"2026-08-05"},
  {to:"ROM",city:"Rome",price:716,d1:"2026-09-09",d2:"2026-09-23",dep:"3:40PM",al:"Icelandair",stops:3,rdep:"7:10AM",arr:"4:00AM+1",rarr:"9:15PM",exp:"2026-08-05"},
  {to:"LON",city:"London",price:703,d1:"2026-08-22",d2:"2026-09-03",dep:"11:25PM",al:"Icelandair",stops:3,rdep:"3:50PM",arr:"1:40PM+1",rarr:"6:43AM+1",exp:"2026-08-05"},
  {to:"CUN",city:"Cancún",price:485,d1:"2026-11-12",d2:"2026-11-19",dep:"7:05PM",al:"Air Canada",stops:2,rdep:"8:00AM",arr:"5:04AM+1",rarr:"3:52PM",exp:"2026-08-05"}],BOS:[
