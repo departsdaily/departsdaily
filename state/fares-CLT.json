@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-03T10:13:41-04:00",
+ "generated": "2026-08-03T12:13:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -218,17 +218,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 306,
-   "d1": "2026-08-21",
-   "d2": "2026-08-28",
-   "dep": "5:21PM",
+   "price": 185,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "5:31PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:40PM",
-   "arr": "11:07PM",
-   "rarr": "10:07PM",
-   "pct": 54
+   "rdep": "9:10AM",
+   "arr": "11:09PM",
+   "rarr": "2:47PM",
+   "pct": 72
   },
   "SEA": {
    "to": "SEA",
@@ -259,6 +259,21 @@
    "arr": "2:35PM",
    "rarr": "5:40AM+1",
    "pct": 66
+  },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 1262,
+   "d1": "2026-08-08",
+   "d2": "2026-08-16",
+   "dep": "7:44PM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:10AM",
+   "arr": "5:25AM+1",
+   "rarr": "7:35PM",
+   "pct": -43
   },
   "CUN": {
    "to": "CUN",

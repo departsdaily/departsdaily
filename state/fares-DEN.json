@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-03T10:14:57-04:00",
+ "generated": "2026-08-03T12:14:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 14,
  "routes_failed": [],
@@ -53,16 +53,16 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 199,
-   "d1": "2026-09-19",
-   "d2": "2026-09-21",
-   "dep": "7:10PM",
+   "price": 198,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
+   "dep": "6:30AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:54PM",
-   "arr": "12:08AM+1",
-   "rarr": "3:22AM+1",
+   "rdep": "7:00AM",
+   "arr": "11:22AM",
+   "rarr": "12:41PM",
    "pct": 65
   },
   "LAS": {
@@ -113,17 +113,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 245,
-   "d1": "2026-08-18",
-   "d2": "2026-08-23",
-   "dep": "9:21PM",
+   "price": 232,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
+   "dep": "11:59PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "8:10AM",
-   "arr": "2:39AM+1",
-   "rarr": "2:47PM",
-   "pct": 57
+   "rdep": "10:03AM",
+   "arr": "3:48AM+1",
+   "rarr": "3:50PM",
+   "pct": 59
   },
   "NYC": {
    "to": "NYC",
