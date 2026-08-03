@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-02 20:13 EDT
+   Generated 2026-08-02 22:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-02T20:13:13-04:00",
+ updated:"2026-08-02T22:13:14-04:00",
 };
 const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:135,d1:"2026-08-19",d2:"2026-08-24",dep:"9:52PM",al:"Frontier",stops:0,rdep:"6:10AM",arr:"11:44PM",rarr:"8:01AM",exp:"2026-08-04"},
@@ -31,9 +31,9 @@ const DEALS={CLT:[
  {to:"MIA",city:"Miami",price:85,d1:"2026-09-09",d2:"2026-09-14",dep:"7:11AM",al:"Frontier",stops:0,rdep:"12:18PM",arr:"10:23AM",rarr:"3:45PM",exp:"2026-08-04"},
  {to:"LAS",city:"Las Vegas",price:147,d1:"2026-08-20",d2:"2026-08-23",dep:"8:11PM",al:"Frontier",stops:0,rdep:"12:56PM",arr:"12:23AM+1",rarr:"5:02PM",exp:"2026-08-04"},
  {to:"NYC",city:"New York City",price:145,d1:"2026-10-09",d2:"2026-10-12",dep:"6:50AM",al:"American",stops:0,rdep:"6:00AM",arr:"9:05AM",rarr:"8:49AM",exp:"2026-08-04"},
- {to:"DFW",city:"Dallas",price:146,d1:"2026-09-18",d2:"2026-09-21",dep:"6:30AM",al:"Frontier",stops:1,rdep:"2:48PM",arr:"11:22AM",rarr:"7:29PM",exp:"2026-08-04"},
  {to:"MCO",city:"Orlando",price:140,d1:"2026-08-27",d2:"2026-08-31",dep:"7:44PM",al:"Frontier",stops:0,rdep:"9:00PM",arr:"10:29PM",rarr:"12:08AM+1",exp:"2026-08-04"},
  {to:"CUN",city:"Cancún",price:246,d1:"2026-10-21",d2:"2026-10-25",dep:"9:33PM",al:"Frontier",stops:1,rdep:"3:41PM",arr:"2:33AM+1",rarr:"8:54PM",exp:"2026-08-04"},
+ {to:"BOS",city:"Boston",price:217,d1:"2026-08-20",d2:"2026-08-24",dep:"8:20PM",al:"JetBlue",stops:1,rdep:"12:45PM",arr:"10:51PM",rarr:"6:10PM",exp:"2026-08-04"},
  {to:"PAR",city:"Paris",price:496,d1:"2026-10-07",d2:"2026-10-14",dep:"6:00PM",al:"TAP Portugal",stops:1,rdep:"6:00AM",arr:"4:35AM+1",rarr:"5:55PM",exp:"2026-08-04"},
  {to:"SJU",city:"San Juan, PR",price:263,d1:"2026-08-20",d2:"2026-08-24",dep:"8:05AM",al:"Frontier",stops:1,rdep:"6:35AM",arr:"2:16PM",rarr:"12:55PM",exp:"2026-08-04"}],DFW:[
  {to:"NYC",city:"New York City",price:134,d1:"2026-09-14",d2:"2026-09-16",dep:"3:08PM",al:"Frontier",stops:0,rdep:"8:29PM",arr:"6:44PM",rarr:"12:23AM+1",exp:"2026-08-04"},
