@@ -1,15 +1,15 @@
 {
  "AMS": {
   "city": "Amsterdam",
-  "credit": "PHOTO: Txllxt TxllxT \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: pxhere photo \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AMS.jpg",
-  "how": "landmark",
-  "licence": "CC BY-SA 4.0",
-  "needs_credit": true,
-  "shows": "Amsterdam Herengracht",
-  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_-_Herengracht_-_Vijzelstraat_-_360%C2%B0_Panorama_01.jpg",
-  "title": "File:Amsterdam - Herengracht - Vijzelstraat - 360\u00b0 Panorama 01.jpg"
+  "how": "pinned",
+  "licence": "CC0",
+  "needs_credit": false,
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_Skyline_View.jpg",
+  "title": "File:Amsterdam Skyline View.jpg"
  },
  "AUA": {
   "city": "Aruba",
@@ -37,27 +37,27 @@
  },
  "BNA": {
   "city": "Nashville",
-  "credit": "PHOTO: Cessna86 \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Jschnake \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "BNA.jpg",
-  "how": "landmark",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "shows": "Nashville skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Nashville_Skyline_at_Night_I-65.jpeg",
-  "title": "File:Nashville Skyline at Night I-65.jpeg"
+  "how": "pinned",
+  "licence": "CC BY-SA 4.0",
+  "needs_credit": true,
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Nashville_Skyline_from_Ft_Negly_2024.jpg",
+  "title": "File:Nashville Skyline from Ft Negly 2024.jpg"
  },
  "BOS": {
   "city": "Boston",
   "credit": "PHOTO: King of Hearts \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "BOS.jpg",
-  "how": "landmark",
+  "how": "pinned",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Boston skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Cambridge_skyline_November_2016_panorama.jpg",
-  "title": "File:Cambridge skyline November 2016 panorama.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg",
+  "title": "File:Boston skyline from Longfellow Bridge September 2017 panorama 2.jpg"
  },
  "CUN": {
   "city": "Canc\u00fan",
@@ -85,27 +85,27 @@
  },
  "DEN": {
   "city": "Denver",
-  "credit": "PHOTO: Min Lee \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Sdkb \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DEN.jpg",
-  "how": "landmark",
-  "licence": "CC BY-SA 3.0",
+  "how": "pinned",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Denver Union Station night",
-  "source": "https://commons.wikimedia.org/wiki/File:Union_Station_downtown.png",
-  "title": "File:Union Station downtown.png"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Larimer_Square,_Denver_1.jpg",
+  "title": "File:Larimer Square, Denver 1.jpg"
  },
  "DFW": {
   "city": "Dallas",
-  "credit": "PHOTO: Michael Barera \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Gattacal \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DFW.jpg",
-  "how": "landmark",
+  "how": "pinned",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Dallas skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:View_of_Dallas_from_Reunion_Tower_August_2015_05.jpg",
-  "title": "File:View of Dallas from Reunion Tower August 2015 05.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Dallas_Skyline_with_Arts_District_at_night.jpg",
+  "title": "File:Dallas Skyline with Arts District at night.jpg"
  },
  "DTW": {
   "city": "Detroit",
@@ -133,15 +133,15 @@
  },
  "GCM": {
   "city": "Grand Cayman",
-  "credit": "PHOTO: RoadTripWarrior \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Coolcaesar \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "GCM.jpg",
-  "how": "landmark",
-  "licence": "CC BY-SA 3.0",
+  "how": "pinned",
+  "licence": "CC BY 4.0",
   "needs_credit": true,
-  "shows": "Seven Mile Beach Grand Cayman",
-  "source": "https://commons.wikimedia.org/wiki/File:Resorts_on_Seven_Mile_Beach,_Grand_Cayman.jpg",
-  "title": "File:Resorts on Seven Mile Beach, Grand Cayman.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Seven_Mile_Beach_Facing_South.jpg",
+  "title": "File:Seven Mile Beach Facing South.jpg"
  },
  "HOU": {
   "city": "Houston",
@@ -169,15 +169,15 @@
  },
  "LAX": {
   "city": "Los Angeles",
-  "credit": "PHOTO: Carlos Pacheco \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Camiloarenivar \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "LAX.jpg",
-  "how": "landmark",
-  "licence": "CC BY 2.0",
+  "how": "pinned",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Santa Monica Pier sunset",
-  "source": "https://commons.wikimedia.org/wiki/File:Panorama_-_Beach_from_Santa_Monica_Pier.jpg",
-  "title": "File:Panorama - Beach from Santa Monica Pier.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Downtown_L.A._as_seen_from_Highland_Park.jpg",
+  "title": "File:Downtown L.A. as seen from Highland Park.jpg"
  },
  "LON": {
   "city": "London",
@@ -193,15 +193,15 @@
  },
  "MBJ": {
   "city": "Montego Bay",
-  "credit": "PHOTO: Trevor Cameron \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Todd Stafford \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MBJ.jpg",
   "how": "landmark",
-  "licence": "CC BY 2.0",
-  "needs_credit": true,
-  "shows": "Montego Bay beach",
-  "source": "https://commons.wikimedia.org/wiki/File:Iberostar_Rose_Hall_Beach,_Montego_Bay,_Jamaica_2011.jpg",
-  "title": "File:Iberostar Rose Hall Beach, Montego Bay, Jamaica 2011.jpg"
+  "licence": "Public domain",
+  "needs_credit": false,
+  "shows": "Montego Bay Jamaica coast",
+  "source": "https://commons.wikimedia.org/wiki/File:Trinidad_and_Tobago_Ship_Quinam,_mooring_in_Montego_Bay,_Jamaica_-_160619-N-FE728-122.jpg",
+  "title": "File:Trinidad and Tobago Ship Quinam, mooring in Montego Bay, Jamaica - 160619-N-FE728-122.jpg"
  },
  "MCO": {
   "city": "Orlando",
@@ -211,7 +211,7 @@
   "how": "landmark",
   "licence": "CC BY 4.0",
   "needs_credit": true,
-  "shows": "Lake Eola Park Orlando fountain",
+  "shows": "Orlando Florida skyline",
   "source": "https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg",
   "title": "File:Lake Eola and Orlando Skyline seen in 2024.jpg"
  },
@@ -229,25 +229,25 @@
  },
  "MSY": {
   "city": "New Orleans",
-  "credit": "PHOTO: Michael Gaylard \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Clark Mills \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MSY.jpg",
-  "how": "landmark",
-  "licence": "CC BY 2.0",
-  "needs_credit": true,
-  "shows": "Jackson Square New Orleans",
-  "source": "https://commons.wikimedia.org/wiki/File:Jackson_Square_Costumed_Street_Performers_-_New_Orleans_Sept_2018.jpg",
-  "title": "File:Jackson Square Costumed Street Performers - New Orleans Sept 2018.jpg"
+  "how": "pinned",
+  "licence": "Public domain",
+  "needs_credit": false,
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Jackson_Square.jpg",
+  "title": "File:Jackson Square.jpg"
  },
  "NAS": {
   "city": "Nassau",
   "credit": "PHOTO: Kiran891 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "NAS.jpg",
-  "how": "landmark",
+  "how": "pinned",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Nassau Bahamas beach",
+  "shows": "hand-picked",
   "source": "https://commons.wikimedia.org/wiki/File:Nassau_Cruise_port_as_seen_from_the_Western_Esplande_Beach,_Bahamas_(March_14,_2024)_01.jpg",
   "title": "File:Nassau Cruise port as seen from the Western Esplande Beach, Bahamas (March 14, 2024) 01.jpg"
  },
@@ -265,15 +265,15 @@
  },
  "ORD": {
   "city": "Chicago",
-  "credit": "PHOTO: King of Hearts \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: NorbertNagel \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "ORD.jpg",
-  "how": "landmark",
-  "licence": "CC BY-SA 3.0",
+  "how": "pinned",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Chicago skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Chicago_from_North_Avenue_Beach_June_2015_panorama_2.jpg",
-  "title": "File:Chicago from North Avenue Beach June 2015 panorama 2.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Chicago_Skyline_Sunrise_March_15_2026_-_01.jpg",
+  "title": "File:Chicago Skyline Sunrise March 15 2026 - 01.jpg"
  },
  "PAR": {
   "city": "Paris",
@@ -289,15 +289,15 @@
  },
  "PHL": {
   "city": "Philadelphia",
-  "credit": "PHOTO: Massimo Catarinella \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Pierre Blach\u00e9 \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PHL.jpg",
-  "how": "landmark",
-  "licence": "CC BY 3.0",
-  "needs_credit": true,
-  "shows": "Philadelphia skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:GardenStreetBridgeSchuylkillRiverSkylinePhiladelphiaPennsylvania.jpg",
-  "title": "File:GardenStreetBridgeSchuylkillRiverSkylinePhiladelphiaPennsylvania.jpg"
+  "how": "pinned",
+  "licence": "CC0",
+  "needs_credit": false,
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Philadelphia_skyline_panorama.jpg",
+  "title": "File:Philadelphia skyline panorama.jpg"
  },
  "PHX": {
   "city": "Phoenix",
@@ -325,27 +325,27 @@
  },
  "ROM": {
   "city": "Rome",
-  "credit": "PHOTO: Nicholas Hartmann \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Bert Kaufmann from Roermond, Netherlands \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "ROM.jpg",
-  "how": "landmark",
-  "licence": "CC BY-SA 4.0",
+  "how": "pinned",
+  "licence": "CC BY-SA 2.0",
   "needs_credit": true,
-  "shows": "Rome skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Rome_skyline_panorama.jpg",
-  "title": "File:Rome skyline panorama.jpg"
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Rome_Skyline_(8012016319).jpg",
+  "title": "File:Rome Skyline (8012016319).jpg"
  },
  "SEA": {
   "city": "Seattle",
-  "credit": "PHOTO: Sajad Mohamad \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: photographed by S. Bach, stitched by A.\u2026 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "SEA.jpg",
   "how": "landmark",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "shows": "Seattle skyline Mount Rainier",
-  "source": "https://commons.wikimedia.org/wiki/File:Seattle_Skyline_Kerry_Park.jpg",
-  "title": "File:Seattle Skyline Kerry Park.jpg"
+  "shows": "Space Needle Seattle",
+  "source": "https://commons.wikimedia.org/wiki/File:Space_Needle_panorama_large.jpg",
+  "title": "File:Space Needle panorama large.jpg"
  },
  "SFO": {
   "city": "San Francisco",
@@ -373,14 +373,14 @@
  },
  "TPA": {
   "city": "Tampa",
-  "credit": "PHOTO: Cl\u00e9ment Bardot \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Original uploader was user:Tampa Gator\u2026 \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "TPA.jpg",
-  "how": "landmark",
-  "licence": "CC BY-SA 4.0",
-  "needs_credit": true,
-  "shows": "Tampa skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Downtown_Tampa,_Florida.jpg",
-  "title": "File:Downtown Tampa, Florida.jpg"
+  "how": "pinned",
+  "licence": "Public domain",
+  "needs_credit": false,
+  "shows": "hand-picked",
+  "source": "https://commons.wikimedia.org/wiki/File:Skyline_of_Tampa,_Florida_from_Bayshore_Blvd.jpg",
+  "title": "File:Skyline of Tampa, Florida from Bayshore Blvd.jpg"
  }
 }
