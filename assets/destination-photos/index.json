@@ -12,14 +12,14 @@
  },
  "AUA": {
   "city": "Aruba",
-  "credit": "PHOTO: Natekammerer \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Ajathode \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AUA.jpg",
   "how": "geo",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Panoramic_view_from_Hooiberg.jpg",
-  "title": "File:Panoramic view from Hooiberg.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:ARA_building_(view_from_Willem_III_toren).jpg",
+  "title": "File:ARA building (view from Willem III toren).jpg"
  },
  "AUS": {
   "city": "Austin",
@@ -89,14 +89,14 @@
  },
  "DFW": {
   "city": "Dallas",
-  "credit": "PHOTO: Adam Jones from Kelowna, BC, Canada \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Fredlyfish4 \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DFW.jpg",
   "how": "geo",
-  "licence": "CC BY-SA 2.0",
+  "licence": "CC BY-SA 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:View_of_Grassy_Knoll_and_Fence_-_Dealey_Plaza_-_Dallas_-_Texas_-_USA_(20071677606).jpg",
-  "title": "File:View of Grassy Knoll and Fence - Dealey Plaza - Dallas - Texas - USA (20071677606).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Downtown_Dallas_from_N_Houston_St.jpg",
+  "title": "File:Downtown Dallas from N Houston St.jpg"
  },
  "DTW": {
   "city": "Detroit",
@@ -122,14 +122,14 @@
  },
  "GCM": {
   "city": "Grand Cayman",
-  "credit": "PHOTO: Anang M \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Dickelbers \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "GCM.jpg",
   "how": "geo",
-  "licence": "CC BY 3.0",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Ocean_view_from_Pedro_Castle_Road,_Savannah,_Cayman_Islands_-_panoramio.jpg",
-  "title": "File:Ocean view from Pedro Castle Road, Savannah, Cayman Islands - panoramio.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Police_car_of_Cayman_Islands_01.jpg",
+  "title": "File:Police car of Cayman Islands 01.jpg"
  },
  "HOU": {
   "city": "Houston",
@@ -188,14 +188,14 @@
  },
  "MCO": {
   "city": "Orlando",
-  "credit": "PHOTO: formulanone from Huntsville, United States \u00b7 CC BY-SA 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: James Roberts (Jampp\u2026 \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MCO.jpg",
-  "how": "text",
-  "licence": "CC BY-SA 2.0",
+  "how": "geo",
+  "licence": "CC BY-SA 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:I-4_East_-_Orlando_Downtown_City_Skyline_(43720081585).jpg",
-  "title": "File:I-4 East - Orlando Downtown City Skyline (43720081585).jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:View_from_Church_Street_Station_-_panoramio.jpg",
+  "title": "File:View from Church Street Station - panoramio.jpg"
  },
  "MIA": {
   "city": "Miami",
@@ -221,14 +221,14 @@
  },
  "NAS": {
   "city": "Nassau",
-  "credit": "PHOTO: Kiran891 \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Beyond My Ken \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "NAS.jpg",
-  "how": "text",
+  "how": "geo",
   "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Nassau_Cruise_port_as_seen_from_the_Western_Esplande_Beach,_Bahamas_(March_14,_2024)_01.jpg",
-  "title": "File:Nassau Cruise port as seen from the Western Esplande Beach, Bahamas (March 14, 2024) 01.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Atlantis_Resort,_Paradise_Island_as_seen_from_Nassau,_Bahamas.jpg",
+  "title": "File:Atlantis Resort, Paradise Island as seen from Nassau, Bahamas.jpg"
  },
  "NYC": {
   "city": "New York City",
@@ -243,14 +243,14 @@
  },
  "ORD": {
   "city": "Chicago",
-  "credit": "PHOTO: Joe+Jeanette Archie \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: DimiTalen \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "ORD.jpg",
-  "how": "geo",
-  "licence": "CC BY 2.0",
-  "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:1952_street_view_in_downtown_Chicago_(3552179897).jpg",
-  "title": "File:1952 street view in downtown Chicago (3552179897).jpg"
+  "how": "text",
+  "licence": "CC0",
+  "needs_credit": false,
+  "source": "https://commons.wikimedia.org/wiki/File:Morning_view_of_the_downtown_skyline_from_near_Morgan_Point_along_Lakefront_Trail,_Chicago,_2025.jpg",
+  "title": "File:Morning view of the downtown skyline from near Morgan Point along Lakefront Trail, Chicago, 2025.jpg"
  },
  "PAR": {
   "city": "Paris",
@@ -276,14 +276,14 @@
  },
  "PHX": {
   "city": "Phoenix",
-  "credit": "PHOTO: Marco Almbauer \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Tony Webster \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PHX.jpg",
-  "how": "text",
-  "licence": "CC0",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:By%C5%8Dd%C5%8D-in,_Phoenix_Hall.jpg",
-  "title": "File:By\u014dd\u014d-in, Phoenix Hall.jpg"
+  "how": "geo",
+  "licence": "CC BY 2.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Comerica_Bank_-_Downtown_Phoenix,_Arizona.jpg",
+  "title": "File:Comerica Bank - Downtown Phoenix, Arizona.jpg"
  },
  "PUJ": {
   "city": "Punta Cana",
