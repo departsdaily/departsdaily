@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-03T04:15:48-04:00",
+ "generated": "2026-08-03T06:15:26-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 305,
+   "price": 316,
    "d1": "2026-08-27",
    "d2": "2026-08-30",
-   "dep": "8:59AM",
+   "dep": "5:00PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "8:01AM",
-   "arr": "1:18PM",
+   "arr": "9:18PM",
    "rarr": "1:30PM",
-   "pct": 36
+   "pct": 33
   },
   "ORD": {
    "to": "ORD",
