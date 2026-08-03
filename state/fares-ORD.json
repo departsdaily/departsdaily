@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-02T22:14:10-04:00",
+ "generated": "2026-08-03T00:14:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 148,
-   "d1": "2026-08-26",
-   "d2": "2026-09-01",
-   "dep": "12:44AM",
+   "price": 143,
+   "d1": "2026-08-27",
+   "d2": "2026-09-02",
+   "dep": "7:05AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "2:25PM",
-   "arr": "8:52AM",
+   "arr": "11:08AM",
    "rarr": "6:46PM",
-   "pct": 63
+   "pct": 64
   },
   "AMS": {
    "to": "AMS",

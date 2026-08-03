@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-02T22:15:59-04:00",
+ "generated": "2026-08-03T00:16:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 495,
-   "d1": "2026-11-13",
-   "d2": "2026-11-20",
-   "dep": "7:41PM",
-   "al": "Frontier",
-   "stops": 3,
+   "price": 485,
+   "d1": "2026-11-12",
+   "d2": "2026-11-19",
+   "dep": "7:05PM",
+   "al": "Air Canada",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "10:20AM",
-   "arr": "5:40AM+1",
-   "rarr": "6:28PM",
-   "pct": 5
+   "rdep": "8:00AM",
+   "arr": "5:04AM+1",
+   "rarr": "3:52PM",
+   "pct": 7
   },
   "LON": {
    "to": "LON",
