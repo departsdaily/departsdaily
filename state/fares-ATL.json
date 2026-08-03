@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-03T00:13:55-04:00",
+ "generated": "2026-08-03T02:14:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -128,15 +128,15 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 182,
+   "price": 181,
    "d1": "2026-08-24",
    "d2": "2026-08-26",
-   "dep": "7:41PM",
+   "dep": "10:52AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:40AM",
-   "arr": "12:00AM+1",
+   "arr": "3:05PM",
    "rarr": "10:50AM",
    "pct": 73
   },
@@ -218,9 +218,9 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 125,
-   "d1": "2026-08-24",
-   "d2": "2026-08-26",
+   "price": 128,
+   "d1": "2026-08-31",
+   "d2": "2026-09-03",
    "dep": "6:29PM",
    "al": "Frontier",
    "stops": 0,
@@ -228,7 +228,7 @@
    "rdep": "7:05AM",
    "arr": "8:59PM",
    "rarr": "9:30AM",
-   "pct": 70
+   "pct": 69
   },
   "PHL": {
    "to": "PHL",
