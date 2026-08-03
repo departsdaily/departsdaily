@@ -1,0 +1,54 @@
+name: Fetch destination photos
+
+# Pulls one freely-licensed photo per destination from Wikimedia Commons and
+# commits it. Runs on demand and monthly — NOT at post time, deliberately: a
+# slow or down Commons must never be able to delay or break a morning post.
+# The renderers only ever read what is already in the repo.
+
+on:
+  workflow_dispatch:
+    inputs:
+      codes:
+        description: "Airport codes, space separated (blank = every city missing one)"
+        required: false
+      refresh:
+        description: "Re-pick photos that already exist (true/false)"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "20 8 1 * *"   # 1st of the month, picks up newly added cities
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-photos
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow
+
+      - name: Fetch photos
+        run: |
+          ARGS="${{ inputs.codes }}"
+          [ "${{ inputs.refresh }}" = "true" ] && ARGS="$ARGS --refresh"
+          python scripts/fetch_photos.py $ARGS
+
+      - name: Commit
+        run: |
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git add -A assets/destination-photos
+          git diff --cached --quiet && { echo "no new photos"; exit 0; }
+          git commit -m "Destination photos $(date +%F)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::could not push photos"; exit 1

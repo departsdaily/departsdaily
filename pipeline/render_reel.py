@@ -81,6 +81,62 @@ def SANS(s):
     return _font("DejaVuSans.ttf", s)
 
 
+# Destination photography, fetched ahead of time by scripts/fetch_photos.py.
+# Read from the repo, never over the network at post time: a slow or down
+# Commons must never be able to delay or break a morning post.
+PHOTO_DIR = os.path.join(ROOT, "assets", "destination-photos")
+try:
+    PHOTOS = json.load(open(os.path.join(PHOTO_DIR, "index.json"), encoding="utf-8"))
+except (OSError, ValueError):
+    PHOTOS = {}
+
+
+def photo_for(code):
+    """The cached photo for a destination, or None. Every caller must handle
+    None — a city with no freely-licensed photo still gets a board row, just
+    on the plain navy panel the brand already uses."""
+    e = PHOTOS.get(code)
+    if not e:
+        return None
+    path = os.path.join(PHOTO_DIR, e["file"])
+    return dict(e, path=path) if os.path.exists(path) else None
+
+
+def photo_bg(code, drift=0.0):
+    """Full-bleed destination photo, darkened enough that amber-on-navy type
+    stays legible over it.
+
+    The scrim is not decoration. White text on an unmodified daylight photo is
+    unreadable on a phone in sunlight, and a fare nobody can read is a wasted
+    post. Two layers: a global darken, then a stronger vertical gradient at top
+    and bottom where the header and the disclaimer sit."""
+    p = photo_for(code)
+    if not p:
+        return None
+    im = Image.open(p["path"]).convert("RGB")
+    if im.size != (W, H):
+        im = im.resize((W, H))
+    # Slow vertical drift, so the still photo reads as a moving shot.
+    if drift:
+        pad = int(H * 0.06)
+        big = im.resize((int(W * 1.06), int(H * 1.06)))
+        top = int((big.height - H) * drift)
+        im = big.crop(((big.width - W) // 2, top, (big.width - W) // 2 + W, top + H))
+    im = Image.blend(im, Image.new("RGB", (W, H), NAVY), 0.42)
+    scrim = Image.new("L", (1, H))
+    for y in range(H):
+        if y < 620:
+            v = int(210 * (1 - y / 620.0) ** 1.4)
+        elif y > H - 700:
+            v = int(200 * ((y - (H - 700)) / 700.0) ** 1.3)
+        else:
+            v = 0
+        scrim.putpixel((0, y), v)
+    im = Image.composite(Image.new("RGB", (W, H), NAVY),
+                         im, scrim.resize((W, H)))
+    return im, p
+
+
 B = json.load(open(origins.paths(ORIGIN)["deals"], encoding="utf-8"))
 BOARD_DATE = datetime.date.fromisoformat(B["date"])
 DATE_H = BOARD_DATE.strftime("%a %b %d").upper()
@@ -498,15 +554,29 @@ def shape_destination():
                font=MONO(30), fill=mix(NAVY, DIM, a))
 
     def frame(t):
-        img, d = base_frame()
         if t >= per * len(cards):
+            img, d = base_frame()
             header(d, right="DEPARTSDAILY.COM")
             cta(d, (t - per * len(cards)) / ctas)
             footer(d, url=True)
             return img
-        header(d)
         i = min(len(cards) - 1, int(t // per))
-        card(d, cards[i], (t - i * per) / per, i)
+        local = (t - i * per) / per
+        shot = photo_bg(cards[i]["to"], drift=local)
+        if shot:
+            img, meta = shot
+            d = ImageDraw.Draw(img)
+        else:
+            img, d = base_frame()
+            meta = None
+        header(d)
+        card(d, cards[i], local, i)
+        if meta and meta.get("needs_credit"):
+            # Attribution is a licence condition, not a nicety. It rides on the
+            # frame that actually shows the photo, so it can never drift away
+            # from the image it credits.
+            d.text((SAFE["left"], SAFE["bottom"] - 26), meta["credit"][:64],
+                   font=SANS(19), fill=DIM)
         footer(d)
         return img
 
