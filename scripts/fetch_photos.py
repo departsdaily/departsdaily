@@ -284,12 +284,62 @@ def usable(page):
             "subject": subject_score(page.get("title", ""))}
 
 
+LANDMARKS = json.load(open(os.path.join(ROOT, "config", "landmarks.json"),
+                          encoding="utf-8"))["cities"]
+
+
+def landmark_search(code):
+    """Photos of the views a city is actually known for.
+
+    This runs BEFORE geosearch, and it is the pass that matters. Coordinates
+    prove where a photo was taken; they say nothing about whether it is worth
+    looking at. Geosearch's honest best efforts were a bus stop for Houston, a
+    police car for Grand Cayman and a bike rack for Nashville — all correctly
+    located, all useless for selling a flight. config/landmarks.json names the
+    view instead, best first, and the first landmark that yields a good photo
+    wins."""
+    out = []
+    for i, term in enumerate(LANDMARKS.get(code, [])):
+        for q in ("%s %s" % (term, QUALITY), term):
+            try:
+                d = api({"action": "query", "generator": "search",
+                         "gsrsearch": q, "gsrnamespace": "6", "gsrlimit": "14",
+                         "prop": "imageinfo",
+                         "iiprop": "url|extmetadata|size|mime",
+                         "iiurlwidth": "1600"})
+            except Exception as e:
+                print("    landmark query failed: %s" % e)
+                continue
+            for page in (d.get("query", {}) or {}).get("pages", []) or []:
+                u = usable(page)
+                if not u:
+                    continue
+                # Rank earlier landmarks above later ones: the list is ordered
+                # by how strongly the view says "this city".
+                u["rank"] = len(LANDMARKS[code]) - i
+                u["how"] = "landmark"
+                u["term"] = term
+                out.append(u)
+            time.sleep(0.3)
+            if out:
+                break
+        if out:
+            return out
+    return out
+
+
 def search(city, code="", country=""):
     """Geography first, text only as a last resort.
 
     A photo taken within ~12km of the city centre is a photo OF the city. A file
     whose title merely contains the city's name is not, which is how Amsterdam
     ended up with a Monet and Rome with a moth."""
+    hits = landmark_search(code)
+    if hits:
+        best = max(hits, key=lambda h: (h["rank"], h["subject"]))
+        print("    landmark: %s (%d candidates)" % (best["term"], len(hits)))
+        return hits
+    print("    no landmark photo — trying geosearch")
     ll = coords(WIKI_TITLE.get(code, city))
     if ll:
         titles = geosearch(*ll)
@@ -401,8 +451,8 @@ def main():
         if not hits:
             print("    no usable freely-licensed photo found — skipping")
             continue
-        pick = max(hits, key=lambda h: (h["subject"], h.get("quality", 0),
-                                        h["width"] * h["height"]))
+        pick = max(hits, key=lambda h: (h.get("rank", 0), h.get("quality", 0),
+                                        h["subject"], h["width"] * h["height"]))
         dest = os.path.join(PHOTO_DIR, "%s.jpg" % code)
         try:
             size = download(pick["url"], dest)
@@ -415,6 +465,7 @@ def main():
                      "needs_credit": pick["needs_credit"],
                      "credit": pick["credit"],
                      "how": pick.get("how", "text"),
+                     "shows": pick.get("term", ""),
                      "fetched": time.strftime("%Y-%m-%d")}
         print("    %s  %s  %.0fKB" % (pick["licence"], pick["credit"][:52], size / 1024))
         time.sleep(0.5)
