@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-03T14:14:47-04:00",
+ "generated": "2026-08-03T15:42:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 14,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 55,
-   "d1": "2026-08-24",
-   "d2": "2026-08-29",
-   "dep": "7:00AM",
+   "price": 75,
+   "d1": "2026-08-31",
+   "d2": "2026-09-03",
+   "dep": "10:39PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:09PM",
-   "arr": "9:30AM",
-   "rarr": "11:44PM",
-   "pct": 86
+   "rdep": "6:30AM",
+   "arr": "1:11AM+1",
+   "rarr": "9:03AM",
+   "pct": 81
   },
   "MCO": {
    "to": "MCO",

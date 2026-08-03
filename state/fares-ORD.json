@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-03T14:14:14-04:00",
+ "generated": "2026-08-03T15:42:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 263,
-   "d1": "2026-08-27",
-   "d2": "2026-08-31",
-   "dep": "6:00AM",
+   "price": 254,
+   "d1": "2026-08-10",
+   "d2": "2026-08-12",
+   "dep": "5:00PM",
    "al": "United",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:30AM",
-   "arr": "7:55AM",
-   "rarr": "12:46PM",
-   "pct": 40
+   "rdep": "7:10PM",
+   "arr": "7:10PM",
+   "rarr": "9:30PM",
+   "pct": 42
   },
   "DEN": {
    "to": "DEN",
@@ -323,17 +323,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 815,
-   "d1": "2026-08-26",
+   "price": 756,
+   "d1": "2026-08-25",
    "d2": "2026-09-13",
-   "dep": "9:40AM",
-   "al": "",
-   "stops": 2,
-   "xfer": 1,
-   "rdep": "8:00AM",
-   "arr": "6:59PM",
-   "rarr": "3:35AM+1",
-   "pct": 4
+   "dep": "7:25PM",
+   "al": "Icelandair",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "8:30AM",
+   "arr": "5:25AM+1",
+   "rarr": "10:58PM",
+   "pct": 11
   },
   "PAR": {
    "to": "PAR",
