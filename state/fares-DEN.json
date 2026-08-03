@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-03T12:14:43-04:00",
+ "generated": "2026-08-03T14:14:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 14,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 242,
-   "d1": "2026-08-13",
-   "d2": "2026-08-15",
-   "dep": "1:20PM",
-   "al": "American",
+   "price": 145,
+   "d1": "2026-09-09",
+   "d2": "2026-09-15",
+   "dep": "3:40PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:17PM",
-   "arr": "7:07PM",
-   "rarr": "1:19AM+1",
-   "pct": 54
+   "rdep": "7:45AM",
+   "arr": "8:52PM",
+   "rarr": "12:22PM",
+   "pct": 73
   },
   "DCA": {
    "to": "DCA",

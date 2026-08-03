@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-03T12:16:00-04:00",
+ "generated": "2026-08-03T14:15:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -215,21 +215,6 @@
    "rarr": "1:51PM",
    "pct": 14
   },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 272,
-   "d1": "2026-10-03",
-   "d2": "2026-10-07",
-   "dep": "4:27PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "10:53PM",
-   "rarr": "1:09PM",
-   "pct": 58
-  },
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
@@ -263,17 +248,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 629,
-   "d1": "2026-10-14",
-   "d2": "2026-10-21",
-   "dep": "5:40PM",
-   "al": "DE",
-   "stops": 1,
+   "price": 716,
+   "d1": "2026-09-09",
+   "d2": "2026-09-23",
+   "dep": "3:40PM",
+   "al": "Icelandair",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "8:10AM",
-   "arr": "5:35AM+1",
-   "rarr": "8:25PM",
-   "pct": 34
+   "rdep": "7:10AM",
+   "arr": "4:00AM+1",
+   "rarr": "9:15PM",
+   "pct": 25
   },
   "SJU": {
    "to": "SJU",
