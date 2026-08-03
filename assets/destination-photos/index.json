@@ -1,23 +1,23 @@
 {
  "AMS": {
   "city": "Amsterdam",
-  "credit": "PHOTO: Claude Monet \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Willem van de Poll \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AMS.jpg",
-  "licence": "Public domain",
+  "licence": "CC0",
   "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Low_Tide_at_Pourville,_by_Claude_Monet,_Cleveland_Museum_of_Art,_1947.196.jpg",
-  "title": "File:Low Tide at Pourville, by Claude Monet, Cleveland Museum of Art, 1947.196.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Auto_op_de_Place_de_l%27%C3%89toile,_in_de_koplamp_is_de_weerspiegeling_van_de_Arc_de_T,_Bestanddeelnr_191-0354.jpg",
+  "title": "File:Auto op de Place de l'\u00c9toile, in de koplamp is de weerspiegeling van de Arc de T, Bestanddeelnr 191-0354.jpg"
  },
  "AUA": {
   "city": "Aruba",
-  "credit": "PHOTO: Karol Szapsza \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Kevin Rofidal, United States Coast Guard \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "AUA.jpg",
-  "licence": "CC BY-SA 4.0",
-  "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:ABC_Skar%C5%BCysko-Kamienna_ul._Miko%C5%82aja_Kopernika.jpg",
-  "title": "File:ABC Skar\u017cysko-Kamienna ul. Miko\u0142aja Kopernika.jpg"
+  "licence": "Public domain",
+  "needs_credit": false,
+  "source": "https://commons.wikimedia.org/wiki/File:Image-I35W_Collapse_-_Day_4_-_Operations_%26_Scene_(95)_edit.jpg",
+  "title": "File:Image-I35W Collapse - Day 4 - Operations & Scene (95) edit.jpg"
  },
  "AUS": {
   "city": "Austin",
@@ -131,13 +131,13 @@
  },
  "LAS": {
   "city": "Las Vegas",
-  "credit": "PHOTO: Christian David \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: King of Hearts \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "LAS.jpg",
-  "licence": "CC BY-SA 4.0",
+  "licence": "CC BY-SA 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:The_Strip,_Las_Vegas_-_April_2026.jpg",
-  "title": "File:The Strip, Las Vegas - April 2026.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Bellagio_Las_Vegas_December_2013_panorama.jpg",
+  "title": "File:Bellagio Las Vegas December 2013 panorama.jpg"
  },
  "LAX": {
   "city": "Los Angeles",
@@ -181,13 +181,13 @@
  },
  "MIA": {
   "city": "Miami",
-  "credit": "PHOTO: Wilfredor \u00b7 CC0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Dori \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "MIA.jpg",
-  "licence": "CC0",
-  "needs_credit": false,
-  "source": "https://commons.wikimedia.org/wiki/File:Miami,_Florida_skyline.jpg",
-  "title": "File:Miami, Florida skyline.jpg"
+  "licence": "CC BY-SA 3.0",
+  "needs_credit": true,
+  "source": "https://commons.wikimedia.org/wiki/File:Downtown_Miami_skyline_20100305.jpg",
+  "title": "File:Downtown Miami skyline 20100305.jpg"
  },
  "MSY": {
   "city": "New Orleans",
@@ -231,13 +231,13 @@
  },
  "PAR": {
   "city": "Paris",
-  "credit": "PHOTO: Wladyslaw Sojka \u00b7 CC BY 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: DXR \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PAR.jpg",
-  "licence": "CC BY 3.0",
+  "licence": "CC BY-SA 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Paris-pano-wladyslaw.jpg",
-  "title": "File:Paris-pano-wladyslaw.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Front_de_Seine_as_seen_from_Pont_Mirabeau_140412_1.jpg",
+  "title": "File:Front de Seine as seen from Pont Mirabeau 140412 1.jpg"
  },
  "PHL": {
   "city": "Philadelphia",
@@ -251,13 +251,13 @@
  },
  "PHX": {
   "city": "Phoenix",
-  "credit": "PHOTO: H. Zell \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Albin Olsson \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "PHX.jpg",
   "licence": "CC BY-SA 3.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Haria_-_Phoenix_canariensis_01.jpg",
-  "title": "File:Haria - Phoenix canariensis 01.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:ESC2014_-_Austria_04.jpg",
+  "title": "File:ESC2014 - Austria 04.jpg"
  },
  "PUJ": {
   "city": "Punta Cana",
@@ -271,13 +271,13 @@
  },
  "ROM": {
   "city": "Rome",
-  "credit": "PHOTO: H. Zell \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Ren\u00e9e Kools \u00b7 CC BY 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "ROM.jpg",
-  "licence": "CC BY-SA 3.0",
+  "licence": "CC BY 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Mactra_stultorum_01.jpg",
-  "title": "File:Mactra stultorum 01.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Breda_beeld_van_een_heilige_-_Sint-Antoniuskathedraal_2024-09-17.jpg",
+  "title": "File:Breda beeld van een heilige - Sint-Antoniuskathedraal 2024-09-17.jpg"
  },
  "SEA": {
   "city": "Seattle",
@@ -311,12 +311,12 @@
  },
  "TPA": {
   "city": "Tampa",
-  "credit": "PHOTO: Alvesgaspar \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Alvesgaspar \u00b7 CC BY-SA 4.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "TPA.jpg",
-  "licence": "CC BY-SA 3.0",
+  "licence": "CC BY-SA 4.0",
   "needs_credit": true,
-  "source": "https://commons.wikimedia.org/wiki/File:Tampa_Florida_November_2013-3a.jpg",
-  "title": "File:Tampa Florida November 2013-3a.jpg"
+  "source": "https://commons.wikimedia.org/wiki/File:Tampa_Florida_November_2013-3g.jpg",
+  "title": "File:Tampa Florida November 2013-3g.jpg"
  }
 }
