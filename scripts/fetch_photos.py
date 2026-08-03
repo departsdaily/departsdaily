@@ -208,7 +208,7 @@ def imageinfo(titles):
 # New York, X's headquarters for San Francisco. Every one genuinely shot in the
 # right city, and every one useless as a backdrop for a fare.
 WANT = {"skyline": 6, "cityscape": 6, "panorama": 5, "panoramic": 5,
-        "aerial": 5, "beach": 5, "waterfront": 4, "harbour": 4, "harbor": 4,
+        "aerial view": 4, "beach": 5, "waterfront": 4, "harbour": 4, "harbor": 4,
         "downtown": 4, "old town": 4, "seen from": 3, "view of": 3,
         "view from": 3, "sunset": 3, "coast": 3, "bay": 3, "island": 3,
         "bridge": 2, "plaza": 2, "piazza": 2, "square": 2, "cathedral": 2,
@@ -231,7 +231,16 @@ AVOID = {"employee": 6, "meeting": 6, "conference": 6, "protest": 6,
          # Historical shots date the post. We are selling a flight for next
          # month, not a picture from 1952.
          "19th century": 6, "1900": 5, "1930": 5, "1940": 5, "1950": 5,
-         "1952": 5, "1960": 4, "historic photo": 5, "postcard": 5}
+         "1952": 5, "1960": 4, "historic photo": 5, "postcard": 5,
+         # Denver came back as a Landsat-style terrain plate, which scored well
+         # purely because "aerial" was in the wanted list. A satellite image is
+         # not a photograph of a place people want to visit.
+         "satellite": 9, "landsat": 9, "orthophoto": 9, "topographic": 9,
+         "digital elevation": 9, "from space": 7, "nasa": 5,
+         # And DC came back as workers and a police detail beside the
+         # reflecting pool: correctly located, correctly named, unusable.
+         "police": 7, "workers": 6, "construction": 6, "crane": 4,
+         "roadworks": 6, "scaffolding": 5, "closed": 4, "under construction": 8}
 
 
 def subject_score(title):
@@ -316,6 +325,11 @@ def landmark_search(code):
                     continue
                 # Rank earlier landmarks above later ones: the list is ordered
                 # by how strongly the view says "this city".
+                # A landmark hit still has to LOOK like the landmark. Without
+                # this floor the first term in the list won automatically, even
+                # when its best candidate was a satellite plate or a work crew.
+                if u["subject"] < 3:
+                    continue
                 u["rank"] = len(LANDMARKS[code]) - i
                 u["how"] = "landmark"
                 u["term"] = term
@@ -451,8 +465,10 @@ def main():
         if not hits:
             print("    no usable freely-licensed photo found — skipping")
             continue
-        pick = max(hits, key=lambda h: (h.get("rank", 0), h.get("quality", 0),
-                                        h["subject"], h["width"] * h["height"]))
+        # Quality first: a Commons Featured Picture of the second landmark
+        # beats a mediocre shot of the first one.
+        pick = max(hits, key=lambda h: (h.get("quality", 0), h["subject"],
+                                        h.get("rank", 0), h["width"] * h["height"]))
         dest = os.path.join(PHOTO_DIR, "%s.jpg" % code)
         try:
             size = download(pick["url"], dest)
