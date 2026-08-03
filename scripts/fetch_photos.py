@@ -123,6 +123,25 @@ NOT_A_PHOTO = ("painting", "portrait", "museum", "engraving", "lithograph",
                "moth", "beetle", "butterfly", "plantae", "flower")
 
 
+# Wikipedia titles for cities whose plain name is ambiguous or is a
+# disambiguation page (no coordinates -> no geosearch -> text fallback -> junk).
+# "Phoenix" alone resolved to nothing useful and the text fallback happily
+# returned Byodo-in Phoenix Hall, a temple in Uji, JAPAN.
+WIKI_TITLE = {
+    "PHX": "Phoenix, Arizona", "NAS": "Nassau, Bahamas",
+    "AUA": "Oranjestad, Aruba", "GCM": "George Town, Cayman Islands",
+    "MBJ": "Montego Bay", "PUJ": "Punta Cana", "SJU": "San Juan, Puerto Rico",
+    "ROM": "Rome", "PAR": "Paris", "LON": "London", "AMS": "Amsterdam",
+    "NYC": "New York City", "ORD": "Chicago", "DFW": "Dallas",
+    "DCA": "Washington, D.C.", "HOU": "Houston", "BNA": "Nashville, Tennessee",
+    "MCO": "Orlando, Florida", "FLL": "Fort Lauderdale, Florida",
+    "MSY": "New Orleans", "TPA": "Tampa, Florida", "AUS": "Austin, Texas",
+    "LAS": "Las Vegas", "LAX": "Los Angeles", "SFO": "San Francisco",
+    "SEA": "Seattle", "DEN": "Denver", "BOS": "Boston", "PHL": "Philadelphia",
+    "MIA": "Miami", "DTW": "Detroit", "CUN": "Cancún",
+}
+
+
 def coords(city):
     """Where the city actually IS, from Wikipedia.
 
@@ -202,7 +221,17 @@ AVOID = {"employee": 6, "meeting": 6, "conference": 6, "protest": 6,
          "breakfast": 6, "spoon": 8, "fork": 8, "plate of": 6, "recipe": 6,
          "woman": 5, "man in": 5, "portrait": 6, "wedding": 6, "hurricane": 6,
          "collapse": 8, "crash": 8, "fire": 5, "damage": 6, "funeral": 8,
-         "messenger": 5, "jacket": 5, "chairs": 5, "sign": 3, "logo": 6}
+         "messenger": 5, "jacket": 5, "chairs": 5, "sign": 3, "logo": 6,
+         # Places where something terrible happened are not backdrops for a
+         # cheap-flight ad. Dallas came back as Dealey Plaza and the grassy
+         # knoll, which is the JFK assassination site.
+         "dealey": 9, "grassy knoll": 9, "assassination": 9, "memorial": 6,
+         "cemetery": 9, "graveyard": 9, "massacre": 9, "ground zero": 9,
+         "9/11": 9, "bombing": 9, "shooting": 9, "museum": 3,
+         # Historical shots date the post. We are selling a flight for next
+         # month, not a picture from 1952.
+         "19th century": 6, "1900": 5, "1930": 5, "1940": 5, "1950": 5,
+         "1952": 5, "1960": 4, "historic photo": 5, "postcard": 5}
 
 
 def subject_score(title):
@@ -255,13 +284,13 @@ def usable(page):
             "subject": subject_score(page.get("title", ""))}
 
 
-def search(city, country=""):
+def search(city, code="", country=""):
     """Geography first, text only as a last resort.
 
     A photo taken within ~12km of the city centre is a photo OF the city. A file
     whose title merely contains the city's name is not, which is how Amsterdam
     ended up with a Monet and Rome with a moth."""
-    ll = coords(city)
+    ll = coords(WIKI_TITLE.get(code, city))
     if ll:
         titles = geosearch(*ll)
         print("    %s -> %.3f,%.3f · %d nearby files" % (city, ll[0], ll[1], len(titles)))
@@ -368,7 +397,7 @@ def main():
         if have and not refresh and os.path.exists(os.path.join(PHOTO_DIR, have["file"])):
             continue
         print("  %s (%s)" % (code, city))
-        hits = search(city)
+        hits = search(city, code)
         if not hits:
             print("    no usable freely-licensed photo found — skipping")
             continue
