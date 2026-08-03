@@ -85,15 +85,15 @@
  },
  "DEN": {
   "city": "Denver",
-  "credit": "PHOTO: Thanks to Kevin Day for help in describ\u2026 \u00b7 Public domain \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Min Lee \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "DEN.jpg",
   "how": "landmark",
-  "licence": "Public domain",
-  "needs_credit": false,
-  "shows": "Denver skyline Rocky Mountains",
-  "source": "https://commons.wikimedia.org/wiki/File:Denver_Skyline_(4801).jpg",
-  "title": "File:Denver Skyline (4801).jpg"
+  "licence": "CC BY-SA 3.0",
+  "needs_credit": true,
+  "shows": "Denver Union Station night",
+  "source": "https://commons.wikimedia.org/wiki/File:Union_Station_downtown.png",
+  "title": "File:Union Station downtown.png"
  },
  "DFW": {
   "city": "Dallas",
@@ -169,15 +169,15 @@
  },
  "LAX": {
   "city": "Los Angeles",
-  "credit": "PHOTO: Tuxyso \u00b7 CC BY-SA 3.0 \u00b7 VIA WIKIMEDIA COMMONS",
+  "credit": "PHOTO: Carlos Pacheco \u00b7 CC BY 2.0 \u00b7 VIA WIKIMEDIA COMMONS",
   "fetched": "2026-08-03",
   "file": "LAX.jpg",
   "how": "landmark",
-  "licence": "CC BY-SA 3.0",
+  "licence": "CC BY 2.0",
   "needs_credit": true,
-  "shows": "Los Angeles skyline",
-  "source": "https://commons.wikimedia.org/wiki/File:Skyscraper_Los_Angeles_Downtown_2013.jpg",
-  "title": "File:Skyscraper Los Angeles Downtown 2013.jpg"
+  "shows": "Santa Monica Pier sunset",
+  "source": "https://commons.wikimedia.org/wiki/File:Panorama_-_Beach_from_Santa_Monica_Pier.jpg",
+  "title": "File:Panorama - Beach from Santa Monica Pier.jpg"
  },
  "LON": {
   "city": "London",
@@ -211,7 +211,7 @@
   "how": "landmark",
   "licence": "CC BY 4.0",
   "needs_credit": true,
-  "shows": "Orlando skyline Lake Eola",
+  "shows": "Lake Eola Park Orlando fountain",
   "source": "https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg",
   "title": "File:Lake Eola and Orlando Skyline seen in 2024.jpg"
  },
