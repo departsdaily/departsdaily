@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-04T12:14:02-04:00",
+ "generated": "2026-08-04T14:14:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -244,6 +244,21 @@
    "arr": "11:18PM",
    "rarr": "11:06AM",
    "pct": 81
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 418,
+   "d1": "2026-08-15",
+   "d2": "2026-08-22",
+   "dep": "7:11PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:06PM",
+   "arr": "2:21AM+1",
+   "rarr": "1:20AM+1",
+   "pct": 37
   },
   "SFO": {
    "to": "SFO",

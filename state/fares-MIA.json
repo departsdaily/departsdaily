@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-04T12:16:00-04:00",
+ "generated": "2026-08-04T14:15:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 304,
-   "d1": "2026-11-20",
-   "d2": "2026-11-24",
-   "dep": "10:00AM",
+   "price": 297,
+   "d1": "2026-09-12",
+   "d2": "2026-09-16",
+   "dep": "7:45PM",
    "al": "UP",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:30PM",
-   "arr": "11:00AM",
-   "rarr": "6:35PM",
-   "pct": 37
+   "rdep": "7:45AM",
+   "arr": "8:45PM",
+   "rarr": "8:50AM",
+   "pct": 38
   },
   "PAR": {
    "to": "PAR",
@@ -323,17 +323,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 745,
-   "d1": "2026-10-03",
-   "d2": "2026-10-15",
-   "dep": "9:35PM",
-   "al": "BF",
-   "stops": 2,
+   "price": 543,
+   "d1": "2026-08-09",
+   "d2": "2026-08-23",
+   "dep": "9:30PM",
+   "al": "UX",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:40PM",
-   "arr": "10:10AM+1",
-   "rarr": "1:30AM+1",
-   "pct": 22
+   "rdep": "6:25PM",
+   "arr": "8:25AM+1",
+   "rarr": "6:25AM+1",
+   "pct": 43
   },
   "SJU": {
    "to": "SJU",

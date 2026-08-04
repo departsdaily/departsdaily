@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-04T12:14:40-04:00",
+ "generated": "2026-08-04T14:14:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -248,9 +248,9 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 183,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
+   "price": 186,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
    "dep": "8:22PM",
    "al": "Frontier",
    "stops": 0,
@@ -413,17 +413,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 740,
-   "d1": "2026-08-18",
-   "d2": "2026-08-28",
-   "dep": "9:30PM",
+   "price": 544,
+   "d1": "2026-08-28",
+   "d2": "2026-09-06",
+   "dep": "2:30PM",
    "al": "Turkish",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:05PM",
-   "arr": "12:05PM+1",
-   "rarr": "11:25AM+1",
-   "pct": 22
+   "rdep": "8:00PM",
+   "arr": "5:00AM+1",
+   "rarr": "11:20AM+1",
+   "pct": 43
   },
   "SJU": {
    "to": "SJU",
