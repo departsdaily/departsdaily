@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-04T06:16:18-04:00",
+ "generated": "2026-08-04T08:16:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 208,
-   "d1": "2026-09-25",
-   "d2": "2026-09-28",
-   "dep": "5:15AM",
-   "al": "JetBlue",
+   "price": 212,
+   "d1": "2026-09-03",
+   "d2": "2026-09-05",
+   "dep": "7:17PM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:59AM",
-   "arr": "9:15AM",
-   "rarr": "3:11PM",
-   "pct": 47
+   "rdep": "7:44PM",
+   "arr": "10:35PM",
+   "rarr": "1:38AM+1",
+   "pct": 46
   },
   "PHL": {
    "to": "PHL",
