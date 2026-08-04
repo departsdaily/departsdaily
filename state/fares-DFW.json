@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-04T10:14:30-04:00",
+ "generated": "2026-08-04T12:14:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 150,
-   "d1": "2026-09-21",
-   "d2": "2026-09-23",
-   "dep": "7:48PM",
+   "price": 146,
+   "d1": "2026-09-27",
+   "d2": "2026-10-01",
+   "dep": "6:05AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "8:25PM",
-   "arr": "12:06AM+1",
+   "arr": "11:56AM",
    "rarr": "2:19AM+1",
-   "pct": 67
+   "pct": 68
   },
   "HOU": {
    "to": "HOU",
@@ -308,17 +308,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 306,
-   "d1": "2026-09-01",
-   "d2": "2026-09-08",
+   "price": 312,
+   "d1": "2026-10-03",
+   "d2": "2026-10-07",
    "dep": "9:00PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:50PM",
+   "rdep": "12:49PM",
    "arr": "2:03AM+1",
-   "rarr": "2:56AM+1",
-   "pct": 41
+   "rarr": "6:09PM",
+   "pct": 40
   },
   "GCM": {
    "to": "GCM",

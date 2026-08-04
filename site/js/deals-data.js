@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-04 10:13 EDT
+   Generated 2026-08-04 12:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-04T10:13:18-04:00",
+ updated:"2026-08-04T12:13:24-04:00",
 };
 const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:135,d1:"2026-08-19",d2:"2026-08-24",dep:"9:52PM",al:"Frontier",stops:0,rdep:"6:10AM",arr:"11:44PM",rarr:"8:01AM",exp:"2026-08-06"},
@@ -42,8 +42,8 @@ const DEALS={CLT:[
  {to:"LAX",city:"Los Angeles",price:145,d1:"2026-10-07",d2:"2026-10-12",dep:"4:58PM",al:"Frontier",stops:0,rdep:"8:07AM",arr:"8:16PM",rarr:"11:12AM",exp:"2026-08-06"},
  {to:"MIA",city:"Miami",price:146,d1:"2026-09-08",d2:"2026-09-15",dep:"10:02AM",al:"Frontier",stops:0,rdep:"2:37PM",arr:"1:12PM",rarr:"6:00PM",exp:"2026-08-06"},
  {to:"SJU",city:"San Juan, PR",price:237,d1:"2026-10-01",d2:"2026-10-05",dep:"5:55PM",al:"Frontier",stops:1,rdep:"2:57AM",arr:"11:43PM",rarr:"9:08AM",exp:"2026-08-06"},
- {to:"CUN",city:"Cancún",price:306,d1:"2026-09-01",d2:"2026-09-08",dep:"9:00PM",al:"Volaris",stops:1,rdep:"9:50PM",arr:"2:03AM+1",rarr:"2:56AM+1",exp:"2026-08-06"},
- {to:"LON",city:"London",price:715,d1:"2026-09-01",d2:"2026-09-22",dep:"5:18PM",al:"",stops:3,rdep:"10:50AM",arr:"4:00AM+1",rarr:"4:16AM+1",xfer:1,exp:"2026-08-06"}],DEN:[
+ {to:"CUN",city:"Cancún",price:312,d1:"2026-10-03",d2:"2026-10-07",dep:"9:00PM",al:"Volaris",stops:1,rdep:"12:49PM",arr:"2:03AM+1",rarr:"6:09PM",exp:"2026-08-06"},
+ {to:"ROM",city:"Rome",price:740,d1:"2026-08-18",d2:"2026-08-28",dep:"9:30PM",al:"Turkish",stops:1,rdep:"8:05PM",arr:"12:05PM+1",rarr:"11:25AM+1",exp:"2026-08-06"}],DEN:[
  {to:"LAX",city:"Los Angeles",price:75,d1:"2026-08-31",d2:"2026-09-03",dep:"10:39PM",al:"Frontier",stops:0,rdep:"6:30AM",arr:"1:11AM+1",rarr:"9:03AM",exp:"2026-08-06"},
  {to:"LAS",city:"Las Vegas",price:89,d1:"2026-10-12",d2:"2026-10-15",dep:"10:30PM",al:"Frontier",stops:0,rdep:"8:30AM",arr:"12:31AM+1",rarr:"10:36AM",exp:"2026-08-06"},
  {to:"ORD",city:"Chicago",price:108,d1:"2026-09-29",d2:"2026-10-05",dep:"8:55PM",al:"Frontier",stops:0,rdep:"6:30AM",arr:"11:23PM",rarr:"9:15AM",exp:"2026-08-06"},
