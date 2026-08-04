@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-03T18:15:51-04:00",
+ "generated": "2026-08-03T20:15:52-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -53,17 +53,32 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 271,
-   "d1": "2026-09-14",
+   "price": 314,
+   "d1": "2026-09-13",
    "d2": "2026-09-20",
-   "dep": "6:15AM",
+   "dep": "11:57PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "12:36PM",
-   "rarr": "2:04PM",
-   "pct": 59
+   "rdep": "5:00PM",
+   "arr": "6:10AM+1",
+   "rarr": "12:16AM+1",
+   "pct": 52
+  },
+  "DEN": {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 217,
+   "d1": "2026-09-07",
+   "d2": "2026-09-09",
+   "dep": "9:36PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "1:07PM",
+   "arr": "2:23AM+1",
+   "rarr": "4:08PM",
+   "pct": 43
   },
   "DFW": {
    "to": "DFW",
@@ -243,6 +258,21 @@
    "rdep": "3:50PM",
    "arr": "1:40PM+1",
    "rarr": "6:43AM+1",
+   "pct": 17
+  },
+  "MBJ": {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 450,
+   "d1": "2026-08-26",
+   "d2": "2026-09-02",
+   "dep": "8:21PM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "12:38PM",
+   "arr": "4:01AM+1",
+   "rarr": "11:05PM",
    "pct": 17
   },
   "ROM": {

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-03T18:15:16-04:00",
+ "generated": "2026-08-03T20:15:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 152,
-   "d1": "2026-08-23",
-   "d2": "2026-08-25",
-   "dep": "8:00PM",
+   "price": 149,
+   "d1": "2026-09-28",
+   "d2": "2026-10-01",
+   "dep": "8:15AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:28AM",
-   "arr": "11:23PM",
-   "rarr": "12:25PM",
-   "pct": 63
+   "rdep": "6:00AM",
+   "arr": "11:27AM",
+   "rarr": "8:54AM",
+   "pct": 64
   },
   "HOU": {
    "to": "HOU",
@@ -218,17 +218,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 376,
-   "d1": "2026-10-30",
-   "d2": "2026-11-02",
-   "dep": "8:25PM",
-   "al": "Alaska",
-   "stops": 1,
+   "price": 354,
+   "d1": "2026-08-27",
+   "d2": "2026-09-05",
+   "dep": "7:05PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "12:59AM",
-   "arr": "5:55AM+1",
-   "rarr": "6:45AM",
-   "pct": 43
+   "rdep": "11:06PM",
+   "arr": "12:46AM+1",
+   "rarr": "3:59AM+1",
+   "pct": 47
   },
   "SEA": {
    "to": "SEA",
@@ -308,17 +308,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 368,
+   "price": 158,
    "d1": "2026-10-18",
-   "d2": "2026-10-22",
+   "d2": "2026-10-30",
    "dep": "9:26AM",
    "al": "Aerom\u00e9xico",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:40PM",
+   "rdep": "12:55PM",
    "arr": "5:28PM",
-   "rarr": "8:10PM",
-   "pct": 29
+   "rarr": "4:55PM",
+   "pct": 70
   },
   "LON": {
    "to": "LON",

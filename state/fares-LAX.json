@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-03T18:14:58-04:00",
+ "generated": "2026-08-03T20:15:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 235,
-   "d1": "2026-10-03",
-   "d2": "2026-10-05",
-   "dep": "11:50PM",
+   "price": 226,
+   "d1": "2026-09-21",
+   "d2": "2026-09-24",
+   "dep": "7:46PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "6:24AM+1",
-   "rarr": "1:51PM",
-   "pct": 75
+   "rdep": "1:30PM",
+   "arr": "2:34AM+1",
+   "rarr": "8:53PM",
+   "pct": 76
   },
   "ORD": {
    "to": "ORD",

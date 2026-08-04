@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-03T18:13:32-04:00",
+ "generated": "2026-08-03T20:13:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -64,21 +64,6 @@
    "arr": "9:24AM",
    "rarr": "7:07PM",
    "pct": 62
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 223,
-   "d1": "2026-08-19",
-   "d2": "2026-08-22",
-   "dep": "5:21PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:00AM",
-   "arr": "9:16PM",
-   "rarr": "2:26PM",
-   "pct": 51
   },
   "DFW": {
    "to": "DFW",

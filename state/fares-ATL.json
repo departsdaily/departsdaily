@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-03T18:13:50-04:00",
+ "generated": "2026-08-03T20:13:50-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -95,6 +95,21 @@
    "rarr": "8:20AM",
    "pct": 81
   },
+  "FLL": {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 78,
+   "d1": "2026-08-27",
+   "d2": "2026-08-29",
+   "dep": "6:50AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "9:47PM",
+   "arr": "8:48AM",
+   "rarr": "11:59PM",
+   "pct": 78
+  },
   "HOU": {
    "to": "HOU",
    "city": "Houston",
@@ -113,7 +128,7 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 182,
+   "price": 179,
    "d1": "2026-08-24",
    "d2": "2026-08-26",
    "dep": "7:41PM",
@@ -123,7 +138,7 @@
    "rdep": "6:40AM",
    "arr": "12:00AM+1",
    "rarr": "10:50AM",
-   "pct": 73
+   "pct": 74
   },
   "LAX": {
    "to": "LAX",
@@ -278,17 +293,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 182,
-   "d1": "2026-08-10",
-   "d2": "2026-08-20",
-   "dep": "12:05PM",
+   "price": 404,
+   "d1": "2026-08-28",
+   "d2": "2026-09-02",
+   "dep": "9:00PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "3:06PM",
-   "arr": "2:53PM",
-   "rarr": "6:00PM",
-   "pct": 65
+   "rdep": "5:25AM",
+   "arr": "3:52AM+1",
+   "rarr": "1:06PM",
+   "pct": 22
   },
   "LON": {
    "to": "LON",
