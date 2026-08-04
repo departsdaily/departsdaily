@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-03T22:15:53-04:00",
+ "generated": "2026-08-04T00:15:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 765,
-   "d1": "2026-11-11",
-   "d2": "2026-11-21",
-   "dep": "4:50PM",
-   "al": "TAP Portugal",
-   "stops": 1,
+   "price": 779,
+   "d1": "2026-09-21",
+   "d2": "2026-10-05",
+   "dep": "4:55PM",
+   "al": "Iberia",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "4:35PM",
-   "arr": "3:50AM+1",
-   "rarr": "5:15AM+1",
-   "pct": 10
+   "rdep": "8:50PM",
+   "arr": "4:20AM+1",
+   "rarr": "10:05AM+1",
+   "pct": 8
   },
   "MBJ": {
    "to": "MBJ",
@@ -293,17 +293,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 307,
-   "d1": "2026-09-21",
-   "d2": "2026-09-30",
-   "dep": "7:45PM",
+   "price": 304,
+   "d1": "2026-11-20",
+   "d2": "2026-11-24",
+   "dep": "10:00AM",
    "al": "UP",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:45AM",
-   "arr": "8:40PM",
-   "rarr": "8:50AM",
-   "pct": 36
+   "rdep": "5:30PM",
+   "arr": "11:00AM",
+   "rarr": "6:35PM",
+   "pct": 37
   },
   "PAR": {
    "to": "PAR",

@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-03T22:14:37-04:00",
+ "generated": "2026-08-04T00:14:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 353,
-   "d1": "2026-08-06",
-   "d2": "2026-08-09",
-   "dep": "12:15PM",
+   "price": 153,
+   "d1": "2026-09-17",
+   "d2": "2026-09-20",
+   "dep": "2:52PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:14PM",
-   "arr": "5:17PM",
-   "rarr": "4:07PM",
-   "pct": 7
+   "rdep": "9:00PM",
+   "arr": "4:31PM",
+   "rarr": "3:34AM+1",
+   "pct": 60
   },
   "NYC": {
    "to": "NYC",
@@ -233,7 +233,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 250,
+   "price": 246,
    "d1": "2026-09-03",
    "d2": "2026-09-09",
    "dep": "7:32AM",
@@ -243,7 +243,7 @@
    "rdep": "4:27PM",
    "arr": "1:23PM",
    "rarr": "9:22PM",
-   "pct": 47
+   "pct": 48
   },
   "SFO": {
    "to": "SFO",
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 258,
-   "d1": "2026-08-06",
-   "d2": "2026-08-10",
-   "dep": "5:30AM",
+   "price": 279,
+   "d1": "2026-08-07",
+   "d2": "2026-08-11",
+   "dep": "10:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:40PM",
-   "arr": "8:09AM",
-   "rarr": "10:08PM",
-   "pct": 43
+   "rdep": "10:27AM",
+   "arr": "2:05PM",
+   "rarr": "1:23PM",
+   "pct": 38
   },
   "AMS": {
    "to": "AMS",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 294,
-   "d1": "2026-09-21",
-   "d2": "2026-09-25",
-   "dep": "1:45PM",
+   "price": 237,
+   "d1": "2026-10-01",
+   "d2": "2026-10-05",
+   "dep": "5:55PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "7:29PM",
-   "rarr": "3:49PM",
-   "pct": 30
+   "rdep": "2:57AM",
+   "arr": "11:43PM",
+   "rarr": "9:08AM",
+   "pct": 44
   }
  }
 }

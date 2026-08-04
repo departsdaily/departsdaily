@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-03T22:14:00-04:00",
+ "generated": "2026-08-04T00:13:57-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 75,
-   "d1": "2026-09-04",
-   "d2": "2026-09-09",
-   "dep": "9:00PM",
+   "price": 77,
+   "d1": "2026-09-28",
+   "d2": "2026-10-03",
+   "dep": "9:55AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:28AM",
-   "arr": "11:14PM",
-   "rarr": "8:40AM",
-   "pct": 82
+   "rdep": "6:08AM",
+   "arr": "12:23PM",
+   "rarr": "8:20AM",
+   "pct": 81
   },
   "LAS": {
    "to": "LAS",
@@ -260,21 +260,6 @@
    "rarr": "2:50AM+1",
    "pct": 68
   },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 107,
-   "d1": "2026-08-06",
-   "d2": "2026-08-09",
-   "dep": "8:37PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "10:15PM",
-   "rarr": "9:02AM",
-   "pct": 75
-  },
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
@@ -293,32 +278,32 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 404,
-   "d1": "2026-08-28",
-   "d2": "2026-09-02",
-   "dep": "9:00PM",
+   "price": 376,
+   "d1": "2026-10-29",
+   "d2": "2026-11-10",
+   "dep": "11:31AM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:25AM",
-   "arr": "3:52AM+1",
-   "rarr": "1:06PM",
-   "pct": 22
+   "rdep": "11:29AM",
+   "arr": "2:14PM",
+   "rarr": "5:40PM",
+   "pct": 28
   },
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 749,
-   "d1": "2026-10-08",
-   "d2": "2026-10-15",
-   "dep": "10:48PM",
+   "price": 706,
+   "d1": "2026-10-29",
+   "d2": "2026-11-10",
+   "dep": "10:07AM",
    "al": "",
-   "stops": 2,
+   "stops": 3,
    "xfer": 1,
-   "rdep": "2:00PM",
-   "arr": "10:42AM+1",
-   "rarr": "1:09AM+1",
-   "pct": 12
+   "rdep": "10:10AM",
+   "arr": "12:22AM+1",
+   "rarr": "9:42PM",
+   "pct": 17
   },
   "MBJ": {
    "to": "MBJ",

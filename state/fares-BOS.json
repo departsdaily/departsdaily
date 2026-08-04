@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-03T22:16:29-04:00",
+ "generated": "2026-08-04T00:16:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 261,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
+   "price": 278,
+   "d1": "2026-08-21",
+   "d2": "2026-08-24",
    "dep": "12:45PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:55PM",
+   "rdep": "6:25AM",
    "arr": "5:36PM",
-   "rarr": "11:23PM",
-   "pct": 38
+   "rarr": "10:35AM",
+   "pct": 34
   },
   "HOU": {
    "to": "HOU",
@@ -188,17 +188,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 283,
-   "d1": "2026-09-05",
-   "d2": "2026-09-07",
-   "dep": "12:45PM",
-   "al": "Frontier",
+   "price": 257,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
+   "dep": "8:00AM",
+   "al": "Alaska",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:06PM",
-   "arr": "7:46PM",
-   "rarr": "5:26AM+1",
-   "pct": 53
+   "rdep": "6:38PM",
+   "arr": "3:40PM",
+   "rarr": "3:19AM+1",
+   "pct": 58
   },
   "SEA": {
    "to": "SEA",
@@ -308,17 +308,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 581,
-   "d1": "2026-10-21",
-   "d2": "2026-10-27",
-   "dep": "11:15PM",
-   "al": "TAP Portugal",
+   "price": 757,
+   "d1": "2026-08-13",
+   "d2": "2026-08-21",
+   "dep": "12:41PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:20AM",
-   "arr": "7:45AM+1",
-   "rarr": "8:30PM",
-   "pct": 35
+   "rdep": "2:10PM",
+   "arr": "9:33PM",
+   "rarr": "11:10PM",
+   "pct": 16
   },
   "PUJ": {
    "to": "PUJ",

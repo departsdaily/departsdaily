@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-03T22:13:41-04:00",
+ "generated": "2026-08-04T00:13:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 21,
  "routes_failed": [],
@@ -23,7 +23,7 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 184,
+   "price": 214,
    "d1": "2026-09-18",
    "d2": "2026-09-21",
    "dep": "9:40PM",
@@ -33,7 +33,7 @@
    "rdep": "7:20PM",
    "arr": "1:37AM+1",
    "rarr": "8:55PM",
-   "pct": 58
+   "pct": 51
   },
   "BOS": {
    "to": "BOS",
