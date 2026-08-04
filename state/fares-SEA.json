@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-04T00:16:07-04:00",
+ "generated": "2026-08-04T02:16:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 21,
  "routes_failed": [],
