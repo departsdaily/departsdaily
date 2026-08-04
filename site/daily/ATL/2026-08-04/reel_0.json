@@ -1,0 +1,48 @@
+{
+ "origin": "ATL",
+ "date": "2026-08-04",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from ATL, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 2.91,
+ "fps": 30,
+ "audio": "red-eye@2.4.mp3",
+ "audio_start": 2.4,
+ "plan_shape": "weekend",
+ "plan_angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.",
+ "featured": [
+  {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 64,
+   "disc": 65,
+   "baseline": 181,
+   "nights": 2,
+   "d1": "2026-08-31",
+   "d2": "2026-09-02"
+  },
+  {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 80,
+   "disc": 60,
+   "baseline": 198,
+   "nights": 2,
+   "d1": "2026-08-24",
+   "d2": "2026-08-26"
+  },
+  {
+   "to": "DTW",
+   "city": "Detroit",
+   "price": 91,
+   "disc": 57,
+   "baseline": 211,
+   "nights": 2,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30"
+  }
+ ]
+}
