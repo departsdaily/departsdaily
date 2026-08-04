@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-03T20:15:35-04:00",
+ "generated": "2026-08-03T22:15:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -8,9 +8,9 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 306,
-   "d1": "2026-08-14",
-   "d2": "2026-08-16",
+   "price": 315,
+   "d1": "2026-08-10",
+   "d2": "2026-08-17",
    "dep": "6:00AM",
    "al": "Frontier",
    "stops": 1,
@@ -18,7 +18,7 @@
    "rdep": "12:25PM",
    "arr": "12:59PM",
    "rarr": "7:42PM",
-   "pct": 23
+   "pct": 21
   },
   "BOS": {
    "to": "BOS",
@@ -323,17 +323,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 196,
-   "d1": "2026-08-19",
-   "d2": "2026-08-26",
-   "dep": "8:50PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 256,
+   "d1": "2026-10-18",
+   "d2": "2026-10-29",
+   "dep": "4:02PM",
+   "al": "DM",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "11:39AM",
-   "arr": "3:59AM+1",
-   "rarr": "3:24PM",
-   "pct": 65
+   "rdep": "9:38AM",
+   "arr": "6:38PM",
+   "rarr": "12:25PM",
+   "pct": 54
   },
   "ROM": {
    "to": "ROM",

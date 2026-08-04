@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-03T20:15:18-04:00",
+ "generated": "2026-08-03T22:15:34-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -101,13 +101,13 @@
    "price": 149,
    "d1": "2026-09-28",
    "d2": "2026-10-01",
-   "dep": "8:15AM",
+   "dep": "4:29PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "11:27AM",
-   "rarr": "8:54AM",
+   "rdep": "8:45AM",
+   "arr": "7:47PM",
+   "rarr": "11:36AM",
    "pct": 64
   },
   "HOU": {
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 153,
-   "d1": "2026-09-10",
-   "d2": "2026-09-13",
-   "dep": "6:45PM",
+   "price": 170,
+   "d1": "2026-10-03",
+   "d2": "2026-10-11",
+   "dep": "2:29PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:35AM",
-   "arr": "10:02PM",
-   "rarr": "9:29AM",
-   "pct": 63
+   "rdep": "6:50AM",
+   "arr": "5:37PM",
+   "rarr": "9:51AM",
+   "pct": 59
   },
   "MSY": {
    "to": "MSY",

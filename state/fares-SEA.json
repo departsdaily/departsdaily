@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-03T20:15:52-04:00",
+ "generated": "2026-08-03T22:16:11-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -94,6 +94,21 @@
    "arr": "12:02AM+1",
    "rarr": "1:30PM",
    "pct": 6
+  },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 367,
+   "d1": "2026-09-07",
+   "d2": "2026-09-10",
+   "dep": "9:36PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:20PM",
+   "arr": "3:44AM+1",
+   "rarr": "10:44PM",
+   "pct": 38
   },
   "LAS": {
    "to": "LAS",
