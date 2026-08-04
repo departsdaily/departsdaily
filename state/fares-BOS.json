@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-04T14:16:33-04:00",
+ "generated": "2026-08-04T16:16:24-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 257,
+   "price": 259,
    "d1": "2026-09-24",
    "d2": "2026-09-27",
-   "dep": "8:00AM",
-   "al": "Alaska",
+   "dep": "10:30AM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:38PM",
-   "arr": "3:40PM",
-   "rarr": "3:19AM+1",
-   "pct": 58
+   "rdep": "12:35AM",
+   "arr": "4:45PM",
+   "rarr": "6:20AM",
+   "pct": 57
   },
   "SEA": {
    "to": "SEA",

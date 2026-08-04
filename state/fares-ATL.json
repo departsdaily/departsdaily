@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-04T14:14:03-04:00",
+ "generated": "2026-08-04T16:13:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -53,7 +53,7 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 105,
+   "price": 102,
    "d1": "2026-09-19",
    "d2": "2026-09-23",
    "dep": "7:59PM",
@@ -63,7 +63,7 @@
    "rdep": "7:10PM",
    "arr": "11:24PM",
    "rarr": "10:10PM",
-   "pct": 78
+   "pct": 79
   },
   "DFW": {
    "to": "DFW",
@@ -383,17 +383,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 418,
-   "d1": "2026-10-23",
-   "d2": "2026-10-27",
-   "dep": "4:23PM",
+   "price": 495,
+   "d1": "2026-08-10",
+   "d2": "2026-08-17",
+   "dep": "5:02PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "8:58PM",
-   "rarr": "1:03PM",
-   "pct": 25
+   "rdep": "11:34AM",
+   "arr": "11:17PM",
+   "rarr": "6:11PM",
+   "pct": 12
   },
   "ROM": {
    "to": "ROM",
