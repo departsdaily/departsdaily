@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-05T08:14:31-04:00",
+ "generated": "2026-08-05T10:14:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 194,
-   "d1": "2026-08-18",
-   "d2": "2026-08-20",
-   "dep": "8:50AM",
+   "price": 172,
+   "d1": "2026-09-08",
+   "d2": "2026-09-13",
+   "dep": "7:41PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:36AM",
-   "arr": "3:19PM",
-   "rarr": "1:30PM",
-   "pct": 71
+   "rdep": "7:30AM",
+   "arr": "12:00AM+1",
+   "rarr": "11:39AM",
+   "pct": 75
   },
   "LAX": {
    "to": "LAX",
@@ -154,21 +154,6 @@
    "arr": "4:07PM",
    "rarr": "11:30AM",
    "pct": 68
-  },
-  "MCO": {
-   "to": "MCO",
-   "city": "Orlando",
-   "price": 64,
-   "d1": "2026-08-31",
-   "d2": "2026-09-02",
-   "dep": "8:29PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "5:24AM",
-   "arr": "10:14PM",
-   "rarr": "7:10AM",
-   "pct": 84
   },
   "MIA": {
    "to": "MIA",
