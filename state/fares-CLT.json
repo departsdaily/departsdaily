@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-04T20:13:34-04:00",
+ "generated": "2026-08-04T22:13:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -248,17 +248,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 1262,
-   "d1": "2026-08-08",
-   "d2": "2026-08-16",
-   "dep": "7:44PM",
+   "price": 892,
+   "d1": "2026-09-06",
+   "d2": "2026-09-14",
+   "dep": "9:15AM",
    "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:10AM",
-   "arr": "5:25AM+1",
-   "rarr": "7:35PM",
-   "pct": -43
+   "rdep": "5:00PM",
+   "arr": "6:18PM",
+   "rarr": "4:05AM+1",
+   "pct": -1
   },
   "CUN": {
    "to": "CUN",
@@ -319,6 +319,21 @@
    "arr": "3:42AM+1",
    "rarr": "7:14PM",
    "pct": 48
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 332,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "10:07AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:43PM",
+   "arr": "3:13PM",
+   "rarr": "1:34AM+1",
+   "pct": 21
   }
  }
 }

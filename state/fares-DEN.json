@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-04T20:14:45-04:00",
+ "generated": "2026-08-04T22:14:52-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 15,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -155,6 +155,21 @@
    "rarr": "9:15AM",
    "pct": 74
   },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 244,
+   "d1": "2026-09-18",
+   "d2": "2026-09-21",
+   "dep": "7:12PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:44PM",
+   "arr": "1:39AM+1",
+   "rarr": "3:22AM+1",
+   "pct": 54
+  },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
@@ -229,6 +244,21 @@
    "arr": "11:59AM+1",
    "rarr": "9:50PM",
    "pct": 41
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 543,
+   "d1": "2026-11-24",
+   "d2": "2026-12-01",
+   "dep": "4:08PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "6:45AM",
+   "arr": "11:35PM",
+   "rarr": "2:29PM",
+   "pct": -29
   }
  }
 }

@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-04T20:14:29-04:00",
+ "generated": "2026-08-04T22:14:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -379,21 +379,6 @@
    "arr": "1:06AM+1",
    "rarr": "11:18PM",
    "pct": 6
-  },
-  "PAR": {
-   "to": "PAR",
-   "city": "Paris",
-   "price": 920,
-   "d1": "2026-08-31",
-   "d2": "2026-09-05",
-   "dep": "2:22PM",
-   "al": "",
-   "stops": 2,
-   "xfer": 1,
-   "rdep": "5:00PM",
-   "arr": "2:49AM+1",
-   "rarr": "7:38AM+1",
-   "pct": -2
   },
   "PUJ": {
    "to": "PUJ",
