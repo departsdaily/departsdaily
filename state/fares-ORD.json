@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-05T14:14:53-04:00",
+ "generated": "2026-08-05T16:14:54-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,6 +19,21 @@
    "arr": "8:00PM",
    "rarr": "1:25AM+1",
    "pct": 43
+  },
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 227,
+   "d1": "2026-08-14",
+   "d2": "2026-08-16",
+   "dep": "12:30PM",
+   "al": "LF",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:00AM",
+   "arr": "3:25PM",
+   "rarr": "11:10AM",
+   "pct": 42
   },
   "BOS": {
    "to": "BOS",
@@ -368,17 +383,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 723,
-   "d1": "2026-10-26",
-   "d2": "2026-11-15",
-   "dep": "7:30PM",
+   "price": 623,
+   "d1": "2026-11-04",
+   "d2": "2026-11-21",
+   "dep": "6:30PM",
    "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
    "rdep": "11:25AM",
-   "arr": "6:25AM+1",
+   "arr": "5:25AM+1",
    "rarr": "11:20PM",
-   "pct": 24
+   "pct": 34
   },
   "SJU": {
    "to": "SJU",

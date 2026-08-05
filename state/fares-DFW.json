@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-05T14:15:17-04:00",
+ "generated": "2026-08-05T16:15:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 28,
+ "routes_priced": 29,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,6 +19,21 @@
    "arr": "9:19PM",
    "rarr": "1:11PM",
    "pct": 42
+  },
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 176,
+   "d1": "2026-09-11",
+   "d2": "2026-09-18",
+   "dep": "4:20PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:05PM",
+   "arr": "6:23PM",
+   "rarr": "9:08PM",
+   "pct": 60
   },
   "BOS": {
    "to": "BOS",
