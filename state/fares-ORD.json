@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-04T18:14:11-04:00",
+ "generated": "2026-08-04T20:14:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 212,
-   "d1": "2026-10-23",
-   "d2": "2026-10-26",
-   "dep": "11:06AM",
+   "price": 182,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
+   "dep": "6:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:00PM",
-   "arr": "4:48PM",
-   "rarr": "2:23AM+1",
-   "pct": 69
+   "rdep": "2:31PM",
+   "arr": "12:48PM",
+   "rarr": "7:59PM",
+   "pct": 73
   },
   "TPA": {
    "to": "TPA",

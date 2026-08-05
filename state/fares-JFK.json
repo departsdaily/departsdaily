@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-04T18:15:18-04:00",
+ "generated": "2026-08-04T20:15:24-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -293,7 +293,7 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 363,
+   "price": 394,
    "d1": "2026-10-18",
    "d2": "2026-10-23",
    "dep": "11:22AM",
@@ -303,7 +303,7 @@
    "rdep": "5:20PM",
    "arr": "4:00PM",
    "rarr": "9:59PM",
-   "pct": 41
+   "pct": 36
   },
   "CUN": {
    "to": "CUN",
