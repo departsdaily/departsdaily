@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-05T10:16:16-04:00",
+ "generated": "2026-08-05T12:16:02-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 183,
-   "d1": "2026-08-19",
-   "d2": "2026-08-22",
-   "dep": "6:55AM",
+   "price": 176,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "dep": "8:05PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "9:43AM",
-   "rarr": "8:17AM",
-   "pct": 56
+   "rdep": "7:00AM",
+   "arr": "10:58PM",
+   "rarr": "9:27AM",
+   "pct": 57
   },
   "PHX": {
    "to": "PHX",

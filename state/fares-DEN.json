@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-05T10:15:37-04:00",
+ "generated": "2026-08-05T12:15:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -98,17 +98,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 177,
+   "price": 189,
    "d1": "2026-10-30",
    "d2": "2026-11-05",
    "dep": "11:59PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:20AM",
+   "rdep": "7:10AM",
    "arr": "3:36AM+1",
-   "rarr": "11:30AM",
-   "pct": 65
+   "rarr": "12:33PM",
+   "pct": 62
   },
   "MIA": {
    "to": "MIA",
@@ -199,6 +199,21 @@
    "arr": "7:43PM",
    "rarr": "11:24AM",
    "pct": 39
+  },
+  "LON": {
+   "to": "LON",
+   "city": "London",
+   "price": 849,
+   "d1": "2026-08-29",
+   "d2": "2026-09-06",
+   "dep": "8:10PM",
+   "al": "Icelandair",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "2:00PM",
+   "arr": "7:00AM+1",
+   "rarr": "3:42AM+1",
+   "pct": 0
   },
   "PAR": {
    "to": "PAR",

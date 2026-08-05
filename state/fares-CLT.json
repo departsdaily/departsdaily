@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-05T10:14:17-04:00",
+ "generated": "2026-08-05T12:14:05-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -113,17 +113,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 271,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
-   "dep": "5:00PM",
-   "al": "Southwest",
+   "price": 265,
+   "d1": "2026-09-24",
+   "d2": "2026-09-30",
+   "dep": "2:53PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:20AM",
-   "arr": "10:25PM",
-   "rarr": "5:50AM",
-   "pct": 63
+   "rdep": "10:06PM",
+   "arr": "8:58PM",
+   "rarr": "4:25AM+1",
+   "pct": 64
   },
   "LAX": {
    "to": "LAX",
@@ -259,21 +259,6 @@
    "arr": "6:18PM",
    "rarr": "4:05AM+1",
    "pct": -1
-  },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 421,
-   "d1": "2026-09-15",
-   "d2": "2026-09-19",
-   "dep": "3:40PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:50AM",
-   "arr": "9:31PM",
-   "rarr": "4:52PM",
-   "pct": 19
   },
   "LON": {
    "to": "LON",
