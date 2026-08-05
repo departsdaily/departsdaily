@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-04T22:15:31-04:00",
+ "generated": "2026-08-05T00:16:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 291,
-   "d1": "2026-09-10",
-   "d2": "2026-09-14",
-   "dep": "1:00PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 249,
+   "d1": "2026-08-20",
+   "d2": "2026-08-23",
+   "dep": "9:59PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:04PM",
-   "arr": "8:11PM",
-   "rarr": "4:23AM+1",
-   "pct": 57
+   "rdep": "6:00AM",
+   "arr": "3:47AM+1",
+   "rarr": "10:58AM",
+   "pct": 63
   },
   "LAX": {
    "to": "LAX",
@@ -158,17 +158,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 149,
-   "d1": "2026-08-19",
-   "d2": "2026-08-25",
-   "dep": "1:00PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 151,
+   "d1": "2026-08-31",
+   "d2": "2026-09-07",
+   "dep": "12:22PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:24AM",
-   "arr": "5:35PM",
-   "rarr": "9:39AM",
-   "pct": 57
+   "rdep": "6:00AM",
+   "arr": "3:18PM",
+   "rarr": "8:49AM",
+   "pct": 56
   },
   "MIA": {
    "to": "MIA",

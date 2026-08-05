@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-04T22:13:37-04:00",
+ "generated": "2026-08-05T00:14:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -31,7 +31,7 @@
    "stops": 1,
    "xfer": 0,
    "rdep": "7:20PM",
-   "arr": "1:37AM+1",
+   "arr": "1:36AM+1",
    "rarr": "8:55PM",
    "pct": 51
   },
@@ -94,21 +94,6 @@
    "arr": "12:04PM",
    "rarr": "8:43PM",
    "pct": 62
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 272,
-   "d1": "2026-08-07",
-   "d2": "2026-08-10",
-   "dep": "5:57PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "9:09AM",
-   "arr": "8:52PM",
-   "rarr": "11:53AM",
-   "pct": 37
   },
   "LAS": {
    "to": "LAS",

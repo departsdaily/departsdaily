@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-04T22:13:56-04:00",
+ "generated": "2026-08-05T00:14:51-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 28,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -274,21 +274,6 @@
    "arr": "10:26PM",
    "rarr": "2:50AM+1",
    "pct": 68
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 1354,
-   "d1": "2026-08-07",
-   "d2": "2026-08-13",
-   "dep": "7:30PM",
-   "al": "SK",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "8:30PM",
-   "arr": "7:25AM+1",
-   "rarr": "7:20AM+1",
-   "pct": -54
   },
   "AUA": {
    "to": "AUA",

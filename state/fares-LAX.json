@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-04T22:15:12-04:00",
+ "generated": "2026-08-05T00:16:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -304,6 +304,21 @@
    "arr": "7:21AM+1",
    "rarr": "9:32PM",
    "pct": -42
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 733,
+   "d1": "2026-08-14",
+   "d2": "2026-08-22",
+   "dep": "8:40PM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:20PM",
+   "arr": "3:02AM+1",
+   "rarr": "6:51PM",
+   "pct": -53
   },
   "PAR": {
    "to": "PAR",

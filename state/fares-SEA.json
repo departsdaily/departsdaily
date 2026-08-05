@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-04T22:16:08-04:00",
+ "generated": "2026-08-05T00:17:00-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,21 +19,6 @@
    "arr": "7:48PM",
    "rarr": "5:19AM+1",
    "pct": 38
-  },
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 272,
-   "d1": "2026-09-03",
-   "d2": "2026-09-08",
-   "dep": "4:33PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:55PM",
-   "arr": "11:00PM",
-   "rarr": "7:02PM",
-   "pct": 55
   },
   "BOS": {
    "to": "BOS",
@@ -98,17 +83,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 367,
-   "d1": "2026-09-07",
-   "d2": "2026-09-10",
-   "dep": "9:36PM",
-   "al": "Frontier",
+   "price": 252,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "10:40AM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:20PM",
-   "arr": "3:44AM+1",
-   "rarr": "10:44PM",
-   "pct": 38
+   "rdep": "9:30AM",
+   "arr": "3:50PM",
+   "rarr": "2:15PM",
+   "pct": 57
   },
   "LAS": {
    "to": "LAS",
