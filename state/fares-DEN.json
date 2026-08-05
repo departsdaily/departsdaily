@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-05T00:15:47-04:00",
+ "generated": "2026-08-05T02:15:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 75,
-   "d1": "2026-08-31",
-   "d2": "2026-09-03",
+   "price": 91,
+   "d1": "2026-09-01",
+   "d2": "2026-09-08",
    "dep": "10:39PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30AM",
+   "rdep": "9:40AM",
    "arr": "1:11AM+1",
-   "rarr": "9:03AM",
-   "pct": 81
+   "rarr": "12:13PM",
+   "pct": 77
   },
   "MCO": {
    "to": "MCO",
@@ -128,17 +128,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 201,
-   "d1": "2026-09-01",
-   "d2": "2026-09-04",
-   "dep": "2:04PM",
+   "price": 222,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "11:50PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:50PM",
-   "arr": "6:04PM",
-   "rarr": "11:36PM",
-   "pct": 63
+   "rdep": "6:29AM",
+   "arr": "3:40AM+1",
+   "rarr": "12:21PM",
+   "pct": 60
   },
   "ORD": {
    "to": "ORD",
@@ -218,17 +218,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 573,
-   "d1": "2026-09-06",
-   "d2": "2026-09-13",
+   "price": 667,
+   "d1": "2026-08-10",
+   "d2": "2026-08-16",
    "dep": "11:25AM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:05PM",
    "arr": "7:38PM",
-   "rarr": "1:56AM+1",
-   "pct": -2
+   "rarr": "1:58AM+1",
+   "pct": -19
   },
   "ROM": {
    "to": "ROM",
