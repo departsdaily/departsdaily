@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-05T06:14:12-04:00",
+ "generated": "2026-08-05T08:14:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -95,20 +95,35 @@
    "rarr": "8:43PM",
    "pct": 62
   },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 212,
+   "d1": "2026-09-11",
+   "d2": "2026-09-20",
+   "dep": "12:09PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:30AM",
+   "arr": "3:02PM",
+   "rarr": "10:14AM",
+   "pct": 51
+  },
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 244,
-   "d1": "2026-08-19",
-   "d2": "2026-08-22",
-   "dep": "5:21PM",
-   "al": "Frontier",
+   "price": 271,
+   "d1": "2026-08-28",
+   "d2": "2026-08-31",
+   "dep": "5:00PM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "11:14PM",
-   "rarr": "11:31AM",
-   "pct": 67
+   "rdep": "12:20AM",
+   "arr": "10:25PM",
+   "rarr": "5:50AM",
+   "pct": 63
   },
   "LAX": {
    "to": "LAX",
