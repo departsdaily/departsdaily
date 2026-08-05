@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-05T16:15:34-04:00",
+ "generated": "2026-08-05T18:01:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -53,7 +53,7 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 192,
+   "price": 191,
    "d1": "2026-09-25",
    "d2": "2026-09-27",
    "dep": "6:13PM",
