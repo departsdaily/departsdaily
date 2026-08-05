@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-05T12:16:19-04:00",
+ "generated": "2026-08-05T14:16:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 226,
+   "price": 147,
    "d1": "2026-09-15",
    "d2": "2026-09-20",
-   "dep": "5:50AM",
+   "dep": "5:32AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "12:48PM",
-   "rarr": "12:05PM",
-   "pct": 70
+   "rdep": "2:28PM",
+   "arr": "12:29PM",
+   "rarr": "8:49PM",
+   "pct": 80
   },
   "MSY": {
    "to": "MSY",
@@ -188,17 +188,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 342,
-   "d1": "2026-08-15",
-   "d2": "2026-08-19",
+   "price": 322,
+   "d1": "2026-09-08",
+   "d2": "2026-09-15",
    "dep": "6:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:37PM",
-   "arr": "1:24PM",
-   "rarr": "9:36PM",
-   "pct": 46
+   "rdep": "4:27PM",
+   "arr": "1:40PM",
+   "rarr": "11:11PM",
+   "pct": 49
   },
   "SFO": {
    "to": "SFO",
