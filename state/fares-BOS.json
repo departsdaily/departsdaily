@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-05T02:16:56-04:00",
+ "generated": "2026-08-05T04:16:42-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -188,32 +188,32 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 259,
+   "price": 276,
    "d1": "2026-09-24",
    "d2": "2026-09-27",
-   "dep": "10:30AM",
-   "al": "Southwest",
+   "dep": "6:17PM",
+   "al": "Alaska",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:35AM",
-   "arr": "4:45PM",
-   "rarr": "6:20AM",
-   "pct": 57
+   "rdep": "12:13PM",
+   "arr": "2:02AM+1",
+   "rarr": "7:28PM",
+   "pct": 54
   },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 492,
-   "d1": "2026-08-13",
-   "d2": "2026-08-16",
-   "dep": "7:30PM",
+   "price": 404,
+   "d1": "2026-08-08",
+   "d2": "2026-08-10",
+   "dep": "9:02AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "11:45PM",
-   "arr": "1:53AM+1",
+   "arr": "3:25PM",
    "rarr": "5:04AM+1",
-   "pct": 27
+   "pct": 40
   },
   "SFO": {
    "to": "SFO",
