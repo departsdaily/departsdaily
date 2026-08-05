@@ -5,5 +5,5 @@ fonts: 22 dejavu files
 /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
 audio: 4 tracks
 === render ===
-rendering ATL reel for 2026-08-04: shape=destination slot=0 13.2s 396 frames audio=red-eye@2.4.mp3@2.4s
-wrote out/ATL/reel_0.mp4 (2.9MB, 13.2s)
+rendering ATL reel for 2026-08-05: shape=board slot=0 13.0s 391 frames audio=runway-lights@2.0.mp3@2s
+wrote out/ATL/reel_0.mp4 (0.8MB, 13.0s)
