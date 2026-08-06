@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-05T22:16:26-04:00",
+ "generated": "2026-08-06T00:16:26-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 404,
-   "d1": "2026-08-08",
-   "d2": "2026-08-10",
-   "dep": "9:02AM",
+   "price": 492,
+   "d1": "2026-08-13",
+   "d2": "2026-08-16",
+   "dep": "7:30PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "11:45PM",
-   "arr": "3:25PM",
+   "arr": "1:53AM+1",
    "rarr": "5:04AM+1",
-   "pct": 40
+   "pct": 27
   },
   "SFO": {
    "to": "SFO",
@@ -233,17 +233,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 192,
-   "d1": "2026-08-22",
-   "d2": "2026-08-27",
-   "dep": "12:45PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 197,
+   "d1": "2026-09-05",
+   "d2": "2026-09-08",
+   "dep": "8:00AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:07PM",
-   "arr": "5:18PM",
-   "rarr": "12:45AM+1",
-   "pct": 53
+   "rdep": "4:45PM",
+   "arr": "11:15AM",
+   "rarr": "8:28PM",
+   "pct": 52
   },
   "AMS": {
    "to": "AMS",

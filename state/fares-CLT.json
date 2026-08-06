@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-05T22:13:46-04:00",
+ "generated": "2026-08-06T00:13:40-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -259,21 +259,6 @@
    "arr": "6:18PM",
    "rarr": "4:05AM+1",
    "pct": -1
-  },
-  "LON": {
-   "to": "LON",
-   "city": "London",
-   "price": 1069,
-   "d1": "2026-08-08",
-   "d2": "2026-08-16",
-   "dep": "9:43PM",
-   "al": "",
-   "stops": 3,
-   "xfer": 1,
-   "rdep": "9:40AM",
-   "arr": "8:05AM+1",
-   "rarr": "9:57PM",
-   "pct": -26
   },
   "PAR": {
    "to": "PAR",

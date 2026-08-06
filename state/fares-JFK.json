@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-05T22:15:34-04:00",
+ "generated": "2026-08-06T00:15:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 170,
-   "d1": "2026-10-03",
-   "d2": "2026-10-11",
-   "dep": "2:29PM",
+   "price": 178,
+   "d1": "2026-08-30",
+   "d2": "2026-09-06",
+   "dep": "5:55AM",
    "al": "American",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:50AM",
-   "arr": "5:37PM",
-   "rarr": "9:51AM",
-   "pct": 59
+   "rdep": "6:25AM",
+   "arr": "9:04AM",
+   "rarr": "10:34AM",
+   "pct": 57
   },
   "MSY": {
    "to": "MSY",
@@ -398,9 +398,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 543,
-   "d1": "2026-10-10",
-   "d2": "2026-10-16",
+   "price": 526,
+   "d1": "2026-09-07",
+   "d2": "2026-09-17",
    "dep": "11:10PM",
    "al": "Icelandair",
    "stops": 1,
@@ -408,7 +408,7 @@
    "rdep": "3:45PM",
    "arr": "9:40AM+1",
    "rarr": "2:55AM+1",
-   "pct": 43
+   "pct": 45
   },
   "SJU": {
    "to": "SJU",

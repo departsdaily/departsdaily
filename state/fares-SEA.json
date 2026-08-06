@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-05T22:16:09-04:00",
+ "generated": "2026-08-06T00:16:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -64,21 +64,6 @@
    "arr": "2:23AM+1",
    "rarr": "4:08PM",
    "pct": 43
-  },
-  "DFW": {
-   "to": "DFW",
-   "city": "Dallas",
-   "price": 443,
-   "d1": "2026-08-08",
-   "d2": "2026-08-16",
-   "dep": "7:06PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:35AM",
-   "arr": "12:02AM+1",
-   "rarr": "1:30PM",
-   "pct": 6
   },
   "HOU": {
    "to": "HOU",
@@ -189,15 +174,15 @@
    "to": "ORD",
    "city": "Chicago",
    "price": 296,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "7:06PM",
+   "d1": "2026-11-04",
+   "d2": "2026-11-08",
+   "dep": "9:16PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:11PM",
-   "arr": "12:39AM+1",
-   "rarr": "3:17AM+1",
+   "rdep": "7:00AM",
+   "arr": "3:43AM+1",
+   "rarr": "2:18PM",
    "pct": 40
   },
   "PHL": {

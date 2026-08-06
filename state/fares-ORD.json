@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-05T22:14:23-04:00",
+ "generated": "2026-08-06T00:14:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 147,
-   "d1": "2026-08-20",
-   "d2": "2026-08-23",
-   "dep": "8:11PM",
+   "price": 150,
+   "d1": "2026-10-30",
+   "d2": "2026-11-01",
+   "dep": "1:22PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:56PM",
-   "arr": "12:23AM+1",
-   "rarr": "5:02PM",
-   "pct": 69
+   "rdep": "11:48PM",
+   "arr": "7:15PM",
+   "rarr": "3:35AM+1",
+   "pct": 68
   },
   "LAX": {
    "to": "LAX",
@@ -218,17 +218,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 141,
+   "price": 136,
    "d1": "2026-09-03",
    "d2": "2026-09-06",
-   "dep": "5:55AM",
+   "dep": "8:30PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:22AM",
-   "arr": "8:04AM",
+   "arr": "10:53PM",
    "rarr": "12:55PM",
-   "pct": 67
+   "pct": 68
   },
   "PHX": {
    "to": "PHX",
@@ -398,17 +398,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 337,
-   "d1": "2026-09-04",
-   "d2": "2026-09-08",
-   "dep": "5:59PM",
-   "al": "American",
-   "stops": 1,
+   "price": 268,
+   "d1": "2026-11-21",
+   "d2": "2026-11-26",
+   "dep": "7:53PM",
+   "al": "Frontier",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:33PM",
-   "arr": "12:00AM+1",
-   "rarr": "9:17PM",
-   "pct": 20
+   "rdep": "3:55AM",
+   "arr": "12:35AM+1",
+   "rarr": "9:16AM",
+   "pct": 36
   }
  }
 }
