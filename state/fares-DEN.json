@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-05T18:15:10-04:00",
+ "generated": "2026-08-05T20:15:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 198,
-   "d1": "2026-10-20",
-   "d2": "2026-10-24",
-   "dep": "6:30AM",
+   "price": 194,
+   "d1": "2026-09-16",
+   "d2": "2026-09-23",
+   "dep": "12:24PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "11:22AM",
-   "rarr": "12:41PM",
-   "pct": 65
+   "rdep": "1:24PM",
+   "arr": "5:27PM",
+   "rarr": "6:57PM",
+   "pct": 66
   },
   "HOU": {
    "to": "HOU",
@@ -218,17 +218,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 792,
+   "price": 849,
    "d1": "2026-09-30",
    "d2": "2026-10-07",
-   "dep": "4:40PM",
-   "al": "Icelandair",
+   "dep": "12:40PM",
+   "al": "",
    "stops": 2,
-   "xfer": 0,
+   "xfer": 1,
    "rdep": "6:50PM",
-   "arr": "4:00AM+1",
+   "arr": "12:47AM+1",
    "rarr": "9:03AM+1",
-   "pct": 12
+   "pct": 6
   },
   "ROM": {
    "to": "ROM",
