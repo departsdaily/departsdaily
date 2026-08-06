@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-06T04:16:14-04:00",
+ "generated": "2026-08-06T06:16:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -23,7 +23,7 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 190,
+   "price": 194,
    "d1": "2026-08-30",
    "d2": "2026-09-05",
    "dep": "9:36AM",
@@ -33,7 +33,7 @@
    "rdep": "1:38PM",
    "arr": "4:05PM",
    "rarr": "7:17PM",
-   "pct": 64
+   "pct": 63
   },
   "DFW": {
    "to": "DFW",
