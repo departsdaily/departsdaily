@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-06T08:13:38-04:00",
+ "generated": "2026-08-06T10:13:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -128,17 +128,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 255,
-   "d1": "2026-09-19",
-   "d2": "2026-09-26",
-   "dep": "4:51PM",
+   "price": 244,
+   "d1": "2026-09-25",
+   "d2": "2026-09-27",
+   "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "9:40PM",
-   "arr": "11:13PM",
+   "arr": "2:09AM+1",
    "rarr": "4:31AM+1",
-   "pct": 64
+   "pct": 65
   },
   "MCO": {
    "to": "MCO",
@@ -233,17 +233,32 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 272,
-   "d1": "2026-10-11",
-   "d2": "2026-10-18",
-   "dep": "7:50AM",
-   "al": "Southwest",
+   "price": 258,
+   "d1": "2026-10-23",
+   "d2": "2026-11-01",
+   "dep": "7:46PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:40PM",
-   "arr": "2:35PM",
-   "rarr": "5:40AM+1",
-   "pct": 66
+   "rdep": "2:07PM",
+   "arr": "2:32AM+1",
+   "rarr": "8:10PM",
+   "pct": 68
+  },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 232,
+   "d1": "2026-08-12",
+   "d2": "2026-08-19",
+   "dep": "10:04PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "10:37PM",
+   "arr": "5:23AM+1",
+   "rarr": "3:07AM+1",
+   "pct": 52
   },
   "AMS": {
    "to": "AMS",
@@ -259,6 +274,21 @@
    "arr": "6:18PM",
    "rarr": "4:05AM+1",
    "pct": -1
+  },
+  "CUN": {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 604,
+   "d1": "2026-08-14",
+   "d2": "2026-08-21",
+   "dep": "10:04PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "3:30PM",
+   "arr": "5:57AM+1",
+   "rarr": "7:30PM",
+   "pct": -16
   },
   "PAR": {
    "to": "PAR",

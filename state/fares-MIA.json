@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-06T08:15:50-04:00",
+ "generated": "2026-08-06T10:16:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 208,
-   "d1": "2026-08-12",
-   "d2": "2026-08-19",
-   "dep": "9:21PM",
-   "al": "Frontier",
+   "price": 336,
+   "d1": "2026-09-24",
+   "d2": "2026-09-29",
+   "dep": "5:12PM",
+   "al": "Volaris",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:25AM",
-   "arr": "4:20AM+1",
+   "arr": "10:58PM",
    "rarr": "10:56AM",
-   "pct": 60
+   "pct": 35
   },
   "LON": {
    "to": "LON",

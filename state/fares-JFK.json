@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-06T08:15:32-04:00",
+ "generated": "2026-08-06T10:15:50-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -353,17 +353,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 424,
-   "d1": "2026-09-01",
-   "d2": "2026-09-06",
-   "dep": "12:45PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 456,
+   "d1": "2026-12-01",
+   "d2": "2026-12-10",
+   "dep": "6:00AM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:25PM",
-   "arr": "4:04PM",
-   "rarr": "8:30PM",
-   "pct": 12
+   "rdep": "3:00PM",
+   "arr": "10:23AM",
+   "rarr": "7:32PM",
+   "pct": 5
   },
   "PAR": {
    "to": "PAR",

@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-06T08:14:39-04:00",
+ "generated": "2026-08-06T10:14:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
