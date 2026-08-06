@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-06T06:14:40-04:00",
+ "generated": "2026-08-06T08:14:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 313,
-   "d1": "2026-10-10",
-   "d2": "2026-10-18",
+   "price": 317,
+   "d1": "2026-10-03",
+   "d2": "2026-10-07",
    "dep": "9:00PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:50PM",
+   "rdep": "12:49PM",
    "arr": "2:03AM+1",
-   "rarr": "2:56AM+1",
-   "pct": 40
+   "rarr": "6:09PM",
+   "pct": 39
   },
   "GCM": {
    "to": "GCM",
