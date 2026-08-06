@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-05T20:13:42-04:00",
+ "generated": "2026-08-05T22:13:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 21,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 265,
-   "d1": "2026-09-24",
-   "d2": "2026-09-30",
-   "dep": "2:53PM",
+   "price": 208,
+   "d1": "2026-08-21",
+   "d2": "2026-08-23",
+   "dep": "8:56AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:06PM",
-   "arr": "8:58PM",
-   "rarr": "4:25AM+1",
-   "pct": 64
+   "rdep": "12:59AM",
+   "arr": "3:43PM",
+   "rarr": "6:34AM",
+   "pct": 72
   },
   "LAX": {
    "to": "LAX",

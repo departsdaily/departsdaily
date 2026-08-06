@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-05T20:16:40-04:00",
+ "generated": "2026-08-05T22:16:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -53,17 +53,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 287,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
-   "dep": "5:16PM",
-   "al": "JetBlue",
+   "price": 220,
+   "d1": "2026-08-25",
+   "d2": "2026-08-27",
+   "dep": "12:45PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:25AM",
-   "arr": "9:40PM",
-   "rarr": "11:02AM",
-   "pct": 32
+   "rdep": "9:47PM",
+   "arr": "5:36PM",
+   "rarr": "2:40AM+1",
+   "pct": 48
   },
   "HOU": {
    "to": "HOU",
@@ -278,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 434,
-   "d1": "2026-10-15",
-   "d2": "2026-10-21",
-   "dep": "9:41AM",
-   "al": "Aerom\u00e9xico",
+   "price": 406,
+   "d1": "2026-10-29",
+   "d2": "2026-11-03",
+   "dep": "5:30AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:05PM",
-   "arr": "6:18PM",
-   "rarr": "7:05PM",
-   "pct": 17
+   "rdep": "4:30PM",
+   "arr": "11:55AM",
+   "rarr": "9:29PM",
+   "pct": 22
   },
   "LON": {
    "to": "LON",
@@ -304,6 +304,21 @@
    "arr": "5:15AM+1",
    "rarr": "6:25PM",
    "pct": 28
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 363,
+   "d1": "2026-08-29",
+   "d2": "2026-09-02",
+   "dep": "3:35PM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:35PM",
+   "arr": "8:48PM",
+   "rarr": "7:45PM",
+   "pct": 24
   },
   "PAR": {
    "to": "PAR",
@@ -323,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 635,
-   "d1": "2026-08-22",
-   "d2": "2026-08-29",
-   "dep": "7:15PM",
+   "price": 384,
+   "d1": "2026-10-29",
+   "d2": "2026-11-03",
+   "dep": "6:35PM",
    "al": "Air Canada",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:25PM",
-   "arr": "1:50AM+1",
-   "rarr": "1:51AM+1",
-   "pct": -13
+   "rdep": "3:15PM",
+   "arr": "12:45AM+1",
+   "rarr": "9:18PM",
+   "pct": 31
   },
   "ROM": {
    "to": "ROM",

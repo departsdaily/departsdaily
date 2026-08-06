@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-05T20:16:20-04:00",
+ "generated": "2026-08-05T22:16:09-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 21,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 81,
-   "d1": "2026-09-05",
-   "d2": "2026-09-12",
-   "dep": "9:36PM",
+   "price": 88,
+   "d1": "2026-09-30",
+   "d2": "2026-10-03",
+   "dep": "9:45PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:50AM",
-   "arr": "12:18AM+1",
+   "arr": "12:25AM+1",
    "rarr": "9:42AM",
-   "pct": 79
+   "pct": 77
   },
   "LAX": {
    "to": "LAX",
@@ -248,17 +248,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 703,
-   "d1": "2026-08-22",
-   "d2": "2026-09-03",
-   "dep": "11:25PM",
-   "al": "Icelandair",
-   "stops": 3,
-   "xfer": 0,
-   "rdep": "3:50PM",
-   "arr": "1:40PM+1",
-   "rarr": "6:43AM+1",
-   "pct": 17
+   "price": 730,
+   "d1": "2026-10-11",
+   "d2": "2026-10-18",
+   "dep": "8:00AM",
+   "al": "",
+   "stops": 2,
+   "xfer": 1,
+   "rdep": "9:25PM",
+   "arr": "8:55PM",
+   "rarr": "8:40AM+1",
+   "pct": 14
   },
   "MBJ": {
    "to": "MBJ",
