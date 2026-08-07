@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-06T20:14:00-04:00",
+ "generated": "2026-08-06T22:13:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 28,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -293,7 +293,7 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 487,
+   "price": 467,
    "d1": "2026-10-24",
    "d2": "2026-10-28",
    "dep": "9:25PM",
@@ -302,8 +302,8 @@
    "xfer": 0,
    "rdep": "2:29PM",
    "arr": "2:55AM+1",
-   "rarr": "7:34PM",
-   "pct": 21
+   "rarr": "7:21PM",
+   "pct": 25
   },
   "CUN": {
    "to": "CUN",
@@ -393,21 +393,6 @@
    "rdep": "11:34AM",
    "arr": "11:17PM",
    "rarr": "6:11PM",
-   "pct": 12
-  },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 834,
-   "d1": "2026-10-04",
-   "d2": "2026-10-11",
-   "dep": "1:49PM",
-   "al": "",
-   "stops": 3,
-   "xfer": 1,
-   "rdep": "11:20PM",
-   "arr": "12:00AM+1",
-   "rarr": "1:58PM+1",
    "pct": 12
   },
   "SJU": {

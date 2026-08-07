@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-06T20:16:23-04:00",
+ "generated": "2026-08-06T22:16:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 255,
+   "price": 301,
    "d1": "2026-08-17",
    "d2": "2026-08-19",
-   "dep": "6:15AM",
-   "al": "JetBlue",
+   "dep": "6:00AM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:10AM",
-   "arr": "7:58AM",
-   "rarr": "8:52AM",
-   "pct": 34
+   "rdep": "5:55PM",
+   "arr": "8:55AM",
+   "rarr": "9:00PM",
+   "pct": 23
   },
   "DEN": {
    "to": "DEN",
@@ -274,21 +274,6 @@
    "arr": "5:20AM+1",
    "rarr": "2:00AM+1",
    "pct": 31
-  },
-  "AUA": {
-   "to": "AUA",
-   "city": "Aruba",
-   "price": 476,
-   "d1": "2026-09-05",
-   "d2": "2026-09-12",
-   "dep": "6:08AM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "3:05PM",
-   "arr": "11:00AM",
-   "rarr": "10:05PM",
-   "pct": 23
   },
   "CUN": {
    "to": "CUN",

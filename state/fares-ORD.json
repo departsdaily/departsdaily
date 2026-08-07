@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-06T20:14:18-04:00",
+ "generated": "2026-08-06T22:14:22-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -113,9 +113,9 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 129,
-   "d1": "2026-10-08",
-   "d2": "2026-10-13",
+   "price": 138,
+   "d1": "2026-10-21",
+   "d2": "2026-10-24",
    "dep": "2:46PM",
    "al": "Frontier",
    "stops": 0,
@@ -123,7 +123,7 @@
    "rdep": "6:42PM",
    "arr": "5:47PM",
    "rarr": "9:34PM",
-   "pct": 70
+   "pct": 67
   },
   "LAS": {
    "to": "LAS",
@@ -304,21 +304,6 @@
    "arr": "5:40AM+1",
    "rarr": "12:53PM+1",
    "pct": 6
-  },
-  "AUA": {
-   "to": "AUA",
-   "city": "Aruba",
-   "price": 616,
-   "d1": "2026-11-20",
-   "d2": "2026-11-29",
-   "dep": "8:50PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:05PM",
-   "arr": "3:47AM+1",
-   "rarr": "8:25PM",
-   "pct": 1
   },
   "CUN": {
    "to": "CUN",
