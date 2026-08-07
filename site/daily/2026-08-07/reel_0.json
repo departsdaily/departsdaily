@@ -1,0 +1,48 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-07",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from CLT, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 4.79,
+ "fps": 30,
+ "audio": "tarmac-sunrise@2.1.mp3",
+ "audio_start": 2.1,
+ "plan_shape": "friday",
+ "plan_angle": "Expedia's 2026 Air Hacks Report puts Friday as the cheapest day of the week to book a flight, about 3% under Sunday, and the cheapest day to fly overall, up to 8% under a Sunday departure. Worth knowing: for US domestic routes specifically that report still has Tuesday as the cheapest day to actually fly, roughly 14% under Sunday.",
+ "featured": [
+  {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 289,
+   "disc": 41,
+   "baseline": 492,
+   "nights": 4,
+   "d1": "2026-08-26",
+   "d2": "2026-08-30"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 208,
+   "disc": 40,
+   "baseline": 344,
+   "nights": 2,
+   "d1": "2026-08-21",
+   "d2": "2026-08-23"
+  },
+  {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 185,
+   "disc": 34,
+   "baseline": 282,
+   "nights": 4,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07"
+  }
+ ]
+}
