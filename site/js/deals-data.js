@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-07 16:02 EDT
+   Generated 2026-08-07 16:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-07T16:02:52-04:00",
+ updated:"2026-08-07T16:13:27-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:208,d1:"2026-08-21",d2:"2026-08-23",dep:"8:56AM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"3:43PM",rarr:"6:34AM",exp:"2026-08-09"},
@@ -87,7 +87,7 @@ const DEALS={CLT:[
  {to:"LAX",city:"Los Angeles",price:146,d1:"2026-08-18",d2:"2026-08-25",dep:"4:55PM",al:"Southwest",stops:1,rdep:"6:50AM",arr:"12:05AM+1",rarr:"1:00PM",exp:"2026-08-09"},
  {to:"SFO",city:"San Francisco",price:159,d1:"2026-08-14",d2:"2026-08-17",dep:"7:10AM",al:"American",stops:1,rdep:"11:45AM",arr:"2:56PM",rarr:"7:03PM",exp:"2026-08-09"},
  {to:"LAS",city:"Las Vegas",price:193,d1:"2026-08-25",d2:"2026-08-31",dep:"12:45PM",al:"Frontier",stops:1,rdep:"11:41PM",arr:"7:59PM",rarr:"6:32AM+1",exp:"2026-08-09"},
- {to:"DEN",city:"Denver",price:166,d1:"2026-09-02",d2:"2026-09-05",dep:"12:45PM",al:"Frontier",stops:1,rdep:"1:38PM",arr:"7:15PM",rarr:"7:17PM",exp:"2026-08-09"},
+ {to:"DEN",city:"Denver",price:153,d1:"2026-09-02",d2:"2026-09-05",dep:"12:45PM",al:"Frontier",stops:1,rdep:"1:38PM",arr:"7:15PM",rarr:"7:17PM",exp:"2026-08-09"},
  {to:"MIA",city:"Miami",price:167,d1:"2026-10-06",d2:"2026-10-10",dep:"5:00AM",al:"American",stops:0,rdep:"6:51AM",arr:"8:27AM",rarr:"10:18AM",exp:"2026-08-09"},
  {to:"ROM",city:"Rome",price:474,d1:"2026-08-28",d2:"2026-09-06",dep:"8:05PM",al:"Lufthansa",stops:1,rdep:"11:30AM",arr:"5:00AM+1",rarr:"9:57PM",exp:"2026-08-09"},
  {to:"SJU",city:"San Juan, PR",price:281,d1:"2026-08-31",d2:"2026-09-14",dep:"5:00PM",al:"JetBlue",stops:1,rdep:"11:15AM",arr:"11:25PM",rarr:"6:00PM",exp:"2026-08-09"},
