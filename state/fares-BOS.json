@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-07T14:16:36-04:00",
+ "generated": "2026-08-07T16:05:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -184,21 +184,6 @@
    "arr": "8:26PM",
    "rarr": "11:16PM",
    "pct": 44
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 147,
-   "d1": "2026-08-28",
-   "d2": "2026-09-02",
-   "dep": "3:20PM",
-   "al": "American",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "10:41AM",
-   "arr": "5:03PM",
-   "rarr": "12:14PM",
-   "pct": 62
   },
   "PHX": {
    "to": "PHX",

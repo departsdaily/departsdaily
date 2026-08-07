@@ -4,19 +4,19 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-07 14:13 EDT
+   Generated 2026-08-07 16:02 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-07T14:13:26-04:00",
+ updated:"2026-08-07T16:02:52-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:208,d1:"2026-08-21",d2:"2026-08-23",dep:"8:56AM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"3:43PM",rarr:"6:34AM",exp:"2026-08-09"},
  {to:"LAX",city:"Los Angeles",price:212,d1:"2026-09-19",d2:"2026-09-26",dep:"4:51PM",al:"Frontier",stops:1,rdep:"9:40PM",arr:"11:13PM",rarr:"4:31AM+1",exp:"2026-08-09"},
  {to:"MCO",city:"Orlando",price:135,d1:"2026-08-19",d2:"2026-08-24",dep:"9:52PM",al:"Frontier",stops:0,rdep:"6:10AM",arr:"11:44PM",rarr:"8:01AM",exp:"2026-08-09"},
+ {to:"MIA",city:"Miami",price:156,d1:"2026-08-29",d2:"2026-08-31",dep:"8:51PM",al:"Frontier",stops:1,rdep:"6:50AM",arr:"1:51AM+1",rarr:"12:26PM",exp:"2026-08-09"},
  {to:"NYC",city:"New York City",price:168,d1:"2026-09-14",d2:"2026-09-17",dep:"7:16PM",al:"Frontier",stops:1,rdep:"5:55AM",arr:"11:56PM",rarr:"10:39AM",exp:"2026-08-09"},
- {to:"ORD",city:"Chicago",price:210,d1:"2026-08-29",d2:"2026-08-31",dep:"5:21PM",al:"Frontier",stops:1,rdep:"2:25PM",arr:"11:57PM",rarr:"6:28PM",exp:"2026-08-09"},
  {to:"SJU",city:"San Juan, PR",price:332,d1:"2026-09-03",d2:"2026-09-07",dep:"10:07AM",al:"Frontier",stops:1,rdep:"8:43PM",arr:"3:13PM",rarr:"1:34AM+1",exp:"2026-08-09"},
  {to:"PAR",city:"Paris",price:886,d1:"2026-08-18",d2:"2026-08-31",dep:"8:56AM",al:"",stops:3,rdep:"9:30AM",arr:"9:37PM",rarr:"11:41PM",xfer:1,exp:"2026-08-09"},
  {to:"AMS",city:"Amsterdam",price:892,d1:"2026-09-06",d2:"2026-09-14",dep:"9:15AM",al:"United",stops:1,rdep:"5:00PM",arr:"6:18PM",rarr:"4:05AM+1",exp:"2026-08-09"}],ATL:[
