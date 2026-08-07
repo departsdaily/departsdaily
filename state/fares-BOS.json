@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-06T22:16:39-04:00",
+ "generated": "2026-08-07T00:16:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 301,
+   "price": 255,
    "d1": "2026-08-17",
    "d2": "2026-08-19",
-   "dep": "6:00AM",
-   "al": "United",
+   "dep": "6:15AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55PM",
-   "arr": "8:55AM",
-   "rarr": "9:00PM",
-   "pct": 23
+   "rdep": "6:10AM",
+   "arr": "7:58AM",
+   "rarr": "8:52AM",
+   "pct": 34
   },
   "DEN": {
    "to": "DEN",
@@ -233,17 +233,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 185,
+   "price": 176,
    "d1": "2026-08-14",
    "d2": "2026-08-17",
-   "dep": "3:20PM",
+   "dep": "7:10AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:36AM",
-   "arr": "11:27PM",
-   "rarr": "2:10PM",
-   "pct": 76
+   "rdep": "6:00AM",
+   "arr": "2:56PM",
+   "rarr": "1:07PM",
+   "pct": 77
   },
   "TPA": {
    "to": "TPA",

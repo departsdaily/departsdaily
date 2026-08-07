@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-06T22:13:40-04:00",
+ "generated": "2026-08-07T00:13:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -23,7 +23,7 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 214,
+   "price": 213,
    "d1": "2026-09-18",
    "d2": "2026-09-21",
    "dep": "9:40PM",
@@ -31,7 +31,7 @@
    "stops": 1,
    "xfer": 0,
    "rdep": "7:20PM",
-   "arr": "1:36AM+1",
+   "arr": "1:37AM+1",
    "rarr": "8:55PM",
    "pct": 51
   },
@@ -50,20 +50,20 @@
    "rarr": "2:29PM",
    "pct": 44
   },
-  "DCA": {
-   "to": "DCA",
-   "city": "Washington DC",
-   "price": 455,
-   "d1": "2026-08-09",
-   "d2": "2026-08-15",
-   "dep": "7:58AM",
-   "al": "American",
-   "stops": 0,
+  "DEN": {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 257,
+   "d1": "2026-08-27",
+   "d2": "2026-08-31",
+   "dep": "2:45PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:56AM",
-   "arr": "9:30AM",
-   "rarr": "1:28PM",
-   "pct": -6
+   "rdep": "11:00AM",
+   "arr": "9:00PM",
+   "rarr": "2:26PM",
+   "pct": 43
   },
   "DFW": {
    "to": "DFW",

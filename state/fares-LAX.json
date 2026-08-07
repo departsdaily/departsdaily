@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-06T22:15:24-04:00",
+ "generated": "2026-08-07T00:15:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 189,
-   "d1": "2026-10-16",
-   "d2": "2026-10-20",
-   "dep": "6:45AM",
+   "price": 167,
+   "d1": "2026-09-22",
+   "d2": "2026-09-26",
+   "dep": "5:31PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "10:02AM",
-   "rarr": "9:12AM",
-   "pct": 64
+   "rdep": "3:30PM",
+   "arr": "8:49PM",
+   "rarr": "6:46PM",
+   "pct": 68
   },
   "FLL": {
    "to": "FLL",
@@ -290,21 +290,6 @@
    "rarr": "9:15PM",
    "pct": 38
   },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 768,
-   "d1": "2026-08-09",
-   "d2": "2026-08-15",
-   "dep": "11:34PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:40PM",
-   "arr": "7:21AM+1",
-   "rarr": "9:32PM",
-   "pct": -42
-  },
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
@@ -349,6 +334,21 @@
    "arr": "11:15PM",
    "rarr": "8:50AM+1",
    "pct": 24
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 467,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "8:40PM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:09PM",
+   "arr": "4:39AM+1",
+   "rarr": "2:48AM+1",
+   "pct": -11
   }
  }
 }

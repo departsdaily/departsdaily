@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-06T22:16:02-04:00",
+ "generated": "2026-08-07T00:15:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 680,
-   "d1": "2026-10-17",
-   "d2": "2026-10-28",
-   "dep": "12:20AM",
-   "al": "TAP Portugal",
-   "stops": 1,
+   "price": 950,
+   "d1": "2026-08-29",
+   "d2": "2026-09-13",
+   "dep": "8:10AM",
+   "al": "Frontier",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "11:50AM",
-   "rarr": "8:00PM",
-   "pct": 23
+   "rdep": "7:50PM",
+   "arr": "9:47PM",
+   "rarr": "9:25AM+1",
+   "pct": -8
   },
   "CUN": {
    "to": "CUN",
@@ -368,17 +368,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 543,
-   "d1": "2026-08-09",
-   "d2": "2026-08-23",
-   "dep": "9:30PM",
-   "al": "UX",
+   "price": 795,
+   "d1": "2026-08-19",
+   "d2": "2026-08-29",
+   "dep": "10:45AM",
+   "al": "Turkish",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:25PM",
-   "arr": "8:25AM+1",
-   "rarr": "6:25AM+1",
-   "pct": 43
+   "rdep": "7:05AM",
+   "arr": "12:45AM+1",
+   "rarr": "10:05PM",
+   "pct": 16
   },
   "SJU": {
    "to": "SJU",

@@ -1,14 +1,14 @@
 {
  "origin": "DEN",
- "generated": "2026-08-06T22:15:04-04:00",
+ "generated": "2026-08-07T00:14:48-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 88,
+   "price": 103,
    "d1": "2026-09-03",
    "d2": "2026-09-11",
    "dep": "8:26PM",
@@ -18,7 +18,7 @@
    "rdep": "1:25PM",
    "arr": "10:41PM",
    "rarr": "3:46PM",
-   "pct": 77
+   "pct": 73
   },
   "BOS": {
    "to": "BOS",
@@ -214,6 +214,21 @@
    "arr": "10:19AM",
    "rarr": "9:58PM",
    "pct": 63
+  },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 293,
+   "d1": "2026-11-05",
+   "d2": "2026-11-08",
+   "dep": "11:59PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "8:49PM",
+   "arr": "3:19AM+1",
+   "rarr": "12:59AM+1",
+   "pct": 40
   },
   "CUN": {
    "to": "CUN",

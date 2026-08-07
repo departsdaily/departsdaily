@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-06T22:14:22-04:00",
+ "generated": "2026-08-07T00:14:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 227,
-   "d1": "2026-08-14",
-   "d2": "2026-08-16",
-   "dep": "12:30PM",
-   "al": "LF",
+   "price": 194,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "6:00AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:00AM",
-   "arr": "3:25PM",
-   "rarr": "11:10AM",
-   "pct": 42
+   "rdep": "7:42PM",
+   "arr": "10:39AM",
+   "rarr": "1:25AM+1",
+   "pct": 51
   },
   "BOS": {
    "to": "BOS",
@@ -383,17 +383,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 268,
-   "d1": "2026-11-21",
-   "d2": "2026-11-26",
-   "dep": "7:53PM",
+   "price": 240,
+   "d1": "2026-09-13",
+   "d2": "2026-09-17",
+   "dep": "3:50PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:55AM",
-   "arr": "12:35AM+1",
-   "rarr": "9:16AM",
-   "pct": 36
+   "rdep": "3:55PM",
+   "arr": "9:38PM",
+   "rarr": "10:13PM",
+   "pct": 43
   }
  }
 }
