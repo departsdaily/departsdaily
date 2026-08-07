@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-07T16:13:46-04:00",
+ "generated": "2026-08-07T18:13:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 119,
-   "d1": "2026-09-16",
-   "d2": "2026-09-22",
-   "dep": "1:34PM",
+   "price": 204,
+   "d1": "2026-08-20",
+   "d2": "2026-08-22",
+   "dep": "9:06PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:30AM",
-   "arr": "4:38PM",
-   "rarr": "10:16AM",
-   "pct": 79
+   "rdep": "6:00AM",
+   "arr": "11:59PM",
+   "rarr": "11:22AM",
+   "pct": 64
   },
   "FLL": {
    "to": "FLL",
