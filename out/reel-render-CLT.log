@@ -5,5 +5,4 @@ fonts: 22 dejavu files
 /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
 audio: 4 tracks
 === render ===
-rendering CLT reel for 2026-08-05: shape=board slot=0 13.0s 391 frames audio=runway-lights@2.0.mp3@2s
-wrote out/reel_0.mp4 (0.9MB, 13.0s)
+FATAL: board is dated 2026-08-07, not today — refusing to build a reel from a stale board (REEL_ALLOW_STALE=1 to override)
