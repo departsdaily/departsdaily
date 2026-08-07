@@ -1,0 +1,48 @@
+{
+ "origin": "ATL",
+ "date": "2026-08-07",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from ATL, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 4.91,
+ "fps": 30,
+ "audio": "tarmac-sunrise@2.1.mp3",
+ "audio_start": 2.1,
+ "plan_shape": "friday",
+ "plan_angle": "Expedia's 2026 Air Hacks Report puts Friday as the cheapest day of the week to book a flight, about 3% under Sunday, and the cheapest day to fly overall, up to 8% under a Sunday departure. Worth knowing: for US domestic routes specifically that report still has Tuesday as the cheapest day to actually fly, roughly 14% under Sunday.",
+ "featured": [
+  {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 80,
+   "disc": 56,
+   "baseline": 183,
+   "nights": 2,
+   "d1": "2026-09-12",
+   "d2": "2026-09-14"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 145,
+   "disc": 54,
+   "baseline": 317,
+   "nights": 3,
+   "d1": "2026-10-01",
+   "d2": "2026-10-04"
+  },
+  {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 102,
+   "disc": 52,
+   "baseline": 211,
+   "nights": 4,
+   "d1": "2026-09-19",
+   "d2": "2026-09-23"
+  }
+ ]
+}
