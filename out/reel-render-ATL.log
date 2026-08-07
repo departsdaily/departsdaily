@@ -5,4 +5,5 @@ fonts: 22 dejavu files
 /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
 audio: 4 tracks
 === render ===
-FATAL: board is dated 2026-08-07, not today — refusing to build a reel from a stale board (REEL_ALLOW_STALE=1 to override)
+rendering ATL reel for 2026-08-07: shape=destination slot=0 13.2s 396 frames audio=tarmac-sunrise@2.1.mp3@2.1s
+wrote out/ATL/reel_0.mp4 (4.9MB, 13.2s)
