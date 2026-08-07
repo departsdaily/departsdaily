@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-07T02:16:04-04:00",
+ "generated": "2026-08-07T04:15:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 779,
-   "d1": "2026-09-21",
-   "d2": "2026-10-05",
-   "dep": "4:55PM",
-   "al": "Iberia",
+   "price": 797,
+   "d1": "2026-09-09",
+   "d2": "2026-09-24",
+   "dep": "7:55AM",
+   "al": "Air Canada",
    "stops": 2,
    "xfer": 0,
-   "rdep": "8:50PM",
-   "arr": "4:20AM+1",
-   "rarr": "10:05AM+1",
-   "pct": 8
+   "rdep": "7:15PM",
+   "arr": "9:08PM",
+   "rarr": "9:22AM+1",
+   "pct": 6
   },
   "MBJ": {
    "to": "MBJ",
