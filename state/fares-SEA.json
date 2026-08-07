@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-06T10:16:33-04:00",
+ "generated": "2026-08-06T20:16:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 295,
+   "price": 320,
    "d1": "2026-09-14",
    "d2": "2026-09-20",
-   "dep": "4:27PM",
-   "al": "Frontier",
-   "stops": 2,
+   "dep": "11:57PM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "10:57PM",
-   "rarr": "4:30PM",
-   "pct": 55
+   "rdep": "5:00AM",
+   "arr": "6:09AM+1",
+   "rarr": "12:10PM",
+   "pct": 51
   },
   "DEN": {
    "to": "DEN",
@@ -98,9 +98,9 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 76,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
+   "price": 77,
+   "d1": "2026-10-02",
+   "d2": "2026-10-05",
    "dep": "8:15PM",
    "al": "Frontier",
    "stops": 0,
@@ -113,17 +113,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 160,
-   "d1": "2026-10-17",
-   "d2": "2026-10-26",
-   "dep": "2:15PM",
-   "al": "Southwest",
+   "price": 404,
+   "d1": "2026-08-14",
+   "d2": "2026-08-18",
+   "dep": "7:06PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:50AM",
-   "arr": "9:10PM",
-   "rarr": "4:05PM",
-   "pct": 76
+   "rdep": "7:00AM",
+   "arr": "1:37AM+1",
+   "rarr": "1:09PM",
+   "pct": 40
   },
   "MIA": {
    "to": "MIA",

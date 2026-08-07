@@ -1,10 +1,25 @@
 {
  "origin": "DEN",
- "generated": "2026-08-06T10:15:10-04:00",
+ "generated": "2026-08-06T20:14:53-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
+  "AUS": {
+   "to": "AUS",
+   "city": "Austin",
+   "price": 88,
+   "d1": "2026-09-03",
+   "d2": "2026-09-11",
+   "dep": "8:26PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "1:25PM",
+   "arr": "10:41PM",
+   "rarr": "3:46PM",
+   "pct": 77
+  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -19,6 +34,36 @@
    "arr": "8:52PM",
    "rarr": "12:22PM",
    "pct": 73
+  },
+  "DCA": {
+   "to": "DCA",
+   "city": "Washington DC",
+   "price": 225,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "11:25AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "2:59PM",
+   "rarr": "11:01AM",
+   "pct": 57
+  },
+  "DFW": {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 133,
+   "d1": "2026-09-09",
+   "d2": "2026-09-15",
+   "dep": "9:19PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "11:20PM",
+   "rarr": "9:15AM",
+   "pct": 65
   },
   "FLL": {
    "to": "FLL",
@@ -203,17 +248,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 849,
+   "price": 859,
    "d1": "2026-09-30",
    "d2": "2026-10-07",
    "dep": "12:40PM",
-   "al": "",
+   "al": "TAP Portugal",
    "stops": 2,
-   "xfer": 1,
+   "xfer": 0,
    "rdep": "6:50PM",
    "arr": "12:47AM+1",
    "rarr": "9:03AM+1",
-   "pct": 6
+   "pct": 5
   },
   "ROM": {
    "to": "ROM",

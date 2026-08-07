@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-06T10:14:12-04:00",
+ "generated": "2026-08-06T20:14:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -83,9 +83,9 @@
   "DTW": {
    "to": "DTW",
    "city": "Detroit",
-   "price": 87,
+   "price": 101,
    "d1": "2026-08-28",
-   "d2": "2026-09-01",
+   "d2": "2026-08-31",
    "dep": "10:59PM",
    "al": "Frontier",
    "stops": 0,
@@ -93,7 +93,7 @@
    "rdep": "6:00AM",
    "arr": "1:04AM+1",
    "rarr": "8:20AM",
-   "pct": 81
+   "pct": 78
   },
   "FLL": {
    "to": "FLL",
@@ -233,17 +233,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 86,
-   "d1": "2026-09-25",
-   "d2": "2026-09-28",
-   "dep": "9:07PM",
+   "price": 89,
+   "d1": "2026-09-02",
+   "d2": "2026-09-08",
+   "dep": "8:17PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:41AM",
-   "arr": "11:18PM",
-   "rarr": "11:06AM",
-   "pct": 81
+   "rdep": "8:30AM",
+   "arr": "10:33PM",
+   "rarr": "11:00AM",
+   "pct": 80
   },
   "PHX": {
    "to": "PHX",
@@ -263,17 +263,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 418,
+   "price": 390,
    "d1": "2026-08-15",
    "d2": "2026-08-22",
-   "dep": "7:11PM",
+   "dep": "7:40AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:06PM",
-   "arr": "2:21AM+1",
-   "rarr": "1:20AM+1",
-   "pct": 37
+   "rdep": "2:37PM",
+   "arr": "2:07PM",
+   "rarr": "8:55PM",
+   "pct": 41
   },
   "TPA": {
    "to": "TPA",

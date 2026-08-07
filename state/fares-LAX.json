@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-06T10:15:30-04:00",
+ "generated": "2026-08-06T20:15:11-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 617,
-   "d1": "2026-09-05",
-   "d2": "2026-09-13",
-   "dep": "11:30PM",
-   "al": "United",
-   "stops": 1,
+   "price": 582,
+   "d1": "2026-08-28",
+   "d2": "2026-09-06",
+   "dep": "7:45PM",
+   "al": "BF",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:10PM",
-   "arr": "11:51AM+1",
-   "rarr": "3:45AM+1",
-   "pct": 31
+   "rdep": "2:50PM",
+   "arr": "6:35AM+1",
+   "rarr": "2:30AM+1",
+   "pct": 35
   },
   "ROM": {
    "to": "ROM",
@@ -349,21 +349,6 @@
    "arr": "9:28PM",
    "rarr": "5:15AM+1",
    "pct": 23
-  },
-  "SJU": {
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 439,
-   "d1": "2026-11-03",
-   "d2": "2026-11-08",
-   "dep": "9:57AM",
-   "al": "JetBlue",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "8:24PM",
-   "arr": "5:24PM",
-   "rarr": "6:25AM+1",
-   "pct": -5
   }
  }
 }

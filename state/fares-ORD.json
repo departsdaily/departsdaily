@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-06T10:14:32-04:00",
+ "generated": "2026-08-06T20:14:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 108,
-   "d1": "2026-09-19",
-   "d2": "2026-09-24",
+   "price": 87,
+   "d1": "2026-09-09",
+   "d2": "2026-09-15",
    "dep": "7:11AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:18PM",
+   "rdep": "12:53PM",
    "arr": "10:23AM",
-   "rarr": "3:45PM",
-   "pct": 75
+   "rarr": "4:20PM",
+   "pct": 80
   },
   "HOU": {
    "to": "HOU",
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 115,
-   "d1": "2026-09-19",
-   "d2": "2026-09-24",
-   "dep": "7:11AM",
+   "price": 159,
+   "d1": "2026-09-08",
+   "d2": "2026-09-15",
+   "dep": "8:05AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:18PM",
-   "arr": "10:23AM",
-   "rarr": "3:45PM",
-   "pct": 74
+   "rdep": "12:53PM",
+   "arr": "11:28AM",
+   "rarr": "4:20PM",
+   "pct": 64
   },
   "MSY": {
    "to": "MSY",
@@ -218,15 +218,15 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 136,
+   "price": 137,
    "d1": "2026-09-03",
    "d2": "2026-09-06",
-   "dep": "8:30PM",
+   "dep": "5:55AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:22AM",
-   "arr": "10:53PM",
+   "arr": "8:04AM",
    "rarr": "12:55PM",
    "pct": 68
   },
