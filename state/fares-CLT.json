@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-07T12:13:42-04:00",
+ "generated": "2026-08-07T14:13:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -200,6 +200,21 @@
    "rarr": "10:39AM",
    "pct": 59
   },
+  "ORD": {
+   "to": "ORD",
+   "city": "Chicago",
+   "price": 210,
+   "d1": "2026-08-29",
+   "d2": "2026-08-31",
+   "dep": "5:21PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:25PM",
+   "arr": "11:57PM",
+   "rarr": "6:28PM",
+   "pct": 47
+  },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
@@ -233,7 +248,7 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 258,
+   "price": 257,
    "d1": "2026-10-23",
    "d2": "2026-11-01",
    "dep": "7:46PM",
@@ -319,21 +334,6 @@
    "arr": "9:37PM",
    "rarr": "11:41PM",
    "pct": 2
-  },
-  "PUJ": {
-   "to": "PUJ",
-   "city": "Punta Cana",
-   "price": 289,
-   "d1": "2026-08-26",
-   "d2": "2026-08-30",
-   "dep": "9:52PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "1:15PM",
-   "arr": "3:42AM+1",
-   "rarr": "7:14PM",
-   "pct": 48
   },
   "SJU": {
    "to": "SJU",

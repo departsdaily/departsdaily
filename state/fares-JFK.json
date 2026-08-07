@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-07T12:15:31-04:00",
+ "generated": "2026-08-07T14:15:44-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -368,17 +368,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 391,
-   "d1": "2026-09-27",
-   "d2": "2026-10-10",
-   "dep": "10:05PM",
-   "al": "TAP Portugal",
-   "stops": 1,
+   "price": 429,
+   "d1": "2026-08-10",
+   "d2": "2026-08-22",
+   "dep": "10:37PM",
+   "al": "Virgin Atlantic",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "12:00PM",
-   "arr": "7:40AM+1",
-   "rarr": "10:40PM",
-   "pct": 57
+   "rdep": "11:30AM",
+   "arr": "6:15AM+1",
+   "rarr": "7:49PM",
+   "pct": 52
   },
   "PUJ": {
    "to": "PUJ",
