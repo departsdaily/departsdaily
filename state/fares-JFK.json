@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-07T00:15:27-04:00",
+ "generated": "2026-08-07T02:15:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 297,
-   "d1": "2026-08-25",
-   "d2": "2026-08-28",
-   "dep": "5:45PM",
-   "al": "JetBlue",
+   "price": 327,
+   "d1": "2026-08-16",
+   "d2": "2026-08-22",
+   "dep": "7:00AM",
+   "al": "Alaska",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:45PM",
-   "arr": "12:08AM+1",
-   "rarr": "6:19AM+1",
-   "pct": 54
+   "rdep": "6:51PM",
+   "arr": "1:16PM",
+   "rarr": "1:21AM+1",
+   "pct": 49
   },
   "SFO": {
    "to": "SFO",
