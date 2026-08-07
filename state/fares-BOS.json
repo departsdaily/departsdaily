@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-07T10:16:45-04:00",
+ "generated": "2026-08-07T12:16:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -98,16 +98,16 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 199,
-   "d1": "2026-09-01",
-   "d2": "2026-09-09",
+   "price": 193,
+   "d1": "2026-08-25",
+   "d2": "2026-08-31",
    "dep": "12:45PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:04PM",
+   "rdep": "11:41PM",
    "arr": "7:59PM",
-   "rarr": "4:39AM+1",
+   "rarr": "6:32AM+1",
    "pct": 71
   },
   "LAX": {
@@ -293,17 +293,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 612,
-   "d1": "2026-09-22",
-   "d2": "2026-09-29",
+   "price": 747,
+   "d1": "2026-08-31",
+   "d2": "2026-09-05",
    "dep": "8:50PM",
    "al": "Icelandair",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "5:15AM+1",
-   "rarr": "6:25PM",
-   "pct": 28
+   "rdep": "6:35AM",
+   "arr": "5:20AM+1",
+   "rarr": "3:05PM",
+   "pct": 12
   },
   "NAS": {
    "to": "NAS",

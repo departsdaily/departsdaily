@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-07T10:14:08-04:00",
+ "generated": "2026-08-07T12:14:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 78,
-   "d1": "2026-08-27",
-   "d2": "2026-08-29",
-   "dep": "6:50AM",
+   "price": 71,
+   "d1": "2026-09-20",
+   "d2": "2026-09-26",
+   "dep": "10:25PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:47PM",
-   "arr": "8:48AM",
-   "rarr": "11:59PM",
-   "pct": 78
+   "rdep": "4:23PM",
+   "arr": "12:18AM+1",
+   "rarr": "6:45PM",
+   "pct": 80
   },
   "HOU": {
    "to": "HOU",
@@ -383,17 +383,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 495,
-   "d1": "2026-08-10",
-   "d2": "2026-08-17",
-   "dep": "5:02PM",
+   "price": 280,
+   "d1": "2026-09-02",
+   "d2": "2026-09-09",
+   "dep": "8:29PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:34AM",
-   "arr": "11:17PM",
-   "rarr": "6:11PM",
-   "pct": 12
+   "rdep": "1:59PM",
+   "arr": "2:17AM+1",
+   "rarr": "7:52PM",
+   "pct": 50
   },
   "SJU": {
    "to": "SJU",

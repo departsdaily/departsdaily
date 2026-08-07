@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-07 10:13 EDT
+   Generated 2026-08-07 12:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-07T10:13:28-04:00",
+ updated:"2026-08-07T12:13:22-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:208,d1:"2026-08-21",d2:"2026-08-23",dep:"8:56AM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"3:43PM",rarr:"6:34AM",exp:"2026-08-09"},
@@ -26,8 +26,8 @@ const DEALS={CLT:[
  {to:"MIA",city:"Miami",price:82,d1:"2026-08-27",d2:"2026-08-31",dep:"12:05PM",al:"Frontier",stops:0,rdep:"9:47PM",arr:"2:05PM",rarr:"11:59PM",exp:"2026-08-09"},
  {to:"NYC",city:"New York City",price:166,d1:"2026-09-12",d2:"2026-09-14",dep:"7:01PM",al:"Frontier",stops:0,rdep:"10:29PM",arr:"9:24PM",rarr:"1:01AM+1",exp:"2026-08-09"},
  {to:"SJU",city:"San Juan, PR",price:194,d1:"2026-10-02",d2:"2026-10-06",dep:"6:30PM",al:"Frontier",stops:1,rdep:"8:45AM",arr:"11:16PM",rarr:"1:39PM",exp:"2026-08-09"},
- {to:"NAS",city:"Nassau",price:252,d1:"2026-09-22",d2:"2026-09-27",dep:"5:07PM",al:"Copa",stops:1,rdep:"12:40PM",arr:"12:30AM+1",rarr:"7:55PM",exp:"2026-08-09"},
- {to:"PAR",city:"Paris",price:569,d1:"2026-09-07",d2:"2026-09-16",dep:"7:30PM",al:"SK",stops:1,rdep:"2:00PM",arr:"6:20AM+1",rarr:"1:25AM+1",exp:"2026-08-09"}],ORD:[
+ {to:"PUJ",city:"Punta Cana",price:280,d1:"2026-09-02",d2:"2026-09-09",dep:"8:29PM",al:"Frontier",stops:2,rdep:"1:59PM",arr:"2:17AM+1",rarr:"7:52PM",exp:"2026-08-09"},
+ {to:"NAS",city:"Nassau",price:252,d1:"2026-09-22",d2:"2026-09-27",dep:"5:07PM",al:"Copa",stops:1,rdep:"12:40PM",arr:"12:30AM+1",rarr:"7:55PM",exp:"2026-08-09"}],ORD:[
  {to:"LAX",city:"Los Angeles",price:147,d1:"2026-08-21",d2:"2026-08-24",dep:"1:03PM",al:"United",stops:0,rdep:"12:10AM",arr:"5:35PM",rarr:"4:20AM",exp:"2026-08-09"},
  {to:"DEN",city:"Denver",price:129,d1:"2026-10-15",d2:"2026-10-20",dep:"1:52PM",al:"Frontier",stops:1,rdep:"6:25AM",arr:"6:54PM",rarr:"9:01AM",exp:"2026-08-09"},
  {to:"LAS",city:"Las Vegas",price:150,d1:"2026-10-30",d2:"2026-11-01",dep:"1:22PM",al:"Frontier",stops:1,rdep:"11:48PM",arr:"7:15PM",rarr:"3:35AM+1",exp:"2026-08-09"},
@@ -86,9 +86,9 @@ const DEALS={CLT:[
  {to:"CUN",city:"Cancún",price:485,d1:"2026-11-12",d2:"2026-11-19",dep:"3:15PM",al:"Air Canada",stops:2,rdep:"8:00AM",arr:"1:13AM+1",rarr:"3:52PM",exp:"2026-08-09"}],BOS:[
  {to:"LAX",city:"Los Angeles",price:145,d1:"2026-08-18",d2:"2026-08-25",dep:"5:35AM",al:"Southwest",stops:2,rdep:"6:50AM",arr:"1:35PM",rarr:"1:00PM",exp:"2026-08-09"},
  {to:"SFO",city:"San Francisco",price:159,d1:"2026-08-14",d2:"2026-08-17",dep:"7:10AM",al:"American",stops:1,rdep:"11:45AM",arr:"2:56PM",rarr:"7:03PM",exp:"2026-08-09"},
- {to:"LAS",city:"Las Vegas",price:199,d1:"2026-09-01",d2:"2026-09-09",dep:"12:45PM",al:"Frontier",stops:1,rdep:"10:04PM",arr:"7:59PM",rarr:"4:39AM+1",exp:"2026-08-09"},
+ {to:"LAS",city:"Las Vegas",price:193,d1:"2026-08-25",d2:"2026-08-31",dep:"12:45PM",al:"Frontier",stops:1,rdep:"11:41PM",arr:"7:59PM",rarr:"6:32AM+1",exp:"2026-08-09"},
  {to:"DEN",city:"Denver",price:166,d1:"2026-09-02",d2:"2026-09-05",dep:"12:45PM",al:"Frontier",stops:1,rdep:"1:38PM",arr:"7:15PM",rarr:"7:17PM",exp:"2026-08-09"},
  {to:"MIA",city:"Miami",price:167,d1:"2026-10-06",d2:"2026-10-10",dep:"5:00AM",al:"American",stops:0,rdep:"6:51AM",arr:"8:27AM",rarr:"10:18AM",exp:"2026-08-09"},
  {to:"ROM",city:"Rome",price:474,d1:"2026-08-28",d2:"2026-09-06",dep:"8:05PM",al:"Lufthansa",stops:1,rdep:"11:30AM",arr:"5:00AM+1",rarr:"9:57PM",exp:"2026-08-09"},
- {to:"PAR",city:"Paris",price:636,d1:"2026-08-20",d2:"2026-09-10",dep:"4:45PM",al:"DE",stops:1,rdep:"4:45PM",arr:"1:05AM+1",rarr:"2:30AM+1",exp:"2026-08-09"},
- {to:"LON",city:"London",price:612,d1:"2026-09-22",d2:"2026-09-29",dep:"8:50PM",al:"Icelandair",stops:2,rdep:"6:30AM",arr:"5:15AM+1",rarr:"6:25PM",exp:"2026-08-09"}]};
+ {to:"SJU",city:"San Juan, PR",price:281,d1:"2026-08-31",d2:"2026-09-14",dep:"5:00PM",al:"JetBlue",stops:1,rdep:"11:15AM",arr:"11:25PM",rarr:"6:00PM",exp:"2026-08-09"},
+ {to:"PAR",city:"Paris",price:636,d1:"2026-08-20",d2:"2026-09-10",dep:"4:45PM",al:"DE",stops:1,rdep:"4:45PM",arr:"1:05AM+1",rarr:"2:30AM+1",exp:"2026-08-09"}]};
