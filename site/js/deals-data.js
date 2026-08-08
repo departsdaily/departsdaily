@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-08 10:13 EDT
+   Generated 2026-08-08 12:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-08T10:13:43-04:00",
+ updated:"2026-08-08T12:13:37-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:205,d1:"2026-09-17",d2:"2026-09-21",dep:"7:54PM",al:"Frontier",stops:1,rdep:"12:53AM",arr:"1:37AM+1",rarr:"6:46AM",exp:"2026-08-10"},
@@ -31,7 +31,7 @@ const DEALS={CLT:[
  {to:"LAX",city:"Los Angeles",price:147,d1:"2026-08-21",d2:"2026-08-24",dep:"1:03PM",al:"United",stops:0,rdep:"12:10AM",arr:"5:35PM",rarr:"4:20AM",exp:"2026-08-10"},
  {to:"DEN",city:"Denver",price:129,d1:"2026-10-15",d2:"2026-10-20",dep:"1:52PM",al:"Frontier",stops:1,rdep:"6:25AM",arr:"6:54PM",rarr:"9:01AM",exp:"2026-08-10"},
  {to:"LAS",city:"Las Vegas",price:150,d1:"2026-10-30",d2:"2026-11-01",dep:"1:22PM",al:"Frontier",stops:1,rdep:"11:48PM",arr:"7:15PM",rarr:"3:35AM+1",exp:"2026-08-10"},
- {to:"NYC",city:"New York City",price:145,d1:"2026-10-09",d2:"2026-10-12",dep:"6:50AM",al:"American",stops:0,rdep:"6:00AM",arr:"9:05AM",rarr:"8:49AM",exp:"2026-08-10"},
+ {to:"NYC",city:"New York City",price:146,d1:"2026-10-22",d2:"2026-10-27",dep:"1:52PM",al:"Frontier",stops:1,rdep:"6:25AM",arr:"8:18PM",rarr:"11:24AM",exp:"2026-08-10"},
  {to:"MIA",city:"Miami",price:159,d1:"2026-09-08",d2:"2026-09-15",dep:"8:05AM",al:"Frontier",stops:0,rdep:"12:53PM",arr:"11:28AM",rarr:"4:20PM",exp:"2026-08-10"},
  {to:"CUN",city:"Cancún",price:246,d1:"2026-10-21",d2:"2026-10-25",dep:"9:33PM",al:"Frontier",stops:1,rdep:"3:41PM",arr:"2:33AM+1",rarr:"8:54PM",exp:"2026-08-10"},
  {to:"PAR",city:"Paris",price:496,d1:"2026-10-07",d2:"2026-10-14",dep:"6:00PM",al:"TAP Portugal",stops:1,rdep:"6:00AM",arr:"4:35AM+1",rarr:"5:55PM",exp:"2026-08-10"},

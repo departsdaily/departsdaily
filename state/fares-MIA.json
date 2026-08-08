@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-08T10:16:28-04:00",
+ "generated": "2026-08-08T12:16:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 211,
+   "price": 206,
    "d1": "2026-08-29",
    "d2": "2026-09-02",
-   "dep": "8:10AM",
+   "dep": "6:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "2:55PM",
-   "arr": "12:12PM",
+   "arr": "11:48AM",
    "rarr": "6:05PM",
-   "pct": 34
+   "pct": 36
   },
   "NYC": {
    "to": "NYC",
@@ -293,16 +293,16 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 297,
+   "price": 296,
    "d1": "2026-09-12",
-   "d2": "2026-09-16",
+   "d2": "2026-09-18",
    "dep": "7:45PM",
    "al": "UP",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:45AM",
+   "rdep": "5:30PM",
    "arr": "8:45PM",
-   "rarr": "8:50AM",
+   "rarr": "6:35PM",
    "pct": 38
   },
   "PAR": {

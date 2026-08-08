@@ -1,25 +1,10 @@
 {
  "origin": "CLT",
- "generated": "2026-08-08T10:14:15-04:00",
+ "generated": "2026-08-08T12:13:57-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 289,
-   "d1": "2026-08-13",
-   "d2": "2026-08-17",
-   "dep": "9:43PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "2:27AM+1",
-   "rarr": "12:16PM",
-   "pct": 56
-  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
