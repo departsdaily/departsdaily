@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-08T00:00:59-04:00",
+ "generated": "2026-08-08T00:15:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 195,
-   "d1": "2026-08-10",
-   "d2": "2026-08-13",
+   "price": 226,
+   "d1": "2026-09-13",
+   "d2": "2026-09-19",
    "dep": "9:30PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:10AM",
+   "rdep": "6:30AM",
    "arr": "10:59PM",
-   "rarr": "7:19AM",
-   "pct": 52
+   "rarr": "7:42AM",
+   "pct": 44
   },
   "DEN": {
    "to": "DEN",
@@ -368,17 +368,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 429,
-   "d1": "2026-08-10",
-   "d2": "2026-08-22",
-   "dep": "10:37PM",
-   "al": "Virgin Atlantic",
-   "stops": 0,
+   "price": 527,
+   "d1": "2026-08-24",
+   "d2": "2026-09-02",
+   "dep": "8:30PM",
+   "al": "Icelandair",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:30AM",
-   "arr": "6:15AM+1",
-   "rarr": "7:49PM",
-   "pct": 52
+   "rdep": "5:15PM",
+   "arr": "5:45AM+1",
+   "rarr": "3:00AM+1",
+   "pct": 41
   },
   "PUJ": {
    "to": "PUJ",

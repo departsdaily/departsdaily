@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-08T00:00:18-04:00",
+ "generated": "2026-08-08T00:15:03-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 293,
-   "d1": "2026-11-05",
+   "price": 260,
+   "d1": "2026-11-06",
    "d2": "2026-11-08",
-   "dep": "11:59PM",
+   "dep": "6:30AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
    "rdep": "8:49PM",
-   "arr": "3:19AM+1",
+   "arr": "10:59AM",
    "rarr": "12:59AM+1",
-   "pct": 40
+   "pct": 46
   },
   "CUN": {
    "to": "CUN",

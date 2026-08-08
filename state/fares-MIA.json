@@ -1,25 +1,10 @@
 {
  "origin": "MIA",
- "generated": "2026-08-08T00:01:17-04:00",
+ "generated": "2026-08-08T00:15:56-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 315,
-   "d1": "2026-08-10",
-   "d2": "2026-08-17",
-   "dep": "6:00AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:25PM",
-   "arr": "12:59PM",
-   "rarr": "7:42PM",
-   "pct": 21
-  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -34,21 +19,6 @@
    "arr": "8:00PM",
    "rarr": "5:50PM",
    "pct": 40
-  },
-  "DCA": {
-   "to": "DCA",
-   "city": "Washington DC",
-   "price": 433,
-   "d1": "2026-08-10",
-   "d2": "2026-08-12",
-   "dep": "6:30AM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "10:10AM",
-   "rarr": "8:32AM",
-   "pct": -14
   },
   "DEN": {
    "to": "DEN",
