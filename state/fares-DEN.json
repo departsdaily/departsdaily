@@ -1,14 +1,14 @@
 {
  "origin": "DEN",
- "generated": "2026-08-08T16:15:20-04:00",
+ "generated": "2026-08-08T18:15:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 103,
+   "price": 88,
    "d1": "2026-09-03",
    "d2": "2026-09-11",
    "dep": "8:26PM",
@@ -18,7 +18,7 @@
    "rdep": "1:25PM",
    "arr": "10:41PM",
    "rarr": "3:46PM",
-   "pct": 73
+   "pct": 77
   },
   "BOS": {
    "to": "BOS",
@@ -158,17 +158,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 231,
-   "d1": "2026-09-19",
-   "d2": "2026-09-21",
-   "dep": "10:44AM",
+   "price": 272,
+   "d1": "2026-08-19",
+   "d2": "2026-08-22",
+   "dep": "10:43AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:29PM",
-   "arr": "4:18PM",
-   "rarr": "4:24AM+1",
-   "pct": 58
+   "arr": "4:12PM",
+   "rarr": "4:14AM+1",
+   "pct": 51
   },
   "ORD": {
    "to": "ORD",
@@ -199,6 +199,21 @@
    "arr": "1:39AM+1",
    "rarr": "3:22AM+1",
    "pct": 54
+  },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 107,
+   "d1": "2026-08-31",
+   "d2": "2026-09-02",
+   "dep": "8:31PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "4:48PM",
+   "arr": "10:28PM",
+   "rarr": "6:46PM",
+   "pct": 69
   },
   "TPA": {
    "to": "TPA",
