@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-08T12:16:24-04:00",
+ "generated": "2026-08-08T14:16:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 399,
-   "d1": "2026-08-26",
-   "d2": "2026-09-02",
-   "dep": "3:29PM",
-   "al": "Alaska",
-   "stops": 0,
+   "price": 391,
+   "d1": "2026-09-01",
+   "d2": "2026-09-04",
+   "dep": "11:05PM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:09AM",
-   "arr": "8:54PM",
-   "rarr": "1:30PM",
-   "pct": 41
+   "rdep": "7:26PM",
+   "arr": "5:20AM+1",
+   "rarr": "1:49AM+1",
+   "pct": 42
   },
   "DCA": {
    "to": "DCA",
@@ -83,7 +83,7 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 86,
+   "price": 78,
    "d1": "2026-09-17",
    "d2": "2026-09-21",
    "dep": "8:15PM",
@@ -93,7 +93,7 @@
    "rdep": "5:44PM",
    "arr": "11:04PM",
    "rarr": "8:40PM",
-   "pct": 80
+   "pct": 82
   },
   "MCO": {
    "to": "MCO",
