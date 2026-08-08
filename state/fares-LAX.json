@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-07T18:15:15-04:00",
+ "generated": "2026-08-07T20:15:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 524,
-   "d1": "2026-08-15",
-   "d2": "2026-09-05",
-   "dep": "4:55PM",
-   "al": "TAP Portugal",
+   "price": 787,
+   "d1": "2026-09-12",
+   "d2": "2026-09-21",
+   "dep": "6:30AM",
+   "al": "",
    "stops": 1,
-   "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "6:40AM+1",
-   "rarr": "9:15PM",
-   "pct": 38
+   "xfer": 1,
+   "rdep": "9:25AM",
+   "arr": "7:00PM",
+   "rarr": "11:25PM",
+   "pct": 7
   },
   "NAS": {
    "to": "NAS",

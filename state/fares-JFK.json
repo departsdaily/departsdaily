@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-07T18:15:35-04:00",
+ "generated": "2026-08-07T20:15:31-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -128,9 +128,9 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 291,
-   "d1": "2026-09-10",
-   "d2": "2026-09-14",
+   "price": 289,
+   "d1": "2026-09-09",
+   "d2": "2026-09-12",
    "dep": "1:00PM",
    "al": "Frontier",
    "stops": 1,
@@ -138,7 +138,7 @@
    "rdep": "10:04PM",
    "arr": "8:11PM",
    "rarr": "4:23AM+1",
-   "pct": 57
+   "pct": 58
   },
   "LAX": {
    "to": "LAX",

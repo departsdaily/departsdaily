@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-07T18:15:54-04:00",
+ "generated": "2026-08-07T20:15:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 165,
+   "price": 175,
    "d1": "2026-08-28",
    "d2": "2026-08-31",
    "dep": "5:28PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:17AM",
+   "rdep": "10:00AM",
    "arr": "10:28PM",
-   "rarr": "10:49AM",
-   "pct": 64
+   "rarr": "2:33PM",
+   "pct": 62
   },
   "HOU": {
    "to": "HOU",
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 251,
-   "d1": "2026-09-10",
-   "d2": "2026-09-17",
-   "dep": "11:25AM",
+   "price": 267,
+   "d1": "2026-09-08",
+   "d2": "2026-09-15",
+   "dep": "6:00AM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:10PM",
-   "arr": "5:54PM",
-   "rarr": "10:41PM",
-   "pct": 58
+   "rdep": "10:04PM",
+   "arr": "12:23PM",
+   "rarr": "3:55AM+1",
+   "pct": 55
   },
   "LAX": {
    "to": "LAX",
@@ -188,32 +188,32 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 194,
+   "price": 174,
    "d1": "2026-08-28",
    "d2": "2026-08-31",
-   "dep": "11:10AM",
+   "dep": "8:10AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "4:45PM",
-   "arr": "3:38PM",
-   "rarr": "9:27PM",
-   "pct": 49
+   "arr": "12:42PM",
+   "rarr": "9:23PM",
+   "pct": 54
   },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 276,
-   "d1": "2026-09-07",
-   "d2": "2026-09-14",
-   "dep": "9:17PM",
+   "price": 303,
+   "d1": "2026-09-18",
+   "d2": "2026-09-23",
+   "dep": "11:25AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "5:24PM",
-   "arr": "4:40AM+1",
-   "rarr": "10:45PM",
-   "pct": 50
+   "rdep": "9:20AM",
+   "arr": "7:22PM",
+   "rarr": "4:16PM",
+   "pct": 45
   },
   "SEA": {
    "to": "SEA",
@@ -308,7 +308,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 489,
+   "price": 450,
    "d1": "2026-09-18",
    "d2": "2026-09-27",
    "dep": "5:32AM",
@@ -318,7 +318,7 @@
    "rdep": "5:16PM",
    "arr": "10:32AM",
    "rarr": "7:05PM",
-   "pct": 9
+   "pct": 17
   },
   "NAS": {
    "to": "NAS",
@@ -368,7 +368,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 809,
+   "price": 823,
    "d1": "2026-09-17",
    "d2": "2026-09-30",
    "dep": "9:35PM",
@@ -378,21 +378,21 @@
    "rdep": "7:10PM",
    "arr": "10:05AM+1",
    "rarr": "8:00AM+1",
-   "pct": 15
+   "pct": 13
   },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 120,
-   "d1": "2026-09-07",
-   "d2": "2026-09-14",
-   "dep": "9:48PM",
+   "price": 123,
+   "d1": "2026-09-29",
+   "d2": "2026-10-09",
+   "dep": "11:30PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:23AM",
-   "arr": "12:43AM+1",
-   "rarr": "2:09PM",
+   "rdep": "6:00AM",
+   "arr": "2:13AM+1",
+   "rarr": "8:50AM",
    "pct": 71
   }
  }
