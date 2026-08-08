@@ -1,0 +1,88 @@
+{
+ "origin": "ATL",
+ "date": "2026-08-08",
+ "slot": 0,
+ "shape": "board",
+ "label": "THE WHOLE BOARD",
+ "caption_lead": "Today's whole board, out of ATL.",
+ "file": "reel_0.mp4",
+ "seconds": 13.05,
+ "size_mb": 0.85,
+ "fps": 30,
+ "audio": "tarmac-sunrise@2.1.mp3",
+ "audio_start": 2.1,
+ "plan_shape": "weekend",
+ "plan_angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.",
+ "featured": [
+  {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 80,
+   "disc": 60,
+   "baseline": 198,
+   "nights": 2,
+   "d1": "2026-08-24",
+   "d2": "2026-08-26"
+  },
+  {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 87,
+   "disc": 57,
+   "baseline": 203,
+   "nights": 2,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 145,
+   "disc": 54,
+   "baseline": 317,
+   "nights": 3,
+   "d1": "2026-10-01",
+   "d2": "2026-10-04"
+  },
+  {
+   "to": "DTW",
+   "city": "Detroit",
+   "price": 101,
+   "disc": 52,
+   "baseline": 211,
+   "nights": 3,
+   "d1": "2026-08-28",
+   "d2": "2026-08-31"
+  },
+  {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 96,
+   "disc": 50,
+   "baseline": 191,
+   "nights": 7,
+   "d1": "2026-08-12",
+   "d2": "2026-08-19"
+  },
+  {
+   "to": "MIA",
+   "city": "Miami",
+   "price": 80,
+   "disc": 49,
+   "baseline": 158,
+   "nights": 4,
+   "d1": "2026-08-27",
+   "d2": "2026-08-31"
+  },
+  {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 79,
+   "disc": 48,
+   "baseline": 151,
+   "nights": 2,
+   "d1": "2026-10-16",
+   "d2": "2026-10-18"
+  }
+ ]
+}
