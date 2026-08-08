@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-08T06:15:31-04:00",
+ "generated": "2026-08-08T08:15:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 720,
-   "d1": "2026-11-20",
-   "d2": "2026-11-28",
-   "dep": "9:20AM",
-   "al": "AT",
+   "price": 678,
+   "d1": "2026-11-05",
+   "d2": "2026-11-12",
+   "dep": "5:15PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:10PM",
-   "arr": "11:15PM",
-   "rarr": "8:50AM+1",
-   "pct": 24
+   "rdep": "5:55AM",
+   "arr": "7:30AM+1",
+   "rarr": "9:55PM",
+   "pct": 29
   },
   "SJU": {
    "to": "SJU",

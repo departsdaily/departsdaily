@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-08T06:14:36-04:00",
+ "generated": "2026-08-08T08:14:30-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -368,17 +368,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 468,
-   "d1": "2026-11-18",
-   "d2": "2026-11-30",
-   "dep": "1:55PM",
-   "al": "Air Canada",
+   "price": 623,
+   "d1": "2026-11-04",
+   "d2": "2026-11-21",
+   "dep": "6:30PM",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:15PM",
-   "arr": "12:12AM+1",
-   "rarr": "8:00AM+1",
-   "pct": 51
+   "rdep": "11:25AM",
+   "arr": "5:25AM+1",
+   "rarr": "11:20PM",
+   "pct": 34
   },
   "SJU": {
    "to": "SJU",

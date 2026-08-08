@@ -1,25 +1,10 @@
 {
  "origin": "ATL",
- "generated": "2026-08-08T06:14:16-04:00",
+ "generated": "2026-08-08T08:14:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 133,
-   "d1": "2026-08-24",
-   "d2": "2026-08-26",
-   "dep": "7:05AM",
-   "al": "Southwest",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "10:05AM",
-   "arr": "8:05AM",
-   "rarr": "11:15AM",
-   "pct": 74
-  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -143,17 +128,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 225,
-   "d1": "2026-08-24",
-   "d2": "2026-08-26",
-   "dep": "10:52AM",
+   "price": 276,
+   "d1": "2026-09-18",
+   "d2": "2026-09-21",
+   "dep": "9:18PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "4:07PM",
-   "rarr": "11:30AM",
-   "pct": 68
+   "rdep": "11:45AM",
+   "arr": "2:54AM+1",
+   "rarr": "5:07PM",
+   "pct": 60
   },
   "MCO": {
    "to": "MCO",
@@ -188,17 +173,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 80,
-   "d1": "2026-08-24",
-   "d2": "2026-08-26",
+   "price": 117,
+   "d1": "2026-09-05",
+   "d2": "2026-09-07",
    "dep": "5:20PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:11PM",
+   "rdep": "6:17PM",
    "arr": "7:02PM",
-   "rarr": "9:04PM",
-   "pct": 82
+   "rarr": "10:04PM",
+   "pct": 73
   },
   "NYC": {
    "to": "NYC",
