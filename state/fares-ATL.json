@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-07T20:13:59-04:00",
+ "generated": "2026-08-07T22:13:54-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -23,9 +23,9 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 188,
-   "d1": "2026-09-23",
-   "d2": "2026-09-29",
+   "price": 189,
+   "d1": "2026-10-02",
+   "d2": "2026-10-06",
    "dep": "9:30AM",
    "al": "Frontier",
    "stops": 0,
@@ -233,17 +233,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 89,
-   "d1": "2026-09-02",
-   "d2": "2026-09-08",
-   "dep": "8:17PM",
+   "price": 87,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30",
+   "dep": "5:05AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "8:30AM",
-   "arr": "10:33PM",
+   "arr": "7:15AM",
    "rarr": "11:00AM",
-   "pct": 80
+   "pct": 81
   },
   "PHX": {
    "to": "PHX",
@@ -353,17 +353,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 252,
-   "d1": "2026-09-22",
-   "d2": "2026-09-27",
-   "dep": "5:07PM",
-   "al": "Copa",
+   "price": 396,
+   "d1": "2026-08-26",
+   "d2": "2026-09-06",
+   "dep": "7:00AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:40PM",
-   "arr": "12:30AM+1",
-   "rarr": "7:55PM",
-   "pct": 48
+   "rdep": "12:20PM",
+   "arr": "9:54AM",
+   "rarr": "3:28PM",
+   "pct": 18
   },
   "PAR": {
    "to": "PAR",

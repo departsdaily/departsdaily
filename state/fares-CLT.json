@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-07T20:13:40-04:00",
+ "generated": "2026-08-07T22:13:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 204,
-   "d1": "2026-08-20",
-   "d2": "2026-08-22",
-   "dep": "9:06PM",
+   "price": 240,
+   "d1": "2026-08-26",
+   "d2": "2026-08-29",
+   "dep": "5:21PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "11:59PM",
-   "rarr": "11:22AM",
-   "pct": 64
+   "rdep": "8:19AM",
+   "arr": "11:26PM",
+   "rarr": "11:07AM",
+   "pct": 58
   },
   "FLL": {
    "to": "FLL",
@@ -319,21 +319,6 @@
    "arr": "3:21AM+1",
    "rarr": "7:52PM",
    "pct": -14
-  },
-  "PAR": {
-   "to": "PAR",
-   "city": "Paris",
-   "price": 886,
-   "d1": "2026-08-18",
-   "d2": "2026-08-31",
-   "dep": "8:56AM",
-   "al": "",
-   "stops": 3,
-   "xfer": 1,
-   "rdep": "9:30AM",
-   "arr": "9:37PM",
-   "rarr": "11:41PM",
-   "pct": 2
   },
   "SJU": {
    "to": "SJU",

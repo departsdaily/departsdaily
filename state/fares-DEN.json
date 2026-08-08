@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-07T20:14:53-04:00",
+ "generated": "2026-08-07T22:14:46-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -158,32 +158,32 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 222,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "11:50PM",
-   "al": "JetBlue",
+   "price": 231,
+   "d1": "2026-09-19",
+   "d2": "2026-09-21",
+   "dep": "10:44AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:29AM",
-   "arr": "3:40AM+1",
-   "rarr": "12:21PM",
-   "pct": 60
+   "rdep": "10:29PM",
+   "arr": "4:18PM",
+   "rarr": "4:24AM+1",
+   "pct": 58
   },
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 108,
-   "d1": "2026-09-29",
-   "d2": "2026-10-05",
-   "dep": "8:55PM",
+   "price": 137,
+   "d1": "2026-09-05",
+   "d2": "2026-09-07",
+   "dep": "9:55AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "11:23PM",
-   "rarr": "9:15AM",
-   "pct": 74
+   "rdep": "8:11PM",
+   "arr": "12:36PM",
+   "rarr": "2:28AM+1",
+   "pct": 67
   },
   "PHL": {
    "to": "PHL",
@@ -199,21 +199,6 @@
    "arr": "1:39AM+1",
    "rarr": "3:22AM+1",
    "pct": 54
-  },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 142,
-   "d1": "2026-08-27",
-   "d2": "2026-08-31",
-   "dep": "7:15AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:06PM",
-   "arr": "10:19AM",
-   "rarr": "9:58PM",
-   "pct": 63
   },
   "TPA": {
    "to": "TPA",
