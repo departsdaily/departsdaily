@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-08T14:15:58-04:00",
+ "generated": "2026-08-08T16:15:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 481,
-   "d1": "2026-08-24",
-   "d2": "2026-08-29",
-   "dep": "6:29AM",
+   "price": 360,
+   "d1": "2026-09-01",
+   "d2": "2026-09-08",
+   "dep": "5:50AM",
    "al": "JetBlue",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:15AM",
-   "arr": "1:09PM",
-   "rarr": "3:51PM",
-   "pct": 22
+   "rdep": "5:37PM",
+   "arr": "11:53AM",
+   "rarr": "10:42PM",
+   "pct": 41
   },
   "BNA": {
    "to": "BNA",

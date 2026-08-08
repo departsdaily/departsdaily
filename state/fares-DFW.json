@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-08T14:14:57-04:00",
+ "generated": "2026-08-08T16:15:00-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 196,
+   "price": 152,
    "d1": "2026-08-21",
    "d2": "2026-08-24",
-   "dep": "11:40AM",
-   "al": "United",
+   "dep": "9:07AM",
+   "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:57PM",
-   "arr": "1:49PM",
-   "rarr": "10:59PM",
-   "pct": 48
+   "rdep": "10:09AM",
+   "arr": "11:25AM",
+   "rarr": "12:19PM",
+   "pct": 60
   },
   "FLL": {
    "to": "FLL",
@@ -334,6 +334,21 @@
    "arr": "1:06AM+1",
    "rarr": "11:18PM",
    "pct": 6
+  },
+  "PAR": {
+   "to": "PAR",
+   "city": "Paris",
+   "price": 872,
+   "d1": "2026-09-09",
+   "d2": "2026-09-20",
+   "dep": "3:08PM",
+   "al": "",
+   "stops": 3,
+   "xfer": 1,
+   "rdep": "6:10AM",
+   "arr": "1:59AM+1",
+   "rarr": "9:47PM",
+   "pct": 3
   },
   "PUJ": {
    "to": "PUJ",
