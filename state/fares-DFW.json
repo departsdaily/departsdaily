@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-07T22:14:29-04:00",
+ "generated": "2026-08-07T23:59:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -128,9 +128,9 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 169,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
+   "price": 157,
+   "d1": "2026-09-25",
+   "d2": "2026-09-28",
    "dep": "5:22PM",
    "al": "Frontier",
    "stops": 0,
@@ -138,7 +138,7 @@
    "rdep": "7:46PM",
    "arr": "8:39PM",
    "rarr": "10:54PM",
-   "pct": 68
+   "pct": 70
   },
   "MCO": {
    "to": "MCO",
@@ -304,21 +304,6 @@
    "arr": "7:45PM",
    "rarr": "6:16AM+1",
    "pct": 1
-  },
-  "AUA": {
-   "to": "AUA",
-   "city": "Aruba",
-   "price": 597,
-   "d1": "2026-08-25",
-   "d2": "2026-09-04",
-   "dep": "10:00AM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "11:50AM",
-   "arr": "5:15PM",
-   "rarr": "8:57PM",
-   "pct": 4
   },
   "CUN": {
    "to": "CUN",

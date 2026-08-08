@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-07T22:15:54-04:00",
+ "generated": "2026-08-08T00:01:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -188,17 +188,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 485,
+   "price": 495,
    "d1": "2026-11-12",
    "d2": "2026-11-19",
    "dep": "3:15PM",
    "al": "Air Canada",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "8:00AM",
-   "arr": "1:13AM+1",
-   "rarr": "3:52PM",
-   "pct": 7
+   "rdep": "10:20AM",
+   "arr": "10:21PM",
+   "rarr": "6:28PM",
+   "pct": 5
   },
   "LON": {
    "to": "LON",
@@ -244,6 +244,21 @@
    "arr": "3:13PM",
    "rarr": "11:45PM",
    "pct": -63
+  },
+  "PAR": {
+   "to": "PAR",
+   "city": "Paris",
+   "price": 525,
+   "d1": "2026-11-24",
+   "d2": "2026-11-28",
+   "dep": "2:35PM",
+   "al": "Icelandair",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "1:00PM",
+   "arr": "1:45AM+1",
+   "rarr": "12:40AM+1",
+   "pct": 42
   },
   "SJU": {
    "to": "SJU",

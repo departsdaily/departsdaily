@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-07T22:15:21-04:00",
+ "generated": "2026-08-08T00:00:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 386,
+   "price": 379,
    "d1": "2026-10-29",
    "d2": "2026-11-03",
-   "dep": "7:46AM",
+   "dep": "11:00AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "2:40PM",
-   "arr": "12:20PM",
+   "arr": "3:38PM",
    "rarr": "7:23PM",
-   "pct": 38
+   "pct": 39
   },
   "CUN": {
    "to": "CUN",
