@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-09T06:16:13-04:00",
+ "generated": "2026-08-09T08:16:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -338,17 +338,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 823,
-   "d1": "2026-09-17",
-   "d2": "2026-09-30",
-   "dep": "9:35PM",
-   "al": "BF",
-   "stops": 2,
+   "price": 730,
+   "d1": "2026-11-02",
+   "d2": "2026-11-09",
+   "dep": "9:45PM",
+   "al": "UX",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:10PM",
-   "arr": "10:05AM+1",
-   "rarr": "8:00AM+1",
-   "pct": 13
+   "rdep": "10:30AM",
+   "arr": "8:30AM+1",
+   "rarr": "11:10PM",
+   "pct": 23
   },
   "SJU": {
    "to": "SJU",
