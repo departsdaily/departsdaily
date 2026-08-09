@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-09T08:16:04-04:00",
+ "generated": "2026-08-09T10:06:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -245,6 +245,21 @@
    "rarr": "9:25AM+1",
    "pct": -8
   },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 388,
+   "d1": "2026-11-21",
+   "d2": "2026-11-28",
+   "dep": "4:35PM",
+   "al": "Avianca",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:50PM",
+   "arr": "10:05PM",
+   "rarr": "11:50PM",
+   "pct": 37
+  },
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
@@ -308,7 +323,7 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 449,
+   "price": 644,
    "d1": "2026-09-25",
    "d2": "2026-10-02",
    "dep": "4:20PM",
@@ -318,7 +333,7 @@
    "rdep": "12:00PM",
    "arr": "3:10AM+1",
    "rarr": "11:55PM",
-   "pct": 50
+   "pct": 28
   },
   "PUJ": {
    "to": "PUJ",
