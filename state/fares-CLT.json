@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-09T00:14:04-04:00",
+ "generated": "2026-08-09T02:14:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 21,
  "routes_failed": [],
@@ -140,21 +140,6 @@
    "rarr": "12:26PM",
    "pct": 62
   },
-  "MSY": {
-   "to": "MSY",
-   "city": "New Orleans",
-   "price": 235,
-   "d1": "2026-08-21",
-   "d2": "2026-08-24",
-   "dep": "8:56AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:17PM",
-   "arr": "12:45PM",
-   "rarr": "10:09PM",
-   "pct": 50
-  },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
@@ -274,6 +259,21 @@
    "arr": "5:57AM+1",
    "rarr": "7:30PM",
    "pct": -16
+  },
+  "LON": {
+   "to": "LON",
+   "city": "London",
+   "price": 911,
+   "d1": "2026-09-03",
+   "d2": "2026-09-14",
+   "dep": "8:56AM",
+   "al": "",
+   "stops": 1,
+   "xfer": 1,
+   "rdep": "2:00PM",
+   "arr": "7:17PM",
+   "rarr": "1:20AM+1",
+   "pct": -7
   },
   "MBJ": {
    "to": "MBJ",
