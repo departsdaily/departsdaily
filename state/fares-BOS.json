@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-08T22:16:39-04:00",
+ "generated": "2026-08-09T00:17:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -259,6 +259,21 @@
    "arr": "4:20AM+1",
    "rarr": "10:10PM",
    "pct": 30
+  },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 460,
+   "d1": "2026-09-14",
+   "d2": "2026-09-22",
+   "dep": "3:55PM",
+   "al": "Copa",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:15PM",
+   "arr": "11:38PM",
+   "rarr": "8:01PM",
+   "pct": 26
   },
   "CUN": {
    "to": "CUN",

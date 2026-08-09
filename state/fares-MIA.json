@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-08T22:16:04-04:00",
+ "generated": "2026-08-09T00:16:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -34,21 +34,6 @@
    "arr": "1:57PM",
    "rarr": "3:04PM",
    "pct": 36
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 281,
-   "d1": "2026-08-11",
-   "d2": "2026-08-13",
-   "dep": "6:00AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:40PM",
-   "arr": "10:20AM",
-   "rarr": "3:51AM+1",
-   "pct": 50
   },
   "DFW": {
    "to": "DFW",
