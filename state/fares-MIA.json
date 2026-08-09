@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-09T12:16:33-04:00",
+ "generated": "2026-08-09T14:16:24-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -143,15 +143,15 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 125,
-   "d1": "2026-09-15",
-   "d2": "2026-09-18",
-   "dep": "12:53PM",
+   "price": 127,
+   "d1": "2026-09-10",
+   "d2": "2026-09-14",
+   "dep": "12:18PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "7:11AM",
-   "arr": "4:20PM",
+   "arr": "3:45PM",
    "rarr": "10:23AM",
    "pct": 71
   },
@@ -203,17 +203,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 247,
-   "d1": "2026-08-26",
-   "d2": "2026-08-29",
-   "dep": "11:10AM",
+   "price": 253,
+   "d1": "2026-08-25",
+   "d2": "2026-08-28",
+   "dep": "6:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:35PM",
-   "arr": "6:40PM",
+   "arr": "1:12PM",
    "rarr": "5:33AM+1",
-   "pct": 64
+   "pct": 63
   },
   "TPA": {
    "to": "TPA",

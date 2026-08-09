@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-09T12:15:05-04:00",
+ "generated": "2026-08-09T14:15:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 113,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "9:04PM",
+   "price": 339,
+   "d1": "2026-08-14",
+   "d2": "2026-08-16",
+   "dep": "6:28PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:22PM",
-   "arr": "11:50PM",
-   "rarr": "5:59PM",
-   "pct": 76
+   "rdep": "12:12AM",
+   "arr": "11:05PM",
+   "rarr": "7:36AM",
+   "pct": 27
   },
   "SEA": {
    "to": "SEA",
@@ -323,17 +323,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 477,
-   "d1": "2026-10-05",
-   "d2": "2026-10-16",
-   "dep": "8:05AM",
-   "al": "Frontier",
-   "stops": 3,
+   "price": 601,
+   "d1": "2026-09-23",
+   "d2": "2026-09-28",
+   "dep": "12:30PM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:15PM",
-   "arr": "4:18PM",
-   "rarr": "5:46AM+1",
-   "pct": 15
+   "rdep": "4:20PM",
+   "arr": "8:15PM",
+   "rarr": "12:27AM+1",
+   "pct": -7
   },
   "ROM": {
    "to": "ROM",

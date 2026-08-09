@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-09T12:15:26-04:00",
+ "generated": "2026-08-09T14:15:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
@@ -275,20 +275,20 @@
    "rarr": "8:25AM+1",
    "pct": 0
   },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 560,
-   "d1": "2026-10-16",
-   "d2": "2026-10-28",
-   "dep": "8:29PM",
-   "al": "United",
-   "stops": 2,
+  "PUJ": {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 581,
+   "d1": "2026-09-26",
+   "d2": "2026-10-04",
+   "dep": "11:25AM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:40AM",
-   "arr": "11:59AM+1",
-   "rarr": "9:50PM",
-   "pct": 41
+   "rdep": "5:05PM",
+   "arr": "7:35PM",
+   "rarr": "1:56AM+1",
+   "pct": -4
   },
   "SJU": {
    "to": "SJU",
