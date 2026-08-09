@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-09T02:15:27-04:00",
+ "generated": "2026-08-09T04:07:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
@@ -8,7 +8,7 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 88,
+   "price": 103,
    "d1": "2026-09-03",
    "d2": "2026-09-11",
    "dep": "8:26PM",
@@ -18,7 +18,7 @@
    "rdep": "1:25PM",
    "arr": "10:41PM",
    "rarr": "3:46PM",
-   "pct": 77
+   "pct": 73
   },
   "BOS": {
    "to": "BOS",
@@ -53,17 +53,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 133,
-   "d1": "2026-09-09",
-   "d2": "2026-09-15",
-   "dep": "9:19PM",
+   "price": 124,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "dep": "10:40AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "11:20PM",
-   "rarr": "9:15AM",
-   "pct": 65
+   "rdep": "2:48PM",
+   "arr": "12:47PM",
+   "rarr": "5:01PM",
+   "pct": 67
   },
   "FLL": {
    "to": "FLL",
