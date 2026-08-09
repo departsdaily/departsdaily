@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-09T14:16:02-04:00",
+ "generated": "2026-08-09T16:16:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -398,17 +398,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 452,
+   "price": 442,
    "d1": "2026-10-20",
    "d2": "2026-10-31",
    "dep": "8:30PM",
-   "al": "SWISS",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:15PM",
-   "arr": "6:00AM+1",
-   "rarr": "7:10AM+1",
-   "pct": 52
+   "rdep": "11:25AM",
+   "arr": "7:05AM+1",
+   "rarr": "10:40PM",
+   "pct": 53
   },
   "SJU": {
    "to": "SJU",

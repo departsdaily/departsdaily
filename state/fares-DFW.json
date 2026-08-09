@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-09T14:15:01-04:00",
+ "generated": "2026-08-09T16:15:11-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -289,21 +289,6 @@
    "arr": "4:00AM+1",
    "rarr": "4:16AM+1",
    "pct": 16
-  },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 451,
-   "d1": "2026-09-04",
-   "d2": "2026-09-08",
-   "dep": "8:14PM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:45PM",
-   "arr": "1:06AM+1",
-   "rarr": "11:18PM",
-   "pct": 6
   },
   "PAR": {
    "to": "PAR",
