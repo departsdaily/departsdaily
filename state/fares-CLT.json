@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-08T20:13:55-04:00",
+ "generated": "2026-08-08T22:13:56-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -83,17 +83,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 205,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "7:54PM",
+   "price": 191,
+   "d1": "2026-08-21",
+   "d2": "2026-08-24",
+   "dep": "5:21PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:53AM",
-   "arr": "1:37AM+1",
-   "rarr": "6:46AM",
-   "pct": 72
+   "rdep": "9:41PM",
+   "arr": "11:14PM",
+   "rarr": "4:20AM+1",
+   "pct": 74
   },
   "LAX": {
    "to": "LAX",
@@ -289,6 +289,21 @@
    "arr": "3:21AM+1",
    "rarr": "7:52PM",
    "pct": -14
+  },
+  "PAR": {
+   "to": "PAR",
+   "city": "Paris",
+   "price": 515,
+   "d1": "2026-11-05",
+   "d2": "2026-11-10",
+   "dep": "3:05PM",
+   "al": "",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:10AM",
+   "arr": "12:10AM+1",
+   "rarr": "8:30PM",
+   "pct": 43
   },
   "SJU": {
    "to": "SJU",

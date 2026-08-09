@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-08T20:15:44-04:00",
+ "generated": "2026-08-08T22:15:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -368,17 +368,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 527,
-   "d1": "2026-08-24",
-   "d2": "2026-09-02",
-   "dep": "8:30PM",
+   "price": 542,
+   "d1": "2026-11-16",
+   "d2": "2026-11-23",
+   "dep": "7:25PM",
    "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:15PM",
-   "arr": "5:45AM+1",
-   "rarr": "3:00AM+1",
-   "pct": 41
+   "rdep": "1:00PM",
+   "arr": "4:40AM+1",
+   "rarr": "10:50PM",
+   "pct": 40
   },
   "PUJ": {
    "to": "PUJ",
