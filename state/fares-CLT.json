@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-08T18:13:55-04:00",
+ "generated": "2026-08-08T20:13:55-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -64,21 +64,6 @@
    "arr": "11:26PM",
    "rarr": "11:07AM",
    "pct": 58
-  },
-  "FLL": {
-   "to": "FLL",
-   "city": "Ft. Lauderdale",
-   "price": 154,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "9:46AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:24PM",
-   "arr": "12:04PM",
-   "rarr": "8:43PM",
-   "pct": 62
   },
   "HOU": {
    "to": "HOU",

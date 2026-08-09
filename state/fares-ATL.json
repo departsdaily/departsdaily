@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-08T18:14:15-04:00",
+ "generated": "2026-08-08T20:14:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -188,17 +188,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 169,
-   "d1": "2026-11-05",
-   "d2": "2026-11-08",
-   "dep": "7:01PM",
+   "price": 158,
+   "d1": "2026-10-02",
+   "d2": "2026-10-06",
+   "dep": "1:49PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:29PM",
-   "arr": "9:28PM",
-   "rarr": "1:17AM+1",
-   "pct": 62
+   "rdep": "6:15AM",
+   "arr": "4:00PM",
+   "rarr": "9:02AM",
+   "pct": 64
   },
   "ORD": {
    "to": "ORD",
@@ -218,17 +218,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 87,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "5:05AM",
+   "price": 78,
+   "d1": "2026-10-02",
+   "d2": "2026-10-06",
+   "dep": "5:10AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:30AM",
-   "arr": "7:15AM",
-   "rarr": "11:00AM",
-   "pct": 81
+   "rdep": "5:32PM",
+   "arr": "7:16AM",
+   "rarr": "8:00PM",
+   "pct": 83
   },
   "PHX": {
    "to": "PHX",
@@ -319,21 +319,6 @@
    "arr": "12:22AM+1",
    "rarr": "9:42PM",
    "pct": 17
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 427,
-   "d1": "2026-11-22",
-   "d2": "2026-11-26",
-   "dep": "10:45AM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:50PM",
-   "arr": "5:35PM",
-   "rarr": "8:41PM",
-   "pct": 21
   },
   "NAS": {
    "to": "NAS",

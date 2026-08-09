@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-08T18:16:50-04:00",
+ "generated": "2026-08-08T20:16:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 608,
-   "d1": "2026-10-05",
-   "d2": "2026-10-13",
-   "dep": "8:50PM",
+   "price": 617,
+   "d1": "2026-11-17",
+   "d2": "2026-12-05",
+   "dep": "7:50PM",
    "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:05PM",
-   "arr": "5:20AM+1",
-   "rarr": "2:00AM+1",
-   "pct": 31
+   "rdep": "12:55PM",
+   "arr": "4:20AM+1",
+   "rarr": "10:10PM",
+   "pct": 30
   },
   "CUN": {
    "to": "CUN",

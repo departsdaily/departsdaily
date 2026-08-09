@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-08T18:15:54-04:00",
+ "generated": "2026-08-08T20:15:44-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 327,
+   "price": 343,
    "d1": "2026-08-16",
    "d2": "2026-08-22",
-   "dep": "7:00AM",
+   "dep": "8:23PM",
    "al": "Alaska",
    "stops": 1,
    "xfer": 0,
    "rdep": "6:51PM",
-   "arr": "1:16PM",
+   "arr": "2:55AM+1",
    "rarr": "1:21AM+1",
-   "pct": 49
+   "pct": 46
   },
   "SFO": {
    "to": "SFO",
@@ -353,17 +353,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 481,
-   "d1": "2026-08-28",
-   "d2": "2026-09-01",
-   "dep": "12:45PM",
+   "price": 379,
+   "d1": "2026-09-20",
+   "d2": "2026-10-04",
+   "dep": "11:29AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "12:20PM",
-   "arr": "4:04PM",
-   "rarr": "4:29PM",
-   "pct": 0
+   "rdep": "1:07PM",
+   "arr": "2:46PM",
+   "rarr": "4:00PM",
+   "pct": 21
   },
   "PAR": {
    "to": "PAR",
