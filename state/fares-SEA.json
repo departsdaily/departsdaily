@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-09T10:16:44-04:00",
+ "generated": "2026-08-09T12:16:52-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -38,17 +38,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 217,
-   "d1": "2026-09-07",
-   "d2": "2026-09-09",
-   "dep": "9:36PM",
+   "price": 148,
+   "d1": "2026-10-09",
+   "d2": "2026-10-11",
+   "dep": "7:41PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "1:07PM",
-   "arr": "2:23AM+1",
-   "rarr": "4:08PM",
-   "pct": 43
+   "rdep": "7:45AM",
+   "arr": "10:34PM",
+   "rarr": "10:51AM",
+   "pct": 61
   },
   "HOU": {
    "to": "HOU",
@@ -244,21 +244,6 @@
    "arr": "1:45AM+1",
    "rarr": "12:40AM+1",
    "pct": 42
-  },
-  "SJU": {
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 611,
-   "d1": "2026-08-14",
-   "d2": "2026-08-21",
-   "dep": "8:53PM",
-   "al": "Frontier",
-   "stops": 3,
-   "xfer": 0,
-   "rdep": "6:35AM",
-   "arr": "7:30AM+1",
-   "rarr": "6:01PM",
-   "pct": -45
   }
  }
 }

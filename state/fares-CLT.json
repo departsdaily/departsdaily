@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-09T10:14:08-04:00",
+ "generated": "2026-08-09T12:14:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 21,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 135,
-   "d1": "2026-08-19",
-   "d2": "2026-08-24",
-   "dep": "9:52PM",
+   "price": 161,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
+   "dep": "8:11PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:10AM",
-   "arr": "11:44PM",
-   "rarr": "8:01AM",
-   "pct": 67
+   "rdep": "11:30AM",
+   "arr": "10:07PM",
+   "rarr": "3:53PM",
+   "pct": 61
   },
   "MIA": {
    "to": "MIA",
