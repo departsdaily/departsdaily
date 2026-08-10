@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-10T02:16:04-04:00",
+ "generated": "2026-08-10T04:15:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 267,
-   "d1": "2026-09-08",
-   "d2": "2026-09-15",
-   "dep": "6:00AM",
+   "price": 284,
+   "d1": "2026-09-25",
+   "d2": "2026-09-29",
+   "dep": "4:05PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:04PM",
-   "arr": "12:23PM",
-   "rarr": "3:55AM+1",
-   "pct": 55
+   "rdep": "7:30AM",
+   "arr": "11:36PM",
+   "rarr": "1:42PM",
+   "pct": 52
   },
   "LAX": {
    "to": "LAX",
