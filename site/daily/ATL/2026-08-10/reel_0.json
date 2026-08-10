@@ -1,0 +1,48 @@
+{
+ "origin": "ATL",
+ "date": "2026-08-10",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from ATL, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 4.09,
+ "fps": 30,
+ "audio": "gate-a12@1.9.mp3",
+ "audio_start": 1.9,
+ "plan_shape": "week",
+ "plan_angle": "A full week away, round trip, verified this morning.",
+ "featured": [
+  {
+   "to": "DTW",
+   "city": "Detroit",
+   "price": 74,
+   "disc": 68,
+   "baseline": 230,
+   "nights": 4,
+   "d1": "2026-11-04",
+   "d2": "2026-11-08"
+  },
+  {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 83,
+   "disc": 59,
+   "baseline": 202,
+   "nights": 4,
+   "d1": "2026-10-02",
+   "d2": "2026-10-06"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 145,
+   "disc": 54,
+   "baseline": 317,
+   "nights": 3,
+   "d1": "2026-10-01",
+   "d2": "2026-10-04"
+  }
+ ]
+}
