@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-10T06:14:23-04:00",
+ "generated": "2026-08-10T08:14:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -218,7 +218,7 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 78,
+   "price": 83,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
    "dep": "5:10AM",
@@ -228,7 +228,7 @@
    "rdep": "5:32PM",
    "arr": "7:16AM",
    "rarr": "8:00PM",
-   "pct": 83
+   "pct": 81
   },
   "PHX": {
    "to": "PHX",

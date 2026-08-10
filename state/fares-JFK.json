@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-10T06:15:56-04:00",
+ "generated": "2026-08-10T08:15:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 233,
-   "d1": "2026-08-27",
-   "d2": "2026-08-30",
-   "dep": "3:40PM",
+   "price": 333,
+   "d1": "2026-09-02",
+   "d2": "2026-09-05",
+   "dep": "5:50AM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:35PM",
-   "arr": "11:21PM",
-   "rarr": "7:51AM+1",
-   "pct": 75
+   "rdep": "8:40PM",
+   "arr": "2:10PM",
+   "rarr": "4:58AM+1",
+   "pct": 64
   },
   "MCO": {
    "to": "MCO",
@@ -398,17 +398,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 442,
+   "price": 362,
    "d1": "2026-10-20",
-   "d2": "2026-10-31",
-   "dep": "8:30PM",
-   "al": "Icelandair",
+   "d2": "2026-11-01",
+   "dep": "10:05PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:25AM",
-   "arr": "7:05AM+1",
-   "rarr": "10:40PM",
-   "pct": 53
+   "rdep": "7:35PM",
+   "arr": "8:15AM+1",
+   "rarr": "7:20AM+1",
+   "pct": 62
   },
   "SJU": {
    "to": "SJU",
