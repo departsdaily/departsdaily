@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-09T20:15:44-04:00",
+ "generated": "2026-08-09T22:15:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 419,
-   "d1": "2026-10-04",
-   "d2": "2026-10-11",
-   "dep": "9:00PM",
+   "price": 396,
+   "d1": "2026-09-19",
+   "d2": "2026-09-28",
+   "dep": "11:30PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:07PM",
-   "arr": "3:09AM+1",
-   "rarr": "6:54PM",
-   "pct": 13
+   "rdep": "6:45PM",
+   "arr": "6:33AM+1",
+   "rarr": "1:24AM+1",
+   "pct": 18
   },
   "PAR": {
    "to": "PAR",

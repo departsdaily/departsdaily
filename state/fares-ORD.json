@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-09T20:14:44-04:00",
+ "generated": "2026-08-09T22:14:31-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 217,
-   "d1": "2026-08-20",
-   "d2": "2026-08-24",
-   "dep": "8:20PM",
-   "al": "JetBlue",
+   "price": 224,
+   "d1": "2026-08-12",
+   "d2": "2026-08-18",
+   "dep": "5:13PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:45PM",
-   "arr": "10:51PM",
+   "arr": "11:34PM",
    "rarr": "6:10PM",
-   "pct": 45
+   "pct": 43
   },
   "DCA": {
    "to": "DCA",
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 129,
-   "d1": "2026-10-15",
-   "d2": "2026-10-20",
-   "dep": "1:52PM",
+   "price": 252,
+   "d1": "2026-08-23",
+   "d2": "2026-08-30",
+   "dep": "9:10PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:25AM",
-   "arr": "6:54PM",
-   "rarr": "9:01AM",
-   "pct": 69
+   "rdep": "9:55AM",
+   "arr": "2:03AM+1",
+   "rarr": "12:36PM",
+   "pct": 39
   },
   "DFW": {
    "to": "DFW",
@@ -338,17 +338,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 823,
-   "d1": "2026-08-17",
-   "d2": "2026-08-22",
-   "dep": "10:25PM",
-   "al": "Icelandair",
+   "price": 573,
+   "d1": "2026-10-15",
+   "d2": "2026-10-29",
+   "dep": "6:00PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:00PM",
-   "arr": "7:55AM+1",
-   "rarr": "12:25AM+1",
-   "pct": 9
+   "rdep": "8:35PM",
+   "arr": "4:35AM+1",
+   "rarr": "8:45AM+1",
+   "pct": 36
   },
   "PUJ": {
    "to": "PUJ",
