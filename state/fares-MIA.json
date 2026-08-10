@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-10T10:16:10-04:00",
+ "generated": "2026-08-10T12:16:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -68,7 +68,7 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 91,
+   "price": 98,
    "d1": "2026-10-08",
    "d2": "2026-10-12",
    "dep": "6:45AM",
@@ -78,7 +78,7 @@
    "rdep": "7:42PM",
    "arr": "9:45AM",
    "rarr": "10:14PM",
-   "pct": 76
+   "pct": 74
   },
   "LAS": {
    "to": "LAS",

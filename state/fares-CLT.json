@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-10T10:13:59-04:00",
+ "generated": "2026-08-10T12:14:04-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -169,21 +169,6 @@
    "arr": "11:57PM",
    "rarr": "6:28PM",
    "pct": 47
-  },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 185,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "dep": "5:31PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "9:10AM",
-   "arr": "11:09PM",
-   "rarr": "2:47PM",
-   "pct": 72
   },
   "SFO": {
    "to": "SFO",

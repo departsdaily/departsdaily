@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-10T10:14:36-04:00",
+ "generated": "2026-08-10T12:14:42-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 122,
-   "d1": "2026-09-08",
-   "d2": "2026-09-15",
-   "dep": "8:05AM",
+   "price": 106,
+   "d1": "2026-09-03",
+   "d2": "2026-09-08",
+   "dep": "8:14AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:53PM",
-   "arr": "11:28AM",
-   "rarr": "4:20PM",
-   "pct": 72
+   "rdep": "10:18AM",
+   "arr": "11:37AM",
+   "rarr": "1:50PM",
+   "pct": 76
   },
   "MSY": {
    "to": "MSY",
@@ -353,17 +353,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 372,
-   "d1": "2026-09-22",
-   "d2": "2026-09-26",
-   "dep": "3:40PM",
+   "price": 405,
+   "d1": "2026-09-26",
+   "d2": "2026-09-30",
+   "dep": "3:45PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:02AM",
-   "arr": "10:20PM",
-   "rarr": "12:12PM",
-   "pct": 34
+   "rdep": "5:05PM",
+   "arr": "10:11PM",
+   "rarr": "12:22AM+1",
+   "pct": 28
   },
   "ROM": {
    "to": "ROM",
