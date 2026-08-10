@@ -1,24 +1,24 @@
 {
  "origin": "LAX",
- "generated": "2026-08-10T12:15:43-04:00",
+ "generated": "2026-08-10T14:15:30-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 217,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "6:05AM",
+   "price": 252,
+   "d1": "2026-08-31",
+   "d2": "2026-09-05",
+   "dep": "9:09PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:08PM",
-   "arr": "11:14AM",
-   "rarr": "12:42AM+1",
-   "pct": 64
+   "rdep": "9:10AM",
+   "arr": "2:23AM+1",
+   "rarr": "4:47PM",
+   "pct": 58
   },
   "BOS": {
    "to": "BOS",
@@ -215,35 +215,20 @@
    "rarr": "6:26PM",
    "pct": 57
   },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 70,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "9:30AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:22AM",
-   "arr": "10:54AM",
-   "rarr": "8:45AM",
-   "pct": 80
-  },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 105,
-   "d1": "2026-10-16",
-   "d2": "2026-10-18",
+   "price": 99,
+   "d1": "2026-10-25",
+   "d2": "2026-10-29",
    "dep": "5:05PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:15AM",
+   "rdep": "11:06AM",
    "arr": "8:01PM",
-   "rarr": "2:03PM",
-   "pct": 76
+   "rarr": "2:01PM",
+   "pct": 77
   },
   "SFO": {
    "to": "SFO",
