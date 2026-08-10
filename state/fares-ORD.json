@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-10T18:02:49-04:00",
+ "generated": "2026-08-10T18:14:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 305,
-   "d1": "2026-08-18",
-   "d2": "2026-08-20",
-   "dep": "2:41PM",
+   "price": 207,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "2:03PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:47PM",
-   "arr": "8:00PM",
-   "rarr": "10:00PM",
-   "pct": 30
+   "rdep": "6:45AM",
+   "arr": "6:50PM",
+   "rarr": "11:46AM",
+   "pct": 53
   },
   "BNA": {
    "to": "BNA",
