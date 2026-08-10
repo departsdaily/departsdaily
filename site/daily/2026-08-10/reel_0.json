@@ -1,0 +1,48 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-10",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from CLT, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 4.12,
+ "fps": 30,
+ "audio": "gate-a12@1.9.mp3",
+ "audio_start": 1.9,
+ "plan_shape": "week",
+ "plan_angle": "A full week away, round trip, verified this morning.",
+ "featured": [
+  {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 120,
+   "disc": 49,
+   "baseline": 237,
+   "nights": 6,
+   "d1": "2026-09-16",
+   "d2": "2026-09-22"
+  },
+  {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 185,
+   "disc": 34,
+   "baseline": 282,
+   "nights": 4,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07"
+  },
+  {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 257,
+   "disc": 31,
+   "baseline": 375,
+   "nights": 9,
+   "d1": "2026-10-23",
+   "d2": "2026-11-01"
+  }
+ ]
+}
