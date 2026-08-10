@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-10T16:14:28-04:00",
+ "generated": "2026-08-10T18:02:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 265,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "7:34PM",
+   "price": 423,
+   "d1": "2026-08-15",
+   "d2": "2026-08-22",
+   "dep": "11:07AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:41PM",
-   "arr": "3:12AM+1",
-   "rarr": "1:29AM+1",
-   "pct": 60
+   "rdep": "2:37PM",
+   "arr": "6:20PM",
+   "rarr": "8:55PM",
+   "pct": 36
   },
   "AUA": {
    "to": "AUA",
