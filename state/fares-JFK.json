@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-09T18:15:59-04:00",
+ "generated": "2026-08-09T20:16:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 255,
-   "d1": "2026-09-03",
-   "d2": "2026-09-08",
-   "dep": "1:00PM",
-   "al": "Frontier",
+   "price": 263,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
+   "dep": "11:30AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:59PM",
-   "arr": "7:25PM",
-   "rarr": "5:44AM+1",
-   "pct": 54
+   "rdep": "5:30AM",
+   "arr": "5:18PM",
+   "rarr": "11:17AM",
+   "pct": 52
   },
   "DFW": {
    "to": "DFW",
