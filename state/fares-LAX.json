@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-10T14:15:30-04:00",
+ "generated": "2026-08-10T16:15:47-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -128,17 +128,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 170,
-   "d1": "2026-08-24",
-   "d2": "2026-08-29",
-   "dep": "11:20PM",
+   "price": 203,
+   "d1": "2026-10-06",
+   "d2": "2026-10-08",
+   "dep": "9:40PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "3:45PM",
-   "arr": "4:33AM+1",
-   "rarr": "9:12PM",
-   "pct": 70
+   "rdep": "4:18PM",
+   "arr": "2:36AM+1",
+   "rarr": "9:48PM",
+   "pct": 65
   },
   "MIA": {
    "to": "MIA",
@@ -304,6 +304,21 @@
    "arr": "6:35AM+1",
    "rarr": "2:30AM+1",
    "pct": 35
+  },
+  "PUJ": {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 557,
+   "d1": "2026-11-03",
+   "d2": "2026-11-10",
+   "dep": "2:05PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:21PM",
+   "arr": "10:14PM",
+   "rarr": "2:42AM+1",
+   "pct": 1
   },
   "ROM": {
    "to": "ROM",

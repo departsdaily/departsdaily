@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-10T14:14:34-04:00",
+ "generated": "2026-08-10T16:14:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 106,
-   "d1": "2026-09-03",
+   "price": 81,
+   "d1": "2026-09-02",
    "d2": "2026-09-08",
-   "dep": "8:14AM",
+   "dep": "8:05AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:18AM",
-   "arr": "11:37AM",
+   "arr": "11:28AM",
    "rarr": "1:50PM",
-   "pct": 76
+   "pct": 81
   },
   "MSY": {
    "to": "MSY",
