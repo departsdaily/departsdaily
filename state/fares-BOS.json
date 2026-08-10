@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-09T22:16:33-04:00",
+ "generated": "2026-08-10T00:16:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -195,9 +195,9 @@
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:35AM",
+   "rdep": "12:55PM",
    "arr": "1:30PM",
-   "rarr": "6:10AM",
+   "rarr": "7:40PM",
    "pct": 57
   },
   "SEA": {
@@ -225,9 +225,9 @@
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:45AM",
+   "rdep": "6:00AM",
    "arr": "2:56PM",
-   "rarr": "7:03PM",
+   "rarr": "1:07PM",
    "pct": 79
   },
   "TPA": {

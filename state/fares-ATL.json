@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-09T22:14:12-04:00",
+ "generated": "2026-08-10T00:14:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -259,21 +259,6 @@
    "arr": "3:12AM+1",
    "rarr": "1:29AM+1",
    "pct": 60
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 96,
-   "d1": "2026-08-12",
-   "d2": "2026-08-19",
-   "dep": "4:56PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:05AM",
-   "arr": "6:35PM",
-   "rarr": "9:07AM",
-   "pct": 78
   },
   "AUA": {
    "to": "AUA",

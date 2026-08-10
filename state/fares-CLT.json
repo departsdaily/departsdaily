@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-09T22:13:54-04:00",
+ "generated": "2026-08-10T00:13:55-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -185,21 +185,6 @@
    "rarr": "2:47PM",
    "pct": 72
   },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 386,
-   "d1": "2026-10-27",
-   "d2": "2026-10-30",
-   "dep": "12:10PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "11:06AM",
-   "arr": "9:52PM",
-   "rarr": "7:49PM",
-   "pct": 48
-  },
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
@@ -214,21 +199,6 @@
    "arr": "2:32AM+1",
    "rarr": "8:10PM",
    "pct": 68
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 232,
-   "d1": "2026-08-12",
-   "d2": "2026-08-19",
-   "dep": "10:04PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:37PM",
-   "arr": "5:23AM+1",
-   "rarr": "3:07AM+1",
-   "pct": 52
   },
   "AMS": {
    "to": "AMS",

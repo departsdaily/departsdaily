@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-09T22:14:31-04:00",
+ "generated": "2026-08-10T00:14:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 224,
-   "d1": "2026-08-12",
+   "price": 257,
+   "d1": "2026-08-13",
    "d2": "2026-08-18",
-   "dep": "5:13PM",
-   "al": "Frontier",
+   "dep": "8:20PM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:45PM",
-   "arr": "11:34PM",
+   "arr": "10:51PM",
    "rarr": "6:10PM",
-   "pct": 43
+   "pct": 35
   },
   "DCA": {
    "to": "DCA",
@@ -323,17 +323,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 743,
-   "d1": "2026-08-25",
-   "d2": "2026-09-13",
-   "dep": "7:25PM",
+   "price": 711,
+   "d1": "2026-11-18",
+   "d2": "2026-11-25",
+   "dep": "6:30PM",
    "al": "Icelandair",
-   "stops": 3,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "8:30AM",
-   "arr": "5:25AM+1",
-   "rarr": "10:58PM",
-   "pct": 13
+   "rdep": "11:55AM",
+   "arr": "4:00AM+1",
+   "rarr": "10:05PM",
+   "pct": 16
   },
   "PAR": {
    "to": "PAR",
