@@ -144,7 +144,10 @@ cap += ("\n\n📅 Exact dates on every slide"
         "\n🔎 Want different dates? Search every flight out of {} from the button"
         " on departsdaily.com"
         "\n🔗 Booking links in bio"
-        "\n🌅 New board every morning at 7AM\n\n").format(ORIGIN)
+        "\n🌅 New board every morning at 7AM{}\n\n").format(
+            ORIGIN,
+            " — follow so you don't miss the next ${} flight".format(
+                min(d["price"] for d in B["deals"])) if B["deals"] else "")
 
 # Owner rule (Jul 2026): top hashtags only, across ALL accounts — enough for
 # discovery, never spammy. Also a hard technical reason: with 31+ tags the

@@ -94,7 +94,10 @@ SLIDES=[]
 n=len(DEALS)
 
 for pi,rows in enumerate(pages,1):
-    img,d=canvas(); header(d,ORG["airport"],DATE)
+    # Handle in the header: screenshots of the board get shared, and a shared
+    # screenshot with no handle grows nobody's account. Attribution travels
+    # with the image (playbook rule, Aug 2026).
+    img,d=canvas(); header(d,ORG["airport"],"@{} · {}".format(ORG["handle"],DATE))
     # The weekly plan (config/schedule.json) names what today's board is for:
     # week long trips on Monday, weekend getaways midweek, and so on. Older
     # deals.json files have no "plan" key, so the original line is the default.
