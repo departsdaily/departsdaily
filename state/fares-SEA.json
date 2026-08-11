@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-10T18:16:29-04:00",
+ "generated": "2026-08-10T20:16:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -158,17 +158,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 400,
+   "price": 342,
    "d1": "2026-08-13",
    "d2": "2026-08-15",
-   "dep": "6:36PM",
+   "dep": "1:20PM",
    "al": "Alaska",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:03AM",
-   "arr": "8:48PM",
+   "arr": "3:31PM",
    "rarr": "8:13AM",
-   "pct": -1
+   "pct": 14
   },
   "CUN": {
    "to": "CUN",
@@ -198,21 +198,6 @@
    "rdep": "9:25PM",
    "arr": "8:55PM",
    "rarr": "8:40AM+1",
-   "pct": 17
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 450,
-   "d1": "2026-08-26",
-   "d2": "2026-09-02",
-   "dep": "8:21PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "12:38PM",
-   "arr": "4:01AM+1",
-   "rarr": "11:05PM",
    "pct": 17
   },
   "NAS": {

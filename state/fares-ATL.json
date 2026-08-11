@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-10T18:14:23-04:00",
+ "generated": "2026-08-10T20:14:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -8,9 +8,9 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 193,
-   "d1": "2026-09-23",
-   "d2": "2026-09-29",
+   "price": 191,
+   "d1": "2026-10-02",
+   "d2": "2026-10-06",
    "dep": "9:30AM",
    "al": "Frontier",
    "stops": 0,
@@ -18,7 +18,7 @@
    "rdep": "12:52PM",
    "arr": "12:09PM",
    "rarr": "4:07PM",
-   "pct": 63
+   "pct": 64
   },
   "DCA": {
    "to": "DCA",
@@ -30,9 +30,9 @@
    "al": "Southwest",
    "stops": 0,
    "xfer": 0,
-   "rdep": "4:45PM",
+   "rdep": "7:25AM",
    "arr": "10:45PM",
-   "rarr": "6:35PM",
+   "rarr": "9:15AM",
    "pct": 51
   },
   "DEN": {
@@ -98,17 +98,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 218,
-   "d1": "2026-08-13",
-   "d2": "2026-08-16",
-   "dep": "9:15PM",
+   "price": 94,
+   "d1": "2026-09-10",
+   "d2": "2026-09-13",
+   "dep": "9:08PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:55AM",
-   "arr": "11:29PM",
-   "rarr": "11:10AM",
-   "pct": 47
+   "rdep": "9:04PM",
+   "arr": "11:30PM",
+   "rarr": "11:13PM",
+   "pct": 77
   },
   "LAS": {
    "to": "LAS",
@@ -248,17 +248,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 423,
+   "price": 375,
    "d1": "2026-08-15",
    "d2": "2026-08-22",
-   "dep": "11:07AM",
+   "dep": "8:53PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:37PM",
-   "arr": "6:20PM",
-   "rarr": "8:55PM",
-   "pct": 36
+   "rdep": "7:06PM",
+   "arr": "3:32AM+1",
+   "rarr": "1:20AM+1",
+   "pct": 44
   },
   "AUA": {
    "to": "AUA",

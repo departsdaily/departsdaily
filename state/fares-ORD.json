@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-10T18:14:41-04:00",
+ "generated": "2026-08-10T20:14:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -203,17 +203,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 161,
-   "d1": "2026-09-02",
-   "d2": "2026-09-08",
-   "dep": "6:00AM",
+   "price": 146,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "10:59AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:55AM",
-   "arr": "8:17AM",
-   "rarr": "9:42AM",
-   "pct": 61
+   "rdep": "8:05PM",
+   "arr": "1:20PM",
+   "rarr": "10:58PM",
+   "pct": 65
   },
   "PHL": {
    "to": "PHL",
@@ -335,6 +335,21 @@
    "rarr": "10:05PM",
    "pct": 16
   },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 494,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "7:00AM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:00AM",
+   "arr": "11:19AM",
+   "rarr": "3:22PM",
+   "pct": -3
+  },
   "PAR": {
    "to": "PAR",
    "city": "Paris",
@@ -353,17 +368,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 405,
+   "price": 383,
    "d1": "2026-09-26",
    "d2": "2026-09-30",
-   "dep": "3:45PM",
-   "al": "Air Canada",
+   "dep": "12:12PM",
+   "al": "DM",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:05PM",
-   "arr": "10:11PM",
-   "rarr": "12:22AM+1",
-   "pct": 28
+   "rdep": "3:35PM",
+   "arr": "4:57PM",
+   "rarr": "9:34PM",
+   "pct": 32
   },
   "ROM": {
    "to": "ROM",

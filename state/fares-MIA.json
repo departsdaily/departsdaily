@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-10T18:16:11-04:00",
+ "generated": "2026-08-10T20:16:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -174,15 +174,15 @@
    "to": "PHL",
    "city": "Philadelphia",
    "price": 174,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
-   "dep": "8:10AM",
-   "al": "Frontier",
-   "stops": 1,
+   "d1": "2026-08-13",
+   "d2": "2026-08-18",
+   "dep": "8:00AM",
+   "al": "Allegiant",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "4:45PM",
-   "arr": "12:42PM",
-   "rarr": "9:23PM",
+   "rdep": "4:35PM",
+   "arr": "11:00AM",
+   "rarr": "7:45PM",
    "pct": 54
   },
   "PHX": {
@@ -308,7 +308,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 450,
+   "price": 456,
    "d1": "2026-09-18",
    "d2": "2026-09-27",
    "dep": "5:32AM",
@@ -318,7 +318,7 @@
    "rdep": "5:16PM",
    "arr": "10:32AM",
    "rarr": "7:05PM",
-   "pct": 17
+   "pct": 16
   },
   "NAS": {
    "to": "NAS",

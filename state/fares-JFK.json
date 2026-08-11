@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-10T18:15:54-04:00",
+ "generated": "2026-08-10T20:15:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -128,7 +128,7 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 289,
+   "price": 283,
    "d1": "2026-09-09",
    "d2": "2026-09-12",
    "dep": "1:00PM",
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 172,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
+   "price": 159,
+   "d1": "2026-10-03",
+   "d2": "2026-10-10",
    "dep": "8:05PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
+   "rdep": "6:30AM",
    "arr": "10:58PM",
-   "rarr": "9:27AM",
-   "pct": 58
+   "rarr": "8:48AM",
+   "pct": 62
   },
   "PHX": {
    "to": "PHX",

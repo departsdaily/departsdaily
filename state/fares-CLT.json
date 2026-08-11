@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-10T18:14:04-04:00",
+ "generated": "2026-08-10T20:14:01-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -98,17 +98,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 202,
+   "price": 221,
    "d1": "2026-09-19",
    "d2": "2026-09-26",
    "dep": "4:51PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:40PM",
+   "rdep": "12:59AM",
    "arr": "11:13PM",
-   "rarr": "4:31AM+1",
-   "pct": 71
+   "rarr": "6:53AM",
+   "pct": 69
   },
   "MCO": {
    "to": "MCO",
@@ -244,6 +244,21 @@
    "arr": "3:21AM+1",
    "rarr": "7:52PM",
    "pct": -14
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 420,
+   "d1": "2026-09-23",
+   "d2": "2026-10-07",
+   "dep": "9:06AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:35PM",
+   "arr": "12:17PM",
+   "rarr": "7:48PM",
+   "pct": 12
   },
   "PAR": {
    "to": "PAR",
