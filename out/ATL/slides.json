@@ -1,8 +1,9 @@
 {
  "slides": [
   "slide1_board.png",
-  "slide2_cta.png"
+  "slide2_board.png",
+  "slide3_cta.png"
  ],
- "n_deals": 7,
- "board_slides": 1
+ "n_deals": 14,
+ "board_slides": 2
 }
