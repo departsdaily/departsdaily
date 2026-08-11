@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-10T20:15:35-04:00",
+ "generated": "2026-08-10T22:15:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 233,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "2:28PM",
-   "al": "Frontier",
+   "price": 146,
+   "d1": "2026-10-30",
+   "d2": "2026-11-05",
+   "dep": "10:10AM",
+   "al": "Southwest",
    "stops": 2,
    "xfer": 0,
-   "rdep": "5:32AM",
-   "arr": "10:07PM",
-   "rarr": "12:29PM",
-   "pct": 69
+   "rdep": "3:10PM",
+   "arr": "6:10PM",
+   "rarr": "10:05PM",
+   "pct": 80
   },
   "MSY": {
    "to": "MSY",

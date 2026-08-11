@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-10T20:16:14-04:00",
+ "generated": "2026-08-10T22:15:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 175,
+   "price": 147,
    "d1": "2026-08-28",
    "d2": "2026-08-31",
-   "dep": "5:28PM",
+   "dep": "6:50AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:00AM",
-   "arr": "10:28PM",
-   "rarr": "2:33PM",
-   "pct": 62
+   "rdep": "10:02AM",
+   "arr": "10:07AM",
+   "rarr": "1:12PM",
+   "pct": 68
   },
   "HOU": {
    "to": "HOU",
@@ -158,7 +158,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 127,
+   "price": 54,
    "d1": "2026-09-10",
    "d2": "2026-09-14",
    "dep": "12:18PM",
@@ -168,7 +168,7 @@
    "rdep": "7:11AM",
    "arr": "3:45PM",
    "rarr": "10:23AM",
-   "pct": 71
+   "pct": 88
   },
   "PHL": {
    "to": "PHL",
@@ -263,17 +263,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 388,
+   "price": 401,
    "d1": "2026-11-21",
    "d2": "2026-11-28",
-   "dep": "4:35PM",
+   "dep": "2:05AM",
    "al": "Avianca",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:50PM",
-   "arr": "10:05PM",
+   "arr": "7:45AM",
    "rarr": "11:50PM",
-   "pct": 37
+   "pct": 35
   },
   "CUN": {
    "to": "CUN",
