@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-11 16:52 EDT
+   Generated 2026-08-11 17:36 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-11T16:52:43-04:00",
+ updated:"2026-08-11T17:36:12-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:191,d1:"2026-08-21",d2:"2026-08-24",dep:"9:52PM",al:"Frontier",stops:1,rdep:"9:41PM",arr:"4:41AM+1",rarr:"4:20AM+1",exp:"2026-08-13"},
@@ -40,7 +40,7 @@ const DEALS={CLT:[
  {to:"LAX",city:"Los Angeles",price:128,d1:"2026-09-11",d2:"2026-09-20",dep:"5:22PM",al:"Frontier",stops:0,rdep:"7:46PM",arr:"8:39PM",rarr:"10:54PM",exp:"2026-08-13"},
  {to:"MCO",city:"Orlando",price:116,d1:"2026-09-08",d2:"2026-09-11",dep:"8:05PM",al:"Frontier",stops:0,rdep:"6:29PM",arr:"10:59PM",rarr:"9:41PM",exp:"2026-08-13"},
  {to:"NYC",city:"New York City",price:151,d1:"2026-10-21",d2:"2026-10-24",dep:"5:20PM",al:"Frontier",stops:0,rdep:"10:55PM",arr:"9:00PM",rarr:"2:39AM+1",exp:"2026-08-13"},
- {to:"MIA",city:"Miami",price:132,d1:"2026-09-27",d2:"2026-10-01",dep:"5:55PM",al:"Frontier",stops:0,rdep:"2:37PM",arr:"9:00PM",rarr:"6:00PM",exp:"2026-08-13"},
+ {to:"MIA",city:"Miami",price:128,d1:"2026-09-27",d2:"2026-10-01",dep:"5:55PM",al:"Frontier",stops:0,rdep:"2:37PM",arr:"9:00PM",rarr:"6:00PM",exp:"2026-08-13"},
  {to:"SJU",city:"San Juan, PR",price:247,d1:"2026-09-04",d2:"2026-09-08",dep:"1:15PM",al:"Frontier",stops:1,rdep:"8:43PM",arr:"8:32PM",rarr:"2:50AM+1",exp:"2026-08-13"},
  {to:"CUN",city:"Cancún",price:317,d1:"2026-10-03",d2:"2026-10-07",dep:"9:00PM",al:"Volaris",stops:1,rdep:"12:49PM",arr:"2:03AM+1",rarr:"6:09PM",exp:"2026-08-13"},
  {to:"ROM",city:"Rome",price:805,d1:"2026-08-31",d2:"2026-09-07",dep:"2:30PM",al:"Turkish",stops:1,rdep:"7:05AM",arr:"5:00AM+1",rarr:"10:35PM",exp:"2026-08-13"}],DEN:[
