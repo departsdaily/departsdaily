@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-10T22:16:15-04:00",
+ "generated": "2026-08-11T00:16:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -24,7 +24,7 @@
    "to": "DCA",
    "city": "Washington DC",
    "price": 229,
-   "d1": "2026-08-13",
+   "d1": "2026-08-14",
    "d2": "2026-08-17",
    "dep": "7:06PM",
    "al": "Frontier",
@@ -32,23 +32,23 @@
    "xfer": 0,
    "rdep": "6:00PM",
    "arr": "1:19AM+1",
-   "rarr": "1:24AM+1",
+   "rarr": "1:11AM+1",
    "pct": 65
   },
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 118,
-   "d1": "2026-08-29",
-   "d2": "2026-08-31",
-   "dep": "2:37PM",
+   "price": 103,
+   "d1": "2026-09-26",
+   "d2": "2026-10-03",
+   "dep": "4:27PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:15AM",
-   "arr": "5:33PM",
-   "rarr": "10:19AM",
-   "pct": 69
+   "rdep": "1:07PM",
+   "arr": "7:21PM",
+   "rarr": "4:08PM",
+   "pct": 73
   },
   "HOU": {
    "to": "HOU",
@@ -154,21 +154,6 @@
    "arr": "6:31PM",
    "rarr": "9:50PM",
    "pct": 28
-  },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 342,
-   "d1": "2026-08-13",
-   "d2": "2026-08-15",
-   "dep": "1:20PM",
-   "al": "Alaska",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:03AM",
-   "arr": "3:31PM",
-   "rarr": "8:13AM",
-   "pct": 14
   },
   "CUN": {
    "to": "CUN",

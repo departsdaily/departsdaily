@@ -1,14 +1,14 @@
 {
  "origin": "DEN",
- "generated": "2026-08-10T22:15:03-04:00",
+ "generated": "2026-08-11T00:15:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 88,
+   "price": 103,
    "d1": "2026-09-03",
    "d2": "2026-09-11",
    "dep": "8:26PM",
@@ -18,7 +18,7 @@
    "rdep": "1:25PM",
    "arr": "10:41PM",
    "rarr": "3:46PM",
-   "pct": 77
+   "pct": 73
   },
   "DCA": {
    "to": "DCA",
@@ -214,21 +214,6 @@
    "arr": "10:59AM",
    "rarr": "12:59AM+1",
    "pct": 46
-  },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 420,
-   "d1": "2026-09-13",
-   "d2": "2026-09-19",
-   "dep": "6:05PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:25AM",
-   "arr": "1:16AM+1",
-   "rarr": "11:24AM",
-   "pct": 19
   },
   "LON": {
    "to": "LON",

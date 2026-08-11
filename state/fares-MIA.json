@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-10T22:15:57-04:00",
+ "generated": "2026-08-11T00:16:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 174,
-   "d1": "2026-08-13",
-   "d2": "2026-08-18",
-   "dep": "8:00AM",
-   "al": "Allegiant",
-   "stops": 0,
+   "price": 218,
+   "d1": "2026-08-28",
+   "d2": "2026-08-31",
+   "dep": "8:50PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "4:35PM",
-   "arr": "11:00AM",
-   "rarr": "7:45PM",
-   "pct": 54
+   "rdep": "4:45PM",
+   "arr": "11:55PM",
+   "rarr": "9:23PM",
+   "pct": 42
   },
   "PHX": {
    "to": "PHX",

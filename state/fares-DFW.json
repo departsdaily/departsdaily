@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-10T22:14:46-04:00",
+ "generated": "2026-08-11T00:14:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 176,
+   "price": 126,
    "d1": "2026-09-11",
    "d2": "2026-09-18",
    "dep": "4:20PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:05PM",
+   "rdep": "7:08PM",
    "arr": "6:23PM",
-   "rarr": "9:08PM",
-   "pct": 60
+   "rarr": "9:21PM",
+   "pct": 72
   },
   "BOS": {
    "to": "BOS",
@@ -203,17 +203,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 246,
-   "d1": "2026-09-03",
-   "d2": "2026-09-09",
-   "dep": "7:32AM",
+   "price": 299,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
+   "dep": "8:40PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:27PM",
-   "arr": "1:23PM",
-   "rarr": "9:22PM",
-   "pct": 48
+   "rdep": "9:45PM",
+   "arr": "2:34AM+1",
+   "rarr": "3:13AM+1",
+   "pct": 37
   },
   "SFO": {
    "to": "SFO",
@@ -338,17 +338,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 237,
-   "d1": "2026-10-01",
-   "d2": "2026-10-05",
-   "dep": "5:55PM",
+   "price": 247,
+   "d1": "2026-09-04",
+   "d2": "2026-09-08",
+   "dep": "1:15PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:57AM",
-   "arr": "11:43PM",
-   "rarr": "9:08AM",
-   "pct": 44
+   "rdep": "8:43PM",
+   "arr": "8:32PM",
+   "rarr": "2:50AM+1",
+   "pct": 41
   }
  }
 }

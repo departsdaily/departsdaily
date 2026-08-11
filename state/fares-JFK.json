@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-10T22:15:40-04:00",
+ "generated": "2026-08-11T00:15:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -308,16 +308,16 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 352,
+   "price": 353,
    "d1": "2026-10-18",
-   "d2": "2026-10-22",
-   "dep": "9:26AM",
-   "al": "Aerom\u00e9xico",
+   "d2": "2026-10-30",
+   "dep": "6:40AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:16AM",
-   "arr": "5:28PM",
-   "rarr": "4:45PM",
+   "rdep": "4:05PM",
+   "arr": "12:40PM",
+   "rarr": "7:50PM",
    "pct": 32
   },
   "LON": {
