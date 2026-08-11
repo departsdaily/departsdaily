@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-11T16:15:10-04:00",
+ "generated": "2026-08-11T16:54:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -8,7 +8,7 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 103,
+   "price": 88,
    "d1": "2026-09-03",
    "d2": "2026-09-11",
    "dep": "8:26PM",
@@ -18,7 +18,7 @@
    "rdep": "1:25PM",
    "arr": "10:41PM",
    "rarr": "3:46PM",
-   "pct": 73
+   "pct": 77
   },
   "DCA": {
    "to": "DCA",
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 284,
-   "d1": "2026-10-04",
-   "d2": "2026-10-09",
-   "dep": "7:12PM",
+   "price": 305,
+   "d1": "2026-08-14",
+   "d2": "2026-08-16",
+   "dep": "10:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:29PM",
-   "arr": "1:42AM+1",
-   "rarr": "4:48AM+1",
-   "pct": 48
+   "rdep": "1:00PM",
+   "arr": "3:33PM",
+   "rarr": "7:25PM",
+   "pct": 45
   },
   "ORD": {
    "to": "ORD",
