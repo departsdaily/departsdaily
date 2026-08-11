@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-11T08:15:13-04:00",
+ "generated": "2026-08-11T10:15:24-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 225,
+   "price": 266,
    "d1": "2026-09-03",
    "d2": "2026-09-07",
-   "dep": "11:25AM",
+   "dep": "4:28PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "7:00AM",
-   "arr": "2:59PM",
+   "arr": "7:59PM",
    "rarr": "11:01AM",
-   "pct": 57
+   "pct": 49
   },
   "DFW": {
    "to": "DFW",
@@ -214,21 +214,6 @@
    "arr": "1:15AM+1",
    "rarr": "4:47PM",
    "pct": 70
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 260,
-   "d1": "2026-11-06",
-   "d2": "2026-11-08",
-   "dep": "6:30AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:49PM",
-   "arr": "10:59AM",
-   "rarr": "12:59AM+1",
-   "pct": 46
   },
   "LON": {
    "to": "LON",
