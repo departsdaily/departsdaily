@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-11T17:50:23-04:00",
+ "generated": "2026-08-11T18:14:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -308,17 +308,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 709,
+   "price": 870,
    "d1": "2026-08-20",
    "d2": "2026-08-24",
-   "dep": "6:52PM",
+   "dep": "12:44PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:47PM",
-   "arr": "10:48PM",
+   "arr": "6:48PM",
    "rarr": "7:12PM",
-   "pct": -31
+   "pct": -61
   },
   "PAR": {
    "to": "PAR",
