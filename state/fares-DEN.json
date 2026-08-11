@@ -1,14 +1,14 @@
 {
  "origin": "DEN",
- "generated": "2026-08-11T04:15:13-04:00",
+ "generated": "2026-08-11T06:15:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 103,
+   "price": 88,
    "d1": "2026-09-03",
    "d2": "2026-09-11",
    "dep": "8:26PM",
@@ -18,7 +18,7 @@
    "rdep": "1:25PM",
    "arr": "10:41PM",
    "rarr": "3:46PM",
-   "pct": 73
+   "pct": 77
   },
   "DCA": {
    "to": "DCA",
@@ -199,6 +199,21 @@
    "arr": "9:00AM",
    "rarr": "10:48PM",
    "pct": 74
+  },
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 147,
+   "d1": "2026-10-29",
+   "d2": "2026-11-01",
+   "dep": "10:29PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "2:07PM",
+   "arr": "1:15AM+1",
+   "rarr": "4:47PM",
+   "pct": 70
   },
   "TPA": {
    "to": "TPA",
