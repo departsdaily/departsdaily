@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-11T00:15:58-04:00",
+ "generated": "2026-08-11T02:15:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -53,9 +53,9 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 226,
-   "d1": "2026-09-13",
-   "d2": "2026-09-19",
+   "price": 238,
+   "d1": "2026-09-10",
+   "d2": "2026-09-17",
    "dep": "9:30PM",
    "al": "JetBlue",
    "stops": 0,
@@ -63,7 +63,7 @@
    "rdep": "6:30AM",
    "arr": "10:59PM",
    "rarr": "7:42AM",
-   "pct": 44
+   "pct": 41
   },
   "DEN": {
    "to": "DEN",
