@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-11T06:15:57-04:00",
+ "generated": "2026-08-11T08:03:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 607,
-   "d1": "2026-09-15",
-   "d2": "2026-09-22",
-   "dep": "5:10PM",
-   "al": "SK",
+   "price": 666,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
+   "dep": "8:30PM",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:45AM",
-   "arr": "2:50AM+1",
-   "rarr": "8:50PM",
-   "pct": 31
+   "rdep": "7:20AM",
+   "arr": "5:40AM+1",
+   "rarr": "6:40PM",
+   "pct": 24
   },
   "AUA": {
    "to": "AUA",
