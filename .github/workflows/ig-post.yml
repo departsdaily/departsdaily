@@ -189,13 +189,29 @@ jobs:
           echo "ver=$VER" >> "$GITHUB_OUTPUT"
           URL="https://departsdaily.com/$WEB/slide1_board.png"
           echo "waiting on $URL"
+          # One good probe is not enough: our probe and Meta's fetcher hit
+          # DIFFERENT edge POPs, and a deploy propagates per-POP. Aug 11 the
+          # single-success check passed while Meta still got HTML (code 9004).
+          # Now: 3 consecutive image responses, then a settle pause. The
+          # publisher additionally retries fetch-race codes at Meta's layer.
+          streak=0
           for i in $(seq 1 45); do
             probe=$(curl -s -o /dev/null -L \
               -w "%{http_code} %{content_type} %{size_download}" \
               "$URL?probe=$VER-$i")
             case "$probe" in
-              "200 image/"*) echo "slides live and served as an image ($probe)"; exit 0 ;;
+              "200 image/"*)
+                streak=$((streak+1))
+                echo "  attempt $i: image OK (streak $streak/3)"
+                if [ "$streak" -ge 3 ]; then
+                  echo "slides consistently served as an image; settling 30s for edge propagation"
+                  sleep 30
+                  exit 0
+                fi
+                sleep 15
+                continue ;;
             esac
+            streak=0
             echo "  attempt $i: $probe"
             sleep 10
           done

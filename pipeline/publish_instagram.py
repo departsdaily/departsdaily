@@ -82,6 +82,36 @@ def post(path, **params):
     TRAIL.append({"call": path, "params": _redact(params), "response": body})
     return body
 
+# Meta fetches slide URLs from its OWN data centers. Our workflow probe can see
+# a Pages deploy live while Meta's edge still serves stale HTML — that
+# propagation gap is the 9004/36001 "media could not be fetched" failure
+# (Jul 30, Aug 4, Aug 11). The only reliable place to retry is at Meta's own
+# fetch layer: retry the container call itself with backoff. Fetch races are
+# the ONLY codes retried — auth blocks (190/200) and everything else still
+# fail fast per the runbooks.
+FETCH_RACE_CODES = {9004, 36001}
+
+def post_media(path, tries=6, wait=20, **params):
+    last = None
+    for i in range(1, tries + 1):
+        try:
+            return post(path, **params)
+        except urllib.error.HTTPError as e:
+            # _fail (inside post) already read the body and appended it to
+            # TRAIL — an HTTPError body can only be read once, so the code
+            # comes from the trail, never a second read.
+            code = None
+            if TRAIL and isinstance(TRAIL[-1].get("response"), dict):
+                code = (TRAIL[-1]["response"].get("error") or {}).get("code")
+            if code in FETCH_RACE_CODES and i < tries:
+                print("media fetch race (code %s), retry %d/%d in %ds"
+                      % (code, i, tries - 1, wait))
+                last = e
+                time.sleep(wait)
+                continue
+            raise
+    raise last
+
 def get(path, **params):
     params["access_token"] = TOKEN
     url = G + "/" + path + "?" + urllib.parse.urlencode(params)
@@ -177,7 +207,7 @@ except Exception:
     SLIDES = ["slide1_board.png", "slide2_cta.png"]
 print("carousel:", SLIDES)
 for s in SLIDES:
-    r = post(IG_USER + "/media", image_url=asset(s), is_carousel_item="true")
+    r = post_media(IG_USER + "/media", image_url=asset(s), is_carousel_item="true")
     children.append(r["id"])
     time.sleep(2)
 carousel = post(IG_USER + "/media", media_type="CAROUSEL",
@@ -192,7 +222,7 @@ print("published:", post(IG_USER + "/media_publish", creation_id=carousel["id"])
 _want_stories = os.environ.get("STORIES", "0") == "1"
 for i, d in enumerate([x for x in B["deals"] if x.get("deal", True)] if _want_stories else [], 1):
     try:
-        r = post(IG_USER + "/media",
+        r = post_media(IG_USER + "/media",
                  image_url=asset("story_{}_{}.png".format(i, d["to"])),
                  media_type="STORIES")
         time.sleep(3)
