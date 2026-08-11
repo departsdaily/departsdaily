@@ -1,0 +1,76 @@
+name: Post explainer carousel
+# One-off promo poster. Fire: push any ref to the explainer-trigger branch.
+# Posts the pinned-post explainer for CLT then ATL, serially, with the same
+# guards as the daily pipeline (wrong-account abort, fetch-race retries).
+
+on:
+  push:
+    branches: [explainer-trigger]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: explainer-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Wait for Pages to serve the promo slides
+        id: wait
+        run: |
+          # Same lesson as ig-post.yml: one good probe is not enough (edge
+          # POPs propagate at different times), so require 3 in a row, then
+          # settle. Probe on throwaway query strings so a stale HTML answer
+          # can never be cached under the canonical URL.
+          VER="${{ github.run_id }}-${{ github.run_attempt }}"
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
+          URL="https://departsdaily.com/promo/explainer-CLT-1.png"
+          streak=0
+          for i in $(seq 1 45); do
+            probe=$(curl -s -o /dev/null -L \
+              -w "%{http_code} %{content_type}" "$URL?probe=$VER-$i")
+            case "$probe" in
+              "200 image/"*)
+                streak=$((streak+1))
+                echo "  attempt $i: image OK (streak $streak/3)"
+                if [ "$streak" -ge 3 ]; then
+                  echo "settling 30s for edge propagation"; sleep 30; exit 0
+                fi
+                sleep 15; continue ;;
+            esac
+            streak=0; echo "  attempt $i: $probe"; sleep 10
+          done
+          echo "::error::promo slides never served as images"; exit 1
+
+      - name: Post CLT
+        env:
+          ORIGIN: CLT
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          ASSET_VER: ${{ steps.wait.outputs.ver }}
+        run: python pipeline/post_explainer.py
+
+      - name: Post ATL
+        env:
+          ORIGIN: ATL
+          IG_TOKEN: ${{ secrets.IG_TOKEN_ATL }}
+          ASSET_VER: ${{ steps.wait.outputs.ver }}
+        run: python pipeline/post_explainer.py
+
+      - name: Record result
+        if: always()
+        run: |
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git pull --rebase origin main || true
+          git add -f out/explainer-posted-*.txt out/explainer-error-*.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Explainer carousel result $(date -u +%F)"
+          git push origin HEAD:main
