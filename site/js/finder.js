@@ -41,7 +41,8 @@ window.Finder = (function () {
     PHL:"philadelphia", HOU:"houston", LAS:"vegas", PHX:"phoenix", TPA:"tampa",
     BNA:"nashville", MSY:"new-orleans", SFO:"san-francisco", SEA:"seattle", AUS:"austin",
     CUN:"cancun", PUJ:"punta-cana", MBJ:"montego-bay", NAS:"nassau", AUA:"aruba",
-    SJU:"san-juan", GCM:"grand-cayman", LON:"london", PAR:"paris", ROM:"rome"
+    SJU:"san-juan", GCM:"grand-cayman", LON:"london", PAR:"paris", ROM:"rome",
+    DTW:"detroit", AMS:"amsterdam"
   };
 
   /* Legacy coarse buckets. The finder now filters by the hour, but this table
