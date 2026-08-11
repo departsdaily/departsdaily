@@ -623,7 +623,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
   <div class="signup">
     <h2>Got a suggestion?</h2>
     <p class="sub" style="margin:0 auto 16px">Want a route tracked, a city added, or a feature built? Tell us — this board is built around its riders.</p>
-    <form id="sugform" name="suggestion" method="POST" data-netlify="true">
+    <form id="sugform" action="https://formspree.io/f/xwleoyzl" method="POST">
       <input type="hidden" name="form-name" value="suggestion">
       <input type="text" id="sugtext" name="suggestion" required placeholder="e.g. Track CLT to Denver next" aria-label="Your suggestion">
       <button type="submit">Send it</button>
@@ -635,7 +635,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
   <div class="signup">
     <h2>Get the board by email</h2>
     <p class="sub" style="margin:0 auto 16px">One email, every morning. The deals, the dates, the links. Free.</p>
-    <form id="signupform" name="board-signup" method="POST" data-netlify="true">
+    <form id="signupform" action="https://formspree.io/f/xwleoyzl" method="POST">
       <input type="hidden" name="form-name" value="board-signup">
       <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
       <button type="submit">Board now</button>
@@ -1282,16 +1282,19 @@ function renderRoutes(origin){
 }
 
 
-/* Forms — both post to Netlify Forms (captured in the Netlify dashboard).
-   AJAX submit keeps the visitor on the page; success text only shows
-   after the submission is actually accepted. */
+/* Forms — both post to Formspree (endpoint in each form's action; the
+   hidden form-name field says which form sent it). AJAX submit keeps the
+   visitor on the page; the Accept header makes Formspree answer JSON
+   instead of redirecting; success text only shows after the submission
+   is actually accepted. Basic-HTML fallback: with JS off, the form still
+   submits normally to Formspree's hosted thank-you page. */
 function wireForm(id, okHTML){
   const f=document.getElementById(id);
   f.addEventListener("submit",e=>{
     e.preventDefault();
     const btn=f.querySelector("button"); btn.disabled=true; btn.textContent="…";
-    fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},
-      body:new URLSearchParams(new FormData(f)).toString()})
+    fetch(f.action,{method:"POST",headers:{"Accept":"application/json"},
+      body:new FormData(f)})
       .then(r=>{if(!r.ok) throw 0; f.innerHTML=okHTML;})
       .catch(()=>{btn.disabled=false;btn.textContent="Try again";});
   });
