@@ -15,18 +15,7 @@
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-04/slide1_board.png?v=30902490910-1",
-    "is_carousel_item": "true",
-    "access_token": "<redacted>"
-   },
-   "response": {
-    "id": "18064935113522385"
-   }
-  },
-  {
-   "call": "me/media",
-   "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-04/slide2_cta.png?v=30902490910-1",
+    "image_url": "https://departsdaily.com/daily/2026-08-11/slide1_board.png?v=31525152689-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
@@ -38,8 +27,8 @@
      "error_subcode": 2207052,
      "is_transient": false,
      "error_user_title": "Media download has failed. The media URI doesn't meet our requirements.",
-     "error_user_msg": "The media could not be fetched from this URI: https://departsdaily.com/daily/2026-08-04/slide2_cta.png?v=30902490910-1.Please check the limitations section in our development document for more information: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating",
-     "fbtrace_id": "AQiAHGzbUj79HdS1kgicf9U"
+     "error_user_msg": "The media could not be fetched from this URI: https://departsdaily.com/daily/2026-08-11/slide1_board.png?v=31525152689-1.Please check the limitations section in our development document for more information: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating",
+     "fbtrace_id": "AQIi_ChSR9dwgrsdKe2gOYD"
     }
    },
    "status": 400
