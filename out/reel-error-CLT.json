@@ -3,9 +3,61 @@
  "slot": 0,
  "trail": [
   {
-   "stage": "wait_for_video",
-   "when": "2026-08-01T14:55:13.638663-04:00",
-   "url": "https://departsdaily.com/daily/2026-08-01/reel_0.mp4?v=30713240729-1"
+   "call": "me",
+   "params": {
+    "fields": "username",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "username": "cltdeparts",
+    "id": "27636009739384440"
+   }
+  },
+  {
+   "call": "me/media",
+   "params": {
+    "media_type": "REELS",
+    "video_url": "https://departsdaily.com/daily/2026-08-12/reel_0.mp4?v=31628735448-1",
+    "caption": "\u2708\ufe0f CLT DEPARTURES \u2014 one big deal \u00b7 WED, AUG 12\n\nThe single biggest drop out of CLT today.\n\n\ud83c\udfb0 Las Vegas \u2014 $191 round trip \u00b7 3 nights (44% below typical)\n\nOut Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.\n\n\ud83d\udcc5 Exact dates on the site\n\u2705 Every fare verified this morning \u2014 fares move fast and aren't guaranteed. The checkout price is the only price.\n\ud83d\udd0e Different dates? Search every flight out of CLT on departsdaily.com\n\ud83d\udd17 Booking links in bio\n\ud83c\udf05 New verified board every morning at 7AM\n\n#CLT #Charlotte #QueenCity #CharlotteNC #CLTAirport #CheapFlights #FlightDeals #TravelDeals #BudgetTravel #TravelDeal #LasVegas",
+    "share_to_feed": "true",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "id": "18067507625522385"
+   }
+  },
+  {
+   "call": "18067507625522385",
+   "params": {
+    "fields": "status_code,status",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "status_code": "IN_PROGRESS",
+    "status": "IN_PROGRESS",
+    "id": "18067507625522385"
+   }
+  },
+  {
+   "call": "18067507625522385",
+   "params": {
+    "fields": "status_code,status",
+    "access_token": "<redacted>"
+   },
+   "response": {
+    "status_code": "ERROR",
+    "status": "ERROR",
+    "id": "18067507625522385"
+   }
+  },
+  {
+   "stage": "transcode",
+   "when": "2026-08-12T14:41:15.732416-04:00",
+   "status": {
+    "status_code": "ERROR",
+    "status": "ERROR",
+    "id": "18067507625522385"
+   }
   }
  ]
 }
