@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-11T20:16:40-04:00",
+ "generated": "2026-08-11T22:16:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 636,
-   "d1": "2026-08-20",
-   "d2": "2026-09-10",
-   "dep": "4:45PM",
-   "al": "DE",
-   "stops": 1,
+   "price": 706,
+   "d1": "2026-11-25",
+   "d2": "2026-11-29",
+   "dep": "3:30PM",
+   "al": "Air Canada",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "4:45PM",
-   "arr": "1:05AM+1",
-   "rarr": "2:30AM+1",
-   "pct": 29
+   "rdep": "5:55PM",
+   "arr": "11:55PM",
+   "rarr": "4:37AM+1",
+   "pct": 22
   },
   "PUJ": {
    "to": "PUJ",

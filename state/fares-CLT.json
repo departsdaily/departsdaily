@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-11T20:13:57-04:00",
+ "generated": "2026-08-11T22:13:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -184,21 +184,6 @@
    "arr": "2:32AM+1",
    "rarr": "8:10PM",
    "pct": 68
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 892,
-   "d1": "2026-09-06",
-   "d2": "2026-09-14",
-   "dep": "9:15AM",
-   "al": "United",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:00PM",
-   "arr": "6:18PM",
-   "rarr": "4:05AM+1",
-   "pct": -1
   },
   "CUN": {
    "to": "CUN",
