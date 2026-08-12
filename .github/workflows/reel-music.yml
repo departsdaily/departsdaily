@@ -40,10 +40,21 @@ jobs:
 
       - run: pip install numpy
 
-      # ffmpeg is preinstalled on ubuntu-latest, but assert it rather than
-      # discovering it is missing three steps later inside a subprocess call.
-      - name: Confirm ffmpeg
-        run: ffmpeg -version | head -1
+      # ffmpeg is NOT on the ubuntu-latest image any more (it was on 22.04,
+      # it is gone on 24.04) — the first run of this workflow died with
+      # FileNotFoundError: 'ffmpeg' from inside the encoder call. Install it,
+      # then assert with `command -v`, which actually fails the step. The
+      # original check here was `ffmpeg -version | head -1`, and a pipeline
+      # reports the exit status of the LAST command, so head returning 0 made
+      # a missing ffmpeg look fine.
+      - name: Install and confirm ffmpeg
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
+          command -v ffmpeg
+          ffmpeg -version | head -1
 
       - name: Generate
         env:
