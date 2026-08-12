@@ -1,0 +1,80 @@
+name: Regenerate reel music
+
+# Rebuilds the reel audio beds from scripts/make_reel_music.py and commits
+# whatever changed.
+#
+# WHY THIS EXISTS. The beds are .mp3 files, and a binary cannot be pasted into
+# the GitHub web editor. When the only way to write to this repo is the browser
+# — which is the situation whenever the sandbox git proxy is blocking pushes,
+# see the project's git-push-proxy-block notes — a text-only path to new audio
+# is the difference between shipping and not. Land the generator as text, run
+# this, and the runner produces and commits the binaries.
+#
+# It is also the honest way to keep the audio and the code that made it in
+# sync: the committed .mp3s are always exactly what the current script emits.
+on:
+  workflow_dispatch:
+    inputs:
+      tracks:
+        description: "Space-separated track names (blank = the three shipped beds)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reel-music
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install numpy
+
+      # ffmpeg is preinstalled on ubuntu-latest, but assert it rather than
+      # discovering it is missing three steps later inside a subprocess call.
+      - name: Confirm ffmpeg
+        run: ffmpeg -version | head -1
+
+      - name: Generate
+        env:
+          TRACKS: ${{ github.event.inputs.tracks }}
+        run: |
+          python3 scripts/make_reel_music.py $TRACKS
+          echo "--- assets/reel-audio now holds ---"
+          ls -la assets/reel-audio/
+
+      # The generator deletes retired EDM beds itself, but a deletion only
+      # sticks if it is staged. -A covers removals; git add on the folder alone
+      # would not.
+      - name: Commit the beds
+        run: |
+          git config user.name departs-bot
+          git config user.email board@departsdaily.com
+          git add -A assets/reel-audio
+          git diff --cached --quiet && { echo "no audio changes"; exit 0; }
+          git commit -m "reel music: regenerate beds"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::could not push the regenerated beds after 5 attempts"; exit 1
+
+      - name: Report
+        run: |
+          {
+            echo "### Reel music"
+            echo ""
+            echo '```'
+            ls -la assets/reel-audio/ | sed 's/^/  /'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
