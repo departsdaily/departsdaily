@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-12T08:13:59-04:00",
+ "generated": "2026-08-12T10:14:01-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -139,6 +139,21 @@
    "arr": "11:57PM",
    "rarr": "6:28PM",
    "pct": 47
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 216,
+   "d1": "2026-08-15",
+   "d2": "2026-08-17",
+   "dep": "6:02PM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:00AM",
+   "arr": "7:50PM",
+   "rarr": "7:45AM",
+   "pct": 48
   },
   "PHX": {
    "to": "PHX",

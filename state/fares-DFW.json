@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-12T08:14:53-04:00",
+ "generated": "2026-08-12T10:14:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -83,17 +83,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 143,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "7:59PM",
+   "price": 146,
+   "d1": "2026-08-28",
+   "d2": "2026-08-31",
+   "dep": "2:35PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "8:10PM",
-   "arr": "11:06PM",
-   "rarr": "10:55PM",
-   "pct": 69
+   "rdep": "12:57AM",
+   "arr": "7:11PM",
+   "rarr": "4:58AM",
+   "pct": 68
   },
   "LAX": {
    "to": "LAX",
@@ -349,21 +349,6 @@
    "arr": "5:00AM+1",
    "rarr": "10:35PM",
    "pct": 15
-  },
-  "SJU": {
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 247,
-   "d1": "2026-09-04",
-   "d2": "2026-09-08",
-   "dep": "1:15PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:43PM",
-   "arr": "8:32PM",
-   "rarr": "2:50AM+1",
-   "pct": 41
   }
  }
 }

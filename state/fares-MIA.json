@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-12T08:16:07-04:00",
+ "generated": "2026-08-12T10:16:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 114,
+   "price": 99,
    "d1": "2026-10-08",
-   "d2": "2026-10-11",
+   "d2": "2026-10-15",
    "dep": "6:20AM",
    "al": "Allegiant",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:53AM",
+   "rdep": "10:18AM",
    "arr": "9:28AM",
-   "rarr": "3:15PM",
-   "pct": 73
+   "rarr": "1:40PM",
+   "pct": 76
   },
   "ORD": {
    "to": "ORD",
@@ -184,21 +184,6 @@
    "arr": "11:15AM",
    "rarr": "8:53AM",
    "pct": 53
-  },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 303,
-   "d1": "2026-09-18",
-   "d2": "2026-09-23",
-   "dep": "11:25AM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "9:20AM",
-   "arr": "7:22PM",
-   "rarr": "4:16PM",
-   "pct": 45
   },
   "SEA": {
    "to": "SEA",

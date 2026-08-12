@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-12T08:15:12-04:00",
+ "generated": "2026-08-12T10:15:19-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,6 +19,21 @@
    "arr": "10:41PM",
    "rarr": "3:46PM",
    "pct": 73
+  },
+  "BOS": {
+   "to": "BOS",
+   "city": "Boston",
+   "price": 183,
+   "d1": "2026-10-05",
+   "d2": "2026-10-12",
+   "dep": "5:10AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:50PM",
+   "arr": "9:50AM",
+   "rarr": "1:21AM+1",
+   "pct": 65
   },
   "DCA": {
    "to": "DCA",

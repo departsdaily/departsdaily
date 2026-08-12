@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-12T08:16:24-04:00",
+ "generated": "2026-08-12T10:16:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -83,8 +83,8 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 78,
-   "d1": "2026-09-17",
+   "price": 95,
+   "d1": "2026-09-18",
    "d2": "2026-09-21",
    "dep": "8:15PM",
    "al": "Frontier",
@@ -93,7 +93,7 @@
    "rdep": "5:44PM",
    "arr": "11:04PM",
    "rarr": "8:40PM",
-   "pct": 82
+   "pct": 78
   },
   "MIA": {
    "to": "MIA",
