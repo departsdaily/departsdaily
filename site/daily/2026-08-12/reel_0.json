@@ -1,0 +1,28 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-12",
+ "slot": 0,
+ "shape": "spotlight",
+ "label": "ONE BIG DEAL",
+ "caption_lead": "The single biggest drop out of CLT today.",
+ "file": "reel_0.mp4",
+ "seconds": 10.4,
+ "size_mb": 0.65,
+ "fps": 30,
+ "audio": "gate-a12@1.9.mp3",
+ "audio_start": 1.9,
+ "plan_shape": "weekend",
+ "plan_angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.",
+ "featured": [
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 191,
+   "disc": 44,
+   "baseline": 344,
+   "nights": 3,
+   "d1": "2026-08-21",
+   "d2": "2026-08-24"
+  }
+ ]
+}
