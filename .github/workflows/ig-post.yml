@@ -1,8 +1,21 @@
 name: Morning Instagram post
 
-# Fired at ~7:10 AM ET by a push to the 'ig-trigger' branch (precise timing),
-# or manually from the Actions tab. No cron here on purpose: GitHub cron can
-# run hours late, and a second same-day firing would double-post.
+# Fired three ways:
+#   1. a push to the 'ig-trigger' branch (the precise-timing path, ~6:52 AM ET),
+#   2. the daily cron below (the self-firing backstop),
+#   3. manually from the Actions tab.
+#
+# The cron used to be left out on purpose, because GitHub cron can run hours
+# late and a second same-day firing would double-post. That objection is gone:
+# the plan job now drops any origin that already has a state/history entry
+# dated today, so an extra firing is a no-op rather than a duplicate post.
+# The trigger push can therefore fail (proxy block, dead scheduler, whatever)
+# and the post still goes out on its own.
+#
+# Two cron lines, not one, so DST never needs a hand edit: 10:45 UTC is
+# 6:45 AM ET while EDT is in effect, 11:45 UTC is 6:45 AM ET while EST is.
+# The one that is out of season fires an hour off and, after a good run, does
+# nothing — which also makes it a free retry when the earlier run failed.
 #
 # One job per origin whose config/origins.json block has ig_enabled: true.
 # An origin with no Instagram token yet stays false and is simply not in the
@@ -10,11 +23,19 @@ name: Morning Instagram post
 on:
   push:
     branches: [ig-trigger]
+  schedule:
+    - cron: "45 10 * * *"   # 6:45 AM ET during EDT (7:45 AM ET during EST)
+    - cron: "45 11 * * *"   # 6:45 AM ET during EST (5:45 AM ET during EDT)
   workflow_dispatch:
     inputs:
       origins:
         description: "Comma-separated origins to post (blank = every ig_enabled origin)"
         required: false
+      force:
+        description: "Post even if this origin already posted today"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -29,6 +50,7 @@ jobs:
     outputs:
       origins: ${{ steps.pick.outputs.origins }}
       count: ${{ steps.pick.outputs.count }}
+      skipped: ${{ steps.pick.outputs.skipped }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,12 +60,36 @@ jobs:
         id: pick
         env:
           REQUESTED: ${{ github.event.inputs.origins }}
+          FORCE: ${{ github.event.inputs.force }}
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
-          import json, os
+          import datetime, json, os
+
           cfg = json.load(open("config/origins.json"))
           req = [o.strip().upper() for o in os.environ.get("REQUESTED", "").split(",") if o.strip()]
-          picked = []
+          force = os.environ.get("FORCE", "").lower() == "true"
+
+          # The runner is UTC and pipeline/fetch_fares.py stamps history with the
+          # runner's own date, so comparing against the UTC date is comparing like
+          # with like. At the 10:45/11:45 UTC fire times the UTC date and the ET
+          # date are the same day anyway.
+          today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+
+          def posted_today(code):
+              # CLT keeps the original unprefixed filename; every other origin is
+              # history-<CODE>.json. A missing or unreadable file means we have no
+              # evidence of a post, so the origin stays in the matrix.
+              path = "state/history.json" if code == "CLT" else "state/history-%s.json" % code
+              try:
+                  with open(path) as fh:
+                      hist = json.load(fh)
+              except (OSError, ValueError):
+                  return False
+              if not isinstance(hist, dict):
+                  return False
+              return any(v == today for v in hist.values())
+
+          picked, skipped = [], []
           for code, o in cfg.items():
               if code.startswith("_"):
                   continue
@@ -51,15 +97,25 @@ jobs:
                   continue
               if not req and not o.get("ig_enabled"):
                   continue
+              # History is committed only AFTER a publish succeeds ("Record what
+              # was posted"), so an entry dated today means today's post really
+              # went out — the one safe signal that a second firing would be a
+              # duplicate. Manual dispatch with force: true overrides it.
+              if not force and posted_today(code):
+                  skipped.append(code)
+                  continue
               picked.append({"code": code, "handle": o["handle"],
                              "secret": o["token_secret"]})
+
           print("origins=" + json.dumps(picked))
           print("count=" + str(len(picked)))
+          print("skipped=" + json.dumps(skipped))
           PY
 
       - name: Report the plan
         run: |
           echo "Posting for: ${{ steps.pick.outputs.origins }}" >> $GITHUB_STEP_SUMMARY
+          echo "Skipped (already posted today): ${{ steps.pick.outputs.skipped }}" >> $GITHUB_STEP_SUMMARY
 
   post:
     needs: plan
