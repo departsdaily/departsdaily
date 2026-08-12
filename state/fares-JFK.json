@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-12T02:16:12-04:00",
+ "generated": "2026-08-12T04:15:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -128,16 +128,16 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 281,
-   "d1": "2026-09-09",
-   "d2": "2026-09-15",
-   "dep": "6:50AM",
+   "price": 279,
+   "d1": "2026-09-29",
+   "d2": "2026-10-07",
+   "dep": "3:59PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:05PM",
-   "arr": "12:28PM",
-   "rarr": "4:03AM+1",
+   "rdep": "6:00AM",
+   "arr": "9:37PM",
+   "rarr": "11:02AM",
    "pct": 59
   },
   "LAX": {
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 189,
-   "d1": "2026-09-26",
+   "price": 192,
+   "d1": "2026-09-30",
    "d2": "2026-10-03",
    "dep": "2:29PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "2:00PM",
+   "rdep": "6:35AM",
    "arr": "5:37PM",
-   "rarr": "5:00PM",
-   "pct": 55
+   "rarr": "9:29AM",
+   "pct": 54
   },
   "MSY": {
    "to": "MSY",
@@ -248,9 +248,9 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 294,
-   "d1": "2026-09-15",
-   "d2": "2026-09-22",
+   "price": 304,
+   "d1": "2026-09-29",
+   "d2": "2026-10-02",
    "dep": "1:00PM",
    "al": "Frontier",
    "stops": 1,
@@ -258,7 +258,7 @@
    "rdep": "10:05PM",
    "arr": "9:07PM",
    "rarr": "5:13AM+1",
-   "pct": 72
+   "pct": 71
   },
   "TPA": {
    "to": "TPA",

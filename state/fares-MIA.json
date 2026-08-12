@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-12T02:16:31-04:00",
+ "generated": "2026-08-12T04:16:09-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 86,
-   "d1": "2026-10-22",
-   "d2": "2026-10-29",
-   "dep": "6:40AM",
-   "al": "Allegiant",
-   "stops": 0,
+   "price": 150,
+   "d1": "2026-08-22",
+   "d2": "2026-08-24",
+   "dep": "8:10AM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:38AM",
-   "arr": "9:48AM",
-   "rarr": "2:00PM",
-   "pct": 79
+   "rdep": "5:55AM",
+   "arr": "12:51PM",
+   "rarr": "10:50AM",
+   "pct": 64
   },
   "ORD": {
    "to": "ORD",
