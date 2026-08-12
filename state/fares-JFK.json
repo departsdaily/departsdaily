@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-12T06:15:56-04:00",
+ "generated": "2026-08-12T08:15:50-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -53,9 +53,9 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 235,
-   "d1": "2026-09-01",
-   "d2": "2026-09-06",
+   "price": 176,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30",
    "dep": "9:30PM",
    "al": "JetBlue",
    "stops": 0,
@@ -63,7 +63,7 @@
    "rdep": "6:10AM",
    "arr": "10:59PM",
    "rarr": "7:19AM",
-   "pct": 42
+   "pct": 57
   },
   "DEN": {
    "to": "DEN",
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 156,
-   "d1": "2026-08-31",
-   "d2": "2026-09-07",
-   "dep": "11:55AM",
+   "price": 152,
+   "d1": "2026-09-01",
+   "d2": "2026-09-08",
+   "dep": "5:25PM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
    "rdep": "3:55PM",
-   "arr": "3:04PM",
+   "arr": "10:51PM",
    "rarr": "6:44PM",
-   "pct": 58
+   "pct": 59
   },
   "AMS": {
    "to": "AMS",

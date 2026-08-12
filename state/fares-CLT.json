@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-12T06:14:00-04:00",
+ "generated": "2026-08-12T08:13:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -64,21 +64,6 @@
    "arr": "4:38PM",
    "rarr": "10:16AM",
    "pct": 79
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 212,
-   "d1": "2026-09-11",
-   "d2": "2026-09-20",
-   "dep": "12:09PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:30AM",
-   "arr": "3:02PM",
-   "rarr": "10:14AM",
-   "pct": 51
   },
   "LAS": {
    "to": "LAS",
@@ -184,6 +169,21 @@
    "arr": "2:32AM+1",
    "rarr": "8:10PM",
    "pct": 68
+  },
+  "CUN": {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 553,
+   "d1": "2026-08-24",
+   "d2": "2026-08-29",
+   "dep": "3:40PM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:00PM",
+   "arr": "9:39PM",
+   "rarr": "6:03PM",
+   "pct": -6
   },
   "LON": {
    "to": "LON",
