@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-11T22:14:37-04:00",
+ "generated": "2026-08-12T00:14:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 159,
-   "d1": "2026-08-14",
-   "d2": "2026-08-16",
-   "dep": "9:57PM",
+   "price": 286,
+   "d1": "2026-08-20",
+   "d2": "2026-08-23",
+   "dep": "9:10PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:43PM",
-   "arr": "3:01AM+1",
-   "rarr": "8:27PM",
-   "pct": 61
+   "rdep": "10:00AM",
+   "arr": "11:53PM",
+   "rarr": "2:57PM",
+   "pct": 30
   },
   "FLL": {
    "to": "FLL",
@@ -233,17 +233,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 154,
-   "d1": "2026-09-30",
-   "d2": "2026-10-05",
-   "dep": "1:21PM",
+   "price": 130,
+   "d1": "2026-09-12",
+   "d2": "2026-09-19",
+   "dep": "6:30AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:24PM",
-   "arr": "6:57PM",
-   "rarr": "12:23AM+1",
-   "pct": 68
+   "rdep": "3:21PM",
+   "arr": "11:14AM",
+   "rarr": "7:43PM",
+   "pct": 73
   },
   "SEA": {
    "to": "SEA",
@@ -289,21 +289,6 @@
    "arr": "12:47PM",
    "rarr": "6:05PM",
    "pct": 63
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 1055,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "dep": "8:40AM",
-   "al": "Air Canada",
-   "stops": 3,
-   "xfer": 0,
-   "rdep": "1:00PM",
-   "arr": "6:46PM",
-   "rarr": "1:26AM+1",
-   "pct": -20
   },
   "CUN": {
    "to": "CUN",

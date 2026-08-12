@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-11T22:15:35-04:00",
+ "generated": "2026-08-12T00:15:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 118,
-   "d1": "2026-08-14",
-   "d2": "2026-08-16",
-   "dep": "8:49PM",
+   "price": 146,
+   "d1": "2026-09-08",
+   "d2": "2026-09-13",
+   "dep": "6:30AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
    "rdep": "7:00AM",
-   "arr": "11:29PM",
-   "rarr": "9:30AM",
-   "pct": 70
+   "arr": "9:03AM",
+   "rarr": "10:29AM",
+   "pct": 63
   },
   "DFW": {
    "to": "DFW",
@@ -98,17 +98,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 166,
+   "price": 221,
    "d1": "2026-08-29",
    "d2": "2026-09-01",
-   "dep": "10:59AM",
+   "dep": "6:25PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "5:38PM",
-   "arr": "2:23PM",
+   "arr": "9:56PM",
    "rarr": "9:01PM",
-   "pct": 64
+   "pct": 52
   },
   "LAS": {
    "to": "LAS",
@@ -293,17 +293,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 582,
-   "d1": "2026-08-28",
-   "d2": "2026-09-06",
-   "dep": "7:45PM",
-   "al": "BF",
-   "stops": 0,
+   "price": 411,
+   "d1": "2026-11-20",
+   "d2": "2026-11-30",
+   "dep": "9:20AM",
+   "al": "AT",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "2:50PM",
-   "arr": "6:35AM+1",
-   "rarr": "2:30AM+1",
-   "pct": 35
+   "rdep": "8:10PM",
+   "arr": "11:00PM",
+   "rarr": "11:40AM+1",
+   "pct": 54
   },
   "PUJ": {
    "to": "PUJ",
