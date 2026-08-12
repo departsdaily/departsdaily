@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-12T14:16:18-04:00",
+ "generated": "2026-08-12T18:11:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 950,
-   "d1": "2026-08-29",
+   "price": 967,
+   "d1": "2026-09-02",
    "d2": "2026-09-13",
-   "dep": "8:10AM",
-   "al": "Frontier",
-   "stops": 3,
+   "dep": "8:15AM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:50PM",
-   "arr": "9:47PM",
-   "rarr": "9:25AM+1",
-   "pct": -8
+   "rdep": "12:15PM",
+   "arr": "6:28PM",
+   "rarr": "11:27PM",
+   "pct": -10
   },
   "AUA": {
    "to": "AUA",

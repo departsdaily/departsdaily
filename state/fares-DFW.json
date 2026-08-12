@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-12T14:15:00-04:00",
+ "generated": "2026-08-12T18:10:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -68,7 +68,7 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 136,
+   "price": 133,
    "d1": "2026-09-24",
    "d2": "2026-09-26",
    "dep": "1:45PM",
@@ -78,7 +78,7 @@
    "rdep": "6:37PM",
    "arr": "4:47PM",
    "rarr": "10:12PM",
-   "pct": 70
+   "pct": 71
   },
   "LAS": {
    "to": "LAS",
@@ -128,17 +128,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 143,
-   "d1": "2026-09-27",
-   "d2": "2026-10-01",
+   "price": 111,
+   "d1": "2026-09-15",
+   "d2": "2026-09-17",
    "dep": "5:55PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "2:37PM",
+   "rdep": "6:46PM",
    "arr": "9:00PM",
-   "rarr": "6:00PM",
-   "pct": 69
+   "rarr": "10:17PM",
+   "pct": 76
   },
   "MSY": {
    "to": "MSY",
@@ -158,17 +158,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 151,
-   "d1": "2026-10-21",
-   "d2": "2026-10-24",
-   "dep": "5:20PM",
+   "price": 185,
+   "d1": "2026-09-06",
+   "d2": "2026-09-11",
+   "dep": "5:18PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:55PM",
+   "rdep": "1:30PM",
    "arr": "9:00PM",
-   "rarr": "2:39AM+1",
-   "pct": 73
+   "rarr": "5:36PM",
+   "pct": 67
   },
   "ORD": {
    "to": "ORD",
@@ -248,17 +248,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 195,
-   "d1": "2026-08-17",
-   "d2": "2026-08-19",
-   "dep": "5:30AM",
+   "price": 88,
+   "d1": "2026-10-01",
+   "d2": "2026-10-08",
+   "dep": "3:20PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:15AM",
-   "arr": "8:09AM",
-   "rarr": "2:18PM",
-   "pct": 57
+   "rdep": "7:25PM",
+   "arr": "5:53PM",
+   "rarr": "10:40PM",
+   "pct": 80
   },
   "AMS": {
    "to": "AMS",

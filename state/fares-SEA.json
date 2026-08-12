@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-12T14:16:39-04:00",
+ "generated": "2026-08-12T18:11:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -199,21 +199,6 @@
    "arr": "8:55PM",
    "rarr": "8:40AM+1",
    "pct": 16
-  },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 781,
-   "d1": "2026-09-09",
-   "d2": "2026-09-16",
-   "dep": "8:00AM",
-   "al": "Alaska",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:35PM",
-   "arr": "3:13PM",
-   "rarr": "11:45PM",
-   "pct": -63
   },
   "PAR": {
    "to": "PAR",

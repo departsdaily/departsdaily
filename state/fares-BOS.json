@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-12T14:17:01-04:00",
+ "generated": "2026-08-12T18:11:55-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -170,6 +170,21 @@
    "rarr": "11:16PM",
    "pct": 62
   },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 220,
+   "d1": "2026-09-11",
+   "d2": "2026-09-15",
+   "dep": "8:30PM",
+   "al": "JetBlue",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:48PM",
+   "arr": "10:03PM",
+   "rarr": "8:56PM",
+   "pct": 43
+  },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
@@ -308,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 706,
-   "d1": "2026-11-25",
-   "d2": "2026-11-29",
-   "dep": "3:30PM",
-   "al": "Air Canada",
-   "stops": 2,
+   "price": 750,
+   "d1": "2026-08-17",
+   "d2": "2026-09-01",
+   "dep": "11:00PM",
+   "al": "Icelandair",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:55PM",
-   "arr": "11:55PM",
-   "rarr": "4:37AM+1",
-   "pct": 22
+   "rdep": "2:00PM",
+   "arr": "7:35AM+1",
+   "rarr": "11:15PM",
+   "pct": 17
   },
   "PUJ": {
    "to": "PUJ",

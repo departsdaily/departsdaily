@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-12T14:16:00-04:00",
+ "generated": "2026-08-12T18:11:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -413,16 +413,16 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 147,
-   "d1": "2026-08-26",
-   "d2": "2026-09-03",
-   "dep": "6:45PM",
+   "price": 145,
+   "d1": "2026-11-18",
+   "d2": "2026-12-02",
+   "dep": "12:00PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:01AM",
-   "arr": "10:59PM",
-   "rarr": "8:54AM",
+   "rdep": "6:01AM",
+   "arr": "3:51PM",
+   "rarr": "10:03AM",
    "pct": 65
   }
  }
