@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-12T10:16:17-04:00",
+ "generated": "2026-08-12T12:16:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 255,
-   "d1": "2026-08-30",
-   "d2": "2026-09-01",
-   "dep": "3:30PM",
+   "price": 323,
+   "d1": "2026-08-31",
+   "d2": "2026-09-03",
+   "dep": "6:00AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
    "rdep": "12:45PM",
-   "arr": "8:00PM",
-   "rarr": "5:50PM",
-   "pct": 40
+   "arr": "3:31PM",
+   "rarr": "5:08PM",
+   "pct": 24
   },
   "DCA": {
    "to": "DCA",
