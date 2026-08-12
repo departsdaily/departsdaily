@@ -1,25 +1,25 @@
 {
- "date": "2026-08-11",
+ "date": "2026-08-12",
  "origin": "CLT",
  "deals": [
   {
-   "to": "DFW",
-   "city": "Dallas",
-   "price": 120,
-   "d1": "2026-09-16",
-   "d2": "2026-09-22",
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 199,
+   "d1": "2026-10-14",
+   "d2": "2026-10-18",
    "airline": "F9",
-   "stops": 0,
-   "dep": "1:34PM",
-   "rdep": "7:30AM",
-   "arr": "4:38PM",
-   "rarr": "10:16AM",
-   "baseline": 237,
-   "disc": 49,
-   "nights": 6,
+   "stops": 1,
+   "dep": "8:11PM",
+   "rdep": "6:15AM",
+   "arr": "1:00AM+1",
+   "rarr": "12:07PM",
+   "baseline": 292,
+   "disc": 32,
+   "nights": 4,
    "on_shape": false,
-   "rung": "wide",
-   "link": "https://www.aviasales.com/search/CLT1609DFW22091?t=F917895656401789573080000184CLTDFW17900622001790075760000166DFWCLT_d875adc1058749dfe43981af63fb778d_9921&search_date=10082026&expected_price_uuid=019feb59-9b2b-8040-2e92-62cedf7fc95d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=RMSGKFdINsOWg1cNyupU4A&expected_price_source=share&expected_price_currency=usd&expected_price=120&marker=755800",
+   "rung": "nights",
+   "link": "https://www.aviasales.com/search/CLT1410SJU18101?t=F917920086601792029180000342CLTMCOSJU17923041001792341480000623SJUPHLCLT_17599514397bb0359abb3bc90a698954_16385&search_date=11082026&expected_price_uuid=019ff24f-968e-8040-6074-2bdf33af272e&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=AysRP0E5dkUJq3HuJ2t9Yw&expected_price_source=share&expected_price_currency=usd&expected_price=199&marker=755800",
    "deal": true
   },
   {
@@ -40,6 +40,30 @@
    "on_shape": true,
    "rung": "shape",
    "link": "https://www.aviasales.com/search/CLT2108LAS24081?t=F917873491201787399280001016CLTMCOLAS17876076601787644860000440LASMCOCLT_b4fcc56489b916f82bf85165cb66c505_15580&search_date=10082026&expected_price_uuid=019fe91b-5b0d-8040-2d95-71048e5aa367&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=lGSGr7RKFr8_26sNZ5A6pw&expected_price_source=share&expected_price_currency=usd&expected_price=191&marker=755800",
+   "repeat": true,
+   "last_shown": "2026-08-11",
+   "deal": true
+  },
+  {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 136,
+   "d1": "2026-09-19",
+   "d2": "2026-09-22",
+   "airline": "F9",
+   "stops": 0,
+   "dep": "4:51PM",
+   "rdep": "7:30AM",
+   "arr": "7:52PM",
+   "rarr": "10:16AM",
+   "baseline": 237,
+   "disc": 43,
+   "nights": 3,
+   "on_shape": false,
+   "rung": "nights",
+   "link": "https://www.aviasales.com/search/CLT1909DFW22091?t=F917898366601789843920000181CLTDFW17900622001790075760000166DFWCLT_d6bd8ad969dc48e4e99f52d86199fc87_11214&search_date=12082026&expected_price_uuid=019ff3c6-b319-8040-2da7-e1bb9879940e&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=07WZEV_mdr0wIYM0eViHVA&expected_price_source=share&expected_price_currency=usd&expected_price=136&marker=755800",
+   "repeat": true,
+   "last_shown": "2026-08-11",
    "deal": true
   },
   {
@@ -60,6 +84,8 @@
    "on_shape": false,
    "rung": "wide",
    "link": "https://www.aviasales.com/search/CLT2310SFO01111?t=F917927847601792800900000449CLTDENSFO17935420201793645160001539SFODENCLT_bc7e36fdfc44ec547de8303845a530b5_21182&search_date=07082026&expected_price_uuid=019fdd13-b55a-8040-a7e1-e1174ce9ef05&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=beFKhmclrreSpWf7hMdhdg&expected_price_source=share&expected_price_currency=usd&expected_price=257&marker=755800",
+   "repeat": true,
+   "last_shown": "2026-08-11",
    "deal": true
   },
   {
@@ -80,6 +106,8 @@
    "on_shape": false,
    "rung": "wide",
    "link": "https://www.aviasales.com/search/CLT1211PUJ15111?t=AC17945034001794606000001650CLTYYZPUJ17947479001794846360001701PUJYYZCLT_1f03b993cdad12fee52e9490ec23b0c8_35550&search_date=10082026&expected_price_uuid=019feb46-81e4-8040-6afc-2252e2f586c0&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=O2G-R9jQPH_2ZZ54_pRcsA&expected_price_source=share&expected_price_currency=usd&expected_price=430&marker=755800",
+   "repeat": true,
+   "last_shown": "2026-08-11",
    "deal": true
   },
   {
@@ -100,10 +128,12 @@
    "on_shape": false,
    "rung": "nights",
    "link": "https://www.aviasales.com/search/CLT2908MIA31081?t=F917880366601788078540000698CLTPHLMIA17881590001788256320001622MIAIAHCLT_3a36c70b027a109c91e9cb066c328210_12789&search_date=07082026&expected_price_uuid=019fdc6f-8650-8040-6174-787e9c457e7a&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1wuFD4DpmSFY8dJEiLUhwg&expected_price_source=share&expected_price_currency=usd&expected_price=156&marker=755800",
+   "repeat": true,
+   "last_shown": "2026-08-11",
    "deal": true
   }
  ],
- "n_deals": 5,
+ "n_deals": 6,
  "skip": null,
  "plan": {
   "shape": "weekend",
@@ -117,8 +147,8 @@
   "on_shape": 1,
   "rungs": {
    "shape": 1,
-   "nights": 1,
-   "wide": 3
+   "nights": 3,
+   "wide": 2
   }
  }
 }
