@@ -4,18 +4,18 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-11 20:03 EDT
+   Generated 2026-08-11 20:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-11T20:03:51-04:00",
+ updated:"2026-08-11T20:13:38-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:191,d1:"2026-08-21",d2:"2026-08-24",dep:"9:52PM",al:"Frontier",stops:1,rdep:"9:41PM",arr:"4:41AM+1",rarr:"4:20AM+1",exp:"2026-08-13"},
  {to:"LAX",city:"Los Angeles",price:221,d1:"2026-09-19",d2:"2026-09-26",dep:"4:51PM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"11:13PM",rarr:"6:53AM",exp:"2026-08-13"},
+ {to:"SFO",city:"San Francisco",price:257,d1:"2026-10-23",d2:"2026-11-01",dep:"7:46PM",al:"Frontier",stops:1,rdep:"2:07PM",arr:"2:32AM+1",rarr:"8:10PM",exp:"2026-08-13"},
  {to:"NYC",city:"New York City",price:145,d1:"2026-09-12",d2:"2026-09-19",dep:"9:32AM",al:"Frontier",stops:1,rdep:"5:55AM",arr:"2:16PM",rarr:"10:39AM",exp:"2026-08-13"},
- {to:"PHX",city:"Phoenix",price:256,d1:"2026-09-03",d2:"2026-09-07",dep:"8:05AM",al:"United",stops:2,rdep:"11:54PM",arr:"4:12PM",rarr:"6:45AM+1",exp:"2026-08-13"},
  {to:"MIA",city:"Miami",price:156,d1:"2026-08-29",d2:"2026-08-31",dep:"8:51PM",al:"Frontier",stops:1,rdep:"6:50AM",arr:"1:51AM+1",rarr:"12:26PM",exp:"2026-08-13"},
  {to:"SJU",city:"San Juan, PR",price:199,d1:"2026-10-14",d2:"2026-10-18",dep:"8:11PM",al:"Frontier",stops:1,rdep:"6:15AM",arr:"1:00AM+1",rarr:"12:07PM",exp:"2026-08-13"},
  {to:"PAR",city:"Paris",price:515,d1:"2026-11-05",d2:"2026-11-10",dep:"3:05PM",al:"",stops:1,rdep:"9:10AM",arr:"12:10AM+1",rarr:"8:30PM",exp:"2026-08-13"},
