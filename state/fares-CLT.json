@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-13T13:00:59-04:00",
+ "generated": "2026-08-13T14:14:48-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 34,
+ "routes_priced": 32,
  "routes_failed": [],
  "fares": {
   "BDL": {
@@ -143,15 +143,15 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 264,
+   "price": 262,
    "d1": "2026-09-04",
    "d2": "2026-09-07",
-   "dep": "6:40AM",
+   "dep": "3:10PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "9:10PM",
-   "arr": "8:46AM",
+   "arr": "5:16PM",
    "rarr": "11:20PM",
    "pct": 35
   },
@@ -379,36 +379,6 @@
    "arr": "7:17PM",
    "rarr": "1:20AM+1",
    "pct": -7
-  },
-  "MAD": {
-   "to": "MAD",
-   "city": "Madrid",
-   "price": 904,
-   "d1": "2026-09-24",
-   "d2": "2026-09-29",
-   "dep": "11:10PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "10:40AM",
-   "arr": "9:40AM+1",
-   "rarr": "11:08PM",
-   "pct": -3
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 614,
-   "d1": "2026-09-04",
-   "d2": "2026-09-11",
-   "dep": "9:38PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "12:15PM",
-   "arr": "3:21AM+1",
-   "rarr": "7:52PM",
-   "pct": -14
   },
   "MUC": {
    "to": "MUC",
