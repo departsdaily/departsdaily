@@ -43,6 +43,7 @@ with open(_CFG, encoding="utf-8") as _fh:
 DOT_AVG  = _SEAS["dot_round_trip"]
 INTL_AVG = _SEAS["intl_estimate_round_trip"]
 INTL_SCOPE = _SEAS.get("origin_intl", {})
+DOM_SCOPE = _SEAS.get("origin_dom", {})
 
 def avg_for(origin, dest):
     """Annual round-trip average for THIS origin. None means no defensible
@@ -98,7 +99,15 @@ ROUTES = {
 # widens every affected origin automatically.
 def dests_for(origin):
     o = origin.upper()
-    dom = sorted(DOT_AVG.get(o, {}).keys())
+    # DOMESTIC IS SCOPED PER ORIGIN too, for the same reason as international
+    # below. The --adopt run on 2026-08-13 pulled real DOT fares for ~65 city
+    # pairs out of every origin. That data is right and worth keeping, but nine
+    # of those ten boards are retired, so tracking all of it would have roughly
+    # tripled the nightly index for cities we do not publish. CLT is absent
+    # from origin_dom on purpose and therefore tracks everything DOT gives it.
+    dom_allow = DOM_SCOPE.get(o)
+    dom = (sorted(c for c in DOT_AVG.get(o, {}) if c in set(dom_allow))
+           if dom_allow else sorted(DOT_AVG.get(o, {}).keys()))
     # INTERNATIONAL IS PER ORIGIN as of 2026-08-13. It used to be "every
     # international market we hold an estimate for, from every origin", which
     # was fine at 11 markets and is not fine at 50: the Charlotte expansion
