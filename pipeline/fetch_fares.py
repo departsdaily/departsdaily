@@ -18,6 +18,13 @@ import origins, day_plan, site_fares, index_fares
 # see pick_offer() below. Config: config/schedule.json.
 PLAN = day_plan.plan()
 
+# FOUR SECTIONS EVERY DAY (owner's rule, 2026-08-13). The carousel is no longer
+# one trip shape per weekday. Every post carries Long Weekend, Week Long, Two
+# Weeks and Cheapest, seven rows each, one slide each. PLAN above is kept
+# because pipeline/render_reel.py still resolves a single daily shape for the
+# reel rotation — it no longer steers the carousel.
+SECTIONS = day_plan.sections()
+
 TP_TOKEN = os.environ["TP_TOKEN"]
 ORIGIN = origins.origin_code()
 PATHS = origins.paths(ORIGIN)
@@ -233,9 +240,12 @@ for code in ROUTES:
 
 
 def build(plan):
-    """Score every fetched route against one day plan. Returns
-    (deals, skips, scan_rows). Pure: safe to call twice with different plans,
-    which is what lets a shape that cannot be honoured step aside."""
+    """Score every fetched route against one section spec. Returns
+    (qualifying, rest, scan_rows). Pure: safe to call once per section.
+
+    `plan` needs: nights, depart_in, depart_dow, return_dow, wide, and
+    optionally deals_only. A legacy day_plan.plan() dict satisfies it, which is
+    what keeps the old single-shape path working."""
     deals, skips, rows = [], [], {}
     for code, offers in OFFERS.items():
         # THREE RUNGS, cheapest real fare at each, all from the same
@@ -249,15 +259,23 @@ def build(plan):
         # Day-of-week rules are what make a "long weekend" an actual long
         # weekend, but they are also the thinnest filter, so they must never
         # be the reason a route with a genuine deal falls off. Hence the ladder.
+        # THE LADDER WIDENS THE WINDOW, NEVER THE TRIP LENGTH (2026-08-13).
+        # It used to fall all the way back to the wide 2-14 night range, which
+        # was safe when one shape owned the whole board and the cover slide
+        # could step aside. It is NOT safe now: each section is its own slide
+        # with its own title, so a 3 night fare reaching the TWO WEEKS slide
+        # would make that slide lie. Trip length is the section's identity and
+        # is held fixed; only the day-of-week rule and then the departure
+        # window are relaxed.
         rungs = [
             ("shape", pick_offer(offers, plan["nights"], plan["depart_in"],
                                  plan["depart_dow"], plan["return_dow"])),
             ("nights", pick_offer(offers, plan["nights"], plan["depart_in"])),
-            ("wide", pick_offer(offers, plan["wide"]["nights"],
-                                plan["wide"]["depart_in"])),
+            ("window", pick_offer(offers, plan["nights"],
+                                  plan["wide"]["depart_in"])),
         ]
         if all(c is None for _, c in rungs):
-            n0, n1 = plan["wide"]["nights"]
+            n0, n1 = plan["nights"]
             d0, d1 = plan["wide"]["depart_in"]
             rows[code] = {"outcome": "no fares in window",
                           "why": f"{len(offers)} offers, none leaving {d0}-{d1} "
@@ -307,52 +325,111 @@ def build(plan):
                       "price": price, "typical": base, "disc_pct": round(disc * 100),
                       "d1": row["d1"], "d2": row["d2"],
                       "nights": nights, "on_shape": on_shape, "rung": rung}
+        row["deal"] = disc >= MIN_DISCOUNT
         (deals if disc >= MIN_DISCOUNT else skips).append(row)
     deals.sort(key=lambda x: -x["disc"])
-    # Variety first, then fill. Every deal here already cleared MIN_DISCOUNT, so
-    # a backfilled repeat is a genuine deal — just one we also showed recently.
-    # Showing Miami twice in a week beats showing an overpayment once.
-    fresh = [d for d in deals if d["to"] not in recent]
-    again = [d for d in deals if d["to"] in recent]
-    need = max(0, BOARD_TARGET - len(fresh))
-    for d in again[:need]:
-        d["repeat"] = True
-        d["last_shown"] = hist.get(d["to"])
-    deals = fresh + again[:need]
-    for d in deals:
-        d["deal"] = True
+    skips.sort(key=lambda x: x["price"])
     return deals, skips, rows
 
 
-deals, skips, rows = build(PLAN)
+def fill(spec, used_flights):
+    """One section's rows, honestly.
 
-# A shape that cannot be honoured must step aside rather than mislabel the
-# board. "TWO WEEKS GONE" printed over a pile of long-weekend fares is worse
-# than not running the two-week post at all — the cover slide would be making
-# a claim the fares don't support. If fewer than min_on_shape rows actually
-# land on the shape, we rebuild on the fallback shape and say so.
-if PLAN.get("min_on_shape") and PLAN.get("fallback_shape"):
-    got = sum(1 for d in deals[:BOARD_MAX] if d.get("on_shape"))
-    if got < PLAN["min_on_shape"]:
-        alt = day_plan.plan_for_shape(PLAN["fallback_shape"], PLAN)
-        print(f"{ORIGIN}: only {got} row(s) matched the {PLAN['shape']} shape "
-              f"(needed {PLAN['min_on_shape']}) — falling back to "
-              f"{alt['shape']} rather than mislabelling the board.")
-        PLAN = alt
-        deals, skips, rows = build(PLAN)
+    Deals-only sections take fares that cleared MIN_DISCOUNT, best discount
+    first. The CHEAPEST section takes the lowest real prices at any discount —
+    it claims nothing, which is exactly why it can always fill its slide and
+    carry a thin day. A row there still wears the green badge if it genuinely
+    cleared the bar, and stays silent if it did not.
 
-scan.update(rows)
-# Deals only, best first, as many as the slide holds. Non-qualifying fares
-# exist solely in the scan diagnostics — never on the board.
+    `used_flights` de-duplicates the EXACT SAME FLIGHT across sections: the
+    same city on different dates is a different trip and is allowed (owner's
+    call, 2026-08-13), but printing one identical fare twice in one post is
+    just a repeated row.
+    """
+    qualifying, rest, rows = build(spec)
+    bar = spec.get("min_discount", MIN_DISCOUNT)
+    # Rows that cleared MIN_DISCOUNT are already in `qualifying`. A section with
+    # a lower bar may also take from `rest` — but never below its own bar, and
+    # never below zero. "Cheapest" is a promise about price, not permission to
+    # print an overpayment.
+    pool = qualifying + [r for r in rest if r["disc"] >= round(bar * 100)] \
+           if bar < MIN_DISCOUNT else list(qualifying)
+    if spec.get("sort") == "price":
+        pool = sorted(pool, key=lambda x: x["price"])
+    seen_dest = set()
+    picked = []
+    # Variety first, then fill. Every deal in `pool` for a deals-only section
+    # already cleared MIN_DISCOUNT, so a backfilled repeat is a genuine deal —
+    # just one we also showed in the last few days. Showing Miami twice in a
+    # week beats showing an overpayment once.
+    for wave in (0, 1):
+        for r in pool:
+            if len(picked) >= spec["rows"]:
+                break
+            if r["to"] in seen_dest:
+                continue
+            if (r["to"], r["d1"], r["d2"]) in used_flights:
+                continue
+            if wave == 0 and r["to"] in recent:
+                continue
+            if wave == 1:
+                r["repeat"] = True
+                r["last_shown"] = hist.get(r["to"])
+            seen_dest.add(r["to"])
+            used_flights.add((r["to"], r["d1"], r["d2"]))
+            r["section"] = spec["key"]
+            picked.append(r)
+    return picked, rows
+
+
+# ONE PASS PER SECTION. Each is scored independently against the same fetched
+# offers, so Long Weekend and Two Weeks can pick different fares for the same
+# city without competing for a single slot.
+used_flights = set()
+sections, deals = [], []
+for spec in SECTIONS:
+    picked, rows = fill(spec, used_flights)
+    # The scan is the "why was there no post today" record. Merge, never
+    # overwrite: a later section reporting "no fares in window" must not erase
+    # an earlier section's "qualified" for the same route.
+    for code, row in rows.items():
+        row = dict(row, section=spec["key"])
+        if scan.get(code, {}).get("outcome") != "qualified":
+            scan[code] = row
+    n_deal = sum(1 for r in picked if r.get("deal"))
+    sections.append({"key": spec["key"], "cover": spec["cover"],
+                     "angle": spec["angle"], "nights": list(spec["nights"]),
+                     "deals_only": spec["deals_only"], "rows_target": spec["rows"],
+                     "n": len(picked), "n_deals": n_deal,
+                     "rungs": {r: sum(1 for d in picked if d.get("rung") == r)
+                               for r in ("shape", "nights", "window")},
+                     "deals": picked})
+    deals.extend(picked)
+    short = "" if len(picked) >= spec["rows"] else \
+            f"  SHORT by {spec['rows'] - len(picked)}"
+    print(f"{ORIGIN} section {spec['key']:9} {len(picked)}/{spec['rows']} rows, "
+          f"{n_deal} of them real deals{short}")
+    if len(picked) < spec["rows"]:
+        print(f"::warning::{ORIGIN} {spec['key']} filled {len(picked)}/"
+              f"{spec['rows']} rows. Not padded — every row cleared the "
+              f"{MIN_DISCOUNT*100:.0f}% bar. Supply problem, not a code problem: "
+              f"{len(ROUTES)} routes eligible.")
+
 board = {"date": today.isoformat(), "origin": ORIGIN,
-         "deals": deals[:BOARD_MAX], "n_deals": len(deals[:BOARD_MAX]),
+         # Flat union, section order. Everything downstream (the caption, the
+         # stories, the reel) still reads board["deals"], so none of it had to
+         # change — each row now just carries which section it came from.
+         "deals": deals, "n_deals": sum(1 for d in deals if d.get("deal")),
+         "n_rows": len(deals),
+         "sections": sections,
          "skip": None,
          "plan": {"shape": PLAN["shape"], "cover": PLAN["cover"],
                   "angle": PLAN["angle"], "content": PLAN["content"],
                   "nights": list(PLAN["nights"]),
-                  "on_shape": sum(1 for d in deals[:BOARD_MAX] if d.get("on_shape")),
-                  "rungs": {r: sum(1 for d in deals[:BOARD_MAX] if d.get("rung") == r)
-                            for r in ("shape", "nights", "wide")}}}
+                  "sections": [s["key"] for s in sections],
+                  "on_shape": sum(1 for d in deals if d.get("on_shape")),
+                  "rungs": {r: sum(1 for d in deals if d.get("rung") == r)
+                            for r in ("shape", "nights", "window")}}}
 os.makedirs("out", exist_ok=True)
 counts = {}
 for v in scan.values():
@@ -361,29 +438,34 @@ json.dump({"date": today.isoformat(), "origin": ORIGIN,
            "routes_considered": len(ROUTES), "min_discount_pct": MIN_DISCOUNT * 100,
            "summary": counts, "routes": scan},
           open(f"out/scan-{ORIGIN}.json", "w"), indent=1)
-print(f"{ORIGIN} plan: {PLAN['weekday']} -> {PLAN['shape']} "
-      f"({PLAN['nights'][0]}-{PLAN['nights'][1]} nights, leaving "
-      f"{PLAN['depart_in'][0]}-{PLAN['depart_in'][1]} days out) — {PLAN['note']}")
+print(f"{ORIGIN} sections: " + ", ".join(
+    f"{s['key']} {s['n']}/{s['rows_target']}" for s in sections))
 print(f"{ORIGIN} scan:", counts)
-n = len(board["deals"])
-if n < BOARD_TARGET:
-    print(f"::warning::{ORIGIN} board has {n} deals, target is {BOARD_TARGET}. "
-          f"Not padded — every row cleared the {MIN_DISCOUNT*100:.0f}% bar. "
-          f"Short boards are a SUPPLY problem: {len(ROUTES)} routes eligible, "
-          f"pool needs ~{BOARD_TARGET*(NO_REPEAT_DAYS+1)} to sustain "
-          f"{BOARD_TARGET}/day with variety.")
+want = sum(s["rows_target"] for s in sections)
+if len(deals) < want:
+    print(f"::warning::{ORIGIN} filled {len(deals)}/{want} rows across "
+          f"{len(sections)} sections. Not padded. {len(ROUTES)} routes eligible.")
 for c, v in sorted(scan.items(), key=lambda kv: kv[1].get("disc_pct", -999), reverse=True):
     print(f"  {c:4} {v['outcome']:18}", v.get("why") or
           f"${v.get('price')} vs typical ${v.get('typical')} = {v.get('disc_pct')}%")
 
+# The deal sections may all come up empty on a genuinely dead market day, and
+# that is allowed to stop the post — a board with nothing on it is not a post.
+# The CHEAPEST section claims no discount, so it alone is NOT enough to justify
+# publishing: if no section found a single real deal, there is nothing to say.
 if not board["deals"]:
-    print(f"FATAL: {ORIGIN} produced no qualifying deals — deals-only board, "
-          f"so there is nothing to post today.")
+    print(f"FATAL: {ORIGIN} produced no fares at all — nothing to post today.")
+    raise SystemExit(1)
+if not board["n_deals"]:
+    print(f"FATAL: {ORIGIN} found cheap fares but not one real deal across any "
+          f"section. The post sells verified deals, so there is nothing to "
+          f"post today.")
     raise SystemExit(1)
 json.dump(board, open(PATHS["deals"], "w"), indent=1)
 for d in board["deals"]:
     hist[d["to"]] = today.isoformat()
 os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
 json.dump(hist, open(HISTORY_FILE, "w"), indent=1)
-print(f"{ORIGIN} board:", [(d["to"], "DEAL" if d["deal"] else "fare")
-                           for d in board["deals"]])
+for s_ in sections:
+    print(f"{ORIGIN} {s_['cover']}:", [(d["to"], f"${d['price']}",
+          f"{d['disc']}%" if d.get("deal") else "-") for d in s_["deals"]])
