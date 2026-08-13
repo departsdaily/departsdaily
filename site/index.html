@@ -4,8 +4,8 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5064929428745790" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Departs Daily — Cheap flights from your airport. Every day.</title>
-<meta name="description" content="Data-driven flight deals from CLT and 9 more US airports. Every fare compared against its route average. Refreshed through the day, every day.">
+<title>CLT Departs — Cheap flights out of Charlotte. Every day.</title>
+<meta name="description" content="Cheap flights out of Charlotte Douglas, found and checked every morning. Long weekends, week long trips and two week escapes from CLT, every fare compared against its route average.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -503,14 +503,14 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
     <a href="gear.html">GEAR</a>
     <a href="disclosure.html">DISCLOSURE</a>
   </nav>
-  <span class="tag">CHEAP FLIGHTS. EVERY DAY.<br>REFRESHED THROUGH THE DAY</span>
+  <span class="tag">CHARLOTTE. EVERY DAY.<br>REFRESHED THROUGH THE DAY</span>
 </div></header>
 
 <main class="wrap">
 <div class="hero">
   <div class="kicker">■ LIVE DEAL BOARD — <span id="boardDate"></span></div>
   <h1>TODAY'S CHEAPEST FLIGHTS<br>OUT OF <span class="amber" id="heroCity">CLT</span></h1>
-  <p class="sub">Every fare below is compared against its route's typical price, so you know a deal is actually a deal. Tapping a row runs a <b style="color:var(--white)">live search</b> for those exact dates — the price you book is always today's price, never a cached one.</p>
+  <p class="sub">Charlotte only, and that is the point. Every fare below leaves from Charlotte Douglas and is compared against that route's typical price, so you know a deal is actually a deal. Tapping a row runs a <b style="color:var(--white)">live search</b> for those exact dates — the price you book is always today's price, never a cached one.</p>
 </div>
 
 <div id="paneBoard">
@@ -520,9 +520,8 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
      read from site/data/post-<ORIGIN>.json, which the posting workflow writes
      at publish time. It sits ABOVE the live board on purpose: most visitors
      arrive from the bio link having just seen these fares, and landing them on
-     a different set of deals wastes the click. Hidden entirely when there is
-     no post for the selected city, so ATL shows nothing rather than an empty
-     promise. -->
+     a different set of deals wastes the click. Hidden entirely on a day with
+     no post, so a missed morning shows nothing rather than an empty promise. -->
 <div class="board" id="postBoard" hidden>
   <div class="bhead"><span>■ TODAY&#39;S INSTAGRAM POST — <span id="postCity"></span></span><span id="postStamp"></span></div>
   <div id="postRows"></div>
@@ -538,7 +537,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 
 <a class="bigsearch" id="bigSearch" target="_blank" rel="sponsored noopener">
   <span class="bsk">■ DON'T SEE YOUR TRIP ON THE BOARD?</span>
-  <span class="bst">Search every flight from <span id="bsCity">CLT</span> &rsaquo;</span>
+  <span class="bst">Search every flight out of <span id="bsCity">CLT</span> &rsaquo;</span>
   <span class="bsd">A full live search across hundreds of airlines and booking sites. Any dates,
   any destination, sorted cheapest first. We may earn a commission if you book, at no extra cost
   to you &mdash; the price at checkout is the only price.</span>
@@ -591,15 +590,15 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
   earn a commission at no extra cost to you. It is what keeps the board free.</p>
 </section>
 <section>
-  <h2>10 airports. One board.</h2>
-  <p class="sub">All ten are live, each with its own top 30 destinations and its own route averages, so a deal out of Seattle is measured against Seattle prices and not somebody else's. Pick your airport above. City guides are being written city by city.</p>
-  <div class="grid" id="citygrid"></div>
+  <h2>One airport. Done properly.</h2>
+  <p class="sub">We used to split attention across ten airports. Now it is Charlotte and only Charlotte, because a board that knows one city well beats ten boards that know none of them. Every route here is measured against its own Charlotte average, every guide is written for someone leaving CLT, and the daily Instagram post carries three trips: a long weekend, a week long trip and a two week escape.</p>
+  <p class="sub" style="margin-top:12px">Flying out of somewhere else? The <a href="search.html" style="color:var(--amber)">Fare Finder</a> still searches nine other US airports. The board is Charlotte's.</p>
 </section>
 
 
 <section>
-  <h2>When is it cheap from <span class="amber" id="chartOrigin">CLT</span>?</h2>
-  <p class="sub"><b style="color:var(--white)">The top <span id="chartCount">30</span> destinations we track from <span id="chartOriginName">Charlotte (CLT)</span></b> — <span id="chartSplit">20 domestic and 10 international &amp; Caribbean</span>. Every airport gets its own top-30 list, so these are the routes that actually matter out of this city; lists overlap between airports and that is expected. The amber line is the route's annual round-trip average; bars under the line are the months to book. Green dot = a deal on today's board. Pick your airport above — this section follows it.</p>
+  <h2>When is it cheap out of <span class="amber" id="chartOrigin">CLT</span>?</h2>
+  <p class="sub"><b style="color:var(--white)">The <span id="chartCount">30</span> destinations we track from <span id="chartOriginName">Charlotte (CLT)</span></b> — <span id="chartSplit">20 domestic and 10 international &amp; Caribbean</span>. These are the routes that actually matter out of Charlotte. The amber line is the route's annual round-trip average; bars under the line are the months to book. Green dot = a deal on today's board.</p>
   <div class="routesel" id="routesel"></div>
   <div class="empty" id="routesEmpty" style="display:none;border:2px solid var(--edge);border-radius:14px">Route pricing for this airport opens with its board.<br>Get on the email list below and you'll know the day it goes live.</div>
   <div class="chartbox">
@@ -672,17 +671,13 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
    live re-query toggle on the Fare Finder. Empty = toggle hidden. */
 </script>
 <script>
+/* CHARLOTTE ONLY as of 2026-08-13 (owner's call). The Deal Board is Charlotte's
+   and nobody else's — that focus is the whole product now. The Fare Finder on
+   search.html still searches all ten origins, because a Charlotte reader
+   pricing a trip out of another city is a service, not a distraction.
+   The chip row hides itself whenever this list has one entry. */
 const CITIES=[
- {code:"CLT",name:"CHARLOTTE (CLT)",live:true},
- {code:"ATL",name:"ATLANTA (ATL)",live:true},
- {code:"ORD",name:"CHICAGO (ORD)",live:true},
- {code:"DFW",name:"DALLAS (DFW)",live:true},
- {code:"DEN",name:"DENVER (DEN)",live:true},
- {code:"LAX",name:"LOS ANGELES (LAX)",live:true},
- {code:"JFK",name:"NEW YORK (JFK)",live:true},
- {code:"MIA",name:"MIAMI (MIA)",live:true},
- {code:"SEA",name:"SEATTLE (SEA)",live:true},
- {code:"BOS",name:"BOSTON (BOS)",live:true}];
+ {code:"CLT",name:"CHARLOTTE (CLT)",live:true}];
 
 /* =====================================================================
    DAILY BOARD DATA now lives in js/deals-data.js — a small generated
@@ -1210,10 +1205,16 @@ function setBigSearch(code){
                 (mk?"&marker="+encodeURIComponent(mk):"");
 }
 
-document.getElementById("citybar").innerHTML=CITIES.map(c=>
- `<button class="citybtn ${c.live?"":"soon"}" role="tab" data-code="${c.code}" aria-pressed="${c.live?"true":"false"}" ${c.live?"":'title="Coming soon"'}>${c.code}</button>`).join("");
-document.getElementById("citygrid").innerHTML=CITIES.map(c=>
- `<div class="gcard ${c.live?"live":""}"><div class="code">${c.code}</div><div class="st">${c.live?"● LIVE NOW":"COMING SOON"}</div></div>`).join("");
+/* One city means no chooser. A tab strip with a single tab is just clutter,
+   and it invites the question "where are the others?" that the pivot answers
+   by not asking it. */
+if(CITIES.length>1){
+  document.getElementById("citybar").innerHTML=CITIES.map(c=>
+   `<button class="citybtn ${c.live?"":"soon"}" role="tab" data-code="${c.code}" aria-pressed="${c.live?"true":"false"}" ${c.live?"":'title="Coming soon"'}>${c.code}</button>`).join("");
+}else{
+  const cb=document.getElementById("citybar");
+  if(cb) cb.hidden=true;
+}
 document.querySelectorAll("#citybar .citybtn").forEach(b=>b.addEventListener("click",()=>{
   renderCity(b.dataset.code);
   try{history.replaceState(null,"","?from="+encodeURIComponent(b.dataset.code));}catch(e){}
@@ -1304,14 +1305,12 @@ wireForm("signupform",'<p style="color:var(--green)">You are on the list. ✈</p
 
 /* Initial render — after all sections above are defined.
 
-   The board opens on whichever city the URL asks for, so each city's
-   Instagram bio can link straight at its own board:
-       departsdaily.com/?from=ATL     (what the bio links use)
-       departsdaily.com/#ATL          (also works, easy to say out loud)
-   An unknown or not-yet-live code falls back to Charlotte rather than
-   rendering an empty page. Clicking a chip rewrites the URL with
-   replaceState, so a visitor can copy what is on screen and share it,
-   without filling their back button with every chip they tried. */
+   CHARLOTTE ONLY since 2026-08-13, so this now always lands on CLT. The
+   ?from= / #CODE plumbing is deliberately left in place: any old bio link,
+   share or bookmark pointing at another city (departsdaily.com/?from=ATL)
+   still resolves to the Charlotte board instead of an empty page, because
+   CITIES holds one live entry and anything unmatched falls back to CLT.
+   Removing this would turn every link we ever posted into a broken one. */
 function cityFromURL(){
   var p=new URLSearchParams(location.search);
   var want=(p.get("from")||p.get("origin")||location.hash.replace("#","")||"")
