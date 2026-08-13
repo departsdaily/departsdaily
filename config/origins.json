@@ -1,5 +1,5 @@
 {
-  "_comment": "One entry per origin airport. Everything the daily Instagram pipeline needs to render and caption a board lives here, so adding city #11 is a config edit plus a token — no Python changes. `ig_enabled` gates the posting workflow: an origin with no live Instagram token stays false and is skipped by the matrix rather than failing the run.",
+  "_comment": "CHARLOTTE ONLY as of 2026-08-13 — CLT is the only ig_enabled origin and the only one that should be. One entry per origin airport. Everything the daily Instagram pipeline needs to render and caption a board lives here, so adding city #11 is a config edit plus a token — no Python changes. `ig_enabled` gates the posting workflow: an origin with no live Instagram token stays false and is skipped by the matrix rather than failing the run.",
   "_adding_a_city": [
     "1. Add the block here (ig_enabled: false).",
     "2. python scripts/seed_baselines.py <CODE>   -> writes state/baselines-<CODE>.json",
@@ -31,7 +31,8 @@
     "gate": "GATE B-24",
     "handle": "atldeparts",
     "token_secret": "IG_TOKEN_ATL",
-    "ig_enabled": true,
+    "_retired": "2026-08-13. Owner's call: Departs Daily is Charlotte only from here. ATL posting is OFF — @atldeparts is archived, not deleted. The block and state/baselines-ATL.json stay so the Fare Finder keeps serving ATL searches and so this is one flag away from reversible. Do not flip this back to true without asking Joe.",
+    "ig_enabled": false,
     "caption_lead": "ATL DEPARTURES",
     "hashtags": [
       "#ATL",
