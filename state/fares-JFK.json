@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-13T02:15:59-04:00",
+ "generated": "2026-08-13T04:15:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -416,12 +416,12 @@
    "price": 145,
    "d1": "2026-11-18",
    "d2": "2026-12-02",
-   "dep": "12:00PM",
+   "dep": "7:30AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:01AM",
-   "arr": "3:51PM",
+   "arr": "11:23AM",
    "rarr": "10:03AM",
    "pct": 65
   }
