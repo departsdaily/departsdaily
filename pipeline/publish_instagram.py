@@ -165,10 +165,46 @@ def line(d):
 PLAN = B.get("plan") or {}
 HEAD = PLAN.get("cover") or "today's verified board"
 
-cap = "✈️ {} — {} · {}\n\n".format(ORG["caption_lead"], HEAD.lower(), date_h)
-cap += "\n".join(line(d) for d in B["deals"])
-if PLAN.get("angle"):
-    cap += "\n\n" + PLAN["angle"]
+SECS = B.get("sections") or []
+if SECS:
+    # FOUR SECTIONS (2026-08-13). The caption mirrors the carousel exactly, in
+    # the same order, with the same headings, so someone reading the caption
+    # and someone swiping the slides see the same post. A section that came up
+    # short says so in its own heading rather than being quietly merged.
+    # INSTAGRAM CAPTIONS HARD-CAP AT 2200 CHARACTERS. Four sections of seven
+    # rows is about 2,250 — so the full board does not fit and a caption that
+    # simply grew with the board would have been rejected, or silently cut
+    # mid-fare, on the first genuinely full day. The rows are dropped from the
+    # END of each section (they are already best-first), evenly, and the
+    # caption says how many it dropped. The SLIDES always carry everything.
+
+    def _render(per_section):
+        c = "✈️ {} · {}\n".format(ORG["caption_lead"], date_h)
+        c += "Three trip lengths and the cheapest fares out of {}, every morning.\n".format(ORIGIN)
+        hidden = 0
+        for sec in SECS:
+            if not sec["deals"]:
+                continue
+            span = ("any length" if not sec.get("deals_only", True)
+                    else "{}–{} nights".format(*sec["nights"]))
+            shown = sec["deals"][:per_section]
+            hidden += len(sec["deals"]) - len(shown)
+            c += "\n\n— {} ({}) —\n".format(sec["cover"], span)
+            c += "\n".join(line(d) for d in shown)
+        if hidden:
+            c += "\n\n(+{} more on the slides — swipe)".format(hidden)
+        for sec in SECS:
+            if sec.get("angle") and sec["deals"]:
+                c += "\n\n" + sec["angle"]
+                break
+        return c
+
+    cap = SECTION_BLOCK = _render(99)
+else:
+    cap = "✈️ {} — {} · {}\n\n".format(ORG["caption_lead"], HEAD.lower(), date_h)
+    cap += "\n".join(line(d) for d in B["deals"])
+    if PLAN.get("angle"):
+        cap += "\n\n" + PLAN["angle"]
 cap += ("\n\n📅 Exact dates on every slide"
         "\n✅ Every fare verified before posting — fares move fast and aren't guaranteed"
         "\n🔎 Want different dates? Search every flight out of {} from the button"
@@ -184,18 +220,37 @@ cap += ("\n\n📅 Exact dates on every slide"
 # CAROUSEL container call returns id "0" and media_publish 500s (hit at ATL launch).
 tags = list(ORG["hashtags"]) + [
         "#CheapFlights", "#FlightDeals", "#TravelDeals", "#BudgetTravel"]
-tags += {"weekend":  ["#WeekendGetaway"],
-         "urgent":   ["#LastMinuteTravel"],
-         "week":     ["#VacationMode"],
-         "friday":   ["#WeekendTrip"],
-         "twoweek":  ["#BigTrip"],
-         }.get(PLAN.get("shape"), ["#WeekendTrip"])
+# Every post now carries all three trip lengths, so it earns all three tags
+# rather than the one the old single-shape plan picked.
+tags += (["#WeekendGetaway", "#VacationMode", "#BigTrip"] if SECS else
+         {"weekend":  ["#WeekendGetaway"],
+          "urgent":   ["#LastMinuteTravel"],
+          "week":     ["#VacationMode"],
+          "friday":   ["#WeekendTrip"],
+          "twoweek":  ["#BigTrip"],
+          }.get(PLAN.get("shape"), ["#WeekendTrip"]))
 for d in B["deals"][:4]:
     t = "#" + "".join(c for c in d["city"] if c.isalnum())
     if t not in tags:
         tags.append(t)
 tags = tags[:15]
 cap += " ".join(tags)
+
+# FINAL LENGTH GUARD. Instagram rejects a caption over 2200 characters, and the
+# limit applies to the WHOLE thing — the fare list plus the closing block plus
+# the hashtags. Measured 2026-08-13: four full sections of seven came to 2,335
+# and would have been refused on the first genuinely full day. Trimming has to
+# happen here, where the real total is known, not while the fare list is being
+# built. Rows come off the END of each section, which is the least valuable end
+# because they are already sorted best-first, and the caption says how many it
+# dropped. The slides always carry every row.
+if SECS and len(cap) > 2150:
+    _tail = cap[len(SECTION_BLOCK):]
+    _per = 7
+    while _per > 2 and len(cap) > 2150:
+        _per -= 1
+        cap = _render(_per) + _tail
+    print("caption trimmed to %d rows per section (%d chars)" % (_per, len(cap)))
 
 children = []
 # Deal slides first, one promo slide last (owner's rule, Jul 2026). The
@@ -217,16 +272,32 @@ print("published:", post(IG_USER + "/media_publish", creation_id=carousel["id"])
 
 # Stories are the DRIP's job now (pipeline/post_story.py, owner's rule Jul 29:
 # spaced through the day, not piled at 6:52). The loop stays for manual runs
-# with STORIES=1. The renderer numbers stories 1..N over the deal-flagged
-# rows, so this loop must walk exactly the same list.
+# with STORIES=1.
+#
+# It reads the RENDERER'S manifest rather than rebuilding filenames from
+# deals.json. It used to do the latter, which was fine while there was exactly
+# one story per deal-flagged row — and silently wrong the moment the story list
+# got capped (2026-08-13: four sections of seven can produce twenty-plus deals,
+# far more story frames than the account should push in a day).
 _want_stories = os.environ.get("STORIES", "0") == "1"
-for i, d in enumerate([x for x in B["deals"] if x.get("deal", True)] if _want_stories else [], 1):
+_stories = []
+if _want_stories:
+    try:
+        _stories = json.load(open(os.path.join(
+            origins.paths(ORIGIN)["out"], "slides.json")))["stories"]
+    except (OSError, ValueError, KeyError):
+        # Pre-manifest render: fall back to the old naming so an old out/ still
+        # publishes rather than posting nothing.
+        _stories = [{"file": "story_{}_{}.png".format(i, d["to"]), "to": d["to"]}
+                    for i, d in enumerate(
+                        [x for x in B["deals"] if x.get("deal", True)], 1)]
+for st in _stories:
     try:
         r = post_media(IG_USER + "/media",
-                 image_url=asset("story_{}_{}.png".format(i, d["to"])),
+                 image_url=asset(st["file"]),
                  media_type="STORIES")
         time.sleep(3)
         post(IG_USER + "/media_publish", creation_id=r["id"])
-        print("story:", d["to"])
+        print("story:", st["to"])
     except Exception as e:
-        print("story failed", d["to"], e)
+        print("story failed", st["to"], e)
