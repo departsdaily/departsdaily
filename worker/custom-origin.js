@@ -88,15 +88,22 @@ export default {
      GitHub keeps a staggered cron of its own as a fallback, but it no-ops
      when the board is already fresh, so it costs nothing while this works. */
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(dispatchBoardRefresh(env, event.cron));
+    // Which cron fired is the only reliable signal of what this tick is for.
+    // The two 52-past lines are the morning Instagram post (one for EDT, one
+    // for EST); everything else is the board refresh heartbeat.
+    const IG_CRONS = ["52 10 * * *", "52 11 * * *"];
+    const eventType = IG_CRONS.includes(event.cron) ? "ig-post" : "board-refresh";
+    ctx.waitUntil(dispatchWorkflow(env, eventType, event.cron));
   },
 };
 
-/* POST repository_dispatch → the "Board refresh" workflow.
-   Retried: a single failed fetch here would cost a 2 hour board gap. */
-async function dispatchBoardRefresh(env, cron) {
+/* POST repository_dispatch → "Board refresh" or "Morning Instagram post".
+   Retried: a single failed fetch here would cost a 2 hour board gap, or a
+   whole missing morning post. */
+async function dispatchWorkflow(env, eventType, cron) {
+  const TAG = eventType.toUpperCase();
   if (!env.GH_DISPATCH_TOKEN) {
-    console.log("BOARD-REFRESH: no GH_DISPATCH_TOKEN secret — cannot trigger");
+    console.log(`${TAG}: no GH_DISPATCH_TOKEN secret — cannot trigger`);
     return;
   }
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -112,22 +119,22 @@ async function dispatchBoardRefresh(env, cron) {
             "user-agent": "departsdaily-fares-worker",
           },
           body: JSON.stringify({
-            event_type: "board-refresh",
+            event_type: eventType,
             client_payload: { cron, at: new Date().toISOString() },
           }),
         });
       if (r.status === 204) {
-        console.log(`BOARD-REFRESH: dispatched on attempt ${attempt} (cron ${cron})`);
+        console.log(`${TAG}: dispatched on attempt ${attempt} (cron ${cron})`);
         return;
       }
-      console.log(`BOARD-REFRESH: HTTP ${r.status} — ${(await r.text()).slice(0, 300)}`);
+      console.log(`${TAG}: HTTP ${r.status} — ${(await r.text()).slice(0, 300)}`);
       if (r.status === 401 || r.status === 403 || r.status === 404) return; // token problem, retrying won't help
     } catch (e) {
-      console.log(`BOARD-REFRESH: attempt ${attempt} threw — ${e}`);
+      console.log(`${TAG}: attempt ${attempt} threw — ${e}`);
     }
     await new Promise((s) => setTimeout(s, 4000 * attempt));
   }
-  console.log("BOARD-REFRESH: gave up after 3 attempts");
+  console.log(`${TAG}: gave up after 3 attempts`);
 }
 
 /* ---------------- fresh pull: one route, deep, schema-2 rows -------------- */
