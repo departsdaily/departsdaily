@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-12T22:14:18-04:00",
+ "generated": "2026-08-13T00:14:18-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -49,21 +49,6 @@
    "arr": "11:19AM",
    "rarr": "3:21AM+1",
    "pct": 81
-  },
-  "DFW": {
-   "to": "DFW",
-   "city": "Dallas",
-   "price": 113,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "9:00PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "10:00AM",
-   "arr": "11:31PM",
-   "rarr": "12:27PM",
-   "pct": 75
   },
   "DTW": {
    "to": "DTW",
@@ -218,32 +203,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 83,
+   "price": 84,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
-   "dep": "9:07PM",
+   "dep": "4:06PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:41AM",
-   "arr": "11:18PM",
-   "rarr": "11:06AM",
+   "rdep": "5:32PM",
+   "arr": "6:14PM",
+   "rarr": "8:00PM",
    "pct": 81
-  },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 375,
-   "d1": "2026-08-15",
-   "d2": "2026-08-22",
-   "dep": "8:53PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:06PM",
-   "arr": "3:32AM+1",
-   "rarr": "1:20AM+1",
-   "pct": 44
   },
   "AUA": {
    "to": "AUA",

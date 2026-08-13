@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-12T22:15:33-04:00",
+ "generated": "2026-08-13T00:15:31-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 167,
-   "d1": "2026-09-22",
-   "d2": "2026-09-26",
-   "dep": "5:31PM",
+   "price": 149,
+   "d1": "2026-09-11",
+   "d2": "2026-09-15",
+   "dep": "7:46PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "3:30PM",
-   "arr": "8:49PM",
-   "rarr": "6:46PM",
-   "pct": 68
+   "rdep": "1:59PM",
+   "arr": "10:54PM",
+   "rarr": "5:23PM",
+   "pct": 71
   },
   "FLL": {
    "to": "FLL",

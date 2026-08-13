@@ -1,14 +1,14 @@
 {
  "origin": "DEN",
- "generated": "2026-08-12T22:15:15-04:00",
+ "generated": "2026-08-13T00:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 103,
+   "price": 88,
    "d1": "2026-09-03",
    "d2": "2026-09-11",
    "dep": "8:26PM",
@@ -18,7 +18,7 @@
    "rdep": "1:25PM",
    "arr": "10:41PM",
    "rarr": "3:46PM",
-   "pct": 73
+   "pct": 77
   },
   "BOS": {
    "to": "BOS",
@@ -79,21 +79,6 @@
    "arr": "3:48PM",
    "rarr": "3:22AM+1",
    "pct": 65
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 359,
-   "d1": "2026-08-15",
-   "d2": "2026-08-17",
-   "dep": "7:03PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "12:26AM+1",
-   "rarr": "11:58AM",
-   "pct": 17
   },
   "LAS": {
    "to": "LAS",

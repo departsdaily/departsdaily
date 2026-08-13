@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-12T22:15:52-04:00",
+ "generated": "2026-08-13T00:15:50-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 279,
-   "d1": "2026-09-29",
-   "d2": "2026-10-07",
-   "dep": "3:59PM",
+   "price": 255,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "9:59PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:00AM",
-   "arr": "9:37PM",
-   "rarr": "11:02AM",
-   "pct": 59
+   "arr": "3:47AM+1",
+   "rarr": "10:59AM",
+   "pct": 63
   },
   "LAX": {
    "to": "LAX",
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 152,
-   "d1": "2026-09-01",
-   "d2": "2026-09-08",
-   "dep": "5:25PM",
+   "price": 156,
+   "d1": "2026-08-31",
+   "d2": "2026-09-07",
+   "dep": "11:55AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "3:55PM",
-   "arr": "10:51PM",
+   "arr": "3:04PM",
    "rarr": "6:44PM",
-   "pct": 59
+   "pct": 58
   },
   "AMS": {
    "to": "AMS",
