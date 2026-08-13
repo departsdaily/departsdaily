@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-13T04:14:18-04:00",
+ "generated": "2026-08-13T06:14:18-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -244,21 +244,6 @@
    "arr": "12:39AM+1",
    "rarr": "5:40PM",
    "pct": 28
-  },
-  "LON": {
-   "to": "LON",
-   "city": "London",
-   "price": 975,
-   "d1": "2026-08-22",
-   "d2": "2026-08-27",
-   "dep": "5:01AM",
-   "al": "",
-   "stops": 1,
-   "xfer": 1,
-   "rdep": "4:10PM",
-   "arr": "3:10PM",
-   "rarr": "1:40AM+1",
-   "pct": -15
   },
   "MBJ": {
    "to": "MBJ",
