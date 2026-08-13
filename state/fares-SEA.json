@@ -1,9 +1,15 @@
 {
  "origin": "SEA",
- "generated": "2026-08-13T12:29:04-04:00",
+ "generated": "2026-08-13T12:43:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
- "routes_failed": [],
+ "routes_priced": 20,
+ "routes_failed": [
+  "JAX",
+  "ORF",
+  "RSW",
+  "SLC",
+  "SMF"
+ ],
  "fares": {
   "BOS": {
    "to": "BOS",
@@ -65,6 +71,21 @@
    "rarr": "10:32AM",
    "pct": 23
   },
+  "DTW": {
+   "to": "DTW",
+   "city": "Detroit",
+   "price": 410,
+   "d1": "2026-08-24",
+   "d2": "2026-08-28",
+   "dep": "7:06PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:20PM",
+   "arr": "12:53AM+1",
+   "rarr": "6:40PM",
+   "pct": 36
+  },
   "HOU": {
    "to": "HOU",
    "city": "Houston",
@@ -125,6 +146,21 @@
    "rarr": "1:27PM",
    "pct": 49
   },
+  "MSP": {
+   "to": "MSP",
+   "city": "Minneapolis",
+   "price": 284,
+   "d1": "2026-09-16",
+   "d2": "2026-09-20",
+   "dep": "2:28PM",
+   "al": "Alaska",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:54PM",
+   "arr": "7:13PM",
+   "rarr": "2:08AM+1",
+   "pct": 43
+  },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
@@ -169,6 +205,21 @@
    "arr": "6:31PM",
    "rarr": "9:50PM",
    "pct": 28
+  },
+  "SAN": {
+   "to": "SAN",
+   "city": "San Diego",
+   "price": 200,
+   "d1": "2026-10-08",
+   "d2": "2026-10-11",
+   "dep": "9:16PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:43PM",
+   "arr": "1:19AM+1",
+   "rarr": "2:19AM+1",
+   "pct": 55
   },
   "SFO": {
    "to": "SFO",

@@ -1,9 +1,23 @@
 {
  "origin": "LAX",
- "generated": "2026-08-13T12:28:12-04:00",
+ "generated": "2026-08-13T12:41:00-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
- "routes_failed": [],
+ "routes_priced": 27,
+ "routes_failed": [
+  "BOI",
+  "BZN",
+  "CLE",
+  "CMH",
+  "GRR",
+  "ICT",
+  "IND",
+  "PDX",
+  "PIT",
+  "PWM",
+  "RNO",
+  "SLC",
+  "SMF"
+ ],
  "fares": {
   "BNA": {
    "to": "BNA",
@@ -155,6 +169,21 @@
    "rarr": "10:05PM",
    "pct": 80
   },
+  "MSP": {
+   "to": "MSP",
+   "city": "Minneapolis",
+   "price": 246,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "2:28PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:33PM",
+   "arr": "6:57PM",
+   "rarr": "7:07PM",
+   "pct": 57
+  },
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
@@ -229,6 +258,21 @@
    "arr": "5:52PM",
    "rarr": "3:20PM",
    "pct": 62
+  },
+  "SAN": {
+   "to": "SAN",
+   "city": "San Diego",
+   "price": 119,
+   "d1": "2026-09-09",
+   "d2": "2026-09-16",
+   "dep": "8:44AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "1:38PM",
+   "arr": "12:10PM",
+   "rarr": "5:09PM",
+   "pct": 77
   },
   "SEA": {
    "to": "SEA",

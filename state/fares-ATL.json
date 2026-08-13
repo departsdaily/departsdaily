@@ -1,9 +1,25 @@
 {
  "origin": "ATL",
- "generated": "2026-08-13T12:27:02-04:00",
+ "generated": "2026-08-13T12:37:54-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
- "routes_failed": [],
+ "routes_priced": 22,
+ "routes_failed": [
+  "ALB",
+  "CVG",
+  "GRR",
+  "MCI",
+  "MYR",
+  "ORF",
+  "PDX",
+  "PWM",
+  "RSW",
+  "SAT",
+  "SAV",
+  "SMF",
+  "SRQ",
+  "STL",
+  "TUS"
+ ],
  "fares": {
   "BOS": {
    "to": "BOS",
@@ -154,6 +170,21 @@
    "arr": "2:05PM",
    "rarr": "11:59PM",
    "pct": 77
+  },
+  "MSP": {
+   "to": "MSP",
+   "city": "Minneapolis",
+   "price": 230,
+   "d1": "2026-11-04",
+   "d2": "2026-11-08",
+   "dep": "1:06PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "10:30PM",
+   "arr": "3:48PM",
+   "rarr": "3:41AM+1",
+   "pct": 62
   },
   "MSY": {
    "to": "MSY",
