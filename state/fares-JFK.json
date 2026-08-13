@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-12T19:02:35-04:00",
+ "generated": "2026-08-12T20:15:44-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 221,
-   "d1": "2026-09-22",
-   "d2": "2026-09-24",
-   "dep": "6:40AM",
+   "price": 219,
+   "d1": "2026-09-09",
+   "d2": "2026-09-16",
+   "dep": "10:35PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:15AM",
-   "arr": "7:59AM",
-   "rarr": "6:27AM",
-   "pct": 45
+   "rdep": "6:40PM",
+   "arr": "12:01AM+1",
+   "rarr": "8:00PM",
+   "pct": 46
   },
   "DCA": {
    "to": "DCA",

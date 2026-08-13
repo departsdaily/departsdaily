@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-12T19:02:17-04:00",
+ "generated": "2026-08-12T20:15:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -154,21 +154,6 @@
    "arr": "6:10PM",
    "rarr": "10:05PM",
    "pct": 80
-  },
-  "MSY": {
-   "to": "MSY",
-   "city": "New Orleans",
-   "price": 265,
-   "d1": "2026-08-19",
-   "d2": "2026-08-24",
-   "dep": "11:39PM",
-   "al": "Breeze",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:35PM",
-   "arr": "3:39AM+1",
-   "rarr": "11:50PM",
-   "pct": 50
   },
   "NYC": {
    "to": "NYC",
@@ -338,17 +323,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 678,
-   "d1": "2026-11-05",
-   "d2": "2026-11-12",
-   "dep": "5:15PM",
-   "al": "TAP Portugal",
+   "price": 662,
+   "d1": "2026-11-20",
+   "d2": "2026-11-28",
+   "dep": "9:20AM",
+   "al": "AT",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "7:30AM+1",
-   "rarr": "9:55PM",
-   "pct": 29
+   "rdep": "5:10PM",
+   "arr": "11:15PM",
+   "rarr": "8:50AM+1",
+   "pct": 30
   },
   "SJU": {
    "to": "SJU",

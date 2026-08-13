@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-12T19:01:02-04:00",
+ "generated": "2026-08-12T20:14:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -41,12 +41,12 @@
    "price": 91,
    "d1": "2026-09-02",
    "d2": "2026-09-04",
-   "dep": "8:35PM",
+   "dep": "7:57AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "11:59PM",
-   "arr": "12:10AM+1",
+   "arr": "11:19AM",
    "rarr": "3:21AM+1",
    "pct": 81
   },
@@ -143,17 +143,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 82,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "5:01AM",
+   "price": 75,
+   "d1": "2026-10-30",
+   "d2": "2026-11-02",
+   "dep": "8:30PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:45AM",
-   "arr": "6:40AM",
-   "rarr": "9:47AM",
-   "pct": 80
+   "rdep": "12:52PM",
+   "arr": "10:10PM",
+   "rarr": "2:36PM",
+   "pct": 82
   },
   "MIA": {
    "to": "MIA",
@@ -229,21 +229,6 @@
    "arr": "11:18PM",
    "rarr": "11:06AM",
    "pct": 81
-  },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 209,
-   "d1": "2026-09-05",
-   "d2": "2026-09-07",
-   "dep": "5:25PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:20AM",
-   "arr": "9:31PM",
-   "rarr": "1:11PM",
-   "pct": 66
   },
   "SEA": {
    "to": "SEA",
