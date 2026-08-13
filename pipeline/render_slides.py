@@ -83,31 +83,59 @@ def fmt_dates(x):
 # green badge it didn't earn.
 DEALS=[x for x in B["deals"] if x.get("deal",True)]
 
-# DEAL SLIDES COME FIRST, AS MANY AS THE DEALS NEED. Owner's rule (Jul 2026):
-# the fares lead every post, and more deal slides are a good thing. Only the
-# ROWS_PER_SLIDE legibility limit splits them — never a content decision.
-# Instagram allows 10 carousel items, so 9 board slides is the hard ceiling
-# and the closing promo always keeps the last spot.
+# ONE SLIDE PER SECTION (owner's rule, 2026-08-13). Long Weekend, Week Long,
+# Two Weeks and Cheapest, seven rows each, every day. Each slide carries its
+# own title and its own honest count, so a section that only found four real
+# deals says four rather than borrowing rows from a neighbour.
+#
+# The old behaviour — one flat deal list paginated seven at a time — is kept
+# as the fallback for any deals.json written before sections existed, so a
+# re-render of an old board still produces the post it originally produced.
 ROWS_PER_SLIDE = int(os.environ.get("ROWS_PER_SLIDE", "7"))
-pages=[DEALS[i:i+ROWS_PER_SLIDE] for i in range(0,len(DEALS),ROWS_PER_SLIDE)][:9]
+SECTIONS = B.get("sections")
+if SECTIONS:
+    pages = [(s["cover"], [x for x in s["deals"]][:ROWS_PER_SLIDE],
+              s.get("deals_only", True)) for s in SECTIONS if s["deals"]]
+else:
+    _flat = [DEALS[i:i+ROWS_PER_SLIDE] for i in range(0, len(DEALS), ROWS_PER_SLIDE)]
+    _cover0 = (B.get("plan") or {}).get("cover") or "TODAY'S DEAL BOARD"
+    pages = [(_cover0 if i == 0 else "MORE DEALS", rows, True)
+             for i, rows in enumerate(_flat)]
+pages = pages[:9]          # Instagram allows 10 carousel items; the promo takes one
 SLIDES=[]
 n=len(DEALS)
 
-for pi,rows in enumerate(pages,1):
+for pi,(cover,rows,is_deals) in enumerate(pages,1):
     # Handle in the header: screenshots of the board get shared, and a shared
     # screenshot with no handle grows nobody's account. Attribution travels
     # with the image (playbook rule, Aug 2026).
     img,d=canvas(); header(d,ORG["airport"],"@{} · {}".format(ORG["handle"],DATE))
-    # The weekly plan (config/schedule.json) names what today's board is for:
-    # week long trips on Monday, weekend getaways midweek, and so on. Older
-    # deals.json files have no "plan" key, so the original line is the default.
-    _cover=(B.get("plan") or {}).get("cover") or "TODAY'S DEAL BOARD"
-    left=f"{_cover} · ROUND TRIP" if pi==1 else f"MORE DEALS · {pi} OF {len(pages)}"
-    d.text((60,146),left,font=MONO(26),fill=SKY)
-    badge=f"{n} VERIFIED DEAL{'S' if n!=1 else ''}"
+    # The section names what THIS slide is for, and the badge counts what is
+    # actually on it. A slide that found four deals says four.
+    left=f"{cover} · ROUND TRIP · {pi} OF {len(pages)}"
+    # HONEST BADGES. Green means "every row here cleared the 12% bar" and is
+    # only ever printed on a deals-only section. The CHEAPEST slide claims no
+    # discount, so it gets a neutral panel badge instead — a green "VERIFIED
+    # DEALS" over a list of merely-cheap fares is exactly the lie the deal flag
+    # exists to prevent.
+    nd=sum(1 for x in rows if x.get("deal"))
+    if is_deals:
+        badge=f"{len(rows)} VERIFIED DEAL{'S' if len(rows)!=1 else ''}"
+        bfill,btext=GREEN,NAVY
+    else:
+        badge=f"{len(rows)} CHEAPEST FARES"
+        bfill,btext=PANEL,SKY
     bf=MONO(26)
-    d.rounded_rectangle([W-60-d.textlength(badge,font=bf)-40,136,W-60,190],radius=12,fill=GREEN)
-    d.text((W-80-d.textlength(badge,font=bf),150),badge,font=bf,fill=NAVY)
+    bw=d.textlength(badge,font=bf)
+    # The badge owns its space; the title gives ground rather than overlapping.
+    # CHEAPEST OUT OF CLT plus a badge was 40px too wide at 26pt and the two
+    # ran into each other, which is how this got caught.
+    while d.textlength(left,font=MONO(26)) > W-160-bw-40 and " · " in left:
+        left = left.rsplit(" · ", 1)[0]
+    d.text((60,146),left,font=MONO(26),fill=SKY)
+    d.rounded_rectangle([W-60-bw-40,136,W-60,190],
+                        radius=12,fill=bfill,outline=EDGE,width=2)
+    d.text((W-80-bw,150),badge,font=bf,fill=btext)
     pitch=min(200,(1212-210)//max(1,len(rows)))
     sc=pitch/200.0
     def S_(v,_sc=sc): return int(v*_sc)
@@ -133,6 +161,7 @@ for pi,rows in enumerate(pages,1):
     d.text((60,y+4),"Verified in Google Flights today. Fares change fast and are not guaranteed.",font=SANS(23),fill=DIM)
     footer(d)
     name=f"slide{pi}_board.png"; img.save(f"{OUT}/{name}"); SLIDES.append(name)
+    print(f"  slide {pi}: {cover} — {len(rows)} rows, {nd} real deals")
 
 
 # THE ONE PROMO SLIDE, ALWAYS LAST. Owner's rule (Jul 2026): a post can carry
@@ -165,15 +194,22 @@ name=f"slide{len(pages)+1}_cta.png"; img.save(f"{OUT}/{name}"); SLIDES.append(na
 
 # Manifest so the publisher never has to guess how many board slides there
 # were. Carousel order = this list, top to bottom.
-json.dump({"slides":SLIDES,"n_deals":n,"board_slides":len(pages)},
-          open(f"{OUT}/slides.json","w"),indent=1)
+SLIDES_DOC={"slides":SLIDES,"n_deals":n,"board_slides":len(pages),
+            "sections":[c for c,_,_ in pages]}
 
 # per-deal STORY slides (IG API can't add link stickers, so the CTA is baked
 # into the art). Only true deals get a story — a filler fare wearing a green
 # "% BELOW TYPICAL" story would be exactly the lie the deal flag exists to
 # prevent.
-for i,x in enumerate(DEALS,1):
-    img,d=canvas(SW,SH); header(d,"DEAL "+str(i)+" OF "+str(len(DEALS)),DATE,w=SW)
+# CAP THE STORIES (2026-08-13). One story per deal was fine at 6 deals a day.
+# Four sections of seven can produce twenty-plus, which is more story frames
+# than any account should push in a day and more than the drip can place. Best
+# discount first, so the cap only ever drops the weakest deals.
+MAX_STORIES = int(os.environ.get("MAX_STORIES", "8"))
+STORIES = sorted(DEALS, key=lambda x: -x["disc"])[:MAX_STORIES]
+STORY_FILES = []
+for i,x in enumerate(STORIES,1):
+    img,d=canvas(SW,SH); header(d,"DEAL "+str(i)+" OF "+str(len(STORIES)),DATE,w=SW)
     tiles(d,60,260,ORIGIN,size=64); d.text((328,282),">",font=MONO(64),fill=SKY); tiles(d,400,260,x["to"],size=64)
     d.text((60,440),x["city"].upper(),font=COND(96),fill=WHITE)
     d.text((60,570),f"${x['price']}",font=COND(220),fill=AMBER)
@@ -189,4 +225,14 @@ for i,x in enumerate(DEALS,1):
     d.text((92,1470),"DEPARTSDAILY.COM",font=COND(84),fill=NAVY)
     d.text((60,1610),"LINK IN BIO",font=MONO(34),fill=WHITE)
     footer(d,SW,SH,url=True); img.save(f"{OUT}/story_{i}_{x['to']}.png")
+    STORY_FILES.append({"file":f"story_{i}_{x['to']}.png","to":x["to"],
+                        "city":x["city"],"price":x["price"],"disc":x["disc"],
+                        "section":x.get("section")})
+# The story manifest is written HERE, after the stories exist, and is the only
+# place their filenames are decided. The publisher and the drip read it instead
+# of rebuilding the names from deals.json — which they used to do, and which
+# silently breaks the moment the story list is capped or reordered.
+SLIDES_DOC["stories"] = STORY_FILES
+json.dump(SLIDES_DOC, open(f"{OUT}/slides.json","w"), indent=1)
 print(f"rendered {ORIGIN} -> {OUT}: {len(SLIDES)} slides {SLIDES}")
+print(f"  {len(STORY_FILES)} story frames (cap {MAX_STORIES})")
