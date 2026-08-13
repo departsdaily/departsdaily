@@ -30,6 +30,9 @@ Usage:
     python scripts/fetch_dot_fares.py CLT ATL      # just these
     python scripts/fetch_dot_fares.py --dry-run    # print, write nothing
     python scripts/fetch_dot_fares.py CLT --discover   # what ELSE DOT publishes
+    python scripts/fetch_dot_fares.py CLT --adopt      # price EVERY declared
+                                                       # destination, not just
+                                                       # the ones already tracked
 """
 import json, os, sys, urllib.parse, urllib.request
 
@@ -285,13 +288,24 @@ def main():
     shared = cfg.setdefault("_dot_shared_market", {})
     dot = cfg.setdefault("dot_round_trip", {})
 
+    # --adopt breaks the circle. dests_for() is derived from the very config
+    # this script writes, so a normal run can re-price a route but can never
+    # find a new one — which is how Charlotte sat at 24 board-eligible routes
+    # while the board targeted 7 a day and starved. With --adopt the candidate
+    # list is every destination declared in config/seasonality.json instead,
+    # so a route joins the pool the moment DOT publishes a real fare for it.
+    # Nothing here is estimated: a candidate DOT does not publish is simply
+    # absent and the seeder skips it.
+    adopt = "--adopt" in sys.argv
+    candidates = sorted(cfg.get("destinations", {}))
+
     for origin in origins:
         home = MARKET.get(origin)
         if not home:
             print(f"{origin}: no DOT market mapping — skipped")
             continue
         found, missing, notes, detail = {}, [], {}, {}
-        for dest in dests_for(origin):
+        for dest in (candidates if adopt else dests_for(origin)):
             market = MARKET.get(dest)
             if not market:
                 continue                      # international: no Table 6 data
