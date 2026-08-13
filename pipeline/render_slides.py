@@ -62,8 +62,12 @@ def footer(d,w=W,h=H,url=False):
     d.text(((w-d.textlength(t,font=SANS(24)))/2,h-104),t,font=SANS(24),fill=DIM)
 
 def fmt_dates(x):
-    a=datetime.date.fromisoformat(x["d1"]).strftime("%b %d").upper()
-    b=datetime.date.fromisoformat(x["d2"]).strftime("%b %d").upper() if x["d2"] else ""
+    # WEEKDAYS, NOT JUST DATES (2026-08-13). The whole plan is built around what
+    # a trip costs someone with a normal job, and "SEP 16-SEP 22" does not
+    # answer that while "WED SEP 16 - TUE SEP 22" does at a glance. The website
+    # row has always shown the day; the slide never did.
+    a=datetime.date.fromisoformat(x["d1"]).strftime("%a %b %d").upper()
+    b=datetime.date.fromisoformat(x["d2"]).strftime("%a %b %d").upper() if x["d2"] else ""
     stops="NONSTOP" if x["stops"]==0 else f"{x['stops']} STOP"
     # Airline is omitted entirely when the API did not give us one (or gave us a
     # code we refuse to vouch for). Joining only the parts we actually have keeps
@@ -95,24 +99,25 @@ ROWS_PER_SLIDE = int(os.environ.get("ROWS_PER_SLIDE", "7"))
 SECTIONS = B.get("sections")
 if SECTIONS:
     pages = [(s["cover"], [x for x in s["deals"]][:ROWS_PER_SLIDE],
-              s.get("deals_only", True)) for s in SECTIONS if s["deals"]]
+              s.get("deals_only", True), s.get("tag", "ROUND TRIP"))
+             for s in SECTIONS if s["deals"]]
 else:
     _flat = [DEALS[i:i+ROWS_PER_SLIDE] for i in range(0, len(DEALS), ROWS_PER_SLIDE)]
     _cover0 = (B.get("plan") or {}).get("cover") or "TODAY'S DEAL BOARD"
-    pages = [(_cover0 if i == 0 else "MORE DEALS", rows, True)
+    pages = [(_cover0 if i == 0 else "MORE DEALS", rows, True, "ROUND TRIP")
              for i, rows in enumerate(_flat)]
 pages = pages[:9]          # Instagram allows 10 carousel items; the promo takes one
 SLIDES=[]
 n=len(DEALS)
 
-for pi,(cover,rows,is_deals) in enumerate(pages,1):
+for pi,(cover,rows,is_deals,tag) in enumerate(pages,1):
     # Handle in the header: screenshots of the board get shared, and a shared
     # screenshot with no handle grows nobody's account. Attribution travels
     # with the image (playbook rule, Aug 2026).
     img,d=canvas(); header(d,ORG["airport"],"@{} · {}".format(ORG["handle"],DATE))
     # The section names what THIS slide is for, and the badge counts what is
     # actually on it. A slide that found four deals says four.
-    left=f"{cover} · ROUND TRIP · {pi} OF {len(pages)}"
+    left=f"{cover} · {tag} · {pi} OF {len(pages)}"
     # HONEST BADGES. Green means "every row here cleared the 12% bar" and is
     # only ever printed on a deals-only section. The CHEAPEST slide claims no
     # discount, so it gets a neutral panel badge instead — a green "VERIFIED
@@ -195,7 +200,7 @@ name=f"slide{len(pages)+1}_cta.png"; img.save(f"{OUT}/{name}"); SLIDES.append(na
 # Manifest so the publisher never has to guess how many board slides there
 # were. Carousel order = this list, top to bottom.
 SLIDES_DOC={"slides":SLIDES,"n_deals":n,"board_slides":len(pages),
-            "sections":[c for c,_,_ in pages]}
+            "sections":[c for c,_,_,_ in pages]}
 
 # per-deal STORY slides (IG API can't add link stickers, so the CTA is baked
 # into the art). Only true deals get a story — a filler fare wearing a green
