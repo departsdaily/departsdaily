@@ -1,31 +1,9 @@
 {
  "origin": "DFW",
- "generated": "2026-08-13T12:39:27-04:00",
+ "generated": "2026-08-13T12:56:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
- "routes_failed": [
-  "ABQ",
-  "BDL",
-  "BOI",
-  "BUF",
-  "CLE",
-  "CMH",
-  "CVG",
-  "IND",
-  "MCI",
-  "ORF",
-  "PDX",
-  "PIT",
-  "PSP",
-  "PWM",
-  "RIC",
-  "RNO",
-  "RSW",
-  "SAV",
-  "SMF",
-  "SRQ",
-  "TUS"
- ],
+ "routes_priced": 23,
+ "routes_failed": [],
  "fares": {
   "BNA": {
    "to": "BNA",
@@ -86,21 +64,6 @@
    "arr": "9:15AM",
    "rarr": "8:35AM",
    "pct": 82
-  },
-  "DTW": {
-   "to": "DTW",
-   "city": "Detroit",
-   "price": 109,
-   "d1": "2026-10-23",
-   "d2": "2026-10-25",
-   "dep": "7:00AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "10:29PM",
-   "arr": "9:54AM",
-   "rarr": "1:22AM+1",
-   "pct": 79
   },
   "FLL": {
    "to": "FLL",
@@ -251,21 +214,6 @@
    "arr": "11:50PM",
    "rarr": "9:12AM",
    "pct": 79
-  },
-  "SAN": {
-   "to": "SAN",
-   "city": "San Diego",
-   "price": 165,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "4:45PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "4:54PM",
-   "arr": "8:00PM",
-   "rarr": "9:23PM",
-   "pct": 66
   },
   "SEA": {
    "to": "SEA",

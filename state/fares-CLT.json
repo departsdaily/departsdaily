@@ -1,26 +1,25 @@
 {
  "origin": "CLT",
- "generated": "2026-08-13T12:37:06-04:00",
+ "generated": "2026-08-13T12:55:44-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
- "routes_failed": [
-  "BDL",
-  "BUF",
-  "BZE",
-  "CLE",
-  "CVG",
-  "LIT",
-  "MAD",
-  "MUC",
-  "PBI",
-  "PDX",
-  "PLS",
-  "ROC",
-  "SAT",
-  "SJD",
-  "YQB"
- ],
+ "routes_priced": 34,
+ "routes_failed": [],
  "fares": {
+  "BDL": {
+   "to": "BDL",
+   "city": "Hartford",
+   "price": 273,
+   "d1": "2026-09-24",
+   "d2": "2026-09-28",
+   "dep": "9:40PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "3:16PM",
+   "arr": "2:17AM+1",
+   "rarr": "8:12PM",
+   "pct": 50
+  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
@@ -35,6 +34,51 @@
    "arr": "1:37AM+1",
    "rarr": "8:55PM",
    "pct": 51
+  },
+  "BUF": {
+   "to": "BUF",
+   "city": "Buffalo",
+   "price": 363,
+   "d1": "2026-09-24",
+   "d2": "2026-09-26",
+   "dep": "10:56AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "3:33PM",
+   "arr": "4:46PM",
+   "rarr": "10:04PM",
+   "pct": 26
+  },
+  "CLE": {
+   "to": "CLE",
+   "city": "Cleveland",
+   "price": 208,
+   "d1": "2026-08-21",
+   "d2": "2026-08-23",
+   "dep": "2:45PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:00AM",
+   "arr": "7:27PM",
+   "rarr": "10:21AM",
+   "pct": 61
+  },
+  "CVG": {
+   "to": "CVG",
+   "city": "Cincinnati",
+   "price": 323,
+   "d1": "2026-08-22",
+   "d2": "2026-08-24",
+   "dep": "9:52PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:23PM",
+   "arr": "2:06AM+1",
+   "rarr": "7:18PM",
+   "pct": 50
   },
   "DCA": {
    "to": "DCA",
@@ -141,6 +185,21 @@
    "rarr": "6:53AM",
    "pct": 69
   },
+  "LIT": {
+   "to": "LIT",
+   "city": "Little Rock",
+   "price": 189,
+   "d1": "2026-09-10",
+   "d2": "2026-09-17",
+   "dep": "8:25AM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:35AM",
+   "arr": "10:34AM",
+   "rarr": "8:48AM",
+   "pct": 68
+  },
   "MIA": {
    "to": "MIA",
    "city": "Miami",
@@ -186,6 +245,36 @@
    "rarr": "6:28PM",
    "pct": 47
   },
+  "PBI": {
+   "to": "PBI",
+   "city": "West Palm Beach",
+   "price": 506,
+   "d1": "2026-09-06",
+   "d2": "2026-09-13",
+   "dep": "7:25AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:10PM",
+   "arr": "11:05AM",
+   "rarr": "3:55PM",
+   "pct": 13
+  },
+  "PDX": {
+   "to": "PDX",
+   "city": "Portland, OR",
+   "price": 347,
+   "d1": "2026-10-10",
+   "d2": "2026-10-13",
+   "dep": "11:59AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "5:35PM",
+   "arr": "9:07PM",
+   "rarr": "1:40AM+1",
+   "pct": 55
+  },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
@@ -201,6 +290,36 @@
    "rarr": "6:45AM+1",
    "pct": 62
   },
+  "ROC": {
+   "to": "ROC",
+   "city": "Rochester",
+   "price": 306,
+   "d1": "2026-08-21",
+   "d2": "2026-08-24",
+   "dep": "8:20AM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:16AM",
+   "arr": "10:07AM",
+   "rarr": "8:15AM",
+   "pct": 43
+  },
+  "SAT": {
+   "to": "SAT",
+   "city": "San Antonio",
+   "price": 477,
+   "d1": "2026-10-21",
+   "d2": "2026-10-25",
+   "dep": "1:15PM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:15PM",
+   "arr": "5:00PM",
+   "rarr": "3:55PM",
+   "pct": 13
+  },
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
@@ -215,6 +334,21 @@
    "arr": "2:32AM+1",
    "rarr": "8:10PM",
    "pct": 68
+  },
+  "BZE": {
+   "to": "BZE",
+   "city": "Belize City",
+   "price": 781,
+   "d1": "2026-10-07",
+   "d2": "2026-10-11",
+   "dep": "9:08AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:53PM",
+   "arr": "1:33PM",
+   "rarr": "7:19PM",
+   "pct": -26
   },
   "CUN": {
    "to": "CUN",
@@ -246,6 +380,21 @@
    "rarr": "1:20AM+1",
    "pct": -7
   },
+  "MAD": {
+   "to": "MAD",
+   "city": "Madrid",
+   "price": 904,
+   "d1": "2026-09-24",
+   "d2": "2026-09-29",
+   "dep": "11:10PM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:40AM",
+   "arr": "9:40AM+1",
+   "rarr": "11:08PM",
+   "pct": -3
+  },
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
@@ -260,6 +409,21 @@
    "arr": "3:21AM+1",
    "rarr": "7:52PM",
    "pct": -14
+  },
+  "MUC": {
+   "to": "MUC",
+   "city": "Munich",
+   "price": 1100,
+   "d1": "2026-09-05",
+   "d2": "2026-09-14",
+   "dep": "5:58PM",
+   "al": "United",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "3:00PM",
+   "arr": "4:02AM+1",
+   "rarr": "3:32AM+1",
+   "pct": -22
   },
   "NAS": {
    "to": "NAS",
@@ -291,6 +455,36 @@
    "rarr": "8:30PM",
    "pct": 43
   },
+  "PLS": {
+   "to": "PLS",
+   "city": "Providenciales",
+   "price": 557,
+   "d1": "2026-09-22",
+   "d2": "2026-09-29",
+   "dep": "7:07AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "1:07PM",
+   "arr": "11:01AM",
+   "rarr": "5:18PM",
+   "pct": 16
+  },
+  "SJD": {
+   "to": "SJD",
+   "city": "Los Cabos",
+   "price": 405,
+   "d1": "2026-09-20",
+   "d2": "2026-09-22",
+   "dep": "4:49PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:26PM",
+   "arr": "11:24PM",
+   "rarr": "6:05PM",
+   "pct": 39
+  },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
@@ -305,6 +499,21 @@
    "arr": "1:00AM+1",
    "rarr": "12:07PM",
    "pct": 53
+  },
+  "YQB": {
+   "to": "YQB",
+   "city": "Quebec City",
+   "price": 622,
+   "d1": "2026-10-08",
+   "d2": "2026-10-12",
+   "dep": "10:02PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "6:40AM",
+   "arr": "4:29AM+1",
+   "rarr": "1:42PM",
+   "pct": 0
   }
  }
 }
