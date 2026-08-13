@@ -39,6 +39,20 @@ I_AIRLINE, I_COMPOSED = 10, 11
 # Per route, so one dense market cannot crowd out the rest of the board.
 MAX_PER_DEST = int(os.environ.get("INDEX_MAX_PER_DEST", "40"))
 
+# KEEP LONG TRIPS ALIVE (2026-08-13). The cap above was a pure "cheapest 40",
+# which is fine when the board is one flat list and disastrous once the post
+# has a TWO WEEKS slide: a route's forty cheapest fares are almost all short
+# trips, so every long one was truncated away before pick_offer ever saw it.
+# Measured that morning: the two week section filled 0 of 7 rows from the index
+# even though the raw file held two week trips.
+#
+# So the cheapest MAX_PER_DEST overall are kept AND the cheapest
+# MAX_PER_BAND in each trip-length band, deduped. This adds candidates, never
+# removes any, and it cannot make a fare look cheaper than it is — the 12% bar
+# still decides what reaches a slide.
+MAX_PER_BAND = int(os.environ.get("INDEX_MAX_PER_BAND", "12"))
+BANDS = ((0, 6), (7, 11), (12, 21), (22, 90))
+
 
 def path(code):
     return os.path.join(ROOT, "site", "data", f"idx-{code.upper()}.json")
@@ -95,13 +109,29 @@ def load(code, now=None):
             "link": _search_link(code, dest, d1, d2),
             "_src": "index"})
 
-    for dest in offers:
-        offers[dest].sort(key=lambda o: o["price"])
-        del offers[dest][MAX_PER_DEST:]
+    def _nights(o):
+        return (datetime.date.fromisoformat(o["return_at"])
+                - datetime.date.fromisoformat(o["departure_at"])).days
+
+    kept_long = 0
+    for dest, lst in offers.items():
+        lst.sort(key=lambda o: o["price"])
+        keep = lst[:MAX_PER_DEST]
+        seen = {id(o) for o in keep}
+        for lo, hi in BANDS:
+            band = [o for o in lst if lo <= _nights(o) <= hi][:MAX_PER_BAND]
+            for o in band:
+                if id(o) not in seen:
+                    seen.add(id(o))
+                    keep.append(o)
+                    kept_long += 1
+        keep.sort(key=lambda o: o["price"])
+        offers[dest] = keep
 
     total = sum(len(v) for v in offers.values())
     return offers, (f"nightly index {built}, {total} trips over {len(offers)} routes "
-                    f"({dropped} composed rows dropped)")
+                    f"({dropped} composed rows dropped, {kept_long} extra kept "
+                    f"so the long-trip sections have candidates)")
 
 
 def _built_date(doc, base):
