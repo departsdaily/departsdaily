@@ -98,6 +98,56 @@ def plan_for_shape(shape_key, like):
                        f"matched that shape today")
 
 
+def sections(day=None):
+    """The four sections every post carries, resolved for a date.
+
+    ADDED 2026-08-13 (owner's rule). The carousel is no longer one trip shape
+    per weekday — it is Long Weekend, Week Long, Two Weeks and Cheapest, seven
+    rows each, every day. plan() above is untouched and still resolves the
+    single daily shape, because the reel rotation still uses it.
+
+    Each returned dict is what fetch_fares.build() needs to score one section:
+      key, cover, angle, rows, deals_only, sort,
+      nights, depart_in, depart_dow, return_dow, wide
+    """
+    cfg = _cfg()
+    day = day or today()
+    secs = cfg.get("sections")
+    if not secs:
+        raise SystemExit("FATAL: config/schedule.json has no `sections`. "
+                         "The four-section carousel cannot be built without it.")
+    # A single section can be forced for testing:  POST_SECTION=twoweek ...
+    only = (os.environ.get("POST_SECTION") or "").strip()
+    out = []
+    for sec in secs:
+        if only and sec["key"] != only:
+            continue
+        out.append({
+            "day": day.isoformat(),
+            "weekday": day.strftime("%A"),
+            "key": sec["key"],
+            "cover": sec["cover"],
+            "angle": sec["angle"],
+            "rows": int(sec.get("rows", 7)),
+            "deals_only": bool(sec.get("deals_only", True)),
+            # The bar a row must clear to reach THIS slide. 0.12 for the trip
+            # length sections, 0.0 for CHEAPEST — zero, never negative, so no
+            # slide can ever showcase a fare above what the route normally costs.
+            "min_discount": float(sec.get("min_discount", 0.12)),
+            "sort": sec.get("sort", "discount"),
+            "nights": tuple(sec["nights"]),
+            "depart_in": tuple(sec["depart_in"]),
+            "depart_dow": set(sec["depart_dow"]) if sec.get("depart_dow") else None,
+            "return_dow": set(sec["return_dow"]) if sec.get("return_dow") else None,
+            "wide": {"nights": tuple(cfg["wide"]["nights"]),
+                     "depart_in": tuple(cfg["wide"]["depart_in"])},
+        })
+    if only and not out:
+        raise SystemExit(f"FATAL: POST_SECTION={only} is not in "
+                         f"config/schedule.json sections.")
+    return out
+
+
 if __name__ == "__main__":
     p = plan()
     print(f"{p['day']} ({p['weekday']})")
@@ -107,3 +157,10 @@ if __name__ == "__main__":
     print(f"  cover      {p['cover']}")
     print(f"  content    {p['content']}")
     print(f"  why        {p['note']}")
+    print()
+    print("SECTIONS (what the carousel actually posts):")
+    for sec in sections():
+        n0, n1 = sec["nights"]
+        bar = "deals only" if sec["deals_only"] else "no discount claim"
+        print(f"  {sec['key']:9} {sec['cover']:22} {n0}-{n1} nights  "
+              f"{sec['rows']} rows  {bar}")
