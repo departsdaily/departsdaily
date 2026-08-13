@@ -1,181 +1,283 @@
 {
-  "_doc": [
-    "Weekly Instagram posting plan (owner's rule, Jul 28 2026).",
-    "People dream on weekends and buy on weekdays, so we sell early in the week",
-    "and inspire late. This file is the ONLY place the plan lives. Retune it",
-    "after four weeks against real analytics; no code change needed.",
-    "",
-    "A 'shape' describes the TRIP we want the board to lean toward that day:",
-    "  nights     [min, max] round trip length in nights",
-    "  depart_in  [min, max] days from today the outbound leg may leave",
-    "It is a PREFERENCE, never a filter that costs a real deal. fetch_fares.py",
-    "picks a route's shape-matching fare when that fare still clears the 12%",
-    "bar, and otherwise falls back to the route's cheapest fare in the wide",
-    "window. The shape can change WHICH honest deal is shown. It can never",
-    "lower the bar, pad the board, or drop a route that had a genuine deal."
+ "_doc": [
+  "Weekly Instagram posting plan.",
+  "",
+  "REWRITTEN 2026-08-13 (owner's rule). The post is no longer 'one trip shape",
+  "per weekday'. Every post now carries FOUR sections, one slide each, seven",
+  "rows each, every single day:",
+  "",
+  "  LONG WEEKEND  2-4 nights, out Thu/Fri and back Sun/Mon where the fares",
+  "                allow it. The 9-to-5 slide: burn the fewest vacation days.",
+  "  WEEK LONG     7-12 nights.",
+  "  TWO WEEKS     12-21 nights. Widened from 13-17 on purpose — measured",
+  "                2026-08-13, only 9 destinations had a two week trip at ANY",
+  "                price, so a tight window could not fill seven rows without",
+  "                either padding or lowering the bar, and we do neither.",
+  "  CHEAPEST      the cheapest fares out of CLT at any trip length. This slide",
+  "                makes NO discount claim, which is exactly why it can always",
+  "                fill seven rows and carry a thin day. A row here still wears",
+  "                a green badge IF it genuinely cleared the 12% bar, and says",
+  "                nothing when it did not.",
+  "",
+  "NEVER AN OVERPAYMENT, ON ANY SLIDE. min_discount is 0.12 for the three trip",
+  "length sections and 0.0 for CHEAPEST — zero, not negative. A cheap headline",
+  "price that is still ABOVE what that route normally costs is exactly the SKIP",
+  "row the owner deleted in July, and it does not come back just because the",
+  "slide says 'cheapest'. Measured 2026-08-13: a pure lowest-price sort put",
+  "'91% ABOVE TYPICAL' on the slide. The bar moved to 0.0 the same hour.",
+  "",
+  "The first three sections are DEALS ONLY: every row cleared MIN_DISCOUNT.",
+  "A section that cannot find seven shows fewer rows and prints the real count.",
+  "Never padded, never a lowered bar. That rule has not moved since July.",
+  "",
+  "A city MAY appear in more than one section on the same day (owner's call,",
+  "2026-08-13) — Vegas for three nights in August and Vegas for fourteen in",
+  "October are two different trips. It may never appear twice inside one",
+  "section.",
+  "",
+  "`shapes` and `week` below are KEPT because pipeline/render_reel.py and the",
+  "reel rotation still resolve a single daily shape. They no longer drive the",
+  "carousel."
+ ],
+ "wide": {
+  "nights": [
+   1,
+   30
   ],
-  "wide": {
-    "nights": [
-      2,
-      14
-    ],
-    "depart_in": [
-      3,
-      150
-    ]
-  },
-  "shapes": {
-    "week": {
-      "nights": [
-        7,
-        10
-      ],
-      "depart_dow": [
-        3,
-        4,
-        5,
-        6
-      ],
-      "return_dow": [
-        4,
-        5,
-        6,
-        0
-      ],
-      "depart_in": [
-        3,
-        150
-      ],
-      "cover": "WEEK LONG ESCAPES",
-      "angle": "A full week away, round trip, verified this morning."
-    },
-    "weekend": {
-      "nights": [
-        2,
-        4
-      ],
-      "depart_dow": [
-        3,
-        4
-      ],
-      "return_dow": [
-        6,
-        0
-      ],
-      "depart_in": [
-        3,
-        90
-      ],
-      "cover": "WEEKEND GETAWAYS",
-      "angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days."
-    },
-    "urgent": {
-      "nights": [
-        2,
-        4
-      ],
-      "depart_dow": [
-        3,
-        4
-      ],
-      "return_dow": [
-        6,
-        0
-      ],
-      "depart_in": [
-        2,
-        30
-      ],
-      "cover": "GOING SOON",
-      "angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices."
-    },
-    "friday": {
-      "nights": [
-        2,
-        9
-      ],
-      "depart_dow": [
-        3,
-        4,
-        5
-      ],
-      "depart_in": [
-        3,
-        150
-      ],
-      "cover": "FRIDAY FARES",
-      "angle": "Expedia's 2026 Air Hacks Report puts Friday as the cheapest day of the week to book a flight, about 3% under Sunday, and the cheapest day to fly overall, up to 8% under a Sunday departure. Worth knowing: for US domestic routes specifically that report still has Tuesday as the cheapest day to actually fly, roughly 14% under Sunday."
-    },
-    "twoweek": {
-      "nights": [
-        12,
-        17
-      ],
-      "depart_dow": [
-        3,
-        4,
-        5,
-        6
-      ],
-      "return_dow": [
-        4,
-        5,
-        6,
-        0
-      ],
-      "depart_in": [
-        14,
-        150
-      ],
-      "cover": "TWO WEEKS GONE",
-      "angle": "The big one. Honeymoon, anniversary, the trip you keep putting off.",
-      "min_on_shape": 2,
-      "fallback_shape": "week"
-    }
-  },
+  "depart_in": [
+   3,
+   150
+  ]
+ },
+ "shapes": {
   "week": {
-    "0": {
-      "shape": "week",
-      "note": "Monday. Peak booking day. The money post."
-    },
-    "1": {
-      "shape": "weekend",
-      "note": "Tuesday. Low stakes, easy yes."
-    },
-    "2": {
-      "shape": "weekend",
-      "note": "Wednesday. Same, different cities."
-    },
-    "3": {
-      "shape": "urgent",
-      "note": "Thursday. Weekend getaways with urgency."
-    },
-    "4": {
-      "shape": "friday",
-      "note": "Friday. Cheapest day to book and fly, per Expedia 2026."
-    },
-    "5": {
-      "shape": "weekend",
-      "content": "guide",
-      "note": "Saturday. PLAN: city guide carousel, build trust, do not sell. The guide renderer does not exist yet, so this still posts a normal board. Flip content to guide once it does."
-    },
-    "6": {
-      "shape": "week",
-      "content": "inspiration",
-      "note": "Sunday. PLAN: inspiration plus a Monday teaser. Renderer does not exist yet, so this still posts a normal board."
-    }
+   "nights": [
+    7,
+    10
+   ],
+   "depart_dow": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "return_dow": [
+    4,
+    5,
+    6,
+    0
+   ],
+   "depart_in": [
+    3,
+    150
+   ],
+   "cover": "WEEK LONG ESCAPES",
+   "angle": "A full week away, round trip, verified this morning."
   },
-  "alternating": {
-    "_doc": "Every other Sunday the two week post replaces the usual Sunday content. Twice a month max, on purpose, so it stays special. Parity is on the ISO week number.",
-    "weekday": 6,
-    "when_iso_week_is": "even",
-    "shape": "twoweek"
+  "weekend": {
+   "nights": [
+    2,
+    4
+   ],
+   "depart_dow": [
+    3,
+    4
+   ],
+   "return_dow": [
+    6,
+    0
+   ],
+   "depart_in": [
+    3,
+    90
+   ],
+   "cover": "WEEKEND GETAWAYS",
+   "angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days."
   },
-  "content_mix_target": {
-    "_doc": "Not enforced by code. Written down so drift is visible when you review analytics.",
-    "weekend": 0.6,
-    "week": 0.4,
-    "twoweek": "twice a month, maximum"
+  "urgent": {
+   "nights": [
+    2,
+    4
+   ],
+   "depart_dow": [
+    3,
+    4
+   ],
+   "return_dow": [
+    6,
+    0
+   ],
+   "depart_in": [
+    2,
+    30
+   ],
+   "cover": "GOING SOON",
+   "angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices."
   },
-  "_dow": "0=Mon 1=Tue 2=Wed 3=Thu 4=Fri 5=Sat 6=Sun. depart_dow/return_dow are the days a trip may leave and come back on; omit either to mean any day. LADDER: a shape matching nothing relaxes to nights-only, then to the wide window. Every board row records which rung it landed on (row['rung'])."
+  "friday": {
+   "nights": [
+    2,
+    9
+   ],
+   "depart_dow": [
+    3,
+    4,
+    5
+   ],
+   "depart_in": [
+    3,
+    150
+   ],
+   "cover": "FRIDAY FARES",
+   "angle": "Expedia's 2026 Air Hacks Report puts Friday as the cheapest day of the week to book a flight, about 3% under Sunday, and the cheapest day to fly overall, up to 8% under a Sunday departure. Worth knowing: for US domestic routes specifically that report still has Tuesday as the cheapest day to actually fly, roughly 14% under Sunday."
+  },
+  "twoweek": {
+   "nights": [
+    12,
+    17
+   ],
+   "depart_dow": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "return_dow": [
+    4,
+    5,
+    6,
+    0
+   ],
+   "depart_in": [
+    14,
+    150
+   ],
+   "cover": "TWO WEEKS GONE",
+   "angle": "The big one. Honeymoon, anniversary, the trip you keep putting off.",
+   "min_on_shape": 2,
+   "fallback_shape": "week"
+  }
+ },
+ "week": {
+  "0": {
+   "shape": "week",
+   "note": "Monday. Peak booking day. The money post."
+  },
+  "1": {
+   "shape": "weekend",
+   "note": "Tuesday. Low stakes, easy yes."
+  },
+  "2": {
+   "shape": "weekend",
+   "note": "Wednesday. Same, different cities."
+  },
+  "3": {
+   "shape": "urgent",
+   "note": "Thursday. Weekend getaways with urgency."
+  },
+  "4": {
+   "shape": "friday",
+   "note": "Friday. Cheapest day to book and fly, per Expedia 2026."
+  },
+  "5": {
+   "shape": "weekend",
+   "content": "guide",
+   "note": "Saturday. PLAN: city guide carousel, build trust, do not sell. The guide renderer does not exist yet, so this still posts a normal board. Flip content to guide once it does."
+  },
+  "6": {
+   "shape": "week",
+   "content": "inspiration",
+   "note": "Sunday. PLAN: inspiration plus a Monday teaser. Renderer does not exist yet, so this still posts a normal board."
+  }
+ },
+ "alternating": {
+  "_doc": "Every other Sunday the two week post replaces the usual Sunday content. Twice a month max, on purpose, so it stays special. Parity is on the ISO week number.",
+  "weekday": 6,
+  "when_iso_week_is": "even",
+  "shape": "twoweek"
+ },
+ "content_mix_target": {
+  "_doc": "Superseded 2026-08-13: every post now carries all four sections every day.",
+  "sections_per_post": 4,
+  "rows_per_section": 7
+ },
+ "_dow": "0=Mon 1=Tue 2=Wed 3=Thu 4=Fri 5=Sat 6=Sun. depart_dow/return_dow are the days a trip may leave and come back on; omit either to mean any day. LADDER: a shape matching nothing relaxes to nights-only, then to the wide window. Every board row records which rung it landed on (row['rung']).",
+ "sections": [
+  {
+   "key": "weekend",
+   "cover": "LONG WEEKEND",
+   "rows": 7,
+   "deals_only": true,
+   "nights": [
+    2,
+    4
+   ],
+   "depart_dow": [
+    3,
+    4
+   ],
+   "return_dow": [
+    6,
+    0
+   ],
+   "depart_in": [
+    3,
+    150
+   ],
+   "angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn barely any vacation days.",
+   "sort": "discount",
+   "min_discount": 0.12
+  },
+  {
+   "key": "week",
+   "cover": "WEEK LONG",
+   "rows": 7,
+   "deals_only": true,
+   "nights": [
+    7,
+    12
+   ],
+   "depart_in": [
+    3,
+    150
+   ],
+   "angle": "A full week or more away, round trip, every fare checked against what that route normally costs out of Charlotte.",
+   "sort": "discount",
+   "min_discount": 0.12
+  },
+  {
+   "key": "twoweek",
+   "cover": "TWO WEEKS",
+   "rows": 7,
+   "deals_only": true,
+   "nights": [
+    12,
+    21
+   ],
+   "depart_in": [
+    3,
+    150
+   ],
+   "angle": "The long one. Two weeks or more, and across three weekends it costs fewer vacation days than you would think.",
+   "sort": "discount",
+   "min_discount": 0.12
+  },
+  {
+   "key": "cheapest",
+   "cover": "CHEAPEST OUT OF CLT",
+   "rows": 7,
+   "deals_only": false,
+   "nights": [
+    1,
+    30
+   ],
+   "depart_in": [
+    3,
+    150
+   ],
+   "angle": "The cheapest fares leaving Charlotte right now, any trip length. No discount claimed — just the lowest real prices we found this morning.",
+   "sort": "price",
+   "min_discount": 0.0
+  }
+ ]
 }
