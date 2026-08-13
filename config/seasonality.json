@@ -1,6 +1,6 @@
 {
  "_comment": "Baseline seeding inputs for scripts/seed_baselines.py. A route's 12 monthly 'typical cheap round trip' figures = annual_level x shape[month]. This is the Charlotte methodology written down so it reproduces for every new origin instead of being re-guessed by hand each time.",
- "_shapes_note": "Normalised monthly multipliers (mean = 1.00). The first five were derived from the hand-seeded CLT curves in state/baselines.json (each curve divided by its own annual mean, then averaged within its group), so new cities inherit the same seasonality Charlotte was tuned to. 'europe' is hand-seeded: summer peak, deep Jan/Feb and November troughs.",
+ "_shapes_note": "Normalised monthly multipliers (mean = 1.00). The first five were derived from the hand-seeded CLT curves in state/baselines.json (each curve divided by its own annual mean, then averaged within its group), so new cities inherit the same seasonality Charlotte was tuned to. 'europe' is hand-seeded: summer peak, deep Jan/Feb and November troughs. ADDED 2026-08-13 for the Charlotte destination expansion: 'latam' (Central and South America — mild, with a December peak because the southern summer and the holidays land together) and 'pacific' (long haul Asia/Pacific — northern summer peak plus a smaller year-end bump). Both are ESTIMATED shapes, hand-seeded the same way 'europe' was, and every route that uses them carries basis ESTIMATE and must stay labelled as one.",
  "shapes": {
   "florida": [
    0.975,
@@ -85,6 +85,34 @@
    0.95,
    0.83,
    0.95
+  ],
+  "latam": [
+   1.06,
+   1.02,
+   0.96,
+   0.93,
+   0.91,
+   0.98,
+   1.06,
+   1.02,
+   0.92,
+   0.94,
+   0.99,
+   1.21
+  ],
+  "pacific": [
+   0.92,
+   0.9,
+   0.94,
+   0.97,
+   0.99,
+   1.1,
+   1.16,
+   1.12,
+   0.98,
+   0.94,
+   0.94,
+   1.04
   ]
  },
  "_factor_note": "DOT/BTS city-pair averages are the average fare ALL passengers paid, including last-minute and full-fare tickets. The board compares against a typical CHEAP round trip, which is lower. The domestic factor 0.50 is not a guess: it is the median of the seven hand-tuned CLT domestic curves divided by their DOT round-trip averages (MIA .49, FLL .42, MCO .44, LAS .56, DEN .58, BNA .47, MSY .51). Applying it to a real DOT number for a new city reproduces Charlotte's own relationship rather than inventing a new one. The two international factors are calibrated the same way against the CLT curves that exist (CUN .96, SJU .78, AUA .68) and against the Europe fares the index actually returns; international discounting off list is shallower than domestic, which is why these sit far above 0.50.",
@@ -93,7 +121,7 @@
   "caribbean": 0.95,
   "europe": 0.9
  },
- "_dest_note": "shape = seasonality profile. intl routes have no DOT city-pair data (the Consumer Airfare Report covers contiguous-state markets only), so they carry the labelled estimate methodology used for Charlotte.",
+ "_dest_note": "shape = seasonality profile. intl routes have no DOT city-pair data (the Consumer Airfare Report covers contiguous-state markets only), so they carry the labelled estimate methodology used for Charlotte. EXPANDED 2026-08-13 from 32 to a Charlotte pool of 100. Domestic entries here are CANDIDATES: a route only reaches a board once DOT actually publishes a CLT city pair for it, which scripts/fetch_dot_fares.py --adopt writes. A candidate DOT does not publish stays in this file, gets no level, and is skipped by the seeder — it is never given an invented number.",
  "destinations": {
   "NYC": {
    "city": "New York City",
@@ -252,6 +280,436 @@
   },
   "AMS": {
    "city": "Amsterdam",
+   "shape": "europe",
+   "intl": true
+  },
+  "SAN": {
+   "city": "San Diego",
+   "shape": "mountain",
+   "intl": false
+  },
+  "MSP": {
+   "city": "Minneapolis",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "SLC": {
+   "city": "Salt Lake City",
+   "shape": "mountain",
+   "intl": false
+  },
+  "PDX": {
+   "city": "Portland, OR",
+   "shape": "mountain",
+   "intl": false
+  },
+  "SAT": {
+   "city": "San Antonio",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "STL": {
+   "city": "St. Louis",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "MCI": {
+   "city": "Kansas City",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "PIT": {
+   "city": "Pittsburgh",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "CLE": {
+   "city": "Cleveland",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "CMH": {
+   "city": "Columbus",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "IND": {
+   "city": "Indianapolis",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "MKE": {
+   "city": "Milwaukee",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "CVG": {
+   "city": "Cincinnati",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "SMF": {
+   "city": "Sacramento",
+   "shape": "mountain",
+   "intl": false
+  },
+  "PBI": {
+   "city": "West Palm Beach",
+   "shape": "florida",
+   "intl": false
+  },
+  "RSW": {
+   "city": "Fort Myers",
+   "shape": "florida",
+   "intl": false
+  },
+  "JAX": {
+   "city": "Jacksonville",
+   "shape": "florida",
+   "intl": false
+  },
+  "SRQ": {
+   "city": "Sarasota",
+   "shape": "florida",
+   "intl": false
+  },
+  "SAV": {
+   "city": "Savannah",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "CHS": {
+   "city": "Charleston, SC",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "MYR": {
+   "city": "Myrtle Beach",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "RIC": {
+   "city": "Richmond",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "ORF": {
+   "city": "Norfolk",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "MEM": {
+   "city": "Memphis",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "OKC": {
+   "city": "Oklahoma City",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "TUL": {
+   "city": "Tulsa",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "ABQ": {
+   "city": "Albuquerque",
+   "shape": "mountain",
+   "intl": false
+  },
+  "TUS": {
+   "city": "Tucson",
+   "shape": "vegas",
+   "intl": false
+  },
+  "BOI": {
+   "city": "Boise",
+   "shape": "mountain",
+   "intl": false
+  },
+  "RNO": {
+   "city": "Reno",
+   "shape": "vegas",
+   "intl": false
+  },
+  "BUF": {
+   "city": "Buffalo",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "ROC": {
+   "city": "Rochester",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "ALB": {
+   "city": "Albany",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "PVD": {
+   "city": "Providence",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "BDL": {
+   "city": "Hartford",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "PWM": {
+   "city": "Portland, ME",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "BHM": {
+   "city": "Birmingham",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "LIT": {
+   "city": "Little Rock",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "DSM": {
+   "city": "Des Moines",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "OMA": {
+   "city": "Omaha",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "GRR": {
+   "city": "Grand Rapids",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "MSN": {
+   "city": "Madison",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "ICT": {
+   "city": "Wichita",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "JAN": {
+   "city": "Jackson, MS",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "BZN": {
+   "city": "Bozeman",
+   "shape": "mountain",
+   "intl": false
+  },
+  "PSP": {
+   "city": "Palm Springs",
+   "shape": "vegas",
+   "intl": false
+  },
+  "GSP": {
+   "city": "Greenville/Spartanburg",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "ANU": {
+   "city": "Antigua",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "BDA": {
+   "city": "Bermuda",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "BGI": {
+   "city": "Barbados",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "CUR": {
+   "city": "Curacao",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "ELH": {
+   "city": "North Eleuthera",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "FPO": {
+   "city": "Freeport",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "GGT": {
+   "city": "Great Exuma",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "GHB": {
+   "city": "Governor's Harbour",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "GND": {
+   "city": "Grenada",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "MHH": {
+   "city": "Marsh Harbour",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "PLS": {
+   "city": "Providenciales",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "POP": {
+   "city": "Puerto Plata",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "SKB": {
+   "city": "St. Kitts",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "STT": {
+   "city": "St. Thomas",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "STX": {
+   "city": "St. Croix",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "SVD": {
+   "city": "St. Vincent",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "SXM": {
+   "city": "St. Maarten",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "UVF": {
+   "city": "St. Lucia",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "CZM": {
+   "city": "Cozumel",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "SJD": {
+   "city": "Los Cabos",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "MEX": {
+   "city": "Mexico City",
+   "shape": "latam",
+   "intl": true
+  },
+  "GDL": {
+   "city": "Guadalajara",
+   "shape": "latam",
+   "intl": true
+  },
+  "BZE": {
+   "city": "Belize City",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "LIR": {
+   "city": "Liberia, Costa Rica",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "SJO": {
+   "city": "San José, Costa Rica",
+   "shape": "latam",
+   "intl": true
+  },
+  "ATH": {
+   "city": "Athens",
+   "shape": "europe",
+   "intl": true
+  },
+  "DUB": {
+   "city": "Dublin",
+   "shape": "europe",
+   "intl": true
+  },
+  "FRA": {
+   "city": "Frankfurt",
+   "shape": "europe",
+   "intl": true
+  },
+  "MAD": {
+   "city": "Madrid",
+   "shape": "europe",
+   "intl": true
+  },
+  "MUC": {
+   "city": "Munich",
+   "shape": "europe",
+   "intl": true
+  },
+  "YQB": {
+   "city": "Quebec City",
+   "shape": "europe",
+   "intl": true
+  },
+  "YUL": {
+   "city": "Montreal",
+   "shape": "europe",
+   "intl": true
+  },
+  "YVR": {
+   "city": "Vancouver",
+   "shape": "europe",
+   "intl": true
+  },
+  "YYC": {
+   "city": "Calgary",
+   "shape": "europe",
+   "intl": true
+  },
+  "YYZ": {
+   "city": "Toronto",
+   "shape": "europe",
+   "intl": true
+  },
+  "AUH": {
+   "city": "Abu Dhabi",
+   "shape": "pacific",
+   "intl": true
+  },
+  "LIS": {
+   "city": "Lisbon",
+   "shape": "europe",
+   "intl": true
+  },
+  "BCN": {
+   "city": "Barcelona",
+   "shape": "europe",
+   "intl": true
+  },
+  "REK": {
+   "city": "Reykjavik",
    "shape": "europe",
    "intl": true
   }
@@ -520,7 +978,7 @@
    "SFO": "San Francisco, CA metro area — Bay Area airports are one DOT market"
   }
  },
- "_intl_note": "No DOT city-pair data exists for these. Same labelled-estimate approach used for Charlotte: a typical round-trip fare for the market, carried across origins unless a route has origin-specific service that clearly changes it. These are estimates, and the site must keep labelling them as such.",
+ "_intl_note": "No DOT city-pair data exists for these. Same labelled-estimate approach used for Charlotte: a typical round-trip fare for the market, carried across origins unless a route has origin-specific service that clearly changes it. These are estimates, and the site must keep labelling them as such. EXPANDED 2026-08-13 to 50 markets for the Charlotte only pivot. 46 of them are CLT NONSTOPS, cross checked across FlightsFrom, FlightConnections, Charlotte Magazine and SouthPark Magazine. The remaining four (Amsterdam, Lisbon, Barcelona, Reykjavik) are one stop markets Charlotte genuinely books, and the pipeline labels stops on every slide, so nothing is hidden. Levels are ESTIMATES and must keep saying so.",
  "intl_estimate_round_trip": {
   "CUN": 520,
   "PUJ": 560,
@@ -532,6 +990,124 @@
   "LON": 850,
   "PAR": 900,
   "ROM": 950,
-  "AMS": 880
+  "AMS": 880,
+  "ANU": 700,
+  "BDA": 620,
+  "BGI": 720,
+  "CUR": 680,
+  "ELH": 520,
+  "FPO": 460,
+  "GGT": 540,
+  "GHB": 540,
+  "GND": 730,
+  "MHH": 500,
+  "PLS": 660,
+  "POP": 520,
+  "SKB": 700,
+  "STT": 560,
+  "STX": 620,
+  "SVD": 760,
+  "SXM": 660,
+  "UVF": 720,
+  "CZM": 600,
+  "SJD": 660,
+  "MEX": 520,
+  "GDL": 560,
+  "BZE": 620,
+  "LIR": 640,
+  "SJO": 600,
+  "ATH": 1050,
+  "DUB": 780,
+  "FRA": 900,
+  "MAD": 880,
+  "MUC": 900,
+  "YQB": 620,
+  "YUL": 520,
+  "YVR": 700,
+  "YYC": 680,
+  "YYZ": 480,
+  "AUH": 1250,
+  "LIS": 800,
+  "BCN": 880,
+  "REK": 700
+ },
+ "shape_factor": {
+  "florida": "domestic",
+  "vegas": "domestic",
+  "mountain": "domestic",
+  "shorthaul": "domestic",
+  "caribbean": "caribbean",
+  "latam": "caribbean",
+  "europe": "europe",
+  "pacific": "europe"
+ },
+ "_shape_factor_note": "Which cheap_fare_factor a shape uses. This replaces the old inline rule in seed_baselines.py ('europe if shape is europe else caribbean'), which could not express the shapes added on 2026-08-13. Domestic routes never reach it — they take cheap_fare_factor.domestic against a real DOT number.",
+ "origin_intl": {
+  "_doc": "Which international markets each origin tracks. CLT gets the full 50 market Charlotte pool (2026-08-13 pivot). Every other origin keeps the 11 it had before that, because their boards are retired and only the Fare Finder still reads them — widening them would spend Travelpayouts calls on cities we do not publish. An origin not listed here uses _default. Delete this whole key and every origin goes back to tracking everything.",
+  "CLT": [
+   "AMS",
+   "ANU",
+   "ATH",
+   "AUA",
+   "AUH",
+   "BCN",
+   "BDA",
+   "BGI",
+   "BZE",
+   "CUN",
+   "CUR",
+   "CZM",
+   "DUB",
+   "ELH",
+   "FPO",
+   "FRA",
+   "GCM",
+   "GDL",
+   "GGT",
+   "GHB",
+   "GND",
+   "LIR",
+   "LIS",
+   "LON",
+   "MAD",
+   "MBJ",
+   "MEX",
+   "MHH",
+   "MUC",
+   "NAS",
+   "PAR",
+   "PLS",
+   "POP",
+   "PUJ",
+   "REK",
+   "ROM",
+   "SJD",
+   "SJO",
+   "SJU",
+   "SKB",
+   "STT",
+   "STX",
+   "SVD",
+   "SXM",
+   "UVF",
+   "YQB",
+   "YUL",
+   "YVR",
+   "YYC",
+   "YYZ"
+  ],
+  "_default": [
+   "CUN",
+   "PUJ",
+   "MBJ",
+   "NAS",
+   "AUA",
+   "SJU",
+   "GCM",
+   "LON",
+   "PAR",
+   "ROM",
+   "AMS"
+  ]
  }
 }
