@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-13T10:15:24-04:00",
+ "generated": "2026-08-13T12:15:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 311,
-   "d1": "2026-09-09",
-   "d2": "2026-09-11",
-   "dep": "9:40PM",
-   "al": "Frontier",
+   "price": 289,
+   "d1": "2026-10-31",
+   "d2": "2026-11-02",
+   "dep": "9:50AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:10AM",
-   "arr": "5:11AM+1",
-   "rarr": "6:26PM",
-   "pct": 57
+   "rdep": "1:00PM",
+   "arr": "4:51PM",
+   "rarr": "9:30PM",
+   "pct": 60
   },
   "PHX": {
    "to": "PHX",
