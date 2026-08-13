@@ -7,6 +7,12 @@ name: Morning Instagram post
 #   3. the daily GitHub cron below (backup; has never actually fired),
 #   4. manually from the Actions tab.
 #
+# MANUAL RUNS TAKE A `dry_run` INPUT. It fetches real fares, renders the real
+# slides, uploads them as an artifact and stops — nothing published, nothing
+# committed, no history written. Use it to see what tomorrow's post will look
+# like before tomorrow, which is the only way to test a pipeline change against
+# live Travelpayouts data without posting twice in a day.
+#
 # The cron used to be left out on purpose, because GitHub cron can run hours
 # late and a second same-day firing would double-post. That objection is gone:
 # the plan job now drops any origin that already has a state/history entry
@@ -48,6 +54,11 @@ on:
         required: false
         type: boolean
         default: false
+      dry_run:
+        description: "REHEARSAL. Fetch fares and render the slides, upload them as an artifact, and stop. Nothing is posted, nothing is committed, no history is written."
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -72,7 +83,10 @@ jobs:
         id: pick
         env:
           REQUESTED: ${{ github.event.inputs.origins }}
-          FORCE: ${{ github.event.inputs.force }}
+          # A rehearsal has to reach the post job even on a day that already
+          # posted, otherwise there is nothing to rehearse. It cannot
+          # double-post: every step from staging onwards is skipped.
+          FORCE: ${{ (github.event.inputs.force == 'true' || github.event.inputs.dry_run == 'true') && 'true' || 'false' }}
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import datetime, json, os
@@ -195,6 +209,7 @@ jobs:
         run: python pipeline/render_slides.py
 
       - name: Stage slides into the site
+        if: github.event.inputs.dry_run != 'true'
         id: stage
         env:
           ORIGIN: ${{ matrix.origin.code }}
@@ -238,6 +253,7 @@ jobs:
           echo "::error::could not push slides after 5 attempts"; exit 1
 
       - name: Wait for Cloudflare Pages to actually serve the slides
+        if: github.event.inputs.dry_run != 'true'
         id: wait
         run: |
           # THE 2026-07-30 OUTAGE LIVED HERE. This loop used to check only for
@@ -287,6 +303,7 @@ jobs:
           exit 1
 
       - name: Publish to Instagram
+        if: github.event.inputs.dry_run != 'true'
         env:
           ORIGIN: ${{ matrix.origin.code }}
           IG_TOKEN: ${{ secrets[matrix.origin.secret] }}
@@ -298,6 +315,7 @@ jobs:
 
       # Only now is the city really spent.
       - name: Record what was posted
+        if: github.event.inputs.dry_run != 'true'
         run: |
           git config user.name departs-bot
           git config user.email board@departsdaily.com
@@ -312,6 +330,44 @@ jobs:
 
       # Instagram's own explanation of a refusal is the one thing worth keeping
       # from a failed run, and Actions logs age out. Commit it.
+      # REHEARSAL OUTPUT. The whole point: see exactly what tomorrow's post would
+      # look like, built from this morning's real fares, without posting it.
+      # Download the artifact from the run page.
+      - name: Upload the rehearsal slides
+        if: github.event.inputs.dry_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rehearsal-${{ matrix.origin.code }}
+          path: |
+            out/**/*.png
+            out/**/slides.json
+            out/scan-*.json
+            deals.json
+            deals-*.json
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Say what the rehearsal produced
+        if: github.event.inputs.dry_run == 'true'
+        env:
+          ORIGIN: ${{ matrix.origin.code }}
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, os
+          code = os.environ["ORIGIN"]
+          path = "deals.json" if code == "CLT" else f"deals-{code}.json"
+          b = json.load(open(path))
+          print(f"## REHEARSAL — {code} (nothing was posted)\n")
+          print(f"**{b.get('n_rows', len(b['deals']))} rows, "
+                f"{b['n_deals']} of them real deals**\n")
+          print("| slide | rows | real deals | shape |")
+          print("|---|---|---|---|")
+          for s in b.get("sections", []):
+              n0, n1 = s["nights"]
+              print(f"| {s['cover']} | {s['n']}/{s['rows_target']} | "
+                    f"{s['n_deals']} | {n0}-{n1} nights |")
+          PY
+
       - name: Keep the failure trail
         if: failure()
         run: |
