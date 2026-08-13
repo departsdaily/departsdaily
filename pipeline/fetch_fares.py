@@ -398,6 +398,7 @@ for spec in SECTIONS:
             scan[code] = row
     n_deal = sum(1 for r in picked if r.get("deal"))
     sections.append({"key": spec["key"], "cover": spec["cover"],
+                     "tag": spec.get("tag", "ROUND TRIP"),
                      "angle": spec["angle"], "nights": list(spec["nights"]),
                      "deals_only": spec["deals_only"], "rows_target": spec["rows"],
                      "n": len(picked), "n_deals": n_deal,
