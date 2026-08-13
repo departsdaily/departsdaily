@@ -21,7 +21,21 @@ compatibility_date = "2026-07-01"
 # gap. 12 runs a day, roughly 3,600 Travelpayouts calls — well under the 7,200
 # the old hourly schedule was already spending.
 #
+# ---- CRON: the morning Instagram post -------------------------------------
+# Same reasoning, same proof. GitHub's own `schedule:` on ig-post.yml was added
+# 2026-08-12 and delivered ZERO runs — the 2026-08-13 post never went out. The
+# post now fires from here too, as repository_dispatch event_type "ig-post".
+#
+# Two lines so DST never needs a hand edit: 10:52 UTC is 6:52 AM ET under EDT,
+# 11:52 UTC is 6:52 AM ET under EST. The out of season line fires an hour off
+# and does nothing, because the plan job skips any origin already posted today
+# — which also makes it a free retry when the first one failed.
+#
 # Needs a second secret: GH_DISPATCH_TOKEN (the GH_PAT), pushed by
 # .github/workflows/deploy-worker.yml on every deploy.
 [triggers]
-crons = ["13 */2 * * *"]
+crons = [
+  "13 */2 * * *",   # board refresh heartbeat, every 2 hours
+  "52 10 * * *",    # 6:52 AM ET during EDT — fires the Morning Instagram post
+  "52 11 * * *",    # 6:52 AM ET during EST — the out of season one no-ops
+]
