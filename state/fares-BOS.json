@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-12T20:16:34-04:00",
+ "generated": "2026-08-12T22:16:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -128,17 +128,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 252,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "12:54PM",
+   "price": 274,
+   "d1": "2026-08-26",
+   "d2": "2026-08-31",
+   "dep": "12:45PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:32AM",
-   "arr": "6:03PM",
-   "rarr": "10:19AM",
-   "pct": 41
+   "rdep": "9:47PM",
+   "arr": "5:36PM",
+   "rarr": "2:41AM+1",
+   "pct": 35
   },
   "MSY": {
    "to": "MSY",
@@ -278,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 406,
-   "d1": "2026-10-29",
-   "d2": "2026-11-03",
-   "dep": "5:30AM",
-   "al": "Air Canada",
+   "price": 460,
+   "d1": "2026-09-14",
+   "d2": "2026-09-20",
+   "dep": "6:05AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:30PM",
-   "arr": "11:55AM",
-   "rarr": "9:29PM",
-   "pct": 22
+   "rdep": "9:05PM",
+   "arr": "11:28AM",
+   "rarr": "2:50AM+1",
+   "pct": 12
   },
   "LON": {
    "to": "LON",
@@ -319,21 +319,6 @@
    "arr": "1:00PM",
    "rarr": "10:19PM",
    "pct": -5
-  },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 363,
-   "d1": "2026-08-29",
-   "d2": "2026-09-02",
-   "dep": "3:35PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:35PM",
-   "arr": "8:48PM",
-   "rarr": "7:45PM",
-   "pct": 24
   },
   "PAR": {
    "to": "PAR",
