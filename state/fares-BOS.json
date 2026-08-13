@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-13T08:16:50-04:00",
+ "generated": "2026-08-13T10:16:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 750,
-   "d1": "2026-08-17",
-   "d2": "2026-09-01",
-   "dep": "11:00PM",
-   "al": "Icelandair",
+   "price": 808,
+   "d1": "2026-08-21",
+   "d2": "2026-08-28",
+   "dep": "7:23PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:00PM",
-   "arr": "7:35AM+1",
-   "rarr": "11:15PM",
-   "pct": 17
+   "rdep": "2:10PM",
+   "arr": "4:33AM+1",
+   "rarr": "11:10PM",
+   "pct": 10
   },
   "PUJ": {
    "to": "PUJ",

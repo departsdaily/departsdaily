@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-13T08:16:13-04:00",
+ "generated": "2026-08-13T10:15:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -353,17 +353,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 307,
-   "d1": "2026-11-25",
-   "d2": "2026-11-30",
-   "dep": "10:40PM",
+   "price": 130,
+   "d1": "2026-08-20",
+   "d2": "2026-08-25",
+   "dep": "9:48PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:46PM",
-   "arr": "1:21AM+1",
-   "rarr": "10:39PM",
-   "pct": 27
+   "rdep": "7:30AM",
+   "arr": "12:43AM+1",
+   "rarr": "10:15AM",
+   "pct": 69
   }
  }
 }
