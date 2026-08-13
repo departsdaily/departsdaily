@@ -1,0 +1,48 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-13",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from CLT, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 5.02,
+ "fps": 30,
+ "audio": "coast-road.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "urgent",
+ "plan_angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices.",
+ "featured": [
+  {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 120,
+   "disc": 49,
+   "baseline": 237,
+   "nights": 6,
+   "d1": "2026-09-16",
+   "d2": "2026-09-22"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 191,
+   "disc": 44,
+   "baseline": 344,
+   "nights": 3,
+   "d1": "2026-08-21",
+   "d2": "2026-08-24"
+  },
+  {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 199,
+   "disc": 32,
+   "baseline": 292,
+   "nights": 4,
+   "d1": "2026-10-14",
+   "d2": "2026-10-18"
+  }
+ ]
+}
