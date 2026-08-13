@@ -124,7 +124,14 @@ def build(origin, cfg, legacy_clt):
                                        "no DOT city-pair data exists for this market",
                                 "intl": True, "ig_board": True}
                 continue
-            fk = "europe" if meta["shape"] == "europe" else "caribbean"
+            # Which cheap_fare_factor this shape uses. Was an inline
+            # "europe if shape is europe else caribbean", which had no way to
+            # express the 'latam' and 'pacific' shapes added 2026-08-13. The
+            # map lives in config/seasonality.json now; the old rule is the
+            # fallback so an unmapped shape still behaves exactly as before.
+            fk = cfg.get("shape_factor", {}).get(
+                meta["shape"],
+                "europe" if meta["shape"] == "europe" else "caribbean")
             level = est[code] * factor[fk]
             src = (f"labelled ESTIMATE ${est[code]} round trip x {factor[fk]} "
                    f"({fk}) — no DOT city-pair data for this market")
