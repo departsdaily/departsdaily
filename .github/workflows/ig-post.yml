@@ -1,9 +1,11 @@
 name: Morning Instagram post
 
-# Fired three ways:
-#   1. a push to the 'ig-trigger' branch (the precise-timing path, ~6:52 AM ET),
-#   2. the daily cron below (the self-firing backstop),
-#   3. manually from the Actions tab.
+# Fired four ways:
+#   1. repository_dispatch "ig-post" from the Cloudflare Worker cron — PRIMARY,
+#      6:52 AM ET, the only one that has ever been reliable,
+#   2. a push to the 'ig-trigger' branch (the old precise-timing path),
+#   3. the daily GitHub cron below (backup; has never actually fired),
+#   4. manually from the Actions tab.
 #
 # The cron used to be left out on purpose, because GitHub cron can run hours
 # late and a second same-day firing would double-post. That objection is gone:
@@ -17,10 +19,20 @@ name: Morning Instagram post
 # The one that is out of season fires an hour off and, after a good run, does
 # nothing — which also makes it a free retry when the earlier run failed.
 #
+# NOTE (2026-08-13): the cron below is now the BACKUP, not the trigger. It has
+# never once fired. The real trigger is the repository_dispatch above.
+#
 # One job per origin whose config/origins.json block has ig_enabled: true.
 # An origin with no Instagram token yet stays false and is simply not in the
 # matrix — it costs nothing and cannot fail the run.
 on:
+  # PRIMARY as of 2026-08-13. The Cloudflare Worker cron fires this at 10:52 /
+  # 11:52 UTC. GitHub's own scheduler is not trustworthy on this repo: the
+  # `schedule:` block below was added 2026-08-12 and delivered ZERO runs, so
+  # 2026-08-13's post simply never went out. Same measured failure that already
+  # moved the board refresh onto the Worker (see worker/wrangler.toml).
+  repository_dispatch:
+    types: [ig-post]
   push:
     branches: [ig-trigger]
   schedule:
