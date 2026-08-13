@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-13T00:15:31-04:00",
+ "generated": "2026-08-13T02:15:38-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -155,6 +155,21 @@
    "rarr": "10:05PM",
    "pct": 80
   },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 263,
+   "d1": "2026-11-05",
+   "d2": "2026-11-08",
+   "dep": "9:56PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:05PM",
+   "arr": "2:43AM+1",
+   "rarr": "11:21PM",
+   "pct": 50
+  },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
@@ -199,6 +214,21 @@
    "arr": "5:11AM+1",
    "rarr": "6:26PM",
    "pct": 57
+  },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 136,
+   "d1": "2026-08-29",
+   "d2": "2026-08-31",
+   "dep": "4:15PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "1:53PM",
+   "arr": "5:52PM",
+   "rarr": "3:20PM",
+   "pct": 62
   },
   "SEA": {
    "to": "SEA",
