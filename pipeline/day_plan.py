@@ -127,6 +127,11 @@ def sections(day=None):
             "weekday": day.strftime("%A"),
             "key": sec["key"],
             "cover": sec["cover"],
+            # A short qualifier printed next to the cover on the slide, so each
+            # slide says what SHAPE of trip it is showing rather than all three
+            # saying "ROUND TRIP". The Cheapest slide uses it to admit up front
+            # that its fares need real days booked off.
+            "tag": sec.get("tag", "ROUND TRIP"),
             "angle": sec["angle"],
             "rows": int(sec.get("rows", 7)),
             "deals_only": bool(sec.get("deals_only", True)),
