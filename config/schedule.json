@@ -2,42 +2,49 @@
  "_doc": [
   "Weekly Instagram posting plan.",
   "",
-  "REWRITTEN 2026-08-13 (owner's rule). The post is no longer 'one trip shape",
-  "per weekday'. Every post now carries FOUR sections, one slide each, seven",
-  "rows each, every single day:",
+  "REWRITTEN 2026-08-13 (owner's rule, second pass). Every post carries THREE",
+  "sections, one slide each, seven rows each, every single day. The whole plan",
+  "is built around one question: what does this trip cost someone with a normal",
+  "9-to-5?",
   "",
-  "  LONG WEEKEND  2-4 nights, out Thu/Fri and back Sun/Mon where the fares",
-  "                allow it. The 9-to-5 slide: burn the fewest vacation days.",
-  "  WEEK LONG     7-12 nights.",
-  "  TWO WEEKS     12-21 nights. Widened from 13-17 on purpose — measured",
-  "                2026-08-13, only 9 destinations had a two week trip at ANY",
-  "                price, so a tight window could not fill seven rows without",
-  "                either padding or lowering the bar, and we do neither.",
-  "  CHEAPEST      the cheapest fares out of CLT at any trip length. This slide",
-  "                makes NO discount claim, which is exactly why it can always",
-  "                fill seven rows and carry a thin day. A row here still wears",
-  "                a green badge IF it genuinely cleared the 12% bar, and says",
-  "                nothing when it did not.",
+  "  LONG WEEKEND   2-4 nights, out Thursday or Friday and back Sunday or",
+  "                 Monday. Barely touches the working week.",
+  "  WEEKISH        6-21 nights, LEAVING THURSDAY TO SATURDAY, returning any",
+  "                 day. A week that is allowed to bleed into a second and a",
+  "                 third. Merged from the old WEEK LONG and TWO WEEKS: split",
+  "                 in two, the long half could not fill seven rows without",
+  "                 padding (measured 2026-08-13, only nine destinations had a",
+  "                 two week trip at ANY price). Together they fill, and the",
+  "                 Thursday-to-Saturday departure is what keeps the section",
+  "                 honest about being weekend-shaped at the front.",
+  "  CHEAPEST       the cheapest fares out of CLT at any shape. These are the",
+  "                 odd ones — a Wednesday to a Wednesday, days a 9-to-5 has to",
+  "                 actually book off. The slide says so rather than pretending",
+  "                 they are convenient. It makes NO discount claim, which is",
+  "                 why it can always fill and carry a thin day; a row still",
+  "                 wears the green badge if it genuinely cleared 12%.",
   "",
-  "NEVER AN OVERPAYMENT, ON ANY SLIDE. min_discount is 0.12 for the three trip",
-  "length sections and 0.0 for CHEAPEST — zero, not negative. A cheap headline",
-  "price that is still ABOVE what that route normally costs is exactly the SKIP",
-  "row the owner deleted in July, and it does not come back just because the",
-  "slide says 'cheapest'. Measured 2026-08-13: a pure lowest-price sort put",
-  "'91% ABOVE TYPICAL' on the slide. The bar moved to 0.0 the same hour.",
+  "NEVER AN OVERPAYMENT, ON ANY SLIDE. min_discount is 0.12 for the two trip",
+  "shape sections and 0.0 for CHEAPEST — zero, not negative. A cheap headline",
+  "price still above what that route normally costs is the SKIP row the owner",
+  "deleted in July, and it does not come back because a slide says 'cheapest'.",
   "",
-  "The first three sections are DEALS ONLY: every row cleared MIN_DISCOUNT.",
   "A section that cannot find seven shows fewer rows and prints the real count.",
-  "Never padded, never a lowered bar. That rule has not moved since July.",
+  "Never padded, never a lowered bar.",
   "",
-  "A city MAY appear in more than one section on the same day (owner's call,",
-  "2026-08-13) — Vegas for three nights in August and Vegas for fourteen in",
-  "October are two different trips. It may never appear twice inside one",
-  "section.",
+  "A city MAY appear in more than one section on the same day — a long weekend",
+  "in August and a fortnight in October are different trips. Never twice inside",
+  "one section, and the same exact flight never twice in one post.",
   "",
-  "`shapes` and `week` below are KEPT because pipeline/render_reel.py and the",
-  "reel rotation still resolve a single daily shape. They no longer drive the",
-  "carousel."
+  "`shapes` and `week` below are KEPT because pipeline/render_reel.py still",
+  "resolves a single daily shape for the reel. They do not drive the carousel.",
+  "",
+  "`tag` is the short qualifier printed beside the cover on the slide. Keep it",
+  "comma-separated, never ' · ' separated: the header drops whole ' · ' segments",
+  "from the right when it would collide with the badge, so a tag containing ' · '",
+  "can half-survive and read as nonsense. Measured budget at MONO(26): roughly 40",
+  "characters for cover plus tag together. Over that and the slide counter goes",
+  "first, which is the intended sacrifice — the carousel dots already show it."
  ],
  "wide": {
   "nights": [
@@ -197,8 +204,8 @@
   "shape": "twoweek"
  },
  "content_mix_target": {
-  "_doc": "Superseded 2026-08-13: every post now carries all four sections every day.",
-  "sections_per_post": 4,
+  "_doc": "Superseded 2026-08-13: three sections, every post, every day.",
+  "sections_per_post": 3,
   "rows_per_section": 7
  },
  "_dow": "0=Mon 1=Tue 2=Wed 3=Thu 4=Fri 5=Sat 6=Sun. depart_dow/return_dow are the days a trip may leave and come back on; omit either to mean any day. LADDER: a shape matching nothing relaxes to nights-only, then to the wide window. Every board row records which rung it landed on (row['rung']).",
@@ -206,8 +213,10 @@
   {
    "key": "weekend",
    "cover": "LONG WEEKEND",
+   "tag": "THU/FRI OUT, SUN/MON BACK",
    "rows": 7,
    "deals_only": true,
+   "min_discount": 0.12,
    "nights": [
     2,
     4
@@ -224,49 +233,39 @@
     3,
     150
    ],
-   "angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn barely any vacation days.",
    "sort": "discount",
-   "min_discount": 0.12
+   "angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you barely touch the working week."
   },
   {
-   "key": "week",
-   "cover": "WEEK LONG",
+   "key": "weekish",
+   "cover": "WEEKISH",
+   "tag": "LEAVES THU–SAT, STAY LONGER",
    "rows": 7,
    "deals_only": true,
+   "min_discount": 0.12,
    "nights": [
-    7,
-    12
-   ],
-   "depart_in": [
-    3,
-    150
-   ],
-   "angle": "A full week or more away, round trip, every fare checked against what that route normally costs out of Charlotte.",
-   "sort": "discount",
-   "min_discount": 0.12
-  },
-  {
-   "key": "twoweek",
-   "cover": "TWO WEEKS",
-   "rows": 7,
-   "deals_only": true,
-   "nights": [
-    12,
+    6,
     21
    ],
+   "depart_dow": [
+    3,
+    4,
+    5
+   ],
    "depart_in": [
     3,
     150
    ],
-   "angle": "The long one. Two weeks or more, and across three weekends it costs fewer vacation days than you would think.",
    "sort": "discount",
-   "min_discount": 0.12
+   "angle": "Leave Thursday, Friday or Saturday and stay a week — or let it bleed into a second and a third. The front end is still weekend shaped, so the time off starts working for you straight away."
   },
   {
    "key": "cheapest",
    "cover": "CHEAPEST OUT OF CLT",
+   "tag": "ODD DAYS OFF",
    "rows": 7,
    "deals_only": false,
+   "min_discount": 0.0,
    "nights": [
     1,
     30
@@ -275,9 +274,8 @@
     3,
     150
    ],
-   "angle": "The cheapest fares leaving Charlotte right now, any trip length. No discount claimed — just the lowest real prices we found this morning.",
    "sort": "price",
-   "min_discount": 0.0
+   "angle": "The cheapest fares leaving Charlotte right now, whatever shape they are. Fair warning: these are the odd ones. A Wednesday to a Wednesday, days you actually have to book off. No discount claimed, just the lowest real prices we found this morning."
   }
  ]
 }
