@@ -94,10 +94,20 @@ def main():
     except (OSError, ValueError):
         pass
 
-    backlog = [(i, d) for i, d in enumerate(deals, 1)
-               if d["to"] not in st["posted"]]
+    # The renderer's manifest is the only place story filenames are decided
+    # (2026-08-13). Rebuilding them here from deals.json was safe while every
+    # deal-flagged row got a story; it is not safe now that the story list is
+    # capped at MAX_STORIES, because the index would point at a file that was
+    # never rendered.
+    try:
+        manifest = json.load(open(os.path.join(
+            origins.paths(ORIGIN)["out"], "slides.json")))["stories"]
+    except (OSError, ValueError, KeyError):
+        manifest = [{"file": "story_%d_%s.png" % (i, d["to"]), "to": d["to"]}
+                    for i, d in enumerate(deals, 1)]
+    backlog = [m for m in manifest if m["to"] not in st["posted"]]
     if not backlog:
-        print("all %d stories already posted today" % len(deals))
+        print("all %d stories already posted today" % len(manifest))
         return
 
     # Slots strictly after this hour are still to come; this one is in hand.
@@ -114,8 +124,8 @@ def main():
         raise SystemExit("FATAL: token resolves to @%s, expected @%s"
                          % (me.get("username"), ORG["handle"]))
 
-    for i, d in batch:
-        url = "%s/story_%d_%s.png?v=%s" % (RAW_BASE, i, d["to"], ASSET_VER)
+    for d in batch:
+        url = "%s/%s?v=%s" % (RAW_BASE, d["file"], ASSET_VER)
         try:
             r = call("me/media", {"image_url": url, "media_type": "STORIES"})
             time.sleep(3)
