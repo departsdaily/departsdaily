@@ -42,6 +42,7 @@ with open(_CFG, encoding="utf-8") as _fh:
     _SEAS = json.load(_fh)
 DOT_AVG  = _SEAS["dot_round_trip"]
 INTL_AVG = _SEAS["intl_estimate_round_trip"]
+INTL_SCOPE = _SEAS.get("origin_intl", {})
 
 def avg_for(origin, dest):
     """Annual round-trip average for THIS origin. None means no defensible
@@ -98,7 +99,17 @@ ROUTES = {
 def dests_for(origin):
     o = origin.upper()
     dom = sorted(DOT_AVG.get(o, {}).keys())
-    intl = sorted(INTL_AVG.keys())
+    # INTERNATIONAL IS PER ORIGIN as of 2026-08-13. It used to be "every
+    # international market we hold an estimate for, from every origin", which
+    # was fine at 11 markets and is not fine at 50: the Charlotte expansion
+    # would otherwise have quadrupled the international leg of the nightly
+    # index for all ten origins overnight, for nine cities whose boards we no
+    # longer publish. config/seasonality.json -> origin_intl names the list per
+    # origin; anything unlisted falls back to "_default", and a missing map
+    # means the old behaviour, so this can never silently empty a board.
+    allow = INTL_SCOPE.get(o) or INTL_SCOPE.get("_default")
+    intl = (sorted(c for c in INTL_AVG if c in set(allow)) if allow
+            else sorted(INTL_AVG.keys()))
     return [d for d in dom + intl if d != o]
 
 
