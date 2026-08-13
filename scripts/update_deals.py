@@ -82,6 +82,22 @@ ROUTES = {
  "SAN":("San Diego",None),"RDU":("Raleigh-Durham",None),"MDE":("Medellín",None),
 }
 
+# AUTO-EXTEND from the destination catalog (2026-08-13). The dict above is
+# hand-maintained and stopped at 37 cities; Charlotte now tracks 115. Every
+# unlisted destination used to raise KeyError inside board_for()'s try/except,
+# which does not crash the run — it just quietly files the route under "FETCH
+# FAIL" forever. So 81 of Charlotte's 115 routes would have burned an API call
+# each and then been thrown away, and the expansion would have looked like it
+# did nothing.
+#
+# setdefault, not update: a hand-tuned name above always wins. The avg here is
+# always None because avg_for() reads the real number out of config anyway —
+# the second tuple slot is legacy and nothing should start trusting it.
+for _code, _meta in _SEAS.get("destinations", {}).items():
+    if isinstance(_meta, dict) and _meta.get("city"):
+        ROUTES.setdefault(_code, (_meta["city"], None))
+
+
 # ---------------------------------------------------------------------------
 # TOP 30 DESTINATIONS PER ORIGIN. This is a coverage statement — "these are the
 # 30 destinations we track from this airport" — and the site says exactly that
