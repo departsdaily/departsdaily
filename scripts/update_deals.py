@@ -115,6 +115,17 @@ for _code, _meta in _SEAS.get("destinations", {}).items():
 # widens every affected origin automatically.
 def dests_for(origin):
     o = origin.upper()
+    # THE LEISURE POOL (owner's rule, 2026-08-14). For Charlotte the board no longer
+    # draws from "every city pair DOT publishes" — it draws from the ranked leisure
+    # list. Adopting every DOT pair was the right way to get real fare baselines and
+    # the wrong way to pick holidays: DOT publishes what people fly, and what people
+    # fly is largely work. It put Wichita, Des Moines and Rochester on a travel
+    # account while missing Key West, Nantucket, Aspen and Jackson Hole.
+    # Every dropped route keeps its baseline, so the Fare Finder still prices it.
+    pool = (_SEAS.get("leisure_pool") or {}).get("codes")
+    if pool and o == "CLT":
+        keep = set(pool)
+        return [d for d in sorted(keep) if d != o]
     # DOMESTIC IS SCOPED PER ORIGIN too, for the same reason as international
     # below. The --adopt run on 2026-08-13 pulled real DOT fares for ~65 city
     # pairs out of every origin. That data is right and worth keeping, but nine
