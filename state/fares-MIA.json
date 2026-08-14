@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-14T11:12:46-04:00",
+ "generated": "2026-08-14T11:30:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -8,16 +8,16 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 148,
-   "d1": "2026-10-08",
+   "price": 147,
+   "d1": "2026-10-09",
    "d2": "2026-10-11",
-   "dep": "5:49PM",
+   "dep": "1:45PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:17PM",
-   "arr": "8:58PM",
-   "rarr": "3:00PM",
+   "rdep": "4:32PM",
+   "arr": "4:51PM",
+   "rarr": "7:23PM",
    "pct": 63
   },
   "BNA": {

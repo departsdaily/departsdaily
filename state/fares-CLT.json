@@ -1,10 +1,25 @@
 {
  "origin": "CLT",
- "generated": "2026-08-14T11:10:33-04:00",
+ "generated": "2026-08-14T11:28:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 30,
  "routes_failed": [],
  "fares": {
+  "AUH": {
+   "to": "AUH",
+   "city": "Abu Dhabi",
+   "price": 1266,
+   "d1": "2026-10-04",
+   "d2": "2026-10-15",
+   "dep": "11:31AM",
+   "al": "QR",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:45PM",
+   "arr": "3:00AM+1",
+   "rarr": "3:50PM+1",
+   "pct": -1
+  },
   "BZE": {
    "to": "BZE",
    "city": "Belize City",
@@ -80,6 +95,21 @@
    "rarr": "11:20PM",
    "pct": 35
   },
+  "FRA": {
+   "to": "FRA",
+   "city": "Frankfurt",
+   "price": 995,
+   "d1": "2026-09-03",
+   "d2": "2026-09-14",
+   "dep": "8:40PM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "8:40PM",
+   "arr": "7:25AM+1",
+   "rarr": "8:33AM+1",
+   "pct": -11
+  },
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
@@ -109,21 +139,6 @@
    "arr": "4:55PM",
    "rarr": "4:31AM+1",
    "pct": 77
-  },
-  "LIM": {
-   "to": "LIM",
-   "city": "Lima",
-   "price": 513,
-   "d1": "2026-09-13",
-   "d2": "2026-09-16",
-   "dep": "7:39PM",
-   "al": "LA",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:05AM",
-   "arr": "3:39AM+1",
-   "rarr": "8:22AM",
-   "pct": 32
   },
   "LON": {
    "to": "LON",
@@ -158,17 +173,17 @@
   "MUC": {
    "to": "MUC",
    "city": "Munich",
-   "price": 1100,
-   "d1": "2026-09-05",
-   "d2": "2026-09-14",
-   "dep": "5:58PM",
-   "al": "United",
-   "stops": 2,
+   "price": 830,
+   "d1": "2026-10-06",
+   "d2": "2026-10-22",
+   "dep": "9:20AM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:00PM",
-   "arr": "4:02AM+1",
-   "rarr": "3:32AM+1",
-   "pct": -22
+   "rdep": "11:50AM",
+   "arr": "7:16PM",
+   "rarr": "10:57PM",
+   "pct": 8
   },
   "NAS": {
    "to": "NAS",
@@ -290,6 +305,21 @@
    "rarr": "11:52PM",
    "pct": 38
   },
+  "PTY": {
+   "to": "PTY",
+   "city": "Panama City",
+   "price": 855,
+   "d1": "2026-11-25",
+   "d2": "2026-11-29",
+   "dep": "6:00AM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:31PM",
+   "arr": "1:10PM",
+   "rarr": "2:55AM+1",
+   "pct": -38
+  },
   "SAT": {
    "to": "SAT",
    "city": "San Antonio",
@@ -319,21 +349,6 @@
    "arr": "2:32AM+1",
    "rarr": "8:10PM",
    "pct": 68
-  },
-  "SJD": {
-   "to": "SJD",
-   "city": "Los Cabos",
-   "price": 405,
-   "d1": "2026-09-20",
-   "d2": "2026-09-22",
-   "dep": "4:49PM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:26PM",
-   "arr": "11:24PM",
-   "rarr": "6:05PM",
-   "pct": 39
   },
   "SJU": {
    "to": "SJU",
