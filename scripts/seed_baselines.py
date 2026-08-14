@@ -77,6 +77,7 @@ def build(origin, cfg, legacy_clt):
     dot = cfg.get("dot_round_trip", {}).get(origin, {})
     shared = cfg.get("_dot_shared_market", {}).get(origin, {})
     est = cfg["intl_estimate_round_trip"]
+    us_est = cfg.get("us_estimate_round_trip", {})
 
     routes, notes = {}, []
     # Every destination this origin actually tracks — not the union of all of
@@ -113,6 +114,17 @@ def build(origin, cfg, legacy_clt):
             basis = "DOT"
             if code in shared:
                 src += f" ({shared[code]})"
+        elif code in us_est:
+            # DOMESTIC LABELLED ESTIMATE (2026-08-14). DOT only publishes city pairs
+            # averaging 10+ passengers a day, so it has nothing for Nantucket, Aspen,
+            # Jackson Hole, Key West or Destin — which are exactly the destinations a
+            # leisure account exists to show. The number in us_estimate_round_trip IS
+            # the typical cheap round trip, so NO cheap-fare factor is applied. It is
+            # an estimate and it says so on every slide that carries it.
+            level = us_est[code]
+            src = (f"labelled ESTIMATE ${us_est[code]} typical cheap round trip — DOT "
+                   f"publishes no city pair for {origin}-{code}")
+            basis = "ESTIMATE"
         elif code in est:
             # A destination Charlotte already has a hand-tuned curve for, with
             # no origin-specific reason to move it, keeps that curve exactly.
