@@ -71,6 +71,31 @@ h1 .amber{color:var(--amber)}
 .var{color:var(--green);font-size:12px;text-align:right;letter-spacing:.06em}
 .bfoot{background:var(--tile);color:var(--dim);font-size:12px;padding:10px 18px;line-height:1.5}
 .empty{padding:40px 18px;background:var(--panel);color:var(--dim);text-align:center;line-height:1.7}
+/* THE THREE CATEGORIES (2026-08-14). The site now mirrors the morning post
+   exactly: Long Weekend Trips, Week-ish Trips, Cheapest Out of CLT. Each one is
+   its own board with its own accent stripe and its own name, so a visitor
+   arriving from the bio link finds the same three headings they just swiped
+   through rather than one undifferentiated list. */
+.cats{display:flex;flex-direction:column;gap:22px;margin-bottom:10px}
+.cat{border:2px solid var(--edge);border-radius:14px;overflow:hidden;border-top-width:6px}
+.cat.weekend{border-top-color:var(--amber)}
+.cat.weekish{border-top-color:var(--sky)}
+.cat.cheapest{border-top-color:var(--green)}
+.cathead{background:var(--tile);padding:16px 18px;border-bottom:2px solid var(--edge)}
+.catname{font-size:26px;font-weight:800;letter-spacing:.04em;line-height:1.15;margin:0}
+.cat.weekend .catname{color:var(--amber)}
+.cat.weekish .catname{color:var(--sky)}
+.cat.cheapest .catname{color:var(--green)}
+.catmeta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:8px;
+         font-size:12px;letter-spacing:.14em;color:var(--dim)}
+.catmeta b{color:var(--white);font-weight:700}
+.catsub{margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--dim);letter-spacing:0}
+.catnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.catnav a{display:inline-block;padding:9px 14px;border:2px solid var(--edge);border-radius:999px;
+          background:var(--tile);color:var(--dim);text-decoration:none;font-size:12px;letter-spacing:.12em}
+.catnav a:hover{color:var(--white);border-color:var(--sky)}
+.catnav a .cn{color:var(--white);font-weight:700}
+@media(max-width:640px){.catname{font-size:21px}}
 
 .ns{color:var(--green)}.st{color:var(--amber)}
 .routesel{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
@@ -235,6 +260,31 @@ h1 .amber{color:var(--amber)}
 .var{color:var(--green);font-size:12px;text-align:right;letter-spacing:.06em}
 .bfoot{background:var(--tile);color:var(--dim);font-size:12px;padding:10px 18px;line-height:1.5}
 .empty{padding:40px 18px;background:var(--panel);color:var(--dim);text-align:center;line-height:1.7}
+/* THE THREE CATEGORIES (2026-08-14). The site now mirrors the morning post
+   exactly: Long Weekend Trips, Week-ish Trips, Cheapest Out of CLT. Each one is
+   its own board with its own accent stripe and its own name, so a visitor
+   arriving from the bio link finds the same three headings they just swiped
+   through rather than one undifferentiated list. */
+.cats{display:flex;flex-direction:column;gap:22px;margin-bottom:10px}
+.cat{border:2px solid var(--edge);border-radius:14px;overflow:hidden;border-top-width:6px}
+.cat.weekend{border-top-color:var(--amber)}
+.cat.weekish{border-top-color:var(--sky)}
+.cat.cheapest{border-top-color:var(--green)}
+.cathead{background:var(--tile);padding:16px 18px;border-bottom:2px solid var(--edge)}
+.catname{font-size:26px;font-weight:800;letter-spacing:.04em;line-height:1.15;margin:0}
+.cat.weekend .catname{color:var(--amber)}
+.cat.weekish .catname{color:var(--sky)}
+.cat.cheapest .catname{color:var(--green)}
+.catmeta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:8px;
+         font-size:12px;letter-spacing:.14em;color:var(--dim)}
+.catmeta b{color:var(--white);font-weight:700}
+.catsub{margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--dim);letter-spacing:0}
+.catnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.catnav a{display:inline-block;padding:9px 14px;border:2px solid var(--edge);border-radius:999px;
+          background:var(--tile);color:var(--dim);text-decoration:none;font-size:12px;letter-spacing:.12em}
+.catnav a:hover{color:var(--white);border-color:var(--sky)}
+.catnav a .cn{color:var(--white);font-weight:700}
+@media(max-width:640px){.catname{font-size:21px}}
 
 .ns{color:var(--green)}.st{color:var(--amber)}
 .routesel{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
@@ -530,7 +580,17 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
   <div class="bfoot">These are the exact fares from this morning&#39;s post, in the same order. Tapping a row runs a <b style="color:var(--white)">live search</b> for those dates — the price you book is today&#39;s price. Fares move; if one has gone, the live search shows the current best.</div>
 </div>
 
-<div class="board">
+<!-- THE THREE CATEGORIES. Populated from SECTIONS in js/deals-data.js, which the
+     updater builds from config/schedule.json — the same file the Instagram post
+     reads — so the page and the carousel can never disagree about what a
+     "long weekend" is. If SECTIONS is missing (an old data file, or a run that
+     only produced the flat board) the single DEPARTURES board below renders
+     instead, so the site degrades to its previous behaviour rather than to an
+     empty page. -->
+<nav class="catnav" id="catnav" hidden aria-label="Jump to a trip category"></nav>
+<div class="cats" id="cats" hidden></div>
+
+<div class="board" id="flatBoard">
   <div class="bhead"><span>DEPARTURES — <span id="boardCity">CHARLOTTE (CLT)</span></span><span id="boardStamp">ROUND TRIP</span></div>
   <div id="rows"></div>
   <div class="bfoot">Every fare was verified at the board's last update (shown above). Tapping a row opens a <b style="color:var(--white)">live search for those exact dates</b> — so what you book is today's real price. Deals expire off this board automatically; if a fare jumped since our check, the live search shows you the current best. Averages based on typical route pricing. Some links are affiliate links — we may earn a commission at no cost to you. <a href="disclosure.html">Details</a>.</div>
@@ -1287,10 +1347,87 @@ function renderCity(code){
   const rows=document.getElementById("rows");
   document.querySelectorAll("#citybar .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===code));
   renderRoutes(code);
+  renderCategories(code);
   if(!DEALS[code]){rows.innerHTML=`<div class="empty">This board opens soon.<br>Get on the email list below and you'll know the day ${code} goes live.</div>`;return;}
   const deals=liveDeals(DEALS[code]);
   if(!deals.length){rows.innerHTML=`<div class="empty">Today's deals have expired — the board refreshes through the day.<br>Get on the email list below so tomorrow's fares land in your inbox.</div>`;return;}
   rows.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
+}
+
+/* THE THREE CATEGORIES — the page's half of the mirror.
+
+   Long Weekend Trips / Week-ish Trips / Cheapest Out of CLT, in that order,
+   each visually its own thing. The night ranges, the names and which sections
+   are allowed to claim a saving all come from the data file, which the updater
+   builds from config/schedule.json, so nothing here has to be kept in sync by
+   hand: change the config once and both the post and this page move together.
+
+   Rows expire client-side exactly like the flat board's, via the same
+   liveDeals() stamp check. A category whose rows have all expired hides itself
+   rather than printing a heading over nothing.                              */
+/* The page says "TRIPS" where the slide just says the category, because a heading
+   on a web page has room to be a noun phrase and a 76pt slide header does not.
+   Falls through to the post's own wording for anything unrecognised, so a new
+   section added to config/schedule.json appears here without a code change. */
+const CAT_TITLE={weekend:"LONG WEEKEND TRIPS",weekish:"WEEK-ISH TRIPS"};
+function catTitle(sec){ return CAT_TITLE[sec.key]||sec.cover; }
+
+function catBlurb(sec){
+  const n=sec.nights||[];
+  const span=n.length===2?(n[0]===n[1]?`${n[0]} nights`:`${n[0]}\u2013${n[1]} nights`):"";
+  if(sec.key==="weekend")
+    return `${span}. Out Thursday or Friday, back Sunday or Monday \u2014 a real trip that barely touches the working week.`;
+  if(sec.key==="weekish")
+    return `${span}. The holiday you plan around, mostly international, where one week of leave buys two weekends.`;
+  return `Any length, including the odd midweek shapes. The lowest real fares out of Charlotte right now \u2014 no saving is claimed here, just the price.`;
+}
+
+function renderCategories(code){
+  const wrap=document.getElementById("cats");
+  const nav=document.getElementById("catnav");
+  const flat=document.getElementById("flatBoard");
+  if(!wrap||!nav||!flat) return;
+  const blob=(typeof SECTIONS!=="undefined"&&SECTIONS)?SECTIONS[code]:null;
+  const secs=blob&&Array.isArray(blob.sections)?blob.sections:[];
+  /* Same expiry stamp the flat board uses, so a category can never outlive it. */
+  const exp=blob&&blob.exp?blob.exp:null;
+  const live=secs.map(sec=>({sec,rows:liveDeals((sec.rows||[]).map(r=>exp&&!r.exp?Object.assign({},r,{exp:exp}):r))}))
+                 .filter(o=>o.rows.length);
+  if(!live.length){                       /* fall back to the one flat board */
+    wrap.hidden=true; nav.hidden=true; flat.hidden=false; return;
+  }
+  flat.hidden=true;
+  nav.hidden=false;
+  nav.innerHTML=live.map(o=>
+    `<a href="#cat-${o.sec.key}"><span class="cn">${catTitle(o.sec)}</span> \u00b7 ${o.rows.length}</a>`).join("");
+  wrap.hidden=false;
+  wrap.innerHTML=live.map(o=>{
+    const s=o.sec, rows=o.rows;
+    /* Counted with the SAME test dealVar() uses to print a row's badge, not with
+       the pct the updater filtered on. Those two numbers come from different
+       baselines — the updater's annual average and the route curve on this page —
+       and a header reading "8 verified deals" over rows that print HOT FARE would
+       be the page contradicting itself. So the count is whatever the visitor can
+       actually see. The CHEAPEST category claims nothing at all, and says so,
+       because its bar is price rather than saving. */
+    const deals=rows.filter(r=>{
+      const rt=(ROUTES[code]||{})[r.to];
+      return rt&&Math.round((1-r.price/rt.avg)*100)>=15;
+    }).length;
+    const claim=s.claims
+      ? `<b>${deals}</b> verified deal${deals===1?"":"s"}`
+      : `<b>${rows.length}</b> lowest fare${rows.length===1?"":"s"} \u00b7 no saving claimed`;
+    return `
+     <section class="cat ${s.key}" id="cat-${s.key}">
+       <div class="cathead">
+         <h2 class="catname">${catTitle(s)}</h2>
+         <div class="catmeta"><span>${claim}</span><span>ROUND TRIP</span></div>
+         <p class="catsub">${catBlurb(s)}</p>
+       </div>
+       ${rows.map(x=>rowHTML(code,x,"cat-"+s.key)).join("")}
+       <div class="bfoot">Tapping a row runs a <b style="color:var(--white)">live search for those exact dates</b>, so the price you book is today's real price. Fares move fast and expire off this board on their own. Some links are affiliate links \u2014 we may earn a commission at no cost to you. <a href="disclosure.html">Details</a>.</div>
+     </section>`;
+  }).join("");
 }
 
 /* The one flight-search link on the site. Reads the marker off BOTH spellings
