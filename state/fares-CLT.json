@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-14T08:14:44-04:00",
+ "generated": "2026-08-14T10:10:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 33,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 156,
-   "d1": "2026-08-29",
-   "d2": "2026-08-31",
-   "dep": "8:51PM",
+   "price": 176,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30",
+   "dep": "1:58PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:50AM",
-   "arr": "1:51AM+1",
-   "rarr": "12:26PM",
-   "pct": 62
+   "rdep": "2:27PM",
+   "arr": "4:13PM",
+   "rarr": "4:46PM",
+   "pct": 57
   },
   "NYC": {
    "to": "NYC",
@@ -263,7 +263,7 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 256,
+   "price": 205,
    "d1": "2026-09-03",
    "d2": "2026-09-07",
    "dep": "8:05AM",
@@ -273,7 +273,7 @@
    "rdep": "11:54PM",
    "arr": "4:12PM",
    "rarr": "6:45AM+1",
-   "pct": 62
+   "pct": 69
   },
   "ROC": {
    "to": "ROC",
