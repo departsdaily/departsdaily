@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-14T10:19:26-04:00",
+ "generated": "2026-08-14T11:10:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 28,
+ "routes_priced": 29,
  "routes_failed": [],
  "fares": {
   "BZE": {
@@ -274,6 +274,21 @@
    "arr": "11:01AM",
    "rarr": "5:18PM",
    "pct": 16
+  },
+  "PSP": {
+   "to": "PSP",
+   "city": "Palm Springs",
+   "price": 421,
+   "d1": "2026-11-12",
+   "d2": "2026-11-15",
+   "dep": "5:10AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:37PM",
+   "arr": "11:30AM",
+   "rarr": "11:52PM",
+   "pct": 38
   },
   "SAT": {
    "to": "SAT",
