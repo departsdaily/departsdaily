@@ -144,7 +144,12 @@ PLAN = B.get("plan") or {}
 
 # Deals only, exactly like the carousel. A filler fare in a reel would wear
 # motion and music on top of a claim it never earned.
-DEALS = [d for d in B["deals"] if d.get("deal", True)]
+# TIER FIRST (owner's rule, 2026-08-14). The reel is the widest reach format on the
+# account, so it leads with the headline destinations rather than whichever route
+# happened to post the biggest percentage. Within a tier the best discount still wins,
+# and nothing is excluded — a thin day still fills from the long tail.
+DEALS = sorted([d for d in B["deals"] if d.get("deal", True)],
+               key=lambda d: (d.get("tier", 3), -d.get("disc", 0)))
 if not DEALS:
     raise SystemExit("FATAL: no deal rows in %s — nothing to make a reel from"
                      % origins.paths(ORIGIN)["deals"])
