@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-14T06:16:37-04:00",
+ "generated": "2026-08-14T08:16:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 148,
-   "d1": "2026-09-19",
-   "d2": "2026-09-27",
-   "dep": "6:45PM",
+   "price": 191,
+   "d1": "2026-10-03",
+   "d2": "2026-10-10",
+   "dep": "2:29PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:00PM",
-   "arr": "10:02PM",
-   "rarr": "11:05PM",
-   "pct": 64
+   "rdep": "8:46AM",
+   "arr": "5:37PM",
+   "rarr": "11:44AM",
+   "pct": 54
   },
   "MSY": {
    "to": "MSY",
@@ -308,17 +308,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 188,
-   "d1": "2026-09-28",
-   "d2": "2026-10-03",
-   "dep": "6:30AM",
-   "al": "American",
-   "stops": 1,
+   "price": 352,
+   "d1": "2026-10-05",
+   "d2": "2026-10-09",
+   "dep": "11:28AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "12:10PM",
-   "arr": "11:19AM",
-   "rarr": "5:18PM",
-   "pct": 64
+   "rdep": "4:05PM",
+   "arr": "3:45PM",
+   "rarr": "7:51PM",
+   "pct": 32
   },
   "GCM": {
    "to": "GCM",
@@ -398,17 +398,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 288,
-   "d1": "2026-10-13",
-   "d2": "2026-10-18",
-   "dep": "5:06PM",
+   "price": 354,
+   "d1": "2026-10-01",
+   "d2": "2026-10-07",
+   "dep": "9:00PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:50AM",
-   "arr": "10:40PM",
-   "rarr": "5:29PM",
-   "pct": 49
+   "rdep": "11:39AM",
+   "arr": "2:43AM+1",
+   "rarr": "5:28PM",
+   "pct": 37
   },
   "ROM": {
    "to": "ROM",

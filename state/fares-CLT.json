@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-14T06:54:01-04:00",
+ "generated": "2026-08-14T08:14:44-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 32,
+ "routes_priced": 33,
  "routes_failed": [],
  "fares": {
   "BDL": {
@@ -19,6 +19,21 @@
    "arr": "2:17AM+1",
    "rarr": "8:12PM",
    "pct": 50
+  },
+  "BOS": {
+   "to": "BOS",
+   "city": "Boston",
+   "price": 369,
+   "d1": "2026-10-22",
+   "d2": "2026-10-25",
+   "dep": "11:50AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:47AM",
+   "arr": "3:26PM",
+   "rarr": "5:06PM",
+   "pct": 29
   },
   "BUF": {
    "to": "BUF",
@@ -170,6 +185,21 @@
    "rarr": "8:48AM",
    "pct": 68
   },
+  "MEM": {
+   "to": "MEM",
+   "city": "Memphis",
+   "price": 326,
+   "d1": "2026-10-30",
+   "d2": "2026-11-01",
+   "dep": "10:02PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "8:27PM",
+   "arr": "6:40AM+1",
+   "rarr": "12:52AM+1",
+   "pct": 45
+  },
   "MIA": {
    "to": "MIA",
    "city": "Miami",
@@ -229,21 +259,6 @@
    "arr": "11:05AM",
    "rarr": "3:55PM",
    "pct": 13
-  },
-  "PDX": {
-   "to": "PDX",
-   "city": "Portland, OR",
-   "price": 347,
-   "d1": "2026-10-10",
-   "d2": "2026-10-13",
-   "dep": "11:59AM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "5:35PM",
-   "arr": "9:07PM",
-   "rarr": "1:40AM+1",
-   "pct": 55
   },
   "PHX": {
    "to": "PHX",
