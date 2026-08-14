@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-14T14:15:35-04:00",
+ "generated": "2026-08-14T16:00:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 250,
-   "d1": "2026-10-05",
-   "d2": "2026-10-12",
-   "dep": "10:59AM",
-   "al": "JetBlue",
+   "price": 246,
+   "d1": "2026-10-08",
+   "d2": "2026-10-11",
+   "dep": "8:01PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:15PM",
-   "arr": "7:34PM",
-   "rarr": "6:24AM+1",
-   "pct": 49
+   "rdep": "8:00PM",
+   "arr": "4:01AM+1",
+   "rarr": "2:59AM+1",
+   "pct": 50
   },
   "SFO": {
    "to": "SFO",
