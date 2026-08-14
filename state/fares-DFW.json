@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-13T18:12:07-04:00",
+ "generated": "2026-08-13T20:15:54-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -173,7 +173,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 148,
+   "price": 143,
    "d1": "2026-10-30",
    "d2": "2026-11-02",
    "dep": "9:51PM",
@@ -183,7 +183,7 @@
    "rdep": "6:00AM",
    "arr": "12:25AM+1",
    "rarr": "8:39AM",
-   "pct": 64
+   "pct": 65
   },
   "PHL": {
    "to": "PHL",

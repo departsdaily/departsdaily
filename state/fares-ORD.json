@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-13T18:11:49-04:00",
+ "generated": "2026-08-13T20:15:34-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -98,9 +98,9 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 87,
-   "d1": "2026-09-09",
-   "d2": "2026-09-15",
+   "price": 99,
+   "d1": "2026-09-14",
+   "d2": "2026-09-16",
    "dep": "7:11AM",
    "al": "Frontier",
    "stops": 0,
@@ -108,7 +108,7 @@
    "rdep": "12:53PM",
    "arr": "10:23AM",
    "rarr": "4:20PM",
-   "pct": 80
+   "pct": 77
   },
   "HOU": {
    "to": "HOU",
@@ -128,7 +128,7 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 120,
+   "price": 121,
    "d1": "2026-10-01",
    "d2": "2026-10-08",
    "dep": "8:55PM",
@@ -218,17 +218,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 137,
-   "d1": "2026-09-03",
+   "price": 149,
+   "d1": "2026-09-04",
    "d2": "2026-09-06",
-   "dep": "5:55AM",
+   "dep": "8:37AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:22AM",
-   "arr": "8:04AM",
+   "arr": "10:52AM",
    "rarr": "12:55PM",
-   "pct": 68
+   "pct": 65
   },
   "PHX": {
    "to": "PHX",
@@ -263,17 +263,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 251,
+   "price": 244,
    "d1": "2026-09-10",
    "d2": "2026-09-13",
-   "dep": "8:55PM",
+   "dep": "10:26AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:24PM",
-   "arr": "2:49AM+1",
-   "rarr": "3:47AM+1",
-   "pct": 63
+   "rdep": "10:05PM",
+   "arr": "5:59PM",
+   "rarr": "5:10AM+1",
+   "pct": 64
   },
   "TPA": {
    "to": "TPA",
@@ -353,17 +353,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 383,
+   "price": 417,
    "d1": "2026-09-26",
    "d2": "2026-09-30",
-   "dep": "12:12PM",
-   "al": "DM",
+   "dep": "5:35PM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:35PM",
-   "arr": "4:57PM",
-   "rarr": "9:34PM",
-   "pct": 32
+   "rdep": "5:05PM",
+   "arr": "11:58PM",
+   "rarr": "12:17AM+1",
+   "pct": 26
   },
   "ROM": {
    "to": "ROM",

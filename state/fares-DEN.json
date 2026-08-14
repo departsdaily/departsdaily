@@ -1,25 +1,10 @@
 {
  "origin": "DEN",
- "generated": "2026-08-13T18:12:24-04:00",
+ "generated": "2026-08-13T20:16:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 103,
-   "d1": "2026-09-03",
-   "d2": "2026-09-11",
-   "dep": "8:26PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "1:25PM",
-   "arr": "10:41PM",
-   "rarr": "3:46PM",
-   "pct": 73
-  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -233,17 +218,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 880,
+   "price": 822,
    "d1": "2026-09-30",
    "d2": "2026-10-07",
-   "dep": "3:15PM",
+   "dep": "10:40AM",
    "al": "",
-   "stops": 1,
+   "stops": 2,
    "xfer": 1,
-   "rdep": "10:40AM",
-   "arr": "2:52AM+1",
-   "rarr": "9:55PM",
-   "pct": 2
+   "rdep": "6:50PM",
+   "arr": "11:38PM",
+   "rarr": "8:53AM+1",
+   "pct": 9
   },
   "PUJ": {
    "to": "PUJ",

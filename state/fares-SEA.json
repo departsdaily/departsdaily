@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-13T18:13:32-04:00",
+ "generated": "2026-08-13T20:17:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -8,32 +8,32 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 391,
-   "d1": "2026-09-01",
-   "d2": "2026-09-04",
-   "dep": "11:05PM",
-   "al": "Southwest",
-   "stops": 1,
+   "price": 385,
+   "d1": "2026-08-26",
+   "d2": "2026-09-02",
+   "dep": "2:37PM",
+   "al": "Frontier",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "7:26PM",
-   "arr": "5:20AM+1",
-   "rarr": "1:49AM+1",
-   "pct": 42
+   "rdep": "12:45PM",
+   "arr": "11:12PM",
+   "rarr": "12:19AM+1",
+   "pct": 43
   },
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 309,
+   "price": 369,
    "d1": "2026-09-14",
    "d2": "2026-09-20",
    "dep": "11:57PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:00AM",
-   "arr": "6:09AM+1",
-   "rarr": "12:10PM",
-   "pct": 53
+   "rdep": "6:19PM",
+   "arr": "6:10AM+1",
+   "rarr": "1:46AM+1",
+   "pct": 44
   },
   "DEN": {
    "to": "DEN",
@@ -128,17 +128,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 335,
+   "price": 265,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "6:00AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:05AM",
+   "rdep": "6:03PM",
    "arr": "1:02PM",
-   "rarr": "4:42PM",
-   "pct": 48
+   "rarr": "1:43AM+1",
+   "pct": 59
   },
   "ORD": {
    "to": "ORD",
