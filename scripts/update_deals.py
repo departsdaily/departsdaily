@@ -149,12 +149,93 @@ def dests_for(origin):
     return [d for d in dom + intl if d != o]
 
 
-INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM","AMS","MDE"}
+# WHICH ROUTES ARE INTERNATIONAL. Read from config/seasonality.json, the one
+# authoritative place, exactly as pipeline/fetch_fares.py does. This used to be a
+# hand-typed set of twelve codes written when the site tracked twelve international
+# markets. Charlotte now tracks sixty-eight, so every one of the other fifty-six —
+# St. Maarten, Los Cabos, Punta Cana, Lisbon — was being scored as domestic: wrong
+# trip-length window in pick(), and locked out of the guaranteed international slots.
+# The literal below survives only as a fallback if the config cannot be read.
+_FALLBACK_INTL = {"CUN","PUJ","MBJ","NAS","AUA","SJU","GCM","LON","PAR","ROM","AMS","MDE"}
+INTL = {c for c, v in (_SEAS.get("destinations") or {}).items()
+        if isinstance(v, dict) and v.get("intl")} or _FALLBACK_INTL
 
 # Board shape. International gets guaranteed slots because those bookings are
 # worth several times a domestic one — bigger fares, and the traveller goes on
 # to book hotels and tours through the city guide. Ordering only: prices and
 # computed discount badges are never adjusted to favour them.
+# THE WEBSITE MIRRORS THE POST (owner's rule, 2026-08-14). The morning carousel
+# has three named categories, so the site shows the same three under the same
+# names instead of one undifferentiated list. Read from config/schedule.json —
+# the identical file pipeline/day_plan.py reads — so the two can never drift:
+# change a night band once and the post and the page both move.
+_SCHED_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "..", "config", "schedule.json")
+def site_sections():
+    try:
+        with open(_SCHED_PATH, encoding="utf-8") as fh:
+            secs = json.load(fh).get("sections") or []
+    except (OSError, ValueError):
+        return []
+    out = []
+    for sec in secs:
+        n = sec.get("nights") or [2, 9]
+        out.append({"key": sec.get("key"),
+                    "label": sec.get("cover", "").title(),
+                    "cover": sec.get("cover", ""),
+                    "nights": (int(n[0]), int(n[1])),
+                    # deals_only sections must clear the bar; CHEAPEST claims
+                    # nothing and is therefore allowed any real price.
+                    "deals_only": bool(sec.get("deals_only", True)),
+                    "min_pct": round(float(sec.get("min_discount", 0.12)) * 100),
+                    "sort": sec.get("sort", "discount"),
+                    "angle": sec.get("angle", "")})
+    return [o for o in out if o["key"]]
+
+# THE NUMBER THE PAGE WILL ACTUALLY PRINT (2026-08-14). avg_for() returns the raw
+# DOT city-pair average, which is every fare sold on the route including full-fare
+# business. state/baselines-<ORIGIN>.json holds the CHEAP-fare curve — that same DOT
+# figure after config/seasonality.json's cheap_fare_factor — and it is what
+# ROUTES[].avg on the page and the Instagram post both compare against. Filtering a
+# category on one number while the row prints a badge from the other is how a
+# heading ends up reading "8 verified deals" above eight rows that all say HOT FARE.
+# So the sections are filtered on the curve, and fall back to avg_for() only when a
+# route has no curve at all.
+_BASELINE_CACHE = {}
+def baseline_avg(origin, dest):
+    o = origin.upper()
+    if o not in _BASELINE_CACHE:
+        try:
+            with open(os.path.join(SNAPSHOT_DIR, f"baselines-{o}.json"), encoding="utf-8") as fh:
+                _BASELINE_CACHE[o] = (json.load(fh).get("routes") or {})
+        except (OSError, ValueError):
+            _BASELINE_CACHE[o] = {}
+    m = (_BASELINE_CACHE[o].get(dest) or {}).get("m")
+    if m:
+        return sum(m) / len(m)
+    return avg_for(origin, dest)
+
+# TIERS, THE SAME ONES THE POST USES (config/tiers.json). Exposure, never
+# eligibility: a tier reorders rows so London and Cancun beat San Salvador when
+# both are on offer, and it can never put a fare on the page that did not earn
+# its place, nor change a price or a percentage. Without this the CHEAPEST
+# category degenerates into whatever obscure city happened to be $9 cheaper,
+# which is exactly what the owner asked us to stop doing.
+_TIERS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "..", "config", "tiers.json")
+try:
+    with open(_TIERS_PATH, encoding="utf-8") as _fh:
+        _TIERS = json.load(_fh)
+except (OSError, ValueError):
+    _TIERS = {"tiers": {}, "tier": {}}
+def tier_of(code):
+    return int(_TIERS.get("tier", {}).get(code, 3))
+def tier_bonus(code):
+    return int((_TIERS.get("tiers", {}).get(str(tier_of(code))) or {}).get("bonus", 0))
+
+SITE_SECTIONS = site_sections()
+SECTION_ROWS = int(os.environ.get("SITE_SECTION_ROWS", "8"))
+
 MIN_ROUTES  = 8   # too few live routes -> keep the previous board
 DAILY_ROWS  = 8
 DAILY_INTL  = 3
@@ -257,10 +338,19 @@ def arr_time(dt, duration_min):
     return (f"{h}:{mm:02d}{'AM' if h24 < 12 else 'PM'}"
             + ("+1" if total >= 1440 else ""))
 
-def pick(dest, fares, today):
+def pick(dest, fares, today, band=None):
     """Cheapest sane round trip. Domestic: 3-90 days out, 2-9 day trips.
-    International: 3-120 days out, 4-21 day trips (how people actually fly)."""
+    International: 3-120 days out, 4-21 day trips (how people actually fly).
+
+    `band` overrides the trip length with an explicit (low, high) night range so
+    the same cached fares can answer three different questions — a long weekend,
+    a week-ish holiday, and the cheapest seat at any length — without a single
+    extra API call. It only narrows WHICH fare is chosen; nothing about price or
+    the discount computed from it changes."""
     max_out, len_lo, len_hi = (120, 4, 21) if dest in INTL else (90, 2, 9)
+    if band:
+        len_lo, len_hi = int(band[0]), int(band[1])
+        max_out = 150
     best = None
     for f in fares:
         try:
@@ -326,6 +416,28 @@ def previous_boards(path):
     return dict(PREV_RX.findall(txt[i:])) if i >= 0 else {}
 
 
+def previous_sections(path):
+    """Last run's category boards, so a scoped or failed run cannot blank them.
+
+    Stored as strict JSON inside the generated file precisely so it can be read
+    back with json.loads rather than re-parsed out of JavaScript by regex.
+    """
+    try:
+        with open(path, encoding="utf-8") as fh:
+            txt = fh.read()
+    except OSError:
+        return {}
+    i = txt.find("const SECTIONS=")
+    if i < 0:
+        return {}
+    j = txt.find("\n", i)
+    raw = txt[i + len("const SECTIONS="):j].rstrip().rstrip(";")
+    try:
+        return json.loads(raw)
+    except ValueError:
+        return {}
+
+
 SNAPSHOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             "..", "state")
 
@@ -358,9 +470,14 @@ def write_snapshot(origin, found, failed):
 def board_for(origin, today):
     """Build one origin's daily board. Returns [] if the cache was too thin."""
     found, failed = [], []
+    # The raw offers per destination, held for the length of this run. board_for
+    # already paid for them; the three site categories are then answered from the
+    # same list rather than three more round trips to the API.
+    offers = {}
     for dest in dests_for(origin):
         try:
-            deal = pick(dest, fetch(origin, dest), today)
+            offers[dest] = fetch(origin, dest)
+            deal = pick(dest, offers[dest], today)
             if deal:
                 avg = avg_for(origin, dest)
                 # No baseline -> no claim. pct 0 keeps it out of the "biggest
@@ -421,7 +538,68 @@ def board_for(origin, today):
     os.makedirs(os.path.dirname(ROTATION_STATE), exist_ok=True)
     with open(ROTATION_STATE, "w", encoding="utf-8") as fh:
         json.dump(state, fh, indent=1)
-    return daily
+    return daily, sections_for(origin, offers, today, cfg, last_shown)
+
+
+def sections_for(origin, offers, today, cfg, last_shown):
+    """The three named categories the morning post publishes, for the website.
+
+    One pass per section over fares this run already fetched. A destination may
+    appear in more than one category on the same day only with a DIFFERENT trip,
+    which is the owner's rule for the post as well — the same city Thursday to
+    Sunday and the same city for eleven nights are two different holidays. The
+    exact same flight is never printed twice.
+
+    Honesty is unchanged and non-negotiable: a row carries a "% below typical"
+    badge only when it genuinely cleared that section's bar, and CHEAPEST, which
+    claims nothing about savings, is the only section allowed to show a fare that
+    did not — with no badge on it.
+    """
+    if not SITE_SECTIONS:
+        return []
+    used = set()
+    out = []
+    for spec in SITE_SECTIONS:
+        rows = []
+        for dest, fares in offers.items():
+            deal = pick(dest, fares, today, band=spec["nights"])
+            if not deal:
+                continue
+            avg = baseline_avg(origin, dest)
+            deal["pct"] = round((1 - deal["price"] / avg) * 100) if avg else 0
+            deal["nights"] = (date.fromisoformat(deal["d2"])
+                              - date.fromisoformat(deal["d1"])).days
+            if spec["deals_only"] and deal["pct"] < spec["min_pct"]:
+                continue
+            if not spec["deals_only"] and deal["pct"] < 0:
+                # "Cheapest" is a promise about price, not permission to print an
+                # overpayment. Same rule the post enforces.
+                continue
+            rows.append(deal)
+        for d in rows:
+            d["tier"] = tier_of(d["to"])
+        if spec["sort"] == "price":
+            # cheapest first, but a headline destination beats a nobody at a
+            # similar price. Same weighting the post applies to its own
+            # CHEAPEST slide, so the two lists read as one editorial voice.
+            rows.sort(key=lambda d: d["price"] - tier_bonus(d["to"]) * 4)
+        else:
+            rows.sort(key=lambda d: -(rotation_score(d, cfg, last_shown, today)
+                                      + tier_bonus(d["to"])))
+        picked = []
+        for d in rows:
+            if len(picked) >= SECTION_ROWS:
+                break
+            if (d["to"], d["d1"], d["d2"]) in used:
+                continue
+            used.add((d["to"], d["d1"], d["d2"]))
+            picked.append(d)
+        out.append({"key": spec["key"], "cover": spec["cover"],
+                    "angle": spec["angle"], "nights": list(spec["nights"]),
+                    "claims": spec["deals_only"], "rows": picked})
+        print(f"  {origin} site section {spec['key']:9} {len(picked)} rows "
+              f"({spec['nights'][0]}-{spec['nights'][1]} nights)")
+    return out
 
 
 def main():
@@ -436,18 +614,31 @@ def main():
     exp_daily = (today + timedelta(days=2)).isoformat()
 
     prev = previous_boards(out_path)
+    prev_secs = previous_sections(out_path)
     blocks, fresh, carried, counts = [], [], [], {}
+    sec_out = {}
 
     for origin in ORIGINS:
         print(f"--- {origin} ({len(dests_for(origin))} destinations) ---")
-        daily = board_for(origin, today)
+        daily, secs = board_for(origin, today)
         if daily:
             sep = ",\n "
             blocks.append(f'{origin}:[\n ' + sep.join(js_deal(d, exp_daily) for d in daily) + "]")
             fresh.append(origin); counts[origin] = len(daily)
+            if secs:
+                sec_out[origin] = {"exp": exp_daily, "sections": secs}
         elif origin in prev:
             blocks.append(f'{origin}:[{prev[origin]}]')
             carried.append(origin)
+            if origin in prev_secs:
+                sec_out[origin] = prev_secs[origin]
+
+    # Same carry-forward rule as the flat board: a scoped run must not erase the
+    # categories of an origin it was never asked to rebuild. Rows still expire on
+    # their own `exp`, so nothing stale can outlive its stamp.
+    for origin, blob in prev_secs.items():
+        if origin not in ORIGINS:
+            sec_out.setdefault(origin, blob)
 
     # A SCOPED RUN MUST NOT ERASE EVERYONE ELSE. Found the hard way Jul 29:
     # the ATL posting job ran this script with ORIGINS=ATL and the file was
@@ -482,6 +673,7 @@ const BOARD={{
  updated:"{updated}",
 }};
 const DEALS={{{",".join(blocks)}}};
+const SECTIONS={json.dumps(sec_out, ensure_ascii=False, separators=(",", ":"))};
 """
     with open(out_path, "w", encoding="utf-8") as fh:
         fh.write(body)
