@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-14T12:25:08-04:00",
+ "generated": "2026-08-14T13:33:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 30,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "AUH": {
@@ -83,15 +83,15 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 264,
+   "price": 262,
    "d1": "2026-09-04",
    "d2": "2026-09-07",
-   "dep": "6:40AM",
+   "dep": "3:10PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "9:10PM",
-   "arr": "8:46AM",
+   "arr": "5:16PM",
    "rarr": "11:20PM",
    "pct": 35
   },
@@ -215,21 +215,6 @@
    "rarr": "10:39AM",
    "pct": 65
   },
-  "ORD": {
-   "to": "ORD",
-   "city": "Chicago",
-   "price": 210,
-   "d1": "2026-08-29",
-   "d2": "2026-08-31",
-   "dep": "5:21PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:25PM",
-   "arr": "11:57PM",
-   "rarr": "6:28PM",
-   "pct": 47
-  },
   "PAR": {
    "to": "PAR",
    "city": "Paris",
@@ -334,21 +319,6 @@
    "arr": "5:00PM",
    "rarr": "3:55PM",
    "pct": 13
-  },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 257,
-   "d1": "2026-10-23",
-   "d2": "2026-11-01",
-   "dep": "7:46PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:07PM",
-   "arr": "2:32AM+1",
-   "rarr": "8:10PM",
-   "pct": 68
   },
   "SJU": {
    "to": "SJU",
