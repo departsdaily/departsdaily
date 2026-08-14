@@ -69,6 +69,22 @@ def fit_title(draw, text, maxw, start=76, floor=34):
     return f
 
 
+def wrap_to(draw, text, font, maxw):
+    """Greedy word wrap at a pixel width. Used for the one line of plain
+    language that rides above every board — it has to fit whatever wording the
+    config carries, not whatever wording happened to fit when it was written."""
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        trial = (cur + " " + w).strip()
+        if cur and draw.textlength(trial, font=font) > maxw:
+            lines.append(cur); cur = w
+        else:
+            cur = trial
+    if cur:
+        lines.append(cur)
+    return lines
+
+
 def fmt_dates(x):
     # WEEKDAYS, NOT JUST DATES (2026-08-13). The whole plan is built around what
     # a trip costs someone with a normal job, and "SEP 16-SEP 22" does not
@@ -115,20 +131,29 @@ if SECTIONS:
         rows_all = sec["deals"]
         if not rows_all:
             continue
-        chunks = [rows_all[i:i+ROWS_PER_SLIDE] for i in range(0, len(rows_all), ROWS_PER_SLIDE)]
+        # BALANCED, NOT GREEDY. Chunking 7 at a time turns 8 rows into a full
+        # slide followed by a slide with one lonely fare on it, which reads as a
+        # mistake. Anything that spills is split down the middle instead, so 8
+        # rows go 4 and 4 and 14 go 7 and 7. Never more than two slides: that is
+        # the owner's cap, and rows_target already holds the board to 14.
+        if len(rows_all) <= ROWS_PER_SLIDE:
+            chunks = [rows_all]
+        else:
+            half = (len(rows_all) + 1) // 2
+            chunks = [rows_all[:half], rows_all[half:]]
         for j, chunk in enumerate(chunks, 1):
             pages.append((sec["cover"], chunk, sec.get("deals_only", True),
-                          (j, len(chunks)), len(rows_all)))
+                          (j, len(chunks)), len(rows_all), sec.get("explain", "")))
 else:
     _flat = [DEALS[i:i+ROWS_PER_SLIDE] for i in range(0, len(DEALS), ROWS_PER_SLIDE)]
     _cover0 = (B.get("plan") or {}).get("cover") or "TODAY'S DEAL BOARD"
-    pages = [(_cover0 if i == 0 else "MORE DEALS", rows, True, (1, 1), len(rows))
+    pages = [(_cover0 if i == 0 else "MORE DEALS", rows, True, (1, 1), len(rows), "")
              for i, rows in enumerate(_flat)]
 pages = pages[:9]          # Instagram allows 10 carousel items; the promo takes one
 SLIDES=[]
 n=len(DEALS)
 
-for pi,(cover,rows,is_deals,(pg,npg),sec_total) in enumerate(pages,1):
+for pi,(cover,rows,is_deals,(pg,npg),sec_total,explain) in enumerate(pages,1):
     # Handle in the header: screenshots of the board get shared, and a shared
     # screenshot with no handle grows nobody's account. Attribution travels
     # with the image (playbook rule, Aug 2026).
@@ -167,6 +192,17 @@ for pi,(cover,rows,is_deals,(pg,npg),sec_total) in enumerate(pages,1):
                         radius=12,fill=bfill,outline=EDGE,width=2)
     d.text((80,title_bottom+12),badge,font=bf,fill=btext)
     top = title_bottom + 68
+    # SAY WHAT THE READER GETS, OUT LOUD, EVERY POST (owner's rule, 2026-08-14).
+    # One line of plain language in the same spot on every slide, so nobody has
+    # to already know what "week-ish" means to use the board. It is also the
+    # slide's own honesty check: CHEAPEST admits on its face that its dates are
+    # awkward, which is the reason it is allowed to make no discount claim.
+    if explain:
+        ef = MONO(23)
+        for line in wrap_to(d, explain, ef, W - 130)[:2]:
+            d.text((62, top), line, font=ef, fill=DIM)
+            top += 30
+        top += 14
     pitch=min(200,(1212-top)//max(1,len(rows)))
     sc=pitch/200.0
     def S_(v,_sc=sc): return int(v*_sc)
@@ -226,7 +262,7 @@ name=f"slide{len(pages)+1}_cta.png"; img.save(f"{OUT}/{name}"); SLIDES.append(na
 # Manifest so the publisher never has to guess how many board slides there
 # were. Carousel order = this list, top to bottom.
 SLIDES_DOC={"slides":SLIDES,"n_deals":n,"board_slides":len(pages),
-            "sections":[c for c,_,_,_,_ in pages]}
+            "sections":[c for c,_,_,_,_,_ in pages]}
 
 # per-deal STORY slides (IG API can't add link stickers, so the CTA is baked
 # into the art). Only true deals get a story — a filler fare wearing a green

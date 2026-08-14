@@ -8,7 +8,7 @@ behaves exactly as it did before the pipeline went multi-city."""
 import os, sys, json, datetime, urllib.request, urllib.parse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import origins, day_plan, site_fares, index_fares
+import origins, day_plan, site_fares, index_fares, trip_shape
 
 # WEEKLY PLAN (owner's rule, Jul 28 2026). Monday sells week long trips,
 # Tue/Wed sell weekends, Thursday sells urgency, Friday leans on Friday being
@@ -184,14 +184,18 @@ def arr_time(stamp, duration_min):
                             "+1" if total >= 1440 else "")
 
 
-def pick_offer(offers, nights, depart_in, depart_dow=None, return_dow=None):
-    """Cheapest offer whose trip length, departure date and (optionally) the
-    days of the week it flies out and back on all fit.
+def pick_offer(offers, key, depart_in):
+    """Cheapest offer that CLASSIFIES INTO this section and leaves inside the
+    window. `offers` is already price-sorted, so the first match is the cheapest
+    match. Returns None when nothing fits.
 
-    `offers` is already price-sorted, so the first match is the cheapest match.
-    A dow set of None means any day. Returns None when nothing fits.
+    This used to take a night band and two day-of-week sets and match on all
+    three. It now asks one question — `trip_shape.classify(out, back) == key` —
+    because the shape rule is authoritative and lives in exactly one file. The
+    practical difference: a fare cannot be squeezed into a section it does not
+    belong in by loosening a band, and every fare that fits nothing falls to
+    CHEAPEST, which is defined as the leftovers and says so on the slide.
     """
-    n_lo, n_hi = nights
     d_lo, d_hi = depart_in
     for cand in offers:
         try:
@@ -201,11 +205,7 @@ def pick_offer(offers, nights, depart_in, depart_dow=None, return_dow=None):
             continue
         if not (d_lo <= (dd - today).days <= d_hi):
             continue
-        if not (n_lo <= (rr - dd).days <= n_hi):
-            continue
-        if depart_dow is not None and dd.weekday() not in depart_dow:
-            continue
-        if return_dow is not None and rr.weekday() not in return_dow:
+        if trip_shape.classify(dd, rr) != key:
             continue
         return cand
     return None
@@ -286,43 +286,36 @@ def build(plan):
     """Score every fetched route against one section spec. Returns
     (qualifying, rest, scan_rows). Pure: safe to call once per section.
 
-    `plan` needs: nights, depart_in, depart_dow, return_dow, wide, and
-    optionally deals_only. A legacy day_plan.plan() dict satisfies it, which is
-    what keeps the old single-shape path working."""
+    `plan` needs: key, depart_in, wide, and optionally deals_only. `key` is the
+    category name from pipeline/trip_shape.py — that one string is now the whole
+    definition of what belongs on this slide."""
     deals, skips, rows = [], [], {}
     for code, offers in OFFERS.items():
-        # THREE RUNGS, cheapest real fare at each, all from the same
-        # price-sorted list. We take the best rung that still clears the bar:
-        #   shape  — today's full shape: trip length AND the days of the week
-        #            it flies out and back on (out Thu/Fri, back Sun/Mon for a
-        #            long weekend, and so on)
-        #   nights — same trip length, any days of the week
-        #   wide   — 2-14 nights leaving 3-150 days out, exactly what the
-        #            board used before the weekly plan existed
-        # Day-of-week rules are what make a "long weekend" an actual long
-        # weekend, but they are also the thinnest filter, so they must never
-        # be the reason a route with a genuine deal falls off. Hence the ladder.
-        # THE LADDER WIDENS THE WINDOW, NEVER THE TRIP LENGTH (2026-08-13).
-        # It used to fall all the way back to the wide 2-14 night range, which
-        # was safe when one shape owned the whole board and the cover slide
-        # could step aside. It is NOT safe now: each section is its own slide
-        # with its own title, so a 3 night fare reaching the TWO WEEKS slide
-        # would make that slide lie. Trip length is the section's identity and
-        # is held fixed; only the day-of-week rule and then the departure
-        # window are relaxed.
+        # TWO RUNGS, cheapest real fare at each, both from the same price-sorted
+        # list, and BOTH ARE THE SAME SHAPE:
+        #   shape  — classifies into this section, leaving inside the section's
+        #            own departure window
+        #   window — classifies into this section, leaving inside the wide
+        #            window (3-150 days)
+        # The old ladder had a middle rung that dropped the day-of-week rule and
+        # kept only the night count. That rung is DELETED. Under the owner's
+        # 2026-08-14 spec the days of the week ARE the category: a Saturday to
+        # Monday trip is not a slightly-off Long Weekend, it is a CHEAPEST, and
+        # a slide headed LONG WEEKEND showing it would simply be wrong. So the
+        # only thing that ever relaxes is how far out the departure may be —
+        # never the shape. A fare that fits no shape is not lost; classify()
+        # sends it to CHEAPEST, which exists precisely to carry it and says as
+        # much on its own slide.
         rungs = [
-            ("shape", pick_offer(offers, plan["nights"], plan["depart_in"],
-                                 plan["depart_dow"], plan["return_dow"])),
-            ("nights", pick_offer(offers, plan["nights"], plan["depart_in"])),
-            ("window", pick_offer(offers, plan["nights"],
+            ("shape", pick_offer(offers, plan["key"], plan["depart_in"])),
+            ("window", pick_offer(offers, plan["key"],
                                   plan["wide"]["depart_in"])),
         ]
         if all(c is None for _, c in rungs):
-            n0, n1 = plan["nights"]
             d0, d1 = plan["wide"]["depart_in"]
             rows[code] = {"outcome": "no fares in window",
                           "why": f"{len(offers)} offers, none leaving {d0}-{d1} "
-                                 f"days out for a {n0}-{n1} night trip"}
+                                 f"days out in the {plan['key']} shape"}
             continue
 
         def score(cand, _code=code):
@@ -475,13 +468,22 @@ for spec in SECTIONS:
         if scan.get(code, {}).get("outcome") != "qualified":
             scan[code] = row
     n_deal = sum(1 for r in picked if r.get("deal"))
+    # EVERY ROW ON THIS SLIDE REALLY IS THIS SHAPE. build() only ever offers
+    # fares that classify into the section, so this can only fire if someone
+    # later adds a code path that bypasses it — which is exactly the mistake
+    # worth catching before it reaches a slide headed LONG WEEKEND.
+    wrong = [(r["to"], r["d1"], r["d2"], trip_shape.classify_iso(r["d1"], r["d2"]))
+             for r in picked if trip_shape.classify_iso(r["d1"], r["d2"]) != spec["key"]]
+    if wrong:
+        raise SystemExit(f"FATAL: {spec['key']} picked rows of another shape: {wrong}")
     sections.append({"key": spec["key"], "cover": spec["cover"],
+                     "explain": spec.get("explain", ""),
                      "tag": spec.get("tag", "ROUND TRIP"),
-                     "angle": spec["angle"], "nights": list(spec["nights"]),
+                     "angle": spec["angle"],
                      "deals_only": spec["deals_only"], "rows_target": spec["rows"],
                      "n": len(picked), "n_deals": n_deal,
                      "rungs": {r: sum(1 for d in picked if d.get("rung") == r)
-                               for r in ("shape", "nights", "window")},
+                               for r in ("shape", "window")},
                      "tiers": {str(t): sum(1 for d in picked if d.get("tier") == t)
                                for t in (1, 2, 3)},
                      "n_intl": sum(1 for d in picked if d["to"] in INTL),
@@ -499,6 +501,18 @@ for spec in SECTIONS:
               f"{MIN_DISCOUNT*100:.0f}% bar. Supply problem, not a code problem: "
               f"{len(ROUTES)} routes eligible.")
 
+# NO FARE TWICE ON ONE BOARD (owner's spec, 2026-08-14). used_flights already
+# prevents it while filling; this proves it after the fact, because "the same
+# fare printed under two different headings" is the single most embarrassing
+# thing this pipeline could publish and it must never be discovered by a reader.
+# A city on DIFFERENT dates in two sections is a different trip and is allowed.
+_seen = {}
+for d in deals:
+    k = (d["to"], d["d1"], d["d2"])
+    if k in _seen:
+        raise SystemExit(f"FATAL: {k} appears in both {_seen[k]} and {d['section']}")
+    _seen[k] = d["section"]
+
 board = {"date": today.isoformat(), "origin": ORIGIN,
          # Flat union, section order. Everything downstream (the caption, the
          # stories, the reel) still reads board["deals"], so none of it had to
@@ -513,7 +527,7 @@ board = {"date": today.isoformat(), "origin": ORIGIN,
                   "sections": [s["key"] for s in sections],
                   "on_shape": sum(1 for d in deals if d.get("on_shape")),
                   "rungs": {r: sum(1 for d in deals if d.get("rung") == r)
-                            for r in ("shape", "nights", "window")}}}
+                            for r in ("shape", "window")}}}
 os.makedirs("out", exist_ok=True)
 counts = {}
 for v in scan.values():

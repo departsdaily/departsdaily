@@ -8,7 +8,10 @@ Override for testing or a one off:
     POST_SHAPE=twoweek python pipeline/fetch_fares.py
     POST_DATE=2026-08-02 python pipeline/day_plan.py
 """
-import datetime, json, os
+import datetime, json, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import trip_shape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = os.path.join(ROOT, "config", "schedule.json")
@@ -107,8 +110,14 @@ def sections(day=None):
     single daily shape, because the reel rotation still uses it.
 
     Each returned dict is what fetch_fares.build() needs to score one section:
-      key, cover, angle, rows, deals_only, sort,
-      nights, depart_in, depart_dow, return_dow, wide
+      key, cover, angle, explain, rows, deals_only, sort, depart_in, wide
+
+    NIGHT BANDS AND DAY-OF-WEEK SETS ARE GONE FROM HERE (2026-08-14, owner's
+    authoritative spec). A section's identity is now the weekday rule in
+    pipeline/trip_shape.py — out Thu/Fri back Sun/Mon IS a Long Weekend, and
+    that is the whole definition. Carrying a copy of the bands in this file
+    would be a second source of truth free to drift from the first, so the keys
+    were removed rather than left lying around unread.
     """
     cfg = _cfg()
     day = day or today()
@@ -147,13 +156,22 @@ def sections(day=None):
             # slots go to real deals rather than sitting empty.
             "tier_floor": int(sec.get("tier_floor", 3)),
             "intl_quota": float(sec.get("intl_quota", 0) or 0),
-            "nights": tuple(sec["nights"]),
+            # The one line of plain language that rides above the fares, on the
+            # slide and on the page, in the same spot every time. The reader
+            # should know exactly what they are being offered before they read
+            # a single price.
+            "explain": trip_shape.EXPLAIN.get(sec["key"], sec["angle"]),
             "depart_in": tuple(sec["depart_in"]),
-            "depart_dow": set(sec["depart_dow"]) if sec.get("depart_dow") else None,
-            "return_dow": set(sec["return_dow"]) if sec.get("return_dow") else None,
-            "wide": {"nights": tuple(cfg["wide"]["nights"]),
-                     "depart_in": tuple(cfg["wide"]["depart_in"])},
+            # Only the DEPARTURE WINDOW may ever be relaxed. Trip shape is the
+            # section's identity and is never widened — that is the difference
+            # between a Long Weekend slide and a Long Weekend slide that lies.
+            "wide": {"depart_in": tuple(cfg["wide"]["depart_in"])},
         })
+    # ONE ORDER, used for classification and for display. It comes from
+    # trip_shape.ORDER so the boards can never render in a different order from
+    # the one the classifier evaluates in.
+    out.sort(key=lambda x: trip_shape.ORDER.index(x["key"])
+             if x["key"] in trip_shape.ORDER else len(trip_shape.ORDER))
     if only and not out:
         raise SystemExit(f"FATAL: POST_SECTION={only} is not in "
                          f"config/schedule.json sections.")
@@ -172,7 +190,6 @@ if __name__ == "__main__":
     print()
     print("SECTIONS (what the carousel actually posts):")
     for sec in sections():
-        n0, n1 = sec["nights"]
         bar = "deals only" if sec["deals_only"] else "no discount claim"
-        print(f"  {sec['key']:9} {sec['cover']:22} {n0}-{n1} nights  "
-              f"{sec['rows']} rows  {bar}")
+        print(f"  {sec['key']:14} {sec['cover']:22} {sec['rows']} rows  {bar}")
+        print(f"                 {sec['explain']}")

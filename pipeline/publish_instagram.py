@@ -10,7 +10,7 @@ when the token's account handle does not match the origin we rendered for.
 import os, sys, json, time, datetime, urllib.request, urllib.parse, urllib.error
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import origins
+import origins, trip_shape
 
 ORG = origins.config()
 ORIGIN = ORG["code"]
@@ -185,8 +185,12 @@ if SECS:
         for sec in SECS:
             if not sec["deals"]:
                 continue
-            span = ("any length" if not sec.get("deals_only", True)
-                    else "{}–{} nights".format(*sec["nights"]))
+            # The shape, spelled out, next to the heading. Not decoration: a
+            # reader has to be able to tell a Long Weekend from an Extra Long
+            # Weekend without counting dates, and this compact wording is the
+            # only form of the explainer that fits inside 2200 characters
+            # alongside four sections of fares.
+            span = trip_shape.SPAN.get(sec["key"], sec.get("angle", ""))
             shown = sec["deals"][:per_section]
             hidden += len(sec["deals"]) - len(shown)
             c += "\n\n— {} ({}) —\n".format(sec["cover"], span)
