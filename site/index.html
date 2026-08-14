@@ -568,17 +568,14 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 <div id="paneBoard">
 <div class="citybar" id="citybar" role="tablist" aria-label="Choose your airport"></div>
 
-<!-- TODAY'S POST. The exact board that went out on Instagram this morning,
-     read from site/data/post-<ORIGIN>.json, which the posting workflow writes
-     at publish time. It sits ABOVE the live board on purpose: most visitors
-     arrive from the bio link having just seen these fares, and landing them on
-     a different set of deals wastes the click. Hidden entirely on a day with
-     no post, so a missed morning shows nothing rather than an empty promise. -->
-<div class="board" id="postBoard" hidden>
-  <div class="bhead"><span>■ TODAY&#39;S INSTAGRAM POST — <span id="postCity"></span></span><span id="postStamp"></span></div>
-  <div id="postRows"></div>
-  <div class="bfoot">These are the exact fares from this morning&#39;s post, in the same order. Tapping a row runs a <b style="color:var(--white)">live search</b> for those dates — the price you book is today&#39;s price. Fares move; if one has gone, the live search shows the current best.</div>
-</div>
+<!-- The "TODAY'S INSTAGRAM POST" board used to sit here: this morning's exact
+     carousel, read from site/data/post-<ORIGIN>.json, printed as one flat list
+     of eighteen rows. Removed 2026-08-14 (owner's call). The three categories
+     below now show today's fares under the same three headings the carousel
+     uses, so the post board was the same cities a second time in a worse
+     layout. site/data/post-<ORIGIN>.json is still written by the posting
+     workflow — nothing downstream lost a file, only this page stopped
+     rendering it. -->
 
 <!-- THE THREE CATEGORIES. Populated from SECTIONS in js/deals-data.js, which the
      updater builds from config/schedule.json — the same file the Instagram post
@@ -748,13 +745,56 @@ const CITIES=[
    Never hand-edit deals here; the generator owns that file.
    ===================================================================== */
 
+/* THE RUNNING COPY OF THE BOARD, and why it is not just the consts above.
+   ------------------------------------------------------------------------
+   js/deals-data.js is served with `Cache-Control: max-age=14400` — four hours —
+   because the zone's Browser Cache TTL overrides what site/_headers asks for.
+   The practical effect: a visitor who loaded the site this morning keeps their
+   morning's board until mid-afternoon, and a board we rebuild every hour reaches
+   almost nobody. Caught 2026-08-14 when a freshly deployed board read 08:13 in
+   the browser and 11:27 on the server.
+   `fetch(..., {cache:"no-store"})` is the one thing a stale-but-fresh cache
+   entry cannot intercept, so the page re-reads its own data file that way a
+   moment after first paint and re-renders if the stamp moved. The script tag
+   stays: it paints instantly and it is the fallback if the fetch fails.
+   The proper fix is Cloudflare → Caching → Browser Cache TTL → "Respect
+   Existing Headers", which makes site/_headers effective. This survives either
+   way and costs one small request.                                          */
+let LIVE={BOARD:BOARD, DEALS:DEALS,
+          SECTIONS:(typeof SECTIONS!=="undefined"?SECTIONS:null)};
+
 /* Freshness engine: stamp the board + drop expired deals automatically */
-const UPD=new Date(BOARD.updated);
 const ET={timeZone:"America/New_York"};
 const fmtDay=d=>d.toLocaleDateString("en-US",{...ET,weekday:"short",month:"short",day:"numeric"}).toUpperCase();
-document.getElementById("boardDate").textContent=fmtDay(UPD)+" "+UPD.getFullYear();
-document.getElementById("boardStamp").textContent="ROUND TRIP · VERIFIED "+fmtDay(UPD)+" "+
-  UPD.toLocaleTimeString("en-US",{...ET,hour:"numeric",minute:"2-digit"}).replace(" ","")+" ET";
+function stampBoard(){
+  const u=new Date(LIVE.BOARD.updated);
+  document.getElementById("boardDate").textContent=fmtDay(u)+" "+u.getFullYear();
+  const st=document.getElementById("boardStamp");
+  if(st) st.textContent="ROUND TRIP · VERIFIED "+fmtDay(u)+" "+
+    u.toLocaleTimeString("en-US",{...ET,hour:"numeric",minute:"2-digit"}).replace(" ","")+" ET";
+}
+stampBoard();
+
+/* Re-read the data file past the browser cache. Returns true only when the
+   server's copy is genuinely newer, so a re-render never happens for nothing.
+   The file is three const declarations and nothing else; it is evaluated in a
+   function scope precisely so it cannot collide with the consts the script tag
+   already created, and anything unexpected in it throws in here rather than
+   taking the page down. */
+async function refreshBoardData(){
+  try{
+    const r=await fetch("js/deals-data.js",{cache:"no-store"});
+    if(!r.ok) return false;
+    const src=await r.text();
+    const fresh=new Function(src+'\nreturn {BOARD:(typeof BOARD!=="undefined"?BOARD:null),'
+      +'DEALS:(typeof DEALS!=="undefined"?DEALS:null),'
+      +'SECTIONS:(typeof SECTIONS!=="undefined"?SECTIONS:null)};')();
+    if(!fresh||!fresh.BOARD||!fresh.DEALS) return false;
+    if(fresh.BOARD.updated===LIVE.BOARD.updated) return false;
+    LIVE=fresh;
+    return true;
+  }catch(e){ return false; }
+}
 function liveDeals(list){
   const now=new Date();
   return (list||[]).filter(x=>{
@@ -1307,33 +1347,6 @@ function rowHTML(code,x,surface){
    </div>`;
 }
 
-/* Load and render the morning post for one origin. Fails silently and stays
-   hidden: a missing post is the normal state for a city that has not launched
-   its Instagram yet, and must never render an error at a visitor. */
-async function loadPost(code){
-  const box=document.getElementById("postBoard");
-  box.hidden=true;
-  try{
-    const r=await fetch("data/post-"+code+".json",{cache:"no-store"});
-    if(!r.ok) return;
-    const b=await r.json();
-    if(!b || !Array.isArray(b.deals) || !b.deals.length) return;
-    // Only show TODAY's post. Yesterday's board is not "today's post", and the
-    // rotating board below is the honest thing to show instead.
-    const today=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
-    if(b.date!==today) return;
-    document.getElementById("postCity").textContent=
-      (document.getElementById("boardCity").textContent||code);
-    document.getElementById("postStamp").textContent=
-      b.deals.length+" DEAL"+(b.deals.length===1?"":"S")+" · POSTED THIS MORNING";
-    document.getElementById("postRows").innerHTML=
-      b.deals.map(d=>rowHTML(code,{to:d.to,city:d.city,price:d.price,d1:d.d1,d2:d.d2,
-                                   dep:d.dep,rdep:d.rdep,arr:d.arr,rarr:d.rarr,
-                                   al:d.airline,stops:d.stops},"post")).join("");
-    box.hidden=false;
-  }catch(e){/* stay hidden */}
-}
-
 function renderCity(code){
   curOrigin=code;
   /* Before any early return — a city with no board yet still needs the
@@ -1342,14 +1355,13 @@ function renderCity(code){
   document.getElementById("heroCity").textContent=code;
   const c=CITIES.find(x=>x.code===code);
   document.getElementById("boardCity").textContent=c.name;
-  loadPost(code);          // async, renders above the live board when it lands
   /* installed once */
   const rows=document.getElementById("rows");
   document.querySelectorAll("#citybar .citybtn").forEach(b=>b.setAttribute("aria-pressed",b.dataset.code===code));
   renderRoutes(code);
   renderCategories(code);
-  if(!DEALS[code]){rows.innerHTML=`<div class="empty">This board opens soon.<br>Get on the email list below and you'll know the day ${code} goes live.</div>`;return;}
-  const deals=liveDeals(DEALS[code]);
+  if(!LIVE.DEALS[code]){rows.innerHTML=`<div class="empty">This board opens soon.<br>Get on the email list below and you'll know the day ${code} goes live.</div>`;return;}
+  const deals=liveDeals(LIVE.DEALS[code]);
   if(!deals.length){rows.innerHTML=`<div class="empty">Today's deals have expired — the board refreshes through the day.<br>Get on the email list below so tomorrow's fares land in your inbox.</div>`;return;}
   rows.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
 }
@@ -1387,7 +1399,7 @@ function renderCategories(code){
   const nav=document.getElementById("catnav");
   const flat=document.getElementById("flatBoard");
   if(!wrap||!nav||!flat) return;
-  const blob=(typeof SECTIONS!=="undefined"&&SECTIONS)?SECTIONS[code]:null;
+  const blob=LIVE.SECTIONS?LIVE.SECTIONS[code]:null;
   const secs=blob&&Array.isArray(blob.sections)?blob.sections:[];
   /* Same expiry stamp the flat board uses, so a category can never outlive it. */
   const exp=blob&&blob.exp?blob.exp:null;
@@ -1463,7 +1475,7 @@ document.querySelectorAll("#citybar .citybtn").forEach(b=>b.addEventListener("cl
 /* Route seasonality chart (SVG, no libraries) */
 const MO=["J","F","M","A","M","J","J","A","S","O","N","D"];
 function renderChart(code){
-  const r=ROUTES[curOrigin][code],deal=liveDeals(DEALS[curOrigin]||[]).find(x=>x.to===code);
+  const r=ROUTES[curOrigin][code],deal=liveDeals(LIVE.DEALS[curOrigin]||[]).find(x=>x.to===code);
   document.getElementById("chartTitle").textContent=
     `${curOrigin} › ${code} — ${r.city} · annual avg $${r.avg} RT (${r.src==="DOT"?"DOT/BTS 2025":"OUR ESTIMATE"})`;
   const w=940,h=300,pad=40,max=Math.max(...r.m)*1.15,bw=(w-pad*2)/12;
@@ -1567,6 +1579,9 @@ function cityFromURL(){
   return hit ? hit.code : "CLT";
 }
 renderCity(cityFromURL());
+/* First paint is already on screen; this catches the case where it came out of
+   a four-hour-old cache entry. */
+refreshBoardData().then(changed=>{ if(changed){ stampBoard(); renderCity(curOrigin); } });
 window.addEventListener("hashchange",function(){renderCity(cityFromURL());});
 
 
