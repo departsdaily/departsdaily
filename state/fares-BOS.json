@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-13T22:17:32-04:00",
+ "generated": "2026-08-14T00:17:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -308,16 +308,16 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 846,
-   "d1": "2026-08-16",
-   "d2": "2026-08-23",
-   "dep": "5:45AM",
-   "al": "Air Canada",
+   "price": 850,
+   "d1": "2026-08-20",
+   "d2": "2026-08-24",
+   "dep": "12:27PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:30AM",
-   "arr": "2:05PM",
-   "rarr": "6:25PM",
+   "rdep": "10:50AM",
+   "arr": "11:35PM",
+   "rarr": "9:10PM",
    "pct": 0
   },
   "MBJ": {

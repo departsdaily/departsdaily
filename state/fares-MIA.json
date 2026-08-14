@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-13T22:16:56-04:00",
+ "generated": "2026-08-14T00:16:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -214,21 +214,6 @@
    "arr": "11:59PM",
    "rarr": "12:49PM",
    "pct": 56
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 967,
-   "d1": "2026-09-02",
-   "d2": "2026-09-13",
-   "dep": "8:15AM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:15PM",
-   "arr": "6:28PM",
-   "rarr": "11:27PM",
-   "pct": -10
   },
   "AUA": {
    "to": "AUA",

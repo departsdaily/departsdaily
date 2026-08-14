@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-13T22:14:46-04:00",
+ "generated": "2026-08-14T00:14:42-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 32,
  "routes_failed": [],
@@ -19,21 +19,6 @@
    "arr": "2:17AM+1",
    "rarr": "8:12PM",
    "pct": 50
-  },
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 213,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
-   "dep": "9:40PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:20PM",
-   "arr": "1:37AM+1",
-   "rarr": "8:55PM",
-   "pct": 51
   },
   "BUF": {
    "to": "BUF",
@@ -319,6 +304,21 @@
    "arr": "2:32AM+1",
    "rarr": "8:10PM",
    "pct": 68
+  },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 182,
+   "d1": "2026-08-21",
+   "d2": "2026-08-23",
+   "dep": "3:21PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:02PM",
+   "arr": "8:10PM",
+   "rarr": "4:33AM+1",
+   "pct": 62
   },
   "BZE": {
    "to": "BZE",

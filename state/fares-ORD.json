@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-13T22:15:26-04:00",
+ "generated": "2026-08-14T00:15:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -113,16 +113,16 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 154,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
-   "dep": "2:46PM",
-   "al": "Frontier",
+   "price": 153,
+   "d1": "2026-10-23",
+   "d2": "2026-10-26",
+   "dep": "8:45AM",
+   "al": "United",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:50PM",
-   "arr": "5:55PM",
-   "rarr": "9:39PM",
+   "rdep": "5:00AM",
+   "arr": "11:41AM",
+   "rarr": "7:51AM",
    "pct": 64
   },
   "LAS": {
@@ -383,17 +383,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 240,
-   "d1": "2026-09-13",
-   "d2": "2026-09-17",
-   "dep": "3:50PM",
+   "price": 266,
+   "d1": "2026-11-24",
+   "d2": "2026-11-29",
+   "dep": "7:53PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "3:55PM",
-   "arr": "9:38PM",
-   "rarr": "10:13PM",
-   "pct": 43
+   "rdep": "3:55AM",
+   "arr": "12:35AM+1",
+   "rarr": "9:16AM",
+   "pct": 37
   }
  }
 }
