@@ -18,6 +18,36 @@ import origins, day_plan, site_fares, index_fares
 # see pick_offer() below. Config: config/schedule.json.
 PLAN = day_plan.plan()
 
+# TIERS = EXPOSURE, NOT ELIGIBILITY (owner's rule, 2026-08-14). Every destination in the
+# leisure pool can reach a board; the tier decides how OFTEN. London, Aruba, Cancun, Paris,
+# New York and Miami come round more than San Salvador, without San Salvador disappearing
+# and without the feed showing the same seven cities every morning. Two levers, neither a
+# hard filter: a shorter rest window, and a sort bonus that only ever reorders rows.
+_TIERS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                           "config", "tiers.json")
+try:
+    TIERS = json.load(open(_TIERS_PATH, encoding="utf-8"))
+except (OSError, ValueError):
+    TIERS = {"tiers": {}, "tier": {}, "rank": {}}
+def tier_of(code):
+    return int(TIERS.get("tier", {}).get(code, 3))
+def tier_cfg(code):
+    return TIERS.get("tiers", {}).get(str(tier_of(code)), {"repeat_days": 8, "bonus": 0})
+
+# WHICH ROUTES ARE INTERNATIONAL. Read from config/seasonality.json, which is the one
+# authoritative place. It used to be read off origins.baselines(), which strips every
+# entry down to {city, m} — so the flag was ALWAYS None, is_intl() always said False,
+# and the 75% international quota on Week-ish silently did nothing at all. Caught by a
+# summary line that reported "0 international" on a board with St. Maarten, Los Cabos,
+# San Juan and Punta Cana on it.
+_SEAS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                          "config", "seasonality.json")
+try:
+    INTL = {c for c, v in json.load(open(_SEAS_PATH, encoding="utf-8"))
+            ["destinations"].items() if v.get("intl")}
+except (OSError, ValueError, KeyError):
+    INTL = set()
+
 # FOUR SECTIONS EVERY DAY (owner's rule, 2026-08-13). The carousel is no longer
 # one trip shape per weekday. Every post carries Long Weekend, Week Long, Two
 # Weeks and Cheapest, seven rows each, one slide each. PLAN above is kept
@@ -182,8 +212,21 @@ def pick_offer(offers, nights, depart_in, depart_dow=None, return_dow=None):
 
 
 hist = json.load(open(HISTORY_FILE)) if os.path.exists(HISTORY_FILE) else {}
-recent = {d for d, ts in hist.items()
-          if (today - datetime.date.fromisoformat(ts)).days < NO_REPEAT_DAYS}
+
+def resting(code):
+    """Has this destination been shown too recently FOR ITS TIER.
+
+    Tier 1 rests 2 days, tier 3 rests 8. That single number is what makes Aruba roughly
+    four times as frequent as San Salvador without ever excluding San Salvador — the rest
+    window is a PREFERENCE, applied on the first pass only, so a genuine deal on a resting
+    route still beats an empty slot on the second."""
+    ts = hist.get(code)
+    if not ts:
+        return False
+    days = (today - datetime.date.fromisoformat(ts)).days
+    return days < int(tier_cfg(code).get("repeat_days", NO_REPEAT_DAYS))
+
+recent = {d for d in hist if resting(d)}
 
 # Why each route did or did not make the board. Written out every run, pass or
 # fail, so "why was there no post today" is answerable from the repo instead of
@@ -354,25 +397,60 @@ def fill(spec, used_flights):
     # print an overpayment.
     pool = qualifying + [r for r in rest if r["disc"] >= round(bar * 100)] \
            if bar < MIN_DISCOUNT else list(qualifying)
+    # TIER BONUS: ORDERING ONLY. It is added to the sort key so that when two fares are
+    # close the better destination takes the slot. It never touches the price and never
+    # touches the computed discount, so a favoured slot can never become an overstated
+    # saving — the 12% bar decided who was eligible before this line runs.
+    for r in pool:
+        r["tier"] = tier_of(r["to"])
+        r["tier_bonus"] = int(tier_cfg(r["to"]).get("bonus", 0))
     if spec.get("sort") == "price":
-        pool = sorted(pool, key=lambda x: x["price"])
+        # cheapest first, but a headliner beats a nobody at a similar price
+        pool = sorted(pool, key=lambda x: x["price"] - x["tier_bonus"] * 4)
+    else:
+        pool = sorted(pool, key=lambda x: -(x["disc"] + x["tier_bonus"]))
+
+    # TIER FLOOR: a preference, never a filter. Long Weekend wants headline cities and
+    # beaches, not whatever happened to be cheap, so it asks for tier 1 and 2 first and
+    # only reaches tier 3 if it would otherwise come up short.
+    floor = int(spec.get("tier_floor", 3))
+    # INTERNATIONAL QUOTA: Week-ish is a holiday people plan around, so it leans heavily
+    # international. A quota, not a rule — if the international fares are not there, the
+    # slots go to real domestic deals rather than sitting empty.
+    intl_quota = float(spec.get("intl_quota", 0) or 0)
+    want_intl = int(round(spec["rows"] * intl_quota))
+
+    def is_intl(r):
+        return r["to"] in INTL
+
     seen_dest = set()
     picked = []
     # Variety first, then fill. Every deal in `pool` for a deals-only section
     # already cleared MIN_DISCOUNT, so a backfilled repeat is a genuine deal —
     # just one we also showed in the last few days. Showing Miami twice in a
     # week beats showing an overpayment once.
-    for wave in (0, 1):
+    # Four passes, each one relaxing exactly one preference and nothing else:
+    #   0  fresh, inside the tier floor, and honouring the international quota
+    #   1  fresh, inside the tier floor, quota satisfied or unreachable
+    #   2  fresh, any tier
+    #   3  anything that cleared the bar, including recently shown
+    # The 12% bar is never relaxed by any of them.
+    for wave in (0, 1, 2, 3):
         for r in pool:
             if len(picked) >= spec["rows"]:
                 break
-            if r["to"] in seen_dest:
+            if r["to"] in seen_dest or (r["to"], r["d1"], r["d2"]) in used_flights:
                 continue
-            if (r["to"], r["d1"], r["d2"]) in used_flights:
+            if wave < 3 and r["to"] in recent:
                 continue
-            if wave == 0 and r["to"] in recent:
+            if wave < 2 and r["tier"] > floor:
                 continue
-            if wave == 1:
+            if wave == 0 and want_intl:
+                n_intl = sum(1 for p in picked if is_intl(p))
+                # hold the remaining slots for international until the quota is met
+                if not is_intl(r) and (len(picked) - n_intl) >= (spec["rows"] - want_intl):
+                    continue
+            if wave == 3:
                 r["repeat"] = True
                 r["last_shown"] = hist.get(r["to"])
             seen_dest.add(r["to"])
@@ -404,12 +482,17 @@ for spec in SECTIONS:
                      "n": len(picked), "n_deals": n_deal,
                      "rungs": {r: sum(1 for d in picked if d.get("rung") == r)
                                for r in ("shape", "nights", "window")},
+                     "tiers": {str(t): sum(1 for d in picked if d.get("tier") == t)
+                               for t in (1, 2, 3)},
+                     "n_intl": sum(1 for d in picked if d["to"] in INTL),
                      "deals": picked})
     deals.extend(picked)
     short = "" if len(picked) >= spec["rows"] else \
             f"  SHORT by {spec['rows'] - len(picked)}"
+    _t = sections[-1]["tiers"]
     print(f"{ORIGIN} section {spec['key']:9} {len(picked)}/{spec['rows']} rows, "
-          f"{n_deal} of them real deals{short}")
+          f"{n_deal} real deals, tiers 1/2/3 = {_t['1']}/{_t['2']}/{_t['3']}, "
+          f"{sections[-1]['n_intl']} international{short}")
     if len(picked) < spec["rows"]:
         print(f"::warning::{ORIGIN} {spec['key']} filled {len(picked)}/"
               f"{spec['rows']} rows. Not padded — every row cleared the "
