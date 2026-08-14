@@ -16,6 +16,13 @@ Design rules (match the site's honesty guarantees):
 Usage:  TP_TOKEN=... python scripts/update_deals.py site/js/deals-data.js
 """
 import json, os, re, sys, time, urllib.request, urllib.error
+
+# THE SHAPE RULE, imported not copied. pipeline/trip_shape.py is the single
+# definition of what a Long Weekend is; the site would drift from the post
+# within a week if this file kept its own copy.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "..", "pipeline"))
+import trip_shape
 from datetime import datetime, timedelta, date
 from zoneinfo import ZoneInfo
 
@@ -179,18 +186,26 @@ def site_sections():
         return []
     out = []
     for sec in secs:
-        n = sec.get("nights") or [2, 9]
         out.append({"key": sec.get("key"),
-                    "label": sec.get("cover", "").title(),
                     "cover": sec.get("cover", ""),
-                    "nights": (int(n[0]), int(n[1])),
+                    # The page's heading and its one line of plain language both
+                    # come from trip_shape, so the site and the slide say the
+                    # same thing about the same category, word for word.
+                    "title": trip_shape.TITLES.get(sec.get("key"), sec.get("cover", "")),
+                    "explain": trip_shape.EXPLAIN.get(sec.get("key"), sec.get("angle", "")),
                     # deals_only sections must clear the bar; CHEAPEST claims
                     # nothing and is therefore allowed any real price.
                     "deals_only": bool(sec.get("deals_only", True)),
                     "min_pct": round(float(sec.get("min_discount", 0.12)) * 100),
                     "sort": sec.get("sort", "discount"),
                     "angle": sec.get("angle", "")})
-    return [o for o in out if o["key"]]
+    out = [o for o in out if o["key"]]
+    # ONE ORDER for classification and display, taken from trip_shape so the
+    # page cannot render the categories in a different order from the one the
+    # classifier evaluates in.
+    out.sort(key=lambda o: trip_shape.ORDER.index(o["key"])
+             if o["key"] in trip_shape.ORDER else len(trip_shape.ORDER))
+    return out
 
 # THE NUMBER THE PAGE WILL ACTUALLY PRINT (2026-08-14). avg_for() returns the raw
 # DOT city-pair average, which is every fare sold on the route including full-fare
@@ -338,19 +353,23 @@ def arr_time(dt, duration_min):
     return (f"{h}:{mm:02d}{'AM' if h24 < 12 else 'PM'}"
             + ("+1" if total >= 1440 else ""))
 
-def pick(dest, fares, today, band=None):
+def pick(dest, fares, today, shape=None):
     """Cheapest sane round trip. Domestic: 3-90 days out, 2-9 day trips.
     International: 3-120 days out, 4-21 day trips (how people actually fly).
 
-    `band` overrides the trip length with an explicit (low, high) night range so
-    the same cached fares can answer three different questions — a long weekend,
-    a week-ish holiday, and the cheapest seat at any length — without a single
-    extra API call. It only narrows WHICH fare is chosen; nothing about price or
-    the discount computed from it changes."""
+    `shape` restricts the choice to fares that CLASSIFY into that category, so
+    the same cached fares answer all four questions — a long weekend, an extra
+    long weekend, a week-ish holiday and the leftovers — without a single extra
+    API call. It only narrows WHICH fare is chosen; nothing about price or the
+    discount computed from it changes."""
     max_out, len_lo, len_hi = (120, 4, 21) if dest in INTL else (90, 2, 9)
-    if band:
-        len_lo, len_hi = int(band[0]), int(band[1])
-        max_out = 150
+    if shape:
+        # The category IS the filter. No night band, no day-of-week set — one
+        # question, asked of pipeline/trip_shape.py, which is the only place
+        # the rule lives. Trip length is left wide open here on purpose: the
+        # classifier already bounds it, and bounding it twice is how the two
+        # copies eventually disagree.
+        len_lo, len_hi, max_out = 1, 400, 150
     best = None
     for f in fares:
         try:
@@ -361,6 +380,8 @@ def pick(dest, fares, today, band=None):
         trip_len = (d2.date() - d1.date()).days
         price = f.get("price") or 0
         if not (3 <= days_out <= max_out and len_lo <= trip_len <= len_hi and price > 0):
+            continue
+        if shape and trip_shape.classify(d1.date(), d2.date()) != shape:
             continue
         if best is None or price < best["price"]:
             stops = max(f.get("transfers", 0), f.get("return_transfers", 0))
@@ -557,12 +578,12 @@ def sections_for(origin, offers, today, cfg, last_shown):
     """
     if not SITE_SECTIONS:
         return []
-    used = set()
+    used = set()          # exact flights already spoken for, across all sections
     out = []
     for spec in SITE_SECTIONS:
         rows = []
         for dest, fares in offers.items():
-            deal = pick(dest, fares, today, band=spec["nights"])
+            deal = pick(dest, fares, today, shape=spec["key"])
             if not deal:
                 continue
             avg = baseline_avg(origin, dest)
@@ -594,11 +615,29 @@ def sections_for(origin, offers, today, cfg, last_shown):
                 continue
             used.add((d["to"], d["d1"], d["d2"]))
             picked.append(d)
+        # EVERY ROW REALLY IS THIS SHAPE. pick() only ever returns fares that
+        # classify into the section, so this can only fire if a later change
+        # bypasses it — which is exactly the mistake worth catching before a
+        # heading reading LONG WEEKEND sits above a Saturday-to-Tuesday trip.
+        wrong = [(d["to"], d["d1"], d["d2"]) for d in picked
+                 if trip_shape.classify_iso(d["d1"], d["d2"]) != spec["key"]]
+        if wrong:
+            raise SystemExit(f"FATAL: {spec['key']} picked rows of another shape: {wrong}")
         out.append({"key": spec["key"], "cover": spec["cover"],
-                    "angle": spec["angle"], "nights": list(spec["nights"]),
+                    "title": spec["title"], "explain": spec["explain"],
+                    "angle": spec["angle"],
                     "claims": spec["deals_only"], "rows": picked})
-        print(f"  {origin} site section {spec['key']:9} {len(picked)} rows "
-              f"({spec['nights'][0]}-{spec['nights'][1]} nights)")
+        print(f"  {origin} site section {spec['key']:14} {len(picked)} rows")
+    # NO FARE TWICE ON ONE PAGE. `used` prevents it while filling; this proves
+    # it afterwards, for the same reason the post asserts it — the same fare
+    # under two different headings is the one error a reader would spot instantly.
+    seen = {}
+    for sec in out:
+        for d in sec["rows"]:
+            k = (d["to"], d["d1"], d["d2"])
+            if k in seen:
+                raise SystemExit(f"FATAL: {k} in both {seen[k]} and {sec['key']}")
+            seen[k] = sec["key"]
     return out
 
 
