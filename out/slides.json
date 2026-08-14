@@ -1,8 +1,81 @@
 {
  "slides": [
   "slide1_board.png",
-  "slide2_cta.png"
+  "slide2_board.png",
+  "slide3_board.png",
+  "slide4_cta.png"
  ],
- "n_deals": 6,
- "board_slides": 1
+ "n_deals": 15,
+ "board_slides": 3,
+ "sections": [
+  "LONG WEEKEND",
+  "WEEKISH",
+  "CHEAPEST OUT OF CLT"
+ ],
+ "stories": [
+  {
+   "file": "story_1_LAS.png",
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 151,
+   "disc": 56,
+   "section": "cheapest"
+  },
+  {
+   "file": "story_2_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 163,
+   "disc": 47,
+   "section": "weekish"
+  },
+  {
+   "file": "story_3_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 163,
+   "disc": 47,
+   "section": "cheapest"
+  },
+  {
+   "file": "story_4_LAS.png",
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 191,
+   "disc": 44,
+   "section": "weekend"
+  },
+  {
+   "file": "story_5_SXM.png",
+   "to": "SXM",
+   "city": "St. Maarten",
+   "price": 346,
+   "disc": 42,
+   "section": "weekend"
+  },
+  {
+   "file": "story_6_SJU.png",
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 199,
+   "disc": 32,
+   "section": "weekend"
+  },
+  {
+   "file": "story_7_SFO.png",
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 257,
+   "disc": 31,
+   "section": "weekish"
+  },
+  {
+   "file": "story_8_LIT.png",
+   "to": "LIT",
+   "city": "Little Rock",
+   "price": 189,
+   "disc": 25,
+   "section": "weekish"
+  }
+ ]
 }
