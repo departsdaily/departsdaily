@@ -61,6 +61,14 @@ def footer(d,w=W,h=H,url=False):
        if url else "Fares verified today · subject to change · not guaranteed")
     d.text(((w-d.textlength(t,font=SANS(24)))/2,h-104),t,font=SANS(24),fill=DIM)
 
+def fit_title(draw, text, maxw, start=76, floor=34):
+    """Biggest condensed size at which the category still fits one line."""
+    f = COND(start)
+    while draw.textlength(text, font=f) > maxw and f.size > floor:
+        f = COND(f.size - 2)
+    return f
+
+
 def fmt_dates(x):
     # WEEKDAYS, NOT JUST DATES (2026-08-13). The whole plan is built around what
     # a trip costs someone with a normal job, and "SEP 16-SEP 22" does not
@@ -98,53 +106,71 @@ DEALS=[x for x in B["deals"] if x.get("deal",True)]
 ROWS_PER_SLIDE = int(os.environ.get("ROWS_PER_SLIDE", "7"))
 SECTIONS = B.get("sections")
 if SECTIONS:
-    pages = [(s["cover"], [x for x in s["deals"]][:ROWS_PER_SLIDE],
-              s.get("deals_only", True), s.get("tag", "ROUND TRIP"))
-             for s in SECTIONS if s["deals"]]
+    # A SECTION MAY RUN TO TWO SLIDES (owner's rule, 2026-08-14). Up to 14 rows per
+    # category, seven to a slide, so a strong day can show more without cramming the
+    # type down to something nobody reads on a phone. Page two carries the same big
+    # category title with a "2 OF 2" under it, so a swiper never loses the thread.
+    pages = []
+    for sec in SECTIONS:
+        rows_all = sec["deals"]
+        if not rows_all:
+            continue
+        chunks = [rows_all[i:i+ROWS_PER_SLIDE] for i in range(0, len(rows_all), ROWS_PER_SLIDE)]
+        for j, chunk in enumerate(chunks, 1):
+            pages.append((sec["cover"], chunk, sec.get("deals_only", True),
+                          (j, len(chunks)), len(rows_all)))
 else:
     _flat = [DEALS[i:i+ROWS_PER_SLIDE] for i in range(0, len(DEALS), ROWS_PER_SLIDE)]
     _cover0 = (B.get("plan") or {}).get("cover") or "TODAY'S DEAL BOARD"
-    pages = [(_cover0 if i == 0 else "MORE DEALS", rows, True, "ROUND TRIP")
+    pages = [(_cover0 if i == 0 else "MORE DEALS", rows, True, (1, 1), len(rows))
              for i, rows in enumerate(_flat)]
 pages = pages[:9]          # Instagram allows 10 carousel items; the promo takes one
 SLIDES=[]
 n=len(DEALS)
 
-for pi,(cover,rows,is_deals,tag) in enumerate(pages,1):
+for pi,(cover,rows,is_deals,(pg,npg),sec_total) in enumerate(pages,1):
     # Handle in the header: screenshots of the board get shared, and a shared
     # screenshot with no handle grows nobody's account. Attribution travels
     # with the image (playbook rule, Aug 2026).
     img,d=canvas(); header(d,ORG["airport"],"@{} · {}".format(ORG["handle"],DATE))
     # The section names what THIS slide is for, and the badge counts what is
     # actually on it. A slide that found four deals says four.
-    left=f"{cover} · {tag} · {pi} OF {len(pages)}"
+    # THE CATEGORY IS THE HEADLINE (owner's rule, 2026-08-14). It used to be a small
+    # blue line the same size as everything else, so a scroller had to read the slide
+    # to work out what kind of trip it was. Now it is large and amber — the same colour
+    # as the fares — and it is the first thing the eye lands on. The old qualifier line
+    # ("ODD DAYS OFF" and friends) is gone entirely: it competed with the category for
+    # the one piece of attention the slide gets.
+    cf = fit_title(d, cover, W - 120)
+    d.text((60, 138), cover, font=cf, fill=AMBER)
+    title_bottom = 138 + cf.size + 10
+    if npg > 1:
+        d.text((62, title_bottom), f"{pg} OF {npg}", font=MONO(24), fill=DIM)
+        title_bottom += 30
     # HONEST BADGES. Green means "every row here cleared the 12% bar" and is
     # only ever printed on a deals-only section. The CHEAPEST slide claims no
     # discount, so it gets a neutral panel badge instead — a green "VERIFIED
     # DEALS" over a list of merely-cheap fares is exactly the lie the deal flag
     # exists to prevent.
     nd=sum(1 for x in rows if x.get("deal"))
+    # The badge counts the WHOLE section, not just this slide, so a two slide category
+    # reads "12 VERIFIED DEALS" on both rather than 7 and then 5.
     if is_deals:
-        badge=f"{len(rows)} VERIFIED DEAL{'S' if len(rows)!=1 else ''}"
+        badge=f"{sec_total} VERIFIED DEAL{'S' if sec_total!=1 else ''}"
         bfill,btext=GREEN,NAVY
     else:
-        badge=f"{len(rows)} CHEAPEST FARES"
+        badge=f"{sec_total} CHEAPEST FARES"
         bfill,btext=PANEL,SKY
     bf=MONO(26)
     bw=d.textlength(badge,font=bf)
-    # The badge owns its space; the title gives ground rather than overlapping.
-    # CHEAPEST OUT OF CLT plus a badge was 40px too wide at 26pt and the two
-    # ran into each other, which is how this got caught.
-    while d.textlength(left,font=MONO(26)) > W-160-bw-40 and " · " in left:
-        left = left.rsplit(" · ", 1)[0]
-    d.text((60,146),left,font=MONO(26),fill=SKY)
-    d.rounded_rectangle([W-60-bw-40,136,W-60,190],
+    d.rounded_rectangle([60,title_bottom,60+bw+40,title_bottom+48],
                         radius=12,fill=bfill,outline=EDGE,width=2)
-    d.text((W-80-bw,150),badge,font=bf,fill=btext)
-    pitch=min(200,(1212-210)//max(1,len(rows)))
+    d.text((80,title_bottom+12),badge,font=bf,fill=btext)
+    top = title_bottom + 68
+    pitch=min(200,(1212-top)//max(1,len(rows)))
     sc=pitch/200.0
     def S_(v,_sc=sc): return int(v*_sc)
-    y=210
+    y=top
     for x in rows:
         d.rounded_rectangle([48,y-16,W-48,y+S_(158)],radius=16,fill=PANEL)
         xx=tiles(d,76,y,ORIGIN,size=S_(38)); d.text((xx+6,y+S_(8)),">",font=MONO(S_(38)),fill=SKY)
@@ -200,7 +226,7 @@ name=f"slide{len(pages)+1}_cta.png"; img.save(f"{OUT}/{name}"); SLIDES.append(na
 # Manifest so the publisher never has to guess how many board slides there
 # were. Carousel order = this list, top to bottom.
 SLIDES_DOC={"slides":SLIDES,"n_deals":n,"board_slides":len(pages),
-            "sections":[c for c,_,_,_ in pages]}
+            "sections":[c for c,_,_,_,_ in pages]}
 
 # per-deal STORY slides (IG API can't add link stickers, so the CTA is baked
 # into the art). Only true deals get a story — a filler fare wearing a green
@@ -211,7 +237,11 @@ SLIDES_DOC={"slides":SLIDES,"n_deals":n,"board_slides":len(pages),
 # than any account should push in a day and more than the drip can place. Best
 # discount first, so the cap only ever drops the weakest deals.
 MAX_STORIES = int(os.environ.get("MAX_STORIES", "8"))
-STORIES = sorted(DEALS, key=lambda x: -x["disc"])[:MAX_STORIES]
+# TIER FIRST, THEN DISCOUNT (owner's rule, 2026-08-14). Stories are the highest reach
+# format the account has, so they should be carrying Aruba and Cancun rather than
+# whichever long-tail route happened to post the biggest percentage that morning.
+# Within a tier the best discount still wins.
+STORIES = sorted(DEALS, key=lambda x: (x.get("tier", 3), -x["disc"]))[:MAX_STORIES]
 STORY_FILES = []
 for i,x in enumerate(STORIES,1):
     img,d=canvas(SW,SH); header(d,"DEAL "+str(i)+" OF "+str(len(STORIES)),DATE,w=SW)
