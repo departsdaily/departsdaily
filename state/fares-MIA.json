@@ -1,10 +1,25 @@
 {
  "origin": "MIA",
- "generated": "2026-08-14T10:12:37-04:00",
+ "generated": "2026-08-14T10:21:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
+  "AUS": {
+   "to": "AUS",
+   "city": "Austin",
+   "price": 148,
+   "d1": "2026-10-08",
+   "d2": "2026-10-11",
+   "dep": "1:45PM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "12:17PM",
+   "arr": "4:51PM",
+   "rarr": "3:00PM",
+   "pct": 63
+  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
