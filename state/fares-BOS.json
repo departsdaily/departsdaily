@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-14T11:31:11-04:00",
+ "generated": "2026-08-14T12:17:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 187,
-   "d1": "2026-08-25",
-   "d2": "2026-08-29",
-   "dep": "12:45PM",
-   "al": "Frontier",
+   "price": 285,
+   "d1": "2026-09-08",
+   "d2": "2026-09-15",
+   "dep": "7:00AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:35PM",
-   "arr": "8:58PM",
-   "rarr": "6:09AM+1",
-   "pct": 76
+   "rdep": "10:05PM",
+   "arr": "1:30PM",
+   "rarr": "5:29AM+1",
+   "pct": 63
   },
   "TPA": {
    "to": "TPA",
@@ -274,6 +274,21 @@
    "arr": "5:44PM",
    "rarr": "11:13AM",
    "pct": 42
+  },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 644,
+   "d1": "2026-10-06",
+   "d2": "2026-10-13",
+   "dep": "5:40PM",
+   "al": "SK",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "2:30AM+1",
+   "rarr": "4:35PM",
+   "pct": 27
   },
   "AUA": {
    "to": "AUA",
@@ -308,17 +323,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 850,
-   "d1": "2026-08-20",
-   "d2": "2026-08-24",
-   "dep": "12:27PM",
-   "al": "United",
-   "stops": 1,
+   "price": 612,
+   "d1": "2026-10-24",
+   "d2": "2026-10-31",
+   "dep": "8:50PM",
+   "al": "Icelandair",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "10:50AM",
-   "arr": "11:35PM",
-   "rarr": "9:10PM",
-   "pct": 0
+   "rdep": "6:50AM",
+   "arr": "5:15AM+1",
+   "rarr": "7:30PM",
+   "pct": 28
   },
   "MBJ": {
    "to": "MBJ",
@@ -338,17 +353,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 808,
-   "d1": "2026-08-21",
-   "d2": "2026-08-28",
-   "dep": "7:23PM",
-   "al": "United",
+   "price": 701,
+   "d1": "2026-10-28",
+   "d2": "2026-11-03",
+   "dep": "3:30PM",
+   "al": "QK",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:10PM",
-   "arr": "4:33AM+1",
-   "rarr": "11:10PM",
-   "pct": 10
+   "rdep": "9:25AM",
+   "arr": "12:05AM+1",
+   "rarr": "6:53PM",
+   "pct": 22
   },
   "PUJ": {
    "to": "PUJ",
