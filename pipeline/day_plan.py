@@ -131,7 +131,6 @@ def sections(day=None):
             # slide says what SHAPE of trip it is showing rather than all three
             # saying "ROUND TRIP". The Cheapest slide uses it to admit up front
             # that its fares need real days booked off.
-            "tag": sec.get("tag", "ROUND TRIP"),
             "angle": sec["angle"],
             "rows": int(sec.get("rows", 7)),
             "deals_only": bool(sec.get("deals_only", True)),
@@ -140,6 +139,14 @@ def sections(day=None):
             # slide can ever showcase a fare above what the route normally costs.
             "min_discount": float(sec.get("min_discount", 0.12)),
             "sort": sec.get("sort", "discount"),
+            # EXPOSURE CONTROLS (2026-08-14). tier_floor is the highest tier a section
+            # takes on its first pass — Long Weekend asks for headline cities and
+            # beaches before it will look at the long tail. intl_quota is the share of
+            # rows held for international until they are filled — Week-ish is a holiday
+            # people plan around. Both are PREFERENCES: if the fares are not there the
+            # slots go to real deals rather than sitting empty.
+            "tier_floor": int(sec.get("tier_floor", 3)),
+            "intl_quota": float(sec.get("intl_quota", 0) or 0),
             "nights": tuple(sec["nights"]),
             "depart_in": tuple(sec["depart_in"]),
             "depart_dow": set(sec["depart_dow"]) if sec.get("depart_dow") else None,
