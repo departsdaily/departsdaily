@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-14T13:43:31-04:00",
+ "generated": "2026-08-14T14:15:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 604,
-   "d1": "2026-08-24",
-   "d2": "2026-08-28",
-   "dep": "10:02AM",
-   "al": "Frontier",
+   "price": 477,
+   "d1": "2026-12-03",
+   "d2": "2026-12-08",
+   "dep": "12:10PM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:50PM",
-   "arr": "3:48PM",
-   "rarr": "11:47PM",
-   "pct": -8
+   "rdep": "7:45PM",
+   "arr": "8:34PM",
+   "rarr": "5:05AM+1",
+   "pct": 15
   },
   "ROM": {
    "to": "ROM",
