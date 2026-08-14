@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-13T20:16:34-04:00",
+ "generated": "2026-08-13T22:16:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 149,
-   "d1": "2026-09-11",
-   "d2": "2026-09-15",
-   "dep": "7:46PM",
+   "price": 146,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "10:27PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "1:59PM",
-   "arr": "10:54PM",
-   "rarr": "5:23PM",
-   "pct": 71
+   "rdep": "7:45AM",
+   "arr": "2:38AM+1",
+   "rarr": "11:04AM",
+   "pct": 72
   },
   "FLL": {
    "to": "FLL",
@@ -353,7 +353,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 662,
+   "price": 677,
    "d1": "2026-11-20",
    "d2": "2026-11-28",
    "dep": "9:20AM",
@@ -363,7 +363,7 @@
    "rdep": "5:10PM",
    "arr": "11:15PM",
    "rarr": "8:50AM+1",
-   "pct": 30
+   "pct": 29
   },
   "SJU": {
    "to": "SJU",

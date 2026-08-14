@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-13T20:14:51-04:00",
+ "generated": "2026-08-13T22:14:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 32,
  "routes_failed": [],
@@ -64,21 +64,6 @@
    "arr": "7:27PM",
    "rarr": "10:21AM",
    "pct": 61
-  },
-  "CVG": {
-   "to": "CVG",
-   "city": "Cincinnati",
-   "price": 323,
-   "d1": "2026-08-22",
-   "d2": "2026-08-24",
-   "dep": "9:52PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:23PM",
-   "arr": "2:06AM+1",
-   "rarr": "7:18PM",
-   "pct": 50
   },
   "DCA": {
    "to": "DCA",
@@ -484,6 +469,21 @@
    "arr": "4:29AM+1",
    "rarr": "1:42PM",
    "pct": 0
+  },
+  "YUL": {
+   "to": "YUL",
+   "city": "Montreal",
+   "price": 540,
+   "d1": "2026-10-03",
+   "d2": "2026-10-11",
+   "dep": "4:01PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "7:20PM",
+   "arr": "7:41PM",
+   "rarr": "1:41AM+1",
+   "pct": -4
   }
  }
 }

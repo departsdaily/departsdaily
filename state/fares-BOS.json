@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-13T20:17:52-04:00",
+ "generated": "2026-08-13T22:17:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -80,6 +80,21 @@
    "rarr": "2:35PM",
    "pct": 66
   },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 321,
+   "d1": "2026-08-28",
+   "d2": "2026-09-03",
+   "dep": "1:30PM",
+   "al": "JetBlue",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:31PM",
+   "arr": "5:39PM",
+   "rarr": "11:28PM",
+   "pct": 44
+  },
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
@@ -113,7 +128,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 177,
+   "price": 176,
    "d1": "2026-10-24",
    "d2": "2026-11-01",
    "dep": "8:37PM",
@@ -308,17 +323,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 566,
-   "d1": "2026-09-14",
-   "d2": "2026-09-21",
-   "dep": "7:42AM",
-   "al": "American",
+   "price": 294,
+   "d1": "2026-09-05",
+   "d2": "2026-09-12",
+   "dep": "12:45PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:16PM",
-   "arr": "1:00PM",
-   "rarr": "10:19PM",
-   "pct": -5
+   "rdep": "1:17PM",
+   "arr": "6:41PM",
+   "rarr": "6:59PM",
+   "pct": 46
   },
   "PAR": {
    "to": "PAR",
@@ -368,17 +383,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 277,
-   "d1": "2026-10-14",
-   "d2": "2026-10-21",
-   "dep": "7:20PM",
+   "price": 281,
+   "d1": "2026-10-26",
+   "d2": "2026-10-31",
+   "dep": "7:25PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:55PM",
-   "arr": "11:58PM",
-   "rarr": "6:58PM",
-   "pct": 34
+   "rdep": "1:00PM",
+   "arr": "11:25PM",
+   "rarr": "7:13PM",
+   "pct": 33
   }
  }
 }
