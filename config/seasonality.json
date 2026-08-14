@@ -1,6 +1,6 @@
 {
  "_comment": "Baseline seeding inputs for scripts/seed_baselines.py. A route's 12 monthly 'typical cheap round trip' figures = annual_level x shape[month]. This is the Charlotte methodology written down so it reproduces for every new origin instead of being re-guessed by hand each time.",
- "_shapes_note": "Normalised monthly multipliers (mean = 1.00). The first five were derived from the hand-seeded CLT curves in state/baselines.json (each curve divided by its own annual mean, then averaged within its group), so new cities inherit the same seasonality Charlotte was tuned to. 'europe' is hand-seeded: summer peak, deep Jan/Feb and November troughs. ADDED 2026-08-13 for the Charlotte destination expansion: 'latam' (Central and South America — mild, with a December peak because the southern summer and the holidays land together) and 'pacific' (long haul Asia/Pacific — northern summer peak plus a smaller year-end bump). Both are ESTIMATED shapes, hand-seeded the same way 'europe' was, and every route that uses them carries basis ESTIMATE and must stay labelled as one.",
+ "_shapes_note": "Normalised monthly multipliers (mean = 1.00). The first five were derived from the hand-seeded CLT curves in state/baselines.json (each curve divided by its own annual mean, then averaged within its group), so new cities inherit the same seasonality Charlotte was tuned to. 'europe' is hand-seeded: summer peak, deep Jan/Feb and November troughs. ADDED 2026-08-13 for the Charlotte destination expansion: 'latam' (Central and South America — mild, with a December peak because the southern summer and the holidays land together) and 'pacific' (long haul Asia/Pacific — northern summer peak plus a smaller year-end bump). Both are ESTIMATED shapes, hand-seeded the same way 'europe' was, and every route that uses them carries basis ESTIMATE and must stay labelled as one. ADDED 2026-08-14 with the leisure pool: 'ussummer' (Gulf and New England beach markets, which peak in July, the mirror image of 'florida') and 'ski' (mountain markets peaking Dec-Mar). Both hand seeded the same way 'europe' was, and every route on them is a labelled ESTIMATE.",
  "shapes": {
   "florida": [
    0.975,
@@ -113,6 +113,34 @@
    0.94,
    0.94,
    1.04
+  ],
+  "ussummer": [
+   0.84,
+   0.86,
+   0.92,
+   0.98,
+   1.06,
+   1.18,
+   1.24,
+   1.18,
+   1.02,
+   0.92,
+   0.86,
+   0.94
+  ],
+  "ski": [
+   1.22,
+   1.2,
+   1.1,
+   0.9,
+   0.82,
+   0.86,
+   0.94,
+   0.92,
+   0.84,
+   0.88,
+   1.04,
+   1.28
   ]
  },
  "_factor_note": "DOT/BTS city-pair averages are the average fare ALL passengers paid, including last-minute and full-fare tickets. The board compares against a typical CHEAP round trip, which is lower. The domestic factor 0.50 is not a guess: it is the median of the seven hand-tuned CLT domestic curves divided by their DOT round-trip averages (MIA .49, FLL .42, MCO .44, LAS .56, DEN .58, BNA .47, MSY .51). Applying it to a real DOT number for a new city reproduces Charlotte's own relationship rather than inventing a new one. The two international factors are calibrated the same way against the CLT curves that exist (CUN .96, SJU .78, AUA .68) and against the Europe fares the index actually returns; international discounting off list is shallower than domestic, which is why these sit far above 0.50.",
@@ -711,6 +739,206 @@
   "REK": {
    "city": "Reykjavik",
    "shape": "europe",
+   "intl": true
+  },
+  "EYW": {
+   "city": "Key West",
+   "shape": "florida",
+   "intl": false
+  },
+  "VPS": {
+   "city": "Destin / 30A",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "ECP": {
+   "city": "Panama City Beach",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "PNS": {
+   "city": "Pensacola",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "APF": {
+   "city": "Naples",
+   "shape": "florida",
+   "intl": false
+  },
+  "VRB": {
+   "city": "Vero Beach",
+   "shape": "florida",
+   "intl": false
+  },
+  "MLB": {
+   "city": "Melbourne",
+   "shape": "florida",
+   "intl": false
+  },
+  "DAB": {
+   "city": "Daytona Beach",
+   "shape": "florida",
+   "intl": false
+  },
+  "AVL": {
+   "city": "Asheville",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "TYS": {
+   "city": "Knoxville",
+   "shape": "shorthaul",
+   "intl": false
+  },
+  "SNA": {
+   "city": "Orange County",
+   "shape": "mountain",
+   "intl": false
+  },
+  "BTV": {
+   "city": "Burlington",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "BGR": {
+   "city": "Bangor",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "RAP": {
+   "city": "Rapid City",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "TVC": {
+   "city": "Traverse City",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "ACK": {
+   "city": "Nantucket",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "MVY": {
+   "city": "Martha's Vineyard",
+   "shape": "ussummer",
+   "intl": false
+  },
+  "ASE": {
+   "city": "Aspen",
+   "shape": "ski",
+   "intl": false
+  },
+  "EGE": {
+   "city": "Vail",
+   "shape": "ski",
+   "intl": false
+  },
+  "JAC": {
+   "city": "Jackson Hole",
+   "shape": "ski",
+   "intl": false
+  },
+  "HNL": {
+   "city": "Honolulu",
+   "shape": "pacific",
+   "intl": false
+  },
+  "OGG": {
+   "city": "Maui",
+   "shape": "pacific",
+   "intl": false
+  },
+  "TYO": {
+   "city": "Tokyo",
+   "shape": "pacific",
+   "intl": true
+  },
+  "MIL": {
+   "city": "Milan",
+   "shape": "europe",
+   "intl": true
+  },
+  "VCE": {
+   "city": "Venice",
+   "shape": "europe",
+   "intl": true
+  },
+  "BUD": {
+   "city": "Budapest",
+   "shape": "europe",
+   "intl": true
+  },
+  "PRG": {
+   "city": "Prague",
+   "shape": "europe",
+   "intl": true
+  },
+  "EDI": {
+   "city": "Edinburgh",
+   "shape": "europe",
+   "intl": true
+  },
+  "HER": {
+   "city": "Crete",
+   "shape": "europe",
+   "intl": true
+  },
+  "FNC": {
+   "city": "Madeira",
+   "shape": "europe",
+   "intl": true
+  },
+  "PMI": {
+   "city": "Mallorca",
+   "shape": "europe",
+   "intl": true
+  },
+  "PVR": {
+   "city": "Puerto Vallarta",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "SDQ": {
+   "city": "Santo Domingo",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "PTY": {
+   "city": "Panama City",
+   "shape": "latam",
+   "intl": true
+  },
+  "BOG": {
+   "city": "Bogota",
+   "shape": "latam",
+   "intl": true
+  },
+  "MDE": {
+   "city": "Medellin",
+   "shape": "latam",
+   "intl": true
+  },
+  "LIM": {
+   "city": "Lima",
+   "shape": "latam",
+   "intl": true
+  },
+  "CTG": {
+   "city": "Cartagena",
+   "shape": "caribbean",
+   "intl": true
+  },
+  "GUA": {
+   "city": "Guatemala City",
+   "shape": "latam",
+   "intl": true
+  },
+  "SAL": {
+   "city": "San Salvador",
+   "shape": "latam",
    "intl": true
   }
  },
@@ -1482,7 +1710,25 @@
   "AUH": 1250,
   "LIS": 800,
   "BCN": 880,
-  "REK": 700
+  "REK": 700,
+  "TYO": 1250,
+  "MIL": 900,
+  "VCE": 950,
+  "BUD": 880,
+  "PRG": 880,
+  "EDI": 820,
+  "HER": 1000,
+  "FNC": 950,
+  "PMI": 950,
+  "PVR": 560,
+  "SDQ": 540,
+  "PTY": 620,
+  "BOG": 620,
+  "MDE": 620,
+  "LIM": 750,
+  "CTG": 640,
+  "GUA": 620,
+  "SAL": 620
  },
  "shape_factor": {
   "florida": "domestic",
@@ -1492,7 +1738,9 @@
   "caribbean": "caribbean",
   "latam": "caribbean",
   "europe": "europe",
-  "pacific": "europe"
+  "pacific": "europe",
+  "ussummer": "domestic",
+  "ski": "domestic"
  },
  "_shape_factor_note": "Which cheap_fare_factor a shape uses. This replaces the old inline rule in seed_baselines.py ('europe if shape is europe else caribbean'), which could not express the shapes added on 2026-08-13. Domestic routes never reach it — they take cheap_fare_factor.domestic against a real DOT number.",
  "origin_intl": {
@@ -1752,6 +2000,213 @@
    "SEA",
    "SFO",
    "TPA"
+  ],
+  "_CLT_note": "CLT is deliberately absent from origin_dom so Charlotte tracks everything DOT gives it. The LEISURE FILTER below is what actually decides the board."
+ },
+ "us_estimate_round_trip": {
+  "EYW": 320,
+  "VPS": 260,
+  "ECP": 240,
+  "PNS": 250,
+  "APF": 300,
+  "VRB": 280,
+  "MLB": 250,
+  "DAB": 230,
+  "AVL": 260,
+  "TYS": 250,
+  "SNA": 340,
+  "BTV": 320,
+  "BGR": 340,
+  "RAP": 380,
+  "TVC": 360,
+  "ACK": 480,
+  "MVY": 470,
+  "ASE": 480,
+  "EGE": 460,
+  "JAC": 450,
+  "HNL": 700,
+  "OGG": 720
+ },
+ "_us_estimate_note": "DOMESTIC labelled estimates, added 2026-08-14. DOT's Consumer Airfare Report only covers city pairs averaging at least 10 passengers a day, so it publishes nothing for Nantucket, Aspen, Jackson Hole, Key West, Destin and the rest of the small leisure markets — which are exactly the destinations this account exists to show. Unlike dot_round_trip and intl_estimate_round_trip, the number here is the TYPICAL CHEAP ROUND TRIP itself, not an annual average, so seed_baselines applies NO cheap-fare factor to it. Every route seeded this way carries basis ESTIMATE and must stay labelled as an estimate wherever it is shown.",
+ "leisure_pool": {
+  "_doc": [
+   "The destination list, 2026-08-14 (owner's call). This is the ranked leisure list,",
+   "minus Wilmington, Hilton Head and Charleston. It REPLACES 'every city pair DOT",
+   "publishes' as the thing the board draws from.",
+   "",
+   "Adopting every DOT pair was the right way to get real fare baselines and the wrong",
+   "way to pick holidays: DOT publishes what people fly, and what people fly is largely",
+   "work. It put Wichita, Des Moines, Rochester, Hartford and Buffalo on a travel account",
+   "while missing Key West, Nantucket, Aspen and Jackson Hole.",
+   "",
+   "tier drives EXPOSURE, not eligibility. See config/tiers.json."
+  ],
+  "codes": [
+   "LON",
+   "LAS",
+   "NYC",
+   "AUA",
+   "MCO",
+   "CUN",
+   "PAR",
+   "ROM",
+   "PUJ",
+   "SJU",
+   "UVF",
+   "MBJ",
+   "PLS",
+   "GCM",
+   "EYW",
+   "LAX",
+   "MIA",
+   "MSY",
+   "SAN",
+   "SJO",
+   "SXM",
+   "MEX",
+   "BGI",
+   "VPS",
+   "LIR",
+   "SJD",
+   "MAD",
+   "NAS",
+   "STT",
+   "ORD",
+   "DEN",
+   "FLL",
+   "SEA",
+   "DUB",
+   "TYO",
+   "ANU",
+   "ATH",
+   "CZM",
+   "ECP",
+   "PNS",
+   "SFO",
+   "SRQ",
+   "JAC",
+   "AUS",
+   "BZE",
+   "BDA",
+   "BZN",
+   "CUR",
+   "RSW",
+   "GND",
+   "MUC",
+   "PHX",
+   "SLC",
+   "SAV",
+   "STX",
+   "SKB",
+   "AVL",
+   "MYR",
+   "BNA",
+   "PWM",
+   "ACK",
+   "REK",
+   "EGE",
+   "AUH",
+   "GGT",
+   "HNL",
+   "YUL",
+   "APF",
+   "ELH",
+   "SNA",
+   "YQB",
+   "RAP",
+   "TPA",
+   "ASE",
+   "MVY",
+   "FRA",
+   "PDX",
+   "POP",
+   "PBI",
+   "BCN",
+   "VRB",
+   "ABQ",
+   "BTV",
+   "GHB",
+   "LIS",
+   "MHH",
+   "MLB",
+   "SAT",
+   "SVD",
+   "YYZ",
+   "YYC",
+   "OGG",
+   "PSP",
+   "YVR",
+   "FPO",
+   "JAX",
+   "BGR",
+   "BUD",
+   "HER",
+   "MIL",
+   "AMS",
+   "DAB",
+   "GDL",
+   "TYS",
+   "SMF",
+   "FNC",
+   "PMI",
+   "PRG",
+   "PVR",
+   "VCE",
+   "TVC",
+   "CTG",
+   "EDI",
+   "LIM",
+   "SDQ",
+   "GUA",
+   "RNO",
+   "TUS",
+   "PTY",
+   "BOG",
+   "MDE",
+   "BOI",
+   "SAL"
+  ]
+ },
+ "_dropped_2026_08_14": {
+  "_doc": "Removed from the board. Baselines are left in place so the Fare Finder still prices them.",
+  "business_markets": [
+   "ALB",
+   "BDL",
+   "BHM",
+   "BOS",
+   "BUF",
+   "CHS",
+   "CLE",
+   "CMH",
+   "CVG",
+   "DCA",
+   "DFW",
+   "DSM",
+   "DTW",
+   "GRR",
+   "HOU",
+   "ICT",
+   "IND",
+   "LIT",
+   "MCI",
+   "MEM",
+   "MKE",
+   "MSN",
+   "MSP",
+   "OKC",
+   "OMA",
+   "ORF",
+   "PHL",
+   "PIT",
+   "RIC",
+   "ROC",
+   "STL",
+   "TUL"
+  ],
+  "owner_removals": [
+   "ILM",
+   "HHH",
+   "CHS"
   ]
  }
 }
