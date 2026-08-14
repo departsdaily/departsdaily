@@ -13,6 +13,7 @@
 :root{
   --navy:#0B1829; --panel:#12243C; --tile:#070F1B; --edge:#2E425E;
   --amber:#FFB703; --sky:#6C9EDE; --green:#3EC97E; --white:#F0F4FA; --dim:#788CA5;
+  --coral:#FF8A5B;   /* fourth category accent — Extra Long Weekend */
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
   --disp:"Barlow Condensed",Arial Narrow,sans-serif;
 }
@@ -71,19 +72,22 @@ h1 .amber{color:var(--amber)}
 .var{color:var(--green);font-size:12px;text-align:right;letter-spacing:.06em}
 .bfoot{background:var(--tile);color:var(--dim);font-size:12px;padding:10px 18px;line-height:1.5}
 .empty{padding:40px 18px;background:var(--panel);color:var(--dim);text-align:center;line-height:1.7}
-/* THE THREE CATEGORIES (2026-08-14). The site now mirrors the morning post
-   exactly: Long Weekend Trips, Week-ish Trips, Cheapest Out of CLT. Each one is
-   its own board with its own accent stripe and its own name, so a visitor
-   arriving from the bio link finds the same three headings they just swiped
-   through rather than one undifferentiated list. */
+/* THE FOUR CATEGORIES (2026-08-14). The site mirrors the morning post exactly:
+   Long Weekend Trips, Extra Long Weekend Trips, Week-ish Trips, Cheapest Out of
+   CLT — same order, same names, same one-line explainer. A visitor arriving from
+   the bio link finds the headings they just swiped through rather than one
+   undifferentiated list. The accent runs warm-to-cool as the trip gets longer,
+   so the four are told apart at a glance and not only by reading. */
 .cats{display:flex;flex-direction:column;gap:22px;margin-bottom:10px}
 .cat{border:2px solid var(--edge);border-radius:14px;overflow:hidden;border-top-width:6px}
 .cat.weekend{border-top-color:var(--amber)}
+.cat.extra_weekend{border-top-color:var(--coral)}
 .cat.weekish{border-top-color:var(--sky)}
 .cat.cheapest{border-top-color:var(--green)}
 .cathead{background:var(--tile);padding:16px 18px;border-bottom:2px solid var(--edge)}
 .catname{font-size:26px;font-weight:800;letter-spacing:.04em;line-height:1.15;margin:0}
 .cat.weekend .catname{color:var(--amber)}
+.cat.extra_weekend .catname{color:var(--coral)}
 .cat.weekish .catname{color:var(--sky)}
 .cat.cheapest .catname{color:var(--green)}
 .catmeta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:8px;
@@ -260,19 +264,22 @@ h1 .amber{color:var(--amber)}
 .var{color:var(--green);font-size:12px;text-align:right;letter-spacing:.06em}
 .bfoot{background:var(--tile);color:var(--dim);font-size:12px;padding:10px 18px;line-height:1.5}
 .empty{padding:40px 18px;background:var(--panel);color:var(--dim);text-align:center;line-height:1.7}
-/* THE THREE CATEGORIES (2026-08-14). The site now mirrors the morning post
-   exactly: Long Weekend Trips, Week-ish Trips, Cheapest Out of CLT. Each one is
-   its own board with its own accent stripe and its own name, so a visitor
-   arriving from the bio link finds the same three headings they just swiped
-   through rather than one undifferentiated list. */
+/* THE FOUR CATEGORIES (2026-08-14). The site mirrors the morning post exactly:
+   Long Weekend Trips, Extra Long Weekend Trips, Week-ish Trips, Cheapest Out of
+   CLT — same order, same names, same one-line explainer. A visitor arriving from
+   the bio link finds the headings they just swiped through rather than one
+   undifferentiated list. The accent runs warm-to-cool as the trip gets longer,
+   so the four are told apart at a glance and not only by reading. */
 .cats{display:flex;flex-direction:column;gap:22px;margin-bottom:10px}
 .cat{border:2px solid var(--edge);border-radius:14px;overflow:hidden;border-top-width:6px}
 .cat.weekend{border-top-color:var(--amber)}
+.cat.extra_weekend{border-top-color:var(--coral)}
 .cat.weekish{border-top-color:var(--sky)}
 .cat.cheapest{border-top-color:var(--green)}
 .cathead{background:var(--tile);padding:16px 18px;border-bottom:2px solid var(--edge)}
 .catname{font-size:26px;font-weight:800;letter-spacing:.04em;line-height:1.15;margin:0}
 .cat.weekend .catname{color:var(--amber)}
+.cat.extra_weekend .catname{color:var(--coral)}
 .cat.weekish .catname{color:var(--sky)}
 .cat.cheapest .catname{color:var(--green)}
 .catmeta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:8px;
@@ -577,7 +584,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
      workflow — nothing downstream lost a file, only this page stopped
      rendering it. -->
 
-<!-- THE THREE CATEGORIES. Populated from SECTIONS in js/deals-data.js, which the
+<!-- THE FOUR CATEGORIES. Populated from SECTIONS in js/deals-data.js, which the
      updater builds from config/schedule.json — the same file the Instagram post
      reads — so the page and the carousel can never disagree about what a
      "long weekend" is. If SECTIONS is missing (an old data file, or a run that
@@ -1366,10 +1373,11 @@ function renderCity(code){
   rows.innerHTML=deals.map(x=>rowHTML(code,x)).join("");
 }
 
-/* THE THREE CATEGORIES — the page's half of the mirror.
+/* THE FOUR CATEGORIES — the page's half of the mirror.
 
-   Long Weekend Trips / Week-ish Trips / Cheapest Out of CLT, in that order,
-   each visually its own thing. The night ranges, the names and which sections
+   Long Weekend Trips / Extra Long Weekend Trips / Week-ish Trips / Cheapest Out
+   of CLT, in that order, each visually its own thing. The order is the order the
+   classifier evaluates in, and it arrives already sorted from the updater. The night ranges, the names and which sections
    are allowed to claim a saving all come from the data file, which the updater
    builds from config/schedule.json, so nothing here has to be kept in sync by
    hand: change the config once and both the post and this page move together.
@@ -1377,22 +1385,24 @@ function renderCity(code){
    Rows expire client-side exactly like the flat board's, via the same
    liveDeals() stamp check. A category whose rows have all expired hides itself
    rather than printing a heading over nothing.                              */
-/* The page says "TRIPS" where the slide just says the category, because a heading
-   on a web page has room to be a noun phrase and a 76pt slide header does not.
-   Falls through to the post's own wording for anything unrecognised, so a new
-   section added to config/schedule.json appears here without a code change. */
-const CAT_TITLE={weekend:"LONG WEEKEND TRIPS",weekish:"WEEK-ISH TRIPS"};
-function catTitle(sec){ return CAT_TITLE[sec.key]||sec.cover; }
-
-function catBlurb(sec){
-  const n=sec.nights||[];
-  const span=n.length===2?(n[0]===n[1]?`${n[0]} nights`:`${n[0]}\u2013${n[1]} nights`):"";
-  if(sec.key==="weekend")
-    return `${span}. Out Thursday or Friday, back Sunday or Monday \u2014 a real trip that barely touches the working week.`;
-  if(sec.key==="weekish")
-    return `${span}. The holiday you plan around, mostly international, where one week of leave buys two weekends.`;
-  return `Any length, including the odd midweek shapes. The lowest real fares out of Charlotte right now \u2014 no saving is claimed here, just the price.`;
-}
+/* THE HEADING AND THE EXPLAINER BOTH COME FROM THE DATA (2026-08-14).
+   The updater writes them out of pipeline/trip_shape.py, which is the single
+   definition of what each category is, so the page and the slide say the same
+   thing about the same category word for word. They used to be hard-coded here
+   and reconstructed from a night band — that is exactly how a page ends up
+   describing a rule the pipeline stopped using.
+   The literals below are only a fallback for a data file written before the
+   four-category spec, so the page degrades to sensible wording instead of to a
+   blank heading. */
+const CAT_TITLE={weekend:"LONG WEEKEND TRIPS",extra_weekend:"EXTRA LONG WEEKEND TRIPS",
+                 weekish:"WEEK-ISH TRIPS",cheapest:"CHEAPEST OUT OF CLT"};
+const CAT_EXPLAIN={
+  weekend:"Out Thursday or Friday, back Sunday or Monday. 2 to 4 nights. Built for a normal 9 to 5.",
+  extra_weekend:"A weekend with a couple of days bolted on. Out Wednesday to Friday, back Sunday to Wednesday. 4 to 7 nights.",
+  weekish:"A real week off. Out Thursday to Saturday, back the following Thursday through Monday. 5 to 11 nights.",
+  cheapest:"Odd days off. These are cheap because the dates are awkward, and we say so. Every other shape lands here."};
+function catTitle(sec){ return sec.title||CAT_TITLE[sec.key]||sec.cover; }
+function catBlurb(sec){ return sec.explain||CAT_EXPLAIN[sec.key]||sec.angle||""; }
 
 function renderCategories(code){
   const wrap=document.getElementById("cats");
