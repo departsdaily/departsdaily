@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-15T06:14:44-04:00",
+ "generated": "2026-08-15T06:54:02-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 30,
  "routes_failed": [],
  "fares": {
   "AUH": {
@@ -98,15 +98,15 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 262,
+   "price": 264,
    "d1": "2026-09-04",
    "d2": "2026-09-07",
-   "dep": "3:10PM",
+   "dep": "6:40AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "9:10PM",
-   "arr": "5:16PM",
+   "arr": "8:46AM",
    "rarr": "11:20PM",
    "pct": 35
   },
@@ -334,6 +334,21 @@
    "arr": "5:00PM",
    "rarr": "3:55PM",
    "pct": 13
+  },
+  "SJO": {
+   "to": "SJO",
+   "city": "San Jos\u00e9, Costa Rica",
+   "price": 593,
+   "d1": "2026-10-01",
+   "d2": "2026-10-20",
+   "dep": "11:15AM",
+   "al": "Southwest",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "9:00AM",
+   "arr": "6:25PM",
+   "rarr": "4:15PM",
+   "pct": 1
   },
   "SJU": {
    "to": "SJU",
