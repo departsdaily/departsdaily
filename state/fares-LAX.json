@@ -1,10 +1,25 @@
 {
  "origin": "LAX",
- "generated": "2026-08-15T00:16:29-04:00",
+ "generated": "2026-08-15T02:16:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 299,
+   "d1": "2026-11-13",
+   "d2": "2026-11-15",
+   "dep": "1:45PM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:53PM",
+   "arr": "5:30PM",
+   "rarr": "8:22PM",
+   "pct": 50
+  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -83,32 +98,32 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 148,
-   "d1": "2026-10-21",
-   "d2": "2026-10-28",
+   "price": 139,
+   "d1": "2026-10-10",
+   "d2": "2026-10-13",
    "dep": "6:00AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:48PM",
+   "rdep": "10:59PM",
    "arr": "9:26AM",
-   "rarr": "11:30PM",
-   "pct": 68
+   "rarr": "2:34AM+1",
+   "pct": 70
   },
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 60,
-   "d1": "2026-10-26",
-   "d2": "2026-10-28",
-   "dep": "1:29PM",
+   "price": 58,
+   "d1": "2026-09-08",
+   "d2": "2026-09-10",
+   "dep": "10:15AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "2:27PM",
-   "arr": "2:51PM",
-   "rarr": "3:52PM",
-   "pct": 80
+   "rdep": "5:20PM",
+   "arr": "11:31AM",
+   "rarr": "6:44PM",
+   "pct": 81
   },
   "MCO": {
    "to": "MCO",
@@ -263,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 259,
-   "d1": "2026-10-01",
-   "d2": "2026-10-07",
-   "dep": "12:46AM",
+   "price": 285,
+   "d1": "2026-10-02",
+   "d2": "2026-10-10",
+   "dep": "7:52PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:50AM",
-   "arr": "6:40AM",
+   "arr": "1:46AM+1",
    "rarr": "5:07PM",
-   "pct": 50
+   "pct": 45
   },
   "GCM": {
    "to": "GCM",
