@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-15T14:16:24-04:00",
+ "generated": "2026-08-15T16:02:23-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -199,6 +199,21 @@
    "arr": "1:15AM+1",
    "rarr": "4:47PM",
    "pct": 70
+  },
+  "CUN": {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 465,
+   "d1": "2026-11-21",
+   "d2": "2026-11-28",
+   "dep": "2:20PM",
+   "al": "Viva Aerobus",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:35AM",
+   "arr": "7:22PM",
+   "rarr": "6:46AM",
+   "pct": 11
   },
   "LON": {
    "to": "LON",

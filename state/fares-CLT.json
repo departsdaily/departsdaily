@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-15T14:15:02-04:00",
+ "generated": "2026-08-15T16:01:02-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 32,
  "routes_failed": [],
@@ -113,15 +113,15 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 262,
+   "price": 264,
    "d1": "2026-09-04",
    "d2": "2026-09-07",
-   "dep": "3:10PM",
+   "dep": "6:40AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "9:10PM",
-   "arr": "5:16PM",
+   "arr": "8:46AM",
    "rarr": "11:20PM",
    "pct": 35
   },
@@ -308,17 +308,17 @@
   "PLS": {
    "to": "PLS",
    "city": "Providenciales",
-   "price": 557,
-   "d1": "2026-09-22",
-   "d2": "2026-09-29",
-   "dep": "7:07AM",
-   "al": "American",
+   "price": 387,
+   "d1": "2026-12-09",
+   "d2": "2026-12-13",
+   "dep": "5:10PM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:07PM",
-   "arr": "11:01AM",
-   "rarr": "5:18PM",
-   "pct": 16
+   "rdep": "1:20PM",
+   "arr": "11:22PM",
+   "rarr": "7:41PM",
+   "pct": 41
   },
   "PSP": {
    "to": "PSP",

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-15T14:17:05-04:00",
+ "generated": "2026-08-15T16:03:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -353,17 +353,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 226,
-   "d1": "2026-09-09",
-   "d2": "2026-09-30",
-   "dep": "7:29AM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 274,
+   "d1": "2026-11-11",
+   "d2": "2026-11-16",
+   "dep": "6:00AM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:35AM",
-   "arr": "11:34AM",
-   "rarr": "3:19PM",
-   "pct": 58
+   "rdep": "1:10PM",
+   "arr": "11:04AM",
+   "rarr": "5:09PM",
+   "pct": 49
   },
   "NAS": {
    "to": "NAS",
