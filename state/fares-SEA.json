@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-15T06:17:00-04:00",
+ "generated": "2026-08-15T08:17:15-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 369,
-   "d1": "2026-09-14",
-   "d2": "2026-09-20",
-   "dep": "11:57PM",
-   "al": "American",
+   "price": 306,
+   "d1": "2026-09-05",
+   "d2": "2026-09-10",
+   "dep": "7:06PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:19PM",
-   "arr": "6:10AM+1",
-   "rarr": "1:46AM+1",
-   "pct": 44
+   "rdep": "1:06PM",
+   "arr": "1:19AM+1",
+   "rarr": "7:58PM",
+   "pct": 53
   },
   "DEN": {
    "to": "DEN",
