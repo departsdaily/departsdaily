@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-15T12:16:06-04:00",
+ "generated": "2026-08-15T14:03:02-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -203,7 +203,7 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 820,
+   "price": 825,
    "d1": "2026-09-16",
    "d2": "2026-09-21",
    "dep": "3:15PM",
@@ -213,7 +213,7 @@
    "rdep": "7:55AM",
    "arr": "2:10AM+1",
    "rarr": "12:01AM+1",
-   "pct": 4
+   "pct": 3
   },
   "PAR": {
    "to": "PAR",

@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-15T12:15:30-04:00",
+ "generated": "2026-08-15T14:02:24-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,21 +19,6 @@
    "arr": "6:50PM",
    "rarr": "11:46AM",
    "pct": 53
-  },
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 233,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "12:30PM",
-   "al": "LF",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:00AM",
-   "arr": "3:25PM",
-   "rarr": "11:10AM",
-   "pct": 41
   },
   "BOS": {
    "to": "BOS",
@@ -383,17 +368,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 266,
-   "d1": "2026-11-24",
-   "d2": "2026-11-29",
-   "dep": "7:53PM",
+   "price": 149,
+   "d1": "2026-09-04",
+   "d2": "2026-09-08",
+   "dep": "12:44AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "3:55AM",
-   "arr": "12:35AM+1",
-   "rarr": "9:16AM",
-   "pct": 37
+   "rdep": "7:14PM",
+   "arr": "5:44AM",
+   "rarr": "12:27AM+1",
+   "pct": 65
   }
  }
 }

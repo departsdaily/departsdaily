@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-15T12:17:04-04:00",
+ "generated": "2026-08-15T14:04:05-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -214,21 +214,6 @@
    "arr": "1:04PM",
    "rarr": "12:36PM",
    "pct": 66
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 165,
-   "d1": "2026-10-31",
-   "d2": "2026-11-02",
-   "dep": "10:53PM",
-   "al": "American",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:35AM",
-   "arr": "11:59PM",
-   "rarr": "12:49PM",
-   "pct": 56
   },
   "AUA": {
    "to": "AUA",
