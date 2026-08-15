@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-15T16:14:47-04:00",
+ "generated": "2026-08-15T18:01:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 32,
+ "routes_priced": 33,
  "routes_failed": [],
  "fares": {
   "AUH": {
@@ -349,6 +349,21 @@
    "arr": "1:10PM",
    "rarr": "2:55AM+1",
    "pct": -38
+  },
+  "PWM": {
+   "to": "PWM",
+   "city": "Portland, ME",
+   "price": 591,
+   "d1": "2026-08-30",
+   "d2": "2026-09-07",
+   "dep": "1:21PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:30AM",
+   "arr": "3:40PM",
+   "rarr": "9:07AM",
+   "pct": -1
   },
   "SAT": {
    "to": "SAT",

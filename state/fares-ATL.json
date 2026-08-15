@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-15T16:15:06-04:00",
+ "generated": "2026-08-15T18:02:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 145,
-   "d1": "2026-08-26",
-   "d2": "2026-08-29",
-   "dep": "6:07AM",
+   "price": 68,
+   "d1": "2026-09-09",
+   "d2": "2026-09-12",
+   "dep": "5:02PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:41PM",
-   "arr": "11:26AM",
-   "rarr": "9:07PM",
-   "pct": 65
+   "rdep": "6:20AM",
+   "arr": "7:23PM",
+   "rarr": "8:29AM",
+   "pct": 84
   },
   "PHL": {
    "to": "PHL",
