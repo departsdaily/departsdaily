@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-14T22:16:23-04:00",
+ "generated": "2026-08-15T00:16:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -274,6 +274,21 @@
    "arr": "6:40AM",
    "rarr": "5:07PM",
    "pct": 50
+  },
+  "GCM": {
+   "to": "GCM",
+   "city": "Grand Cayman",
+   "price": 510,
+   "d1": "2026-12-13",
+   "d2": "2026-12-17",
+   "dep": "9:25AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:00PM",
+   "arr": "3:55PM",
+   "rarr": "11:28PM",
+   "pct": 20
   },
   "LON": {
    "to": "LON",

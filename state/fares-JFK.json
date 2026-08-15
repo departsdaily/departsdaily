@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-14T22:16:41-04:00",
+ "generated": "2026-08-15T00:16:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -413,17 +413,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 441,
-   "d1": "2026-10-20",
-   "d2": "2026-10-31",
+   "price": 421,
+   "d1": "2026-09-27",
+   "d2": "2026-10-04",
    "dep": "10:05PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:15PM",
+   "rdep": "8:00PM",
    "arr": "8:15AM+1",
-   "rarr": "12:00AM+1",
-   "pct": 54
+   "rarr": "7:15AM+1",
+   "pct": 56
   },
   "SJU": {
    "to": "SJU",

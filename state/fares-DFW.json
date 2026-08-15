@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-14T22:15:46-04:00",
+ "generated": "2026-08-15T00:15:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -278,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 321,
-   "d1": "2026-09-11",
-   "d2": "2026-09-20",
-   "dep": "12:39PM",
+   "price": 299,
+   "d1": "2026-10-03",
+   "d2": "2026-10-07",
+   "dep": "9:00PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:40AM",
-   "arr": "5:53PM",
+   "arr": "2:03AM+1",
    "rarr": "4:00PM",
-   "pct": 38
+   "pct": 43
   },
   "LON": {
    "to": "LON",
@@ -304,6 +304,21 @@
    "arr": "10:58PM",
    "rarr": "6:25PM",
    "pct": 24
+  },
+  "MBJ": {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 539,
+   "d1": "2026-12-04",
+   "d2": "2026-12-08",
+   "dep": "3:05PM",
+   "al": "Southwest",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "3:45PM",
+   "arr": "8:40PM",
+   "rarr": "9:45PM",
+   "pct": 0
   },
   "PAR": {
    "to": "PAR",
