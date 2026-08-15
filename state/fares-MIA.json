@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-15T10:17:16-04:00",
+ "generated": "2026-08-15T12:04:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 296,
-   "d1": "2026-09-12",
-   "d2": "2026-09-18",
-   "dep": "7:45PM",
-   "al": "UP",
+   "price": 329,
+   "d1": "2026-09-07",
+   "d2": "2026-09-14",
+   "dep": "12:23PM",
+   "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:30PM",
-   "arr": "8:45PM",
-   "rarr": "6:35PM",
-   "pct": 38
+   "rdep": "6:45PM",
+   "arr": "1:36PM",
+   "rarr": "7:54PM",
+   "pct": 31
   },
   "PAR": {
    "to": "PAR",

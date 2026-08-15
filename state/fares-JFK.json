@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-15T10:16:58-04:00",
+ "generated": "2026-08-15T12:04:03-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 379,
+   "price": 349,
    "d1": "2026-10-29",
    "d2": "2026-11-03",
-   "dep": "7:58AM",
-   "al": "American",
-   "stops": 1,
+   "dep": "9:45AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "3:19PM",
-   "arr": "2:10PM",
-   "rarr": "9:43PM",
-   "pct": 39
+   "rdep": "2:40PM",
+   "arr": "2:25PM",
+   "rarr": "7:23PM",
+   "pct": 44
   },
   "CUN": {
    "to": "CUN",
@@ -338,17 +338,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 481,
-   "d1": "2026-08-20",
-   "d2": "2026-08-24",
-   "dep": "6:10PM",
-   "al": "SN",
+   "price": 467,
+   "d1": "2026-09-11",
+   "d2": "2026-09-16",
+   "dep": "8:15AM",
+   "al": "Air France",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:50AM",
-   "arr": "3:00AM+1",
-   "rarr": "4:20PM",
-   "pct": 43
+   "rdep": "11:45AM",
+   "arr": "3:10PM",
+   "rarr": "9:10PM",
+   "pct": 45
   },
   "MBJ": {
    "to": "MBJ",
