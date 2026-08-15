@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-15 18:00 EDT
+   Generated 2026-08-15 18:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-15T18:00:41-04:00",
+ updated:"2026-08-15T18:13:34-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:151,d1:"2026-08-27",d2:"2026-09-01",dep:"2:45PM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"9:39PM",rarr:"6:36AM",exp:"2026-08-17"},
@@ -79,7 +79,7 @@ const DEALS={CLT:[
  {to:"LAX",city:"Los Angeles",price:95,d1:"2026-09-18",d2:"2026-09-21",dep:"8:15PM",al:"Frontier",stops:0,rdep:"5:44PM",arr:"11:04PM",rarr:"8:40PM",exp:"2026-08-17"},
  {to:"LAS",city:"Las Vegas",price:103,d1:"2026-09-30",d2:"2026-10-05",dep:"9:45PM",al:"Frontier",stops:0,rdep:"6:50AM",arr:"12:25AM+1",rarr:"9:42AM",exp:"2026-08-17"},
  {to:"DEN",city:"Denver",price:103,d1:"2026-09-26",d2:"2026-10-03",dep:"4:27PM",al:"Frontier",stops:0,rdep:"1:07PM",arr:"7:21PM",rarr:"4:08PM",exp:"2026-08-17"},
- {to:"PHX",city:"Phoenix",price:207,d1:"2026-09-10",d2:"2026-09-13",dep:"8:15PM",al:"Frontier",stops:1,rdep:"6:25AM",arr:"12:37AM+1",rarr:"10:55AM",exp:"2026-08-17"},
+ {to:"MIA",city:"Miami",price:319,d1:"2026-08-25",d2:"2026-08-31",dep:"2:37PM",al:"Frontier",stops:1,rdep:"6:00AM",arr:"9:36PM",rarr:"1:27PM",exp:"2026-08-17"},
  {to:"NYC",city:"New York City",price:338,d1:"2026-10-14",d2:"2026-10-19",dep:"1:00PM",al:"United",stops:0,rdep:"6:44PM",arr:"6:30PM",rarr:"12:55AM+1",exp:"2026-08-17"},
  {to:"ROM",city:"Rome",price:683,d1:"2026-10-08",d2:"2026-10-15",dep:"6:05PM",al:"DE",stops:1,rdep:"10:45AM",arr:"6:00AM+1",rarr:"11:05PM",exp:"2026-08-17"},
  {to:"LON",city:"London",price:712,d1:"2026-10-10",d2:"2026-10-20",dep:"7:00PM",al:"Icelandair",stops:2,rdep:"11:00AM",arr:"8:20AM+1",rarr:"12:45AM+1",exp:"2026-08-17"},

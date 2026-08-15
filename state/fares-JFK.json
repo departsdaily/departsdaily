@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-15T18:03:56-04:00",
+ "generated": "2026-08-15T18:16:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 204,
-   "d1": "2026-09-24",
-   "d2": "2026-09-27",
-   "dep": "12:29PM",
+   "price": 197,
+   "d1": "2026-09-04",
+   "d2": "2026-09-13",
+   "dep": "4:59PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:00PM",
-   "arr": "3:25PM",
-   "rarr": "7:41PM",
-   "pct": 41
+   "rdep": "9:30AM",
+   "arr": "8:09PM",
+   "rarr": "12:07PM",
+   "pct": 43
   },
   "MIA": {
    "to": "MIA",
