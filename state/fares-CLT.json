@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-15T12:02:02-04:00",
+ "generated": "2026-08-15T12:14:51-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 30,
  "routes_failed": [],
@@ -218,9 +218,9 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 193,
-   "d1": "2026-10-26",
-   "d2": "2026-10-31",
+   "price": 192,
+   "d1": "2026-11-04",
+   "d2": "2026-11-06",
    "dep": "5:33PM",
    "al": "Frontier",
    "stops": 0,
@@ -228,7 +228,7 @@
    "rdep": "4:54PM",
    "arr": "7:29PM",
    "rarr": "7:16PM",
-   "pct": 53
+   "pct": 54
   },
   "PAR": {
    "to": "PAR",
