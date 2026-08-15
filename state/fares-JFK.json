@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-14T18:16:52-04:00",
+ "generated": "2026-08-14T20:16:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 263,
-   "d1": "2026-09-06",
-   "d2": "2026-09-10",
-   "dep": "8:15AM",
+   "price": 231,
+   "d1": "2026-10-22",
+   "d2": "2026-10-26",
+   "dep": "11:28AM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30PM",
-   "arr": "12:08PM",
-   "rarr": "10:14PM",
-   "pct": 52
+   "rdep": "7:54AM",
+   "arr": "3:32PM",
+   "rarr": "11:29AM",
+   "pct": 58
   },
   "FLL": {
    "to": "FLL",
