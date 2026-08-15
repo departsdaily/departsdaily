@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-15T16:01:23-04:00",
+ "generated": "2026-08-15T16:15:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 243,
-   "d1": "2026-09-05",
-   "d2": "2026-09-07",
-   "dep": "4:53PM",
-   "al": "American",
+   "price": 177,
+   "d1": "2026-10-08",
+   "d2": "2026-10-12",
+   "dep": "4:30PM",
+   "al": "Southwest",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:25AM",
-   "arr": "7:00PM",
-   "rarr": "8:24AM",
-   "pct": 40
+   "rdep": "7:25AM",
+   "arr": "6:15PM",
+   "rarr": "9:20AM",
+   "pct": 57
   },
   "DEN": {
    "to": "DEN",

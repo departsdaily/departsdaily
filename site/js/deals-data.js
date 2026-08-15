@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-15 15:59 EDT
+   Generated 2026-08-15 16:13 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-15T15:59:44-04:00",
+ updated:"2026-08-15T16:13:34-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:151,d1:"2026-08-27",d2:"2026-09-01",dep:"2:45PM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"9:39PM",rarr:"6:36AM",exp:"2026-08-17"},
@@ -23,8 +23,8 @@ const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:75,d1:"2026-10-30",d2:"2026-11-02",dep:"8:30PM",al:"Frontier",stops:0,rdep:"12:52PM",arr:"10:10PM",rarr:"2:36PM",exp:"2026-08-17"},
  {to:"MIA",city:"Miami",price:73,d1:"2026-09-21",d2:"2026-09-28",dep:"2:28PM",al:"Frontier",stops:0,rdep:"5:32AM",arr:"4:29PM",rarr:"7:40AM",exp:"2026-08-17"},
  {to:"LAS",city:"Las Vegas",price:160,d1:"2026-09-01",d2:"2026-09-09",dep:"7:57AM",al:"Frontier",stops:1,rdep:"9:45AM",arr:"1:19PM",rarr:"2:51PM",exp:"2026-08-17"},
- {to:"DEN",city:"Denver",price:140,d1:"2026-09-02",d2:"2026-09-04",dep:"8:35PM",al:"Frontier",stops:0,rdep:"11:59PM",arr:"12:10AM+1",rarr:"3:21AM+1",exp:"2026-08-17"},
  {to:"NYC",city:"New York City",price:145,d1:"2026-09-03",d2:"2026-09-08",dep:"10:40PM",al:"Frontier",stops:1,rdep:"11:30AM",arr:"1:03AM+1",rarr:"4:27PM",exp:"2026-08-17"},
+ {to:"DCA",city:"Washington DC",price:177,d1:"2026-10-08",d2:"2026-10-12",dep:"4:30PM",al:"Southwest",stops:0,rdep:"7:25AM",arr:"6:15PM",rarr:"9:20AM",exp:"2026-08-17"},
  {to:"CUN",city:"Cancún",price:231,d1:"2026-08-23",d2:"2026-08-28",dep:"12:06PM",al:"Frontier",stops:1,rdep:"11:10AM",arr:"2:54PM",rarr:"4:47PM",exp:"2026-08-17"},
  {to:"SJU",city:"San Juan, PR",price:200,d1:"2026-10-08",d2:"2026-10-14",dep:"8:17AM",al:"Frontier",stops:1,rdep:"5:12PM",arr:"1:03PM",rarr:"10:14PM",exp:"2026-08-17"},
  {to:"PUJ",city:"Punta Cana",price:419,d1:"2026-10-10",d2:"2026-10-16",dep:"7:49PM",al:"Frontier",stops:2,rdep:"3:15PM",arr:"12:15AM+1",rarr:"9:24PM",exp:"2026-08-17"}],ORD:[
