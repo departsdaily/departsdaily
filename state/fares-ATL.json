@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-14T20:15:07-04:00",
+ "generated": "2026-08-14T22:15:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 87,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "5:05AM",
+   "price": 88,
+   "d1": "2026-10-02",
+   "d2": "2026-10-06",
+   "dep": "4:06PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:30AM",
-   "arr": "7:15AM",
-   "rarr": "11:00AM",
-   "pct": 81
+   "rdep": "12:40PM",
+   "arr": "6:14PM",
+   "rarr": "3:01PM",
+   "pct": 80
   },
   "SEA": {
    "to": "SEA",
@@ -293,17 +293,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 569,
-   "d1": "2026-09-07",
-   "d2": "2026-09-16",
-   "dep": "7:30PM",
-   "al": "SK",
+   "price": 815,
+   "d1": "2026-11-21",
+   "d2": "2026-11-26",
+   "dep": "5:00PM",
+   "al": "",
    "stops": 1,
-   "xfer": 0,
-   "rdep": "2:00PM",
-   "arr": "6:20AM+1",
-   "rarr": "1:25AM+1",
-   "pct": 37
+   "xfer": 1,
+   "rdep": "2:30PM",
+   "arr": "2:27AM+1",
+   "rarr": "4:07AM+1",
+   "pct": 9
   },
   "PUJ": {
    "to": "PUJ",

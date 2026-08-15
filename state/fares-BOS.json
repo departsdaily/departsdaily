@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-14T20:17:32-04:00",
+ "generated": "2026-08-14T22:17:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -19,21 +19,6 @@
    "arr": "5:05PM",
    "rarr": "10:55AM",
    "pct": 43
-  },
-  "DCA": {
-   "to": "DCA",
-   "city": "Washington DC",
-   "price": 427,
-   "d1": "2026-08-17",
-   "d2": "2026-08-19",
-   "dep": "8:29AM",
-   "al": "JetBlue",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:00AM",
-   "arr": "10:10AM",
-   "rarr": "12:35PM",
-   "pct": -10
   },
   "DEN": {
    "to": "DEN",
