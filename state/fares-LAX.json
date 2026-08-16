@@ -1,11 +1,9 @@
 {
  "origin": "LAX",
- "generated": "2026-08-16T12:08:51-04:00",
+ "generated": "2026-08-16T12:17:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
- "routes_failed": [
-  "SEA"
- ],
+ "routes_priced": 26,
+ "routes_failed": [],
  "fares": {
   "BNA": {
    "to": "BNA",
@@ -231,6 +229,21 @@
    "arr": "5:52PM",
    "rarr": "3:20PM",
    "pct": 62
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 99,
+   "d1": "2026-10-25",
+   "d2": "2026-10-29",
+   "dep": "5:05PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "11:06AM",
+   "arr": "8:01PM",
+   "rarr": "2:01PM",
+   "pct": 77
   },
   "SFO": {
    "to": "SFO",
