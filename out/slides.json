@@ -6,7 +6,7 @@
   "slide4_board.png",
   "slide5_cta.png"
  ],
- "n_deals": 16,
+ "n_deals": 17,
  "board_slides": 4,
  "sections": [
   "LONG WEEKEND",
@@ -40,7 +40,15 @@
    "section": "weekish"
   },
   {
-   "file": "story_4_LAS.png",
+   "file": "story_4_PLS.png",
+   "to": "PLS",
+   "city": "Providenciales",
+   "price": 379,
+   "disc": 45,
+   "section": "extra_weekend"
+  },
+  {
+   "file": "story_5_LAS.png",
    "to": "LAS",
    "city": "Las Vegas",
    "price": 191,
@@ -48,7 +56,7 @@
    "section": "weekend"
   },
   {
-   "file": "story_5_LAX.png",
+   "file": "story_6_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 204,
@@ -56,7 +64,7 @@
    "section": "weekend"
   },
   {
-   "file": "story_6_SXM.png",
+   "file": "story_7_SXM.png",
    "to": "SXM",
    "city": "St. Maarten",
    "price": 346,
@@ -64,19 +72,11 @@
    "section": "weekend"
   },
   {
-   "file": "story_7_SJU.png",
+   "file": "story_8_SJU.png",
    "to": "SJU",
    "city": "San Juan, PR",
    "price": 199,
    "disc": 32,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_8_PAR.png",
-   "to": "PAR",
-   "city": "Paris",
-   "price": 515,
-   "disc": 23,
    "section": "extra_weekend"
   }
  ]
