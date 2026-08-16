@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-16T12:15:26-04:00",
+ "generated": "2026-08-16T14:01:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 33,
+ "routes_priced": 35,
  "routes_failed": [],
  "fares": {
   "BZE": {
@@ -98,15 +98,15 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 262,
+   "price": 264,
    "d1": "2026-09-04",
    "d2": "2026-09-07",
-   "dep": "3:10PM",
+   "dep": "6:40AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "9:10PM",
-   "arr": "5:16PM",
+   "arr": "8:46AM",
    "rarr": "11:20PM",
    "pct": 35
   },
@@ -170,12 +170,27 @@
    "rarr": "1:20AM+1",
    "pct": -8
   },
+  "MAD": {
+   "to": "MAD",
+   "city": "Madrid",
+   "price": 862,
+   "d1": "2026-09-17",
+   "d2": "2026-09-24",
+   "dep": "12:52PM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:40AM",
+   "arr": "9:55PM",
+   "rarr": "11:06PM",
+   "pct": 2
+  },
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 186,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
+   "price": 176,
+   "d1": "2026-09-03",
+   "d2": "2026-09-06",
    "dep": "1:58PM",
    "al": "Frontier",
    "stops": 0,
@@ -183,7 +198,7 @@
    "rdep": "2:27PM",
    "arr": "4:13PM",
    "rarr": "4:46PM",
-   "pct": 54
+   "pct": 57
   },
   "MIL": {
    "to": "MIL",
@@ -349,6 +364,21 @@
    "arr": "1:10PM",
    "rarr": "2:55AM+1",
    "pct": -38
+  },
+  "PUJ": {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 425,
+   "d1": "2026-11-06",
+   "d2": "2026-11-12",
+   "dep": "8:55AM",
+   "al": "Air Canada",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "3:15PM",
+   "arr": "3:37PM",
+   "rarr": "11:37PM",
+   "pct": 24
   },
   "PWM": {
    "to": "PWM",

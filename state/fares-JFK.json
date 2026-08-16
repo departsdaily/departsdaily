@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-16T12:17:38-04:00",
+ "generated": "2026-08-16T14:03:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 234,
-   "d1": "2026-10-08",
-   "d2": "2026-10-11",
-   "dep": "5:06PM",
+   "price": 391,
+   "d1": "2026-10-21",
+   "d2": "2026-10-26",
+   "dep": "8:29AM",
    "al": "American",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "10:05PM",
-   "arr": "11:48PM",
+   "arr": "1:59PM",
    "rarr": "2:43AM+1",
-   "pct": 65
+   "pct": 41
   },
   "SEA": {
    "to": "SEA",
