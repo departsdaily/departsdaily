@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-16T02:17:35-04:00",
+ "generated": "2026-08-16T04:17:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
