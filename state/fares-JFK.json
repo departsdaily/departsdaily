@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-15T18:16:33-04:00",
+ "generated": "2026-08-15T20:03:26-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 476,
-   "d1": "2026-08-19",
-   "d2": "2026-08-24",
-   "dep": "6:35AM",
+   "price": 422,
+   "d1": "2026-12-13",
+   "d2": "2026-12-17",
+   "dep": "9:30PM",
    "al": "American",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "2:10PM",
-   "arr": "11:33AM",
-   "rarr": "8:07PM",
-   "pct": 26
+   "rdep": "3:30PM",
+   "arr": "2:29AM+1",
+   "rarr": "8:47PM",
+   "pct": 34
   },
   "LON": {
    "to": "LON",

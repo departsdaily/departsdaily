@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-15T18:16:14-04:00",
+ "generated": "2026-08-15T20:03:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 52,
-   "d1": "2026-09-08",
-   "d2": "2026-09-11",
-   "dep": "3:13PM",
+   "price": 49,
+   "d1": "2026-09-11",
+   "d2": "2026-09-14",
+   "dep": "12:07PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:07PM",
-   "arr": "4:40PM",
-   "rarr": "1:43PM",
-   "pct": 85
+   "rdep": "6:02PM",
+   "arr": "1:43PM",
+   "rarr": "7:36PM",
+   "pct": 86
   },
   "AMS": {
    "to": "AMS",
@@ -293,15 +293,15 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 510,
+   "price": 512,
    "d1": "2026-12-13",
    "d2": "2026-12-17",
-   "dep": "9:25AM",
+   "dep": "9:30PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "4:00PM",
-   "arr": "3:55PM",
+   "arr": "4:06AM+1",
    "rarr": "11:28PM",
    "pct": 20
   },

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-15T18:15:18-04:00",
+ "generated": "2026-08-15T20:02:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 194,
-   "d1": "2026-11-05",
-   "d2": "2026-11-08",
-   "dep": "6:00AM",
+   "price": 145,
+   "d1": "2026-09-04",
+   "d2": "2026-09-07",
+   "dep": "9:20AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:13PM",
-   "arr": "8:39AM",
-   "rarr": "7:55PM",
-   "pct": 53
+   "rdep": "10:59PM",
+   "arr": "12:12PM",
+   "rarr": "5:58AM+1",
+   "pct": 65
   },
   "FLL": {
    "to": "FLL",
@@ -113,7 +113,7 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 121,
+   "price": 143,
    "d1": "2026-10-01",
    "d2": "2026-10-08",
    "dep": "8:55PM",
@@ -123,7 +123,7 @@
    "rdep": "11:29PM",
    "arr": "1:05AM+1",
    "rarr": "3:16AM+1",
-   "pct": 74
+   "pct": 70
   },
   "LAX": {
    "to": "LAX",
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 233,
-   "d1": "2026-09-04",
-   "d2": "2026-09-08",
-   "dep": "8:09PM",
-   "al": "United",
+   "price": 220,
+   "d1": "2026-09-10",
+   "d2": "2026-09-13",
+   "dep": "10:26AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:23PM",
-   "arr": "12:55AM+1",
-   "rarr": "2:12AM+1",
-   "pct": 66
+   "rdep": "8:24PM",
+   "arr": "5:59PM",
+   "rarr": "1:58AM+1",
+   "pct": 68
   },
   "TPA": {
    "to": "TPA",

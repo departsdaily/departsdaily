@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-15T18:14:42-04:00",
+ "generated": "2026-08-15T20:01:24-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 33,
+ "routes_priced": 34,
  "routes_failed": [],
  "fares": {
   "AUH": {
@@ -203,7 +203,7 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 176,
+   "price": 186,
    "d1": "2026-08-28",
    "d2": "2026-08-30",
    "dep": "1:58PM",
@@ -213,7 +213,7 @@
    "rdep": "2:27PM",
    "arr": "4:13PM",
    "rarr": "4:46PM",
-   "pct": 57
+   "pct": 54
   },
   "MUC": {
    "to": "MUC",
@@ -364,6 +364,21 @@
    "arr": "3:40PM",
    "rarr": "9:07AM",
    "pct": -1
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 996,
+   "d1": "2026-09-05",
+   "d2": "2026-09-14",
+   "dep": "5:43PM",
+   "al": "",
+   "stops": 3,
+   "xfer": 1,
+   "rdep": "10:30PM",
+   "arr": "3:44AM+1",
+   "rarr": "1:55PM+1",
+   "pct": -5
   },
   "SAT": {
    "to": "SAT",
