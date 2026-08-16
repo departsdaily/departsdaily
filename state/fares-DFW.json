@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-16T00:16:20-04:00",
+ "generated": "2026-08-16T02:16:34-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 280,
-   "d1": "2026-08-27",
-   "d2": "2026-08-29",
-   "dep": "11:37AM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 162,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
+   "dep": "9:25PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:17PM",
-   "arr": "4:34PM",
-   "rarr": "11:22PM",
-   "pct": 26
+   "rdep": "9:47AM",
+   "arr": "10:58PM",
+   "rarr": "11:27AM",
+   "pct": 57
   },
   "NYC": {
    "to": "NYC",
@@ -308,17 +308,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 539,
+   "price": 546,
    "d1": "2026-12-04",
    "d2": "2026-12-08",
-   "dep": "3:05PM",
-   "al": "Southwest",
+   "dep": "3:35PM",
+   "al": "Air Canada",
    "stops": 2,
    "xfer": 0,
    "rdep": "3:45PM",
-   "arr": "8:40PM",
-   "rarr": "9:45PM",
-   "pct": 0
+   "arr": "11:05PM",
+   "rarr": "9:35PM",
+   "pct": -1
   },
   "PAR": {
    "to": "PAR",

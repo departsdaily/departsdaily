@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-16T00:15:24-04:00",
+ "generated": "2026-08-16T02:15:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 35,
+ "routes_priced": 33,
  "routes_failed": [],
  "fares": {
   "AUH": {
@@ -139,21 +139,6 @@
    "arr": "2:53AM+1",
    "rarr": "1:44PM+1",
    "pct": -24
-  },
-  "FRA": {
-   "to": "FRA",
-   "city": "Frankfurt",
-   "price": 995,
-   "d1": "2026-09-03",
-   "d2": "2026-09-14",
-   "dep": "8:40PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "8:40PM",
-   "arr": "7:25AM+1",
-   "rarr": "8:33AM+1",
-   "pct": -11
   },
   "LAS": {
    "to": "LAS",
@@ -394,21 +379,6 @@
    "arr": "3:44AM+1",
    "rarr": "1:55PM+1",
    "pct": -5
-  },
-  "SAT": {
-   "to": "SAT",
-   "city": "San Antonio",
-   "price": 477,
-   "d1": "2026-10-21",
-   "d2": "2026-10-25",
-   "dep": "1:15PM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:15PM",
-   "arr": "5:00PM",
-   "rarr": "3:55PM",
-   "pct": 13
   },
   "SJO": {
    "to": "SJO",

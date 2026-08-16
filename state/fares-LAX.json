@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-16T00:16:58-04:00",
+ "generated": "2026-08-16T02:17:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -340,7 +340,7 @@
    "city": "Paris",
    "price": 411,
    "d1": "2026-11-20",
-   "d2": "2026-11-30",
+   "d2": "2026-12-07",
    "dep": "9:20AM",
    "al": "AT",
    "stops": 1,

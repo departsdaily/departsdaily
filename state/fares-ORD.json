@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-16T00:16:02-04:00",
+ "generated": "2026-08-16T02:16:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -305,6 +305,21 @@
    "rarr": "10:05PM",
    "pct": 16
   },
+  "MBJ": {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 458,
+   "d1": "2026-10-12",
+   "d2": "2026-10-18",
+   "dep": "7:29PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:13PM",
+   "arr": "12:26AM+1",
+   "rarr": "10:36PM",
+   "pct": 15
+  },
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
@@ -353,17 +368,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 467,
-   "d1": "2026-11-23",
-   "d2": "2026-11-30",
-   "dep": "3:40PM",
+   "price": 501,
+   "d1": "2026-11-15",
+   "d2": "2026-11-28",
+   "dep": "9:47PM",
    "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:15PM",
-   "arr": "12:45AM+1",
-   "rarr": "8:00AM+1",
-   "pct": 51
+   "rdep": "11:15AM",
+   "arr": "10:56AM+1",
+   "rarr": "10:58PM",
+   "pct": 47
   },
   "SJU": {
    "to": "SJU",
