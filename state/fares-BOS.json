@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-15T20:18:00-04:00",
+ "generated": "2026-08-15T22:18:01-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -218,17 +218,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 237,
-   "d1": "2026-09-16",
-   "d2": "2026-09-20",
-   "dep": "12:54PM",
-   "al": "Frontier",
+   "price": 259,
+   "d1": "2026-09-12",
+   "d2": "2026-09-15",
+   "dep": "8:54AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:15AM",
-   "arr": "5:44PM",
-   "rarr": "11:13AM",
-   "pct": 42
+   "rdep": "1:31PM",
+   "arr": "1:07PM",
+   "rarr": "5:46PM",
+   "pct": 36
   },
   "AMS": {
    "to": "AMS",
@@ -304,6 +304,21 @@
    "arr": "6:41PM",
    "rarr": "6:59PM",
    "pct": 46
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 448,
+   "d1": "2026-08-27",
+   "d2": "2026-09-01",
+   "dep": "5:45AM",
+   "al": "Air Canada",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:20AM",
+   "arr": "11:05AM",
+   "rarr": "4:03PM",
+   "pct": 7
   },
   "PAR": {
    "to": "PAR",

@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-15T20:15:20-04:00",
+ "generated": "2026-08-15T22:15:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 34,
+ "routes_priced": 35,
  "routes_failed": [],
  "fares": {
   "AUH": {
@@ -215,6 +215,21 @@
    "rarr": "4:46PM",
    "pct": 54
   },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 237,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
+   "dep": "3:10PM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "7:22PM",
+   "rarr": "11:05AM",
+   "pct": 50
+  },
   "MUC": {
    "to": "MUC",
    "city": "Munich",
@@ -263,17 +278,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 515,
-   "d1": "2026-11-05",
-   "d2": "2026-11-10",
-   "dep": "3:05PM",
+   "price": 869,
+   "d1": "2026-09-21",
+   "d2": "2026-10-01",
+   "dep": "9:59PM",
    "al": "",
    "stops": 1,
-   "xfer": 0,
-   "rdep": "9:10AM",
-   "arr": "12:10AM+1",
-   "rarr": "8:30PM",
-   "pct": 43
+   "xfer": 1,
+   "rdep": "3:30PM",
+   "arr": "9:04AM+1",
+   "rarr": "3:32AM+1",
+   "pct": 3
   },
   "PBI": {
    "to": "PBI",
