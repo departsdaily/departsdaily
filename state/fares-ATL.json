@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-16T06:15:43-04:00",
+ "generated": "2026-08-16T08:15:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 91,
-   "d1": "2026-09-02",
-   "d2": "2026-09-09",
-   "dep": "6:50AM",
+   "price": 79,
+   "d1": "2026-09-06",
+   "d2": "2026-09-12",
+   "dep": "10:48PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:54PM",
-   "arr": "8:48AM",
-   "rarr": "11:59PM",
-   "pct": 75
+   "rdep": "4:23PM",
+   "arr": "12:44AM+1",
+   "rarr": "6:45PM",
+   "pct": 78
   },
   "HOU": {
    "to": "HOU",
