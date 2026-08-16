@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-16T16:15:14-04:00",
+ "generated": "2026-08-16T18:01:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 36,
  "routes_failed": [],
@@ -488,17 +488,17 @@
   "TYO": {
    "to": "TYO",
    "city": "Tokyo",
-   "price": 1156,
-   "d1": "2026-10-31",
-   "d2": "2026-11-07",
-   "dep": "7:44PM",
-   "al": "Frontier",
-   "stops": 2,
+   "price": 882,
+   "d1": "2026-09-20",
+   "d2": "2026-09-26",
+   "dep": "9:15AM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:10AM",
-   "arr": "4:24PM+1",
-   "rarr": "3:45AM+1",
-   "pct": 8
+   "rdep": "5:50PM",
+   "arr": "12:36AM+1",
+   "rarr": "7:37AM+1",
+   "pct": 29
   },
   "TYS": {
    "to": "TYS",
