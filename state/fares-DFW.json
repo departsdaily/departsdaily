@@ -1,9 +1,11 @@
 {
  "origin": "DFW",
- "generated": "2026-08-16T10:16:34-04:00",
+ "generated": "2026-08-16T12:07:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
- "routes_failed": [],
+ "routes_priced": 23,
+ "routes_failed": [
+  "MBJ"
+ ],
  "fares": {
   "BNA": {
    "to": "BNA",
@@ -83,17 +85,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 149,
-   "d1": "2026-11-05",
-   "d2": "2026-11-08",
-   "dep": "7:59PM",
+   "price": 159,
+   "d1": "2026-09-06",
+   "d2": "2026-09-09",
+   "dep": "10:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:59AM",
-   "arr": "11:06PM",
-   "rarr": "3:37AM",
-   "pct": 68
+   "rdep": "6:00PM",
+   "arr": "1:52AM+1",
+   "rarr": "8:59PM",
+   "pct": 66
   },
   "LAX": {
    "to": "LAX",
@@ -278,17 +280,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 307,
-   "d1": "2026-10-03",
-   "d2": "2026-10-07",
-   "dep": "9:00PM",
-   "al": "Volaris",
+   "price": 300,
+   "d1": "2026-09-19",
+   "d2": "2026-09-24",
+   "dep": "3:35PM",
+   "al": "Viva Aerobus",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:50PM",
-   "arr": "2:03AM+1",
-   "rarr": "2:56AM+1",
-   "pct": 41
+   "rdep": "7:00AM",
+   "arr": "7:41PM",
+   "rarr": "11:16AM",
+   "pct": 42
   },
   "LON": {
    "to": "LON",
@@ -304,21 +306,6 @@
    "arr": "10:58PM",
    "rarr": "6:25PM",
    "pct": 24
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 546,
-   "d1": "2026-12-04",
-   "d2": "2026-12-08",
-   "dep": "3:35PM",
-   "al": "Air Canada",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "3:45PM",
-   "arr": "11:05PM",
-   "rarr": "9:35PM",
-   "pct": -1
   },
   "PAR": {
    "to": "PAR",

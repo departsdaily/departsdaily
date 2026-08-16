@@ -1,9 +1,11 @@
 {
  "origin": "BOS",
- "generated": "2026-08-16T10:18:35-04:00",
+ "generated": "2026-08-16T12:12:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
- "routes_failed": [],
+ "routes_priced": 24,
+ "routes_failed": [
+  "MSY"
+ ],
  "fares": {
   "BNA": {
    "to": "BNA",
@@ -83,17 +85,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 193,
-   "d1": "2026-08-25",
-   "d2": "2026-08-31",
-   "dep": "12:45PM",
-   "al": "Frontier",
+   "price": 236,
+   "d1": "2026-09-22",
+   "d2": "2026-09-30",
+   "dep": "9:05AM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:41PM",
-   "arr": "7:59PM",
-   "rarr": "6:32AM+1",
-   "pct": 71
+   "rdep": "1:20PM",
+   "arr": "4:25PM",
+   "rarr": "8:10PM",
+   "pct": 65
   },
   "LAX": {
    "to": "LAX",
@@ -139,21 +141,6 @@
    "arr": "5:50PM",
    "rarr": "12:59AM+1",
    "pct": 50
-  },
-  "MSY": {
-   "to": "MSY",
-   "city": "New Orleans",
-   "price": 198,
-   "d1": "2026-08-27",
-   "d2": "2026-08-29",
-   "dep": "12:45PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:11PM",
-   "arr": "5:22PM",
-   "rarr": "11:45PM",
-   "pct": 59
   },
   "ORD": {
    "to": "ORD",

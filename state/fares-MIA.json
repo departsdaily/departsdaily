@@ -1,25 +1,13 @@
 {
  "origin": "MIA",
- "generated": "2026-08-16T10:17:55-04:00",
+ "generated": "2026-08-16T12:10:56-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
- "routes_failed": [],
+ "routes_priced": 22,
+ "routes_failed": [
+  "AUS",
+  "MBJ"
+ ],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 147,
-   "d1": "2026-10-09",
-   "d2": "2026-10-11",
-   "dep": "1:45PM",
-   "al": "American",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "4:32PM",
-   "arr": "4:51PM",
-   "rarr": "7:23PM",
-   "pct": 63
-  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
@@ -215,6 +203,21 @@
    "rarr": "12:36PM",
    "pct": 66
   },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 137,
+   "d1": "2026-09-17",
+   "d2": "2026-09-19",
+   "dep": "12:00PM",
+   "al": "JetBlue",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "8:30AM",
+   "arr": "1:08PM",
+   "rarr": "9:39AM",
+   "pct": 64
+  },
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
@@ -259,21 +262,6 @@
    "arr": "8:05AM+1",
    "rarr": "8:10AM+1",
    "pct": -9
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 474,
-   "d1": "2026-09-18",
-   "d2": "2026-09-27",
-   "dep": "5:32AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:16PM",
-   "arr": "10:32AM",
-   "rarr": "7:05PM",
-   "pct": 12
   },
   "NAS": {
    "to": "NAS",

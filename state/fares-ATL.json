@@ -1,9 +1,11 @@
 {
  "origin": "ATL",
- "generated": "2026-08-16T10:15:50-04:00",
+ "generated": "2026-08-16T12:05:57-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
- "routes_failed": [],
+ "routes_priced": 21,
+ "routes_failed": [
+  "DFW"
+ ],
  "fares": {
   "BOS": {
    "to": "BOS",
@@ -49,21 +51,6 @@
    "arr": "12:10AM+1",
    "rarr": "3:21AM+1",
    "pct": 71
-  },
-  "DFW": {
-   "to": "DFW",
-   "city": "Dallas",
-   "price": 89,
-   "d1": "2026-10-01",
-   "d2": "2026-10-07",
-   "dep": "5:05PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:48PM",
-   "arr": "7:43PM",
-   "rarr": "10:08PM",
-   "pct": 80
   },
   "DTW": {
    "to": "DTW",
@@ -128,17 +115,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 256,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "10:10AM",
+   "price": 272,
+   "d1": "2026-10-08",
+   "d2": "2026-10-11",
+   "dep": "10:45PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:41PM",
-   "arr": "3:41PM",
-   "rarr": "6:24AM+1",
-   "pct": 63
+   "rdep": "12:21AM",
+   "arr": "5:33AM+1",
+   "rarr": "6:48AM",
+   "pct": 61
   },
   "MCO": {
    "to": "MCO",
