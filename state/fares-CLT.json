@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-16T08:15:31-04:00",
+ "generated": "2026-08-16T10:15:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 33,
+ "routes_priced": 34,
  "routes_failed": [],
  "fares": {
   "AUH": {
@@ -199,6 +199,21 @@
    "arr": "4:13PM",
    "rarr": "4:46PM",
    "pct": 54
+  },
+  "MIL": {
+   "to": "MIL",
+   "city": "Milan",
+   "price": 827,
+   "d1": "2026-10-21",
+   "d2": "2026-10-27",
+   "dep": "12:30PM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:50AM",
+   "arr": "11:40PM",
+   "rarr": "8:55PM",
+   "pct": 8
   },
   "MSY": {
    "to": "MSY",
