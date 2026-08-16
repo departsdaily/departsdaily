@@ -1,0 +1,48 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-16",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from CLT, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 4.85,
+ "fps": 30,
+ "audio": "window-seat.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "week",
+ "plan_angle": "A full week away, round trip, verified this morning.",
+ "featured": [
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 151,
+   "disc": 56,
+   "baseline": 344,
+   "nights": 5,
+   "d1": "2026-08-27",
+   "d2": "2026-09-01"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 163,
+   "disc": 47,
+   "baseline": 308,
+   "nights": 7,
+   "d1": "2026-09-16",
+   "d2": "2026-09-23"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 163,
+   "disc": 47,
+   "baseline": 308,
+   "nights": 7,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26"
+  }
+ ]
+}
