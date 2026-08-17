@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-16T18:15:43-04:00",
+ "generated": "2026-08-16T20:02:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 815,
-   "d1": "2026-11-21",
-   "d2": "2026-11-26",
-   "dep": "5:00PM",
+   "price": 872,
+   "d1": "2026-09-05",
+   "d2": "2026-09-14",
+   "dep": "5:01AM",
    "al": "",
-   "stops": 1,
+   "stops": 3,
    "xfer": 1,
-   "rdep": "2:30PM",
-   "arr": "2:27AM+1",
-   "rarr": "4:07AM+1",
-   "pct": 9
+   "rdep": "10:20PM",
+   "arr": "4:35PM",
+   "rarr": "12:28PM+1",
+   "pct": 3
   },
   "PUJ": {
    "to": "PUJ",
@@ -323,17 +323,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 200,
-   "d1": "2026-10-08",
-   "d2": "2026-10-14",
-   "dep": "8:17AM",
+   "price": 187,
+   "d1": "2026-09-01",
+   "d2": "2026-09-07",
+   "dep": "10:25AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:12PM",
-   "arr": "1:03PM",
-   "rarr": "10:14PM",
-   "pct": 52
+   "rdep": "5:37PM",
+   "arr": "2:16PM",
+   "rarr": "10:47PM",
+   "pct": 55
   }
  }
 }

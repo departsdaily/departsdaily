@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-16T18:17:37-04:00",
+ "generated": "2026-08-16T20:04:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -278,7 +278,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 474,
+   "price": 500,
    "d1": "2026-09-18",
    "d2": "2026-09-27",
    "dep": "5:32AM",
@@ -288,7 +288,7 @@
    "rdep": "5:16PM",
    "arr": "10:32AM",
    "rarr": "7:05PM",
-   "pct": 12
+   "pct": 7
   },
   "NAS": {
    "to": "NAS",

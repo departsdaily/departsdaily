@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-16T18:18:15-04:00",
+ "generated": "2026-08-16T20:04:44-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -353,7 +353,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 783,
+   "price": 811,
    "d1": "2026-10-09",
    "d2": "2026-10-17",
    "dep": "10:45PM",
@@ -363,12 +363,12 @@
    "rdep": "11:10AM",
    "arr": "8:20AM+1",
    "rarr": "11:00PM",
-   "pct": 18
+   "pct": 15
   },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 282,
+   "price": 278,
    "d1": "2026-10-14",
    "d2": "2026-10-21",
    "dep": "11:20AM",
@@ -378,7 +378,7 @@
    "rdep": "12:55PM",
    "arr": "3:29PM",
    "rarr": "6:58PM",
-   "pct": 33
+   "pct": 34
   }
  }
 }

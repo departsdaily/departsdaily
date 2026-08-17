@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-16T18:17:19-04:00",
+ "generated": "2026-08-16T20:03:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 231,
-   "d1": "2026-10-22",
-   "d2": "2026-10-26",
-   "dep": "11:28AM",
+   "price": 217,
+   "d1": "2026-09-16",
+   "d2": "2026-09-19",
+   "dep": "2:43PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:54AM",
-   "arr": "3:32PM",
-   "rarr": "11:29AM",
-   "pct": 58
+   "rdep": "1:10PM",
+   "arr": "6:29PM",
+   "rarr": "4:55PM",
+   "pct": 61
   },
   "FLL": {
    "to": "FLL",
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 184,
+   "price": 177,
    "d1": "2026-09-30",
-   "d2": "2026-10-03",
-   "dep": "7:25AM",
+   "d2": "2026-10-07",
+   "dep": "5:50AM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:35AM",
-   "arr": "10:34AM",
-   "rarr": "9:29AM",
-   "pct": 56
+   "rdep": "8:46AM",
+   "arr": "8:58AM",
+   "rarr": "11:44AM",
+   "pct": 57
   },
   "MSY": {
    "to": "MSY",
@@ -278,7 +278,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 617,
+   "price": 624,
    "d1": "2026-10-22",
    "d2": "2026-10-26",
    "dep": "5:10PM",
@@ -288,7 +288,7 @@
    "rdep": "7:00AM",
    "arr": "2:50AM+1",
    "rarr": "5:10PM",
-   "pct": 30
+   "pct": 29
   },
   "AUA": {
    "to": "AUA",
