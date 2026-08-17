@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-17T06:17:44-04:00",
+ "generated": "2026-08-17T08:17:55-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 14,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -188,17 +188,32 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 712,
-   "d1": "2026-10-10",
-   "d2": "2026-10-20",
-   "dep": "7:00PM",
+   "price": 701,
+   "d1": "2026-10-19",
+   "d2": "2026-10-26",
+   "dep": "3:40PM",
    "al": "Icelandair",
    "stops": 2,
    "xfer": 0,
-   "rdep": "11:00AM",
-   "arr": "8:20AM+1",
-   "rarr": "12:45AM+1",
-   "pct": 16
+   "rdep": "12:15PM",
+   "arr": "4:25AM+1",
+   "rarr": "11:30PM",
+   "pct": 18
+  },
+  "PAR": {
+   "to": "PAR",
+   "city": "Paris",
+   "price": 844,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26",
+   "dep": "3:55PM",
+   "al": "SK",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "12:15PM",
+   "arr": "5:00AM+1",
+   "rarr": "1:30AM+1",
+   "pct": 6
   },
   "ROM": {
    "to": "ROM",
