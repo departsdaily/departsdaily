@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-17T00:12:32-04:00",
+ "generated": "2026-08-17T02:15:15-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 37,
  "routes_failed": [],
  "fares": {
   "BCN": {
@@ -305,21 +305,6 @@
    "rarr": "3:32AM+1",
    "pct": 3
   },
-  "PBI": {
-   "to": "PBI",
-   "city": "West Palm Beach",
-   "price": 506,
-   "d1": "2026-09-06",
-   "d2": "2026-09-13",
-   "dep": "7:25AM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:10PM",
-   "arr": "11:05AM",
-   "rarr": "3:55PM",
-   "pct": 13
-  },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
@@ -364,21 +349,6 @@
    "arr": "11:30AM",
    "rarr": "11:52PM",
    "pct": 38
-  },
-  "PTY": {
-   "to": "PTY",
-   "city": "Panama City",
-   "price": 855,
-   "d1": "2026-11-25",
-   "d2": "2026-11-29",
-   "dep": "6:00AM",
-   "al": "United",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "9:31PM",
-   "arr": "1:10PM",
-   "rarr": "2:55AM+1",
-   "pct": -38
   },
   "PUJ": {
    "to": "PUJ",

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-17T00:13:06-04:00",
+ "generated": "2026-08-17T02:15:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 439,
-   "d1": "2026-09-03",
-   "d2": "2026-09-08",
-   "dep": "6:00AM",
-   "al": "United",
+   "price": 398,
+   "d1": "2026-09-25",
+   "d2": "2026-10-05",
+   "dep": "9:50AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:35PM",
-   "arr": "11:19AM",
-   "rarr": "8:27PM",
-   "pct": 9
+   "rdep": "6:30PM",
+   "arr": "2:55PM",
+   "rarr": "11:45PM",
+   "pct": 17
   },
   "PAR": {
    "to": "PAR",
