@@ -1,13 +1,13 @@
 {
- "date": "2026-08-16",
+ "date": "2026-08-17",
  "origin": "CLT",
  "routes_considered": 119,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 77,
-  "no fares in window": 16,
-  "not a deal": 14,
-  "qualified": 12
+  "no fares": 72,
+  "no fares in window": 19,
+  "not a deal": 17,
+  "qualified": 11
  },
  "routes": {
   "ABQ": {
@@ -50,10 +50,6 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
-  "BCN": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
   "BGI": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -63,10 +59,6 @@
    "why": "the fare cache returned nothing"
   },
   "BNA": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "BOG": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -91,6 +83,10 @@
    "why": "the fare cache returned nothing"
   },
   "DAB": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "DEN": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -142,10 +138,6 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
-  "GUA": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
   "HER": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -158,15 +150,11 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
+  "LIM": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
   "LIR": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "LIS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "MAD": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -179,10 +167,6 @@
    "why": "the fare cache returned nothing"
   },
   "MHH": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "MIL": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -218,6 +202,10 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
+  "PTY": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
   "PVR": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -250,15 +238,7 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
-  "SDQ": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "SEA": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "SFO": {
+  "SJD": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -318,14 +298,24 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
+  "BCN": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "section": "cheapest"
+  },
   "BDA": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "section": "cheapest"
+  },
+  "BOG": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "BZE": {
    "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "why": "2 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "CTG": {
@@ -357,11 +347,6 @@
    "rung": "shape",
    "section": "cheapest"
   },
-  "DEN": {
-   "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
-   "section": "cheapest"
-  },
   "EDI": {
    "outcome": "qualified",
    "price": 521,
@@ -376,7 +361,7 @@
   },
   "FLL": {
    "outcome": "no fares in window",
-   "why": "2 offers, none leaving 3-150 days out in the cheapest shape",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "FNC": {
@@ -387,6 +372,18 @@
    "d1": "2026-09-14",
    "d2": "2026-09-20",
    "nights": 6,
+   "on_shape": true,
+   "rung": "shape",
+   "section": "cheapest"
+  },
+  "GUA": {
+   "outcome": "not a deal",
+   "price": 780,
+   "typical": 713,
+   "disc_pct": -9,
+   "d1": "2026-12-19",
+   "d2": "2027-01-03",
+   "nights": 15,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -405,12 +402,12 @@
   },
   "LAS": {
    "outcome": "qualified",
-   "price": 191,
-   "typical": 344,
-   "disc_pct": 44,
-   "d1": "2026-08-21",
-   "d2": "2026-08-24",
-   "nights": 3,
+   "price": 250,
+   "typical": 306,
+   "disc_pct": 18,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "nights": 4,
    "on_shape": true,
    "rung": "shape",
    "section": "weekend"
@@ -427,14 +424,14 @@
    "rung": "shape",
    "section": "weekend"
   },
-  "LIM": {
-   "outcome": "qualified",
-   "price": 513,
-   "typical": 656,
-   "disc_pct": 22,
-   "d1": "2026-09-13",
-   "d2": "2026-09-16",
-   "nights": 3,
+  "LIS": {
+   "outcome": "not a deal",
+   "price": 766,
+   "typical": 864,
+   "disc_pct": 11,
+   "d1": "2026-08-28",
+   "d2": "2026-09-22",
+   "nights": 25,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -449,6 +446,11 @@
    "nights": 1,
    "on_shape": true,
    "rung": "shape",
+   "section": "cheapest"
+  },
+  "MAD": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "MBJ": {
@@ -471,6 +473,11 @@
    "nights": 14,
    "on_shape": true,
    "rung": "shape",
+   "section": "cheapest"
+  },
+  "MIL": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "MSY": {
@@ -555,11 +562,6 @@
    "why": "2 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
-  "PTY": {
-   "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
-   "section": "cheapest"
-  },
   "PUJ": {
    "outcome": "qualified",
    "price": 430,
@@ -591,20 +593,37 @@
   },
   "ROM": {
    "outcome": "no fares in window",
-   "why": "3 offers, none leaving 3-150 days out in the cheapest shape",
+   "why": "4 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
-  "SJD": {
-   "outcome": "qualified",
-   "price": 405,
-   "typical": 513,
-   "disc_pct": 21,
-   "d1": "2026-09-20",
-   "d2": "2026-09-22",
-   "nights": 2,
+  "SDQ": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "section": "cheapest"
+  },
+  "SEA": {
+   "outcome": "not a deal",
+   "price": 337,
+   "typical": 323,
+   "disc_pct": -4,
+   "d1": "2026-09-14",
+   "d2": "2026-09-20",
+   "nights": 6,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
+  },
+  "SFO": {
+   "outcome": "qualified",
+   "price": 267,
+   "typical": 375,
+   "disc_pct": 29,
+   "d1": "2026-10-21",
+   "d2": "2026-10-25",
+   "nights": 4,
+   "on_shape": true,
+   "rung": "shape",
+   "section": "extra_weekend"
   },
   "SJO": {
    "outcome": "not a deal",
@@ -667,20 +686,20 @@
    "section": "weekend"
   },
   "TPA": {
-   "outcome": "qualified",
-   "price": 182,
-   "typical": 214,
-   "disc_pct": 15,
-   "d1": "2026-08-21",
-   "d2": "2026-08-23",
-   "nights": 2,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "weekend"
+   "outcome": "no fares in window",
+   "why": "2 offers, none leaving 3-150 days out in the cheapest shape",
+   "section": "cheapest"
   },
   "TYO": {
-   "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "outcome": "qualified",
+   "price": 882,
+   "typical": 1102,
+   "disc_pct": 20,
+   "d1": "2026-09-20",
+   "d2": "2026-09-26",
+   "nights": 6,
+   "on_shape": true,
+   "rung": "shape",
    "section": "cheapest"
   },
   "TYS": {
@@ -700,12 +719,12 @@
   },
   "YUL": {
    "outcome": "not a deal",
-   "price": 631,
-   "typical": 445,
-   "disc_pct": -42,
-   "d1": "2026-10-04",
-   "d2": "2026-10-10",
-   "nights": 6,
+   "price": 525,
+   "typical": 491,
+   "disc_pct": -7,
+   "d1": "2026-09-20",
+   "d2": "2026-09-23",
+   "nights": 3,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"

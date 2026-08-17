@@ -24,23 +24,7 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_2_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 163,
-   "disc": 47,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_3_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 163,
-   "disc": 47,
-   "section": "weekish"
-  },
-  {
-   "file": "story_4_PLS.png",
+   "file": "story_2_PLS.png",
    "to": "PLS",
    "city": "Providenciales",
    "price": 379,
@@ -48,15 +32,7 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_5_LAS.png",
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 191,
-   "disc": 44,
-   "section": "weekend"
-  },
-  {
-   "file": "story_6_LAX.png",
+   "file": "story_3_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 204,
@@ -64,7 +40,7 @@
    "section": "weekend"
   },
   {
-   "file": "story_7_SXM.png",
+   "file": "story_4_SXM.png",
    "to": "SXM",
    "city": "St. Maarten",
    "price": 346,
@@ -72,12 +48,36 @@
    "section": "weekend"
   },
   {
-   "file": "story_8_SJU.png",
+   "file": "story_5_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 208,
+   "disc": 32,
+   "section": "extra_weekend"
+  },
+  {
+   "file": "story_6_SJU.png",
    "to": "SJU",
    "city": "San Juan, PR",
    "price": 199,
    "disc": 32,
    "section": "extra_weekend"
+  },
+  {
+   "file": "story_7_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 208,
+   "disc": 32,
+   "section": "weekish"
+  },
+  {
+   "file": "story_8_LAS.png",
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 250,
+   "disc": 18,
+   "section": "weekend"
   }
  ]
 }
