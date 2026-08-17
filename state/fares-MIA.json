@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-17T10:17:45-04:00",
+ "generated": "2026-08-17T12:17:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 98,
-   "d1": "2026-10-08",
-   "d2": "2026-10-12",
-   "dep": "6:45AM",
+   "price": 226,
+   "d1": "2026-08-27",
+   "d2": "2026-08-30",
+   "dep": "6:50AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:42PM",
-   "arr": "9:45AM",
-   "rarr": "10:14PM",
-   "pct": 74
+   "rdep": "8:11PM",
+   "arr": "9:44AM",
+   "rarr": "10:55PM",
+   "pct": 41
   },
   "LAS": {
    "to": "LAS",
@@ -188,17 +188,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 403,
-   "d1": "2026-08-24",
-   "d2": "2026-08-31",
-   "dep": "6:00AM",
+   "price": 338,
+   "d1": "2026-10-09",
+   "d2": "2026-10-14",
+   "dep": "5:50AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "7:06PM",
-   "arr": "1:27PM",
-   "rarr": "2:01AM+1",
-   "pct": 36
+   "rdep": "8:00PM",
+   "arr": "1:23PM",
+   "rarr": "5:10AM+1",
+   "pct": 46
   },
   "SFO": {
    "to": "SFO",
@@ -248,17 +248,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 312,
-   "d1": "2026-09-07",
-   "d2": "2026-09-12",
-   "dep": "2:05PM",
-   "al": "Aerom\u00e9xico",
+   "price": 189,
+   "d1": "2026-09-09",
+   "d2": "2026-09-14",
+   "dep": "5:12PM",
+   "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:40PM",
-   "arr": "8:23PM",
-   "rarr": "9:40PM",
-   "pct": 40
+   "rdep": "5:25AM",
+   "arr": "10:58PM",
+   "rarr": "10:56AM",
+   "pct": 64
   },
   "LON": {
    "to": "LON",

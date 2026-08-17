@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-17T10:17:27-04:00",
+ "generated": "2026-08-17T12:17:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 201,
-   "d1": "2026-09-09",
-   "d2": "2026-09-12",
-   "dep": "10:35PM",
+   "price": 198,
+   "d1": "2026-09-02",
+   "d2": "2026-09-07",
+   "dep": "10:29PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:15AM",
-   "arr": "12:01AM+1",
-   "rarr": "6:27AM",
-   "pct": 50
+   "rdep": "5:01AM",
+   "arr": "11:59PM",
+   "rarr": "6:11AM",
+   "pct": 51
   },
   "DCA": {
    "to": "DCA",
@@ -323,17 +323,17 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 422,
-   "d1": "2026-12-13",
-   "d2": "2026-12-17",
-   "dep": "9:30PM",
+   "price": 415,
+   "d1": "2026-10-16",
+   "d2": "2026-10-21",
+   "dep": "1:59PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:30PM",
-   "arr": "2:29AM+1",
-   "rarr": "8:47PM",
-   "pct": 34
+   "rdep": "12:00PM",
+   "arr": "6:44PM",
+   "rarr": "4:44PM",
+   "pct": 35
   },
   "LON": {
    "to": "LON",
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 528,
-   "d1": "2026-12-02",
-   "d2": "2026-12-06",
-   "dep": "7:25PM",
-   "al": "Icelandair",
+   "price": 374,
+   "d1": "2026-11-08",
+   "d2": "2026-11-21",
+   "dep": "10:00PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:00PM",
-   "arr": "4:40AM+1",
-   "rarr": "10:50PM",
-   "pct": 41
+   "rdep": "12:35PM",
+   "arr": "7:30AM+1",
+   "rarr": "11:40PM",
+   "pct": 58
   },
   "PUJ": {
    "to": "PUJ",
