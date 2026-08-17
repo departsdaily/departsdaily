@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-17T12:18:18-04:00",
+ "generated": "2026-08-17T14:17:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 15,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 683,
-   "d1": "2026-10-08",
-   "d2": "2026-10-15",
+   "price": 983,
+   "d1": "2026-09-01",
+   "d2": "2026-09-15",
    "dep": "6:05PM",
    "al": "DE",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:45AM",
+   "rdep": "11:00AM",
    "arr": "6:00AM+1",
-   "rarr": "11:05PM",
-   "pct": 28
+   "rarr": "11:15PM",
+   "pct": -3
   }
  }
 }

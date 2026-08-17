@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-17T12:18:40-04:00",
+ "generated": "2026-08-17T14:18:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -353,17 +353,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 206,
+   "price": 217,
    "d1": "2026-09-05",
-   "d2": "2026-09-16",
-   "dep": "1:35PM",
+   "d2": "2026-09-18",
+   "dep": "9:10AM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
    "rdep": "1:25PM",
-   "arr": "5:46PM",
-   "rarr": "7:26PM",
-   "pct": 63
+   "arr": "2:07PM",
+   "rarr": "6:27PM",
+   "pct": 61
   },
   "ROM": {
    "to": "ROM",
