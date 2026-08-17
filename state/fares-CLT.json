@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-17T08:15:21-04:00",
+ "generated": "2026-08-17T09:55:41-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 37,
+ "routes_priced": 38,
  "routes_failed": [],
  "fares": {
   "BCN": {
@@ -528,6 +528,21 @@
    "rdep": "7:35AM",
    "arr": "8:55AM",
    "rarr": "10:05AM",
+   "pct": 0
+  },
+  "VPS": {
+   "to": "VPS",
+   "city": "Destin / 30A",
+   "price": 334,
+   "d1": "2026-09-26",
+   "d2": "2026-09-29",
+   "dep": "8:25AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:15AM",
+   "arr": "12:15PM",
+   "rarr": "10:10AM",
    "pct": 0
   },
   "YQB": {
