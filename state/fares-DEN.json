@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-17T14:16:33-04:00",
+ "generated": "2026-08-17T16:16:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -140,6 +140,21 @@
    "rarr": "3:06AM+1",
    "pct": 73
   },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 260,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "6:05AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "3:35PM",
+   "arr": "11:45AM",
+   "rarr": "6:37PM",
+   "pct": 44
+  },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
@@ -169,21 +184,6 @@
    "arr": "11:23PM",
    "rarr": "9:15AM",
    "pct": 65
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 254,
-   "d1": "2026-09-03",
-   "d2": "2026-09-09",
-   "dep": "11:59PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:40PM",
-   "arr": "5:31AM+1",
-   "rarr": "6:26PM",
-   "pct": 52
   },
   "PHX": {
    "to": "PHX",

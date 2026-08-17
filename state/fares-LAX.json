@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-17T14:16:51-04:00",
+ "generated": "2026-08-17T16:17:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -338,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 557,
-   "d1": "2026-11-03",
-   "d2": "2026-11-10",
-   "dep": "2:05PM",
-   "al": "American",
-   "stops": 1,
+   "price": 614,
+   "d1": "2026-08-21",
+   "d2": "2026-08-25",
+   "dep": "2:40PM",
+   "al": "Avianca",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "5:21PM",
-   "arr": "10:14PM",
-   "rarr": "2:42AM+1",
-   "pct": 1
+   "rdep": "6:35PM",
+   "arr": "1:20AM+1",
+   "rarr": "5:45AM+1",
+   "pct": -10
   },
   "ROM": {
    "to": "ROM",

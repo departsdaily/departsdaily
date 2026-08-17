@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-17T14:15:18-04:00",
+ "generated": "2026-08-17T16:15:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 38,
  "routes_failed": [],
  "fares": {
   "BCN": {
@@ -558,21 +558,6 @@
    "rdep": "7:15AM",
    "arr": "12:15PM",
    "rarr": "10:10AM",
-   "pct": 0
-  },
-  "YQB": {
-   "to": "YQB",
-   "city": "Quebec City",
-   "price": 622,
-   "d1": "2026-10-08",
-   "d2": "2026-10-12",
-   "dep": "10:02PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "6:40AM",
-   "arr": "4:29AM+1",
-   "rarr": "1:42PM",
    "pct": 0
   },
   "YUL": {
