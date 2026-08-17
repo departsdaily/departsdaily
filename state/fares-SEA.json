@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-17T02:17:48-04:00",
+ "generated": "2026-08-17T04:08:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 14,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -185,21 +185,6 @@
    "rarr": "8:20AM",
    "pct": 50
   },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 526,
-   "d1": "2026-12-13",
-   "d2": "2026-12-19",
-   "dep": "3:15PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:00PM",
-   "arr": "10:06PM",
-   "rarr": "9:08PM",
-   "pct": -1
-  },
   "LON": {
    "to": "LON",
    "city": "London",
@@ -229,21 +214,6 @@
    "arr": "6:00AM+1",
    "rarr": "11:05PM",
    "pct": 28
-  },
-  "SJU": {
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 711,
-   "d1": "2026-12-11",
-   "d2": "2026-12-19",
-   "dep": "11:34PM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:53PM",
-   "arr": "8:25AM+1",
-   "rarr": "5:59AM+1",
-   "pct": -69
   }
  }
 }
