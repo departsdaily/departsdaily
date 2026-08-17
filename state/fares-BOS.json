@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-16T22:18:17-04:00",
+ "generated": "2026-08-17T00:15:07-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -155,6 +155,21 @@
    "rarr": "11:45PM",
    "pct": 59
   },
+  "NYC": {
+   "to": "NYC",
+   "city": "New York City",
+   "price": 358,
+   "d1": "2026-08-27",
+   "d2": "2026-08-29",
+   "dep": "12:44PM",
+   "al": "JetBlue",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "5:25PM",
+   "arr": "1:59PM",
+   "rarr": "6:57PM",
+   "pct": 12
+  },
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
@@ -200,20 +215,20 @@
    "rarr": "6:20AM",
    "pct": 57
   },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 330,
-   "d1": "2026-08-19",
-   "d2": "2026-08-25",
-   "dep": "7:09AM",
-   "al": "JetBlue",
-   "stops": 0,
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 327,
+   "d1": "2026-08-29",
+   "d2": "2026-08-31",
+   "dep": "5:50AM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:45PM",
-   "arr": "1:30PM",
-   "rarr": "5:04AM+1",
-   "pct": 51
+   "rdep": "5:06PM",
+   "arr": "12:55PM",
+   "rarr": "12:23AM+1",
+   "pct": 58
   },
   "TPA": {
    "to": "TPA",

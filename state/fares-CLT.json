@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-16T22:15:21-04:00",
+ "generated": "2026-08-17T00:12:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 38,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "BCN": {
@@ -499,6 +499,21 @@
    "arr": "10:59PM",
    "rarr": "11:40AM",
    "pct": 0
+  },
+  "SXM": {
+   "to": "SXM",
+   "city": "St. Maarten",
+   "price": 704,
+   "d1": "2026-09-02",
+   "d2": "2026-09-06",
+   "dep": "5:43PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "1:42PM",
+   "arr": "11:48PM",
+   "rarr": "7:00PM",
+   "pct": -7
   },
   "TPA": {
    "to": "TPA",
