@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-17T04:15:48-04:00",
+ "generated": "2026-08-17T06:15:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -304,6 +304,21 @@
    "arr": "7:02PM",
    "rarr": "7:09PM",
    "pct": -24
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 401,
+   "d1": "2026-08-27",
+   "d2": "2026-08-31",
+   "dep": "3:08PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:36PM",
+   "arr": "6:19PM",
+   "rarr": "5:55PM",
+   "pct": 16
   },
   "PAR": {
    "to": "PAR",
