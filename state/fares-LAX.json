@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-16T20:16:56-04:00",
+ "generated": "2026-08-16T22:17:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 230,
-   "d1": "2026-08-24",
-   "d2": "2026-08-31",
-   "dep": "11:20PM",
+   "price": 149,
+   "d1": "2026-11-04",
+   "d2": "2026-11-08",
+   "dep": "6:15AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:20AM",
-   "arr": "4:33AM+1",
-   "rarr": "12:27PM",
-   "pct": 60
+   "rdep": "7:15AM",
+   "arr": "12:24PM",
+   "rarr": "1:37PM",
+   "pct": 74
   },
   "MIA": {
    "to": "MIA",
@@ -323,17 +323,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 396,
-   "d1": "2026-09-19",
-   "d2": "2026-09-28",
-   "dep": "11:30PM",
+   "price": 407,
+   "d1": "2026-09-15",
+   "d2": "2026-09-27",
+   "dep": "9:00PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "6:45PM",
-   "arr": "6:33AM+1",
+   "arr": "3:05AM+1",
    "rarr": "1:24AM+1",
-   "pct": 18
+   "pct": 15
   },
   "PAR": {
    "to": "PAR",

@@ -1,10 +1,25 @@
 {
  "origin": "CLT",
- "generated": "2026-08-16T20:15:19-04:00",
+ "generated": "2026-08-16T22:15:21-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 37,
+ "routes_priced": 38,
  "routes_failed": [],
  "fares": {
+  "BCN": {
+   "to": "BCN",
+   "city": "Barcelona",
+   "price": 835,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26",
+   "dep": "6:40PM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:05AM",
+   "arr": "5:25AM+1",
+   "rarr": "8:50PM",
+   "pct": 5
+  },
   "BZE": {
    "to": "BZE",
    "city": "Belize City",
@@ -64,21 +79,6 @@
    "arr": "8:14AM+1",
    "rarr": "3:49AM+1",
    "pct": -26
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 222,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "dep": "7:54PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "1:39PM",
-   "arr": "11:43PM",
-   "rarr": "4:59PM",
-   "pct": 51
   },
   "EDI": {
    "to": "EDI",
@@ -440,6 +440,21 @@
    "rarr": "3:34AM+1",
    "pct": 54
   },
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 267,
+   "d1": "2026-10-21",
+   "d2": "2026-10-25",
+   "dep": "4:47PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:59PM",
+   "arr": "11:38PM",
+   "rarr": "6:19AM+1",
+   "pct": 67
+  },
   "SJO": {
    "to": "SJO",
    "city": "San Jos\u00e9, Costa Rica",
@@ -489,15 +504,15 @@
    "to": "TPA",
    "city": "Tampa",
    "price": 182,
-   "d1": "2026-08-21",
-   "d2": "2026-08-23",
-   "dep": "3:21PM",
+   "d1": "2026-09-18",
+   "d2": "2026-09-21",
+   "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:02PM",
-   "arr": "8:10PM",
-   "rarr": "4:33AM+1",
+   "rdep": "9:08AM",
+   "arr": "3:13AM+1",
+   "rarr": "1:21PM",
    "pct": 62
   },
   "TYO": {

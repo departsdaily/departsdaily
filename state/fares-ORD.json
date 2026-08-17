@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-16T20:16:00-04:00",
+ "generated": "2026-08-16T22:16:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 177,
-   "d1": "2026-09-10",
-   "d2": "2026-09-14",
-   "dep": "12:40PM",
+   "price": 171,
+   "d1": "2026-09-24",
+   "d2": "2026-09-29",
+   "dep": "5:59AM",
    "al": "United",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:46AM",
-   "arr": "2:42PM",
-   "rarr": "10:00AM",
-   "pct": 59
+   "rdep": "8:30AM",
+   "arr": "7:54AM",
+   "rarr": "10:45AM",
+   "pct": 61
   },
   "DEN": {
    "to": "DEN",
@@ -293,17 +293,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 711,
-   "d1": "2026-11-18",
-   "d2": "2026-11-25",
-   "dep": "6:30PM",
+   "price": 690,
+   "d1": "2026-10-09",
+   "d2": "2026-10-15",
+   "dep": "10:25PM",
    "al": "Icelandair",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:55AM",
-   "arr": "4:00AM+1",
-   "rarr": "10:05PM",
-   "pct": 16
+   "rdep": "5:25PM",
+   "arr": "7:45AM+1",
+   "rarr": "6:20AM+1",
+   "pct": 19
   },
   "MBJ": {
    "to": "MBJ",
@@ -338,17 +338,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 573,
-   "d1": "2026-10-15",
+   "price": 681,
+   "d1": "2026-10-20",
    "d2": "2026-10-29",
-   "dep": "6:00PM",
-   "al": "TAP Portugal",
+   "dep": "7:25PM",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:35PM",
-   "arr": "4:35AM+1",
-   "rarr": "8:45AM+1",
-   "pct": 36
+   "rdep": "11:05AM",
+   "arr": "5:05AM+1",
+   "rarr": "8:15PM",
+   "pct": 24
   },
   "PUJ": {
    "to": "PUJ",
