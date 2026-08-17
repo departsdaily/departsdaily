@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-17T09:55:41-04:00",
+ "generated": "2026-08-17T10:15:28-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 38,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "BCN": {
@@ -154,6 +154,21 @@
    "arr": "11:48PM",
    "rarr": "12:38AM+1",
    "pct": 71
+  },
+  "LIS": {
+   "to": "LIS",
+   "city": "Lisbon",
+   "price": 687,
+   "d1": "2026-11-03",
+   "d2": "2026-11-10",
+   "dep": "5:10PM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:20AM",
+   "arr": "2:22AM+1",
+   "rarr": "9:56PM",
+   "pct": 14
   },
   "LON": {
    "to": "LON",
