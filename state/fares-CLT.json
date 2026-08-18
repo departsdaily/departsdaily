@@ -1,10 +1,25 @@
 {
  "origin": "CLT",
- "generated": "2026-08-17T22:15:25-04:00",
+ "generated": "2026-08-18T00:15:26-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
  "fares": {
+  "ATH": {
+   "to": "ATH",
+   "city": "Athens",
+   "price": 1244,
+   "d1": "2026-09-05",
+   "d2": "2026-09-14",
+   "dep": "7:55PM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:35PM",
+   "arr": "7:10AM+1",
+   "rarr": "8:00AM+1",
+   "pct": -18
+  },
   "BCN": {
    "to": "BCN",
    "city": "Barcelona",
@@ -34,21 +49,6 @@
    "arr": "1:33PM",
    "rarr": "7:19PM",
    "pct": -26
-  },
-  "CTG": {
-   "to": "CTG",
-   "city": "Cartagena",
-   "price": 620,
-   "d1": "2026-08-20",
-   "d2": "2026-08-24",
-   "dep": "9:05AM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "3:15PM",
-   "arr": "2:11PM",
-   "rarr": "8:33PM",
-   "pct": 3
   },
   "CUN": {
    "to": "CUN",
@@ -278,17 +278,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 182,
-   "d1": "2026-08-20",
-   "d2": "2026-08-23",
-   "dep": "5:43PM",
+   "price": 191,
+   "d1": "2026-11-14",
+   "d2": "2026-11-16",
+   "dep": "5:33PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:55PM",
-   "arr": "7:44PM",
-   "rarr": "5:20AM+1",
-   "pct": 56
+   "rdep": "4:54PM",
+   "arr": "7:29PM",
+   "rarr": "7:16PM",
+   "pct": 54
   },
   "ORD": {
    "to": "ORD",

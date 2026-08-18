@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-17T22:16:48-04:00",
+ "generated": "2026-08-18T00:16:48-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -244,21 +244,6 @@
    "arr": "7:41AM+1",
    "rarr": "7:00AM+1",
    "pct": 3
-  },
-  "PUJ": {
-   "to": "PUJ",
-   "city": "Punta Cana",
-   "price": 692,
-   "d1": "2026-08-20",
-   "d2": "2026-08-27",
-   "dep": "10:49PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:15PM",
-   "arr": "5:28AM+1",
-   "rarr": "9:50PM",
-   "pct": -24
   }
  }
 }
