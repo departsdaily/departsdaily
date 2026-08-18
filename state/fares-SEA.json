@@ -1,10 +1,25 @@
 {
  "origin": "SEA",
- "generated": "2026-08-18T02:18:23-04:00",
+ "generated": "2026-08-18T04:00:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 15,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 341,
+   "d1": "2026-08-23",
+   "d2": "2026-08-26",
+   "dep": "5:00AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:00AM",
+   "arr": "10:55AM",
+   "rarr": "11:36AM",
+   "pct": 43
+  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -113,17 +128,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 351,
-   "d1": "2026-09-24",
-   "d2": "2026-10-02",
-   "dep": "4:27PM",
+   "price": 233,
+   "d1": "2026-08-23",
+   "d2": "2026-08-26",
+   "dep": "2:37PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:30PM",
-   "arr": "11:11PM",
-   "rarr": "6:07AM+1",
-   "pct": 44
+   "rdep": "6:00AM",
+   "arr": "9:36PM",
+   "rarr": "1:27PM",
+   "pct": 63
   },
   "NYC": {
    "to": "NYC",
@@ -143,17 +158,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 254,
-   "d1": "2026-08-26",
-   "d2": "2026-09-01",
-   "dep": "10:34AM",
+   "price": 263,
+   "d1": "2026-09-18",
+   "d2": "2026-09-26",
+   "dep": "7:45PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:41PM",
-   "arr": "5:52PM",
-   "rarr": "8:49PM",
-   "pct": 48
+   "rdep": "6:30AM",
+   "arr": "2:16AM+1",
+   "rarr": "12:16PM",
+   "pct": 47
   },
   "PHX": {
    "to": "PHX",
