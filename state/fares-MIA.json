@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-17T20:17:27-04:00",
+ "generated": "2026-08-17T22:17:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -158,7 +158,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 54,
+   "price": 99,
    "d1": "2026-09-10",
    "d2": "2026-09-14",
    "dep": "12:18PM",
@@ -168,7 +168,7 @@
    "rdep": "7:11AM",
    "arr": "3:45PM",
    "rarr": "10:23AM",
-   "pct": 88
+   "pct": 77
   },
   "PHL": {
    "to": "PHL",
@@ -234,15 +234,15 @@
    "to": "AUA",
    "city": "Aruba",
    "price": 401,
-   "d1": "2026-11-21",
-   "d2": "2026-11-28",
-   "dep": "2:05AM",
+   "d1": "2026-10-15",
+   "d2": "2026-10-22",
+   "dep": "2:45AM",
    "al": "Avianca",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:50PM",
-   "arr": "7:45AM",
-   "rarr": "11:50PM",
+   "rdep": "11:50AM",
+   "arr": "8:15AM",
+   "rarr": "5:25PM",
    "pct": 35
   },
   "CUN": {

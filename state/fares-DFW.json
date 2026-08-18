@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-17T20:16:17-04:00",
+ "generated": "2026-08-17T22:16:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -349,6 +349,21 @@
    "arr": "8:34PM",
    "rarr": "5:05AM+1",
    "pct": 15
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 781,
+   "d1": "2026-09-10",
+   "d2": "2026-09-14",
+   "dep": "9:30PM",
+   "al": "Turkish",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:05AM",
+   "arr": "12:05PM+1",
+   "rarr": "10:35PM",
+   "pct": 18
   }
  }
 }
