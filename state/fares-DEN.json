@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-17T18:16:42-04:00",
+ "generated": "2026-08-17T20:16:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -98,7 +98,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 204,
+   "price": 201,
    "d1": "2026-10-30",
    "d2": "2026-11-05",
    "dep": "11:59PM",
@@ -108,7 +108,7 @@
    "rdep": "5:29PM",
    "arr": "4:31AM+1",
    "rarr": "12:21AM+1",
-   "pct": 59
+   "pct": 60
   },
   "MIA": {
    "to": "MIA",
@@ -233,17 +233,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 891,
+   "price": 869,
    "d1": "2026-09-30",
    "d2": "2026-10-07",
-   "dep": "10:40AM",
+   "dep": "3:15PM",
    "al": "",
-   "stops": 2,
+   "stops": 1,
    "xfer": 1,
-   "rdep": "6:50PM",
-   "arr": "11:38PM",
-   "rarr": "8:53AM+1",
-   "pct": 1
+   "rdep": "8:05AM",
+   "arr": "2:52AM+1",
+   "rarr": "7:20PM",
+   "pct": 3
   },
   "PUJ": {
    "to": "PUJ",
