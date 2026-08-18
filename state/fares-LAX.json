@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-18T16:16:41-04:00",
+ "generated": "2026-08-18T18:04:42-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 267,
+   "price": 227,
    "d1": "2026-09-01",
-   "d2": "2026-09-06",
-   "dep": "6:00AM",
-   "al": "Southwest",
+   "d2": "2026-09-10",
+   "dep": "11:34PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:36AM",
-   "arr": "12:20PM",
-   "rarr": "5:09PM",
-   "pct": 64
+   "rdep": "11:17AM",
+   "arr": "7:02AM+1",
+   "rarr": "7:55PM",
+   "pct": 69
   },
   "DCA": {
    "to": "DCA",
@@ -308,7 +308,7 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 373,
+   "price": 615,
    "d1": "2026-09-11",
    "d2": "2026-09-19",
    "dep": "10:20AM",
@@ -316,9 +316,9 @@
    "stops": 1,
    "xfer": 0,
    "rdep": "4:50PM",
-   "arr": "12:35AM+1",
+   "arr": "12:45AM+1",
    "rarr": "8:35AM+1",
-   "pct": 56
+   "pct": 28
   },
   "PAR": {
    "to": "PAR",
@@ -338,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 614,
-   "d1": "2026-08-21",
-   "d2": "2026-08-25",
-   "dep": "2:40PM",
-   "al": "Avianca",
-   "stops": 2,
+   "price": 590,
+   "d1": "2026-11-01",
+   "d2": "2026-11-08",
+   "dep": "9:45PM",
+   "al": "JetBlue",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:35PM",
-   "arr": "1:20AM+1",
-   "rarr": "5:45AM+1",
-   "pct": -10
+   "rdep": "7:45PM",
+   "arr": "5:02AM+1",
+   "rarr": "6:54AM+1",
+   "pct": -5
   },
   "ROM": {
    "to": "ROM",
