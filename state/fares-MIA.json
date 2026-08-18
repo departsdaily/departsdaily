@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-18T12:17:30-04:00",
+ "generated": "2026-08-18T14:17:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 219,
-   "d1": "2026-10-31",
-   "d2": "2026-11-04",
-   "dep": "7:20AM",
+   "price": 157,
+   "d1": "2026-09-10",
+   "d2": "2026-09-12",
+   "dep": "5:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:59PM",
-   "arr": "3:14PM",
-   "rarr": "9:52PM",
-   "pct": 43
+   "rdep": "1:06PM",
+   "arr": "1:50PM",
+   "rarr": "8:47PM",
+   "pct": 59
   },
   "DFW": {
    "to": "DFW",
@@ -278,17 +278,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 329,
-   "d1": "2026-09-07",
-   "d2": "2026-09-14",
-   "dep": "12:23PM",
+   "price": 292,
+   "d1": "2026-12-03",
+   "d2": "2026-12-14",
+   "dep": "12:30PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:45PM",
-   "arr": "1:36PM",
-   "rarr": "7:54PM",
-   "pct": 31
+   "arr": "1:43PM",
+   "rarr": "8:02PM",
+   "pct": 39
   },
   "PAR": {
    "to": "PAR",
