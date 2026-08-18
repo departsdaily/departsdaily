@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-18T06:18:26-04:00",
+ "generated": "2026-08-18T08:18:15-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -34,21 +34,6 @@
    "arr": "10:43PM",
    "rarr": "8:45AM",
    "pct": 52
-  },
-  "DFW": {
-   "to": "DFW",
-   "city": "Dallas",
-   "price": 319,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "12:45PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:15PM",
-   "arr": "6:01PM",
-   "rarr": "10:04PM",
-   "pct": 41
   },
   "FLL": {
    "to": "FLL",
@@ -278,16 +263,16 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 422,
-   "d1": "2026-09-13",
-   "d2": "2026-09-24",
-   "dep": "7:11AM",
+   "price": 420,
+   "d1": "2026-12-10",
+   "d2": "2026-12-18",
+   "dep": "8:15PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:46PM",
-   "arr": "12:46PM",
-   "rarr": "9:03PM",
+   "rdep": "8:23AM",
+   "arr": "1:53AM+1",
+   "rarr": "1:30PM",
    "pct": 19
   },
   "LON": {
