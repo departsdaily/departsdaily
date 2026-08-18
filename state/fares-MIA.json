@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-18T10:17:29-04:00",
+ "generated": "2026-08-18T12:17:30-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -308,17 +308,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 398,
-   "d1": "2026-11-02",
-   "d2": "2026-11-08",
-   "dep": "5:53PM",
+   "price": 390,
+   "d1": "2026-11-19",
+   "d2": "2026-11-24",
+   "dep": "12:55PM",
    "al": "DM",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:45AM",
-   "arr": "8:29PM",
-   "rarr": "2:32PM",
-   "pct": 29
+   "rdep": "9:38AM",
+   "arr": "3:31PM",
+   "rarr": "12:25PM",
+   "pct": 30
   },
   "ROM": {
    "to": "ROM",

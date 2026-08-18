@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-18T10:15:12-04:00",
+ "generated": "2026-08-18T12:15:09-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "ATH": {
    "to": "ATH",
    "city": "Athens",
-   "price": 1244,
-   "d1": "2026-09-05",
-   "d2": "2026-09-14",
-   "dep": "7:55PM",
-   "al": "United",
+   "price": 1091,
+   "d1": "2026-09-17",
+   "d2": "2026-09-29",
+   "dep": "4:01PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:35PM",
-   "arr": "7:10AM+1",
-   "rarr": "8:00AM+1",
-   "pct": -18
+   "rdep": "7:55AM",
+   "arr": "3:03AM+1",
+   "rarr": "8:37PM",
+   "pct": -4
   },
   "BCN": {
    "to": "BCN",
