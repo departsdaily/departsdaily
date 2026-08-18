@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-18T14:15:26-04:00",
+ "generated": "2026-08-18T16:03:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -304,6 +304,21 @@
    "arr": "2:54PM",
    "rarr": "4:47PM",
    "pct": 56
+  },
+  "LON": {
+   "to": "LON",
+   "city": "London",
+   "price": 648,
+   "d1": "2026-09-02",
+   "d2": "2026-09-09",
+   "dep": "12:55PM",
+   "al": "Air Canada",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "8:40AM",
+   "arr": "10:35PM",
+   "rarr": "10:46PM",
+   "pct": 24
   },
   "MBJ": {
    "to": "MBJ",

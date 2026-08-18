@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-18T14:15:07-04:00",
+ "generated": "2026-08-18T16:03:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
@@ -218,8 +218,8 @@
   "MIL": {
    "to": "MIL",
    "city": "Milan",
-   "price": 827,
-   "d1": "2026-10-21",
+   "price": 811,
+   "d1": "2026-10-20",
    "d2": "2026-10-27",
    "dep": "12:30PM",
    "al": "United",
@@ -228,7 +228,7 @@
    "rdep": "9:50AM",
    "arr": "11:40PM",
    "rarr": "8:55PM",
-   "pct": 8
+   "pct": 10
   },
   "MSY": {
    "to": "MSY",
@@ -458,17 +458,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 199,
-   "d1": "2026-10-14",
-   "d2": "2026-10-18",
-   "dep": "8:11PM",
-   "al": "Frontier",
+   "price": 290,
+   "d1": "2026-09-05",
+   "d2": "2026-09-12",
+   "dep": "3:10PM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "1:00AM+1",
-   "rarr": "12:07PM",
-   "pct": 53
+   "rdep": "3:08AM",
+   "arr": "7:59PM",
+   "rarr": "8:12AM",
+   "pct": 31
   },
   "SNA": {
    "to": "SNA",
