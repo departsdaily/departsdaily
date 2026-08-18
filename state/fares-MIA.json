@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-18T04:18:05-04:00",
+ "generated": "2026-08-18T06:17:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -230,21 +230,6 @@
    "rarr": "9:39AM",
    "pct": 64
   },
-  "AUA": {
-   "to": "AUA",
-   "city": "Aruba",
-   "price": 401,
-   "d1": "2026-10-15",
-   "d2": "2026-10-22",
-   "dep": "2:45AM",
-   "al": "Avianca",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:50AM",
-   "arr": "8:15AM",
-   "rarr": "5:25PM",
-   "pct": 35
-  },
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
@@ -323,17 +308,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 341,
-   "d1": "2026-10-15",
-   "d2": "2026-10-22",
-   "dep": "9:28PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 398,
+   "d1": "2026-11-02",
+   "d2": "2026-11-08",
+   "dep": "5:53PM",
+   "al": "DM",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "9:38AM",
-   "arr": "1:18AM+1",
-   "rarr": "12:25PM",
-   "pct": 39
+   "rdep": "11:45AM",
+   "arr": "8:29PM",
+   "rarr": "2:32PM",
+   "pct": 29
   },
   "ROM": {
    "to": "ROM",

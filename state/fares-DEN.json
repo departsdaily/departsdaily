@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-18T04:17:00-04:00",
+ "generated": "2026-08-18T06:16:46-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,21 +184,6 @@
    "arr": "3:17PM",
    "rarr": "11:11AM",
    "pct": 60
-  },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 147,
-   "d1": "2026-10-29",
-   "d2": "2026-11-01",
-   "dep": "10:29PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "2:07PM",
-   "arr": "1:15AM+1",
-   "rarr": "4:47PM",
-   "pct": 70
   },
   "CUN": {
    "to": "CUN",

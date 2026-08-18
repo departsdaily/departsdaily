@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-18T04:15:32-04:00",
+ "generated": "2026-08-18T06:15:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "MUC": {
    "to": "MUC",
    "city": "Munich",
-   "price": 910,
-   "d1": "2026-10-04",
-   "d2": "2026-10-20",
-   "dep": "3:04PM",
+   "price": 1073,
+   "d1": "2026-09-05",
+   "d2": "2026-09-16",
+   "dep": "7:55PM",
    "al": "United",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:00PM",
-   "arr": "2:09AM+1",
-   "rarr": "10:45PM",
-   "pct": -1
+   "arr": "5:40AM+1",
+   "rarr": "10:44PM",
+   "pct": -19
   },
   "NAS": {
    "to": "NAS",
@@ -308,17 +308,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 869,
-   "d1": "2026-09-21",
-   "d2": "2026-10-01",
-   "dep": "9:59PM",
+   "price": 1018,
+   "d1": "2026-09-05",
+   "d2": "2026-09-14",
+   "dep": "5:43PM",
    "al": "",
-   "stops": 1,
+   "stops": 2,
    "xfer": 1,
-   "rdep": "3:30PM",
-   "arr": "9:04AM+1",
-   "rarr": "3:32AM+1",
-   "pct": 3
+   "rdep": "9:05PM",
+   "arr": "2:59AM+1",
+   "rarr": "11:25AM+1",
+   "pct": -13
   },
   "PHX": {
    "to": "PHX",
