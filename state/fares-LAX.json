@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-19T14:16:45-04:00",
+ "generated": "2026-08-19T16:16:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -173,7 +173,7 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 223,
+   "price": 214,
    "d1": "2026-09-14",
    "d2": "2026-09-18",
    "dep": "8:11PM",
@@ -183,7 +183,7 @@
    "rdep": "1:30PM",
    "arr": "2:50AM+1",
    "rarr": "8:53PM",
-   "pct": 76
+   "pct": 77
   },
   "ORD": {
    "to": "ORD",

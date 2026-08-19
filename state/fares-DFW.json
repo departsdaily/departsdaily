@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-19T14:16:11-04:00",
+ "generated": "2026-08-19T16:16:02-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -128,17 +128,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 111,
-   "d1": "2026-09-15",
-   "d2": "2026-09-17",
-   "dep": "5:55PM",
+   "price": 146,
+   "d1": "2026-09-16",
+   "d2": "2026-09-20",
+   "dep": "1:23PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:46PM",
-   "arr": "9:00PM",
-   "rarr": "10:17PM",
-   "pct": 76
+   "rdep": "2:37PM",
+   "arr": "5:44PM",
+   "rarr": "6:00PM",
+   "pct": 68
   },
   "MSY": {
    "to": "MSY",
@@ -244,21 +244,6 @@
    "arr": "12:54AM+1",
    "rarr": "3:31PM",
    "pct": 37
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 88,
-   "d1": "2026-10-01",
-   "d2": "2026-10-08",
-   "dep": "3:20PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:25PM",
-   "arr": "5:53PM",
-   "rarr": "10:40PM",
-   "pct": 80
   },
   "AMS": {
    "to": "AMS",

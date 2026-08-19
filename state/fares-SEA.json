@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-19T14:17:37-04:00",
+ "generated": "2026-08-19T16:17:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -49,21 +49,6 @@
    "arr": "1:19AM+1",
    "rarr": "7:58PM",
    "pct": 53
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 109,
-   "d1": "2026-09-12",
-   "d2": "2026-09-15",
-   "dep": "10:53AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:07PM",
-   "arr": "4:07PM",
-   "rarr": "4:08PM",
-   "pct": 71
   },
   "DFW": {
    "to": "DFW",

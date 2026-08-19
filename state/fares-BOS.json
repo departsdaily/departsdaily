@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-19T14:17:55-04:00",
+ "generated": "2026-08-19T16:17:54-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -184,21 +184,6 @@
    "arr": "10:04AM",
    "rarr": "8:33AM",
    "pct": 59
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 220,
-   "d1": "2026-09-11",
-   "d2": "2026-09-15",
-   "dep": "8:30PM",
-   "al": "JetBlue",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:48PM",
-   "arr": "10:03PM",
-   "rarr": "8:56PM",
-   "pct": 43
   },
   "PHX": {
    "to": "PHX",
