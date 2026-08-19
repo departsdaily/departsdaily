@@ -1,11 +1,11 @@
 {
- "generated": "2026-08-18T05:03:17-04:00",
+ "generated": "2026-08-19T05:08:11-04:00",
  "origins": {
   "CLT": {
    "ABQ": {
     "rt": 0,
     "matrix": 0,
-    "out_legs": 0,
+    "out_legs": 1,
     "back_legs": 0,
     "composed": 0
    },
@@ -45,14 +45,14 @@
     "composed": 0
    },
    "ATH": {
-    "rt": 1,
+    "rt": 2,
     "matrix": 6,
-    "out_legs": 13,
+    "out_legs": 12,
     "back_legs": 5,
     "composed": 8
    },
    "AUA": {
-    "rt": 0,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 1,
@@ -61,15 +61,15 @@
    "AUH": {
     "rt": 0,
     "matrix": 4,
-    "out_legs": 7,
+    "out_legs": 6,
     "back_legs": 3,
-    "composed": 5
+    "composed": 8
    },
    "AUS": {
     "rt": 0,
-    "matrix": 3,
+    "matrix": 4,
     "out_legs": 0,
-    "back_legs": 5,
+    "back_legs": 7,
     "composed": 0
    },
    "AVL": {
@@ -80,9 +80,9 @@
     "composed": 0
    },
    "BCN": {
-    "rt": 3,
+    "rt": 7,
     "matrix": 0,
-    "out_legs": 2,
+    "out_legs": 3,
     "back_legs": 1,
     "composed": 1
    },
@@ -110,9 +110,9 @@
    "BNA": {
     "rt": 0,
     "matrix": 5,
-    "out_legs": 9,
-    "back_legs": 7,
-    "composed": 8
+    "out_legs": 7,
+    "back_legs": 10,
+    "composed": 11
    },
    "BOG": {
     "rt": 1,
@@ -157,7 +157,7 @@
     "composed": 0
    },
    "CTG": {
-    "rt": 1,
+    "rt": 0,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 0,
@@ -166,14 +166,14 @@
    "CUN": {
     "rt": 4,
     "matrix": 0,
-    "out_legs": 2,
+    "out_legs": 1,
     "back_legs": 0,
     "composed": 0
    },
    "CUR": {
     "rt": 1,
     "matrix": 0,
-    "out_legs": 0,
+    "out_legs": 1,
     "back_legs": 3,
     "composed": 0
    },
@@ -186,20 +186,20 @@
    },
    "DAB": {
     "rt": 0,
-    "matrix": 0,
-    "out_legs": 1,
-    "back_legs": 1,
-    "composed": 1
+    "matrix": 6,
+    "out_legs": 6,
+    "back_legs": 4,
+    "composed": 10
    },
    "DEN": {
     "rt": 0,
     "matrix": 5,
-    "out_legs": 4,
+    "out_legs": 5,
     "back_legs": 9,
     "composed": 31
    },
    "DUB": {
-    "rt": 0,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 1,
     "back_legs": 0,
@@ -242,10 +242,10 @@
    },
    "FLL": {
     "rt": 1,
-    "matrix": 0,
+    "matrix": 1,
     "out_legs": 1,
-    "back_legs": 2,
-    "composed": 0
+    "back_legs": 4,
+    "composed": 3
    },
    "FNC": {
     "rt": 1,
@@ -346,11 +346,11 @@
     "composed": 0
    },
    "LAX": {
-    "rt": 8,
-    "matrix": 13,
-    "out_legs": 12,
+    "rt": 6,
+    "matrix": 12,
+    "out_legs": 11,
     "back_legs": 11,
-    "composed": 38
+    "composed": 35
    },
    "LIM": {
     "rt": 0,
@@ -374,32 +374,32 @@
     "composed": 0
    },
    "LON": {
-    "rt": 9,
-    "matrix": 17,
+    "rt": 6,
+    "matrix": 16,
     "out_legs": 7,
     "back_legs": 19,
     "composed": 52
    },
    "MAD": {
-    "rt": 2,
+    "rt": 3,
     "matrix": 6,
-    "out_legs": 1,
+    "out_legs": 2,
     "back_legs": 9,
-    "composed": 8
+    "composed": 15
    },
    "MBJ": {
     "rt": 0,
     "matrix": 0,
     "out_legs": 0,
-    "back_legs": 1,
+    "back_legs": 0,
     "composed": 0
    },
    "MCO": {
     "rt": 0,
-    "matrix": 3,
+    "matrix": 5,
     "out_legs": 6,
-    "back_legs": 6,
-    "composed": 15
+    "back_legs": 9,
+    "composed": 29
    },
    "MDE": {
     "rt": 0,
@@ -423,14 +423,14 @@
     "composed": 0
    },
    "MIA": {
-    "rt": 8,
-    "matrix": 6,
-    "out_legs": 16,
-    "back_legs": 3,
-    "composed": 25
+    "rt": 17,
+    "matrix": 7,
+    "out_legs": 17,
+    "back_legs": 5,
+    "composed": 46
    },
    "MIL": {
-    "rt": 1,
+    "rt": 2,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 0,
@@ -451,11 +451,11 @@
     "composed": 0
    },
    "MUC": {
-    "rt": 3,
+    "rt": 5,
     "matrix": 30,
     "out_legs": 12,
     "back_legs": 28,
-    "composed": 150
+    "composed": 148
    },
    "MVY": {
     "rt": 0,
@@ -468,7 +468,7 @@
     "rt": 0,
     "matrix": 2,
     "out_legs": 4,
-    "back_legs": 2,
+    "back_legs": 1,
     "composed": 0
    },
    "NAS": {
@@ -479,14 +479,14 @@
     "composed": 0
    },
    "NYC": {
-    "rt": 14,
-    "matrix": 47,
-    "out_legs": 37,
-    "back_legs": 47,
+    "rt": 12,
+    "matrix": 58,
+    "out_legs": 39,
+    "back_legs": 59,
     "composed": 500
    },
    "OGG": {
-    "rt": 0,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 0,
@@ -494,27 +494,27 @@
    },
    "ORD": {
     "rt": 6,
-    "matrix": 3,
-    "out_legs": 7,
+    "matrix": 13,
+    "out_legs": 18,
     "back_legs": 7,
-    "composed": 31
+    "composed": 25
    },
    "PAR": {
     "rt": 2,
-    "matrix": 17,
+    "matrix": 16,
     "out_legs": 17,
     "back_legs": 10,
     "composed": 64
    },
    "PBI": {
     "rt": 0,
-    "matrix": 0,
-    "out_legs": 3,
+    "matrix": 2,
+    "out_legs": 5,
     "back_legs": 0,
     "composed": 0
    },
    "PDX": {
-    "rt": 0,
+    "rt": 2,
     "matrix": 0,
     "out_legs": 2,
     "back_legs": 0,
@@ -535,7 +535,7 @@
     "composed": 0
    },
    "PMI": {
-    "rt": 0,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 1,
     "back_legs": 0,
@@ -600,7 +600,7 @@
    "RAP": {
     "rt": 0,
     "matrix": 0,
-    "out_legs": 0,
+    "out_legs": 1,
     "back_legs": 0,
     "composed": 0
    },
@@ -619,15 +619,15 @@
     "composed": 0
    },
    "ROM": {
-    "rt": 4,
+    "rt": 5,
     "matrix": 0,
-    "out_legs": 1,
+    "out_legs": 2,
     "back_legs": 1,
     "composed": 0
    },
    "RSW": {
     "rt": 0,
-    "matrix": 1,
+    "matrix": 0,
     "out_legs": 1,
     "back_legs": 0,
     "composed": 0
@@ -642,7 +642,7 @@
    "SAN": {
     "rt": 0,
     "matrix": 0,
-    "out_legs": 1,
+    "out_legs": 0,
     "back_legs": 0,
     "composed": 0
    },
@@ -656,30 +656,30 @@
    "SAV": {
     "rt": 0,
     "matrix": 0,
-    "out_legs": 0,
+    "out_legs": 1,
     "back_legs": 0,
     "composed": 0
    },
    "SDQ": {
     "rt": 1,
     "matrix": 0,
-    "out_legs": 0,
+    "out_legs": 1,
     "back_legs": 0,
     "composed": 0
    },
    "SEA": {
     "rt": 2,
     "matrix": 0,
-    "out_legs": 1,
-    "back_legs": 1,
-    "composed": 1
+    "out_legs": 0,
+    "back_legs": 0,
+    "composed": 0
    },
    "SFO": {
     "rt": 1,
-    "matrix": 7,
+    "matrix": 10,
     "out_legs": 13,
-    "back_legs": 3,
-    "composed": 15
+    "back_legs": 6,
+    "composed": 27
    },
    "SJD": {
     "rt": 0,
@@ -696,10 +696,10 @@
     "composed": 0
    },
    "SJU": {
-    "rt": 5,
+    "rt": 4,
     "matrix": 0,
-    "out_legs": 3,
-    "back_legs": 0,
+    "out_legs": 2,
+    "back_legs": 1,
     "composed": 0
    },
    "SKB": {
@@ -712,23 +712,23 @@
    "SLC": {
     "rt": 0,
     "matrix": 3,
-    "out_legs": 5,
+    "out_legs": 6,
     "back_legs": 1,
     "composed": 0
    },
    "SMF": {
-    "rt": 3,
+    "rt": 5,
     "matrix": 0,
     "out_legs": 1,
-    "back_legs": 3,
+    "back_legs": 1,
     "composed": 0
    },
    "SNA": {
-    "rt": 8,
+    "rt": 6,
     "matrix": 12,
-    "out_legs": 12,
+    "out_legs": 11,
     "back_legs": 11,
-    "composed": 38
+    "composed": 35
    },
    "SRQ": {
     "rt": 0,
@@ -767,10 +767,10 @@
    },
    "TPA": {
     "rt": 2,
-    "matrix": 32,
+    "matrix": 49,
     "out_legs": 36,
-    "back_legs": 1,
-    "composed": 28
+    "back_legs": 20,
+    "composed": 408
    },
    "TUS": {
     "rt": 0,
@@ -787,7 +787,7 @@
     "composed": 0
    },
    "TYO": {
-    "rt": 2,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 1,
@@ -795,10 +795,10 @@
    },
    "TYS": {
     "rt": 1,
-    "matrix": 6,
+    "matrix": 3,
     "out_legs": 5,
-    "back_legs": 5,
-    "composed": 24
+    "back_legs": 1,
+    "composed": 4
    },
    "UVF": {
     "rt": 0,
@@ -843,152 +843,152 @@
     "composed": 0
    },
    "YVR": {
-    "rt": 0,
+    "rt": 1,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 0,
     "composed": 0
    },
    "YYC": {
-    "rt": 0,
+    "rt": 2,
     "matrix": 0,
     "out_legs": 0,
-    "back_legs": 1,
+    "back_legs": 0,
     "composed": 0
    },
    "YYZ": {
     "rt": 1,
-    "matrix": 5,
+    "matrix": 4,
     "out_legs": 7,
-    "back_legs": 5,
-    "composed": 19
+    "back_legs": 2,
+    "composed": 7
    }
   },
   "ATL": {
    "BNA": {
     "rt": 2,
-    "matrix": 9,
-    "out_legs": 10,
-    "back_legs": 8,
-    "composed": 36
+    "matrix": 11,
+    "out_legs": 11,
+    "back_legs": 10,
+    "composed": 28
    },
    "BOS": {
     "rt": 4,
-    "matrix": 11,
-    "out_legs": 5,
+    "matrix": 12,
+    "out_legs": 7,
     "back_legs": 19,
-    "composed": 21
+    "composed": 40
    },
    "DCA": {
     "rt": 6,
-    "matrix": 11,
-    "out_legs": 15,
+    "matrix": 16,
+    "out_legs": 20,
     "back_legs": 6,
-    "composed": 37
+    "composed": 33
    },
    "DEN": {
-    "rt": 2,
-    "matrix": 9,
-    "out_legs": 2,
-    "back_legs": 12,
-    "composed": 0
+    "rt": 5,
+    "matrix": 13,
+    "out_legs": 1,
+    "back_legs": 20,
+    "composed": 7
    },
    "DFW": {
-    "rt": 8,
-    "matrix": 3,
+    "rt": 9,
+    "matrix": 10,
     "out_legs": 1,
-    "back_legs": 6,
+    "back_legs": 15,
     "composed": 0
    },
    "DTW": {
     "rt": 1,
-    "matrix": 6,
-    "out_legs": 1,
+    "matrix": 9,
+    "out_legs": 5,
     "back_legs": 10,
-    "composed": 8
+    "composed": 30
    },
    "FLL": {
-    "rt": 5,
-    "matrix": 4,
-    "out_legs": 10,
+    "rt": 4,
+    "matrix": 2,
+    "out_legs": 7,
     "back_legs": 1,
-    "composed": 0
+    "composed": 3
    },
    "HOU": {
     "rt": 9,
-    "matrix": 6,
-    "out_legs": 4,
-    "back_legs": 9,
-    "composed": 4
+    "matrix": 7,
+    "out_legs": 5,
+    "back_legs": 7,
+    "composed": 0
    },
    "LAS": {
-    "rt": 5,
-    "matrix": 1,
-    "out_legs": 7,
-    "back_legs": 3,
-    "composed": 4
+    "rt": 6,
+    "matrix": 8,
+    "out_legs": 16,
+    "back_legs": 4,
+    "composed": 8
    },
    "LAX": {
-    "rt": 5,
+    "rt": 6,
     "matrix": 12,
-    "out_legs": 11,
+    "out_legs": 13,
     "back_legs": 9,
-    "composed": 17
+    "composed": 9
    },
    "MCO": {
-    "rt": 6,
-    "matrix": 9,
-    "out_legs": 8,
-    "back_legs": 14,
-    "composed": 35
+    "rt": 5,
+    "matrix": 8,
+    "out_legs": 13,
+    "back_legs": 10,
+    "composed": 55
    },
    "MIA": {
-    "rt": 10,
-    "matrix": 24,
-    "out_legs": 23,
-    "back_legs": 23,
-    "composed": 159
+    "rt": 11,
+    "matrix": 21,
+    "out_legs": 21,
+    "back_legs": 24,
+    "composed": 189
    },
    "MSY": {
-    "rt": 4,
-    "matrix": 12,
-    "out_legs": 9,
-    "back_legs": 9,
-    "composed": 80
+    "rt": 5,
+    "matrix": 14,
+    "out_legs": 10,
+    "back_legs": 12,
+    "composed": 93
    },
    "NYC": {
-    "rt": 27,
-    "matrix": 92,
-    "out_legs": 60,
+    "rt": 24,
+    "matrix": 98,
+    "out_legs": 66,
     "back_legs": 78,
     "composed": 500
    },
    "ORD": {
-    "rt": 14,
-    "matrix": 19,
-    "out_legs": 19,
-    "back_legs": 21,
-    "composed": 91
+    "rt": 13,
+    "matrix": 18,
+    "out_legs": 18,
+    "back_legs": 17,
+    "composed": 77
    },
    "PHL": {
-    "rt": 1,
-    "matrix": 9,
+    "rt": 2,
+    "matrix": 7,
     "out_legs": 14,
-    "back_legs": 12,
-    "composed": 48
+    "back_legs": 9,
+    "composed": 39
    },
    "PHX": {
-    "rt": 0,
-    "matrix": 1,
+    "rt": 1,
+    "matrix": 12,
     "out_legs": 1,
-    "back_legs": 3,
+    "back_legs": 16,
     "composed": 0
    },
    "SEA": {
-    "rt": 4,
+    "rt": 3,
     "matrix": 5,
-    "out_legs": 4,
-    "back_legs": 9,
+    "out_legs": 5,
+    "back_legs": 10,
     "composed": 12
    },
    "SFO": {
@@ -1000,20 +1000,20 @@
    },
    "TPA": {
     "rt": 1,
-    "matrix": 7,
-    "out_legs": 8,
-    "back_legs": 10,
-    "composed": 25
+    "matrix": 8,
+    "out_legs": 11,
+    "back_legs": 8,
+    "composed": 18
    },
    "AMS": {
     "rt": 1,
     "matrix": 1,
     "out_legs": 5,
-    "back_legs": 1,
+    "back_legs": 2,
     "composed": 3
    },
    "AUA": {
-    "rt": 1,
+    "rt": 0,
     "matrix": 0,
     "out_legs": 0,
     "back_legs": 0,
@@ -1034,21 +1034,21 @@
     "composed": 0
    },
    "LON": {
-    "rt": 1,
-    "matrix": 27,
-    "out_legs": 38,
-    "back_legs": 6,
-    "composed": 52
+    "rt": 2,
+    "matrix": 37,
+    "out_legs": 26,
+    "back_legs": 28,
+    "composed": 91
    },
    "MBJ": {
-    "rt": 3,
+    "rt": 2,
     "matrix": 0,
     "out_legs": 1,
-    "back_legs": 1,
+    "back_legs": 0,
     "composed": 0
    },
    "NAS": {
-    "rt": 4,
+    "rt": 5,
     "matrix": 0,
     "out_legs": 1,
     "back_legs": 0,
@@ -1056,10 +1056,10 @@
    },
    "PAR": {
     "rt": 2,
-    "matrix": 23,
-    "out_legs": 9,
-    "back_legs": 24,
-    "composed": 134
+    "matrix": 17,
+    "out_legs": 3,
+    "back_legs": 23,
+    "composed": 23
    },
    "PUJ": {
     "rt": 4,
@@ -1078,9 +1078,9 @@
    "SJU": {
     "rt": 8,
     "matrix": 0,
-    "out_legs": 2,
+    "out_legs": 3,
     "back_legs": 4,
-    "composed": 0
+    "composed": 1
    }
   }
  }
