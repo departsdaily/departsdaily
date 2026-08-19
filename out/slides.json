@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 20,
+ "n_deals": 21,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -34,15 +34,7 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_3_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 204,
-   "disc": 43,
-   "section": "weekend"
-  },
-  {
-   "file": "story_4_LAS.png",
+   "file": "story_3_LAS.png",
    "to": "LAS",
    "city": "Las Vegas",
    "price": 173,
@@ -50,11 +42,19 @@
    "section": "cheapest"
   },
   {
-   "file": "story_5_SXM.png",
+   "file": "story_4_SXM.png",
    "to": "SXM",
    "city": "St. Maarten",
-   "price": 346,
-   "disc": 42,
+   "price": 369,
+   "disc": 38,
+   "section": "weekend"
+  },
+  {
+   "file": "story_5_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 203,
+   "disc": 34,
    "section": "weekend"
   },
   {
@@ -66,20 +66,20 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_7_SJU.png",
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 199,
-   "disc": 32,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_8_LAX.png",
+   "file": "story_7_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 208,
    "disc": 32,
    "section": "weekish"
+  },
+  {
+   "file": "story_8_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 214,
+   "disc": 31,
+   "section": "cheapest"
   }
  ]
 }
