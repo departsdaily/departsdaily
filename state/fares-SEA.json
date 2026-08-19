@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-19T10:17:40-04:00",
+ "generated": "2026-08-19T12:17:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 333,
-   "d1": "2026-10-24",
-   "d2": "2026-10-31",
-   "dep": "10:40PM",
-   "al": "Alaska",
+   "price": 330,
+   "d1": "2026-09-23",
+   "d2": "2026-09-29",
+   "dep": "7:30AM",
+   "al": "United",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:03AM",
-   "arr": "3:59AM+1",
-   "rarr": "1:15PM",
-   "pct": 48
+   "rdep": "3:18PM",
+   "arr": "12:56PM",
+   "rarr": "9:19PM",
+   "pct": 49
   },
   "ORD": {
    "to": "ORD",
