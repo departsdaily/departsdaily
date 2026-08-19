@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-19T06:15:37-04:00",
+ "generated": "2026-08-19T08:15:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -319,21 +319,6 @@
    "arr": "10:35PM",
    "rarr": "10:46PM",
    "pct": 24
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 668,
-   "d1": "2026-08-27",
-   "d2": "2026-08-31",
-   "dep": "3:08PM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:47PM",
-   "arr": "7:02PM",
-   "rarr": "7:09PM",
-   "pct": -24
   },
   "NAS": {
    "to": "NAS",
