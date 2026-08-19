@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-18T18:18:13-04:00",
+ "generated": "2026-08-18T20:18:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 311,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "2:45PM",
+   "price": 258,
+   "d1": "2026-10-02",
+   "d2": "2026-10-05",
+   "dep": "2:40PM",
    "al": "JetBlue",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:55PM",
-   "arr": "8:34PM",
-   "rarr": "8:16AM+1",
-   "pct": 29
+   "rdep": "2:25PM",
+   "arr": "8:29PM",
+   "rarr": "8:02PM",
+   "pct": 41
   },
   "DCA": {
    "to": "DCA",
@@ -98,7 +98,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 161,
+   "price": 165,
    "d1": "2026-10-24",
    "d2": "2026-11-01",
    "dep": "8:37PM",
@@ -108,7 +108,7 @@
    "rdep": "7:00AM",
    "arr": "11:44PM",
    "rarr": "10:58AM",
-   "pct": 59
+   "pct": 58
   },
   "MIA": {
    "to": "MIA",
@@ -308,17 +308,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 448,
-   "d1": "2026-08-27",
-   "d2": "2026-09-01",
-   "dep": "5:45AM",
-   "al": "Air Canada",
-   "stops": 2,
+   "price": 466,
+   "d1": "2026-12-12",
+   "d2": "2026-12-20",
+   "dep": "12:40PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:20AM",
-   "arr": "11:05AM",
-   "rarr": "4:03PM",
-   "pct": 7
+   "rdep": "5:20PM",
+   "arr": "4:13PM",
+   "rarr": "8:43PM",
+   "pct": 3
   },
   "PAR": {
    "to": "PAR",
