@@ -4,7 +4,8 @@
  "routes_considered": 119,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 63,
+  "no fares": 59,
+  "fetch failed": 4,
   "not a deal": 25,
   "no fares in window": 17,
   "qualified": 14
@@ -243,20 +244,20 @@
    "why": "the fare cache returned nothing"
   },
   "TUS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TVC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "UVF": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "VRB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "YQB": {
    "outcome": "no fares",
@@ -332,12 +333,12 @@
   },
   "CUR": {
    "outcome": "not a deal",
-   "price": 857,
-   "typical": 563,
-   "disc_pct": -52,
-   "d1": "2026-10-01",
-   "d2": "2026-10-21",
-   "nights": 20,
+   "price": 782,
+   "typical": 528,
+   "disc_pct": -48,
+   "d1": "2026-09-30",
+   "d2": "2026-10-08",
+   "nights": 8,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -636,9 +637,9 @@
   },
   "ROM": {
    "outcome": "not a deal",
-   "price": 1057,
+   "price": 1009,
    "typical": 898,
-   "disc_pct": -18,
+   "disc_pct": -12,
    "d1": "2026-09-30",
    "d2": "2026-10-11",
    "nights": 11,
