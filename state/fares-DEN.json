@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-18T20:16:36-04:00",
+ "generated": "2026-08-18T22:16:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 201,
+   "price": 192,
    "d1": "2026-10-30",
    "d2": "2026-11-05",
-   "dep": "11:59PM",
+   "dep": "3:10PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
    "rdep": "5:29PM",
-   "arr": "4:31AM+1",
-   "rarr": "12:21AM+1",
-   "pct": 60
+   "arr": "7:48PM",
+   "rarr": "10:43PM",
+   "pct": 62
   },
   "MIA": {
    "to": "MIA",

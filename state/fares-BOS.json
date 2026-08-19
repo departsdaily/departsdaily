@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-18T20:18:06-04:00",
+ "generated": "2026-08-18T22:18:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -34,6 +34,21 @@
    "arr": "10:43PM",
    "rarr": "8:45AM",
    "pct": 52
+  },
+  "DFW": {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 328,
+   "d1": "2026-10-17",
+   "d2": "2026-10-25",
+   "dep": "3:55PM",
+   "al": "JetBlue",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "9:10PM",
+   "arr": "11:58PM",
+   "rarr": "3:01AM+1",
+   "pct": 39
   },
   "FLL": {
    "to": "FLL",

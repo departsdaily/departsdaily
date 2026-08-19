@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-18T20:15:20-04:00",
+ "generated": "2026-08-18T22:15:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -218,17 +218,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 176,
-   "d1": "2026-09-03",
-   "d2": "2026-09-06",
-   "dep": "1:58PM",
+   "price": 136,
+   "d1": "2026-09-23",
+   "d2": "2026-09-28",
+   "dep": "3:00PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "2:27PM",
-   "arr": "4:13PM",
-   "rarr": "4:46PM",
-   "pct": 57
+   "rdep": "6:54PM",
+   "arr": "5:11PM",
+   "rarr": "9:14PM",
+   "pct": 67
   },
   "MIL": {
    "to": "MIL",
@@ -305,20 +305,35 @@
    "rarr": "7:16PM",
    "pct": 54
   },
+  "OGG": {
+   "to": "OGG",
+   "city": "Maui",
+   "price": 735,
+   "d1": "2026-10-03",
+   "d2": "2026-10-11",
+   "dep": "4:51PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "2:49PM",
+   "arr": "4:59AM+1",
+   "rarr": "2:52AM+1",
+   "pct": 0
+  },
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 242,
-   "d1": "2026-09-18",
-   "d2": "2026-09-20",
-   "dep": "7:54PM",
+   "price": 208,
+   "d1": "2026-10-24",
+   "d2": "2026-10-26",
+   "dep": "12:05PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "2:11AM+1",
-   "rarr": "11:43AM",
-   "pct": 39
+   "rdep": "6:30AM",
+   "arr": "5:50PM",
+   "rarr": "12:41PM",
+   "pct": 48
   },
   "PAR": {
    "to": "PAR",
