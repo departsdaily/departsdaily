@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-19T00:17:02-04:00",
+ "generated": "2026-08-19T02:17:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -338,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 590,
-   "d1": "2026-11-01",
-   "d2": "2026-11-08",
-   "dep": "9:45PM",
+   "price": 551,
+   "d1": "2026-12-07",
+   "d2": "2026-12-14",
+   "dep": "11:35PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:45PM",
-   "arr": "5:02AM+1",
-   "rarr": "6:54AM+1",
-   "pct": -5
+   "rdep": "2:05PM",
+   "arr": "6:53AM+1",
+   "rarr": "11:19PM",
+   "pct": 2
   },
   "ROM": {
    "to": "ROM",

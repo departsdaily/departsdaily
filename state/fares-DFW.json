@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-19T00:16:21-04:00",
+ "generated": "2026-08-19T02:16:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -53,17 +53,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 81,
-   "d1": "2026-10-23",
-   "d2": "2026-10-26",
-   "dep": "10:55PM",
+   "price": 100,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
+   "dep": "7:00AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:00AM",
-   "arr": "1:12AM+1",
-   "rarr": "12:10PM",
-   "pct": 79
+   "rdep": "6:30AM",
+   "arr": "9:15AM",
+   "rarr": "8:35AM",
+   "pct": 74
   },
   "FLL": {
    "to": "FLL",
@@ -229,21 +229,6 @@
    "arr": "4:00PM",
    "rarr": "1:10AM+1",
    "pct": 68
-  },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 280,
-   "d1": "2026-08-30",
-   "d2": "2026-09-06",
-   "dep": "10:24PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "12:29AM",
-   "arr": "4:03AM+1",
-   "rarr": "4:05AM",
-   "pct": 47
   },
   "TPA": {
    "to": "TPA",

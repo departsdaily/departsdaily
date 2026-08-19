@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-19T00:15:15-04:00",
+ "generated": "2026-08-19T02:15:22-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -158,15 +158,15 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 208,
-   "d1": "2026-09-16",
-   "d2": "2026-09-23",
-   "dep": "1:34PM",
+   "price": 203,
+   "d1": "2026-09-25",
+   "d2": "2026-09-28",
+   "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "9:40PM",
-   "arr": "7:59PM",
+   "arr": "2:09AM+1",
    "rarr": "4:31AM+1",
    "pct": 71
   },
@@ -395,6 +395,21 @@
    "rarr": "7:41PM",
    "pct": 41
   },
+  "PMI": {
+   "to": "PMI",
+   "city": "Mallorca",
+   "price": 597,
+   "d1": "2026-09-18",
+   "d2": "2026-09-26",
+   "dep": "6:40PM",
+   "al": "Lufthansa",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:55AM",
+   "arr": "5:30AM+1",
+   "rarr": "8:50PM",
+   "pct": 37
+  },
   "PSP": {
    "to": "PSP",
    "city": "Palm Springs",
@@ -443,17 +458,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 981,
-   "d1": "2026-09-30",
-   "d2": "2026-10-11",
-   "dep": "9:32AM",
+   "price": 996,
+   "d1": "2026-09-05",
+   "d2": "2026-09-14",
+   "dep": "5:43PM",
    "al": "",
-   "stops": 2,
+   "stops": 3,
    "xfer": 1,
-   "rdep": "1:35PM",
-   "arr": "10:38PM",
-   "rarr": "2:50AM+1",
-   "pct": -3
+   "rdep": "10:30PM",
+   "arr": "3:44AM+1",
+   "rarr": "1:55PM+1",
+   "pct": -5
   },
   "SEA": {
    "to": "SEA",
@@ -518,7 +533,7 @@
   "SNA": {
    "to": "SNA",
    "city": "Orange County",
-   "price": 602,
+   "price": 611,
    "d1": "2026-09-23",
    "d2": "2026-09-26",
    "dep": "6:00PM",
