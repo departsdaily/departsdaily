@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-19T07:47:32-04:00",
+ "generated": "2026-08-19T07:54:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 43,
  "routes_failed": [],
@@ -413,7 +413,7 @@
   "PSP": {
    "to": "PSP",
    "city": "Palm Springs",
-   "price": 421,
+   "price": 426,
    "d1": "2026-11-12",
    "d2": "2026-11-15",
    "dep": "5:10AM",
@@ -423,7 +423,7 @@
    "rdep": "6:37PM",
    "arr": "11:30AM",
    "rarr": "11:52PM",
-   "pct": 38
+   "pct": 37
   },
   "PUJ": {
    "to": "PUJ",
