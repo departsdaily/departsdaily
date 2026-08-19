@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-19T12:17:39-04:00",
+ "generated": "2026-08-19T14:17:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 844,
-   "d1": "2026-09-19",
-   "d2": "2026-09-26",
-   "dep": "3:55PM",
-   "al": "SK",
-   "stops": 2,
+   "price": 459,
+   "d1": "2026-10-26",
+   "d2": "2026-11-03",
+   "dep": "6:50PM",
+   "al": "DE",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:15PM",
-   "arr": "5:00AM+1",
-   "rarr": "1:30AM+1",
-   "pct": 6
+   "rdep": "11:35AM",
+   "arr": "6:20AM+1",
+   "rarr": "11:35PM",
+   "pct": 49
   },
   "ROM": {
    "to": "ROM",

@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-19T12:16:25-04:00",
+ "generated": "2026-08-19T14:16:28-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 15,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -64,6 +64,21 @@
    "arr": "5:03PM",
    "rarr": "7:28AM",
    "pct": 19
+  },
+  "FLL": {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 204,
+   "d1": "2026-10-28",
+   "d2": "2026-11-02",
+   "dep": "10:41AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:45PM",
+   "arr": "3:38PM",
+   "rarr": "3:16AM+1",
+   "pct": 64
   },
   "LAS": {
    "to": "LAS",
@@ -173,32 +188,32 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 135,
-   "d1": "2026-09-10",
-   "d2": "2026-09-13",
+   "price": 98,
+   "d1": "2026-09-25",
+   "d2": "2026-09-30",
    "dep": "6:45PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:25AM",
+   "rdep": "8:56PM",
    "arr": "8:51PM",
-   "rarr": "8:43AM",
-   "pct": 61
+   "rarr": "10:48PM",
+   "pct": 72
   },
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 465,
+   "price": 526,
    "d1": "2026-11-21",
    "d2": "2026-11-28",
-   "dep": "2:20PM",
-   "al": "Viva Aerobus",
+   "dep": "5:40PM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:35AM",
-   "arr": "7:22PM",
+   "arr": "1:11AM+1",
    "rarr": "6:46AM",
-   "pct": 11
+   "pct": -1
   },
   "LON": {
    "to": "LON",
