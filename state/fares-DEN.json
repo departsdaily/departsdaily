@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-18T22:16:52-04:00",
+ "generated": "2026-08-19T00:16:41-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,21 +184,6 @@
    "arr": "8:51PM",
    "rarr": "8:43AM",
    "pct": 61
-  },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 287,
-   "d1": "2026-08-21",
-   "d2": "2026-08-24",
-   "dep": "7:15AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:06PM",
-   "arr": "10:19AM",
-   "rarr": "9:58PM",
-   "pct": 25
   },
   "CUN": {
    "to": "CUN",
