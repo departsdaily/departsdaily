@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-19T16:15:04-04:00",
+ "generated": "2026-08-19T18:15:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 44,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "CUR": {
    "to": "CUR",
    "city": "Curacao",
-   "price": 782,
-   "d1": "2026-09-30",
-   "d2": "2026-10-08",
-   "dep": "7:30AM",
-   "al": "JetBlue",
+   "price": 535,
+   "d1": "2026-11-19",
+   "d2": "2026-11-24",
+   "dep": "10:24AM",
+   "al": "Copa",
    "stops": 2,
    "xfer": 0,
-   "rdep": "11:35AM",
-   "arr": "2:50PM",
-   "rarr": "8:45PM",
-   "pct": -15
+   "rdep": "1:15PM",
+   "arr": "7:02PM",
+   "rarr": "11:36PM",
+   "pct": 21
   },
   "DUB": {
    "to": "DUB",

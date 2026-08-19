@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-19T16:15:24-04:00",
+ "generated": "2026-08-19T18:15:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 76,
-   "d1": "2026-09-02",
-   "d2": "2026-09-06",
-   "dep": "6:07AM",
+   "price": 89,
+   "d1": "2026-09-20",
+   "d2": "2026-09-27",
+   "dep": "6:00AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "8:20AM",
-   "rarr": "8:32AM",
-   "pct": 81
+   "rdep": "9:04PM",
+   "arr": "8:17AM",
+   "rarr": "11:13PM",
+   "pct": 78
   },
   "LAS": {
    "to": "LAS",
@@ -203,17 +203,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 145,
-   "d1": "2026-09-03",
-   "d2": "2026-09-08",
-   "dep": "10:40PM",
+   "price": 157,
+   "d1": "2026-09-15",
+   "d2": "2026-09-17",
+   "dep": "1:49PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "11:30AM",
-   "arr": "1:03AM+1",
-   "rarr": "4:27PM",
-   "pct": 67
+   "rdep": "6:15AM",
+   "arr": "4:00PM",
+   "rarr": "9:02AM",
+   "pct": 64
   },
   "ORD": {
    "to": "ORD",
