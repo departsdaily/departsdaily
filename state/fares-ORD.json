@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-19T22:15:52-04:00",
+ "generated": "2026-08-20T00:15:54-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -353,17 +353,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 893,
-   "d1": "2026-10-02",
-   "d2": "2026-10-08",
-   "dep": "8:10PM",
-   "al": "Turkish",
+   "price": 483,
+   "d1": "2026-08-23",
+   "d2": "2026-09-03",
+   "dep": "6:00PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:50PM",
-   "arr": "10:30AM+1",
-   "rarr": "10:20AM+1",
-   "pct": 1
+   "rdep": "6:00AM",
+   "arr": "4:35AM+1",
+   "rarr": "6:00PM",
+   "pct": 46
   },
   "PUJ": {
    "to": "PUJ",

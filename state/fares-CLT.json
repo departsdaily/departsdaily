@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-19T22:15:10-04:00",
+ "generated": "2026-08-20T00:15:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 45,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -214,6 +214,21 @@
    "arr": "9:55PM",
    "rarr": "11:06PM",
    "pct": 2
+  },
+  "MCO": {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 166,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "9:32AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:40AM",
+   "arr": "11:33AM",
+   "rarr": "8:35AM",
+   "pct": 60
   },
   "MIA": {
    "to": "MIA",
@@ -458,17 +473,32 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 996,
-   "d1": "2026-09-05",
-   "d2": "2026-09-14",
-   "dep": "5:43PM",
+   "price": 922,
+   "d1": "2026-10-04",
+   "d2": "2026-10-13",
+   "dep": "9:40PM",
    "al": "",
-   "stops": 3,
+   "stops": 2,
    "xfer": 1,
-   "rdep": "10:30PM",
-   "arr": "3:44AM+1",
-   "rarr": "1:55PM+1",
-   "pct": -5
+   "rdep": "8:00PM",
+   "arr": "10:34AM+1",
+   "rarr": "9:47AM+1",
+   "pct": 3
+  },
+  "SAL": {
+   "to": "SAL",
+   "city": "San Salvador",
+   "price": 1106,
+   "d1": "2026-12-17",
+   "d2": "2027-01-07",
+   "dep": "9:34AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:14AM",
+   "arr": "6:40PM",
+   "rarr": "5:50PM",
+   "pct": -78
   },
   "SEA": {
    "to": "SEA",

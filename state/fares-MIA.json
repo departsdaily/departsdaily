@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-19T22:17:27-04:00",
+ "generated": "2026-08-20T00:17:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 239,
-   "d1": "2026-08-22",
-   "d2": "2026-08-26",
-   "dep": "7:00AM",
-   "al": "Southwest",
+   "price": 343,
+   "d1": "2026-08-31",
+   "d2": "2026-09-03",
+   "dep": "6:50AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "10:00AM",
-   "rarr": "9:30AM",
-   "pct": 25
+   "rdep": "9:23PM",
+   "arr": "11:48AM",
+   "rarr": "4:31AM+1",
+   "pct": -7
   },
   "NYC": {
    "to": "NYC",

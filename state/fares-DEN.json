@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-19T22:16:31-04:00",
+ "generated": "2026-08-20T00:16:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -50,21 +50,6 @@
    "rarr": "11:01AM",
    "pct": 42
   },
-  "DFW": {
-   "to": "DFW",
-   "city": "Dallas",
-   "price": 308,
-   "d1": "2026-08-22",
-   "d2": "2026-08-24",
-   "dep": "2:55PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "5:18AM",
-   "arr": "5:03PM",
-   "rarr": "7:28AM",
-   "pct": 19
-  },
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
@@ -113,16 +98,16 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 192,
+   "price": 189,
    "d1": "2026-10-30",
    "d2": "2026-11-05",
-   "dep": "3:10PM",
+   "dep": "6:55AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:29PM",
-   "arr": "7:48PM",
-   "rarr": "10:43PM",
+   "rdep": "6:24PM",
+   "arr": "11:37AM",
+   "rarr": "11:52PM",
    "pct": 62
   },
   "MIA": {
@@ -244,6 +229,21 @@
    "arr": "7:41AM+1",
    "rarr": "7:00AM+1",
    "pct": 3
+  },
+  "PUJ": {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 1048,
+   "d1": "2026-12-18",
+   "d2": "2027-01-01",
+   "dep": "11:44AM",
+   "al": "Aerom\u00e9xico",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:52PM",
+   "arr": "8:16PM",
+   "rarr": "1:41AM+1",
+   "pct": -87
   }
  }
 }
