@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-20T10:16:06-04:00",
+ "generated": "2026-08-20T12:16:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 283,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "7:00AM",
-   "al": "Frontier",
-   "stops": 0,
+   "price": 235,
+   "d1": "2026-09-02",
+   "d2": "2026-09-05",
+   "dep": "4:10PM",
+   "al": "JetBlue",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:56AM",
-   "arr": "9:01AM",
-   "rarr": "12:07PM",
-   "pct": 36
+   "rdep": "11:15AM",
+   "arr": "9:37PM",
+   "rarr": "2:25PM",
+   "pct": 47
   },
   "BOS": {
    "to": "BOS",

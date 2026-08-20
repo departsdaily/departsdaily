@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-20T10:17:55-04:00",
+ "generated": "2026-08-20T12:18:26-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 236,
-   "d1": "2026-09-22",
-   "d2": "2026-09-30",
-   "dep": "9:05AM",
-   "al": "Southwest",
+   "price": 241,
+   "d1": "2026-08-29",
+   "d2": "2026-09-01",
+   "dep": "12:45PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:20PM",
-   "arr": "4:25PM",
-   "rarr": "8:10PM",
-   "pct": 65
+   "rdep": "11:50PM",
+   "arr": "8:06PM",
+   "rarr": "6:41AM+1",
+   "pct": 64
   },
   "LAX": {
    "to": "LAX",

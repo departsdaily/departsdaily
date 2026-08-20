@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-20T10:15:08-04:00",
+ "generated": "2026-08-20T12:15:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 45,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "MUC": {
    "to": "MUC",
    "city": "Munich",
-   "price": 1060,
-   "d1": "2026-09-05",
-   "d2": "2026-09-15",
-   "dep": "5:58PM",
-   "al": "United",
+   "price": 909,
+   "d1": "2026-10-11",
+   "d2": "2026-10-18",
+   "dep": "9:15AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
    "rdep": "11:50AM",
-   "arr": "4:02AM+1",
+   "arr": "7:11PM",
    "rarr": "10:57PM",
-   "pct": -18
+   "pct": -1
   },
   "NAS": {
    "to": "NAS",
