@@ -4,16 +4,14 @@
   "slide2_board.png",
   "slide3_board.png",
   "slide4_board.png",
-  "slide5_board.png",
-  "slide6_cta.png"
+  "slide5_cta.png"
  ],
- "n_deals": 21,
- "board_slides": 5,
+ "n_deals": 19,
+ "board_slides": 4,
  "sections": [
   "LONG WEEKEND",
   "EXTRA LONG WEEKEND",
   "WEEK-ISH",
-  "CHEAPEST OUT OF CLT",
   "CHEAPEST OUT OF CLT"
  ],
  "stories": [
@@ -42,15 +40,7 @@
    "section": "cheapest"
   },
   {
-   "file": "story_4_SXM.png",
-   "to": "SXM",
-   "city": "St. Maarten",
-   "price": 369,
-   "disc": 38,
-   "section": "weekend"
-  },
-  {
-   "file": "story_5_LAX.png",
+   "file": "story_4_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 203,
@@ -58,7 +48,7 @@
    "section": "weekend"
   },
   {
-   "file": "story_6_LAX.png",
+   "file": "story_5_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 208,
@@ -66,7 +56,7 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_7_LAX.png",
+   "file": "story_6_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 208,
@@ -74,12 +64,20 @@
    "section": "weekish"
   },
   {
-   "file": "story_8_LAX.png",
+   "file": "story_7_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 214,
    "disc": 31,
    "section": "cheapest"
+  },
+  {
+   "file": "story_8_SXM.png",
+   "to": "SXM",
+   "city": "St. Maarten",
+   "price": 447,
+   "disc": 26,
+   "section": "weekend"
   }
  ]
 }
