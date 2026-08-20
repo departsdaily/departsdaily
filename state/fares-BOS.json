@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-19T18:17:43-04:00",
+ "generated": "2026-08-19T20:18:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 198,
-   "d1": "2026-08-27",
-   "d2": "2026-08-29",
-   "dep": "12:45PM",
-   "al": "Frontier",
+   "price": 281,
+   "d1": "2026-11-01",
+   "d2": "2026-11-04",
+   "dep": "9:45AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:11PM",
-   "arr": "5:22PM",
-   "rarr": "11:45PM",
-   "pct": 59
+   "rdep": "6:00AM",
+   "arr": "2:25PM",
+   "rarr": "9:12AM",
+   "pct": 42
   },
   "NYC": {
    "to": "NYC",
@@ -263,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 420,
-   "d1": "2026-12-10",
-   "d2": "2026-12-18",
-   "dep": "8:15PM",
-   "al": "JetBlue",
+   "price": 397,
+   "d1": "2026-09-02",
+   "d2": "2026-09-09",
+   "dep": "5:45AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:23AM",
-   "arr": "1:53AM+1",
-   "rarr": "1:30PM",
-   "pct": 19
+   "rdep": "7:01AM",
+   "arr": "11:45AM",
+   "rarr": "3:00PM",
+   "pct": 24
   },
   "LON": {
    "to": "LON",
@@ -353,7 +353,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 811,
+   "price": 817,
    "d1": "2026-10-09",
    "d2": "2026-10-17",
    "dep": "10:45PM",
@@ -363,21 +363,21 @@
    "rdep": "11:10AM",
    "arr": "8:20AM+1",
    "rarr": "11:00PM",
-   "pct": 15
+   "pct": 14
   },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 278,
+   "price": 277,
    "d1": "2026-10-14",
    "d2": "2026-10-21",
-   "dep": "11:20AM",
+   "dep": "7:20PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:55PM",
-   "arr": "3:29PM",
-   "rarr": "6:58PM",
+   "rdep": "4:25PM",
+   "arr": "11:58PM",
+   "rarr": "10:36PM",
    "pct": 34
   }
  }

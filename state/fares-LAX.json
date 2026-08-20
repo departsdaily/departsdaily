@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-19T18:16:35-04:00",
+ "generated": "2026-08-19T20:16:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 296,
-   "d1": "2026-08-26",
-   "d2": "2026-09-09",
-   "dep": "12:46AM",
+   "price": 171,
+   "d1": "2026-09-25",
+   "d2": "2026-10-03",
+   "dep": "7:52PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:20PM",
-   "arr": "6:40AM",
-   "rarr": "9:37PM",
-   "pct": 43
+   "rdep": "9:50PM",
+   "arr": "1:46AM+1",
+   "rarr": "4:07AM+1",
+   "pct": 67
   },
   "GCM": {
    "to": "GCM",
@@ -353,17 +353,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 681,
-   "d1": "2026-12-04",
-   "d2": "2026-12-14",
-   "dep": "7:30PM",
-   "al": "SK",
+   "price": 617,
+   "d1": "2026-11-20",
+   "d2": "2026-11-28",
+   "dep": "9:20AM",
+   "al": "AT",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:35PM",
-   "arr": "9:00AM+1",
-   "rarr": "9:50AM+1",
-   "pct": 28
+   "rdep": "11:55AM",
+   "arr": "11:15PM",
+   "rarr": "3:35AM+1",
+   "pct": 35
   },
   "SJU": {
    "to": "SJU",

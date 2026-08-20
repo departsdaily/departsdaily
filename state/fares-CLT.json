@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-19T18:15:07-04:00",
+ "generated": "2026-08-19T20:15:15-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 44,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -124,21 +124,6 @@
    "arr": "2:37AM+1",
    "rarr": "7:31AM+1",
    "pct": 36
-  },
-  "FLL": {
-   "to": "FLL",
-   "city": "Ft. Lauderdale",
-   "price": 264,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "6:40AM",
-   "al": "JetBlue",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "9:10PM",
-   "arr": "8:46AM",
-   "rarr": "11:20PM",
-   "pct": 35
   },
   "FNC": {
    "to": "FNC",

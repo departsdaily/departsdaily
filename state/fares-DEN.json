@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-19T18:16:18-04:00",
+ "generated": "2026-08-19T20:16:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 526,
-   "d1": "2026-11-21",
-   "d2": "2026-11-28",
-   "dep": "5:40PM",
-   "al": "Air Canada",
+   "price": 317,
+   "d1": "2026-09-22",
+   "d2": "2026-09-29",
+   "dep": "2:26PM",
+   "al": "Aerom\u00e9xico",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:35AM",
-   "arr": "1:11AM+1",
-   "rarr": "6:46AM",
-   "pct": -1
+   "rdep": "7:41PM",
+   "arr": "8:50PM",
+   "rarr": "2:11AM+1",
+   "pct": 39
   },
   "LON": {
    "to": "LON",

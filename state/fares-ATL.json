@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-19T18:15:27-04:00",
+ "generated": "2026-08-19T20:15:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -154,21 +154,6 @@
    "arr": "5:33AM+1",
    "rarr": "6:48AM",
    "pct": 61
-  },
-  "MCO": {
-   "to": "MCO",
-   "city": "Orlando",
-   "price": 75,
-   "d1": "2026-10-30",
-   "d2": "2026-11-02",
-   "dep": "8:30PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "12:52PM",
-   "arr": "10:10PM",
-   "rarr": "2:36PM",
-   "pct": 82
   },
   "MIA": {
    "to": "MIA",
@@ -353,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 419,
-   "d1": "2026-10-10",
-   "d2": "2026-10-16",
-   "dep": "7:49PM",
+   "price": 438,
+   "d1": "2026-09-17",
+   "d2": "2026-09-22",
+   "dep": "6:30PM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "3:15PM",
-   "arr": "12:15AM+1",
-   "rarr": "9:24PM",
-   "pct": 25
+   "rdep": "1:55PM",
+   "arr": "11:09PM",
+   "rarr": "7:54PM",
+   "pct": 22
   },
   "SJU": {
    "to": "SJU",
