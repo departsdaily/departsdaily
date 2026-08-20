@@ -1,9 +1,9 @@
 === env ===
-python 3.12.13 | pillow 12.3.0
+python 3.12.14 | pillow 12.3.0
 ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
 fonts: 22 dejavu files
 /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
 audio: 3 tracks
 === render ===
-rendering CLT reel for 2026-08-19: shape=destination slot=0 13.2s 396 frames audio=coast-road.mp3@0s
-wrote out/reel_0.mp4 (4.2MB, 13.2s)
+rendering CLT reel for 2026-08-20: shape=board slot=0 13.0s 391 frames audio=first-light.mp3@0s
+wrote out/reel_0.mp4 (0.9MB, 13.0s)
