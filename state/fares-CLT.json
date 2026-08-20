@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-20T07:59:54-04:00",
+ "generated": "2026-08-20T08:15:08-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 46,
+ "routes_priced": 45,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -634,21 +634,6 @@
    "arr": "12:36AM+1",
    "rarr": "7:37AM+1",
    "pct": 29
-  },
-  "TYS": {
-   "to": "TYS",
-   "city": "Knoxville",
-   "price": 313,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "6:35AM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:35AM",
-   "arr": "8:55AM",
-   "rarr": "10:05AM",
-   "pct": 0
   },
   "VPS": {
    "to": "VPS",
