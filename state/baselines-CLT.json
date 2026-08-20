@@ -67,7 +67,7 @@
    "src": "labelled ESTIMATE $880 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=4 — too thin to verify against the market"
   },
   "ANU": {
    "city": "Antigua",
@@ -116,21 +116,21 @@
   "ASE": {
    "city": "Aspen",
    "m": [
-    586,
-    576,
-    528,
-    432,
-    394,
-    413,
-    451,
-    442,
-    403,
-    422,
-    499,
-    614
+    649,
+    638,
+    585,
+    479,
+    436,
+    458,
+    500,
+    489,
+    447,
+    468,
+    553,
+    681
    ],
-   "basis": "ESTIMATE",
-   "src": "labelled ESTIMATE $480 typical cheap round trip — DOT publishes no city pair for CLT-ASE",
+   "basis": "DOT",
+   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-ASE $1064 round trip x 0.5",
    "intl": false,
    "ig_board": true,
    "check": "n=0 — too thin to verify against the market"
@@ -154,8 +154,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $1050 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=10",
+   "ig_board_reason": "seeded typical $992 sits at or below the $1088 median of 10 real cached fares — a discount badge here would not be real"
   },
   "AUA": {
    "city": "Aruba",
@@ -177,7 +178,7 @@
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=3 — too thin to verify against the market"
   },
   "AUH": {
    "city": "Abu Dhabi",
@@ -198,9 +199,8 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $1250 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": false,
-   "check": "n=21",
-   "ig_board_reason": "seeded typical $1128 sits at or below the $1298 median of 21 real cached fares — a discount badge here would not be real"
+   "ig_board": true,
+   "check": "n=5 — too thin to verify against the market"
   },
   "AUS": {
    "city": "Austin",
@@ -266,7 +266,7 @@
    "src": "labelled ESTIMATE $880 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=8 — too thin to verify against the market"
   },
   "BDA": {
    "city": "Bermuda",
@@ -353,8 +353,9 @@
    "basis": "TUNED",
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": false,
-   "ig_board": true,
-   "check": "n=3 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=10",
+   "ig_board_reason": "seeded typical $198 sits at or below the $342 median of 10 real cached fares — a discount badge here would not be real"
   },
   "BOG": {
    "city": "Bogota",
@@ -376,7 +377,7 @@
    "src": "labelled ESTIMATE $620 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "BOI": {
    "city": "Boise",
@@ -530,7 +531,7 @@
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": true,
    "ig_board": true,
-   "check": "n=3 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "CUR": {
    "city": "Curacao",
@@ -552,7 +553,7 @@
    "src": "labelled ESTIMATE $680 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=5 — too thin to verify against the market"
   },
   "CZM": {
    "city": "Cozumel",
@@ -595,8 +596,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $230 typical cheap round trip — DOT publishes no city pair for CLT-DAB",
    "intl": false,
-   "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=15",
+   "ig_board_reason": "seeded typical $204 sits at or below the $646 median of 15 real cached fares — a discount badge here would not be real"
   },
   "DEN": {
    "city": "Denver",
@@ -617,8 +619,9 @@
    "basis": "TUNED",
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": false,
-   "ig_board": true,
-   "check": "n=7 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=22",
+   "ig_board_reason": "seeded typical $243 sits at or below the $266 median of 22 real cached fares — a discount badge here would not be real"
   },
   "DUB": {
    "city": "Dublin",
@@ -640,7 +643,7 @@
    "src": "labelled ESTIMATE $780 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "ECP": {
    "city": "Panama City Beach",
@@ -684,7 +687,7 @@
    "src": "labelled ESTIMATE $820 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "EGE": {
    "city": "Vail",
@@ -772,7 +775,7 @@
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": false,
    "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "check": "n=3 — too thin to verify against the market"
   },
   "FNC": {
    "city": "Madeira",
@@ -794,7 +797,7 @@
    "src": "labelled ESTIMATE $950 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "FPO": {
    "city": "Freeport",
@@ -837,8 +840,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $900 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": true,
-   "check": "n=54"
+   "ig_board": false,
+   "check": "n=150",
+   "ig_board_reason": "seeded typical $850 sits at or below the $988 median of 150 real cached fares — a discount badge here would not be real"
   },
   "GCM": {
    "city": "Grand Cayman",
@@ -970,7 +974,7 @@
    "src": "labelled ESTIMATE $620 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "HER": {
    "city": "Crete",
@@ -992,7 +996,7 @@
    "src": "labelled ESTIMATE $1000 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "HNL": {
    "city": "Honolulu",
@@ -1019,21 +1023,21 @@
   "JAC": {
    "city": "Jackson Hole",
    "m": [
-    549,
-    540,
-    495,
-    405,
-    369,
-    387,
-    423,
-    414,
-    378,
+    537,
+    529,
+    485,
     396,
-    468,
-    576
+    361,
+    379,
+    414,
+    405,
+    370,
+    388,
+    458,
+    564
    ],
-   "basis": "ESTIMATE",
-   "src": "labelled ESTIMATE $450 typical cheap round trip — DOT publishes no city pair for CLT-JAC",
+   "basis": "DOT",
+   "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-JAC $881 round trip x 0.5",
    "intl": false,
    "ig_board": true,
    "check": "n=0 — too thin to verify against the market"
@@ -1080,7 +1084,7 @@
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": false,
    "ig_board": true,
-   "check": "n=96"
+   "check": "n=6 — too thin to verify against the market"
   },
   "LAX": {
    "city": "Los Angeles",
@@ -1102,7 +1106,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-LAX $706 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=22"
+   "check": "n=360"
   },
   "LIM": {
    "city": "Lima",
@@ -1168,7 +1172,7 @@
    "src": "labelled ESTIMATE $800 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "LON": {
    "city": "London",
@@ -1189,8 +1193,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $850 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": true,
-   "check": "n=5 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=137",
+   "ig_board_reason": "seeded typical $860 sits at or below the $864 median of 137 real cached fares — a discount badge here would not be real"
   },
   "MAD": {
    "city": "Madrid",
@@ -1211,8 +1216,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $880 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=18",
+   "ig_board_reason": "seeded typical $832 sits at or below the $1058 median of 18 real cached fares — a discount badge here would not be real"
   },
   "MBJ": {
    "city": "Montego Bay",
@@ -1234,7 +1240,7 @@
    "src": "labelled ESTIMATE $540 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "check": "n=0 — too thin to verify against the market"
   },
   "MCO": {
    "city": "Orlando",
@@ -1255,8 +1261,9 @@
    "basis": "TUNED",
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": false,
-   "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=34",
+   "ig_board_reason": "seeded typical $162 sits at or below the $163 median of 34 real cached fares — a discount badge here would not be real"
   },
   "MDE": {
    "city": "Medellin",
@@ -1343,8 +1350,9 @@
    "basis": "TUNED",
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": false,
-   "ig_board": true,
-   "check": "n=56"
+   "ig_board": false,
+   "check": "n=64",
+   "ig_board_reason": "seeded typical $169 sits at or below the $238 median of 64 real cached fares — a discount badge here would not be real"
   },
   "MIL": {
    "city": "Milan",
@@ -1366,7 +1374,7 @@
    "src": "labelled ESTIMATE $900 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "MLB": {
    "city": "Melbourne",
@@ -1410,7 +1418,7 @@
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": false,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "MUC": {
    "city": "Munich",
@@ -1431,8 +1439,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $900 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": true,
-   "check": "n=6 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=159",
+   "ig_board_reason": "seeded typical $788 sits at or below the $1119 median of 159 real cached fares — a discount badge here would not be real"
   },
   "MVY": {
    "city": "Martha's Vineyard",
@@ -1476,7 +1485,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-MYR $658 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=3 — too thin to verify against the market"
+   "check": "n=0 — too thin to verify against the market"
   },
   "NAS": {
    "city": "Nassau",
@@ -1521,7 +1530,7 @@
    "intl": false,
    "ig_board": false,
    "check": "n=513",
-   "ig_board_reason": "seeded typical $198 sits at or below the $203 median of 513 real cached fares — a discount badge here would not be real"
+   "ig_board_reason": "seeded typical $198 sits at or below the $202 median of 513 real cached fares — a discount badge here would not be real"
   },
   "OGG": {
    "city": "Maui",
@@ -1543,7 +1552,7 @@
    "src": "labelled ESTIMATE $720 typical cheap round trip — DOT publishes no city pair for CLT-OGG",
    "intl": false,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "ORD": {
    "city": "Chicago",
@@ -1565,8 +1574,8 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-ORD $397 round trip x 0.5",
    "intl": false,
    "ig_board": false,
-   "check": "n=79",
-   "ig_board_reason": "seeded typical $184 sits at or below the $245 median of 79 real cached fares — a discount badge here would not be real"
+   "check": "n=24",
+   "ig_board_reason": "seeded typical $181 sits at or below the $250 median of 24 real cached fares — a discount badge here would not be real"
   },
   "PAR": {
    "city": "Paris",
@@ -1587,8 +1596,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $900 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": true,
-   "check": "n=3 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=66",
+   "ig_board_reason": "seeded typical $810 sits at or below the $996 median of 66 real cached fares — a discount badge here would not be real"
   },
   "PBI": {
    "city": "West Palm Beach",
@@ -1609,9 +1619,8 @@
    "basis": "DOT",
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-PBI $579 round trip x 0.5",
    "intl": false,
-   "ig_board": false,
-   "check": "n=12",
-   "ig_board_reason": "seeded typical $252 sits at or below the $484 median of 12 real cached fares — a discount badge here would not be real"
+   "ig_board": true,
+   "check": "n=0 — too thin to verify against the market"
   },
   "PDX": {
    "city": "Portland, OR",
@@ -1633,7 +1642,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-PDX $778 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "PHX": {
    "city": "Phoenix",
@@ -1655,7 +1664,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-PHX $666 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "PLS": {
    "city": "Providenciales",
@@ -1677,7 +1686,7 @@
    "src": "labelled ESTIMATE $660 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "check": "n=4 — too thin to verify against the market"
   },
   "PMI": {
    "city": "Mallorca",
@@ -1699,7 +1708,7 @@
    "src": "labelled ESTIMATE $950 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "PNS": {
    "city": "Pensacola",
@@ -1787,7 +1796,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-PSP $675 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "PTY": {
    "city": "Panama City",
@@ -1875,7 +1884,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-PWM $584 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "RAP": {
    "city": "Rapid City",
@@ -1919,7 +1928,7 @@
    "src": "labelled ESTIMATE $700 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "RNO": {
    "city": "Reno",
@@ -1963,7 +1972,7 @@
    "src": "labelled ESTIMATE $950 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "check": "n=5 — too thin to verify against the market"
   },
   "RSW": {
    "city": "Fort Myers",
@@ -2007,7 +2016,7 @@
    "src": "labelled ESTIMATE $620 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "SAN": {
    "city": "San Diego",
@@ -2029,7 +2038,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-SAN $676 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=0 — too thin to verify against the market"
   },
   "SAT": {
    "city": "San Antonio",
@@ -2051,7 +2060,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-SAT $548 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=0 — too thin to verify against the market"
   },
   "SAV": {
    "city": "Savannah",
@@ -2095,7 +2104,7 @@
    "src": "labelled ESTIMATE $540 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "SEA": {
    "city": "Seattle",
@@ -2117,7 +2126,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-SEA $740 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "SFO": {
    "city": "San Francisco",
@@ -2139,7 +2148,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-SFO $810 round trip x 0.5 (San Francisco, CA metro area — Bay Area airports are one DOT market)",
    "intl": false,
    "ig_board": true,
-   "check": "n=43"
+   "check": "n=23"
   },
   "SJD": {
    "city": "Los Cabos",
@@ -2161,7 +2170,7 @@
    "src": "labelled ESTIMATE $660 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=0 — too thin to verify against the market"
   },
   "SJO": {
    "city": "San José, Costa Rica",
@@ -2183,7 +2192,7 @@
    "src": "labelled ESTIMATE $600 round trip x 0.95 (caribbean) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=5 — too thin to verify against the market"
   },
   "SJU": {
    "city": "San Juan, PR",
@@ -2205,7 +2214,7 @@
    "src": "hand-tuned CLT curve, unchanged — the original curves this methodology was derived from",
    "intl": true,
    "ig_board": true,
-   "check": "n=3 — too thin to verify against the market"
+   "check": "n=4 — too thin to verify against the market"
   },
   "SKB": {
    "city": "St. Kitts",
@@ -2271,7 +2280,7 @@
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-SMF $626 round trip x 0.5",
    "intl": false,
    "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "check": "n=6 — too thin to verify against the market"
   },
   "SNA": {
    "city": "Orange County",
@@ -2292,8 +2301,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $340 typical cheap round trip — DOT publishes no city pair for CLT-SNA",
    "intl": false,
-   "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=374",
+   "ig_board_reason": "seeded typical $319 sits at or below the $524 median of 374 real cached fares — a discount badge here would not be real"
   },
   "SRQ": {
    "city": "Sarasota",
@@ -2424,8 +2434,9 @@
    "basis": "DOT",
    "src": "DOT Consumer Airfare Report Table 6, Q4 2025, CLT-TPA $484 round trip x 0.5",
    "intl": false,
-   "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "ig_board": false,
+   "check": "n=390",
+   "ig_board_reason": "seeded typical $201 sits at or below the $218 median of 390 real cached fares — a discount badge here would not be real"
   },
   "TUS": {
    "city": "Tucson",
@@ -2491,7 +2502,7 @@
    "src": "labelled ESTIMATE $1250 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "TYS": {
    "city": "Knoxville",
@@ -2513,7 +2524,7 @@
    "src": "labelled ESTIMATE $250 typical cheap round trip — DOT publishes no city pair for CLT-TYS",
    "intl": false,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "UVF": {
    "city": "St. Lucia",
@@ -2557,7 +2568,7 @@
    "src": "labelled ESTIMATE $950 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "VPS": {
    "city": "Destin / 30A",
@@ -2579,7 +2590,7 @@
    "src": "labelled ESTIMATE $260 typical cheap round trip — DOT publishes no city pair for CLT-VPS",
    "intl": false,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "VRB": {
    "city": "Vero Beach",
@@ -2623,7 +2634,7 @@
    "src": "labelled ESTIMATE $620 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=1 — too thin to verify against the market"
+   "check": "n=0 — too thin to verify against the market"
   },
   "YUL": {
    "city": "Montreal",
@@ -2645,7 +2656,7 @@
    "src": "labelled ESTIMATE $520 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=2 — too thin to verify against the market"
+   "check": "n=3 — too thin to verify against the market"
   },
   "YVR": {
    "city": "Vancouver",
@@ -2667,7 +2678,7 @@
    "src": "labelled ESTIMATE $700 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=1 — too thin to verify against the market"
   },
   "YYC": {
    "city": "Calgary",
@@ -2689,7 +2700,7 @@
    "src": "labelled ESTIMATE $680 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
    "ig_board": true,
-   "check": "n=0 — too thin to verify against the market"
+   "check": "n=2 — too thin to verify against the market"
   },
   "YYZ": {
    "city": "Toronto",
@@ -2710,8 +2721,9 @@
    "basis": "ESTIMATE",
    "src": "labelled ESTIMATE $480 round trip x 0.9 (europe) — no DOT city-pair data for this market",
    "intl": true,
-   "ig_board": true,
-   "check": "n=42"
+   "ig_board": false,
+   "check": "n=22",
+   "ig_board_reason": "seeded typical $486 sits at or below the $516 median of 22 real cached fares — a discount badge here would not be real"
   }
  }
 }

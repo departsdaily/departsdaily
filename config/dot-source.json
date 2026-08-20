@@ -13,29 +13,17 @@
      "round_trip": 602,
      "passengers_per_day": 67.3
     },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 263.21,
-     "round_trip": 526,
-     "passengers_per_day": 186.8
+    "ASE": {
+     "market": "Aspen, CO",
+     "each_way": 532.06,
+     "round_trip": 1064,
+     "passengers_per_day": 11.2
     },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 325.46,
      "round_trip": 651,
      "passengers_per_day": 427.4
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 273.21,
-     "round_trip": 546,
-     "passengers_per_day": 357.6
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 373.93,
-     "round_trip": 748,
-     "passengers_per_day": 133.9
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -49,53 +37,11 @@
      "round_trip": 746,
      "passengers_per_day": 47.8
     },
-    "BOS": {
-     "market": "Boston, MA",
-     "each_way": 261.5,
-     "round_trip": 523,
-     "passengers_per_day": 1593.7
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 246.31,
-     "round_trip": 493,
-     "passengers_per_day": 293.3
-    },
     "BZN": {
      "market": "Bozeman, MT",
      "each_way": 325.66,
      "round_trip": 651,
      "passengers_per_day": 48.0
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 310.21,
-     "round_trip": 620,
-     "passengers_per_day": 36.3
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 263.26,
-     "round_trip": 527,
-     "passengers_per_day": 376.6
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 337.54,
-     "round_trip": 675,
-     "passengers_per_day": 215.5
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 323.77,
-     "round_trip": 648,
-     "passengers_per_day": 208.9
-    },
-    "DCA": {
-     "market": "Washington, DC",
-     "each_way": 215.26,
-     "round_trip": 431,
-     "passengers_per_day": 1559.9
     },
     "DEN": {
      "market": "Denver, CO",
@@ -103,53 +49,17 @@
      "round_trip": 452,
      "passengers_per_day": 1041.7
     },
-    "DFW": {
-     "market": "Dallas/Fort Worth, TX",
-     "each_way": 282.59,
-     "round_trip": 565,
-     "passengers_per_day": 1407.8
-    },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 325.3,
-     "round_trip": 651,
-     "passengers_per_day": 101.4
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 228.91,
-     "round_trip": 458,
-     "passengers_per_day": 734.4
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 203.06,
      "round_trip": 406,
      "passengers_per_day": 1693.5
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 294.31,
-     "round_trip": 589,
-     "passengers_per_day": 137.9
-    },
-    "HOU": {
-     "market": "Houston, TX",
-     "each_way": 215.73,
-     "round_trip": 431,
-     "passengers_per_day": 1011.9
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 315.26,
-     "round_trip": 631,
-     "passengers_per_day": 36.6
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 294.97,
-     "round_trip": 590,
-     "passengers_per_day": 347.2
+    "JAC": {
+     "market": "Jackson, WY",
+     "each_way": 440.5,
+     "round_trip": 881,
+     "passengers_per_day": 24.2
     },
     "JAX": {
      "market": "Jacksonville, FL",
@@ -169,53 +79,17 @@
      "round_trip": 706,
      "passengers_per_day": 1187.2
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 299.74,
-     "round_trip": 599,
-     "passengers_per_day": 92.9
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 255.65,
-     "round_trip": 511,
-     "passengers_per_day": 343.4
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 206.58,
      "round_trip": 413,
      "passengers_per_day": 1252.2
     },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 295.79,
-     "round_trip": 592,
-     "passengers_per_day": 223.4
-    },
     "MIA": {
      "market": "Miami, FL",
      "each_way": 203.06,
      "round_trip": 406,
      "passengers_per_day": 1693.5
-    },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 311.92,
-     "round_trip": 624,
-     "passengers_per_day": 183.3
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 283.32,
-     "round_trip": 567,
-     "passengers_per_day": 119.7
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 265.09,
-     "round_trip": 530,
-     "passengers_per_day": 652.0
     },
     "MSY": {
      "market": "New Orleans, LA",
@@ -235,29 +109,11 @@
      "round_trip": 413,
      "passengers_per_day": 4369.8
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 321.42,
-     "round_trip": 643,
-     "passengers_per_day": 124.1
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 282.89,
-     "round_trip": 566,
-     "passengers_per_day": 156.6
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 198.61,
      "round_trip": 397,
      "passengers_per_day": 1569.6
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 325.49,
-     "round_trip": 651,
-     "passengers_per_day": 93.1
     },
     "PBI": {
      "market": "West Palm Beach/Palm Beach, FL",
@@ -271,23 +127,11 @@
      "round_trip": 778,
      "passengers_per_day": 182.9
     },
-    "PHL": {
-     "market": "Philadelphia, PA",
-     "each_way": 205.76,
-     "round_trip": 412,
-     "passengers_per_day": 1072.8
-    },
     "PHX": {
      "market": "Phoenix, AZ",
      "each_way": 333.23,
      "round_trip": 666,
      "passengers_per_day": 809.1
-    },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 315.59,
-     "round_trip": 631,
-     "passengers_per_day": 262.9
     },
     "PSP": {
      "market": "Palm Springs, CA",
@@ -301,23 +145,11 @@
      "round_trip": 584,
      "passengers_per_day": 122.1
     },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 358.36,
-     "round_trip": 717,
-     "passengers_per_day": 89.5
-    },
     "RNO": {
      "market": "Reno, NV",
      "each_way": 375.17,
      "round_trip": 750,
      "passengers_per_day": 53.1
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 270.14,
-     "round_trip": 540,
-     "passengers_per_day": 141.0
     },
     "RSW": {
      "market": "Fort Myers, FL",
@@ -373,23 +205,11 @@
      "round_trip": 584,
      "passengers_per_day": 130.9
     },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 225.92,
-     "round_trip": 452,
-     "passengers_per_day": 414.0
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 241.92,
      "round_trip": 484,
      "passengers_per_day": 714.5
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 268.73,
-     "round_trip": 537,
-     "passengers_per_day": 110.5
     },
     "TUS": {
      "market": "Tucson, AZ",
@@ -402,89 +222,17 @@
   "ATL": {
    "market": "Atlanta, GA",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 380.85,
-     "round_trip": 762,
-     "passengers_per_day": 195.1
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 327.65,
-     "round_trip": 655,
-     "passengers_per_day": 222.7
-    },
-    "AUS": {
-     "market": "Austin, TX",
-     "each_way": 254.74,
-     "round_trip": 509,
-     "passengers_per_day": 1253.3
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 281.93,
-     "round_trip": 564,
-     "passengers_per_day": 577.4
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 278.28,
-     "round_trip": 557,
-     "passengers_per_day": 29.3
-    },
     "BNA": {
      "market": "Nashville, TN",
      "each_way": 254.55,
      "round_trip": 509,
      "passengers_per_day": 481.8
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 392.63,
-     "round_trip": 785,
-     "passengers_per_day": 130.7
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 262.9,
      "round_trip": 526,
      "passengers_per_day": 2675.8
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 219.29,
-     "round_trip": 439,
-     "passengers_per_day": 479.3
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 484.57,
-     "round_trip": 969,
-     "passengers_per_day": 108.8
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 263.01,
-     "round_trip": 526,
-     "passengers_per_day": 277.9
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 196.97,
-     "round_trip": 394,
-     "passengers_per_day": 879.8
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 261.51,
-     "round_trip": 523,
-     "passengers_per_day": 617.0
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 231.69,
-     "round_trip": 463,
-     "passengers_per_day": 533.4
     },
     "DCA": {
      "market": "Washington, DC",
@@ -504,12 +252,6 @@
      "round_trip": 448,
      "passengers_per_day": 3523.9
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 323.28,
-     "round_trip": 647,
-     "passengers_per_day": 155.4
-    },
     "DTW": {
      "market": "Detroit, MI",
      "each_way": 232.69,
@@ -522,41 +264,11 @@
      "round_trip": 357,
      "passengers_per_day": 4697.3
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 315.85,
-     "round_trip": 632,
-     "passengers_per_day": 231.4
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 273.07,
-     "round_trip": 546,
-     "passengers_per_day": 27.5
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 205.03,
      "round_trip": 410,
      "passengers_per_day": 2578.5
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 332.87,
-     "round_trip": 666,
-     "passengers_per_day": 129.3
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 263.94,
-     "round_trip": 528,
-     "passengers_per_day": 704.1
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 320.53,
-     "round_trip": 641,
-     "passengers_per_day": 447.9
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -570,29 +282,11 @@
      "round_trip": 693,
      "passengers_per_day": 3364.2
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 285.68,
-     "round_trip": 571,
-     "passengers_per_day": 195.6
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 283.18,
-     "round_trip": 566,
-     "passengers_per_day": 690.0
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 203.88,
      "round_trip": 408,
      "passengers_per_day": 2355.2
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 327.99,
-     "round_trip": 656,
-     "passengers_per_day": 318.8
     },
     "MIA": {
      "market": "Miami, FL",
@@ -600,35 +294,11 @@
      "round_trip": 357,
      "passengers_per_day": 4697.3
     },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 316.82,
-     "round_trip": 634,
-     "passengers_per_day": 371.7
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 350.11,
-     "round_trip": 700,
-     "passengers_per_day": 138.9
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 304.74,
-     "round_trip": 609,
-     "passengers_per_day": 1009.9
-    },
     "MSY": {
      "market": "New Orleans, LA",
      "each_way": 217.89,
      "round_trip": 436,
      "passengers_per_day": 956.0
-    },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 267.92,
-     "round_trip": 536,
-     "passengers_per_day": 83.7
     },
     "NYC": {
      "market": "New York City, NY",
@@ -636,41 +306,11 @@
      "round_trip": 442,
      "passengers_per_day": 9247.0
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 297.04,
-     "round_trip": 594,
-     "passengers_per_day": 293.9
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 299.25,
-     "round_trip": 599,
-     "passengers_per_day": 275.4
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 209.67,
      "round_trip": 419,
      "passengers_per_day": 3613.2
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 233.6,
-     "round_trip": 467,
-     "passengers_per_day": 515.1
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 287.59,
-     "round_trip": 575,
-     "passengers_per_day": 688.2
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 317.42,
-     "round_trip": 635,
-     "passengers_per_day": 518.6
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -684,66 +324,6 @@
      "round_trip": 614,
      "passengers_per_day": 1515.2
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 261.8,
-     "round_trip": 524,
-     "passengers_per_day": 658.5
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 449.49,
-     "round_trip": 899,
-     "passengers_per_day": 74.5
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 375.22,
-     "round_trip": 750,
-     "passengers_per_day": 138.7
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 281.88,
-     "round_trip": 564,
-     "passengers_per_day": 531.6
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 392.03,
-     "round_trip": 784,
-     "passengers_per_day": 121.9
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 309.44,
-     "round_trip": 619,
-     "passengers_per_day": 180.6
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 268.02,
-     "round_trip": 536,
-     "passengers_per_day": 507.5
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 306.33,
-     "round_trip": 613,
-     "passengers_per_day": 937.5
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 270.44,
-     "round_trip": 541,
-     "passengers_per_day": 683.9
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 264.13,
-     "round_trip": 528,
-     "passengers_per_day": 158.3
-    },
     "SEA": {
      "market": "Seattle, WA",
      "each_way": 332.42,
@@ -756,82 +336,22 @@
      "round_trip": 768,
      "passengers_per_day": 1870.6
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 439.21,
-     "round_trip": 878,
-     "passengers_per_day": 619.4
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 408.82,
-     "round_trip": 818,
-     "passengers_per_day": 349.1
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 269.1,
-     "round_trip": 538,
-     "passengers_per_day": 297.4
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 233.5,
-     "round_trip": 467,
-     "passengers_per_day": 773.2
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 215.6,
      "round_trip": 431,
      "passengers_per_day": 1602.3
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 328.51,
-     "round_trip": 657,
-     "passengers_per_day": 165.9
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 382.56,
-     "round_trip": 765,
-     "passengers_per_day": 162.2
     }
    }
   },
   "ORD": {
    "market": "Chicago, IL",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 290.33,
-     "round_trip": 581,
-     "passengers_per_day": 336.9
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 236.24,
-     "round_trip": 472,
-     "passengers_per_day": 339.3
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 218.98,
      "round_trip": 438,
      "passengers_per_day": 1838.9
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 257.05,
-     "round_trip": 514,
-     "passengers_per_day": 664.6
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 268.09,
-     "round_trip": 536,
-     "passengers_per_day": 356.2
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -839,53 +359,11 @@
      "round_trip": 392,
      "passengers_per_day": 1630.9
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 292.01,
-     "round_trip": 584,
-     "passengers_per_day": 271.0
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 198.14,
      "round_trip": 396,
      "passengers_per_day": 4303.4
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 232.27,
-     "round_trip": 465,
-     "passengers_per_day": 347.7
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 260.68,
-     "round_trip": 521,
-     "passengers_per_day": 179.0
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 251.54,
-     "round_trip": 503,
-     "passengers_per_day": 551.9
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 220.56,
-     "round_trip": 441,
-     "passengers_per_day": 926.1
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 229.05,
-     "round_trip": 458,
-     "passengers_per_day": 824.2
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 231.25,
-     "round_trip": 462,
-     "passengers_per_day": 488.8
     },
     "DCA": {
      "market": "Washington, DC",
@@ -905,59 +383,17 @@
      "round_trip": 409,
      "passengers_per_day": 4421.2
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 217.33,
-     "round_trip": 435,
-     "passengers_per_day": 230.2
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 222.08,
-     "round_trip": 444,
-     "passengers_per_day": 939.0
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 218.51,
      "round_trip": 437,
      "passengers_per_day": 4554.5
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 219.87,
-     "round_trip": 440,
-     "passengers_per_day": 96.4
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 232.61,
-     "round_trip": 465,
-     "passengers_per_day": 354.0
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 211.35,
      "round_trip": 423,
      "passengers_per_day": 2999.5
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 205.69,
-     "round_trip": 411,
-     "passengers_per_day": 202.9
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 214.04,
-     "round_trip": 428,
-     "passengers_per_day": 224.8
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 256.33,
-     "round_trip": 513,
-     "passengers_per_day": 715.0
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -971,29 +407,11 @@
      "round_trip": 559,
      "passengers_per_day": 5928.7
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 214.11,
-     "round_trip": 428,
-     "passengers_per_day": 243.3
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 234.47,
-     "round_trip": 469,
-     "passengers_per_day": 1103.0
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 195.41,
      "round_trip": 391,
      "passengers_per_day": 4578.3
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 229.41,
-     "round_trip": 459,
-     "passengers_per_day": 499.1
     },
     "MIA": {
      "market": "Miami, FL",
@@ -1001,71 +419,17 @@
      "round_trip": 437,
      "passengers_per_day": 4554.5
     },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 230.75,
-     "round_trip": 462,
-     "passengers_per_day": 11.1
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 236.75,
-     "round_trip": 473,
-     "passengers_per_day": 22.7
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 203.4,
-     "round_trip": 407,
-     "passengers_per_day": 2136.7
-    },
     "MSY": {
      "market": "New Orleans, LA",
      "each_way": 208.43,
      "round_trip": 417,
      "passengers_per_day": 1289.7
     },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 239.58,
-     "round_trip": 479,
-     "passengers_per_day": 158.3
-    },
     "NYC": {
      "market": "New York City, NY",
      "each_way": 206.29,
      "round_trip": 413,
      "passengers_per_day": 10925.7
-    },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 250.76,
-     "round_trip": 502,
-     "passengers_per_day": 329.4
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 219.7,
-     "round_trip": 439,
-     "passengers_per_day": 492.2
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 237.76,
-     "round_trip": 476,
-     "passengers_per_day": 364.4
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 292.89,
-     "round_trip": 586,
-     "passengers_per_day": 712.2
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 258.76,
-     "round_trip": 518,
-     "passengers_per_day": 996.8
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -1079,66 +443,6 @@
      "round_trip": 482,
      "passengers_per_day": 3890.6
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 215.45,
-     "round_trip": 431,
-     "passengers_per_day": 795.5
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 322.14,
-     "round_trip": 644,
-     "passengers_per_day": 390.0
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 267.34,
-     "round_trip": 535,
-     "passengers_per_day": 249.6
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 251.42,
-     "round_trip": 503,
-     "passengers_per_day": 458.7
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 322.21,
-     "round_trip": 644,
-     "passengers_per_day": 193.6
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 240.02,
-     "round_trip": 480,
-     "passengers_per_day": 254.8
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 255.12,
-     "round_trip": 510,
-     "passengers_per_day": 2146.2
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 216.82,
-     "round_trip": 434,
-     "passengers_per_day": 2151.5
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 266.71,
-     "round_trip": 533,
-     "passengers_per_day": 753.7
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 264.8,
-     "round_trip": 530,
-     "passengers_per_day": 420.6
-    },
     "SEA": {
      "market": "Seattle, WA",
      "each_way": 246.19,
@@ -1151,82 +455,22 @@
      "round_trip": 678,
      "passengers_per_day": 3614.5
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 318.43,
-     "round_trip": 637,
-     "passengers_per_day": 874.9
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 331.94,
-     "round_trip": 664,
-     "passengers_per_day": 564.1
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 292.92,
-     "round_trip": 586,
-     "passengers_per_day": 496.6
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 238.1,
-     "round_trip": 476,
-     "passengers_per_day": 662.9
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 200.17,
      "round_trip": 400,
      "passengers_per_day": 2604.8
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 257.6,
-     "round_trip": 515,
-     "passengers_per_day": 221.7
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 320.52,
-     "round_trip": 641,
-     "passengers_per_day": 355.8
     }
    }
   },
   "DFW": {
    "market": "Dallas/Fort Worth, TX",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 239.3,
-     "round_trip": 479,
-     "passengers_per_day": 541.1
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 312.21,
-     "round_trip": 624,
-     "passengers_per_day": 180.2
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 241.33,
      "round_trip": 483,
      "passengers_per_day": 610.2
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 333.87,
-     "round_trip": 668,
-     "passengers_per_day": 381.8
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 275.75,
-     "round_trip": 552,
-     "passengers_per_day": 492.0
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -1234,53 +478,11 @@
      "round_trip": 444,
      "passengers_per_day": 1682.1
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 314.27,
-     "round_trip": 629,
-     "passengers_per_day": 286.9
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 270.75,
      "round_trip": 541,
      "passengers_per_day": 2379.2
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 285.97,
-     "round_trip": 572,
-     "passengers_per_day": 303.6
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 312.8,
-     "round_trip": 626,
-     "passengers_per_day": 151.5
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 247.2,
-     "round_trip": 494,
-     "passengers_per_day": 450.6
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 278.08,
-     "round_trip": 556,
-     "passengers_per_day": 679.2
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 289.7,
-     "round_trip": 579,
-     "passengers_per_day": 683.6
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 265.53,
-     "round_trip": 531,
-     "passengers_per_day": 632.0
     },
     "DCA": {
      "market": "Washington, DC",
@@ -1294,59 +496,17 @@
      "round_trip": 378,
      "passengers_per_day": 3438.7
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 308.95,
-     "round_trip": 618,
-     "passengers_per_day": 237.4
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 257.53,
-     "round_trip": 515,
-     "passengers_per_day": 1594.3
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 228.1,
      "round_trip": 456,
      "passengers_per_day": 3066.8
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 305.66,
-     "round_trip": 611,
-     "passengers_per_day": 298.3
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 351.47,
-     "round_trip": 703,
-     "passengers_per_day": 282.7
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 218.12,
      "round_trip": 436,
      "passengers_per_day": 1673.5
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 355.2,
-     "round_trip": 710,
-     "passengers_per_day": 104.7
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 226.68,
-     "round_trip": 453,
-     "passengers_per_day": 938.5
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 253.13,
-     "round_trip": 506,
-     "passengers_per_day": 685.1
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -1360,29 +520,11 @@
      "round_trip": 521,
      "passengers_per_day": 6307.1
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 219.88,
-     "round_trip": 440,
-     "passengers_per_day": 236.1
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 225.22,
-     "round_trip": 450,
-     "passengers_per_day": 1077.4
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 215.13,
      "round_trip": 430,
      "passengers_per_day": 3319.9
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 238.79,
-     "round_trip": 478,
-     "passengers_per_day": 519.9
     },
     "MIA": {
      "market": "Miami, FL",
@@ -1390,35 +532,11 @@
      "round_trip": 456,
      "passengers_per_day": 3066.8
     },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 278.41,
-     "round_trip": 557,
-     "passengers_per_day": 432.7
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 329.36,
-     "round_trip": 659,
-     "passengers_per_day": 185.4
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 240.24,
-     "round_trip": 480,
-     "passengers_per_day": 1476.6
-    },
     "MSY": {
      "market": "New Orleans, LA",
      "each_way": 188.82,
      "round_trip": 378,
      "passengers_per_day": 1249.2
-    },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 259.42,
-     "round_trip": 519,
-     "passengers_per_day": 127.3
     },
     "NYC": {
      "market": "New York City, NY",
@@ -1426,41 +544,11 @@
      "round_trip": 553,
      "passengers_per_day": 7017.5
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 363.7,
-     "round_trip": 727,
-     "passengers_per_day": 75.7
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 237.39,
-     "round_trip": 475,
-     "passengers_per_day": 493.5
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 204.51,
      "round_trip": 409,
      "passengers_per_day": 4421.2
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 250.52,
-     "round_trip": 501,
-     "passengers_per_day": 437.5
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 361.92,
-     "round_trip": 724,
-     "passengers_per_day": 372.0
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 239.38,
-     "round_trip": 479,
-     "passengers_per_day": 948.9
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -1474,66 +562,6 @@
      "round_trip": 467,
      "passengers_per_day": 2877.2
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 264.53,
-     "round_trip": 529,
-     "passengers_per_day": 749.3
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 318.66,
-     "round_trip": 637,
-     "passengers_per_day": 221.3
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 332.74,
-     "round_trip": 665,
-     "passengers_per_day": 106.2
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 314.46,
-     "round_trip": 629,
-     "passengers_per_day": 455.3
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 299.08,
-     "round_trip": 598,
-     "passengers_per_day": 286.8
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 268.87,
-     "round_trip": 538,
-     "passengers_per_day": 126.0
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 312.12,
-     "round_trip": 624,
-     "passengers_per_day": 433.1
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 245.68,
-     "round_trip": 491,
-     "passengers_per_day": 1736.0
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 235.13,
-     "round_trip": 470,
-     "passengers_per_day": 945.9
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 251.27,
-     "round_trip": 503,
-     "passengers_per_day": 337.7
-    },
     "SEA": {
      "market": "Seattle, WA",
      "each_way": 235.56,
@@ -1546,82 +574,22 @@
      "round_trip": 527,
      "passengers_per_day": 3063.0
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 255.17,
-     "round_trip": 510,
-     "passengers_per_day": 1327.5
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 303.05,
-     "round_trip": 606,
-     "passengers_per_day": 750.2
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 266.06,
-     "round_trip": 532,
-     "passengers_per_day": 174.5
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 216.28,
-     "round_trip": 433,
-     "passengers_per_day": 1130.2
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 224.59,
      "round_trip": 449,
      "passengers_per_day": 1560.1
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 233.72,
-     "round_trip": 467,
-     "passengers_per_day": 228.0
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 241.6,
-     "round_trip": 483,
-     "passengers_per_day": 394.3
     }
    }
   },
   "DEN": {
    "market": "Denver, CO",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 205.92,
-     "round_trip": 412,
-     "passengers_per_day": 409.8
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 328.63,
-     "round_trip": 657,
-     "passengers_per_day": 187.5
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 191.88,
      "round_trip": 384,
      "passengers_per_day": 1797.0
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 352.6,
-     "round_trip": 705,
-     "passengers_per_day": 374.2
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 312.53,
-     "round_trip": 625,
-     "passengers_per_day": 235.6
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -1629,53 +597,11 @@
      "round_trip": 445,
      "passengers_per_day": 1181.8
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 219.25,
-     "round_trip": 438,
-     "passengers_per_day": 455.4
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 264.59,
      "round_trip": 529,
      "passengers_per_day": 2118.0
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 259.12,
-     "round_trip": 518,
-     "passengers_per_day": 249.2
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 211.89,
-     "round_trip": 424,
-     "passengers_per_day": 275.3
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 310.18,
-     "round_trip": 620,
-     "passengers_per_day": 292.7
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 222.99,
-     "round_trip": 446,
-     "passengers_per_day": 662.0
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 245.74,
-     "round_trip": 491,
-     "passengers_per_day": 555.3
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 211.57,
-     "round_trip": 423,
-     "passengers_per_day": 632.5
     },
     "DCA": {
      "market": "Washington, DC",
@@ -1689,59 +615,17 @@
      "round_trip": 378,
      "passengers_per_day": 3438.7
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 185.45,
-     "round_trip": 371,
-     "passengers_per_day": 377.8
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 241.46,
-     "round_trip": 483,
-     "passengers_per_day": 1145.2
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 282.08,
      "round_trip": 564,
      "passengers_per_day": 1891.9
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 228.15,
-     "round_trip": 456,
-     "passengers_per_day": 410.9
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 311.21,
-     "round_trip": 622,
-     "passengers_per_day": 169.6
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 216.65,
      "round_trip": 433,
      "passengers_per_day": 2567.9
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 218.61,
-     "round_trip": 437,
-     "passengers_per_day": 163.7
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 227.56,
-     "round_trip": 455,
-     "passengers_per_day": 883.4
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 317.73,
-     "round_trip": 635,
-     "passengers_per_day": 422.9
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -1755,29 +639,11 @@
      "round_trip": 390,
      "passengers_per_day": 5355.7
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 209.1,
-     "round_trip": 418,
-     "passengers_per_day": 209.9
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 191.24,
-     "round_trip": 382,
-     "passengers_per_day": 1045.4
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 249.89,
      "round_trip": 500,
      "passengers_per_day": 2279.1
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 215.44,
-     "round_trip": 431,
-     "passengers_per_day": 368.8
     },
     "MIA": {
      "market": "Miami, FL",
@@ -1785,35 +651,11 @@
      "round_trip": 564,
      "passengers_per_day": 1891.9
     },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 234.63,
-     "round_trip": 469,
-     "passengers_per_day": 556.6
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 217.54,
-     "round_trip": 435,
-     "passengers_per_day": 397.9
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 177.18,
-     "round_trip": 354,
-     "passengers_per_day": 2114.4
-    },
     "MSY": {
      "market": "New Orleans, LA",
      "each_way": 233.23,
      "round_trip": 466,
      "passengers_per_day": 838.3
-    },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 290.11,
-     "round_trip": 580,
-     "passengers_per_day": 88.6
     },
     "NYC": {
      "market": "New York City, NY",
@@ -1821,41 +663,11 @@
      "round_trip": 550,
      "passengers_per_day": 4315.9
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 182.19,
-     "round_trip": 364,
-     "passengers_per_day": 549.8
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 184.11,
-     "round_trip": 368,
-     "passengers_per_day": 507.4
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 206.02,
      "round_trip": 412,
      "passengers_per_day": 3388.6
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 315.26,
-     "round_trip": 631,
-     "passengers_per_day": 216.1
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 313.88,
-     "round_trip": 628,
-     "passengers_per_day": 262.3
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 186.48,
-     "round_trip": 373,
-     "passengers_per_day": 1233.9
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -1869,66 +681,6 @@
      "round_trip": 348,
      "passengers_per_day": 3561.4
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 274.87,
-     "round_trip": 550,
-     "passengers_per_day": 548.3
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 254.3,
-     "round_trip": 509,
-     "passengers_per_day": 300.7
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 331.64,
-     "round_trip": 663,
-     "passengers_per_day": 150.1
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 285.0,
-     "round_trip": 570,
-     "passengers_per_day": 322.0
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 233.77,
-     "round_trip": 468,
-     "passengers_per_day": 348.2
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 278.03,
-     "round_trip": 556,
-     "passengers_per_day": 117.4
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 339.41,
-     "round_trip": 679,
-     "passengers_per_day": 500.5
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 164.11,
-     "round_trip": 328,
-     "passengers_per_day": 2065.2
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 202.35,
-     "round_trip": 405,
-     "passengers_per_day": 912.9
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 302.86,
-     "round_trip": 606,
-     "passengers_per_day": 219.1
-    },
     "SEA": {
      "market": "Seattle, WA",
      "each_way": 190.56,
@@ -1941,82 +693,22 @@
      "round_trip": 489,
      "passengers_per_day": 3139.8
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 176.89,
-     "round_trip": 354,
-     "passengers_per_day": 1599.4
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 228.49,
-     "round_trip": 457,
-     "passengers_per_day": 854.4
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 308.26,
-     "round_trip": 617,
-     "passengers_per_day": 168.5
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 206.05,
-     "round_trip": 412,
-     "passengers_per_day": 987.0
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 242.3,
      "round_trip": 485,
      "passengers_per_day": 1379.4
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 201.7,
-     "round_trip": 403,
-     "passengers_per_day": 343.4
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 206.93,
-     "round_trip": 414,
-     "passengers_per_day": 558.3
     }
    }
   },
   "LAX": {
    "market": "Los Angeles, CA",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 228.84,
-     "round_trip": 458,
-     "passengers_per_day": 852.0
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 383.16,
-     "round_trip": 766,
-     "passengers_per_day": 197.5
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 267.71,
      "round_trip": 535,
      "passengers_per_day": 2577.6
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 337.61,
-     "round_trip": 675,
-     "passengers_per_day": 433.8
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 379.11,
-     "round_trip": 758,
-     "passengers_per_day": 251.2
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -2024,53 +716,11 @@
      "round_trip": 596,
      "passengers_per_day": 2277.3
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 204.49,
-     "round_trip": 409,
-     "passengers_per_day": 1246.0
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 367.15,
      "round_trip": 734,
      "passengers_per_day": 3513.6
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 269.96,
-     "round_trip": 540,
-     "passengers_per_day": 365.6
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 255.08,
-     "round_trip": 510,
-     "passengers_per_day": 304.3
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 346.09,
-     "round_trip": 692,
-     "passengers_per_day": 325.2
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 325.21,
-     "round_trip": 650,
-     "passengers_per_day": 770.7
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 285.42,
-     "round_trip": 571,
-     "passengers_per_day": 763.4
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 351.54,
-     "round_trip": 703,
-     "passengers_per_day": 575.4
     },
     "DCA": {
      "market": "Washington, DC",
@@ -2090,35 +740,11 @@
      "round_trip": 521,
      "passengers_per_day": 6307.1
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 237.15,
-     "round_trip": 474,
-     "passengers_per_day": 304.6
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 370.54,
-     "round_trip": 741,
-     "passengers_per_day": 1839.0
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 371.81,
      "round_trip": 744,
      "passengers_per_day": 3631.4
-    },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 330.07,
-     "round_trip": 660,
-     "passengers_per_day": 278.1
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 328.83,
-     "round_trip": 658,
-     "passengers_per_day": 210.8
     },
     "HOU": {
      "market": "Houston, TX",
@@ -2126,41 +752,11 @@
      "round_trip": 459,
      "passengers_per_day": 4142.9
     },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 295.65,
-     "round_trip": 591,
-     "passengers_per_day": 171.4
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 318.49,
-     "round_trip": 637,
-     "passengers_per_day": 1013.2
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 347.91,
-     "round_trip": 696,
-     "passengers_per_day": 406.2
-    },
     "LAS": {
      "market": "Las Vegas, NV",
      "each_way": 150.31,
      "round_trip": 301,
      "passengers_per_day": 6290.8
-    },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 317.27,
-     "round_trip": 635,
-     "passengers_per_day": 195.6
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 287.4,
-     "round_trip": 575,
-     "passengers_per_day": 1019.4
     },
     "MCO": {
      "market": "Orlando, FL",
@@ -2168,35 +764,11 @@
      "round_trip": 574,
      "passengers_per_day": 2882.1
     },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 306.55,
-     "round_trip": 613,
-     "passengers_per_day": 471.4
-    },
     "MIA": {
      "market": "Miami, FL",
      "each_way": 371.81,
      "round_trip": 744,
      "passengers_per_day": 3631.4
-    },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 312.87,
-     "round_trip": 626,
-     "passengers_per_day": 373.3
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 345.38,
-     "round_trip": 691,
-     "passengers_per_day": 231.4
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 288.14,
-     "round_trip": 576,
-     "passengers_per_day": 1855.8
     },
     "MSY": {
      "market": "New Orleans, LA",
@@ -2204,53 +776,17 @@
      "round_trip": 530,
      "passengers_per_day": 1368.9
     },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 366.76,
-     "round_trip": 734,
-     "passengers_per_day": 82.0
-    },
     "NYC": {
      "market": "New York City, NY",
      "each_way": 464.03,
      "round_trip": 928,
      "passengers_per_day": 12978.0
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 272.3,
-     "round_trip": 545,
-     "passengers_per_day": 554.1
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 262.85,
-     "round_trip": 526,
-     "passengers_per_day": 513.7
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 279.67,
      "round_trip": 559,
      "passengers_per_day": 5928.7
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 369.83,
-     "round_trip": 740,
-     "passengers_per_day": 308.6
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 399.4,
-     "round_trip": 799,
-     "passengers_per_day": 321.4
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 198.41,
-     "round_trip": 397,
-     "passengers_per_day": 4197.6
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -2264,66 +800,6 @@
      "round_trip": 356,
      "passengers_per_day": 5412.6
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 292.33,
-     "round_trip": 585,
-     "passengers_per_day": 749.4
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 244.75,
-     "round_trip": 490,
-     "passengers_per_day": 13.2
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 389.44,
-     "round_trip": 779,
-     "passengers_per_day": 95.9
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 333.96,
-     "round_trip": 668,
-     "passengers_per_day": 351.4
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 175.38,
-     "round_trip": 351,
-     "passengers_per_day": 1198.0
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 337.23,
-     "round_trip": 674,
-     "passengers_per_day": 166.3
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 397.46,
-     "round_trip": 795,
-     "passengers_per_day": 273.8
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 254.13,
-     "round_trip": 508,
-     "passengers_per_day": 60.5
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 233.08,
-     "round_trip": 466,
-     "passengers_per_day": 1333.6
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 397.63,
-     "round_trip": 795,
-     "passengers_per_day": 214.8
-    },
     "SEA": {
      "market": "Seattle, WA",
      "each_way": 214.73,
@@ -2336,82 +812,22 @@
      "round_trip": 357,
      "passengers_per_day": 16680.0
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 221.37,
-     "round_trip": 443,
-     "passengers_per_day": 3319.0
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 191.71,
-     "round_trip": 383,
-     "passengers_per_day": 4846.9
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 359.1,
-     "round_trip": 718,
-     "passengers_per_day": 106.7
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 275.46,
-     "round_trip": 551,
-     "passengers_per_day": 1049.0
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 338.68,
      "round_trip": 677,
      "passengers_per_day": 1116.8
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 273.62,
-     "round_trip": 547,
-     "passengers_per_day": 363.8
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 217.7,
-     "round_trip": 435,
-     "passengers_per_day": 620.7
     }
    }
   },
   "JFK": {
    "market": "New York City, NY",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 300.41,
-     "round_trip": 601,
-     "passengers_per_day": 433.2
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 262.3,
-     "round_trip": 525,
-     "passengers_per_day": 12.3
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 306.3,
      "round_trip": 613,
      "passengers_per_day": 3331.8
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 142.53,
-     "round_trip": 285,
-     "passengers_per_day": 16.4
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 365.69,
-     "round_trip": 731,
-     "passengers_per_day": 489.6
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -2419,53 +835,11 @@
      "round_trip": 415,
      "passengers_per_day": 3612.5
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 396.15,
-     "round_trip": 792,
-     "passengers_per_day": 172.9
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 202.53,
      "round_trip": 405,
      "passengers_per_day": 3696.2
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 156.25,
-     "round_trip": 313,
-     "passengers_per_day": 1629.7
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 401.52,
-     "round_trip": 803,
-     "passengers_per_day": 216.3
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 189.29,
-     "round_trip": 379,
-     "passengers_per_day": 2189.3
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 218.24,
-     "round_trip": 436,
-     "passengers_per_day": 1656.2
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 222.28,
-     "round_trip": 445,
-     "passengers_per_day": 1865.6
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 274.1,
-     "round_trip": 548,
-     "passengers_per_day": 1357.2
     },
     "DCA": {
      "market": "Washington, DC",
@@ -2485,59 +859,17 @@
      "round_trip": 553,
      "passengers_per_day": 7017.5
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 269.16,
-     "round_trip": 538,
-     "passengers_per_day": 320.7
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 209.83,
-     "round_trip": 420,
-     "passengers_per_day": 3746.2
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 208.11,
      "round_trip": 416,
      "passengers_per_day": 17756.9
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 273.23,
-     "round_trip": 546,
-     "passengers_per_day": 475.6
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 252.79,
-     "round_trip": 506,
-     "passengers_per_day": 746.7
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 269.83,
      "round_trip": 540,
      "passengers_per_day": 5116.8
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 324.41,
-     "round_trip": 649,
-     "passengers_per_day": 125.8
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 221.98,
-     "round_trip": 444,
-     "passengers_per_day": 1917.7
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 213.11,
-     "round_trip": 426,
-     "passengers_per_day": 2218.5
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -2551,29 +883,11 @@
      "round_trip": 928,
      "passengers_per_day": 12978.0
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 313.17,
-     "round_trip": 626,
-     "passengers_per_day": 264.4
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 333.53,
-     "round_trip": 667,
-     "passengers_per_day": 1090.5
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 173.47,
      "round_trip": 347,
      "passengers_per_day": 12913.9
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 280.04,
-     "round_trip": 560,
-     "passengers_per_day": 764.7
     },
     "MIA": {
      "market": "Miami, FL",
@@ -2581,47 +895,11 @@
      "round_trip": 416,
      "passengers_per_day": 17756.9
     },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 331.29,
-     "round_trip": 663,
-     "passengers_per_day": 667.0
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 309.55,
-     "round_trip": 619,
-     "passengers_per_day": 513.2
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 314.28,
-     "round_trip": 629,
-     "passengers_per_day": 2567.9
-    },
     "MSY": {
      "market": "New Orleans, LA",
      "each_way": 236.71,
      "round_trip": 473,
      "passengers_per_day": 2509.4
-    },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 144.07,
-     "round_trip": 288,
-     "passengers_per_day": 1028.5
-    },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 329.75,
-     "round_trip": 660,
-     "passengers_per_day": 461.8
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 330.44,
-     "round_trip": 661,
-     "passengers_per_day": 414.4
     },
     "ORD": {
      "market": "Chicago, IL",
@@ -2629,89 +907,11 @@
      "round_trip": 413,
      "passengers_per_day": 10925.7
     },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 190.36,
-     "round_trip": 381,
-     "passengers_per_day": 803.0
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 225.95,
-     "round_trip": 452,
-     "passengers_per_day": 7368.9
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 348.58,
-     "round_trip": 697,
-     "passengers_per_day": 1235.6
-    },
     "PHX": {
      "market": "Phoenix, AZ",
      "each_way": 331.5,
      "round_trip": 663,
      "passengers_per_day": 3812.3
-    },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 171.98,
-     "round_trip": 344,
-     "passengers_per_day": 1871.6
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 423.27,
-     "round_trip": 847,
-     "passengers_per_day": 357.5
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 186.71,
-     "round_trip": 373,
-     "passengers_per_day": 595.3
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 210.35,
-     "round_trip": 421,
-     "passengers_per_day": 960.8
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 382.58,
-     "round_trip": 765,
-     "passengers_per_day": 248.6
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 177.58,
-     "round_trip": 355,
-     "passengers_per_day": 745.2
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 217.86,
-     "round_trip": 436,
-     "passengers_per_day": 3241.4
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 347.55,
-     "round_trip": 695,
-     "passengers_per_day": 2962.6
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 308.89,
-     "round_trip": 618,
-     "passengers_per_day": 1083.6
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 195.29,
-     "round_trip": 391,
-     "passengers_per_day": 1395.8
     },
     "SEA": {
      "market": "Seattle, WA",
@@ -2725,82 +925,22 @@
      "round_trip": 1032,
      "passengers_per_day": 8650.2
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 364.7,
-     "round_trip": 729,
-     "passengers_per_day": 1599.3
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 328.91,
-     "round_trip": 658,
-     "passengers_per_day": 773.2
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 238.44,
-     "round_trip": 477,
-     "passengers_per_day": 1151.9
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 253.98,
-     "round_trip": 508,
-     "passengers_per_day": 1618.1
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 184.22,
      "round_trip": 368,
      "passengers_per_day": 6077.4
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 322.63,
-     "round_trip": 645,
-     "passengers_per_day": 294.7
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 399.19,
-     "round_trip": 798,
-     "passengers_per_day": 227.8
     }
    }
   },
   "MIA": {
    "market": "Miami, FL",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 319.89,
-     "round_trip": 640,
-     "passengers_per_day": 150.9
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 201.49,
-     "round_trip": 403,
-     "passengers_per_day": 451.1
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 198.63,
      "round_trip": 397,
      "passengers_per_day": 1393.0
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 194.75,
-     "round_trip": 389,
-     "passengers_per_day": 765.7
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 284.41,
-     "round_trip": 569,
-     "passengers_per_day": 250.3
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -2808,53 +948,11 @@
      "round_trip": 398,
      "passengers_per_day": 1627.2
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 332.63,
-     "round_trip": 665,
-     "passengers_per_day": 113.2
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 212.16,
      "round_trip": 424,
      "passengers_per_day": 4228.5
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 190.04,
-     "round_trip": 380,
-     "passengers_per_day": 650.3
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 369.06,
-     "round_trip": 738,
-     "passengers_per_day": 62.8
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 165.34,
-     "round_trip": 331,
-     "passengers_per_day": 536.8
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 193.77,
-     "round_trip": 388,
-     "passengers_per_day": 1128.2
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 215.01,
-     "round_trip": 430,
-     "passengers_per_day": 897.8
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 217.71,
-     "round_trip": 435,
-     "passengers_per_day": 921.3
     },
     "DCA": {
      "market": "Washington, DC",
@@ -2874,53 +972,11 @@
      "round_trip": 456,
      "passengers_per_day": 3066.8
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 234.06,
-     "round_trip": 468,
-     "passengers_per_day": 171.4
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 216.12,
-     "round_trip": 432,
-     "passengers_per_day": 2596.2
-    },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 248.17,
-     "round_trip": 496,
-     "passengers_per_day": 248.5
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 258.65,
-     "round_trip": 517,
-     "passengers_per_day": 194.7
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 191.4,
      "round_trip": 383,
      "passengers_per_day": 2531.5
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 308.34,
-     "round_trip": 617,
-     "passengers_per_day": 88.1
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 206.36,
-     "round_trip": 413,
-     "passengers_per_day": 1088.6
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 319.13,
-     "round_trip": 638,
-     "passengers_per_day": 238.3
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -2934,47 +990,11 @@
      "round_trip": 744,
      "passengers_per_day": 3631.4
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 262.01,
-     "round_trip": 524,
-     "passengers_per_day": 126.6
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 245.23,
-     "round_trip": 490,
-     "passengers_per_day": 686.9
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 145.81,
      "round_trip": 292,
      "passengers_per_day": 483.6
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 240.89,
-     "round_trip": 482,
-     "passengers_per_day": 381.5
-    },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 252.47,
-     "round_trip": 505,
-     "passengers_per_day": 308.5
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 310.88,
-     "round_trip": 622,
-     "passengers_per_day": 99.2
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 241.91,
-     "round_trip": 484,
-     "passengers_per_day": 1257.8
     },
     "MSY": {
      "market": "New Orleans, LA",
@@ -2982,47 +1002,17 @@
      "round_trip": 320,
      "passengers_per_day": 1085.8
     },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 148.75,
-     "round_trip": 298,
-     "passengers_per_day": 205.3
-    },
     "NYC": {
      "market": "New York City, NY",
      "each_way": 208.11,
      "round_trip": 416,
      "passengers_per_day": 17756.9
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 307.66,
-     "round_trip": 615,
-     "passengers_per_day": 179.9
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 274.1,
-     "round_trip": 548,
-     "passengers_per_day": 245.0
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 218.51,
      "round_trip": 437,
      "passengers_per_day": 4554.5
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 190.76,
-     "round_trip": 382,
-     "passengers_per_day": 481.9
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 303.74,
-     "round_trip": 607,
-     "passengers_per_day": 439.1
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -3036,60 +1026,6 @@
      "round_trip": 551,
      "passengers_per_day": 1487.2
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 184.5,
-     "round_trip": 369,
-     "passengers_per_day": 949.8
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 436.75,
-     "round_trip": 874,
-     "passengers_per_day": 70.4
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 279.99,
-     "round_trip": 560,
-     "passengers_per_day": 94.1
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 170.92,
-     "round_trip": 342,
-     "passengers_per_day": 683.0
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 375.29,
-     "round_trip": 751,
-     "passengers_per_day": 99.0
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 235.53,
-     "round_trip": 471,
-     "passengers_per_day": 207.7
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 311.19,
-     "round_trip": 622,
-     "passengers_per_day": 811.0
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 226.84,
-     "round_trip": 454,
-     "passengers_per_day": 495.9
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 249.75,
-     "round_trip": 499,
-     "passengers_per_day": 177.4
-    },
     "SEA": {
      "market": "Seattle, WA",
      "each_way": 313.79,
@@ -3102,76 +1038,22 @@
      "round_trip": 691,
      "passengers_per_day": 2082.2
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 358.74,
-     "round_trip": 717,
-     "passengers_per_day": 757.7
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 343.98,
-     "round_trip": 688,
-     "passengers_per_day": 260.8
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 255.27,
-     "round_trip": 511,
-     "passengers_per_day": 816.3
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 189.0,
      "round_trip": 378,
      "passengers_per_day": 723.7
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 289.9,
-     "round_trip": 580,
-     "passengers_per_day": 140.5
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 364.19,
-     "round_trip": 728,
-     "passengers_per_day": 93.5
     }
    }
   },
   "SEA": {
    "market": "Seattle, WA",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 216.03,
-     "round_trip": 432,
-     "passengers_per_day": 382.9
-    },
-    "ALB": {
-     "market": "Albany, NY",
-     "each_way": 387.65,
-     "round_trip": 775,
-     "passengers_per_day": 73.9
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 265.46,
      "round_trip": 531,
      "passengers_per_day": 996.8
-    },
-    "BDL": {
-     "market": "Hartford, CT",
-     "each_way": 427.08,
-     "round_trip": 854,
-     "passengers_per_day": 103.2
-    },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 372.01,
-     "round_trip": 744,
-     "passengers_per_day": 70.1
     },
     "BNA": {
      "market": "Nashville, TN",
@@ -3179,53 +1061,11 @@
      "round_trip": 599,
      "passengers_per_day": 686.1
     },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 173.99,
-     "round_trip": 348,
-     "passengers_per_day": 812.5
-    },
     "BOS": {
      "market": "Boston, MA",
      "each_way": 335.96,
      "round_trip": 672,
      "passengers_per_day": 1352.4
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 362.11,
-     "round_trip": 724,
-     "passengers_per_day": 73.5
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 175.63,
-     "round_trip": 351,
-     "passengers_per_day": 276.9
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 296.33,
-     "round_trip": 593,
-     "passengers_per_day": 249.7
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 270.38,
-     "round_trip": 541,
-     "passengers_per_day": 301.9
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 260.69,
-     "round_trip": 521,
-     "passengers_per_day": 306.8
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 269.41,
-     "round_trip": 539,
-     "passengers_per_day": 363.8
     },
     "DCA": {
      "market": "Washington, DC",
@@ -3245,59 +1085,17 @@
      "round_trip": 471,
      "passengers_per_day": 1945.1
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 331.85,
-     "round_trip": 664,
-     "passengers_per_day": 78.3
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 319.6,
-     "round_trip": 639,
-     "passengers_per_day": 668.9
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 313.79,
      "round_trip": 628,
      "passengers_per_day": 1097.5
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 345.43,
-     "round_trip": 691,
-     "passengers_per_day": 103.1
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 378.77,
-     "round_trip": 758,
-     "passengers_per_day": 59.1
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 293.87,
      "round_trip": 588,
      "passengers_per_day": 1042.6
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 259.62,
-     "round_trip": 519,
-     "passengers_per_day": 115.4
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 272.43,
-     "round_trip": 545,
-     "passengers_per_day": 409.1
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 366.34,
-     "round_trip": 733,
-     "passengers_per_day": 171.1
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -3311,29 +1109,11 @@
      "round_trip": 429,
      "passengers_per_day": 6855.2
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 346.11,
-     "round_trip": 692,
-     "passengers_per_day": 69.7
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 269.51,
-     "round_trip": 539,
-     "passengers_per_day": 448.6
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 334.41,
      "round_trip": 669,
      "passengers_per_day": 1096.6
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 360.68,
-     "round_trip": 721,
-     "passengers_per_day": 126.2
     },
     "MIA": {
      "market": "Miami, FL",
@@ -3341,35 +1121,11 @@
      "round_trip": 628,
      "passengers_per_day": 1097.5
     },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 258.02,
-     "round_trip": 516,
-     "passengers_per_day": 296.5
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 324.04,
-     "round_trip": 648,
-     "passengers_per_day": 91.7
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 248.94,
-     "round_trip": 498,
-     "passengers_per_day": 1085.7
-    },
     "MSY": {
      "market": "New Orleans, LA",
      "each_way": 280.73,
      "round_trip": 561,
      "passengers_per_day": 465.2
-    },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 382.24,
-     "round_trip": 764,
-     "passengers_per_day": 28.2
     },
     "NYC": {
      "market": "New York City, NY",
@@ -3377,41 +1133,11 @@
      "round_trip": 641,
      "passengers_per_day": 3134.5
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 247.76,
-     "round_trip": 496,
-     "passengers_per_day": 273.7
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 242.99,
-     "round_trip": 486,
-     "passengers_per_day": 250.2
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 246.19,
      "round_trip": 492,
      "passengers_per_day": 1969.2
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 378.77,
-     "round_trip": 758,
-     "passengers_per_day": 155.0
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 430.06,
-     "round_trip": 860,
-     "passengers_per_day": 38.4
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 204.98,
-     "round_trip": 410,
-     "passengers_per_day": 362.1
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -3425,184 +1151,34 @@
      "round_trip": 400,
      "passengers_per_day": 2991.2
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 275.65,
-     "round_trip": 551,
-     "passengers_per_day": 301.5
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 242.68,
-     "round_trip": 485,
-     "passengers_per_day": 734.2
-    },
-    "PWM": {
-     "market": "Portland, ME",
-     "each_way": 370.37,
-     "round_trip": 741,
-     "passengers_per_day": 43.5
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 380.93,
-     "round_trip": 762,
-     "passengers_per_day": 104.8
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 196.0,
-     "round_trip": 392,
-     "passengers_per_day": 386.2
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 337.02,
-     "round_trip": 674,
-     "passengers_per_day": 75.5
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 371.85,
-     "round_trip": 744,
-     "passengers_per_day": 119.6
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 222.64,
-     "round_trip": 445,
-     "passengers_per_day": 2139.4
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 247.14,
-     "round_trip": 494,
-     "passengers_per_day": 498.7
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 387.81,
-     "round_trip": 776,
-     "passengers_per_day": 64.7
-    },
     "SFO": {
      "market": "San Francisco, CA",
      "each_way": 198.64,
      "round_trip": 397,
      "passengers_per_day": 5413.5
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 209.45,
-     "round_trip": 419,
-     "passengers_per_day": 1138.1
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 184.98,
-     "round_trip": 370,
-     "passengers_per_day": 1210.1
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 364.26,
-     "round_trip": 729,
-     "passengers_per_day": 27.3
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 259.33,
-     "round_trip": 519,
-     "passengers_per_day": 457.0
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 325.35,
      "round_trip": 651,
      "passengers_per_day": 582.0
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 310.85,
-     "round_trip": 622,
-     "passengers_per_day": 88.5
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 236.34,
-     "round_trip": 473,
-     "passengers_per_day": 457.8
     }
    }
   },
   "BOS": {
    "market": "Boston, MA",
    "routes": {
-    "ABQ": {
-     "market": "Albuquerque, NM",
-     "each_way": 325.32,
-     "round_trip": 651,
-     "passengers_per_day": 208.9
-    },
     "AUS": {
      "market": "Austin, TX",
      "each_way": 270.74,
      "round_trip": 541,
      "passengers_per_day": 1334.2
     },
-    "BHM": {
-     "market": "Birmingham, AL",
-     "each_way": 342.08,
-     "round_trip": 684,
-     "passengers_per_day": 170.1
-    },
     "BNA": {
      "market": "Nashville, TN",
      "each_way": 217.82,
      "round_trip": 436,
      "passengers_per_day": 1693.8
-    },
-    "BOI": {
-     "market": "Boise, ID",
-     "each_way": 380.92,
-     "round_trip": 762,
-     "passengers_per_day": 102.9
-    },
-    "BUF": {
-     "market": "Buffalo, NY",
-     "each_way": 155.73,
-     "round_trip": 311,
-     "passengers_per_day": 469.7
-    },
-    "BZN": {
-     "market": "Bozeman, MT",
-     "each_way": 355.73,
-     "round_trip": 711,
-     "passengers_per_day": 122.2
-    },
-    "CHS": {
-     "market": "Charleston, SC",
-     "each_way": 182.62,
-     "round_trip": 365,
-     "passengers_per_day": 952.9
-    },
-    "CLE": {
-     "market": "Cleveland, OH",
-     "each_way": 194.36,
-     "round_trip": 389,
-     "passengers_per_day": 770.8
-    },
-    "CMH": {
-     "market": "Columbus, OH",
-     "each_way": 271.4,
-     "round_trip": 543,
-     "passengers_per_day": 669.6
-    },
-    "CVG": {
-     "market": "Cincinnati, OH",
-     "each_way": 287.93,
-     "round_trip": 576,
-     "passengers_per_day": 660.9
     },
     "DCA": {
      "market": "Washington, DC",
@@ -3622,59 +1198,17 @@
      "round_trip": 541,
      "passengers_per_day": 2379.2
     },
-    "DSM": {
-     "market": "Des Moines, IA",
-     "each_way": 239.27,
-     "round_trip": 479,
-     "passengers_per_day": 141.8
-    },
-    "DTW": {
-     "market": "Detroit, MI",
-     "each_way": 235.98,
-     "round_trip": 472,
-     "passengers_per_day": 1369.2
-    },
     "FLL": {
      "market": "Miami, FL",
      "each_way": 212.16,
      "round_trip": 424,
      "passengers_per_day": 4228.5
     },
-    "GRR": {
-     "market": "Grand Rapids, MI",
-     "each_way": 230.77,
-     "round_trip": 462,
-     "passengers_per_day": 197.1
-    },
-    "GSP": {
-     "market": "Greenville/Spartanburg, SC",
-     "each_way": 267.14,
-     "round_trip": 534,
-     "passengers_per_day": 222.2
-    },
     "HOU": {
      "market": "Houston, TX",
      "each_way": 287.64,
      "round_trip": 575,
      "passengers_per_day": 1511.9
-    },
-    "ICT": {
-     "market": "Wichita, KS",
-     "each_way": 315.42,
-     "round_trip": 631,
-     "passengers_per_day": 68.7
-    },
-    "IND": {
-     "market": "Indianapolis, IN",
-     "each_way": 313.19,
-     "round_trip": 626,
-     "passengers_per_day": 643.3
-    },
-    "JAX": {
-     "market": "Jacksonville, FL",
-     "each_way": 205.45,
-     "round_trip": 411,
-     "passengers_per_day": 909.7
     },
     "LAS": {
      "market": "Las Vegas, NV",
@@ -3688,29 +1222,11 @@
      "round_trip": 734,
      "passengers_per_day": 3513.6
     },
-    "LIT": {
-     "market": "Little Rock, AR",
-     "each_way": 335.03,
-     "round_trip": 670,
-     "passengers_per_day": 96.5
-    },
-    "MCI": {
-     "market": "Kansas City, MO",
-     "each_way": 349.67,
-     "round_trip": 699,
-     "passengers_per_day": 455.3
-    },
     "MCO": {
      "market": "Orlando, FL",
      "each_way": 195.42,
      "round_trip": 391,
      "passengers_per_day": 5031.2
-    },
-    "MEM": {
-     "market": "Memphis, TN",
-     "each_way": 351.86,
-     "round_trip": 704,
-     "passengers_per_day": 230.0
     },
     "MIA": {
      "market": "Miami, FL",
@@ -3718,35 +1234,11 @@
      "round_trip": 424,
      "passengers_per_day": 4228.5
     },
-    "MKE": {
-     "market": "Milwaukee, WI",
-     "each_way": 270.0,
-     "round_trip": 540,
-     "passengers_per_day": 360.1
-    },
-    "MSN": {
-     "market": "Madison, WI",
-     "each_way": 294.07,
-     "round_trip": 588,
-     "passengers_per_day": 185.2
-    },
-    "MSP": {
-     "market": "Minneapolis/St. Paul, MN",
-     "each_way": 309.16,
-     "round_trip": 618,
-     "passengers_per_day": 1272.9
-    },
     "MSY": {
      "market": "New Orleans, LA",
      "each_way": 242.72,
      "round_trip": 485,
      "passengers_per_day": 932.4
-    },
-    "MYR": {
-     "market": "Myrtle Beach, SC",
-     "each_way": 149.33,
-     "round_trip": 299,
-     "passengers_per_day": 437.7
     },
     "NYC": {
      "market": "New York City, NY",
@@ -3754,41 +1246,11 @@
      "round_trip": 405,
      "passengers_per_day": 3696.2
     },
-    "OKC": {
-     "market": "Oklahoma City, OK",
-     "each_way": 347.31,
-     "round_trip": 695,
-     "passengers_per_day": 164.0
-    },
-    "OMA": {
-     "market": "Omaha, NE",
-     "each_way": 310.28,
-     "round_trip": 621,
-     "passengers_per_day": 177.8
-    },
     "ORD": {
      "market": "Chicago, IL",
      "each_way": 198.14,
      "round_trip": 396,
      "passengers_per_day": 4303.4
-    },
-    "ORF": {
-     "market": "Norfolk, VA",
-     "each_way": 183.64,
-     "round_trip": 367,
-     "passengers_per_day": 454.0
-    },
-    "PBI": {
-     "market": "West Palm Beach/Palm Beach, FL",
-     "each_way": 223.08,
-     "round_trip": 446,
-     "passengers_per_day": 1709.0
-    },
-    "PDX": {
-     "market": "Portland, OR",
-     "each_way": 344.43,
-     "round_trip": 689,
-     "passengers_per_day": 587.4
     },
     "PHL": {
      "market": "Philadelphia, PA",
@@ -3802,60 +1264,6 @@
      "round_trip": 606,
      "passengers_per_day": 1625.3
     },
-    "PIT": {
-     "market": "Pittsburgh, PA",
-     "each_way": 183.21,
-     "round_trip": 366,
-     "passengers_per_day": 974.1
-    },
-    "PSP": {
-     "market": "Palm Springs, CA",
-     "each_way": 463.04,
-     "round_trip": 926,
-     "passengers_per_day": 108.9
-    },
-    "RIC": {
-     "market": "Richmond, VA",
-     "each_way": 179.83,
-     "round_trip": 360,
-     "passengers_per_day": 763.6
-    },
-    "RNO": {
-     "market": "Reno, NV",
-     "each_way": 386.49,
-     "round_trip": 773,
-     "passengers_per_day": 121.6
-    },
-    "ROC": {
-     "market": "Rochester, NY",
-     "each_way": 262.87,
-     "round_trip": 526,
-     "passengers_per_day": 159.9
-    },
-    "RSW": {
-     "market": "Fort Myers, FL",
-     "each_way": 211.1,
-     "round_trip": 422,
-     "passengers_per_day": 2008.2
-    },
-    "SAN": {
-     "market": "San Diego, CA",
-     "each_way": 316.9,
-     "round_trip": 634,
-     "passengers_per_day": 1442.8
-    },
-    "SAT": {
-     "market": "San Antonio, TX",
-     "each_way": 319.23,
-     "round_trip": 638,
-     "passengers_per_day": 429.6
-    },
-    "SAV": {
-     "market": "Savannah, GA",
-     "each_way": 192.36,
-     "round_trip": 385,
-     "passengers_per_day": 595.1
-    },
     "SEA": {
      "market": "Seattle, WA",
      "each_way": 335.96,
@@ -3868,47 +1276,11 @@
      "round_trip": 774,
      "passengers_per_day": 3204.2
     },
-    "SLC": {
-     "market": "Salt Lake City, UT",
-     "each_way": 395.51,
-     "round_trip": 791,
-     "passengers_per_day": 715.3
-    },
-    "SMF": {
-     "market": "Sacramento, CA",
-     "each_way": 303.79,
-     "round_trip": 608,
-     "passengers_per_day": 308.6
-    },
-    "SRQ": {
-     "market": "Sarasota/Bradenton, FL",
-     "each_way": 202.58,
-     "round_trip": 405,
-     "passengers_per_day": 648.7
-    },
-    "STL": {
-     "market": "St. Louis, MO",
-     "each_way": 309.14,
-     "round_trip": 618,
-     "passengers_per_day": 637.2
-    },
     "TPA": {
      "market": "Tampa, FL",
      "each_way": 203.38,
      "round_trip": 407,
      "passengers_per_day": 2534.6
-    },
-    "TUL": {
-     "market": "Tulsa, OK",
-     "each_way": 307.74,
-     "round_trip": 615,
-     "passengers_per_day": 116.5
-    },
-    "TUS": {
-     "market": "Tucson, AZ",
-     "each_way": 376.79,
-     "round_trip": 754,
-     "passengers_per_day": 152.4
     }
    }
   }
