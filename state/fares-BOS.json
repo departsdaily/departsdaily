@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-20T12:18:26-04:00",
+ "generated": "2026-08-20T14:18:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 146,
-   "d1": "2026-09-24",
-   "d2": "2026-09-29",
-   "dep": "5:25AM",
-   "al": "Southwest",
+   "price": 174,
+   "d1": "2026-11-09",
+   "d2": "2026-11-12",
+   "dep": "5:00PM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:40AM",
-   "arr": "10:15AM",
-   "rarr": "2:35PM",
-   "pct": 66
+   "rdep": "8:15AM",
+   "arr": "9:33PM",
+   "rarr": "11:44AM",
+   "pct": 59
   },
   "HOU": {
    "to": "HOU",
