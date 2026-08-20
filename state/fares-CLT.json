@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-20T16:15:13-04:00",
+ "generated": "2026-08-20T18:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 46,
+ "routes_priced": 47,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -173,17 +173,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 151,
-   "d1": "2026-08-27",
-   "d2": "2026-09-01",
-   "dep": "2:45PM",
+   "price": 173,
+   "d1": "2026-09-07",
+   "d2": "2026-09-12",
+   "dep": "8:56AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:59AM",
-   "arr": "9:39PM",
-   "rarr": "6:36AM",
-   "pct": 79
+   "arr": "3:43PM",
+   "rarr": "6:23AM",
+   "pct": 76
   },
   "LAX": {
    "to": "LAX",
@@ -604,6 +604,21 @@
    "arr": "10:59PM",
    "rarr": "11:40AM",
    "pct": 0
+  },
+  "SRQ": {
+   "to": "SRQ",
+   "city": "Sarasota",
+   "price": 460,
+   "d1": "2026-10-11",
+   "d2": "2026-10-17",
+   "dep": "7:15AM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "5:28PM",
+   "arr": "9:07AM",
+   "rarr": "7:29PM",
+   "pct": 21
   },
   "SXM": {
    "to": "SXM",
