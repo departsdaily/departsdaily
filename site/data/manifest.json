@@ -1,18 +1,18 @@
 {
- "generated": "2026-08-19T05:08:11-04:00",
- "base": "2026-08-19",
+ "generated": "2026-08-20T05:07:46-04:00",
+ "base": "2026-08-20",
  "origins": [
   {
    "origin": "CLT",
-   "cities": 63,
-   "offers": 1776,
-   "kb": 66
+   "cities": 64,
+   "offers": 2498,
+   "kb": 92
   },
   {
    "origin": "ATL",
    "cities": 29,
-   "offers": 1412,
-   "kb": 52
+   "offers": 1457,
+   "kb": 54
   }
  ],
  "skipped": []
