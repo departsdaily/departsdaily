@@ -1,10 +1,25 @@
 {
  "origin": "LAX",
- "generated": "2026-08-19T20:16:56-04:00",
+ "generated": "2026-08-19T22:16:51-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
+  "AUS": {
+   "to": "AUS",
+   "city": "Austin",
+   "price": 217,
+   "d1": "2026-10-08",
+   "d2": "2026-10-11",
+   "dep": "12:14AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:18PM",
+   "arr": "7:18AM",
+   "rarr": "4:44PM",
+   "pct": 59
+  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
