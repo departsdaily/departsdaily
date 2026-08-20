@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-20T00:15:35-04:00",
+ "generated": "2026-08-20T02:15:38-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -79,21 +79,6 @@
    "arr": "8:00AM",
    "rarr": "3:41PM",
    "pct": 82
-  },
-  "DTW": {
-   "to": "DTW",
-   "city": "Detroit",
-   "price": 121,
-   "d1": "2026-11-04",
-   "d2": "2026-11-08",
-   "dep": "10:40PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:50AM",
-   "arr": "12:42AM+1",
-   "rarr": "9:01AM",
-   "pct": 74
   },
   "FLL": {
    "to": "FLL",
