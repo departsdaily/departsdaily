@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-20T08:17:12-04:00",
+ "generated": "2026-08-20T10:17:20-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -124,6 +124,21 @@
    "arr": "12:46PM",
    "rarr": "12:30PM",
    "pct": 73
+  },
+  "MCO": {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 121,
+   "d1": "2026-10-31",
+   "d2": "2026-11-07",
+   "dep": "6:25AM",
+   "al": "Southwest",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:40PM",
+   "arr": "7:30AM",
+   "rarr": "8:55PM",
+   "pct": 59
   },
   "MSY": {
    "to": "MSY",
@@ -248,17 +263,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 927,
-   "d1": "2026-12-14",
-   "d2": "2026-12-21",
-   "dep": "7:15PM",
-   "al": "AY",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:10PM",
-   "arr": "8:05AM+1",
-   "rarr": "8:10AM+1",
-   "pct": -9
+   "price": 877,
+   "d1": "2026-08-27",
+   "d2": "2026-09-05",
+   "dep": "5:28PM",
+   "al": "",
+   "stops": 2,
+   "xfer": 1,
+   "rdep": "8:00AM",
+   "arr": "5:28AM+1",
+   "rarr": "8:20PM",
+   "pct": -3
   },
   "MBJ": {
    "to": "MBJ",
