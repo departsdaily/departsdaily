@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-21T02:17:35-04:00",
+ "generated": "2026-08-21T04:04:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
