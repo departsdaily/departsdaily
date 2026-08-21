@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-21T16:15:13-04:00",
+ "generated": "2026-08-21T18:15:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 50,
+ "routes_priced": 49,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -139,21 +139,6 @@
    "arr": "4:30AM+1",
    "rarr": "6:57PM",
    "pct": -24
-  },
-  "EDI": {
-   "to": "EDI",
-   "city": "Edinburgh",
-   "price": 521,
-   "d1": "2026-09-12",
-   "d2": "2026-09-26",
-   "dep": "4:34PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "8:30PM",
-   "arr": "2:37AM+1",
-   "rarr": "7:31AM+1",
-   "pct": 36
   },
   "FNC": {
    "to": "FNC",
