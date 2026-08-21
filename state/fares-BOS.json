@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-21T08:18:25-04:00",
+ "generated": "2026-08-21T10:17:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 261,
+   "price": 264,
    "d1": "2026-09-24",
-   "d2": "2026-09-27",
-   "dep": "8:40AM",
-   "al": "Southwest",
+   "d2": "2026-09-28",
+   "dep": "10:03AM",
+   "al": "Alaska",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:35AM",
-   "arr": "3:25PM",
-   "rarr": "6:20AM",
-   "pct": 57
+   "rdep": "11:31AM",
+   "arr": "7:15PM",
+   "rarr": "8:04PM",
+   "pct": 56
   },
   "SFO": {
    "to": "SFO",
@@ -233,17 +233,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 364,
-   "d1": "2026-12-02",
-   "d2": "2026-12-09",
-   "dep": "7:40PM",
-   "al": "American",
-   "stops": 2,
+   "price": 411,
+   "d1": "2026-09-07",
+   "d2": "2026-09-13",
+   "dep": "7:39AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "3:10PM",
-   "arr": "3:24AM+1",
-   "rarr": "9:16PM",
-   "pct": 41
+   "rdep": "5:00PM",
+   "arr": "12:35PM",
+   "rarr": "9:52PM",
+   "pct": 34
   },
   "CUN": {
    "to": "CUN",
