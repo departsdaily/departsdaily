@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-20T20:15:08-04:00",
+ "generated": "2026-08-20T22:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 47,
+ "routes_priced": 48,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -49,6 +49,21 @@
    "arr": "5:25AM+1",
    "rarr": "8:50PM",
    "pct": 5
+  },
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 178,
+   "d1": "2026-09-16",
+   "d2": "2026-09-18",
+   "dep": "9:32AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "1:00PM",
+   "arr": "1:40PM",
+   "rarr": "5:06PM",
+   "pct": 59
   },
   "BZE": {
    "to": "BZE",

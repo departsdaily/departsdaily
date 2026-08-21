@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-20T20:17:52-04:00",
+ "generated": "2026-08-20T22:18:08-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -64,21 +64,6 @@
    "arr": "9:33PM",
    "rarr": "11:44AM",
    "pct": 59
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 321,
-   "d1": "2026-08-28",
-   "d2": "2026-09-03",
-   "dep": "1:30PM",
-   "al": "JetBlue",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:31PM",
-   "arr": "5:39PM",
-   "rarr": "11:28PM",
-   "pct": 44
   },
   "LAS": {
    "to": "LAS",
@@ -293,17 +278,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 294,
-   "d1": "2026-09-05",
-   "d2": "2026-09-12",
-   "dep": "12:45PM",
-   "al": "Frontier",
+   "price": 322,
+   "d1": "2026-10-03",
+   "d2": "2026-10-10",
+   "dep": "8:25PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:17PM",
-   "arr": "6:41PM",
-   "rarr": "6:59PM",
-   "pct": 46
+   "rdep": "4:55PM",
+   "arr": "1:58AM+1",
+   "rarr": "10:04PM",
+   "pct": 40
   },
   "NAS": {
    "to": "NAS",
