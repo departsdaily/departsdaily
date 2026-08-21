@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-21T12:16:03-04:00",
+ "generated": "2026-08-21T14:15:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -79,6 +79,21 @@
    "arr": "4:47PM",
    "rarr": "10:12PM",
    "pct": 65
+  },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 360,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30",
+   "dep": "4:16PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "10:10AM",
+   "arr": "9:04PM",
+   "rarr": "11:15AM",
+   "pct": 17
   },
   "LAS": {
    "to": "LAS",
@@ -323,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 477,
-   "d1": "2026-12-03",
-   "d2": "2026-12-08",
-   "dep": "12:10PM",
+   "price": 628,
+   "d1": "2026-08-28",
+   "d2": "2026-09-01",
+   "dep": "12:25PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:45PM",
-   "arr": "8:34PM",
-   "rarr": "5:05AM+1",
-   "pct": 15
+   "rdep": "5:05PM",
+   "arr": "8:35PM",
+   "rarr": "1:49AM+1",
+   "pct": -12
   },
   "ROM": {
    "to": "ROM",
