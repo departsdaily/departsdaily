@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-21T14:15:03-04:00",
+ "generated": "2026-08-21T16:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 48,
+ "routes_priced": 50,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -229,6 +229,21 @@
    "arr": "2:09AM+1",
    "rarr": "4:31AM+1",
    "pct": 71
+  },
+  "LIM": {
+   "to": "LIM",
+   "city": "Lima",
+   "price": 747,
+   "d1": "2026-09-02",
+   "d2": "2026-09-16",
+   "dep": "9:46AM",
+   "al": "Frontier",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "2:30AM",
+   "arr": "9:24PM",
+   "rarr": "1:59PM",
+   "pct": 0
   },
   "LIS": {
    "to": "LIS",
@@ -484,6 +499,21 @@
    "arr": "5:30AM+1",
    "rarr": "8:50PM",
    "pct": 37
+  },
+  "PNS": {
+   "to": "PNS",
+   "city": "Pensacola",
+   "price": 224,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "dep": "6:50AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:45AM",
+   "arr": "9:45AM",
+   "rarr": "10:35AM",
+   "pct": 0
   },
   "PSP": {
    "to": "PSP",

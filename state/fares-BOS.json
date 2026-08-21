@@ -1,10 +1,25 @@
 {
  "origin": "BOS",
- "generated": "2026-08-21T14:17:42-04:00",
+ "generated": "2026-08-21T16:18:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
+  "AUS": {
+   "to": "AUS",
+   "city": "Austin",
+   "price": 301,
+   "d1": "2026-08-27",
+   "d2": "2026-08-30",
+   "dep": "9:36AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:25AM",
+   "arr": "2:59PM",
+   "rarr": "12:34PM",
+   "pct": 44
+  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",

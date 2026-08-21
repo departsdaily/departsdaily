@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-21T14:15:40-04:00",
+ "generated": "2026-08-21T16:15:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -68,7 +68,7 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 115,
+   "price": 118,
    "d1": "2026-09-30",
    "d2": "2026-10-05",
    "dep": "6:30AM",
@@ -78,7 +78,7 @@
    "rdep": "8:55PM",
    "arr": "9:15AM",
    "rarr": "11:23PM",
-   "pct": 72
+   "pct": 71
   },
   "DFW": {
    "to": "DFW",
@@ -323,17 +323,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 458,
-   "d1": "2026-10-12",
-   "d2": "2026-10-18",
-   "dep": "7:29PM",
+   "price": 433,
+   "d1": "2026-08-28",
+   "d2": "2026-09-01",
+   "dep": "8:53PM",
    "al": "American",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "5:13PM",
-   "arr": "12:26AM+1",
-   "rarr": "10:36PM",
-   "pct": 15
+   "rdep": "2:52PM",
+   "arr": "1:56AM+1",
+   "rarr": "10:14PM",
+   "pct": 20
   },
   "NAS": {
    "to": "NAS",
