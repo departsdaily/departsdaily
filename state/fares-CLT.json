@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-21T10:15:04-04:00",
+ "generated": "2026-08-21T12:15:08-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 49,
+ "routes_priced": 48,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -604,21 +604,6 @@
    "arr": "6:25PM",
    "rarr": "4:15PM",
    "pct": 1
-  },
-  "SJU": {
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 290,
-   "d1": "2026-09-05",
-   "d2": "2026-09-12",
-   "dep": "3:10PM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "3:08AM",
-   "arr": "7:59PM",
-   "rarr": "8:12AM",
-   "pct": 31
   },
   "SNA": {
    "to": "SNA",

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-21T10:15:39-04:00",
+ "generated": "2026-08-21T12:15:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 145,
-   "d1": "2026-09-26",
-   "d2": "2026-10-03",
-   "dep": "12:00PM",
-   "al": "American",
-   "stops": 0,
+   "price": 153,
+   "d1": "2026-10-08",
+   "d2": "2026-10-12",
+   "dep": "5:54PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:45PM",
-   "arr": "2:39PM",
-   "rarr": "9:05PM",
-   "pct": 63
+   "rdep": "11:47AM",
+   "arr": "12:08AM+1",
+   "rarr": "6:21PM",
+   "pct": 61
   },
   "DCA": {
    "to": "DCA",
@@ -143,9 +143,9 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 108,
+   "price": 120,
    "d1": "2026-10-09",
-   "d2": "2026-10-17",
+   "d2": "2026-10-11",
    "dep": "8:01PM",
    "al": "Frontier",
    "stops": 0,
@@ -153,7 +153,7 @@
    "rdep": "12:21AM",
    "arr": "12:51AM+1",
    "rarr": "4:34AM",
-   "pct": 81
+   "pct": 79
   },
   "MCO": {
    "to": "MCO",
