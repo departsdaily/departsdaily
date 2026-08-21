@@ -15,85 +15,85 @@
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-21/slide1_board.png?v=32474627787-1",
+    "image_url": "https://departsdaily.com/daily/2026-08-21/slide1_board.png?v=32479230428-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
    "response": {
-    "id": "18070005230522385"
+    "id": "18070015814522385"
    }
   },
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-21/slide2_board.png?v=32474627787-1",
+    "image_url": "https://departsdaily.com/daily/2026-08-21/slide2_board.png?v=32479230428-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
    "response": {
-    "id": "18070005251522385"
+    "id": "18070015832522385"
    }
   },
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-21/slide3_board.png?v=32474627787-1",
+    "image_url": "https://departsdaily.com/daily/2026-08-21/slide3_board.png?v=32479230428-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
    "response": {
-    "id": "18070005299522385"
+    "id": "18070015850522385"
    }
   },
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-21/slide4_board.png?v=32474627787-1",
+    "image_url": "https://departsdaily.com/daily/2026-08-21/slide4_board.png?v=32479230428-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
    "response": {
-    "id": "18070005326522385"
+    "id": "18070015868522385"
    }
   },
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-21/slide5_board.png?v=32474627787-1",
+    "image_url": "https://departsdaily.com/daily/2026-08-21/slide5_board.png?v=32479230428-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
    "response": {
-    "id": "18070005359522385"
+    "id": "18070015892522385"
    }
   },
   {
    "call": "me/media",
    "params": {
-    "image_url": "https://departsdaily.com/daily/2026-08-21/slide6_cta.png?v=32474627787-1",
+    "image_url": "https://departsdaily.com/daily/2026-08-21/slide6_cta.png?v=32479230428-1",
     "is_carousel_item": "true",
     "access_token": "<redacted>"
    },
    "response": {
-    "id": "18070005410522385"
+    "id": "18070015943522385"
    }
   },
   {
    "call": "me/media",
    "params": {
     "media_type": "CAROUSEL",
-    "children": "18070005230522385,18070005251522385,18070005299522385,18070005326522385,18070005359522385,18070005410522385",
+    "children": "18070015814522385,18070015832522385,18070015850522385,18070015868522385,18070015892522385,18070015943522385",
     "caption": "\u2708\ufe0f CLT DEPARTURES \u00b7 FRI, AUG 21\nThree trip lengths and the cheapest fares out of CLT, every morning.\n\n\n\u2014 LONG WEEKEND (Thu/Fri out, Sun/Mon back \u00b7 2\u20134 nights) \u2014\n\ud83c\udf07 Los Angeles \u2014 $203 round trip \u00b7 3 nights (34% below typical)\n\ud83c\udfb0 Las Vegas \u2014 $251 round trip \u00b7 4 nights (26% below typical)\n\u2708\ufe0f St. Maarten \u2014 $447 round trip \u00b7 3 nights (26% below typical)\n\u2708\ufe0f Portland, OR \u2014 $289 round trip \u00b7 3 nights (15% below typical)\n\n\u2014 EXTRA LONG WEEKEND (Wed\u2013Fri out, Sun\u2013Wed back \u00b7 4\u20137 nights) \u2014\n\u2708\ufe0f Providenciales \u2014 $379 round trip \u00b7 4 nights (45% below typical)\n\ud83c\udf07 Los Angeles \u2014 $208 round trip \u00b7 7 nights (32% below typical)\n\ud83c\udf09 San Francisco \u2014 $267 round trip \u00b7 4 nights (29% below typical)\n\ud83c\udf35 Phoenix \u2014 $216 round trip \u00b7 5 nights (23% below typical)\n\u2708\ufe0f Curacao \u2014 $535 round trip \u00b7 5 nights (13% below typical)\n\n\u2014 WEEK-ISH (Thu\u2013Sat out, back the following Thu\u2013Mon \u00b7 5\u201311 nights) \u2014\n\ud83c\udf07 Los Angeles \u2014 $208 round trip \u00b7 7 nights (32% below typical)\n\u2708\ufe0f Mallorca \u2014 $597 round trip \u00b7 8 nights (34% below typical)\n\ud83e\udd65 Punta Cana \u2014 $425 round trip \u00b7 6 nights (17% below typical)\n\n\u2014 CHEAPEST OUT OF CLT (every other shape \u00b7 no discount claimed) \u2014\n\ud83c\udfb0 Las Vegas \u2014 $173 round trip \u00b7 5 nights (43% below typical)\n\ud83c\udf07 Los Angeles \u2014 $214 round trip \u00b7 3 nights (31% below typical)\n\u2708\ufe0f Santo Domingo \u2014 $302 round trip \u00b7 17 nights (41% below typical)\n\ud83c\udfd6\ufe0f Canc\u00fan \u2014 $532 round trip (best fare we found today)\n\u2708\ufe0f Providenciales \u2014 $549 round trip \u00b7 6 nights (21% below typical)\n\u2708\ufe0f Barcelona \u2014 $718 round trip \u00b7 10 nights (14% below typical)\n\n(+3 more on the slides \u2014 swipe)\n\nOut Thursday or Friday, back Sunday or Monday. 2 to 4 nights. Built for a normal 9 to 5.\n\n\ud83d\udcc5 Exact dates on every slide\n\u2705 Every fare verified before posting \u2014 fares move fast and aren't guaranteed\n\ud83d\udd0e Want different dates? Search every flight out of CLT from the button on departsdaily.com\n\ud83d\udd17 Booking links in bio\n\ud83c\udf05 New board every morning at 7AM \u2014 follow so you don't miss the next $173 flight\n\n#CLT #Charlotte #QueenCity #CharlotteNC #CLTAirport #CheapFlights #FlightDeals #TravelDeals #BudgetTravel #WeekendGetaway #VacationMode #BigTrip #LosAngeles #LasVegas #StMaarten",
     "access_token": "<redacted>"
    },
    "response": {
-    "id": "18070005443522385"
+    "id": "18070015973522385"
    }
   },
   {
    "call": "me/media_publish",
    "params": {
-    "creation_id": "18070005443522385",
+    "creation_id": "18070015973522385",
     "access_token": "<redacted>"
    },
    "response": {
@@ -105,7 +105,7 @@
      "error_subcode": 2207051,
      "error_user_title": "action is blocked",
      "error_user_msg": "We restrict certain activity to protect our community. Tell us if you think we made a mistake.",
-     "fbtrace_id": "A2pvggvVjrElFqW06M1P_QT"
+     "fbtrace_id": "AYf4STd7IHuimcnPVgBkwZU"
     }
    },
    "status": 403
