@@ -4,8 +4,7 @@
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 55,
-  "fetch failed": 6,
+  "no fares": 61,
   "not a deal": 20,
   "qualified": 14,
   "no fares in window": 12
@@ -212,28 +211,28 @@
    "why": "the fare cache returned nothing"
   },
   "SJD": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "SKB": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "SLC": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "STT": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "STX": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "SVD": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "TUS": {
    "outcome": "no fares",
@@ -633,12 +632,12 @@
   },
   "SMF": {
    "outcome": "not a deal",
-   "price": 458,
-   "typical": 307,
-   "disc_pct": -49,
-   "d1": "2026-11-24",
+   "price": 379,
+   "typical": 290,
+   "disc_pct": -31,
+   "d1": "2026-10-14",
    "d2": "2026-11-30",
-   "nights": 6,
+   "nights": 47,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
