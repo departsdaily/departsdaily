@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-21T06:17:51-04:00",
+ "generated": "2026-08-21T08:18:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 259,
-   "d1": "2026-09-12",
-   "d2": "2026-09-15",
-   "dep": "8:54AM",
-   "al": "American",
+   "price": 281,
+   "d1": "2026-09-21",
+   "d2": "2026-09-23",
+   "dep": "6:19AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:31PM",
-   "arr": "1:07PM",
-   "rarr": "5:46PM",
-   "pct": 36
+   "rdep": "7:20AM",
+   "arr": "10:53AM",
+   "rarr": "11:31AM",
+   "pct": 31
   },
   "AMS": {
    "to": "AMS",
@@ -278,17 +278,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 352,
-   "d1": "2026-09-19",
-   "d2": "2026-09-26",
-   "dep": "5:56PM",
+   "price": 748,
+   "d1": "2026-12-16",
+   "d2": "2027-01-05",
+   "dep": "7:15AM",
    "al": "American",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:17PM",
-   "arr": "12:15AM+1",
-   "rarr": "5:48PM",
-   "pct": 35
+   "rdep": "4:11PM",
+   "arr": "12:46PM",
+   "rarr": "9:25PM",
+   "pct": -39
   },
   "NAS": {
    "to": "NAS",
