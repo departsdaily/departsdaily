@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-20T22:15:13-04:00",
+ "generated": "2026-08-21T00:15:04-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 48,
+ "routes_priced": 49,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -38,17 +38,17 @@
   "BCN": {
    "to": "BCN",
    "city": "Barcelona",
-   "price": 835,
-   "d1": "2026-09-19",
-   "d2": "2026-09-26",
-   "dep": "6:40PM",
-   "al": "United",
-   "stops": 1,
+   "price": 775,
+   "d1": "2026-09-04",
+   "d2": "2026-09-15",
+   "dep": "5:43PM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "9:05AM",
-   "arr": "5:25AM+1",
-   "rarr": "8:50PM",
-   "pct": 5
+   "rdep": "10:30AM",
+   "arr": "4:59AM+1",
+   "rarr": "11:07PM",
+   "pct": 12
   },
   "BNA": {
    "to": "BNA",
@@ -83,17 +83,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 578,
-   "d1": "2026-11-11",
-   "d2": "2026-11-15",
-   "dep": "8:55AM",
-   "al": "Air Canada",
-   "stops": 2,
+   "price": 532,
+   "d1": "2026-12-09",
+   "d2": "2026-12-19",
+   "dep": "9:00AM",
+   "al": "JetBlue",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:25AM",
-   "arr": "3:17PM",
-   "rarr": "5:31PM",
-   "pct": -11
+   "rdep": "1:20PM",
+   "arr": "1:05PM",
+   "rarr": "5:18PM",
+   "pct": -2
   },
   "CUR": {
    "to": "CUR",
@@ -184,6 +184,21 @@
    "arr": "10:52PM",
    "rarr": "10:36PM",
    "pct": 1
+  },
+  "GUA": {
+   "to": "GUA",
+   "city": "Guatemala City",
+   "price": 780,
+   "d1": "2026-12-19",
+   "d2": "2027-01-03",
+   "dep": "12:34PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:04PM",
+   "arr": "5:43PM",
+   "rarr": "11:08PM",
+   "pct": -26
   },
   "LAS": {
    "to": "LAS",

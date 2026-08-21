@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-20T22:16:32-04:00",
+ "generated": "2026-08-21T00:16:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -244,6 +244,21 @@
    "arr": "7:40PM",
    "rarr": "7:20AM+1",
    "pct": -29
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 1420,
+   "d1": "2026-12-19",
+   "d2": "2027-01-02",
+   "dep": "3:40PM",
+   "al": "Icelandair",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "11:15AM",
+   "arr": "5:25AM+1",
+   "rarr": "2:25AM+1",
+   "pct": -49
   }
  }
 }

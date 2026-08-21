@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-20T22:15:34-04:00",
+ "generated": "2026-08-21T00:15:23-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 266,
-   "d1": "2026-09-04",
-   "d2": "2026-09-09",
-   "dep": "7:57AM",
-   "al": "Frontier",
+   "price": 155,
+   "d1": "2026-11-19",
+   "d2": "2026-11-22",
+   "dep": "2:45PM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:16PM",
-   "arr": "1:19PM",
-   "rarr": "5:27AM+1",
-   "pct": 61
+   "rdep": "12:20AM",
+   "arr": "8:10PM",
+   "rarr": "5:40AM",
+   "pct": 77
   },
   "LAX": {
    "to": "LAX",
@@ -248,17 +248,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 231,
-   "d1": "2026-08-23",
-   "d2": "2026-08-28",
-   "dep": "12:06PM",
+   "price": 242,
+   "d1": "2026-10-11",
+   "d2": "2026-10-17",
+   "dep": "8:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:10AM",
-   "arr": "2:54PM",
-   "rarr": "4:47PM",
-   "pct": 56
+   "rdep": "10:49AM",
+   "arr": "2:09PM",
+   "rarr": "5:13PM",
+   "pct": 53
   },
   "LON": {
    "to": "LON",
