@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-20T18:17:33-04:00",
+ "generated": "2026-08-20T20:17:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -113,17 +113,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 199,
-   "d1": "2026-10-22",
-   "d2": "2026-10-31",
-   "dep": "5:50AM",
+   "price": 227,
+   "d1": "2026-09-29",
+   "d2": "2026-10-06",
+   "dep": "11:25AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "12:46PM",
-   "rarr": "12:30PM",
-   "pct": 73
+   "rdep": "6:05AM",
+   "arr": "7:15PM",
+   "rarr": "12:22PM",
+   "pct": 69
   },
   "MCO": {
    "to": "MCO",
@@ -184,21 +184,6 @@
    "arr": "3:45PM",
    "rarr": "10:23AM",
    "pct": 77
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 251,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
-   "dep": "8:50PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "4:35PM",
-   "arr": "11:55PM",
-   "rarr": "7:45PM",
-   "pct": 34
   },
   "SEA": {
    "to": "SEA",
@@ -263,7 +248,7 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 877,
+   "price": 884,
    "d1": "2026-08-27",
    "d2": "2026-09-05",
    "dep": "5:28PM",
@@ -273,22 +258,22 @@
    "rdep": "8:00AM",
    "arr": "5:28AM+1",
    "rarr": "8:20PM",
-   "pct": -3
+   "pct": -4
   },
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 557,
+   "price": 563,
    "d1": "2026-09-18",
    "d2": "2026-09-27",
-   "dep": "6:21AM",
+   "dep": "6:01AM",
    "al": "Copa",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:22PM",
-   "arr": "11:33AM",
+   "arr": "11:13AM",
    "rarr": "5:38PM",
-   "pct": -3
+   "pct": -4
   },
   "NAS": {
    "to": "NAS",

@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-20T18:16:35-04:00",
+ "generated": "2026-08-20T20:16:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 16,
  "routes_failed": [],
@@ -218,32 +218,32 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 876,
-   "d1": "2026-09-30",
-   "d2": "2026-10-07",
+   "price": 750,
+   "d1": "2026-09-23",
+   "d2": "2026-09-30",
    "dep": "6:56PM",
    "al": "",
-   "stops": 3,
+   "stops": 2,
    "xfer": 1,
-   "rdep": "1:50PM",
+   "rdep": "11:15AM",
    "arr": "7:41AM+1",
-   "rarr": "7:00AM+1",
-   "pct": 3
+   "rarr": "12:25AM+1",
+   "pct": 17
   },
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 1048,
-   "d1": "2026-12-18",
-   "d2": "2027-01-01",
-   "dep": "11:44AM",
-   "al": "Aerom\u00e9xico",
+   "price": 721,
+   "d1": "2026-12-13",
+   "d2": "2026-12-25",
+   "dep": "11:20AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:52PM",
-   "arr": "8:16PM",
-   "rarr": "1:41AM+1",
-   "pct": -87
+   "rdep": "10:40PM",
+   "arr": "7:40PM",
+   "rarr": "7:20AM+1",
+   "pct": -29
   }
  }
 }

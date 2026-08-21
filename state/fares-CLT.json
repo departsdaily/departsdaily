@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-20T18:15:13-04:00",
+ "generated": "2026-08-20T20:15:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 47,
  "routes_failed": [],
@@ -683,17 +683,17 @@
   "YUL": {
    "to": "YUL",
    "city": "Montreal",
-   "price": 540,
-   "d1": "2026-10-03",
-   "d2": "2026-10-11",
-   "dep": "4:01PM",
+   "price": 524,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
+   "dep": "3:59PM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "7:20PM",
-   "arr": "7:41PM",
-   "rarr": "1:41AM+1",
-   "pct": -4
+   "rdep": "6:45AM",
+   "arr": "7:20PM",
+   "rarr": "1:40PM",
+   "pct": -1
   },
   "YYC": {
    "to": "YYC",
