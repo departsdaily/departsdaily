@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-21T00:17:11-04:00",
+ "generated": "2026-08-21T02:17:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,6 +184,21 @@
    "arr": "3:45PM",
    "rarr": "10:23AM",
    "pct": 77
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 115,
+   "d1": "2026-09-29",
+   "d2": "2026-10-02",
+   "dep": "8:50PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "4:42PM",
+   "arr": "11:55PM",
+   "rarr": "7:45PM",
+   "pct": 70
   },
   "SEA": {
    "to": "SEA",

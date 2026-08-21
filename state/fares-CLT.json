@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-21T00:15:04-04:00",
+ "generated": "2026-08-21T02:15:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 49,
  "routes_failed": [],
@@ -38,8 +38,8 @@
   "BCN": {
    "to": "BCN",
    "city": "Barcelona",
-   "price": 775,
-   "d1": "2026-09-04",
+   "price": 718,
+   "d1": "2026-09-05",
    "d2": "2026-09-15",
    "dep": "5:43PM",
    "al": "Frontier",
@@ -48,7 +48,7 @@
    "rdep": "10:30AM",
    "arr": "4:59AM+1",
    "rarr": "11:07PM",
-   "pct": 12
+   "pct": 18
   },
   "BNA": {
    "to": "BNA",
