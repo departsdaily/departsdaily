@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-22T16:16:18-04:00",
+ "generated": "2026-08-22T18:03:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -233,7 +233,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 235,
+   "price": 238,
    "d1": "2026-10-02",
    "d2": "2026-10-04",
    "dep": "2:26PM",
@@ -241,9 +241,9 @@
    "stops": 1,
    "xfer": 0,
    "rdep": "12:24AM",
-   "arr": "7:40PM",
+   "arr": "7:43PM",
    "rarr": "4:20AM",
-   "pct": 50
+   "pct": 49
   },
   "SFO": {
    "to": "SFO",
