@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-22T06:15:12-04:00",
+ "generated": "2026-08-22T06:54:25-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 50,
+ "routes_priced": 49,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -619,21 +619,6 @@
    "arr": "11:38PM",
    "rarr": "6:19AM+1",
    "pct": 67
-  },
-  "SJO": {
-   "to": "SJO",
-   "city": "San Jos\u00e9, Costa Rica",
-   "price": 593,
-   "d1": "2026-10-01",
-   "d2": "2026-10-20",
-   "dep": "11:15AM",
-   "al": "Southwest",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "9:00AM",
-   "arr": "6:25PM",
-   "rarr": "4:15PM",
-   "pct": 1
   },
   "SNA": {
    "to": "SNA",
