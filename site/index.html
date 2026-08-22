@@ -6,6 +6,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CLT Departs — Cheap flights out of Charlotte. Every day.</title>
 <meta name="description" content="Cheap flights out of Charlotte Douglas, found and checked every morning. Long weekends, week long trips and two week escapes from CLT, every fare compared against its route average.">
+<link rel="canonical" href="https://departsdaily.com/">
+<meta name="robots" content="max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Departs Daily">
+<meta property="og:title" content="CLT Departs — Cheap flights out of Charlotte. Every day.">
+<meta property="og:description" content="Cheap flights out of Charlotte Douglas, found and checked every morning. Long weekends, week long trips and two week escapes from CLT, every fare compared against its route average.">
+<meta property="og:url" content="https://departsdaily.com/">
+<meta property="og:image" content="https://departsdaily.com/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CLT Departs — Cheap flights out of Charlotte. Every day.">
+<meta name="twitter:description" content="Cheap flights out of Charlotte Douglas, found and checked every morning. Long weekends, week long trips and two week escapes from CLT, every fare compared against its route average.">
+<meta name="twitter:image" content="https://departsdaily.com/og/default.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "name": "Departs Daily",
+   "url": "https://departsdaily.com",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://departsdaily.com/logo.png"
+   },
+   "sameAs": [
+    "https://www.instagram.com/cltdeparts"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "name": "Departs Daily",
+   "url": "https://departsdaily.com",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Departs Daily",
+    "url": "https://departsdaily.com",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://departsdaily.com/logo.png"
+    },
+    "sameAs": [
+     "https://www.instagram.com/cltdeparts"
+    ]
+   },
+   "description": "Cheap flights out of Charlotte Douglas, checked every morning against each route's average fare."
+  }
+ ]
+}
+</script>
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -641,6 +692,22 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 
 </div>
 
+<!-- Email capture, moved up (Aug 20 2026). GA4 Jun 1-Aug 19 showed 228 sessions,
+     96% landing on "/" with 21s average engagement — nobody was scrolling far
+     enough to reach the capture at the bottom of the page, which is the simplest
+     explanation for zero signups. This one sits directly under the board. -->
+<section id="getboard">
+  <div class="signup">
+    <h2>Get tomorrow's board <span class="amber">before you go looking for it</span></h2>
+    <p class="sub" style="margin:0 auto 16px">One short email each morning: every Charlotte fare that beat its route average, with the dates and the link. Free, and one click to leave.</p>
+    <form id="signuptop" action="https://formspree.io/f/xwleoyzl" method="POST">
+      <input type="hidden" name="form-name" value="board-signup-top">
+      <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
+      <button type="submit">Send me the board</button>
+    </form>
+  </div>
+</section>
+
 <section id="rest">
   <h2>Book the <span class="amber">rest</span> of the trip</h2>
   <p class="sub">The flight is the cheap part. These are the pieces most people book next.</p>
@@ -699,7 +766,7 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 <section>
   <div class="signup">
     <h2>Get the board by email</h2>
-    <p class="sub" style="margin:0 auto 16px">One email, every morning. The deals, the dates, the links. Free.</p>
+    <p class="sub" style="margin:0 auto 16px">You just scrolled the whole board. Get it in your inbox tomorrow instead — every CLT fare that beat its route average, with the dates and the link. Free.</p>
     <form id="signupform" action="https://formspree.io/f/xwleoyzl" method="POST">
       <input type="hidden" name="form-name" value="board-signup">
       <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address">
@@ -720,12 +787,12 @@ header{position:static;backdrop-filter:none;background:var(--navy)}
 
 <footer><div class="wrap">
   <p><b style="color:var(--white)">Departs Daily</b> · departsdaily.com · @CLTdeparts on Instagram, TikTok &amp; YouTube</p>
-  <p><a href="#guides">City Guides</a> · <a href="book.html">Booking Desk</a> · <a href="gear.html">Travel Gear</a> · <a href="disclosure.html">Affiliate Disclosure</a> · <a href="terms.html">Terms of Use</a> · <a href="privacy.html">Privacy Policy</a></p>
+  <p><a href="#guides">City Guides</a> · <a href="book.html">Booking Desk</a> · <a href="gear.html">Travel Gear</a> · <a href="about.html">About</a> · <a href="disclosure.html">Affiliate Disclosure</a> · <a href="terms.html">Terms of Use</a> · <a href="privacy.html">Privacy Policy</a></p>
   <p><b style="color:var(--white)">Important disclaimers.</b> Departs Daily is an independent, advertising- and affiliate-supported publisher of travel information. We are not a travel agency, airline, or seller of travel; we do not sell tickets, take payments, or make bookings. All bookings are made directly with third-party providers under their own terms, prices, and policies.</p>
   <p><b style="color:var(--white)">Prices.</b> Airfares change constantly and without notice. Every fare shown was verified at the date and time stamped on the board, is not guaranteed, and may no longer be available. Clicking a deal runs a live search so you always see the current price before booking; the price shown by the booking site at checkout is the only price that applies. Deals automatically expire off our boards after their posted window.</p>
   <p><b style="color:var(--white)">Averages &amp; methodology.</b> "Below average" comparisons on domestic routes use the U.S. DOT/BTS Consumer Airfare Report (average city-pair fares, all four quarters of 2025, each-way fares doubled to a round-trip equivalent; includes all cabins, taxes and fees). DOT does not publish international city-pair fares; international averages and all month-by-month seasonality patterns are our own estimates from public fare tracking, provided for general guidance only. Departs Daily is not affiliated with or endorsed by the U.S. Department of Transportation.</p>
   <p><b style="color:var(--white)">Trademarks.</b> Airline, hotel, and brand names are trademarks of their respective owners and are used for identification only; their use implies no affiliation or endorsement.</p>
-  <p>Affiliate disclosure: some links on this site are affiliate links, meaning we may earn a commission if you book or buy — at no extra cost to you. See our full <a href="disclosure.html">Affiliate Disclosure</a> and <a href="terms.html">Terms of Use</a>. All content is provided "as is" without warranties of any kind; your use of this site is at your own risk and subject to the Terms of Use.</p>
+  <p>Affiliate disclosure: some links on this site are affiliate links, meaning we may earn a commission if you book or buy — at no extra cost to you. See our full <a href="about.html">About</a> · <a href="disclosure.html">Affiliate Disclosure</a> and <a href="terms.html">Terms of Use</a>. All content is provided "as is" without warranties of any kind; your use of this site is at your own risk and subject to the Terms of Use.</p>
   <div class="lights"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 </div></footer>
 
@@ -1571,6 +1638,7 @@ function wireForm(id, okHTML){
   });
 }
 wireForm("sugform",'<p style="color:var(--green)">Thanks — suggestion received. ✈</p>');
+wireForm("signuptop",'<p style="color:var(--green)">You are on the list. ✈</p>');
 wireForm("signupform",'<p style="color:var(--green)">You are on the list. ✈</p>');
 
 /* Initial render — after all sections above are defined.
