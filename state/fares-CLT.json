@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-21T22:15:19-04:00",
+ "generated": "2026-08-22T00:15:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 49,
+ "routes_priced": 50,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -563,17 +563,32 @@
   "SAL": {
    "to": "SAL",
    "city": "San Salvador",
-   "price": 1106,
-   "d1": "2026-12-17",
-   "d2": "2027-01-07",
-   "dep": "9:34AM",
-   "al": "Frontier",
-   "stops": 2,
+   "price": 402,
+   "d1": "2026-08-26",
+   "d2": "2026-09-10",
+   "dep": "7:05AM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:14AM",
-   "arr": "6:40PM",
-   "rarr": "5:50PM",
-   "pct": -78
+   "rdep": "12:24PM",
+   "arr": "12:06PM",
+   "rarr": "5:22PM",
+   "pct": 35
+  },
+  "SDQ": {
+   "to": "SDQ",
+   "city": "Santo Domingo",
+   "price": 504,
+   "d1": "2026-08-27",
+   "d2": "2026-09-04",
+   "dep": "7:05AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:22PM",
+   "arr": "11:44AM",
+   "rarr": "7:11PM",
+   "pct": 7
   },
   "SEA": {
    "to": "SEA",
@@ -728,17 +743,17 @@
   "YYC": {
    "to": "YYC",
    "city": "Calgary",
-   "price": 785,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "dep": "4:20PM",
-   "al": "American",
-   "stops": 2,
+   "price": 496,
+   "d1": "2026-09-05",
+   "d2": "2026-09-10",
+   "dep": "1:02PM",
+   "al": "Frontier",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "10:38PM",
-   "rarr": "4:05PM",
-   "pct": -15
+   "rdep": "9:00PM",
+   "arr": "8:12PM",
+   "rarr": "7:14AM+1",
+   "pct": 27
   }
  }
 }

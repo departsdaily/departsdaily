@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-21T22:16:51-04:00",
+ "generated": "2026-08-22T00:16:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 160,
-   "d1": "2026-08-24",
-   "d2": "2026-08-27",
-   "dep": "10:49PM",
+   "price": 208,
+   "d1": "2026-11-02",
+   "d2": "2026-11-07",
+   "dep": "6:56PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "2:52AM+1",
-   "rarr": "10:23AM",
-   "pct": 72
+   "rdep": "5:05AM",
+   "arr": "10:44PM",
+   "rarr": "10:55AM",
+   "pct": 63
   },
   "MSY": {
    "to": "MSY",
@@ -263,17 +263,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 1420,
-   "d1": "2026-12-19",
-   "d2": "2027-01-02",
-   "dep": "3:40PM",
-   "al": "Icelandair",
+   "price": 1343,
+   "d1": "2026-12-20",
+   "d2": "2027-01-03",
+   "dep": "11:28PM",
+   "al": "",
    "stops": 2,
-   "xfer": 0,
-   "rdep": "11:15AM",
-   "arr": "5:25AM+1",
-   "rarr": "2:25AM+1",
-   "pct": -49
+   "xfer": 1,
+   "rdep": "6:40AM",
+   "arr": "1:10PM+1",
+   "rarr": "9:50PM",
+   "pct": -41
   }
  }
 }

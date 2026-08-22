@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-21T22:18:16-04:00",
+ "generated": "2026-08-22T00:17:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 14,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 158,
-   "d1": "2026-10-03",
-   "d2": "2026-10-09",
-   "dep": "7:36PM",
+   "price": 130,
+   "d1": "2026-10-02",
+   "d2": "2026-10-05",
+   "dep": "8:43PM",
    "al": "Alaska",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "9:49PM",
-   "rarr": "11:51AM",
-   "pct": 60
+   "rdep": "7:11PM",
+   "arr": "10:54PM",
+   "rarr": "9:25PM",
+   "pct": 67
   },
   "LON": {
    "to": "LON",
