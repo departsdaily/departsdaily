@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-22T14:15:17-04:00",
+ "generated": "2026-08-22T16:02:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 51,
  "routes_failed": [],
@@ -473,17 +473,17 @@
   "PLS": {
    "to": "PLS",
    "city": "Providenciales",
-   "price": 387,
-   "d1": "2026-12-09",
-   "d2": "2026-12-13",
-   "dep": "5:10PM",
-   "al": "Air Canada",
-   "stops": 1,
+   "price": 872,
+   "d1": "2026-09-11",
+   "d2": "2026-09-15",
+   "dep": "4:01PM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "1:20PM",
-   "arr": "11:22PM",
-   "rarr": "7:41PM",
-   "pct": 41
+   "rdep": "11:00AM",
+   "arr": "9:45PM",
+   "rarr": "3:50PM",
+   "pct": -32
   },
   "PMI": {
    "to": "PMI",
