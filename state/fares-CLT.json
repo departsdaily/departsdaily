@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-22T10:32:13-04:00",
+ "generated": "2026-08-22T12:15:18-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 51,
+ "routes_priced": 52,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -169,6 +169,21 @@
    "arr": "2:53AM+1",
    "rarr": "1:44PM+1",
    "pct": -24
+  },
+  "FRA": {
+   "to": "FRA",
+   "city": "Frankfurt",
+   "price": 968,
+   "d1": "2026-10-14",
+   "d2": "2026-10-24",
+   "dep": "9:32AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:55AM",
+   "arr": "10:40PM",
+   "rarr": "10:47PM",
+   "pct": -8
   },
   "GND": {
    "to": "GND",
@@ -458,17 +473,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 216,
-   "d1": "2026-09-02",
+   "price": 505,
+   "d1": "2026-09-03",
    "d2": "2026-09-07",
-   "dep": "6:35PM",
-   "al": "Southwest",
-   "stops": 1,
+   "dep": "9:52PM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "5:00AM",
-   "arr": "12:10AM+1",
-   "rarr": "9:40AM",
-   "pct": 68
+   "rdep": "12:42PM",
+   "arr": "6:48AM+1",
+   "rarr": "9:12PM",
+   "pct": 24
   },
   "PLS": {
    "to": "PLS",

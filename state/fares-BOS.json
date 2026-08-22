@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-22T10:35:08-04:00",
+ "generated": "2026-08-22T12:18:28-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 264,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "dep": "10:03AM",
-   "al": "Alaska",
-   "stops": 1,
+   "price": 413,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
+   "dep": "8:40PM",
+   "al": "JetBlue",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "11:31AM",
-   "arr": "7:15PM",
-   "rarr": "8:04PM",
-   "pct": 56
+   "rdep": "7:38PM",
+   "arr": "4:18AM+1",
+   "rarr": "6:15AM+1",
+   "pct": 32
   },
   "SEA": {
    "to": "SEA",
