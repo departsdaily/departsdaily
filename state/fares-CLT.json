@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-22T08:15:24-04:00",
+ "generated": "2026-08-22T10:15:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 49,
+ "routes_priced": 51,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -139,6 +139,21 @@
    "arr": "4:30AM+1",
    "rarr": "6:57PM",
    "pct": -24
+  },
+  "FLL": {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 306,
+   "d1": "2026-11-18",
+   "d2": "2026-11-22",
+   "dep": "6:40AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "10:20AM",
+   "rarr": "10:45AM",
+   "pct": 25
   },
   "FNC": {
    "to": "FNC",
@@ -619,6 +634,21 @@
    "arr": "11:38PM",
    "rarr": "6:19AM+1",
    "pct": 67
+  },
+  "SLC": {
+   "to": "SLC",
+   "city": "Salt Lake City",
+   "price": 363,
+   "d1": "2026-09-12",
+   "d2": "2026-09-15",
+   "dep": "9:40PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "4:16PM",
+   "arr": "5:15AM+1",
+   "rarr": "11:25PM",
+   "pct": 47
   },
   "SNA": {
    "to": "SNA",

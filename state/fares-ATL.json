@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-22T08:15:49-04:00",
+ "generated": "2026-08-22T10:15:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -218,16 +218,16 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 86,
+   "price": 87,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
-   "dep": "4:06PM",
+   "dep": "9:07PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:32PM",
-   "arr": "6:14PM",
-   "rarr": "8:00PM",
+   "rdep": "12:40PM",
+   "arr": "11:18PM",
+   "rarr": "3:01PM",
    "pct": 81
   },
   "PHX": {
