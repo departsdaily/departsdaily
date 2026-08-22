@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-22T04:16:30-04:00",
+ "generated": "2026-08-22T06:16:10-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 159,
-   "d1": "2026-09-24",
-   "d2": "2026-09-26",
-   "dep": "1:45PM",
-   "al": "Frontier",
+   "price": 145,
+   "d1": "2026-09-10",
+   "d2": "2026-09-13",
+   "dep": "6:00AM",
+   "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:37PM",
-   "arr": "4:47PM",
-   "rarr": "10:12PM",
-   "pct": 65
+   "rdep": "9:15AM",
+   "arr": "8:52AM",
+   "rarr": "12:24PM",
+   "pct": 68
   },
   "HOU": {
    "to": "HOU",
