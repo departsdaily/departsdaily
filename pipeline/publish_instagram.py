@@ -219,6 +219,18 @@ cap += ("\n\n📅 Exact dates on every slide"
             " — follow so you don't miss the next ${} flight".format(
                 min(d["price"] for d in B["deals"])) if B["deals"] else "")
 
+# HASHTAG CAP — lowered 15 -> 3 on 2026-08-20.
+# WHY: Metricool's 2026 study (24.4M posts, 375,118 accounts, Jan-Feb 2025 vs
+# Jan-Feb 2026) found posts using hashtags took 31.70% fewer views and 33.89%
+# fewer interactions than posts without them. Instagram now reads topic from the
+# caption and the media, not the tag list, and a long tag list looks like reach
+# farming. We keep a SHORT local set because a Charlotte-only account still wants
+# the geo signal — those are the tags with any remaining discovery value.
+# THIS IS AN EXPERIMENT. Watch reach for two weeks in Instagram Insights. To
+# revert, set TAG_CAP back to 15. Do not raise it past 30: past 30 tags the
+# carousel container call returns id "0" and publish 500s (ig-hashtag-cap-note.md).
+TAG_CAP = 3
+
 # Owner rule (Jul 2026): top hashtags only, across ALL accounts — enough for
 # discovery, never spammy. Also a hard technical reason: with 31+ tags the
 # CAROUSEL container call returns id "0" and media_publish 500s (hit at ATL launch).
@@ -237,7 +249,7 @@ for d in B["deals"][:4]:
     t = "#" + "".join(c for c in d["city"] if c.isalnum())
     if t not in tags:
         tags.append(t)
-tags = tags[:15]
+tags = tags[:TAG_CAP]
 cap += " ".join(tags)
 
 # FINAL LENGTH GUARD. Instagram rejects a caption over 2200 characters, and the

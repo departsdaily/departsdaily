@@ -31,6 +31,18 @@ import urllib.parse
 import urllib.request
 from zoneinfo import ZoneInfo
 
+# HASHTAG CAP — lowered 15 -> 3 on 2026-08-20.
+# WHY: Metricool's 2026 study (24.4M posts, 375,118 accounts, Jan-Feb 2025 vs
+# Jan-Feb 2026) found posts using hashtags took 31.70% fewer views and 33.89%
+# fewer interactions than posts without them. Instagram now reads topic from the
+# caption and the media, not the tag list, and a long tag list looks like reach
+# farming. We keep a SHORT local set because a Charlotte-only account still wants
+# the geo signal — those are the tags with any remaining discovery value.
+# THIS IS AN EXPERIMENT. Watch reach for two weeks in Instagram Insights. To
+# revert, set TAG_CAP back to 15. Do not raise it past 30: past 30 tags the
+# carousel container call returns id "0" and publish 500s (ig-hashtag-cap-note.md).
+TAG_CAP = 3
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import origins
 
@@ -150,7 +162,7 @@ def caption(man):
         t = "#" + "".join(c for c in f["city"] if c.isalnum())
         if t not in tags:
             tags.append(t)
-    return cap + " ".join(tags[:15])
+    return cap + " ".join(tags[:TAG_CAP])
 
 
 def probe_video(url, timeout=20):
