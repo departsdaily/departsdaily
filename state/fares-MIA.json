@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-21T20:17:35-04:00",
+ "generated": "2026-08-21T22:17:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 563,
+   "price": 517,
    "d1": "2026-09-18",
    "d2": "2026-09-27",
-   "dep": "6:01AM",
-   "al": "Copa",
+   "dep": "9:54PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:22PM",
-   "arr": "11:13AM",
-   "rarr": "5:38PM",
-   "pct": -4
+   "rdep": "3:42PM",
+   "arr": "2:54AM+1",
+   "rarr": "8:44PM",
+   "pct": 4
   },
   "NAS": {
    "to": "NAS",
@@ -308,17 +308,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 268,
-   "d1": "2026-12-17",
-   "d2": "2026-12-30",
-   "dep": "4:31PM",
-   "al": "Copa",
-   "stops": 1,
+   "price": 261,
+   "d1": "2026-10-30",
+   "d2": "2026-11-03",
+   "dep": "5:40PM",
+   "al": "DM",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:35PM",
-   "arr": "10:17PM",
-   "rarr": "12:27AM+1",
-   "pct": 52
+   "rdep": "9:38AM",
+   "arr": "8:16PM",
+   "rarr": "12:25PM",
+   "pct": 53
   },
   "ROM": {
    "to": "ROM",
