@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-22T00:17:57-04:00",
+ "generated": "2026-08-22T02:18:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,6 +184,21 @@
    "arr": "7:15PM",
    "rarr": "8:04PM",
    "pct": 56
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 511,
+   "d1": "2026-09-01",
+   "d2": "2026-09-08",
+   "dep": "5:27AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:58PM",
+   "arr": "1:30PM",
+   "rarr": "4:50AM+1",
+   "pct": 24
   },
   "SFO": {
    "to": "SFO",
