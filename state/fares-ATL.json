@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-22T12:15:39-04:00",
+ "generated": "2026-08-22T14:02:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -260,6 +260,21 @@
    "rarr": "10:32PM",
    "pct": 78
   },
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 147,
+   "d1": "2026-10-09",
+   "d2": "2026-10-16",
+   "dep": "3:28PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:59PM",
+   "arr": "8:55PM",
+   "rarr": "5:59AM+1",
+   "pct": 81
+  },
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
@@ -323,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 438,
-   "d1": "2026-09-17",
-   "d2": "2026-09-22",
-   "dep": "6:30PM",
+   "price": 401,
+   "d1": "2026-11-04",
+   "d2": "2026-11-11",
+   "dep": "7:31AM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "1:55PM",
-   "arr": "11:09PM",
-   "rarr": "7:54PM",
-   "pct": 22
+   "rdep": "1:01PM",
+   "arr": "1:11PM",
+   "rarr": "5:57PM",
+   "pct": 28
   },
   "SJU": {
    "to": "SJU",

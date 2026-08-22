@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-22T12:16:20-04:00",
+ "generated": "2026-08-22T14:03:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 170,
-   "d1": "2026-10-12",
-   "d2": "2026-10-14",
-   "dep": "8:30AM",
+   "price": 191,
+   "d1": "2026-10-10",
+   "d2": "2026-10-13",
+   "dep": "10:30AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "12:40AM",
-   "arr": "11:28AM",
+   "arr": "1:39PM",
    "rarr": "3:18AM",
-   "pct": 63
+   "pct": 59
   },
   "LAX": {
    "to": "LAX",
@@ -259,6 +259,21 @@
    "arr": "4:18PM",
    "rarr": "1:06AM+1",
    "pct": 39
+  },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 217,
+   "d1": "2026-10-09",
+   "d2": "2026-10-12",
+   "dep": "4:38PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:50PM",
+   "arr": "9:58PM",
+   "rarr": "12:52AM+1",
+   "pct": 52
   },
   "AMS": {
    "to": "AMS",

@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-22T12:16:58-04:00",
+ "generated": "2026-08-22T14:03:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -338,17 +338,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 403,
-   "d1": "2026-09-04",
-   "d2": "2026-09-12",
-   "dep": "10:20AM",
-   "al": "AT",
+   "price": 578,
+   "d1": "2026-09-16",
+   "d2": "2026-09-28",
+   "dep": "12:25PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:40PM",
-   "arr": "12:15AM+1",
-   "rarr": "1:05PM+1",
-   "pct": 55
+   "rdep": "7:40PM",
+   "arr": "12:30AM+1",
+   "rarr": "9:20AM+1",
+   "pct": 36
   },
   "PUJ": {
    "to": "PUJ",

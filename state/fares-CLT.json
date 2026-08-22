@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-22T12:15:18-04:00",
+ "generated": "2026-08-22T14:02:05-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 52,
+ "routes_priced": 51,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -154,21 +154,6 @@
    "arr": "10:20AM",
    "rarr": "10:45AM",
    "pct": 25
-  },
-  "FNC": {
-   "to": "FNC",
-   "city": "Madeira",
-   "price": 1177,
-   "d1": "2026-09-14",
-   "d2": "2026-09-20",
-   "dep": "4:01PM",
-   "al": "Frontier",
-   "stops": 4,
-   "xfer": 0,
-   "rdep": "11:40PM",
-   "arr": "2:53AM+1",
-   "rarr": "1:44PM+1",
-   "pct": -24
   },
   "FRA": {
    "to": "FRA",
