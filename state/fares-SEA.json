@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-22T02:17:53-04:00",
+ "generated": "2026-08-22T04:18:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 14,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -94,6 +94,21 @@
    "arr": "11:04PM",
    "rarr": "6:36PM",
    "pct": 80
+  },
+  "MCO": {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 305,
+   "d1": "2026-09-30",
+   "d2": "2026-10-04",
+   "dep": "9:45PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:00AM",
+   "arr": "4:49AM+1",
+   "rarr": "1:59PM",
+   "pct": 54
   },
   "MIA": {
    "to": "MIA",
