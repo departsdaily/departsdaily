@@ -83,3 +83,20 @@ footer{border-top:2px solid var(--edge);padding:26px 0 60px;color:var(--dim);fon
 .lights{display:flex;gap:44px;justify-content:center;padding:18px 0 0}
 .lights i{width:9px;height:9px;border-radius:50%;background:var(--amber);display:block}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------------------------------------------------------------
+   Editorial prose in city guides — added Aug 20 2026.
+   WHY: AdSense rejected the site Aug 4 for "low value content".
+   The guides were ~650 words of link cards with almost no running
+   text; GUIDE-VOICE.md already set a 900-1,400 word target. These
+   classes carry the briefing / neighbourhood / timing / skip
+   sections that close that gap.
+   --------------------------------------------------------------- */
+p.prose{color:var(--dim);font-size:14px;line-height:1.75;max-width:72ch;margin:0 0 14px}
+p.prose:last-child{margin-bottom:0}
+p.prose b,p.prose strong{color:var(--white)}
+.hoods{display:grid;gap:14px}
+.hood{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:16px 18px}
+.hood p.prose{max-width:none;font-size:13px;margin:0}
+.hname{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.06em;color:var(--amber);font-size:15px;margin-bottom:6px}
+@media(min-width:760px){.hoods{grid-template-columns:1fr 1fr}}
