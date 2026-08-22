@@ -10,7 +10,8 @@
     { href: "index.html",     label: "DEAL BOARD"   },
     { href: "guides.html",    label: "CITY GUIDES"  },
     { href: "book.html",      label: "BOOKING DESK" },
-    { href: "gear.html",      label: "GEAR"         }
+    { href: "gear.html",      label: "GEAR"         },
+    { href: "about.html",     label: "ABOUT"        }
   ];
 
   var path  = location.pathname;
