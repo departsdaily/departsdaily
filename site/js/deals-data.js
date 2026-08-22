@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-22 14:00 EDT
+   Generated 2026-08-22 14:14 EDT
    Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
    Carried forward:  none
    ===================================================================== */
 const BOARD={
- updated:"2026-08-22T14:00:44-04:00",
+ updated:"2026-08-22T14:14:01-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:173,d1:"2026-09-07",d2:"2026-09-12",dep:"8:56AM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"3:43PM",rarr:"6:23AM",exp:"2026-08-24"},
@@ -21,7 +21,7 @@ const DEALS={CLT:[
  {to:"PMI",city:"Mallorca",price:597,d1:"2026-09-18",d2:"2026-09-26",dep:"6:40PM",al:"Lufthansa",stops:1,rdep:"8:55AM",arr:"5:30AM+1",rarr:"8:50PM",exp:"2026-08-24"},
  {to:"LON",city:"London",price:698,d1:"2026-08-31",d2:"2026-09-07",dep:"5:58PM",al:"United",stops:1,rdep:"8:25PM",arr:"2:57AM+1",rarr:"8:00AM+1",exp:"2026-08-24"}],ATL:[
  {to:"MCO",city:"Orlando",price:35,d1:"2026-10-17",d2:"2026-10-20",dep:"5:49PM",al:"Frontier",stops:0,rdep:"7:10AM",arr:"7:28PM",rarr:"9:02AM",exp:"2026-08-24"},
- {to:"SFO",city:"San Francisco",price:147,d1:"2026-10-09",d2:"2026-10-16",dep:"3:28PM",al:"Frontier",stops:1,rdep:"11:59PM",arr:"8:55PM",rarr:"5:59AM+1",exp:"2026-08-24"},
+ {to:"ORD",city:"Chicago",price:68,d1:"2026-09-09",d2:"2026-09-12",dep:"5:02PM",al:"Frontier",stops:0,rdep:"6:20AM",arr:"7:23PM",rarr:"8:29AM",exp:"2026-08-24"},
  {to:"LAX",city:"Los Angeles",price:132,d1:"2026-09-11",d2:"2026-09-13",dep:"8:20PM",al:"Frontier",stops:1,rdep:"12:38PM",arr:"3:21AM+1",rarr:"5:13PM",exp:"2026-08-24"},
  {to:"MIA",city:"Miami",price:73,d1:"2026-09-17",d2:"2026-09-24",dep:"1:24PM",al:"Frontier",stops:0,rdep:"5:32AM",arr:"3:24PM",rarr:"7:40AM",exp:"2026-08-24"},
  {to:"LAS",city:"Las Vegas",price:155,d1:"2026-11-19",d2:"2026-11-22",dep:"2:45PM",al:"Southwest",stops:1,rdep:"12:20AM",arr:"8:10PM",rarr:"5:40AM",exp:"2026-08-24"},
@@ -36,11 +36,11 @@ const DEALS={CLT:[
  {to:"NYC",city:"New York City",price:146,d1:"2026-10-22",d2:"2026-10-27",dep:"6:00AM",al:"United",stops:0,rdep:"7:15AM",arr:"8:15AM",rarr:"10:02AM",exp:"2026-08-24"},
  {to:"SJU",city:"San Juan, PR",price:197,d1:"2026-08-26",d2:"2026-09-01",dep:"12:44AM",al:"Frontier",stops:0,rdep:"7:14PM",arr:"5:44AM",rarr:"12:27AM+1",exp:"2026-08-24"},
  {to:"LON",city:"London",price:524,d1:"2026-10-14",d2:"2026-10-21",dep:"9:38AM",al:"",stops:1,rdep:"10:45PM",arr:"7:18PM",rarr:"8:30AM+1",xfer:1,exp:"2026-08-24"}],DFW:[
+ {to:"MSY",city:"New Orleans",price:53,d1:"2026-09-14",d2:"2026-09-18",dep:"2:52PM",al:"Frontier",stops:0,rdep:"5:26PM",arr:"4:31PM",rarr:"7:17PM",exp:"2026-08-24"},
  {to:"NYC",city:"New York City",price:148,d1:"2026-09-24",d2:"2026-09-29",dep:"9:54PM",al:"Frontier",stops:1,rdep:"1:30PM",arr:"3:28AM+1",rarr:"5:36PM",exp:"2026-08-24"},
  {to:"MCO",city:"Orlando",price:132,d1:"2026-10-21",d2:"2026-10-23",dep:"8:05AM",al:"Frontier",stops:1,rdep:"9:25AM",arr:"12:08PM",rarr:"1:49PM",exp:"2026-08-24"},
  {to:"LAX",city:"Los Angeles",price:165,d1:"2026-10-23",d2:"2026-10-27",dep:"2:39PM",al:"Frontier",stops:1,rdep:"2:03PM",arr:"7:24PM",rarr:"6:33PM",exp:"2026-08-24"},
  {to:"MIA",city:"Miami",price:160,d1:"2026-09-14",d2:"2026-09-17",dep:"6:15PM",al:"Frontier",stops:0,rdep:"2:37PM",arr:"9:17PM",rarr:"6:00PM",exp:"2026-08-24"},
- {to:"TPA",city:"Tampa",price:217,d1:"2026-10-09",d2:"2026-10-12",dep:"4:38PM",al:"Frontier",stops:1,rdep:"9:50PM",arr:"9:58PM",rarr:"12:52AM+1",exp:"2026-08-24"},
  {to:"CUN",city:"Cancún",price:300,d1:"2026-09-19",d2:"2026-09-24",dep:"3:35PM",al:"Viva Aerobus",stops:1,rdep:"7:00AM",arr:"7:41PM",rarr:"11:16AM",exp:"2026-08-24"},
  {to:"LON",city:"London",price:693,d1:"2026-09-10",d2:"2026-09-18",dep:"7:55AM",al:"",stops:2,rdep:"6:20AM",arr:"6:35PM",rarr:"7:24PM",xfer:1,exp:"2026-08-24"},
  {to:"ROM",city:"Rome",price:781,d1:"2026-09-10",d2:"2026-09-14",dep:"9:30PM",al:"Turkish",stops:1,rdep:"7:05AM",arr:"12:05PM+1",rarr:"10:35PM",exp:"2026-08-24"}],DEN:[
@@ -59,7 +59,7 @@ const DEALS={CLT:[
  {to:"MIA",city:"Miami",price:195,d1:"2026-09-15",d2:"2026-09-22",dep:"2:01PM",al:"Frontier",stops:1,rdep:"5:50AM",arr:"8:22PM",rarr:"12:45PM",exp:"2026-08-24"},
  {to:"CUN",city:"Cancún",price:171,d1:"2026-09-25",d2:"2026-10-03",dep:"7:52PM",al:"Volaris",stops:1,rdep:"9:50PM",arr:"1:46AM+1",rarr:"4:07AM+1",exp:"2026-08-24"},
  {to:"PAR",city:"Paris",price:578,d1:"2026-09-16",d2:"2026-09-28",dep:"12:25PM",al:"United",stops:1,rdep:"7:40PM",arr:"12:30AM+1",rarr:"9:20AM+1",exp:"2026-08-24"},
- {to:"ROM",city:"Rome",price:617,d1:"2026-11-20",d2:"2026-11-28",dep:"9:20AM",al:"AT",stops:1,rdep:"11:55AM",arr:"11:15PM",rarr:"3:35AM+1",exp:"2026-08-24"}],JFK:[
+ {to:"NAS",city:"Nassau",price:399,d1:"2026-09-14",d2:"2026-09-19",dep:"9:00PM",al:"American",stops:1,rdep:"10:32AM",arr:"3:05AM+1",rarr:"5:06PM",exp:"2026-08-24"}],JFK:[
  {to:"SFO",city:"San Francisco",price:185,d1:"2026-08-29",d2:"2026-08-31",dep:"1:00PM",al:"Frontier",stops:1,rdep:"10:35PM",arr:"9:08PM",rarr:"5:56AM+1",exp:"2026-08-24"},
  {to:"PHX",city:"Phoenix",price:157,d1:"2026-10-30",d2:"2026-11-01",dep:"3:30PM",al:"JetBlue",stops:1,rdep:"11:59PM",arr:"10:50PM",rarr:"5:57AM+1",exp:"2026-08-24"},
  {to:"LAX",city:"Los Angeles",price:238,d1:"2026-11-06",d2:"2026-11-09",dep:"3:59PM",al:"JetBlue",stops:1,rdep:"4:30PM",arr:"12:56AM+1",rarr:"9:43PM",exp:"2026-08-24"},

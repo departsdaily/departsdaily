@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-22T14:02:26-04:00",
+ "generated": "2026-08-22T14:15:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -349,6 +349,21 @@
    "arr": "1:11PM",
    "rarr": "5:57PM",
    "pct": 28
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 1085,
+   "d1": "2026-09-11",
+   "d2": "2026-09-27",
+   "dep": "11:10AM",
+   "al": "",
+   "stops": 3,
+   "xfer": 1,
+   "rdep": "5:00PM",
+   "arr": "12:38AM+1",
+   "rarr": "3:29PM+1",
+   "pct": -14
   },
   "SJU": {
    "to": "SJU",
