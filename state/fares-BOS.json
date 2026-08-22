@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-21T18:17:43-04:00",
+ "generated": "2026-08-21T20:18:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -278,7 +278,7 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 453,
+   "price": 438,
    "d1": "2026-10-22",
    "d2": "2026-10-26",
    "dep": "10:55PM",
@@ -288,7 +288,7 @@
    "rdep": "10:35PM",
    "arr": "8:25AM+1",
    "rarr": "7:05AM+1",
-   "pct": 47
+   "pct": 48
   },
   "MBJ": {
    "to": "MBJ",

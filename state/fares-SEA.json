@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-21T18:17:24-04:00",
+ "generated": "2026-08-21T20:17:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 14,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 334,
-   "d1": "2026-09-18",
-   "d2": "2026-09-20",
-   "dep": "4:27PM",
+   "price": 205,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30",
+   "dep": "1:35PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:09PM",
-   "arr": "9:48PM",
-   "rarr": "4:45AM+1",
-   "pct": 43
+   "rdep": "10:14PM",
+   "arr": "7:08PM",
+   "rarr": "4:07AM+1",
+   "pct": 65
   },
   "LAS": {
    "to": "LAS",
