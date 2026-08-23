@@ -4,8 +4,7 @@
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 49,
-  "fetch failed": 10,
+  "no fares": 59,
   "not a deal": 18,
   "qualified": 16,
   "no fares in window": 14
@@ -204,44 +203,44 @@
    "why": "the fare cache returned nothing"
   },
   "SJD": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "SKB": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "STT": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "STX": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "SVD": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "TUS": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "TVC": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "TYS": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "VCE": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "VRB": {
-   "outcome": "fetch failed",
-   "why": "HTTP Error 429: Too Many Requests"
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
   },
   "YQB": {
    "outcome": "no fares",
@@ -633,12 +632,12 @@
   },
   "SMF": {
    "outcome": "not a deal",
-   "price": 463,
-   "typical": 307,
-   "disc_pct": -51,
-   "d1": "2026-11-24",
+   "price": 379,
+   "typical": 290,
+   "disc_pct": -31,
+   "d1": "2026-10-14",
    "d2": "2026-11-30",
-   "nights": 6,
+   "nights": 47,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
