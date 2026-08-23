@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-22T18:17:06-04:00",
+ "generated": "2026-08-22T20:04:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -311,13 +311,13 @@
    "price": 512,
    "d1": "2026-12-13",
    "d2": "2026-12-17",
-   "dep": "10:37PM",
+   "dep": "9:30PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:00PM",
-   "arr": "6:01AM+1",
-   "rarr": "11:28PM",
+   "rdep": "3:25PM",
+   "arr": "4:54AM+1",
+   "rarr": "11:08PM",
    "pct": 20
   },
   "LON": {
@@ -383,16 +383,16 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 617,
+   "price": 620,
    "d1": "2026-11-20",
    "d2": "2026-11-28",
    "dep": "9:20AM",
    "al": "AT",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:55AM",
+   "rdep": "5:10PM",
    "arr": "11:15PM",
-   "rarr": "3:35AM+1",
+   "rarr": "8:50AM+1",
    "pct": 35
   },
   "SJU": {

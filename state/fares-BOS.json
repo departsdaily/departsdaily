@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-22T18:18:30-04:00",
+ "generated": "2026-08-22T20:05:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 413,
+   "price": 402,
    "d1": "2026-10-15",
    "d2": "2026-10-18",
-   "dep": "8:40PM",
-   "al": "JetBlue",
-   "stops": 3,
+   "dep": "6:05PM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:38PM",
-   "arr": "4:18AM+1",
-   "rarr": "6:15AM+1",
-   "pct": 32
+   "rdep": "10:30PM",
+   "arr": "12:35AM+1",
+   "rarr": "4:15AM+1",
+   "pct": 34
   },
   "SEA": {
    "to": "SEA",
@@ -353,7 +353,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 817,
+   "price": 845,
    "d1": "2026-10-09",
    "d2": "2026-10-17",
    "dep": "10:45PM",
@@ -363,7 +363,7 @@
    "rdep": "11:10AM",
    "arr": "8:20AM+1",
    "rarr": "11:00PM",
-   "pct": 14
+   "pct": 11
   },
   "SJU": {
    "to": "SJU",
@@ -371,12 +371,12 @@
    "price": 277,
    "d1": "2026-10-14",
    "d2": "2026-10-21",
-   "dep": "7:20PM",
+   "dep": "11:20AM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
    "rdep": "4:25PM",
-   "arr": "11:58PM",
+   "arr": "3:29PM",
    "rarr": "10:36PM",
    "pct": 34
   }

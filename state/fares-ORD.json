@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-22T18:16:04-04:00",
+ "generated": "2026-08-22T20:03:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 145,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "9:20AM",
+   "price": 217,
+   "d1": "2026-09-11",
+   "d2": "2026-09-14",
+   "dep": "8:55PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:59PM",
-   "arr": "12:12PM",
-   "rarr": "5:58AM+1",
-   "pct": 65
+   "rdep": "10:16PM",
+   "arr": "3:47AM+1",
+   "rarr": "12:45AM+1",
+   "pct": 47
   },
   "FLL": {
    "to": "FLL",
@@ -143,9 +143,9 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 112,
-   "d1": "2026-10-08",
-   "d2": "2026-10-13",
+   "price": 120,
+   "d1": "2026-10-09",
+   "d2": "2026-10-11",
    "dep": "8:01PM",
    "al": "Frontier",
    "stops": 0,
@@ -153,7 +153,7 @@
    "rdep": "12:21AM",
    "arr": "12:51AM+1",
    "rarr": "4:34AM",
-   "pct": 80
+   "pct": 79
   },
   "MCO": {
    "to": "MCO",
