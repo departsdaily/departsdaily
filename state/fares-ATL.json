@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-23T08:15:41-04:00",
+ "generated": "2026-08-23T10:15:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -38,7 +38,7 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 299,
+   "price": 301,
    "d1": "2026-08-28",
    "d2": "2026-08-31",
    "dep": "12:34PM",
@@ -48,7 +48,7 @@
    "rdep": "6:00PM",
    "arr": "7:32PM",
    "rarr": "1:29AM+1",
-   "pct": 27
+   "pct": 26
   },
   "DEN": {
    "to": "DEN",
