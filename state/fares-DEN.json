@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-23T00:16:26-04:00",
+ "generated": "2026-08-23T02:17:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -83,32 +83,32 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 205,
-   "d1": "2026-09-05",
-   "d2": "2026-09-08",
-   "dep": "10:39PM",
+   "price": 121,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "dep": "9:05AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:56PM",
-   "arr": "1:11AM+1",
-   "rarr": "10:21PM",
-   "pct": 47
+   "rdep": "11:50AM",
+   "arr": "11:39AM",
+   "rarr": "2:10PM",
+   "pct": 69
   },
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 187,
+   "price": 191,
    "d1": "2026-10-30",
    "d2": "2026-11-05",
-   "dep": "7:02PM",
+   "dep": "10:40AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "1:19PM",
-   "arr": "10:37PM",
+   "arr": "2:18PM",
    "rarr": "5:35PM",
-   "pct": 63
+   "pct": 62
   },
   "MIA": {
    "to": "MIA",

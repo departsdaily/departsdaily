@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-23T00:18:08-04:00",
+ "generated": "2026-08-23T02:18:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -169,6 +169,21 @@
    "arr": "6:10PM",
    "rarr": "9:52PM",
    "pct": 41
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 163,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "8:45PM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "8:10PM",
+   "arr": "10:27PM",
+   "rarr": "9:49PM",
+   "pct": 57
   },
   "PHX": {
    "to": "PHX",
@@ -353,7 +368,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 424,
+   "price": 478,
    "d1": "2026-11-15",
    "d2": "2026-11-22",
    "dep": "6:00PM",
@@ -363,7 +378,7 @@
    "rdep": "5:55AM",
    "arr": "3:40AM+1",
    "rarr": "5:10PM",
-   "pct": 55
+   "pct": 50
   },
   "SJU": {
    "to": "SJU",
