@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-23T14:18:33-04:00",
+ "generated": "2026-08-23T16:05:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -356,12 +356,12 @@
    "price": 222,
    "d1": "2026-09-05",
    "d2": "2026-09-18",
-   "dep": "6:00AM",
+   "dep": "1:35PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
    "rdep": "1:25PM",
-   "arr": "10:03AM",
+   "arr": "5:46PM",
    "rarr": "6:27PM",
    "pct": 60
   },
