@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-23T10:16:37-04:00",
+ "generated": "2026-08-23T12:16:28-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -293,16 +293,16 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 300,
-   "d1": "2026-09-19",
-   "d2": "2026-09-24",
-   "dep": "3:35PM",
-   "al": "Viva Aerobus",
-   "stops": 1,
+   "price": 301,
+   "d1": "2026-12-21",
+   "d2": "2026-12-26",
+   "dep": "5:45AM",
+   "al": "Frontier",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "7:41PM",
-   "rarr": "11:16AM",
+   "rdep": "10:48AM",
+   "arr": "8:39AM",
+   "rarr": "2:00PM",
    "pct": 42
   },
   "LON": {

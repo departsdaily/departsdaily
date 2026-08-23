@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-23T10:18:02-04:00",
+ "generated": "2026-08-23T12:17:50-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -113,17 +113,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 227,
+   "price": 245,
    "d1": "2026-09-29",
-   "d2": "2026-10-06",
+   "d2": "2026-10-02",
    "dep": "11:25AM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "6:05AM",
+   "rdep": "2:28PM",
    "arr": "7:15PM",
-   "rarr": "12:22PM",
-   "pct": 69
+   "rarr": "8:49PM",
+   "pct": 67
   },
   "MCO": {
    "to": "MCO",
@@ -229,21 +229,6 @@
    "arr": "1:25PM",
    "rarr": "6:47PM",
    "pct": 63
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 137,
-   "d1": "2026-09-17",
-   "d2": "2026-09-19",
-   "dep": "12:00PM",
-   "al": "JetBlue",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "8:30AM",
-   "arr": "1:08PM",
-   "rarr": "9:39AM",
-   "pct": 64
   },
   "CUN": {
    "to": "CUN",

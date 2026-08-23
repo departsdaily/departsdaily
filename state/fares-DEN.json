@@ -1,25 +1,10 @@
 {
  "origin": "DEN",
- "generated": "2026-08-23T10:16:58-04:00",
+ "generated": "2026-08-23T12:16:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 18,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 171,
-   "d1": "2026-09-18",
-   "d2": "2026-09-20",
-   "dep": "9:15AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "8:24PM",
-   "arr": "11:30AM",
-   "rarr": "10:49PM",
-   "pct": 55
-  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
