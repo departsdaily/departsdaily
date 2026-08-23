@@ -4,7 +4,8 @@
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 59,
+  "no fares": 57,
+  "fetch failed": 2,
   "not a deal": 18,
   "qualified": 16,
   "no fares in window": 14
@@ -203,12 +204,12 @@
    "why": "the fare cache returned nothing"
   },
   "SJD": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SKB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "STT": {
    "outcome": "no fares",
