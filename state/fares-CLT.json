@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-22T20:15:20-04:00",
+ "generated": "2026-08-22T22:15:20-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 50,
+ "routes_priced": 49,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -338,16 +338,16 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 237,
-   "d1": "2026-09-24",
-   "d2": "2026-09-27",
-   "dep": "3:10PM",
-   "al": "JetBlue",
+   "price": 238,
+   "d1": "2026-09-14",
+   "d2": "2026-09-19",
+   "dep": "9:32AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "7:22PM",
-   "rarr": "11:05AM",
+   "rdep": "8:03PM",
+   "arr": "1:32PM",
+   "rarr": "11:55PM",
    "pct": 50
   },
   "MUC": {
@@ -469,21 +469,6 @@
    "arr": "6:48AM+1",
    "rarr": "9:12PM",
    "pct": 24
-  },
-  "PLS": {
-   "to": "PLS",
-   "city": "Providenciales",
-   "price": 872,
-   "d1": "2026-09-11",
-   "d2": "2026-09-15",
-   "dep": "4:01PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "11:00AM",
-   "arr": "9:45PM",
-   "rarr": "3:50PM",
-   "pct": -32
   },
   "PMI": {
    "to": "PMI",

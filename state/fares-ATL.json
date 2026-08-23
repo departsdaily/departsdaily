@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-22T20:15:41-04:00",
+ "generated": "2026-08-22T22:15:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 132,
+   "price": 152,
    "d1": "2026-09-11",
    "d2": "2026-09-13",
-   "dep": "8:20PM",
+   "dep": "9:58AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "12:38PM",
-   "arr": "3:21AM+1",
+   "arr": "2:47PM",
    "rarr": "5:13PM",
-   "pct": 81
+   "pct": 78
   },
   "MCO": {
    "to": "MCO",
@@ -278,7 +278,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 716,
+   "price": 717,
    "d1": "2026-11-05",
    "d2": "2026-11-09",
    "dep": "2:55PM",
