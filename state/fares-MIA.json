@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-23T16:17:45-04:00",
+ "generated": "2026-08-23T18:04:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -53,9 +53,9 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 382,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
+   "price": 281,
+   "d1": "2026-09-01",
+   "d2": "2026-09-03",
    "dep": "6:00AM",
    "al": "Frontier",
    "stops": 0,
@@ -63,7 +63,7 @@
    "rdep": "10:49PM",
    "arr": "10:23AM",
    "rarr": "2:52AM+1",
-   "pct": 32
+   "pct": 50
   },
   "HOU": {
    "to": "HOU",

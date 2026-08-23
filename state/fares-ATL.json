@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-23T16:15:42-04:00",
+ "generated": "2026-08-23T18:02:43-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -68,17 +68,32 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 81,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "dep": "5:30AM",
+   "price": 88,
+   "d1": "2026-10-08",
+   "d2": "2026-10-11",
+   "dep": "5:26AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "1:23PM",
+   "rdep": "6:49PM",
    "arr": "8:00AM",
-   "rarr": "3:41PM",
-   "pct": 82
+   "rarr": "9:12PM",
+   "pct": 80
+  },
+  "DTW": {
+   "to": "DTW",
+   "city": "Detroit",
+   "price": 153,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "10:55PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:03PM",
+   "arr": "2:11AM+1",
+   "rarr": "10:47PM",
+   "pct": 67
   },
   "FLL": {
    "to": "FLL",
