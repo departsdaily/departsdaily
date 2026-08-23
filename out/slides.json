@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 23,
+ "n_deals": 21,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -18,15 +18,7 @@
  ],
  "stories": [
   {
-   "file": "story_1_PLS.png",
-   "to": "PLS",
-   "city": "Providenciales",
-   "price": 379,
-   "disc": 45,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_2_LAS.png",
+   "file": "story_1_LAS.png",
    "to": "LAS",
    "city": "Las Vegas",
    "price": 173,
@@ -34,7 +26,7 @@
    "section": "cheapest"
   },
   {
-   "file": "story_3_MEX.png",
+   "file": "story_2_MEX.png",
    "to": "MEX",
    "city": "Mexico City",
    "price": 301,
@@ -42,7 +34,7 @@
    "section": "cheapest"
   },
   {
-   "file": "story_4_LAX.png",
+   "file": "story_3_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 203,
@@ -50,23 +42,7 @@
    "section": "weekend"
   },
   {
-   "file": "story_5_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 208,
-   "disc": 32,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_6_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 208,
-   "disc": 32,
-   "section": "weekish"
-  },
-  {
-   "file": "story_7_LAX.png",
+   "file": "story_4_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 214,
@@ -74,12 +50,36 @@
    "section": "cheapest"
   },
   {
-   "file": "story_8_LAS.png",
+   "file": "story_5_LAS.png",
    "to": "LAS",
    "city": "Las Vegas",
    "price": 251,
    "disc": 26,
    "section": "weekend"
+  },
+  {
+   "file": "story_6_SXM.png",
+   "to": "SXM",
+   "city": "St. Maarten",
+   "price": 447,
+   "disc": 26,
+   "section": "weekend"
+  },
+  {
+   "file": "story_7_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 243,
+   "disc": 21,
+   "section": "weekish"
+  },
+  {
+   "file": "story_8_PLS.png",
+   "to": "PLS",
+   "city": "Providenciales",
+   "price": 549,
+   "disc": 21,
+   "section": "cheapest"
   }
  ]
 }

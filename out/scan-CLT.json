@@ -1,13 +1,13 @@
 {
- "date": "2026-08-22",
+ "date": "2026-08-23",
  "origin": "CLT",
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 58,
-  "not a deal": 19,
-  "qualified": 17,
-  "no fares in window": 13
+  "no fares": 59,
+  "not a deal": 18,
+  "qualified": 16,
+  "no fares in window": 14
  },
  "routes": {
   "ABQ": {
@@ -98,7 +98,7 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
-  "FLL": {
+  "FNC": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -174,6 +174,10 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
+  "PWM": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
   "RAP": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -206,10 +210,6 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
-  "SLC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
   "STT": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -231,6 +231,10 @@
    "why": "the fare cache returned nothing"
   },
   "TYS": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "VCE": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -317,16 +321,9 @@
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
-  "FNC": {
-   "outcome": "not a deal",
-   "price": 1177,
-   "typical": 898,
-   "disc_pct": -31,
-   "d1": "2026-09-14",
-   "d2": "2026-09-20",
-   "nights": 6,
-   "on_shape": true,
-   "rung": "shape",
+  "FLL": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "GND": {
@@ -449,7 +446,7 @@
   },
   "NAS": {
    "outcome": "no fares in window",
-   "why": "2 offers, none leaving 3-150 days out in the cheapest shape",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "OGG": {
@@ -470,28 +467,21 @@
    "section": "weekend"
   },
   "PHX": {
-   "outcome": "qualified",
-   "price": 216,
-   "typical": 282,
-   "disc_pct": 23,
-   "d1": "2026-09-02",
-   "d2": "2026-09-07",
-   "nights": 5,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "extra_weekend"
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "section": "cheapest"
   },
   "PLS": {
    "outcome": "qualified",
-   "price": 379,
+   "price": 549,
    "typical": 695,
-   "disc_pct": 45,
-   "d1": "2026-12-09",
-   "d2": "2026-12-13",
-   "nights": 4,
+   "disc_pct": 21,
+   "d1": "2026-12-22",
+   "d2": "2026-12-28",
+   "nights": 6,
    "on_shape": true,
    "rung": "shape",
-   "section": "extra_weekend"
+   "section": "cheapest"
   },
   "PMI": {
    "outcome": "qualified",
@@ -512,7 +502,7 @@
   },
   "POP": {
    "outcome": "not a deal",
-   "price": 814,
+   "price": 815,
    "typical": 548,
    "disc_pct": -49,
    "d1": "2026-12-10",
@@ -539,18 +529,6 @@
    "rung": "shape",
    "section": "weekish"
   },
-  "PWM": {
-   "outcome": "not a deal",
-   "price": 591,
-   "typical": 265,
-   "disc_pct": -123,
-   "d1": "2026-08-30",
-   "d2": "2026-09-07",
-   "nights": 8,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
   "REK": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
@@ -558,12 +536,12 @@
   },
   "ROM": {
    "outcome": "not a deal",
-   "price": 922,
+   "price": 791,
    "typical": 812,
-   "disc_pct": -14,
-   "d1": "2026-10-04",
-   "d2": "2026-10-13",
-   "nights": 9,
+   "disc_pct": 3,
+   "d1": "2026-12-29",
+   "d2": "2027-01-09",
+   "nights": 11,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -582,9 +560,9 @@
   },
   "SDQ": {
    "outcome": "qualified",
-   "price": 302,
+   "price": 278,
    "typical": 514,
-   "disc_pct": 41,
+   "disc_pct": 46,
    "d1": "2027-01-15",
    "d2": "2027-02-01",
    "nights": 17,
@@ -618,24 +596,36 @@
   },
   "SJO": {
    "outcome": "not a deal",
-   "price": 593,
-   "typical": 536,
-   "disc_pct": -11,
-   "d1": "2026-10-01",
-   "d2": "2026-10-20",
-   "nights": 19,
+   "price": 844,
+   "typical": 524,
+   "disc_pct": -61,
+   "d1": "2026-09-02",
+   "d2": "2026-09-05",
+   "nights": 3,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
   },
   "SJU": {
    "outcome": "not a deal",
-   "price": 653,
+   "price": 654,
    "typical": 368,
-   "disc_pct": -77,
+   "disc_pct": -78,
    "d1": "2026-12-29",
    "d2": "2027-01-09",
    "nights": 11,
+   "on_shape": true,
+   "rung": "shape",
+   "section": "cheapest"
+  },
+  "SLC": {
+   "outcome": "not a deal",
+   "price": 363,
+   "typical": 300,
+   "disc_pct": -21,
+   "d1": "2026-09-12",
+   "d2": "2026-09-15",
+   "nights": 3,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -689,11 +679,6 @@
    "section": "cheapest"
   },
   "UVF": {
-   "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
-   "section": "cheapest"
-  },
-  "VCE": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
