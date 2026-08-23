@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-23T12:15:23-04:00",
+ "generated": "2026-08-23T14:02:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 49,
+ "routes_priced": 47,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -64,21 +64,6 @@
    "arr": "1:40PM",
    "rarr": "5:06PM",
    "pct": 59
-  },
-  "BZE": {
-   "to": "BZE",
-   "city": "Belize City",
-   "price": 846,
-   "d1": "2026-09-17",
-   "d2": "2026-09-22",
-   "dep": "9:55PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "2:30PM",
-   "arr": "2:14AM+1",
-   "rarr": "8:56PM",
-   "pct": -36
   },
   "CUN": {
    "to": "CUN",
@@ -278,17 +263,17 @@
   "MAD": {
    "to": "MAD",
    "city": "Madrid",
-   "price": 862,
-   "d1": "2026-09-17",
-   "d2": "2026-09-24",
-   "dep": "12:52PM",
-   "al": "American",
+   "price": 1030,
+   "d1": "2026-09-05",
+   "d2": "2026-09-14",
+   "dep": "5:43PM",
+   "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "10:40AM",
-   "arr": "9:55PM",
-   "rarr": "11:06PM",
-   "pct": 2
+   "rdep": "10:25PM",
+   "arr": "5:14AM+1",
+   "rarr": "11:26AM+1",
+   "pct": -17
   },
   "MCO": {
    "to": "MCO",
@@ -364,21 +349,6 @@
    "arr": "7:11PM",
    "rarr": "10:57PM",
    "pct": -1
-  },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 439,
-   "d1": "2026-09-16",
-   "d2": "2026-09-21",
-   "dep": "3:40PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:15AM",
-   "arr": "8:51PM",
-   "rarr": "10:32AM",
-   "pct": 9
   },
   "NYC": {
    "to": "NYC",
@@ -518,17 +488,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 425,
-   "d1": "2026-11-06",
-   "d2": "2026-11-12",
-   "dep": "8:55AM",
-   "al": "Air Canada",
-   "stops": 2,
+   "price": 660,
+   "d1": "2026-09-24",
+   "d2": "2026-09-28",
+   "dep": "9:59PM",
+   "al": "Frontier",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "3:15PM",
-   "arr": "3:37PM",
-   "rarr": "11:37PM",
-   "pct": 24
+   "rdep": "6:41PM",
+   "arr": "2:45AM+1",
+   "rarr": "5:15AM+1",
+   "pct": -18
   },
   "ROM": {
    "to": "ROM",
