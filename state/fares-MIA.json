@@ -1,11 +1,9 @@
 {
  "origin": "MIA",
- "generated": "2026-08-23T20:04:43-04:00",
+ "generated": "2026-08-23T20:17:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
- "routes_failed": [
-  "SFO"
- ],
+ "routes_priced": 24,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -201,6 +199,21 @@
    "arr": "1:23PM",
    "rarr": "5:10AM+1",
    "pct": 46
+  },
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 258,
+   "d1": "2026-11-02",
+   "d2": "2026-11-04",
+   "dep": "5:50AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:20PM",
+   "arr": "1:25PM",
+   "rarr": "6:47PM",
+   "pct": 63
   },
   "AUA": {
    "to": "AUA",

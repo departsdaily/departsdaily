@@ -1,16 +1,9 @@
 {
  "origin": "CLT",
- "generated": "2026-08-23T20:02:33-04:00",
+ "generated": "2026-08-23T20:15:08-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
- "routes_failed": [
-  "BCN",
-  "LIM",
-  "MCO",
-  "PNS",
-  "PTY",
-  "PWM"
- ],
+ "routes_priced": 46,
+ "routes_failed": [],
  "fares": {
   "ATH": {
    "to": "ATH",
@@ -41,6 +34,21 @@
    "arr": "1:15PM",
    "rarr": "12:18AM+1",
    "pct": -30
+  },
+  "BCN": {
+   "to": "BCN",
+   "city": "Barcelona",
+   "price": 718,
+   "d1": "2026-09-05",
+   "d2": "2026-09-15",
+   "dep": "5:43PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:30AM",
+   "arr": "4:59AM+1",
+   "rarr": "11:07PM",
+   "pct": 18
   },
   "BNA": {
    "to": "BNA",
@@ -207,6 +215,21 @@
    "rarr": "4:31AM+1",
    "pct": 71
   },
+  "LIM": {
+   "to": "LIM",
+   "city": "Lima",
+   "price": 747,
+   "d1": "2026-09-02",
+   "d2": "2026-09-16",
+   "dep": "9:46AM",
+   "al": "Frontier",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "2:30AM",
+   "arr": "9:24PM",
+   "rarr": "1:59PM",
+   "pct": 0
+  },
   "LIS": {
    "to": "LIS",
    "city": "Lisbon",
@@ -251,6 +274,21 @@
    "arr": "5:14AM+1",
    "rarr": "11:26AM+1",
    "pct": -17
+  },
+  "MCO": {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 114,
+   "d1": "2026-10-30",
+   "d2": "2026-11-01",
+   "dep": "6:05AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:40AM",
+   "arr": "7:56AM",
+   "rarr": "8:37AM",
+   "pct": 72
   },
   "MIA": {
    "to": "MIA",
@@ -416,6 +454,21 @@
    "arr": "5:30AM+1",
    "rarr": "8:50PM",
    "pct": 37
+  },
+  "PNS": {
+   "to": "PNS",
+   "city": "Pensacola",
+   "price": 224,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "dep": "6:50AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:45AM",
+   "arr": "9:45AM",
+   "rarr": "10:35AM",
+   "pct": 0
   },
   "PSP": {
    "to": "PSP",

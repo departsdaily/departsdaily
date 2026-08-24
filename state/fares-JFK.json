@@ -1,12 +1,9 @@
 {
  "origin": "JFK",
- "generated": "2026-08-23T20:04:25-04:00",
+ "generated": "2026-08-23T20:17:00-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
- "routes_failed": [
-  "DCA",
-  "SJU"
- ],
+ "routes_priced": 29,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -52,6 +49,21 @@
    "arr": "3:10PM",
    "rarr": "6:00PM",
    "pct": 53
+  },
+  "DCA": {
+   "to": "DCA",
+   "city": "Washington DC",
+   "price": 223,
+   "d1": "2026-09-25",
+   "d2": "2026-09-27",
+   "dep": "9:30PM",
+   "al": "JetBlue",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:30AM",
+   "arr": "10:59PM",
+   "rarr": "7:42AM",
+   "pct": 45
   },
   "DEN": {
    "to": "DEN",
@@ -412,6 +424,21 @@
    "arr": "8:15AM+1",
    "rarr": "12:00AM+1",
    "pct": 51
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 154,
+   "d1": "2026-08-29",
+   "d2": "2026-09-05",
+   "dep": "5:01AM",
+   "al": "JetBlue",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "5:01AM",
+   "arr": "8:47AM",
+   "rarr": "8:54AM",
+   "pct": 63
   }
  }
 }
