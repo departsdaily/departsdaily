@@ -4,19 +4,19 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-24 06:53 EDT
+   Generated 2026-08-24 07:53 EDT
    Rebuilt this run: CLT (8)
    Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-08-24T06:53:11-04:00",
+ updated:"2026-08-24T07:53:10-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:173,d1:"2026-09-07",d2:"2026-09-12",dep:"8:56AM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"3:43PM",rarr:"6:23AM",exp:"2026-08-26"},
  {to:"MCO",city:"Orlando",price:114,d1:"2026-10-30",d2:"2026-11-01",dep:"6:05AM",al:"Frontier",stops:0,rdep:"6:40AM",arr:"7:56AM",rarr:"8:37AM",exp:"2026-08-26"},
  {to:"LAX",city:"Los Angeles",price:203,d1:"2026-09-25",d2:"2026-09-28",dep:"7:54PM",al:"Frontier",stops:1,rdep:"9:40PM",arr:"2:09AM+1",rarr:"4:31AM+1",exp:"2026-08-26"},
  {to:"MIA",city:"Miami",price:136,d1:"2026-09-23",d2:"2026-09-28",dep:"3:00PM",al:"Frontier",stops:0,rdep:"6:54PM",arr:"5:11PM",rarr:"9:14PM",exp:"2026-08-26"},
- {to:"MSY",city:"New Orleans",price:238,d1:"2026-09-14",d2:"2026-09-19",dep:"9:32AM",al:"Frontier",stops:1,rdep:"8:03PM",arr:"1:32PM",rarr:"11:55PM",exp:"2026-08-26"},
+ {to:"NYC",city:"New York City",price:181,d1:"2026-10-20",d2:"2026-10-24",dep:"3:59PM",al:"Frontier",stops:0,rdep:"6:40PM",arr:"5:55PM",rarr:"8:57PM",exp:"2026-08-26"},
  {to:"PMI",city:"Mallorca",price:597,d1:"2026-09-18",d2:"2026-09-26",dep:"6:40PM",al:"Lufthansa",stops:1,rdep:"8:55AM",arr:"5:30AM+1",rarr:"8:50PM",exp:"2026-08-26"},
  {to:"LON",city:"London",price:698,d1:"2026-08-31",d2:"2026-09-07",dep:"5:58PM",al:"United",stops:1,rdep:"8:25PM",arr:"2:57AM+1",rarr:"8:00AM+1",exp:"2026-08-26"},
  {to:"PAR",city:"Paris",price:735,d1:"2026-09-03",d2:"2026-09-17",dep:"7:00AM",al:"United",stops:1,rdep:"9:00AM",arr:"4:16PM",rarr:"8:10PM",exp:"2026-08-26"}],ATL:[
