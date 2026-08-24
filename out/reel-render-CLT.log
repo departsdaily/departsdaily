@@ -5,5 +5,5 @@ fonts: 22 dejavu files
 /usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf
 audio: 3 tracks
 === render ===
-rendering CLT reel for 2026-08-23: shape=board slot=0 13.0s 391 frames audio=coast-road.mp3@0s
-wrote out/reel_0.mp4 (0.9MB, 13.0s)
+rendering CLT reel for 2026-08-24: shape=spotlight slot=0 10.4s 312 frames audio=window-seat.mp3@0s
+wrote out/reel_0.mp4 (0.7MB, 10.4s)
