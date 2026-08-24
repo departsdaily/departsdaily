@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-24T02:16:11-04:00",
+ "generated": "2026-08-24T04:15:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -353,7 +353,7 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 342,
+   "price": 572,
    "d1": "2026-11-04",
    "d2": "2026-11-25",
    "dep": "7:00PM",
@@ -363,7 +363,7 @@
    "rdep": "8:00AM",
    "arr": "5:35AM+1",
    "rarr": "8:10PM",
-   "pct": 62
+   "pct": 36
   },
   "PUJ": {
    "to": "PUJ",
