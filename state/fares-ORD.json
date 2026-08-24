@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-23T22:16:10-04:00",
+ "generated": "2026-08-24T00:16:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 153,
-   "d1": "2026-10-08",
-   "d2": "2026-10-12",
-   "dep": "5:54PM",
-   "al": "Frontier",
+   "price": 145,
+   "d1": "2026-09-23",
+   "d2": "2026-09-27",
+   "dep": "6:59AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:47AM",
-   "arr": "12:08AM+1",
-   "rarr": "6:21PM",
-   "pct": 61
+   "rdep": "6:00AM",
+   "arr": "10:27AM",
+   "rarr": "9:10AM",
+   "pct": 63
   },
   "DCA": {
    "to": "DCA",
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 145,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "10:26AM",
+   "price": 151,
+   "d1": "2026-10-01",
+   "d2": "2026-10-08",
+   "dep": "8:55PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "11:50PM",
-   "arr": "5:03PM",
-   "rarr": "3:38AM+1",
-   "pct": 69
+   "rdep": "11:29PM",
+   "arr": "1:05AM+1",
+   "rarr": "3:16AM+1",
+   "pct": 68
   },
   "LAX": {
    "to": "LAX",
@@ -278,17 +278,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 150,
-   "d1": "2026-09-25",
-   "d2": "2026-10-01",
-   "dep": "7:25AM",
+   "price": 191,
+   "d1": "2026-09-09",
+   "d2": "2026-09-12",
+   "dep": "7:11AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:59PM",
-   "arr": "12:39PM",
-   "rarr": "5:07PM",
-   "pct": 62
+   "rdep": "2:03PM",
+   "arr": "11:28AM",
+   "rarr": "6:05PM",
+   "pct": 52
   },
   "CUN": {
    "to": "CUN",
@@ -368,17 +368,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 399,
-   "d1": "2026-11-18",
-   "d2": "2026-11-23",
-   "dep": "8:50PM",
+   "price": 415,
+   "d1": "2026-11-25",
+   "d2": "2026-12-02",
+   "dep": "3:45PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:15PM",
-   "arr": "3:12AM+1",
-   "rarr": "10:32PM",
-   "pct": 29
+   "rdep": "7:45PM",
+   "arr": "10:42PM",
+   "rarr": "3:12AM+1",
+   "pct": 26
   },
   "ROM": {
    "to": "ROM",
@@ -398,17 +398,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 197,
-   "d1": "2026-08-26",
-   "d2": "2026-09-01",
-   "dep": "12:44AM",
+   "price": 239,
+   "d1": "2026-10-07",
+   "d2": "2026-10-14",
+   "dep": "7:11AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:14PM",
-   "arr": "5:44AM",
-   "rarr": "12:27AM+1",
-   "pct": 53
+   "rdep": "3:04AM",
+   "arr": "1:06PM",
+   "rarr": "9:24AM",
+   "pct": 43
   }
  }
 }

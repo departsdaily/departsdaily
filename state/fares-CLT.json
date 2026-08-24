@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-23T22:15:25-04:00",
+ "generated": "2026-08-24T00:15:21-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 46,
+ "routes_priced": 47,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -184,6 +184,21 @@
    "arr": "5:43PM",
    "rarr": "11:08PM",
    "pct": -26
+  },
+  "JAX": {
+   "to": "JAX",
+   "city": "Jacksonville",
+   "price": 269,
+   "d1": "2026-11-15",
+   "d2": "2026-11-19",
+   "dep": "3:10PM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:00PM",
+   "arr": "6:33PM",
+   "rarr": "9:25PM",
+   "pct": 58
   },
   "LAS": {
    "to": "LAS",
@@ -440,6 +455,21 @@
    "rarr": "9:12PM",
    "pct": 24
   },
+  "PLS": {
+   "to": "PLS",
+   "city": "Providenciales",
+   "price": 549,
+   "d1": "2026-12-22",
+   "d2": "2026-12-28",
+   "dep": "9:20AM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "1:17PM",
+   "arr": "12:17PM",
+   "rarr": "4:30PM",
+   "pct": 17
+  },
   "PMI": {
    "to": "PMI",
    "city": "Mallorca",
@@ -518,17 +548,17 @@
   "SAL": {
    "to": "SAL",
    "city": "San Salvador",
-   "price": 402,
-   "d1": "2026-08-26",
-   "d2": "2026-09-10",
-   "dep": "7:05AM",
-   "al": "American",
-   "stops": 1,
+   "price": 1106,
+   "d1": "2026-12-17",
+   "d2": "2027-01-07",
+   "dep": "9:34AM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "12:24PM",
-   "arr": "12:06PM",
-   "rarr": "5:22PM",
-   "pct": 35
+   "rdep": "10:14AM",
+   "arr": "6:40PM",
+   "rarr": "5:50PM",
+   "pct": -78
   },
   "SDQ": {
    "to": "SDQ",
@@ -548,17 +578,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 335,
+   "price": 346,
    "d1": "2026-09-11",
    "d2": "2026-09-18",
-   "dep": "7:54PM",
+   "dep": "3:13PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "11:58PM",
-   "arr": "2:28AM+1",
+   "arr": "10:20PM",
    "rarr": "6:30AM+1",
-   "pct": 59
+   "pct": 57
   },
   "SLC": {
    "to": "SLC",
@@ -619,21 +649,6 @@
    "arr": "9:07AM",
    "rarr": "7:29PM",
    "pct": 21
-  },
-  "SXM": {
-   "to": "SXM",
-   "city": "St. Maarten",
-   "price": 704,
-   "d1": "2026-09-02",
-   "d2": "2026-09-06",
-   "dep": "5:43PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:42PM",
-   "arr": "11:48PM",
-   "rarr": "7:00PM",
-   "pct": -7
   },
   "TPA": {
    "to": "TPA",

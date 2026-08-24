@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-23T22:17:42-04:00",
+ "generated": "2026-08-24T00:17:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 160,
-   "d1": "2026-09-15",
-   "d2": "2026-09-18",
-   "dep": "6:00AM",
+   "price": 248,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "7:10PM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "9:45PM",
-   "arr": "11:59AM",
-   "rarr": "5:34AM+1",
-   "pct": 83
+   "rdep": "4:30PM",
+   "arr": "1:25AM+1",
+   "rarr": "9:43PM",
+   "pct": 73
   },
   "MCO": {
    "to": "MCO",

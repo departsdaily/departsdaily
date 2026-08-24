@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-23T22:18:51-04:00",
+ "generated": "2026-08-24T00:18:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 327,
-   "d1": "2026-08-29",
-   "d2": "2026-08-31",
-   "dep": "5:50AM",
-   "al": "Southwest",
+   "price": 329,
+   "d1": "2026-09-09",
+   "d2": "2026-09-11",
+   "dep": "8:00AM",
+   "al": "Alaska",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:06PM",
-   "arr": "12:55PM",
-   "rarr": "12:23AM+1",
-   "pct": 58
+   "rdep": "1:25PM",
+   "arr": "3:42PM",
+   "rarr": "8:00PM",
+   "pct": 57
   },
   "TPA": {
    "to": "TPA",
@@ -338,17 +338,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 556,
-   "d1": "2026-11-19",
-   "d2": "2026-11-24",
-   "dep": "7:50PM",
-   "al": "Icelandair",
+   "price": 549,
+   "d1": "2026-10-18",
+   "d2": "2026-10-22",
+   "dep": "11:35PM",
+   "al": "LL",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:00PM",
-   "arr": "4:35AM+1",
-   "rarr": "10:30PM",
-   "pct": 38
+   "rdep": "6:30AM",
+   "arr": "8:30AM+1",
+   "rarr": "4:45PM",
+   "pct": 39
   },
   "PUJ": {
    "to": "PUJ",
