@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-24T14:17:46-04:00",
+ "generated": "2026-08-24T16:04:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 166,
-   "d1": "2026-09-15",
-   "d2": "2026-09-18",
-   "dep": "2:58PM",
-   "al": "American",
-   "stops": 0,
+   "price": 193,
+   "d1": "2026-09-18",
+   "d2": "2026-09-21",
+   "dep": "6:45AM",
+   "al": "JetBlue",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "4:01PM",
-   "arr": "5:46PM",
-   "rarr": "6:29PM",
-   "pct": 60
+   "rdep": "6:00AM",
+   "arr": "1:23PM",
+   "rarr": "11:51AM",
+   "pct": 53
   },
   "PHX": {
    "to": "PHX",
@@ -323,17 +323,17 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 385,
-   "d1": "2026-10-16",
-   "d2": "2026-10-20",
-   "dep": "1:59PM",
+   "price": 426,
+   "d1": "2026-12-13",
+   "d2": "2026-12-17",
+   "dep": "7:29AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:00PM",
-   "arr": "6:44PM",
-   "rarr": "4:43PM",
-   "pct": 40
+   "rdep": "8:30AM",
+   "arr": "12:28PM",
+   "rarr": "1:29PM",
+   "pct": 33
   },
   "LON": {
    "to": "LON",

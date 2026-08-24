@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-24T14:18:04-04:00",
+ "generated": "2026-08-24T16:04:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -68,7 +68,7 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 308,
+   "price": 307,
    "d1": "2026-08-28",
    "d2": "2026-08-31",
    "dep": "6:50AM",
@@ -78,7 +78,7 @@
    "rdep": "10:02AM",
    "arr": "10:07AM",
    "rarr": "1:12PM",
-   "pct": 32
+   "pct": 33
   },
   "HOU": {
    "to": "HOU",
@@ -158,17 +158,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 154,
-   "d1": "2026-09-03",
-   "d2": "2026-09-06",
-   "dep": "3:30PM",
+   "price": 133,
+   "d1": "2026-10-08",
+   "d2": "2026-10-15",
+   "dep": "6:20AM",
    "al": "Allegiant",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:30PM",
-   "arr": "6:40PM",
-   "rarr": "10:52PM",
-   "pct": 63
+   "rdep": "10:18AM",
+   "arr": "9:28AM",
+   "rarr": "1:40PM",
+   "pct": 68
   },
   "ORD": {
    "to": "ORD",
