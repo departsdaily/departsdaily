@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-24T00:17:56-04:00",
+ "generated": "2026-08-24T02:17:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -64,6 +64,21 @@
    "arr": "10:23AM",
    "rarr": "2:52AM+1",
    "pct": 50
+  },
+  "DFW": {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 308,
+   "d1": "2026-08-28",
+   "d2": "2026-08-31",
+   "dep": "6:50AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "10:02AM",
+   "arr": "10:07AM",
+   "rarr": "1:12PM",
+   "pct": 32
   },
   "HOU": {
    "to": "HOU",
@@ -293,17 +308,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 517,
-   "d1": "2026-09-18",
-   "d2": "2026-09-27",
-   "dep": "9:54PM",
-   "al": "Frontier",
+   "price": 438,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
+   "dep": "1:10PM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:42PM",
-   "arr": "2:54AM+1",
-   "rarr": "8:44PM",
-   "pct": 4
+   "rdep": "12:30PM",
+   "arr": "8:30PM",
+   "rarr": "8:09PM",
+   "pct": 19
   },
   "NAS": {
    "to": "NAS",

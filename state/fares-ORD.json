@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-24T00:16:08-04:00",
+ "generated": "2026-08-24T02:16:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -338,17 +338,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 398,
-   "d1": "2026-09-25",
-   "d2": "2026-10-05",
-   "dep": "9:50AM",
+   "price": 431,
+   "d1": "2026-09-03",
+   "d2": "2026-09-08",
+   "dep": "2:15PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:30PM",
-   "arr": "2:55PM",
-   "rarr": "11:45PM",
-   "pct": 17
+   "rdep": "7:45AM",
+   "arr": "7:21PM",
+   "rarr": "12:21PM",
+   "pct": 10
   },
   "PAR": {
    "to": "PAR",
@@ -383,17 +383,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 595,
-   "d1": "2026-11-20",
-   "d2": "2026-11-29",
-   "dep": "7:05AM",
-   "al": "Air Canada",
+   "price": 407,
+   "d1": "2026-12-11",
+   "d2": "2026-12-16",
+   "dep": "8:10PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:15PM",
-   "arr": "5:22PM",
-   "rarr": "8:00AM+1",
-   "pct": 37
+   "rdep": "5:55AM",
+   "arr": "7:20AM+1",
+   "rarr": "6:45PM",
+   "pct": 57
   },
   "SJU": {
    "to": "SJU",
