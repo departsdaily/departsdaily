@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-24T04:16:18-04:00",
+ "generated": "2026-08-24T06:16:02-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 145,
-   "d1": "2026-09-10",
-   "d2": "2026-09-13",
-   "dep": "6:00AM",
-   "al": "JetBlue",
+   "price": 141,
+   "d1": "2026-09-14",
+   "d2": "2026-09-17",
+   "dep": "1:45PM",
+   "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:15AM",
-   "arr": "8:52AM",
-   "rarr": "12:24PM",
-   "pct": 68
+   "rdep": "6:37PM",
+   "arr": "4:47PM",
+   "rarr": "10:12PM",
+   "pct": 69
   },
   "HOU": {
    "to": "HOU",
@@ -143,17 +143,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 168,
-   "d1": "2026-11-13",
-   "d2": "2026-11-16",
-   "dep": "9:10PM",
+   "price": 138,
+   "d1": "2026-09-14",
+   "d2": "2026-09-17",
+   "dep": "6:15PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:55PM",
-   "arr": "1:32AM+1",
-   "rarr": "3:50AM+1",
-   "pct": 63
+   "rdep": "2:37PM",
+   "arr": "9:17PM",
+   "rarr": "6:00PM",
+   "pct": 70
   },
   "MSY": {
    "to": "MSY",
