@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-24T08:15:24-04:00",
+ "generated": "2026-08-24T10:10:43-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 47,
+ "routes_priced": 48,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -649,6 +649,21 @@
    "arr": "9:07AM",
    "rarr": "7:29PM",
    "pct": 21
+  },
+  "SXM": {
+   "to": "SXM",
+   "city": "St. Maarten",
+   "price": 605,
+   "d1": "2026-11-21",
+   "d2": "2026-11-28",
+   "dep": "8:55AM",
+   "al": "Air Canada",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "3:45PM",
+   "arr": "3:52PM",
+   "rarr": "12:27AM+1",
+   "pct": 8
   },
   "TPA": {
    "to": "TPA",
