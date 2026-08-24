@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-23T20:17:16-04:00",
+ "generated": "2026-08-23T22:18:05-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -215,6 +215,21 @@
    "rarr": "6:47PM",
    "pct": 63
   },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 1154,
+   "d1": "2026-09-04",
+   "d2": "2026-09-18",
+   "dep": "11:10AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "10:58PM",
+   "rarr": "8:25PM",
+   "pct": -31
+  },
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
@@ -233,17 +248,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 312,
-   "d1": "2026-09-07",
-   "d2": "2026-09-12",
-   "dep": "2:05PM",
-   "al": "Aerom\u00e9xico",
+   "price": 362,
+   "d1": "2026-10-14",
+   "d2": "2026-10-21",
+   "dep": "5:12PM",
+   "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:40PM",
-   "arr": "8:23PM",
-   "rarr": "9:40PM",
-   "pct": 40
+   "rdep": "5:25AM",
+   "arr": "10:58PM",
+   "rarr": "10:56AM",
+   "pct": 30
   },
   "GCM": {
    "to": "GCM",

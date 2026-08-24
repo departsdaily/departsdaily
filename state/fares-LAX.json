@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-23T20:16:41-04:00",
+ "generated": "2026-08-23T22:17:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 336,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "10:17PM",
+   "price": 206,
+   "d1": "2026-10-07",
+   "d2": "2026-10-12",
+   "dep": "12:59AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:30AM",
-   "arr": "2:15AM+1",
-   "rarr": "10:44AM",
-   "pct": 36
+   "rdep": "5:51PM",
+   "arr": "4:11AM",
+   "rarr": "9:08PM",
+   "pct": 60
   },
   "FLL": {
    "to": "FLL",
@@ -173,17 +173,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 291,
-   "d1": "2026-08-30",
-   "d2": "2026-09-07",
-   "dep": "6:00AM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 342,
+   "d1": "2026-08-28",
+   "d2": "2026-08-30",
+   "dep": "11:00PM",
+   "al": "Breeze",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "9:52PM",
-   "arr": "11:12AM",
-   "rarr": "3:16AM+1",
-   "pct": 45
+   "rdep": "7:35PM",
+   "arr": "3:00AM+1",
+   "rarr": "11:50PM",
+   "pct": 35
   },
   "NYC": {
    "to": "NYC",

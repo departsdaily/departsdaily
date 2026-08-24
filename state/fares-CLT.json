@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-23T20:15:08-04:00",
+ "generated": "2026-08-23T22:15:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 46,
  "routes_failed": [],
@@ -545,35 +545,20 @@
    "rarr": "7:11PM",
    "pct": 7
   },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 347,
-   "d1": "2026-10-05",
-   "d2": "2026-10-08",
-   "dep": "7:54PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "8:00PM",
-   "arr": "5:13AM+1",
-   "rarr": "5:33AM+1",
-   "pct": 53
-  },
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 267,
-   "d1": "2026-10-21",
-   "d2": "2026-10-25",
-   "dep": "4:47PM",
+   "price": 335,
+   "d1": "2026-09-11",
+   "d2": "2026-09-18",
+   "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:59PM",
-   "arr": "11:38PM",
-   "rarr": "6:19AM+1",
-   "pct": 67
+   "rdep": "11:58PM",
+   "arr": "2:28AM+1",
+   "rarr": "6:30AM+1",
+   "pct": 59
   },
   "SLC": {
    "to": "SLC",
@@ -589,6 +574,21 @@
    "arr": "5:15AM+1",
    "rarr": "11:25PM",
    "pct": 47
+  },
+  "SMF": {
+   "to": "SMF",
+   "city": "Sacramento",
+   "price": 289,
+   "d1": "2026-09-11",
+   "d2": "2026-09-18",
+   "dep": "7:54PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:48AM",
+   "arr": "2:21AM+1",
+   "rarr": "2:39PM",
+   "pct": 54
   },
   "SNA": {
    "to": "SNA",
@@ -638,17 +638,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 182,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
-   "dep": "7:54PM",
+   "price": 236,
+   "d1": "2026-10-11",
+   "d2": "2026-10-17",
+   "dep": "11:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:08AM",
-   "arr": "3:13AM+1",
-   "rarr": "1:21PM",
-   "pct": 62
+   "rdep": "6:15AM",
+   "arr": "4:05PM",
+   "rarr": "1:39PM",
+   "pct": 51
   },
   "VPS": {
    "to": "VPS",
