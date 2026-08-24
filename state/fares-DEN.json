@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-24T08:16:48-04:00",
+ "generated": "2026-08-24T10:16:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -274,6 +274,21 @@
    "arr": "7:40PM",
    "rarr": "7:20AM+1",
    "pct": -29
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 409,
+   "d1": "2026-12-01",
+   "d2": "2026-12-06",
+   "dep": "1:20PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "7:43PM",
+   "arr": "8:40PM",
+   "rarr": "3:30AM+1",
+   "pct": 3
   }
  }
 }
