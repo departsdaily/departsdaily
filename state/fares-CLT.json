@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-24T10:15:16-04:00",
+ "generated": "2026-08-24T12:15:18-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 47,
+ "routes_priced": 48,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -574,6 +574,21 @@
    "arr": "10:20PM",
    "rarr": "6:30AM+1",
    "pct": 57
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 222,
+   "d1": "2026-11-27",
+   "d2": "2026-12-02",
+   "dep": "11:57AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:25AM",
+   "arr": "4:48PM",
+   "rarr": "12:41PM",
+   "pct": 47
   },
   "SLC": {
    "to": "SLC",
