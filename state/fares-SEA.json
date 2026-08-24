@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-24T12:17:54-04:00",
+ "generated": "2026-08-24T14:06:38-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 15,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -64,6 +64,21 @@
    "arr": "4:51PM",
    "rarr": "12:35PM",
    "pct": 14
+  },
+  "FLL": {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 486,
+   "d1": "2026-08-29",
+   "d2": "2026-09-05",
+   "dep": "8:23AM",
+   "al": "Alaska",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:27PM",
+   "arr": "2:24PM",
+   "rarr": "12:54AM+1",
+   "pct": 23
   },
   "HOU": {
    "to": "HOU",

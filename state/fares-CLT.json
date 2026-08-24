@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-24T12:15:18-04:00",
+ "generated": "2026-08-24T14:04:05-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 48,
+ "routes_priced": 49,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -143,17 +143,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 306,
-   "d1": "2026-11-18",
-   "d2": "2026-11-22",
-   "dep": "6:40AM",
-   "al": "Southwest",
-   "stops": 1,
+   "price": 211,
+   "d1": "2026-09-05",
+   "d2": "2026-09-07",
+   "dep": "9:46AM",
+   "al": "Frontier",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "10:20AM",
-   "rarr": "10:45AM",
-   "pct": 25
+   "rdep": "6:24PM",
+   "arr": "12:04PM",
+   "rarr": "8:43PM",
+   "pct": 48
   },
   "FRA": {
    "to": "FRA",
@@ -244,6 +244,21 @@
    "arr": "9:24PM",
    "rarr": "1:59PM",
    "pct": 0
+  },
+  "LIR": {
+   "to": "LIR",
+   "city": "Liberia, Costa Rica",
+   "price": 1009,
+   "d1": "2026-12-17",
+   "d2": "2027-01-07",
+   "dep": "3:32PM",
+   "al": "United",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "3:10PM",
+   "arr": "12:34AM+1",
+   "rarr": "10:36PM",
+   "pct": -58
   },
   "LON": {
    "to": "LON",

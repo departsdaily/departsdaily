@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-24T12:16:38-04:00",
+ "generated": "2026-08-24T14:05:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -90,9 +90,9 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:19PM",
+   "rdep": "5:55AM",
    "arr": "3:19PM",
-   "rarr": "5:35PM",
+   "rarr": "10:13AM",
    "pct": 65
   },
   "MIA": {
