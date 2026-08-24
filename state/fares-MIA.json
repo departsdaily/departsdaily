@@ -1,9 +1,11 @@
 {
  "origin": "MIA",
- "generated": "2026-08-23T18:17:35-04:00",
+ "generated": "2026-08-23T20:04:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
- "routes_failed": [],
+ "routes_failed": [
+  "SFO"
+ ],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -128,17 +130,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 448,
+   "price": 366,
    "d1": "2026-08-31",
-   "d2": "2026-09-03",
+   "d2": "2026-09-02",
    "dep": "8:10AM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
+   "rdep": "7:11PM",
    "arr": "12:12PM",
-   "rarr": "1:54PM",
-   "pct": -40
+   "rarr": "11:10PM",
+   "pct": -14
   },
   "NYC": {
    "to": "NYC",
@@ -200,20 +202,20 @@
    "rarr": "5:10AM+1",
    "pct": 46
   },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 258,
-   "d1": "2026-11-02",
-   "d2": "2026-11-04",
-   "dep": "5:50AM",
-   "al": "Frontier",
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 448,
+   "d1": "2026-09-21",
+   "d2": "2026-09-27",
+   "dep": "10:45AM",
+   "al": "Avianca",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:20PM",
-   "arr": "1:25PM",
-   "rarr": "6:47PM",
-   "pct": 63
+   "rdep": "5:20PM",
+   "arr": "4:15PM",
+   "rarr": "11:00PM",
+   "pct": 28
   },
   "CUN": {
    "to": "CUN",

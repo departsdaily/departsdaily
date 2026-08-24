@@ -1,9 +1,12 @@
 {
  "origin": "BOS",
- "generated": "2026-08-23T18:18:12-04:00",
+ "generated": "2026-08-23T20:05:21-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
- "routes_failed": [],
+ "routes_priced": 24,
+ "routes_failed": [
+  "DCA",
+  "TPA"
+ ],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -34,21 +37,6 @@
    "arr": "8:29PM",
    "rarr": "8:02PM",
    "pct": 41
-  },
-  "DCA": {
-   "to": "DCA",
-   "city": "Washington DC",
-   "price": 112,
-   "d1": "2026-09-15",
-   "d2": "2026-09-19",
-   "dep": "9:40AM",
-   "al": "JetBlue",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "8:55PM",
-   "arr": "11:20AM",
-   "rarr": "10:40PM",
-   "pct": 71
   },
   "DFW": {
    "to": "DFW",
@@ -230,21 +218,6 @@
    "rarr": "12:23AM+1",
    "pct": 58
   },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 281,
-   "d1": "2026-09-21",
-   "d2": "2026-09-23",
-   "dep": "6:19AM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:20AM",
-   "arr": "10:53AM",
-   "rarr": "11:31AM",
-   "pct": 31
-  },
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
@@ -308,7 +281,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 748,
+   "price": 742,
    "d1": "2026-12-16",
    "d2": "2027-01-05",
    "dep": "7:15AM",
@@ -318,7 +291,7 @@
    "rdep": "4:11PM",
    "arr": "12:46PM",
    "rarr": "9:25PM",
-   "pct": -39
+   "pct": -37
   },
   "NAS": {
    "to": "NAS",
@@ -353,32 +326,32 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 222,
-   "d1": "2026-09-05",
-   "d2": "2026-09-18",
-   "dep": "1:35PM",
-   "al": "JetBlue",
+   "price": 264,
+   "d1": "2026-09-21",
+   "d2": "2026-10-05",
+   "dep": "5:00AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:25PM",
-   "arr": "5:46PM",
-   "rarr": "6:27PM",
-   "pct": 60
+   "rdep": "4:12PM",
+   "arr": "10:57AM",
+   "rarr": "9:53PM",
+   "pct": 53
   },
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 478,
+   "price": 623,
    "d1": "2026-11-15",
    "d2": "2026-11-22",
-   "dep": "6:00PM",
+   "dep": "10:10PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:55AM",
-   "arr": "3:40AM+1",
+   "arr": "7:50AM+1",
    "rarr": "5:10PM",
-   "pct": 50
+   "pct": 34
   },
   "SJU": {
    "to": "SJU",

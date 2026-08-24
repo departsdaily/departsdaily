@@ -1,9 +1,11 @@
 {
  "origin": "DFW",
- "generated": "2026-08-23T18:16:16-04:00",
+ "generated": "2026-08-23T20:03:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
- "routes_failed": [],
+ "routes_priced": 23,
+ "routes_failed": [
+  "DEN"
+ ],
  "fares": {
   "BNA": {
    "to": "BNA",
@@ -49,21 +51,6 @@
    "arr": "12:45PM",
    "rarr": "1:14PM",
    "pct": 53
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 238,
-   "d1": "2026-08-27",
-   "d2": "2026-08-30",
-   "dep": "9:07AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "10:09AM",
-   "arr": "11:25AM",
-   "rarr": "12:19PM",
-   "pct": 37
   },
   "FLL": {
    "to": "FLL",
@@ -188,16 +175,16 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 218,
-   "d1": "2026-10-30",
-   "d2": "2026-11-02",
-   "dep": "4:28PM",
+   "price": 217,
+   "d1": "2026-10-16",
+   "d2": "2026-10-19",
+   "dep": "9:52PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:13PM",
-   "arr": "7:08PM",
-   "rarr": "11:10PM",
+   "rdep": "12:26PM",
+   "arr": "12:26AM+1",
+   "rarr": "3:09PM",
    "pct": 47
   },
   "PHL": {
@@ -293,17 +280,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 301,
-   "d1": "2026-12-21",
-   "d2": "2026-12-26",
-   "dep": "5:45AM",
-   "al": "Frontier",
-   "stops": 0,
+   "price": 305,
+   "d1": "2026-10-03",
+   "d2": "2026-10-07",
+   "dep": "9:00PM",
+   "al": "Volaris",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:48AM",
-   "arr": "8:39AM",
-   "rarr": "2:00PM",
-   "pct": 42
+   "rdep": "9:50PM",
+   "arr": "2:03AM+1",
+   "rarr": "2:56AM+1",
+   "pct": 41
   },
   "LON": {
    "to": "LON",

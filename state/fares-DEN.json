@@ -1,9 +1,13 @@
 {
  "origin": "DEN",
- "generated": "2026-08-23T18:16:35-04:00",
+ "generated": "2026-08-23T20:03:47-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
- "routes_failed": [],
+ "routes_priced": 17,
+ "routes_failed": [
+  "DFW",
+  "LAX",
+  "MIA"
+ ],
  "fares": {
   "BOS": {
    "to": "BOS",
@@ -65,21 +69,6 @@
    "rarr": "10:46PM",
    "pct": 65
   },
-  "LAX": {
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 121,
-   "d1": "2026-10-02",
-   "d2": "2026-10-04",
-   "dep": "9:05AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:50AM",
-   "arr": "11:39AM",
-   "rarr": "2:10PM",
-   "pct": 69
-  },
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
@@ -94,21 +83,6 @@
    "arr": "2:18PM",
    "rarr": "5:35PM",
    "pct": 62
-  },
-  "MIA": {
-   "to": "MIA",
-   "city": "Miami",
-   "price": 208,
-   "d1": "2026-11-02",
-   "d2": "2026-11-07",
-   "dep": "6:56PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:05AM",
-   "arr": "10:44PM",
-   "rarr": "10:55AM",
-   "pct": 63
   },
   "MSY": {
    "to": "MSY",
@@ -218,7 +192,7 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 849,
+   "price": 877,
    "d1": "2026-09-11",
    "d2": "2026-09-26",
    "dep": "3:15PM",
@@ -226,9 +200,9 @@
    "stops": 2,
    "xfer": 1,
    "rdep": "4:50PM",
-   "arr": "2:10AM+1",
+   "arr": "2:37AM+1",
    "rarr": "11:02AM+1",
-   "pct": 0
+   "pct": -3
   },
   "MBJ": {
    "to": "MBJ",
