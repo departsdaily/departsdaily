@@ -1,24 +1,24 @@
 {
  "origin": "ATL",
- "generated": "2026-08-25T06:14:49-04:00",
+ "generated": "2026-08-25T08:14:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 201,
-   "d1": "2026-10-02",
-   "d2": "2026-10-06",
-   "dep": "7:20AM",
+   "price": 183,
+   "d1": "2026-09-15",
+   "d2": "2026-09-22",
+   "dep": "9:28AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "3:36PM",
-   "arr": "12:47PM",
-   "rarr": "7:27PM",
-   "pct": 62
+   "rdep": "12:52PM",
+   "arr": "12:07PM",
+   "rarr": "4:07PM",
+   "pct": 65
   },
   "DCA": {
    "to": "DCA",
@@ -319,21 +319,6 @@
    "arr": "10:35PM",
    "rarr": "10:46PM",
    "pct": 24
-  },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 410,
-   "d1": "2026-09-17",
-   "d2": "2026-09-24",
-   "dep": "8:59PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:30PM",
-   "arr": "11:59PM",
-   "rarr": "8:48PM",
-   "pct": 15
   },
   "PAR": {
    "to": "PAR",
