@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-25T00:16:22-04:00",
+ "generated": "2026-08-25T02:05:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -364,6 +364,21 @@
    "arr": "12:05PM+1",
    "rarr": "10:35PM",
    "pct": 9
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 197,
+   "d1": "2026-10-30",
+   "d2": "2026-11-04",
+   "dep": "9:59AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "3:59PM",
+   "arr": "4:58PM",
+   "rarr": "10:51PM",
+   "pct": 53
   }
  }
 }
