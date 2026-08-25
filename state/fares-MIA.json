@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-24T18:17:27-04:00",
+ "generated": "2026-08-24T20:00:10-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 564,
-   "d1": "2026-09-12",
-   "d2": "2026-09-20",
-   "dep": "12:20AM",
+   "price": 355,
+   "d1": "2026-10-16",
+   "d2": "2026-10-26",
+   "dep": "4:20PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:20PM",
-   "arr": "11:10AM",
-   "rarr": "9:05AM+1",
-   "pct": 37
+   "rdep": "8:35PM",
+   "arr": "3:10AM+1",
+   "rarr": "9:00AM+1",
+   "pct": 61
   },
   "PUJ": {
    "to": "PUJ",

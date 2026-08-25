@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-24T18:15:52-04:00",
+ "generated": "2026-08-24T19:58:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -128,24 +128,24 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 151,
-   "d1": "2026-10-01",
-   "d2": "2026-10-08",
-   "dep": "8:55PM",
-   "al": "Frontier",
-   "stops": 0,
+   "price": 175,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "7:20AM",
+   "al": "Alaska",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:29PM",
-   "arr": "1:05AM+1",
-   "rarr": "3:16AM+1",
-   "pct": 68
+   "rdep": "10:23AM",
+   "arr": "1:27PM",
+   "rarr": "4:17PM",
+   "pct": 63
   },
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 120,
-   "d1": "2026-10-09",
-   "d2": "2026-10-11",
+   "price": 140,
+   "d1": "2026-10-08",
+   "d2": "2026-10-13",
    "dep": "8:01PM",
    "al": "Frontier",
    "stops": 0,
@@ -153,7 +153,7 @@
    "rdep": "12:21AM",
    "arr": "12:51AM+1",
    "rarr": "4:34AM",
-   "pct": 79
+   "pct": 75
   },
   "MCO": {
    "to": "MCO",

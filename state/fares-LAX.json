@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-24T18:16:47-04:00",
+ "generated": "2026-08-24T19:59:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -233,9 +233,9 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 54,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
+   "price": 109,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
    "dep": "9:30AM",
    "al": "Frontier",
    "stops": 0,
@@ -243,7 +243,7 @@
    "rdep": "7:22AM",
    "arr": "10:54AM",
    "rarr": "8:45AM",
-   "pct": 85
+   "pct": 69
   },
   "SEA": {
    "to": "SEA",
@@ -308,15 +308,15 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 512,
+   "price": 510,
    "d1": "2026-12-13",
    "d2": "2026-12-17",
-   "dep": "10:37PM",
+   "dep": "9:30PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "4:00PM",
-   "arr": "6:01AM+1",
+   "arr": "4:06AM+1",
    "rarr": "11:28PM",
    "pct": 20
   },
