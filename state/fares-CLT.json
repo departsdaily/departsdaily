@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-25T07:04:28-04:00",
+ "generated": "2026-08-25T07:53:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 49,
+ "routes_priced": 50,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -184,6 +184,21 @@
    "arr": "10:52PM",
    "rarr": "10:36PM",
    "pct": 1
+  },
+  "HNL": {
+   "to": "HNL",
+   "city": "Honolulu",
+   "price": 785,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
+   "dep": "8:54AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:38PM",
+   "arr": "7:44PM",
+   "rarr": "4:41AM+1",
+   "pct": 0
   },
   "JAX": {
    "to": "JAX",
