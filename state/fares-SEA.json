@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-25T14:17:25-04:00",
+ "generated": "2026-08-25T16:03:44-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 415,
-   "d1": "2026-09-03",
-   "d2": "2026-09-06",
-   "dep": "11:40AM",
+   "price": 333,
+   "d1": "2026-09-25",
+   "d2": "2026-09-29",
+   "dep": "11:42PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:09AM",
-   "arr": "5:36PM",
-   "rarr": "1:30PM",
-   "pct": 38
+   "rdep": "7:20PM",
+   "arr": "5:06AM+1",
+   "rarr": "1:37AM+1",
+   "pct": 50
   },
   "DCA": {
    "to": "DCA",

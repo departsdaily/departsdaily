@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-25T14:14:47-04:00",
+ "generated": "2026-08-25T16:01:23-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 49,
+ "routes_priced": 48,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -319,21 +319,6 @@
    "arr": "5:11PM",
    "rarr": "9:14PM",
    "pct": 67
-  },
-  "MIL": {
-   "to": "MIL",
-   "city": "Milan",
-   "price": 811,
-   "d1": "2026-10-20",
-   "d2": "2026-10-27",
-   "dep": "12:30PM",
-   "al": "United",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "9:50AM",
-   "arr": "11:40PM",
-   "rarr": "8:55PM",
-   "pct": 10
   },
   "MSY": {
    "to": "MSY",
