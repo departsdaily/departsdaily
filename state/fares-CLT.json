@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-25T12:15:01-04:00",
+ "generated": "2026-08-25T14:03:34-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 49,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "MAD": {
    "to": "MAD",
    "city": "Madrid",
-   "price": 1030,
-   "d1": "2026-09-05",
-   "d2": "2026-09-14",
-   "dep": "5:43PM",
+   "price": 1073,
+   "d1": "2026-09-04",
+   "d2": "2026-09-15",
+   "dep": "9:52PM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "10:25PM",
-   "arr": "5:14AM+1",
-   "rarr": "11:26AM+1",
-   "pct": -17
+   "rdep": "6:00PM",
+   "arr": "10:59AM+1",
+   "rarr": "5:38AM+1",
+   "pct": -22
   },
   "MCO": {
    "to": "MCO",

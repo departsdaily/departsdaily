@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-25T12:15:39-04:00",
+ "generated": "2026-08-25T14:04:15-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -143,9 +143,9 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 140,
-   "d1": "2026-10-08",
-   "d2": "2026-10-13",
+   "price": 116,
+   "d1": "2026-10-16",
+   "d2": "2026-10-18",
    "dep": "8:01PM",
    "al": "Frontier",
    "stops": 0,
@@ -153,22 +153,22 @@
    "rdep": "12:21AM",
    "arr": "12:51AM+1",
    "rarr": "4:34AM",
-   "pct": 75
+   "pct": 79
   },
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 137,
-   "d1": "2026-10-07",
-   "d2": "2026-10-13",
+   "price": 153,
+   "d1": "2026-09-11",
+   "d2": "2026-09-14",
    "dep": "3:50PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:20AM",
+   "rdep": "8:10AM",
    "arr": "6:46PM",
-   "rarr": "8:31AM",
-   "pct": 65
+   "rarr": "11:20AM",
+   "pct": 61
   },
   "MIA": {
    "to": "MIA",
@@ -334,6 +334,21 @@
    "arr": "12:47AM+1",
    "rarr": "11:40PM",
    "pct": 54
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 373,
+   "d1": "2026-10-25",
+   "d2": "2026-11-01",
+   "dep": "4:30PM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:05PM",
+   "arr": "9:40PM",
+   "rarr": "8:32PM",
+   "pct": 22
   },
   "PAR": {
    "to": "PAR",
