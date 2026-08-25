@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-24T20:17:20-04:00",
+ "generated": "2026-08-24T22:17:23-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -39,14 +39,14 @@
    "to": "DCA",
    "city": "Washington DC",
    "price": 157,
-   "d1": "2026-09-10",
-   "d2": "2026-09-12",
+   "d1": "2026-09-17",
+   "d2": "2026-09-19",
    "dep": "5:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "1:06PM",
-   "arr": "1:50PM",
+   "arr": "1:45PM",
    "rarr": "8:47PM",
    "pct": 59
   },
@@ -199,6 +199,21 @@
    "arr": "11:55PM",
    "rarr": "7:45PM",
    "pct": 70
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 354,
+   "d1": "2026-10-16",
+   "d2": "2026-10-20",
+   "dep": "5:50AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:27PM",
+   "arr": "1:23PM",
+   "rarr": "11:08PM",
+   "pct": 44
   },
   "SFO": {
    "to": "SFO",

@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-24T20:16:07-04:00",
+ "generated": "2026-08-24T22:16:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -353,7 +353,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 781,
+   "price": 861,
    "d1": "2026-09-10",
    "d2": "2026-09-14",
    "dep": "9:30PM",
@@ -363,7 +363,7 @@
    "rdep": "7:05AM",
    "arr": "12:05PM+1",
    "rarr": "10:35PM",
-   "pct": 18
+   "pct": 9
   }
  }
 }

@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-24T20:17:38-04:00",
+ "generated": "2026-08-24T22:17:40-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 130,
-   "d1": "2026-09-29",
-   "d2": "2026-10-04",
-   "dep": "10:57AM",
+   "price": 145,
+   "d1": "2026-09-05",
+   "d2": "2026-09-08",
+   "dep": "11:54AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:50AM",
-   "arr": "1:44PM",
-   "rarr": "9:42AM",
-   "pct": 66
+   "rdep": "2:40PM",
+   "arr": "3:56PM",
+   "rarr": "6:38PM",
+   "pct": 62
   },
   "LAX": {
    "to": "LAX",
@@ -199,6 +199,21 @@
    "arr": "10:54PM",
    "rarr": "9:25PM",
    "pct": 67
+  },
+  "CUN": {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 517,
+   "d1": "2026-10-02",
+   "d2": "2026-10-09",
+   "dep": "8:15PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:50AM",
+   "arr": "5:04AM+1",
+   "rarr": "8:17PM",
+   "pct": 1
   },
   "LON": {
    "to": "LON",

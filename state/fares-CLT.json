@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-24T20:15:09-04:00",
+ "generated": "2026-08-24T22:15:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 49,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 173,
-   "d1": "2026-09-07",
-   "d2": "2026-09-12",
-   "dep": "8:56AM",
+   "price": 251,
+   "d1": "2026-10-15",
+   "d2": "2026-10-19",
+   "dep": "9:42PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:59AM",
-   "arr": "3:43PM",
-   "rarr": "6:23AM",
-   "pct": 76
+   "rdep": "12:40AM",
+   "arr": "4:45AM+1",
+   "rarr": "6:03AM",
+   "pct": 66
   },
   "LAX": {
    "to": "LAX",
@@ -428,7 +428,7 @@
   "PDX": {
    "to": "PDX",
    "city": "Portland, OR",
-   "price": 289,
+   "price": 308,
    "d1": "2026-09-04",
    "d2": "2026-09-07",
    "dep": "6:30PM",
@@ -438,7 +438,7 @@
    "rdep": "10:45PM",
    "arr": "12:50AM+1",
    "rarr": "5:30AM+1",
-   "pct": 63
+   "pct": 60
   },
   "PHX": {
    "to": "PHX",
@@ -578,17 +578,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 346,
-   "d1": "2026-09-11",
-   "d2": "2026-09-18",
+   "price": 321,
+   "d1": "2026-10-05",
+   "d2": "2026-10-11",
    "dep": "3:13PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:58PM",
+   "rdep": "11:59PM",
    "arr": "10:20PM",
-   "rarr": "6:30AM+1",
-   "pct": 57
+   "rarr": "6:19AM+1",
+   "pct": 60
   },
   "SJU": {
    "to": "SJU",

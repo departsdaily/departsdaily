@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-24T20:16:44-04:00",
+ "generated": "2026-08-24T22:16:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 34,
-   "d1": "2026-09-21",
-   "d2": "2026-09-30",
-   "dep": "10:04PM",
+   "price": 28,
+   "d1": "2026-09-15",
+   "d2": "2026-09-22",
+   "dep": "11:30AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "11:28PM",
-   "rarr": "7:47AM",
-   "pct": 89
+   "rdep": "2:55PM",
+   "arr": "12:53PM",
+   "rarr": "4:23PM",
+   "pct": 91
   },
   "MCO": {
    "to": "MCO",
@@ -278,17 +278,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 628,
-   "d1": "2026-09-10",
-   "d2": "2026-09-24",
-   "dep": "2:15PM",
-   "al": "TS",
+   "price": 717,
+   "d1": "2026-09-04",
+   "d2": "2026-09-12",
+   "dep": "10:20AM",
+   "al": "AT",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:55PM",
-   "arr": "2:25AM+1",
-   "rarr": "4:25AM+1",
-   "pct": 29
+   "rdep": "6:00PM",
+   "arr": "12:55AM+1",
+   "rarr": "9:55AM+1",
+   "pct": 19
   },
   "CUN": {
    "to": "CUN",
