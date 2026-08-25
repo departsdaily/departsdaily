@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-25T16:02:51-04:00",
+ "generated": "2026-08-25T16:16:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -278,7 +278,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 717,
+   "price": 750,
    "d1": "2026-09-04",
    "d2": "2026-09-12",
    "dep": "10:20AM",
@@ -288,7 +288,7 @@
    "rdep": "6:00PM",
    "arr": "12:55AM+1",
    "rarr": "9:55AM+1",
-   "pct": 19
+   "pct": 15
   },
   "CUN": {
    "to": "CUN",
