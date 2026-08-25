@@ -1,25 +1,10 @@
 {
  "origin": "CLT",
- "generated": "2026-08-25T10:14:52-04:00",
+ "generated": "2026-08-25T12:15:01-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 50,
+ "routes_priced": 49,
  "routes_failed": [],
  "fares": {
-  "ATH": {
-   "to": "ATH",
-   "city": "Athens",
-   "price": 1091,
-   "d1": "2026-09-17",
-   "d2": "2026-09-29",
-   "dep": "4:01PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:55AM",
-   "arr": "3:03AM+1",
-   "rarr": "8:37PM",
-   "pct": -4
-  },
   "AUA": {
    "to": "AUA",
    "city": "Aruba",

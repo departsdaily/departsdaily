@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-25T10:15:12-04:00",
+ "generated": "2026-08-25T12:15:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 121,
-   "d1": "2026-09-22",
-   "d2": "2026-09-26",
-   "dep": "6:41AM",
+   "price": 129,
+   "d1": "2026-09-26",
+   "d2": "2026-10-01",
+   "dep": "7:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:44AM",
-   "arr": "10:04AM",
-   "rarr": "1:55PM",
-   "pct": 75
+   "rdep": "7:10PM",
+   "arr": "11:24PM",
+   "rarr": "10:10PM",
+   "pct": 73
   },
   "DFW": {
    "to": "DFW",
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 618,
-   "d1": "2026-10-21",
-   "d2": "2026-11-04",
-   "dep": "10:07AM",
-   "al": "",
-   "stops": 3,
-   "xfer": 1,
-   "rdep": "7:05AM",
-   "arr": "11:47PM",
-   "rarr": "7:43PM",
-   "pct": 31
+   "price": 576,
+   "d1": "2026-10-25",
+   "d2": "2026-11-07",
+   "dep": "10:50PM",
+   "al": "Turkish",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:45AM",
+   "arr": "1:25PM+1",
+   "rarr": "11:50PM",
+   "pct": 36
   },
   "PUJ": {
    "to": "PUJ",

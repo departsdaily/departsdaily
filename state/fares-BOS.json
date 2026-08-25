@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-25T10:17:46-04:00",
+ "generated": "2026-08-25T12:17:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 174,
-   "d1": "2026-11-09",
-   "d2": "2026-11-12",
-   "dep": "5:00PM",
-   "al": "JetBlue",
+   "price": 303,
+   "d1": "2026-09-11",
+   "d2": "2026-09-14",
+   "dep": "12:54PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:15AM",
-   "arr": "9:33PM",
-   "rarr": "11:44AM",
-   "pct": 59
+   "rdep": "9:54PM",
+   "arr": "5:56PM",
+   "rarr": "2:38AM+1",
+   "pct": 29
   },
   "LAS": {
    "to": "LAS",
@@ -308,17 +308,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 466,
-   "d1": "2026-12-12",
-   "d2": "2026-12-20",
-   "dep": "12:40PM",
+   "price": 660,
+   "d1": "2026-12-13",
+   "d2": "2027-01-03",
+   "dep": "5:45AM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "5:20PM",
-   "arr": "4:13PM",
-   "rarr": "8:43PM",
-   "pct": 3
+   "rdep": "10:20AM",
+   "arr": "10:15AM",
+   "rarr": "3:27PM",
+   "pct": -38
   },
   "PAR": {
    "to": "PAR",
