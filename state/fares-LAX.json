@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-25T16:16:43-04:00",
+ "generated": "2026-08-25T18:01:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 227,
-   "d1": "2026-09-01",
-   "d2": "2026-09-10",
-   "dep": "11:34PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 242,
+   "d1": "2026-09-18",
+   "d2": "2026-09-21",
+   "dep": "6:30AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "11:17AM",
-   "arr": "7:02AM+1",
-   "rarr": "7:55PM",
-   "pct": 69
+   "rdep": "8:25AM",
+   "arr": "12:08PM",
+   "rarr": "2:33PM",
+   "pct": 67
   },
   "DCA": {
    "to": "DCA",
@@ -323,17 +323,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 615,
-   "d1": "2026-09-11",
-   "d2": "2026-09-19",
-   "dep": "10:20AM",
-   "al": "AT",
+   "price": 662,
+   "d1": "2026-09-04",
+   "d2": "2026-09-12",
+   "dep": "7:00AM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:50PM",
-   "arr": "12:45AM+1",
-   "rarr": "8:35AM+1",
-   "pct": 28
+   "rdep": "9:25AM",
+   "arr": "7:30PM",
+   "rarr": "11:20PM",
+   "pct": 22
   },
   "NAS": {
    "to": "NAS",
