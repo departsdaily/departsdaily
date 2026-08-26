@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-26T00:14:39-04:00",
+ "generated": "2026-08-26T02:05:46-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 44,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -203,32 +203,32 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 251,
-   "d1": "2026-10-15",
-   "d2": "2026-10-19",
-   "dep": "9:42PM",
+   "price": 315,
+   "d1": "2026-10-09",
+   "d2": "2026-10-14",
+   "dep": "4:47PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:40AM",
-   "arr": "4:45AM+1",
-   "rarr": "6:03AM",
-   "pct": 66
+   "rdep": "12:52AM",
+   "arr": "10:55PM",
+   "rarr": "6:41AM",
+   "pct": 57
   },
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 203,
-   "d1": "2026-09-25",
-   "d2": "2026-09-28",
-   "dep": "7:54PM",
+   "price": 240,
+   "d1": "2026-09-16",
+   "d2": "2026-09-23",
+   "dep": "9:32AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "9:40PM",
-   "arr": "2:09AM+1",
+   "arr": "4:55PM",
    "rarr": "4:31AM+1",
-   "pct": 71
+   "pct": 66
   },
   "LIM": {
    "to": "LIM",
@@ -410,21 +410,6 @@
    "rarr": "5:30AM+1",
    "pct": 60
   },
-  "PMI": {
-   "to": "PMI",
-   "city": "Mallorca",
-   "price": 597,
-   "d1": "2026-09-18",
-   "d2": "2026-09-26",
-   "dep": "6:40PM",
-   "al": "Lufthansa",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:55AM",
-   "arr": "5:30AM+1",
-   "rarr": "8:50PM",
-   "pct": 37
-  },
   "PNS": {
    "to": "PNS",
    "city": "Pensacola",
@@ -563,8 +548,8 @@
   "SNA": {
    "to": "SNA",
    "city": "Orange County",
-   "price": 611,
-   "d1": "2026-09-23",
+   "price": 646,
+   "d1": "2026-09-19",
    "d2": "2026-09-26",
    "dep": "6:00PM",
    "al": "American",
