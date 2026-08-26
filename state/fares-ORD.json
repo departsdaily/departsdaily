@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-26T10:15:39-04:00",
+ "generated": "2026-08-26T12:31:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 96,
-   "d1": "2026-10-07",
-   "d2": "2026-10-14",
+   "price": 113,
+   "d1": "2026-09-12",
+   "d2": "2026-09-18",
    "dep": "7:11AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "1:07PM",
+   "rdep": "12:18PM",
    "arr": "10:23AM",
-   "rarr": "4:36PM",
-   "pct": 78
+   "rarr": "3:45PM",
+   "pct": 74
   },
   "MSY": {
    "to": "MSY",
@@ -398,17 +398,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 239,
-   "d1": "2026-10-07",
-   "d2": "2026-10-14",
-   "dep": "7:11AM",
-   "al": "Frontier",
+   "price": 266,
+   "d1": "2026-11-21",
+   "d2": "2026-11-26",
+   "dep": "1:07PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:04AM",
-   "arr": "1:06PM",
-   "rarr": "9:24AM",
-   "pct": 43
+   "rdep": "2:05AM",
+   "arr": "7:25PM",
+   "rarr": "9:11AM",
+   "pct": 37
   }
  }
 }

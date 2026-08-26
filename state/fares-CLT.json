@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-26T10:14:58-04:00",
+ "generated": "2026-08-26T12:30:23-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -563,17 +563,17 @@
   "SXM": {
    "to": "SXM",
    "city": "St. Maarten",
-   "price": 605,
-   "d1": "2026-11-21",
-   "d2": "2026-11-28",
+   "price": 377,
+   "d1": "2026-11-01",
+   "d2": "2026-11-16",
    "dep": "8:55AM",
    "al": "Air Canada",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:45PM",
+   "rdep": "4:45PM",
    "arr": "3:52PM",
-   "rarr": "12:27AM+1",
-   "pct": 8
+   "rarr": "12:16AM+1",
+   "pct": 43
   },
   "TPA": {
    "to": "TPA",
@@ -589,6 +589,21 @@
    "arr": "4:05PM",
    "rarr": "1:39PM",
    "pct": 51
+  },
+  "UVF": {
+   "to": "UVF",
+   "city": "St. Lucia",
+   "price": 747,
+   "d1": "2026-12-15",
+   "d2": "2026-12-31",
+   "dep": "8:55AM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:40PM",
+   "arr": "4:12PM",
+   "rarr": "1:41AM+1",
+   "pct": -4
   },
   "VPS": {
    "to": "VPS",

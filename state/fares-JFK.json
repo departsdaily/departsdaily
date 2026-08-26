@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-26T10:17:01-04:00",
+ "generated": "2026-08-26T12:32:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 199,
-   "d1": "2026-09-26",
-   "d2": "2026-09-28",
-   "dep": "12:59PM",
+   "price": 226,
+   "d1": "2026-10-23",
+   "d2": "2026-10-30",
+   "dep": "10:30PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:30PM",
-   "arr": "2:26PM",
-   "rarr": "6:49PM",
-   "pct": 51
+   "rdep": "6:40PM",
+   "arr": "11:54PM",
+   "rarr": "8:04PM",
+   "pct": 44
   },
   "DCA": {
    "to": "DCA",
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 221,
-   "d1": "2026-09-29",
-   "d2": "2026-10-05",
-   "dep": "1:00PM",
+   "price": 239,
+   "d1": "2026-09-19",
+   "d2": "2026-09-22",
+   "dep": "8:10AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "5:28PM",
-   "rarr": "9:27AM",
-   "pct": 46
+   "rdep": "10:59AM",
+   "arr": "10:58AM",
+   "rarr": "1:20PM",
+   "pct": 42
   },
   "PHX": {
    "to": "PHX",
