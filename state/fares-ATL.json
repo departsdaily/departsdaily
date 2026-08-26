@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-26T04:14:56-04:00",
+ "generated": "2026-08-26T06:14:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -8,7 +8,7 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 183,
+   "price": 202,
    "d1": "2026-09-15",
    "d2": "2026-09-22",
    "dep": "9:28AM",
@@ -18,7 +18,7 @@
    "rdep": "12:52PM",
    "arr": "12:07PM",
    "rarr": "4:07PM",
-   "pct": 65
+   "pct": 62
   },
   "DEN": {
    "to": "DEN",
