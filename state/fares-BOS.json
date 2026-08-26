@@ -1,25 +1,10 @@
 {
  "origin": "BOS",
- "generated": "2026-08-25T18:18:14-04:00",
+ "generated": "2026-08-25T20:01:53-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 258,
-   "d1": "2026-10-02",
-   "d2": "2026-10-05",
-   "dep": "2:40PM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:25PM",
-   "arr": "8:29PM",
-   "rarr": "8:02PM",
-   "pct": 41
-  },
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
@@ -368,16 +353,16 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 277,
-   "d1": "2026-10-14",
-   "d2": "2026-10-21",
-   "dep": "11:20AM",
+   "price": 278,
+   "d1": "2026-09-13",
+   "d2": "2026-09-18",
+   "dep": "7:55AM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:25PM",
-   "arr": "3:29PM",
-   "rarr": "10:36PM",
+   "rdep": "11:15AM",
+   "arr": "12:02PM",
+   "rarr": "6:00PM",
    "pct": 34
   }
  }

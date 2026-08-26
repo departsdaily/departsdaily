@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-25T18:16:07-04:00",
+ "generated": "2026-08-25T19:59:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -143,17 +143,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 138,
+   "price": 149,
    "d1": "2026-09-14",
    "d2": "2026-09-17",
    "dep": "6:15PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "2:37PM",
+   "rdep": "6:46PM",
    "arr": "9:17PM",
-   "rarr": "6:00PM",
-   "pct": 70
+   "rarr": "10:17PM",
+   "pct": 67
   },
   "MSY": {
    "to": "MSY",
@@ -274,21 +274,6 @@
    "arr": "5:16PM",
    "rarr": "5:24PM",
    "pct": 67
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 948,
-   "d1": "2026-10-06",
-   "d2": "2026-10-13",
-   "dep": "9:30PM",
-   "al": "Turkish",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:20AM",
-   "arr": "1:00PM+1",
-   "rarr": "11:45PM",
-   "pct": -8
   },
   "CUN": {
    "to": "CUN",

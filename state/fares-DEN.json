@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-25T18:16:34-04:00",
+ "generated": "2026-08-25T20:00:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 242,
-   "d1": "2026-09-05",
+   "price": 330,
+   "d1": "2026-09-03",
    "d2": "2026-09-07",
-   "dep": "9:55AM",
+   "dep": "10:43AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:10PM",
-   "arr": "12:36PM",
-   "rarr": "4:25AM+1",
-   "pct": 41
+   "rdep": "6:05AM",
+   "arr": "4:19PM",
+   "rarr": "1:10PM",
+   "pct": 20
   },
   "PHL": {
    "to": "PHL",
