@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-25T20:15:33-04:00",
+ "generated": "2026-08-25T22:15:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 175,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "7:20AM",
-   "al": "Alaska",
+   "price": 146,
+   "d1": "2026-10-06",
+   "d2": "2026-10-10",
+   "dep": "1:21PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:23AM",
-   "arr": "1:27PM",
-   "rarr": "4:17PM",
-   "pct": 63
+   "rdep": "10:06PM",
+   "arr": "5:30PM",
+   "rarr": "5:51AM+1",
+   "pct": 69
   },
   "LAX": {
    "to": "LAX",

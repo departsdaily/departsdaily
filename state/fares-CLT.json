@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-25T20:14:52-04:00",
+ "generated": "2026-08-25T22:14:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 48,
+ "routes_priced": 46,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -128,16 +128,16 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 211,
-   "d1": "2026-09-05",
-   "d2": "2026-09-07",
-   "dep": "9:46AM",
+   "price": 210,
+   "d1": "2026-11-05",
+   "d2": "2026-11-11",
+   "dep": "5:38PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:24PM",
-   "arr": "12:04PM",
-   "rarr": "8:43PM",
+   "rdep": "10:22AM",
+   "arr": "7:46PM",
+   "rarr": "2:39PM",
    "pct": 48
   },
   "FRA": {
@@ -188,17 +188,17 @@
   "JAX": {
    "to": "JAX",
    "city": "Jacksonville",
-   "price": 269,
+   "price": 376,
    "d1": "2026-11-15",
    "d2": "2026-11-19",
-   "dep": "3:10PM",
-   "al": "JetBlue",
+   "dep": "5:38PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "6:33PM",
-   "rarr": "9:25PM",
-   "pct": 58
+   "rdep": "3:00PM",
+   "arr": "9:11PM",
+   "rarr": "6:38PM",
+   "pct": 41
   },
   "LAS": {
    "to": "LAS",
@@ -308,17 +308,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 136,
-   "d1": "2026-09-23",
-   "d2": "2026-09-28",
-   "dep": "3:00PM",
+   "price": 166,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "9:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:54PM",
-   "arr": "5:11PM",
+   "arr": "12:09AM+1",
    "rarr": "9:14PM",
-   "pct": 67
+   "pct": 59
   },
   "MSY": {
    "to": "MSY",
@@ -365,35 +365,20 @@
    "rarr": "8:57PM",
    "pct": 56
   },
-  "OGG": {
-   "to": "OGG",
-   "city": "Maui",
-   "price": 735,
-   "d1": "2026-10-03",
-   "d2": "2026-10-11",
-   "dep": "4:51PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "2:49PM",
-   "arr": "4:59AM+1",
-   "rarr": "2:52AM+1",
-   "pct": 0
-  },
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 208,
-   "d1": "2026-10-24",
-   "d2": "2026-10-26",
-   "dep": "12:05PM",
+   "price": 231,
+   "d1": "2026-09-09",
+   "d2": "2026-09-16",
+   "dep": "1:34PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "5:50PM",
-   "rarr": "12:41PM",
-   "pct": 48
+   "rdep": "3:50PM",
+   "arr": "7:21PM",
+   "rarr": "8:41PM",
+   "pct": 42
   },
   "PAR": {
    "to": "PAR",
@@ -439,21 +424,6 @@
    "arr": "6:48AM+1",
    "rarr": "9:12PM",
    "pct": 24
-  },
-  "PLS": {
-   "to": "PLS",
-   "city": "Providenciales",
-   "price": 549,
-   "d1": "2026-12-22",
-   "d2": "2026-12-28",
-   "dep": "9:20AM",
-   "al": "American",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "1:17PM",
-   "arr": "12:17PM",
-   "rarr": "4:30PM",
-   "pct": 17
   },
   "PMI": {
    "to": "PMI",
