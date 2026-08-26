@@ -4,13 +4,11 @@
   "slide2_board.png",
   "slide3_board.png",
   "slide4_board.png",
-  "slide5_board.png",
-  "slide6_cta.png"
+  "slide5_cta.png"
  ],
- "n_deals": 17,
- "board_slides": 5,
+ "n_deals": 12,
+ "board_slides": 4,
  "sections": [
-  "LONG WEEKEND",
   "EXTRA LONG WEEKEND",
   "WEEK-ISH",
   "CHEAPEST OUT OF CLT",
@@ -26,23 +24,7 @@
    "section": "cheapest"
   },
   {
-   "file": "story_2_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 203,
-   "disc": 34,
-   "section": "weekend"
-  },
-  {
-   "file": "story_3_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 214,
-   "disc": 31,
-   "section": "cheapest"
-  },
-  {
-   "file": "story_4_SJU.png",
+   "file": "story_2_SJU.png",
    "to": "SJU",
    "city": "San Juan, PR",
    "price": 222,
@@ -50,35 +32,51 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_5_LAS.png",
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 251,
-   "disc": 26,
-   "section": "weekend"
-  },
-  {
-   "file": "story_6_SXM.png",
-   "to": "SXM",
-   "city": "St. Maarten",
-   "price": 447,
-   "disc": 26,
-   "section": "weekend"
-  },
-  {
-   "file": "story_7_LAX.png",
+   "file": "story_3_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 243,
-   "disc": 21,
+   "price": 240,
+   "disc": 22,
+   "section": "extra_weekend"
+  },
+  {
+   "file": "story_4_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 240,
+   "disc": 22,
    "section": "weekish"
   },
   {
-   "file": "story_8_PLS.png",
-   "to": "PLS",
-   "city": "Providenciales",
-   "price": 549,
-   "disc": 21,
+   "file": "story_5_LAS.png",
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 268,
+   "disc": 12,
+   "section": "cheapest"
+  },
+  {
+   "file": "story_6_SFO.png",
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 321,
+   "disc": 14,
+   "section": "cheapest"
+  },
+  {
+   "file": "story_7_CUR.png",
+   "to": "CUR",
+   "city": "Curacao",
+   "price": 535,
+   "disc": 13,
+   "section": "extra_weekend"
+  },
+  {
+   "file": "story_8_SDQ.png",
+   "to": "SDQ",
+   "city": "Santo Domingo",
+   "price": 278,
+   "disc": 46,
    "section": "cheapest"
   }
  ]
