@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-26T08:15:29-04:00",
+ "generated": "2026-08-26T10:16:00-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -79,6 +79,21 @@
    "arr": "4:47PM",
    "rarr": "10:12PM",
    "pct": 69
+  },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 244,
+   "d1": "2026-09-12",
+   "d2": "2026-09-14",
+   "dep": "10:59PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "10:30AM",
+   "arr": "5:08AM+1",
+   "rarr": "3:17PM",
+   "pct": 44
   },
   "LAS": {
    "to": "LAS",

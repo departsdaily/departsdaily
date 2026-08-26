@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-26T08:17:13-04:00",
+ "generated": "2026-08-26T10:17:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -173,7 +173,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 334,
+   "price": 336,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
