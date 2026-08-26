@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-26T12:31:24-04:00",
+ "generated": "2026-08-26T14:15:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -173,15 +173,15 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 148,
-   "d1": "2026-09-24",
-   "d2": "2026-09-29",
-   "dep": "9:54PM",
+   "price": 152,
+   "d1": "2026-09-16",
+   "d2": "2026-09-25",
+   "dep": "7:55AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "1:30PM",
-   "arr": "3:28AM+1",
+   "arr": "11:35AM",
    "rarr": "5:36PM",
    "pct": 73
   },
@@ -304,21 +304,6 @@
    "arr": "12:34AM+1",
    "rarr": "11:56PM",
    "pct": 29
-  },
-  "PAR": {
-   "to": "PAR",
-   "city": "Paris",
-   "price": 906,
-   "d1": "2026-09-18",
-   "d2": "2026-10-04",
-   "dep": "1:35PM",
-   "al": "",
-   "stops": 3,
-   "xfer": 1,
-   "rdep": "6:50PM",
-   "arr": "3:27AM+1",
-   "rarr": "8:24AM+1",
-   "pct": -1
   },
   "PUJ": {
    "to": "PUJ",

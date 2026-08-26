@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-26T12:30:23-04:00",
+ "generated": "2026-08-26T14:14:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 43,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 315,
-   "d1": "2026-10-09",
-   "d2": "2026-10-14",
-   "dep": "4:47PM",
+   "price": 324,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "12:09PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:52AM",
-   "arr": "10:55PM",
-   "rarr": "6:41AM",
-   "pct": 57
+   "rdep": "12:53AM",
+   "arr": "6:23PM",
+   "rarr": "6:46AM",
+   "pct": 56
   },
   "LAX": {
    "to": "LAX",
@@ -308,9 +308,9 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 168,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
+   "price": 181,
+   "d1": "2026-10-01",
+   "d2": "2026-10-05",
    "dep": "9:59PM",
    "al": "Frontier",
    "stops": 0,
@@ -318,7 +318,7 @@
    "rdep": "6:54PM",
    "arr": "12:09AM+1",
    "rarr": "9:14PM",
-   "pct": 59
+   "pct": 55
   },
   "MSY": {
    "to": "MSY",
