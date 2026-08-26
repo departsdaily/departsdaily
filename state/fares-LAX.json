@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-25T22:16:24-04:00",
+ "generated": "2026-08-26T00:16:15-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 342,
-   "d1": "2026-08-28",
-   "d2": "2026-08-30",
-   "dep": "11:00PM",
+   "price": 393,
+   "d1": "2026-11-22",
+   "d2": "2026-11-26",
+   "dep": "11:10PM",
    "al": "Breeze",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:35PM",
+   "rdep": "3:59PM",
    "arr": "3:00AM+1",
-   "rarr": "11:50PM",
-   "pct": 35
+   "rarr": "10:49PM",
+   "pct": 26
   },
   "NYC": {
    "to": "NYC",
@@ -278,17 +278,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 750,
-   "d1": "2026-09-04",
-   "d2": "2026-09-12",
-   "dep": "10:20AM",
-   "al": "AT",
-   "stops": 1,
+   "price": 1078,
+   "d1": "2026-09-10",
+   "d2": "2026-09-20",
+   "dep": "10:40PM",
+   "al": "JetBlue",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "12:55AM+1",
-   "rarr": "9:55AM+1",
-   "pct": 15
+   "rdep": "9:30PM",
+   "arr": "12:24PM+1",
+   "rarr": "2:30PM+1",
+   "pct": -23
   },
   "CUN": {
    "to": "CUN",
@@ -398,9 +398,9 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 342,
-   "d1": "2026-09-01",
-   "d2": "2026-09-05",
+   "price": 600,
+   "d1": "2026-09-03",
+   "d2": "2026-09-07",
    "dep": "11:20PM",
    "al": "Frontier",
    "stops": 1,
@@ -408,7 +408,7 @@
    "rdep": "8:43PM",
    "arr": "7:38AM+1",
    "rarr": "5:10AM+1",
-   "pct": 19
+   "pct": -43
   }
  }
 }

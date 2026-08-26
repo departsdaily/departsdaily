@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-25T22:14:39-04:00",
+ "generated": "2026-08-26T00:14:39-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 46,
+ "routes_priced": 44,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -308,7 +308,7 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 166,
+   "price": 168,
    "d1": "2026-09-17",
    "d2": "2026-09-21",
    "dep": "9:59PM",
@@ -410,21 +410,6 @@
    "rarr": "5:30AM+1",
    "pct": 60
   },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 505,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "dep": "9:52PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "12:42PM",
-   "arr": "6:48AM+1",
-   "rarr": "9:12PM",
-   "pct": 24
-  },
   "PMI": {
    "to": "PMI",
    "city": "Mallorca",
@@ -514,21 +499,6 @@
    "arr": "1:53PM",
    "rarr": "11:56AM",
    "pct": 40
-  },
-  "SDQ": {
-   "to": "SDQ",
-   "city": "Santo Domingo",
-   "price": 552,
-   "d1": "2026-08-28",
-   "d2": "2026-09-08",
-   "dep": "5:20AM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "4:24PM",
-   "arr": "9:54AM",
-   "rarr": "9:02PM",
-   "pct": -2
   },
   "SFO": {
    "to": "SFO",

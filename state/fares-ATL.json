@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-25T22:15:00-04:00",
+ "generated": "2026-08-26T00:14:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -19,21 +19,6 @@
    "arr": "12:07PM",
    "rarr": "4:07PM",
    "pct": 65
-  },
-  "DCA": {
-   "to": "DCA",
-   "city": "Washington DC",
-   "price": 301,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
-   "dep": "12:34PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "7:32PM",
-   "rarr": "1:29AM+1",
-   "pct": 26
   },
   "DEN": {
    "to": "DEN",
@@ -319,6 +304,21 @@
    "arr": "12:20AM+1",
    "rarr": "10:26AM+1",
    "pct": -19
+  },
+  "MBJ": {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 704,
+   "d1": "2026-12-24",
+   "d2": "2027-01-08",
+   "dep": "12:55PM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:20PM",
+   "arr": "8:27PM",
+   "rarr": "9:57PM",
+   "pct": -30
   },
   "PAR": {
    "to": "PAR",

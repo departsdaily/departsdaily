@@ -1,25 +1,10 @@
 {
  "origin": "DEN",
- "generated": "2026-08-25T22:16:05-04:00",
+ "generated": "2026-08-26T00:15:56-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 268,
-   "d1": "2026-08-28",
-   "d2": "2026-08-31",
-   "dep": "8:26PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "10:41PM",
-   "rarr": "8:34AM",
-   "pct": 30
-  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",
@@ -69,15 +54,15 @@
    "to": "FLL",
    "city": "Ft. Lauderdale",
    "price": 202,
-   "d1": "2026-08-28",
+   "d1": "2026-08-29",
    "d2": "2026-08-31",
    "dep": "11:59PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:00PM",
-   "arr": "6:45AM+1",
-   "rarr": "8:45PM",
+   "rdep": "6:42AM",
+   "arr": "5:19AM+1",
+   "rarr": "12:32PM",
    "pct": 64
   },
   "LAS": {
