@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-26T14:15:48-04:00",
+ "generated": "2026-08-26T16:15:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -211,7 +211,7 @@
    "stops": 2,
    "xfer": 0,
    "rdep": "9:40AM",
-   "arr": "4:05AM+1",
+   "arr": "3:50AM+1",
    "rarr": "11:03PM",
    "pct": -2
   },
