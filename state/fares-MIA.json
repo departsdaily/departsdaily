@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-27T08:17:02-04:00",
+ "generated": "2026-08-27T10:16:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -124,21 +124,6 @@
    "arr": "12:35PM",
    "rarr": "11:43AM",
    "pct": 72
-  },
-  "MCO": {
-   "to": "MCO",
-   "city": "Orlando",
-   "price": 121,
-   "d1": "2026-10-31",
-   "d2": "2026-11-07",
-   "dep": "6:25AM",
-   "al": "Southwest",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "7:40PM",
-   "arr": "7:30AM",
-   "rarr": "8:55PM",
-   "pct": 59
   },
   "MSY": {
    "to": "MSY",

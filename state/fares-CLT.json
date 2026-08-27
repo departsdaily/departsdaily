@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T08:14:45-04:00",
+ "generated": "2026-08-27T10:14:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -383,17 +383,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 660,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "dep": "9:59PM",
-   "al": "Frontier",
-   "stops": 3,
+   "price": 587,
+   "d1": "2026-12-14",
+   "d2": "2026-12-20",
+   "dep": "8:55AM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:41PM",
-   "arr": "2:45AM+1",
-   "rarr": "5:15AM+1",
-   "pct": -18
+   "rdep": "2:50PM",
+   "arr": "3:37PM",
+   "rarr": "7:38PM",
+   "pct": -5
   },
   "SAL": {
    "to": "SAL",
