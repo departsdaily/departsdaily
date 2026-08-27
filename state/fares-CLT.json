@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T16:46:17-04:00",
+ "generated": "2026-08-27T17:19:52-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 38,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -469,21 +469,6 @@
    "arr": "10:59PM",
    "rarr": "11:40AM",
    "pct": 0
-  },
-  "SRQ": {
-   "to": "SRQ",
-   "city": "Sarasota",
-   "price": 460,
-   "d1": "2026-10-11",
-   "d2": "2026-10-17",
-   "dep": "7:15AM",
-   "al": "American",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "5:28PM",
-   "arr": "9:07AM",
-   "rarr": "7:29PM",
-   "pct": 21
   },
   "SXM": {
    "to": "SXM",
