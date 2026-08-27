@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-27T04:14:52-04:00",
+ "generated": "2026-08-27T06:14:52-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -304,6 +304,21 @@
    "arr": "1:49AM+1",
    "rarr": "1:06AM+1",
    "pct": 19
+  },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 562,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "10:59PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "11:50AM",
+   "arr": "5:37AM+1",
+   "rarr": "7:29PM",
+   "pct": 9
   },
   "LON": {
    "to": "LON",

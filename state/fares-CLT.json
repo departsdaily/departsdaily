@@ -1,16 +1,16 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T04:14:34-04:00",
+ "generated": "2026-08-27T06:14:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 680,
-   "d1": "2026-10-08",
-   "d2": "2026-10-15",
+   "price": 623,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
    "dep": "6:20AM",
    "al": "JetBlue",
    "stops": 1,
@@ -18,7 +18,7 @@
    "rdep": "1:55PM",
    "arr": "11:09AM",
    "rarr": "7:09PM",
-   "pct": -10
+   "pct": 0
   },
   "AUH": {
    "to": "AUH",
@@ -83,17 +83,17 @@
   "CUR": {
    "to": "CUR",
    "city": "Curacao",
-   "price": 759,
+   "price": 745,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "dep": "9:40PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 4,
    "xfer": 0,
-   "rdep": "6:15PM",
+   "rdep": "11:35AM",
    "arr": "5:05AM+1",
-   "rarr": "4:12AM+1",
-   "pct": -12
+   "rarr": "1:09AM+1",
+   "pct": -10
   },
   "DEN": {
    "to": "DEN",
@@ -154,21 +154,6 @@
    "arr": "10:40PM",
    "rarr": "10:47PM",
    "pct": -8
-  },
-  "GND": {
-   "to": "GND",
-   "city": "Grenada",
-   "price": 723,
-   "d1": "2026-10-10",
-   "d2": "2026-10-16",
-   "dep": "3:59PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "3:20PM",
-   "arr": "10:52PM",
-   "rarr": "10:36PM",
-   "pct": 1
   },
   "HNL": {
    "to": "HNL",
