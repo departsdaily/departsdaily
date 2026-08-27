@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-27T16:15:22-04:00",
+ "generated": "2026-08-27T18:15:31-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 1280,
-   "d1": "2026-09-03",
-   "d2": "2026-09-13",
-   "dep": "5:18AM",
-   "al": "Frontier",
-   "stops": 3,
+   "price": 594,
+   "d1": "2026-10-13",
+   "d2": "2026-10-18",
+   "dep": "9:30PM",
+   "al": "Turkish",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:05PM",
-   "arr": "9:27PM",
-   "rarr": "12:57PM+1",
-   "pct": -45
+   "rdep": "11:20PM",
+   "arr": "1:05PM+1",
+   "rarr": "3:25PM+1",
+   "pct": 32
   },
   "CUN": {
    "to": "CUN",

@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-27T16:16:45-04:00",
+ "generated": "2026-08-27T18:17:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 625,
-   "d1": "2026-11-18",
-   "d2": "2026-11-24",
-   "dep": "2:50PM",
-   "al": "Lufthansa",
+   "price": 590,
+   "d1": "2026-12-01",
+   "d2": "2026-12-08",
+   "dep": "7:45AM",
+   "al": "Air Canada",
    "stops": 2,
    "xfer": 0,
    "rdep": "6:50PM",
-   "arr": "4:25AM+1",
-   "rarr": "8:50AM+1",
-   "pct": 26
+   "arr": "10:30PM",
+   "rarr": "11:24AM+1",
+   "pct": 31
   },
   "PAR": {
    "to": "PAR",

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-27T16:15:04-04:00",
+ "generated": "2026-08-27T18:15:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 202,
-   "d1": "2026-10-08",
-   "d2": "2026-10-12",
-   "dep": "12:26PM",
+   "price": 151,
+   "d1": "2026-09-04",
+   "d2": "2026-09-08",
+   "dep": "7:05AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:52PM",
-   "arr": "3:09PM",
-   "rarr": "12:26AM+1",
-   "pct": 51
+   "rdep": "10:00AM",
+   "arr": "11:58AM",
+   "rarr": "2:57PM",
+   "pct": 63
   },
   "FLL": {
    "to": "FLL",
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 572,
-   "d1": "2026-11-04",
-   "d2": "2026-11-25",
-   "dep": "7:00PM",
+   "price": 497,
+   "d1": "2026-09-11",
+   "d2": "2026-09-19",
+   "dep": "6:00PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:00AM",
-   "arr": "5:35AM+1",
-   "rarr": "8:10PM",
-   "pct": 36
+   "rdep": "7:40AM",
+   "arr": "4:45AM+1",
+   "rarr": "7:40PM",
+   "pct": 45
   },
   "PUJ": {
    "to": "PUJ",
