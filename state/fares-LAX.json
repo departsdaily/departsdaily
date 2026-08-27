@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-26T20:16:01-04:00",
+ "generated": "2026-08-26T22:16:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 217,
-   "d1": "2026-10-08",
-   "d2": "2026-10-11",
-   "dep": "12:14AM",
+   "price": 238,
+   "d1": "2026-09-14",
+   "d2": "2026-09-19",
+   "dep": "9:40PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:18PM",
-   "arr": "7:18AM",
-   "rarr": "4:44PM",
-   "pct": 59
+   "rdep": "8:24PM",
+   "arr": "5:29AM+1",
+   "rarr": "1:15AM+1",
+   "pct": 56
   },
   "BNA": {
    "to": "BNA",
@@ -278,17 +278,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 755,
-   "d1": "2026-11-10",
-   "d2": "2026-11-24",
-   "dep": "5:15PM",
-   "al": "TAP Portugal",
+   "price": 417,
+   "d1": "2026-09-15",
+   "d2": "2026-10-01",
+   "dep": "10:20AM",
+   "al": "AT",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "7:35AM+1",
-   "rarr": "10:55PM",
-   "pct": 14
+   "rdep": "6:00PM",
+   "arr": "12:55AM+1",
+   "rarr": "9:55AM+1",
+   "pct": 53
   },
   "CUN": {
    "to": "CUN",

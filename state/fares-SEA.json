@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-26T20:16:53-04:00",
+ "generated": "2026-08-26T22:16:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 130,
+   "price": 124,
    "d1": "2026-10-02",
    "d2": "2026-10-05",
-   "dep": "8:43PM",
+   "dep": "7:24PM",
    "al": "Alaska",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:11PM",
-   "arr": "10:54PM",
-   "rarr": "9:25PM",
-   "pct": 67
+   "rdep": "5:45PM",
+   "arr": "9:39PM",
+   "rarr": "7:56PM",
+   "pct": 69
   },
   "CUN": {
    "to": "CUN",
@@ -233,17 +233,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 605,
-   "d1": "2026-10-07",
-   "d2": "2026-10-14",
-   "dep": "8:00AM",
-   "al": "Air Canada",
-   "stops": 3,
+   "price": 625,
+   "d1": "2026-11-18",
+   "d2": "2026-11-24",
+   "dep": "2:50PM",
+   "al": "Lufthansa",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:15AM",
-   "arr": "1:31AM+1",
-   "rarr": "2:20AM+1",
-   "pct": 29
+   "rdep": "6:50PM",
+   "arr": "4:25AM+1",
+   "rarr": "8:50AM+1",
+   "pct": 26
   },
   "PAR": {
    "to": "PAR",
