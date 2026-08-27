@@ -1,10 +1,25 @@
 {
  "origin": "BOS",
- "generated": "2026-08-27T02:18:10-04:00",
+ "generated": "2026-08-27T04:17:22-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 345,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "6:25AM",
+   "al": "JetBlue",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:00AM",
+   "arr": "9:14AM",
+   "rarr": "8:34AM",
+   "pct": 21
+  },
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
@@ -109,6 +124,21 @@
    "arr": "11:03AM",
    "rarr": "3:46AM+1",
    "pct": 34
+  },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 250,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
+   "dep": "5:00AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:10PM",
+   "arr": "9:35AM",
+   "rarr": "12:50AM+1",
+   "pct": 48
   },
   "NYC": {
    "to": "NYC",
