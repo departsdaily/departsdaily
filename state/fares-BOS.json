@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-26T22:17:15-04:00",
+ "generated": "2026-08-27T00:17:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 112,
+   "price": 192,
    "d1": "2026-09-15",
-   "d2": "2026-09-19",
-   "dep": "9:40AM",
-   "al": "JetBlue",
+   "d2": "2026-09-20",
+   "dep": "6:00AM",
+   "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:55PM",
-   "arr": "11:20AM",
-   "rarr": "10:40PM",
-   "pct": 71
+   "rdep": "6:20AM",
+   "arr": "7:44AM",
+   "rarr": "8:04AM",
+   "pct": 51
   },
   "DFW": {
    "to": "DFW",
@@ -83,17 +83,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 149,
-   "d1": "2026-10-16",
-   "d2": "2026-10-19",
-   "dep": "12:57PM",
+   "price": 216,
+   "d1": "2026-10-02",
+   "d2": "2026-10-05",
+   "dep": "11:36AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "7:45AM",
-   "arr": "5:43PM",
-   "rarr": "11:02AM",
-   "pct": 62
+   "arr": "2:52PM",
+   "rarr": "10:51AM",
+   "pct": 45
   },
   "MIA": {
    "to": "MIA",

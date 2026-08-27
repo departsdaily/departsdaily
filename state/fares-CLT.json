@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-26T22:14:36-04:00",
+ "generated": "2026-08-27T00:14:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 44,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -83,17 +83,17 @@
   "CUR": {
    "to": "CUR",
    "city": "Curacao",
-   "price": 608,
-   "d1": "2026-11-20",
-   "d2": "2026-11-24",
-   "dep": "10:24AM",
-   "al": "Copa",
+   "price": 759,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "9:40PM",
+   "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "1:15PM",
-   "arr": "7:02PM",
-   "rarr": "11:36PM",
-   "pct": 11
+   "rdep": "6:15PM",
+   "arr": "5:05AM+1",
+   "rarr": "4:12AM+1",
+   "pct": -12
   },
   "DEN": {
    "to": "DEN",
@@ -425,21 +425,6 @@
    "rarr": "5:15AM+1",
    "pct": -18
   },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 922,
-   "d1": "2026-10-04",
-   "d2": "2026-10-13",
-   "dep": "9:40PM",
-   "al": "",
-   "stops": 2,
-   "xfer": 1,
-   "rdep": "8:00PM",
-   "arr": "10:34AM+1",
-   "rarr": "9:47AM+1",
-   "pct": 3
-  },
   "SAL": {
    "to": "SAL",
    "city": "San Salvador",
@@ -578,16 +563,16 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 236,
-   "d1": "2026-10-11",
-   "d2": "2026-10-17",
-   "dep": "11:50AM",
+   "price": 235,
+   "d1": "2026-10-02",
+   "d2": "2026-10-06",
+   "dep": "10:56AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "4:05PM",
-   "rarr": "1:39PM",
+   "rdep": "12:52PM",
+   "arr": "4:25PM",
+   "rarr": "6:13PM",
    "pct": 51
   },
   "TYO": {

@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-08-26T22:15:12-04:00",
+ "generated": "2026-08-27T00:15:25-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 28,
+ "routes_priced": 29,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -214,6 +214,21 @@
    "arr": "8:00PM",
    "rarr": "9:42AM",
    "pct": 57
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 363,
+   "d1": "2026-11-25",
+   "d2": "2026-11-29",
+   "dep": "9:30PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:09PM",
+   "arr": "11:40PM",
+   "rarr": "3:20AM+1",
+   "pct": 15
   },
   "PHX": {
    "to": "PHX",
