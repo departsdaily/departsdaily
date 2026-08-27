@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T12:14:38-04:00",
+ "generated": "2026-08-27T14:14:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -184,21 +184,6 @@
    "arr": "9:11PM",
    "rarr": "6:38PM",
    "pct": 41
-  },
-  "LAS": {
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 324,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "12:09PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:53AM",
-   "arr": "6:23PM",
-   "rarr": "6:46AM",
-   "pct": 56
   },
   "LAX": {
    "to": "LAX",

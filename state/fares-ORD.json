@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-27T12:15:18-04:00",
+ "generated": "2026-08-27T14:15:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -98,9 +98,9 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 100,
-   "d1": "2026-09-12",
-   "d2": "2026-09-18",
+   "price": 96,
+   "d1": "2026-09-21",
+   "d2": "2026-09-24",
    "dep": "7:11AM",
    "al": "Frontier",
    "stops": 0,
@@ -108,7 +108,7 @@
    "rdep": "12:18PM",
    "arr": "10:23AM",
    "rarr": "3:45PM",
-   "pct": 77
+   "pct": 78
   },
   "HOU": {
    "to": "HOU",
@@ -278,17 +278,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 191,
-   "d1": "2026-09-09",
-   "d2": "2026-09-12",
-   "dep": "7:11AM",
+   "price": 202,
+   "d1": "2026-10-23",
+   "d2": "2026-10-26",
+   "dep": "6:30AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:03PM",
-   "arr": "11:28AM",
-   "rarr": "6:05PM",
-   "pct": 52
+   "rdep": "9:50PM",
+   "arr": "12:50PM",
+   "rarr": "3:27AM+1",
+   "pct": 50
   },
   "AMS": {
    "to": "AMS",

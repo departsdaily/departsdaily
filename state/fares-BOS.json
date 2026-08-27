@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-27T12:17:27-04:00",
+ "generated": "2026-08-27T14:17:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
