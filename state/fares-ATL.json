@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-27T10:14:58-04:00",
+ "generated": "2026-08-27T12:14:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -34,6 +34,21 @@
    "arr": "12:07PM",
    "rarr": "4:07PM",
    "pct": 62
+  },
+  "DCA": {
+   "to": "DCA",
+   "city": "Washington DC",
+   "price": 338,
+   "d1": "2026-09-04",
+   "d2": "2026-09-07",
+   "dep": "8:35PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:00PM",
+   "arr": "3:31AM+1",
+   "rarr": "1:29AM+1",
+   "pct": 17
   },
   "DEN": {
    "to": "DEN",

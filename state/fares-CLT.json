@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T10:14:39-04:00",
+ "generated": "2026-08-27T12:14:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -8,9 +8,9 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 623,
-   "d1": "2026-10-12",
-   "d2": "2026-10-19",
+   "price": 453,
+   "d1": "2026-10-11",
+   "d2": "2026-10-21",
    "dep": "6:20AM",
    "al": "JetBlue",
    "stops": 1,
@@ -18,7 +18,7 @@
    "rdep": "1:55PM",
    "arr": "11:09AM",
    "rarr": "7:09PM",
-   "pct": 0
+   "pct": 27
   },
   "AUH": {
    "to": "AUH",
@@ -293,17 +293,17 @@
   "MUC": {
    "to": "MUC",
    "city": "Munich",
-   "price": 909,
-   "d1": "2026-10-11",
-   "d2": "2026-10-18",
-   "dep": "9:15AM",
-   "al": "Air Canada",
-   "stops": 1,
+   "price": 918,
+   "d1": "2026-09-24",
+   "d2": "2026-09-30",
+   "dep": "4:30PM",
+   "al": "AY",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:50AM",
-   "arr": "7:11PM",
-   "rarr": "10:57PM",
-   "pct": -1
+   "rdep": "6:35PM",
+   "arr": "1:10AM+1",
+   "rarr": "10:36AM+1",
+   "pct": -2
   },
   "NYC": {
    "to": "NYC",
