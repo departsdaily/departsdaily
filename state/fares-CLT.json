@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-26T18:14:42-04:00",
+ "generated": "2026-08-26T20:14:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 44,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -455,6 +455,21 @@
    "rarr": "11:56AM",
    "pct": 40
   },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 487,
+   "d1": "2026-09-14",
+   "d2": "2026-09-20",
+   "dep": "7:54PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:27PM",
+   "arr": "2:44AM+1",
+   "rarr": "10:41PM",
+   "pct": 34
+  },
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
@@ -503,17 +518,17 @@
   "SMF": {
    "to": "SMF",
    "city": "Sacramento",
-   "price": 289,
-   "d1": "2026-09-11",
-   "d2": "2026-09-18",
+   "price": 266,
+   "d1": "2026-09-25",
+   "d2": "2026-10-03",
    "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:48AM",
+   "rdep": "11:53AM",
    "arr": "2:21AM+1",
-   "rarr": "2:39PM",
-   "pct": 54
+   "rarr": "5:41PM",
+   "pct": 58
   },
   "SNA": {
    "to": "SNA",

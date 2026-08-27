@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-26T18:15:56-04:00",
+ "generated": "2026-08-26T20:15:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 171,
-   "d1": "2026-10-30",
-   "d2": "2026-11-05",
+   "price": 157,
+   "d1": "2026-10-21",
+   "d2": "2026-10-29",
    "dep": "7:02PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "10:37PM",
-   "rarr": "10:13AM",
-   "pct": 66
+   "rdep": "5:38PM",
+   "arr": "10:43PM",
+   "rarr": "10:00PM",
+   "pct": 69
   },
   "MIA": {
    "to": "MIA",
@@ -203,17 +203,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 317,
-   "d1": "2026-09-22",
-   "d2": "2026-09-29",
-   "dep": "2:26PM",
-   "al": "Aerom\u00e9xico",
+   "price": 322,
+   "d1": "2026-10-07",
+   "d2": "2026-10-11",
+   "dep": "1:53PM",
+   "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:41PM",
-   "arr": "8:50PM",
-   "rarr": "2:11AM+1",
-   "pct": 39
+   "rdep": "5:25AM",
+   "arr": "7:43PM",
+   "rarr": "11:24AM",
+   "pct": 38
   },
   "LON": {
    "to": "LON",

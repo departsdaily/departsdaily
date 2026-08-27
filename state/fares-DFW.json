@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-26T18:15:39-04:00",
+ "generated": "2026-08-26T20:15:25-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -98,32 +98,32 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 169,
-   "d1": "2026-10-27",
-   "d2": "2026-10-30",
-   "dep": "8:10PM",
-   "al": "Southwest",
+   "price": 146,
+   "d1": "2026-09-13",
+   "d2": "2026-09-16",
+   "dep": "10:53PM",
+   "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:00AM",
-   "arr": "11:00PM",
-   "rarr": "11:45AM",
-   "pct": 63
+   "rdep": "12:59AM",
+   "arr": "1:53AM+1",
+   "rarr": "3:41AM",
+   "pct": 68
   },
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 165,
-   "d1": "2026-10-23",
-   "d2": "2026-10-27",
-   "dep": "2:39PM",
+   "price": 184,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26",
+   "dep": "10:08PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:03PM",
-   "arr": "7:24PM",
-   "rarr": "6:33PM",
-   "pct": 68
+   "rdep": "4:10PM",
+   "arr": "1:29AM+1",
+   "rarr": "7:29PM",
+   "pct": 65
   },
   "MCO": {
    "to": "MCO",
@@ -158,7 +158,7 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 53,
+   "price": 54,
    "d1": "2026-09-14",
    "d2": "2026-09-18",
    "dep": "2:52PM",
@@ -188,17 +188,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 168,
+   "price": 201,
    "d1": "2026-09-29",
    "d2": "2026-10-01",
-   "dep": "1:35PM",
+   "dep": "5:56PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "6:00AM",
-   "arr": "7:32PM",
+   "arr": "8:29PM",
    "rarr": "8:41AM",
-   "pct": 59
+   "pct": 51
   },
   "PHL": {
    "to": "PHL",
@@ -274,6 +274,21 @@
    "arr": "5:16PM",
    "rarr": "5:24PM",
    "pct": 67
+  },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 1280,
+   "d1": "2026-09-03",
+   "d2": "2026-09-13",
+   "dep": "5:18AM",
+   "al": "Frontier",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "7:05PM",
+   "arr": "9:27PM",
+   "rarr": "12:57PM+1",
+   "pct": -45
   },
   "CUN": {
    "to": "CUN",
