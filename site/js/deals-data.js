@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-27 06:52 EDT
+   Generated 2026-08-27 07:52 EDT
    Rebuilt this run: CLT (8)
    Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-08-27T06:52:40-04:00",
+ updated:"2026-08-27T07:52:39-04:00",
 };
 const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:135,d1:"2026-09-25",d2:"2026-09-27",dep:"9:32AM",al:"Frontier",stops:0,rdep:"6:40AM",arr:"11:33AM",rarr:"8:35AM",exp:"2026-08-29"},
