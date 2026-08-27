@@ -49,6 +49,29 @@
    "section": "extra_weekend"
   },
   {
+   "to": "ASE",
+   "city": "Aspen",
+   "price": 562,
+   "d1": "2026-12-30",
+   "d2": "2027-01-05",
+   "airline": "AA",
+   "stops": 0,
+   "dep": "11:10AM",
+   "rdep": "2:14PM",
+   "arr": "3:44PM",
+   "rarr": "5:58PM",
+   "baseline": 681,
+   "disc": 17,
+   "nights": 6,
+   "on_shape": true,
+   "rung": "shape",
+   "link": "https://www.aviasales.com/search/CLT3012ASE05011?t=AA17986290001798638240000274CLTASE17991584401799179080000224ASECLT_379babb7f55f39a2ca5301e4fef4f2fb_48249&search_date=27082026&expected_price_uuid=01a044ef-41ac-8030-e103-4e881affa1e3&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Bv08_FXzEnypUJ5Tll9vHQ&expected_price_source=share&expected_price_currency=usd&expected_price=562&marker=755800",
+   "deal": true,
+   "tier": 3,
+   "tier_bonus": 0,
+   "section": "extra_weekend"
+  },
+  {
    "to": "LAX",
    "city": "Los Angeles",
    "price": 240,
@@ -256,6 +279,29 @@
    "section": "cheapest"
   },
   {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 587,
+   "d1": "2026-12-14",
+   "d2": "2026-12-20",
+   "airline": "AC",
+   "stops": 1,
+   "dep": "8:55AM",
+   "rdep": "2:50PM",
+   "arr": "3:37PM",
+   "rarr": "7:38PM",
+   "baseline": 590,
+   "disc": 1,
+   "nights": 6,
+   "on_shape": true,
+   "rung": "shape",
+   "link": "https://www.aviasales.com/search/CLT1412PUJ20121?t=AC17972385001797284400000705CLTYYZPUJ17977782001797807900000555PUJFLLCLT_42b76905989286870b3106031ab12a36_50294&search_date=27082026&expected_price_uuid=01a0432a-4091-8040-2a82-e7384168990a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2rHdviTT0ipch4wAkSs2aQ&expected_price_source=share&expected_price_currency=usd&expected_price=587&marker=755800",
+   "deal": false,
+   "tier": 1,
+   "tier_bonus": 14,
+   "section": "cheapest"
+  },
+  {
    "to": "LIM",
    "city": "Lima",
    "price": 571,
@@ -348,8 +394,8 @@
    "section": "cheapest"
   }
  ],
- "n_deals": 12,
- "n_rows": 15,
+ "n_deals": 13,
+ "n_rows": 17,
  "sections": [
   {
    "key": "weekend",
@@ -381,16 +427,16 @@
    "angle": "A weekend with a couple of days bolted on. Out Wednesday to Friday, back Sunday to Wednesday. 4 to 7 nights.",
    "deals_only": true,
    "rows_target": 14,
-   "n": 2,
-   "n_deals": 2,
+   "n": 3,
+   "n_deals": 3,
    "rungs": {
-    "shape": 2,
+    "shape": 3,
     "window": 0
    },
    "tiers": {
     "1": 2,
     "2": 0,
-    "3": 0
+    "3": 1
    },
    "n_intl": 1,
    "deals": [
@@ -438,6 +484,29 @@
      "deal": true,
      "tier": 1,
      "tier_bonus": 14,
+     "section": "extra_weekend"
+    },
+    {
+     "to": "ASE",
+     "city": "Aspen",
+     "price": 562,
+     "d1": "2026-12-30",
+     "d2": "2027-01-05",
+     "airline": "AA",
+     "stops": 0,
+     "dep": "11:10AM",
+     "rdep": "2:14PM",
+     "arr": "3:44PM",
+     "rarr": "5:58PM",
+     "baseline": 681,
+     "disc": 17,
+     "nights": 6,
+     "on_shape": true,
+     "rung": "shape",
+     "link": "https://www.aviasales.com/search/CLT3012ASE05011?t=AA17986290001798638240000274CLTASE17991584401799179080000224ASECLT_379babb7f55f39a2ca5301e4fef4f2fb_48249&search_date=27082026&expected_price_uuid=01a044ef-41ac-8030-e103-4e881affa1e3&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Bv08_FXzEnypUJ5Tll9vHQ&expected_price_source=share&expected_price_currency=usd&expected_price=562&marker=755800",
+     "deal": true,
+     "tier": 3,
+     "tier_bonus": 0,
      "section": "extra_weekend"
     }
    ]
@@ -519,18 +588,18 @@
    "angle": "Odd days off. These are cheap because the dates are awkward, and we say so. Every other shape lands here.",
    "deals_only": false,
    "rows_target": 14,
-   "n": 11,
+   "n": 12,
    "n_deals": 8,
    "rungs": {
-    "shape": 11,
+    "shape": 12,
     "window": 0
    },
    "tiers": {
-    "1": 6,
+    "1": 7,
     "2": 1,
     "3": 4
    },
-   "n_intl": 9,
+   "n_intl": 10,
    "deals": [
     {
      "to": "LAS",
@@ -694,6 +763,29 @@
      "section": "cheapest"
     },
     {
+     "to": "PUJ",
+     "city": "Punta Cana",
+     "price": 587,
+     "d1": "2026-12-14",
+     "d2": "2026-12-20",
+     "airline": "AC",
+     "stops": 1,
+     "dep": "8:55AM",
+     "rdep": "2:50PM",
+     "arr": "3:37PM",
+     "rarr": "7:38PM",
+     "baseline": 590,
+     "disc": 1,
+     "nights": 6,
+     "on_shape": true,
+     "rung": "shape",
+     "link": "https://www.aviasales.com/search/CLT1412PUJ20121?t=AC17972385001797284400000705CLTYYZPUJ17977782001797807900000555PUJFLLCLT_42b76905989286870b3106031ab12a36_50294&search_date=27082026&expected_price_uuid=01a0432a-4091-8040-2a82-e7384168990a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2rHdviTT0ipch4wAkSs2aQ&expected_price_source=share&expected_price_currency=usd&expected_price=587&marker=755800",
+     "deal": false,
+     "tier": 1,
+     "tier_bonus": 14,
+     "section": "cheapest"
+    },
+    {
      "to": "LIM",
      "city": "Lima",
      "price": 571,
@@ -804,9 +896,9 @@
    "weekish",
    "cheapest"
   ],
-  "on_shape": 15,
+  "on_shape": 17,
   "rungs": {
-   "shape": 15,
+   "shape": 17,
    "window": 0
   }
  }
