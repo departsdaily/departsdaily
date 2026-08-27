@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-27T14:17:22-04:00",
+ "generated": "2026-08-27T16:17:02-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 292,
+   "price": 308,
    "d1": "2026-09-11",
    "d2": "2026-09-13",
-   "dep": "4:30PM",
+   "dep": "8:40AM",
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:50AM",
-   "arr": "8:30PM",
-   "rarr": "12:10PM",
-   "pct": 46
+   "rdep": "6:00AM",
+   "arr": "2:00PM",
+   "rarr": "10:20AM",
+   "pct": 43
   },
   "FLL": {
    "to": "FLL",
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 336,
+   "price": 322,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
@@ -213,7 +213,7 @@
    "rdep": "11:55PM",
    "arr": "1:42AM+1",
    "rarr": "5:16AM+1",
-   "pct": 50
+   "pct": 52
   },
   "SFO": {
    "to": "SFO",
@@ -368,9 +368,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 559,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
+   "price": 553,
+   "d1": "2026-11-19",
+   "d2": "2026-11-27",
    "dep": "7:50PM",
    "al": "Icelandair",
    "stops": 1,
@@ -378,7 +378,7 @@
    "rdep": "11:25AM",
    "arr": "5:45AM+1",
    "rarr": "10:20PM",
-   "pct": 41
+   "pct": 42
   },
   "SJU": {
    "to": "SJU",

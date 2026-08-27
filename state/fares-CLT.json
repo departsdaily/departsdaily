@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T14:14:36-04:00",
+ "generated": "2026-08-27T16:14:30-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -94,21 +94,6 @@
    "arr": "5:05AM+1",
    "rarr": "1:09AM+1",
    "pct": -10
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 212,
-   "d1": "2026-09-24",
-   "d2": "2026-09-27",
-   "dep": "7:54PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "1:39PM",
-   "arr": "11:43PM",
-   "rarr": "4:59PM",
-   "pct": 53
   },
   "DUB": {
    "to": "DUB",
