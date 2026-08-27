@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T00:14:45-04:00",
+ "generated": "2026-08-27T02:14:53-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -274,21 +274,6 @@
    "arr": "2:44AM+1",
    "rarr": "8:22AM+1",
    "pct": 10
-  },
-  "MAD": {
-   "to": "MAD",
-   "city": "Madrid",
-   "price": 1073,
-   "d1": "2026-09-04",
-   "d2": "2026-09-15",
-   "dep": "9:52PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "10:59AM+1",
-   "rarr": "5:38AM+1",
-   "pct": -22
   },
   "MCO": {
    "to": "MCO",

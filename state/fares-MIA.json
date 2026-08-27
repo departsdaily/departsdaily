@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-27T00:17:06-04:00",
+ "generated": "2026-08-27T02:17:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -64,6 +64,21 @@
    "arr": "10:23AM",
    "rarr": "2:52AM+1",
    "pct": 50
+  },
+  "DFW": {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 271,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "6:00AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:16PM",
+   "arr": "12:31PM",
+   "rarr": "9:00PM",
+   "pct": 41
   },
   "HOU": {
    "to": "HOU",
