@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T18:14:36-04:00",
+ "generated": "2026-08-27T20:14:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
@@ -383,17 +383,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 487,
-   "d1": "2026-09-14",
-   "d2": "2026-09-20",
-   "dep": "7:54PM",
+   "price": 365,
+   "d1": "2026-10-28",
+   "d2": "2026-11-03",
+   "dep": "11:52AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "4:27PM",
-   "arr": "2:44AM+1",
-   "rarr": "10:41PM",
-   "pct": 34
+   "rdep": "8:09PM",
+   "arr": "9:18PM",
+   "rarr": "5:03AM+1",
+   "pct": 51
   },
   "SFO": {
    "to": "SFO",
@@ -548,17 +548,17 @@
   "YUL": {
    "to": "YUL",
    "city": "Montreal",
-   "price": 524,
-   "d1": "2026-10-20",
-   "d2": "2026-10-24",
-   "dep": "3:59PM",
-   "al": "Frontier",
-   "stops": 2,
+   "price": 668,
+   "d1": "2026-12-18",
+   "d2": "2026-12-22",
+   "dep": "5:10PM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:45AM",
-   "arr": "7:20PM",
-   "rarr": "1:40PM",
-   "pct": -1
+   "rdep": "11:10AM",
+   "arr": "8:37PM",
+   "rarr": "2:57PM",
+   "pct": -28
   },
   "YYC": {
    "to": "YYC",

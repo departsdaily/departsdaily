@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-27T18:16:07-04:00",
+ "generated": "2026-08-27T20:16:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -308,15 +308,15 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 510,
+   "price": 511,
    "d1": "2026-12-13",
    "d2": "2026-12-17",
-   "dep": "9:30PM",
+   "dep": "10:37PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "4:00PM",
-   "arr": "4:06AM+1",
+   "arr": "6:01AM+1",
    "rarr": "11:28PM",
    "pct": 20
   },
