@@ -1,14 +1,14 @@
 {
- "date": "2026-08-27",
+ "date": "2026-08-28",
  "origin": "CLT",
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 55,
-  "fetch failed": 12,
-  "qualified": 12,
-  "not a deal": 19,
-  "no fares in window": 9
+  "no fares": 54,
+  "fetch failed": 14,
+  "qualified": 13,
+  "not a deal": 15,
+  "no fares in window": 11
  },
  "routes": {
   "ABQ": {
@@ -75,6 +75,10 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
+  "CUN": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
   "CZM": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -112,10 +116,6 @@
    "why": "the fare cache returned nothing"
   },
   "GHB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "GND": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -172,10 +172,6 @@
    "why": "the fare cache returned nothing"
   },
   "PBI": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
-  "PHX": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -243,6 +239,10 @@
    "outcome": "fetch failed",
    "why": "HTTP Error 429: Too Many Requests"
   },
+  "SRQ": {
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
+  },
   "STT": {
    "outcome": "fetch failed",
    "why": "HTTP Error 429: Too Many Requests"
@@ -279,6 +279,10 @@
    "outcome": "fetch failed",
    "why": "HTTP Error 429: Too Many Requests"
   },
+  "YVR": {
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
+  },
   "ASE": {
    "outcome": "qualified",
    "price": 562,
@@ -305,12 +309,12 @@
   },
   "AUH": {
    "outcome": "not a deal",
-   "price": 1335,
-   "typical": 1058,
-   "disc_pct": -26,
-   "d1": "2026-10-26",
-   "d2": "2026-11-02",
-   "nights": 7,
+   "price": 1288,
+   "typical": 1102,
+   "disc_pct": -17,
+   "d1": "2026-09-08",
+   "d2": "2026-09-30",
+   "nights": 22,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -330,18 +334,6 @@
   "BOG": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
-   "section": "cheapest"
-  },
-  "CUN": {
-   "outcome": "not a deal",
-   "price": 532,
-   "typical": 548,
-   "disc_pct": 3,
-   "d1": "2026-12-09",
-   "d2": "2026-12-19",
-   "nights": 10,
-   "on_shape": true,
-   "rung": "shape",
    "section": "cheapest"
   },
   "CUR": {
@@ -383,14 +375,26 @@
    "rung": "shape",
    "section": "cheapest"
   },
-  "HNL": {
+  "GND": {
    "outcome": "not a deal",
-   "price": 738,
-   "typical": 644,
-   "disc_pct": -15,
-   "d1": "2027-01-11",
-   "d2": "2027-01-18",
-   "nights": 7,
+   "price": 710,
+   "typical": 664,
+   "disc_pct": -7,
+   "d1": "2026-11-03",
+   "d2": "2026-11-09",
+   "nights": 6,
+   "on_shape": true,
+   "rung": "shape",
+   "section": "cheapest"
+  },
+  "HNL": {
+   "outcome": "qualified",
+   "price": 491,
+   "typical": 658,
+   "disc_pct": 25,
+   "d1": "2026-10-06",
+   "d2": "2026-10-12",
+   "nights": 6,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -409,15 +413,15 @@
   },
   "LAS": {
    "outcome": "qualified",
-   "price": 268,
-   "typical": 306,
-   "disc_pct": 12,
-   "d1": "2026-09-18",
-   "d2": "2026-09-19",
-   "nights": 1,
+   "price": 170,
+   "typical": 338,
+   "disc_pct": 50,
+   "d1": "2026-10-09",
+   "d2": "2026-10-11",
+   "nights": 2,
    "on_shape": true,
    "rung": "shape",
-   "section": "cheapest"
+   "section": "weekend"
   },
   "LAX": {
    "outcome": "qualified",
@@ -475,6 +479,11 @@
   "PDX": {
    "outcome": "no fares in window",
    "why": "3 offers, none leaving 3-150 days out in the cheapest shape",
+   "section": "cheapest"
+  },
+  "PHX": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "PNS": {
@@ -596,27 +605,8 @@
    "section": "cheapest"
   },
   "SMF": {
-   "outcome": "not a deal",
-   "price": 463,
-   "typical": 307,
-   "disc_pct": -51,
-   "d1": "2026-11-24",
-   "d2": "2026-11-30",
-   "nights": 6,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
-  "SRQ": {
-   "outcome": "not a deal",
-   "price": 460,
-   "typical": 246,
-   "disc_pct": -87,
-   "d1": "2026-10-11",
-   "d2": "2026-10-17",
-   "nights": 6,
-   "on_shape": true,
-   "rung": "shape",
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "SXM": {
@@ -668,18 +658,6 @@
    "section": "cheapest"
   },
   "YUL": {
-   "outcome": "not a deal",
-   "price": 524,
-   "typical": 445,
-   "disc_pct": -18,
-   "d1": "2026-10-20",
-   "d2": "2026-10-24",
-   "nights": 4,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
-  "YVR": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
