@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-28T14:14:37-04:00",
+ "generated": "2026-08-28T16:14:42-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 38,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -53,17 +53,17 @@
   "DUB": {
    "to": "DUB",
    "city": "Dublin",
-   "price": 1083,
-   "d1": "2026-09-16",
-   "d2": "2026-09-23",
-   "dep": "4:01PM",
+   "price": 815,
+   "d1": "2026-09-28",
+   "d2": "2026-10-05",
+   "dep": "9:32AM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "9:40AM",
-   "arr": "12:43AM+1",
-   "rarr": "8:24PM",
-   "pct": -39
+   "rdep": "6:30AM",
+   "arr": "9:23PM",
+   "rarr": "7:10PM",
+   "pct": -4
   },
   "FLL": {
    "to": "FLL",
@@ -169,21 +169,6 @@
    "arr": "4:55PM",
    "rarr": "4:31AM+1",
    "pct": 66
-  },
-  "LIM": {
-   "to": "LIM",
-   "city": "Lima",
-   "price": 747,
-   "d1": "2026-09-02",
-   "d2": "2026-09-16",
-   "dep": "9:46AM",
-   "al": "Frontier",
-   "stops": 3,
-   "xfer": 0,
-   "rdep": "2:30AM",
-   "arr": "9:24PM",
-   "rarr": "1:59PM",
-   "pct": 0
   },
   "LIR": {
    "to": "LIR",
@@ -364,21 +349,6 @@
    "arr": "12:19PM",
    "rarr": "4:58AM+1",
    "pct": 11
-  },
-  "PNS": {
-   "to": "PNS",
-   "city": "Pensacola",
-   "price": 224,
-   "d1": "2026-10-02",
-   "d2": "2026-10-04",
-   "dep": "6:50AM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:45AM",
-   "arr": "9:45AM",
-   "rarr": "10:35AM",
-   "pct": 0
   },
   "PUJ": {
    "to": "PUJ",
