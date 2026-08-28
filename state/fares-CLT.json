@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T22:14:29-04:00",
+ "generated": "2026-08-28T00:14:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 38,
+ "routes_priced": 37,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -49,21 +49,6 @@
    "arr": "4:59AM+1",
    "rarr": "11:07PM",
    "pct": 18
-  },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 532,
-   "d1": "2026-12-09",
-   "d2": "2026-12-19",
-   "dep": "9:00AM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:20PM",
-   "arr": "1:05PM",
-   "rarr": "5:18PM",
-   "pct": -2
   },
   "CUR": {
    "to": "CUR",

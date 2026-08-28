@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-27T22:14:46-04:00",
+ "generated": "2026-08-28T00:14:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 75,
+   "price": 79,
    "d1": "2026-11-11",
-   "d2": "2026-11-14",
-   "dep": "9:00PM",
+   "d2": "2026-11-15",
+   "dep": "7:29PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "9:45PM",
-   "arr": "10:55PM",
-   "rarr": "11:49PM",
-   "pct": 79
+   "rdep": "10:55PM",
+   "arr": "9:31PM",
+   "rarr": "1:04AM+1",
+   "pct": 78
   },
   "MSY": {
    "to": "MSY",
@@ -233,17 +233,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 44,
+   "price": 40,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
    "dep": "5:10AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:32PM",
+   "rdep": "8:41AM",
    "arr": "7:16AM",
-   "rarr": "8:00PM",
-   "pct": 90
+   "rarr": "11:06AM",
+   "pct": 91
   },
   "PHX": {
    "to": "PHX",
@@ -398,17 +398,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 972,
-   "d1": "2026-09-12",
-   "d2": "2026-09-28",
+   "price": 534,
+   "d1": "2026-10-10",
+   "d2": "2026-10-16",
    "dep": "9:50PM",
    "al": "Turkish",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:05PM",
+   "rdep": "3:35PM",
    "arr": "11:20AM+1",
-   "rarr": "10:30AM+1",
-   "pct": -2
+   "rarr": "6:10AM+1",
+   "pct": 44
   },
   "SJU": {
    "to": "SJU",
