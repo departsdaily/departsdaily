@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-28T00:14:34-04:00",
+ "generated": "2026-08-28T02:14:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 37,
  "routes_failed": [],
@@ -34,21 +34,6 @@
    "arr": "11:49AM+1",
    "rarr": "11:05PM",
    "pct": -7
-  },
-  "BCN": {
-   "to": "BCN",
-   "city": "Barcelona",
-   "price": 718,
-   "d1": "2026-09-05",
-   "d2": "2026-09-15",
-   "dep": "5:43PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "10:30AM",
-   "arr": "4:59AM+1",
-   "rarr": "11:07PM",
-   "pct": 18
   },
   "CUR": {
    "to": "CUR",
@@ -140,6 +125,21 @@
    "rarr": "6:38PM",
    "pct": 41
   },
+  "LAS": {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 170,
+   "d1": "2026-10-09",
+   "d2": "2026-10-11",
+   "dep": "11:56AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:52AM",
+   "arr": "6:19PM",
+   "rarr": "6:41AM",
+   "pct": 77
+  },
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
@@ -188,17 +188,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 767,
-   "d1": "2026-09-05",
-   "d2": "2026-09-10",
-   "dep": "5:43PM",
+   "price": 786,
+   "d1": "2026-11-12",
+   "d2": "2026-11-22",
+   "dep": "6:05AM",
    "al": "",
-   "stops": 2,
+   "stops": 1,
    "xfer": 1,
-   "rdep": "9:10PM",
-   "arr": "2:44AM+1",
-   "rarr": "8:22AM+1",
-   "pct": 10
+   "rdep": "12:35PM",
+   "arr": "4:06PM",
+   "rarr": "12:12AM+1",
+   "pct": 8
   },
   "MCO": {
    "to": "MCO",

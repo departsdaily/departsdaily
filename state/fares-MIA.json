@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-28T00:16:40-04:00",
+ "generated": "2026-08-28T02:16:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -170,21 +170,6 @@
    "rarr": "6:09PM",
    "pct": 66
   },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 115,
-   "d1": "2026-09-29",
-   "d2": "2026-10-02",
-   "dep": "8:50PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "4:42PM",
-   "arr": "11:55PM",
-   "rarr": "7:45PM",
-   "pct": 70
-  },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
@@ -308,17 +293,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 306,
-   "d1": "2026-11-12",
-   "d2": "2026-11-19",
-   "dep": "7:45PM",
-   "al": "UP",
-   "stops": 0,
+   "price": 333,
+   "d1": "2026-10-24",
+   "d2": "2026-11-07",
+   "dep": "7:00AM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:45AM",
-   "arr": "8:45PM",
-   "rarr": "8:50AM",
-   "pct": 36
+   "rdep": "7:47AM",
+   "arr": "9:25AM",
+   "rarr": "8:55AM",
+   "pct": 31
   },
   "PAR": {
    "to": "PAR",
