@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-27T20:16:16-04:00",
+ "generated": "2026-08-27T22:15:54-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 146,
-   "d1": "2026-09-19",
-   "d2": "2026-09-24",
-   "dep": "9:40PM",
+   "price": 151,
+   "d1": "2026-11-03",
+   "d2": "2026-11-08",
+   "dep": "11:42AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:50PM",
-   "arr": "2:36AM+1",
-   "rarr": "7:28PM",
-   "pct": 75
+   "rdep": "5:38PM",
+   "arr": "5:46PM",
+   "rarr": "12:22AM+1",
+   "pct": 74
   },
   "MIA": {
    "to": "MIA",
@@ -398,17 +398,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 587,
-   "d1": "2026-11-25",
-   "d2": "2026-11-29",
-   "dep": "5:20AM",
-   "al": "Southwest",
-   "stops": 2,
+   "price": 305,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "5:00AM",
+   "al": "United",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:45PM",
-   "arr": "1:30PM",
-   "rarr": "8:05AM+1",
-   "pct": -40
+   "rdep": "7:40AM",
+   "arr": "12:56PM",
+   "rarr": "4:27PM",
+   "pct": 27
   }
  }
 }

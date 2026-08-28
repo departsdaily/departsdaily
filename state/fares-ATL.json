@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-27T20:14:58-04:00",
+ "generated": "2026-08-27T22:14:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 202,
-   "d1": "2026-09-15",
-   "d2": "2026-09-22",
-   "dep": "9:28AM",
+   "price": 228,
+   "d1": "2026-10-30",
+   "d2": "2026-11-02",
+   "dep": "9:00PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:52PM",
-   "arr": "12:07PM",
-   "rarr": "4:07PM",
-   "pct": 62
+   "rdep": "10:59AM",
+   "arr": "2:24AM+1",
+   "rarr": "4:38PM",
+   "pct": 57
   },
   "DCA": {
    "to": "DCA",
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 266,
-   "d1": "2026-09-04",
-   "d2": "2026-09-09",
-   "dep": "7:57AM",
+   "price": 270,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
+   "dep": "9:24PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "11:16PM",
-   "arr": "1:19PM",
-   "rarr": "5:27AM+1",
-   "pct": 61
+   "arr": "1:52AM+1",
+   "rarr": "4:49AM+1",
+   "pct": 60
   },
   "LAX": {
    "to": "LAX",
@@ -338,17 +338,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 842,
-   "d1": "2026-10-15",
-   "d2": "2026-10-22",
-   "dep": "8:10AM",
+   "price": 758,
+   "d1": "2026-10-07",
+   "d2": "2026-10-14",
+   "dep": "3:30PM",
    "al": "",
-   "stops": 1,
+   "stops": 3,
    "xfer": 1,
-   "rdep": "1:05PM",
-   "arr": "5:33PM",
-   "rarr": "11:43PM",
-   "pct": 1
+   "rdep": "7:45AM",
+   "arr": "1:39AM+1",
+   "rarr": "11:04PM",
+   "pct": 11
   },
   "MBJ": {
    "to": "MBJ",
@@ -413,17 +413,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 202,
-   "d1": "2026-09-10",
-   "d2": "2026-09-16",
-   "dep": "12:19PM",
+   "price": 193,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "8:22PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "4:06PM",
-   "rarr": "10:28AM",
-   "pct": 52
+   "rdep": "3:59PM",
+   "arr": "11:59PM",
+   "rarr": "8:13PM",
+   "pct": 54
   }
  }
 }

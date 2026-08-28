@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-27T20:14:38-04:00",
+ "generated": "2026-08-27T22:14:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
@@ -49,21 +49,6 @@
    "arr": "4:59AM+1",
    "rarr": "11:07PM",
    "pct": 18
-  },
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 178,
-   "d1": "2026-09-16",
-   "d2": "2026-09-18",
-   "dep": "9:32AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:00PM",
-   "arr": "1:40PM",
-   "rarr": "5:06PM",
-   "pct": 59
   },
   "CUN": {
    "to": "CUN",
@@ -143,16 +128,16 @@
   "HNL": {
    "to": "HNL",
    "city": "Honolulu",
-   "price": 737,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "dep": "1:20PM",
-   "al": "American",
+   "price": 491,
+   "d1": "2026-10-06",
+   "d2": "2026-10-12",
+   "dep": "8:46AM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:38PM",
-   "arr": "12:08AM+1",
-   "rarr": "4:42AM+1",
+   "rdep": "4:00PM",
+   "arr": "7:47PM",
+   "rarr": "2:22AM+1",
    "pct": 0
   },
   "JAX": {
@@ -334,6 +319,21 @@
    "arr": "12:50AM+1",
    "rarr": "5:30AM+1",
    "pct": 60
+  },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 591,
+   "d1": "2026-11-20",
+   "d2": "2026-11-29",
+   "dep": "6:20AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "10:57PM",
+   "arr": "12:19PM",
+   "rarr": "4:58AM+1",
+   "pct": 11
   },
   "PNS": {
    "to": "PNS",
