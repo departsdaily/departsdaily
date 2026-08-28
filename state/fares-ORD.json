@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-28T16:15:22-04:00",
+ "generated": "2026-08-28T18:15:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -143,9 +143,9 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 116,
-   "d1": "2026-10-16",
-   "d2": "2026-10-18",
+   "price": 130,
+   "d1": "2026-10-08",
+   "d2": "2026-10-13",
    "dep": "8:01PM",
    "al": "Frontier",
    "stops": 0,
@@ -153,7 +153,7 @@
    "rdep": "12:21AM",
    "arr": "12:51AM+1",
    "rarr": "4:34AM",
-   "pct": 79
+   "pct": 77
   },
   "MCO": {
    "to": "MCO",
@@ -188,32 +188,32 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 221,
-   "d1": "2026-10-07",
-   "d2": "2026-10-10",
-   "dep": "1:21PM",
-   "al": "Frontier",
+   "price": 198,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "5:53PM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:04PM",
-   "arr": "8:57PM",
-   "rarr": "2:09AM+1",
-   "pct": 47
+   "rdep": "7:00AM",
+   "arr": "10:02PM",
+   "rarr": "12:25PM",
+   "pct": 53
   },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 145,
-   "d1": "2026-09-18",
-   "d2": "2026-09-20",
-   "dep": "7:00AM",
-   "al": "United",
+   "price": 177,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "5:27PM",
+   "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:05AM",
-   "arr": "9:17AM",
-   "rarr": "10:45AM",
-   "pct": 65
+   "rdep": "6:55AM",
+   "arr": "8:00PM",
+   "rarr": "9:42AM",
+   "pct": 57
   },
   "PHL": {
    "to": "PHL",
@@ -263,17 +263,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 200,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
-   "dep": "8:55PM",
+   "price": 203,
+   "d1": "2026-10-10",
+   "d2": "2026-10-12",
+   "dep": "6:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:05PM",
-   "arr": "2:49AM+1",
-   "rarr": "5:06AM+1",
-   "pct": 71
+   "rdep": "7:25PM",
+   "arr": "1:37PM",
+   "rarr": "1:14AM+1",
+   "pct": 70
   },
   "TPA": {
    "to": "TPA",
