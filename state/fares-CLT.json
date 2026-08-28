@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-28T06:53:43-04:00",
+ "generated": "2026-08-28T07:53:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "CUR": {
    "to": "CUR",
    "city": "Curacao",
-   "price": 745,
+   "price": 775,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
-   "dep": "9:40PM",
+   "dep": "5:38PM",
    "al": "Frontier",
-   "stops": 4,
+   "stops": 2,
    "xfer": 0,
    "rdep": "11:35AM",
-   "arr": "5:05AM+1",
-   "rarr": "1:09AM+1",
-   "pct": -10
+   "arr": "1:04AM+1",
+   "rarr": "9:42PM",
+   "pct": -14
   },
   "DUB": {
    "to": "DUB",
