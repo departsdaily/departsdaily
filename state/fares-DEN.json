@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-28T06:15:43-04:00",
+ "generated": "2026-08-28T08:15:51-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -169,21 +169,6 @@
    "arr": "12:04PM",
    "rarr": "10:28PM",
    "pct": 71
-  },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 258,
-   "d1": "2026-11-25",
-   "d2": "2026-11-28",
-   "dep": "1:25PM",
-   "al": "United",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:00PM",
-   "arr": "6:28PM",
-   "rarr": "12:41AM+1",
-   "pct": 32
   },
   "SFO": {
    "to": "SFO",
