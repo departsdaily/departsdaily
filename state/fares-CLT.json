@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-28T12:14:39-04:00",
+ "generated": "2026-08-28T14:14:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -214,6 +214,21 @@
    "arr": "4:06PM",
    "rarr": "12:12AM+1",
    "pct": 8
+  },
+  "MAD": {
+   "to": "MAD",
+   "city": "Madrid",
+   "price": 517,
+   "d1": "2026-10-01",
+   "d2": "2026-10-15",
+   "dep": "9:15AM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "6:41PM",
+   "rarr": "7:10PM",
+   "pct": 41
   },
   "MCO": {
    "to": "MCO",

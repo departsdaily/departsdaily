@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-28T12:15:35-04:00",
+ "generated": "2026-08-28T14:15:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 149,
-   "d1": "2026-09-14",
-   "d2": "2026-09-17",
-   "dep": "6:15PM",
+   "price": 145,
+   "d1": "2026-10-06",
+   "d2": "2026-10-15",
+   "dep": "5:55PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:46PM",
-   "arr": "9:17PM",
-   "rarr": "10:17PM",
-   "pct": 67
+   "rdep": "9:47AM",
+   "arr": "9:00PM",
+   "rarr": "1:19PM",
+   "pct": 68
   },
   "MSY": {
    "to": "MSY",
@@ -338,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 534,
-   "d1": "2026-12-18",
-   "d2": "2026-12-23",
-   "dep": "8:21AM",
-   "al": "American",
-   "stops": 1,
+   "price": 482,
+   "d1": "2026-10-06",
+   "d2": "2026-10-15",
+   "dep": "1:23PM",
+   "al": "Frontier",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "7:07PM",
-   "arr": "12:55PM",
-   "rarr": "1:28AM+1",
-   "pct": 5
+   "rdep": "9:38AM",
+   "arr": "9:24PM",
+   "rarr": "3:48PM",
+   "pct": 14
   },
   "ROM": {
    "to": "ROM",

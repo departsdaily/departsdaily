@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-28T12:15:53-04:00",
+ "generated": "2026-08-28T14:15:51-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -113,16 +113,16 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 208,
-   "d1": "2026-11-02",
-   "d2": "2026-11-07",
+   "price": 211,
+   "d1": "2026-09-09",
+   "d2": "2026-09-17",
    "dep": "6:56PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:05AM",
-   "arr": "10:44PM",
-   "rarr": "10:55AM",
+   "rdep": "5:50AM",
+   "arr": "10:46PM",
+   "rarr": "10:19AM",
    "pct": 63
   },
   "NYC": {
@@ -229,6 +229,21 @@
    "arr": "11:13AM+1",
    "rarr": "12:48AM+1",
    "pct": 11
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 854,
+   "d1": "2026-12-25",
+   "d2": "2027-01-08",
+   "dep": "5:01PM",
+   "al": "British Airways",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:05PM",
+   "arr": "4:50AM+1",
+   "rarr": "8:45AM+1",
+   "pct": 10
   },
   "SJU": {
    "to": "SJU",

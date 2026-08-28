@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-28T12:14:58-04:00",
+ "generated": "2026-08-28T14:14:56-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 28,
+ "routes_priced": 29,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -334,6 +334,21 @@
    "arr": "5:37AM+1",
    "rarr": "7:29PM",
    "pct": 9
+  },
+  "CUN": {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 449,
+   "d1": "2026-09-12",
+   "d2": "2026-09-19",
+   "dep": "10:50AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "1:51PM",
+   "arr": "1:37PM",
+   "rarr": "4:39PM",
+   "pct": 14
   },
   "LON": {
    "to": "LON",
