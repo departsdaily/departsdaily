@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-08-28T04:15:28-04:00",
+ "generated": "2026-08-28T06:15:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -244,6 +244,21 @@
    "arr": "7:43PM",
    "rarr": "4:20AM",
    "pct": 49
+  },
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 216,
+   "d1": "2026-09-01",
+   "d2": "2026-09-06",
+   "dep": "7:25AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "12:29AM",
+   "arr": "11:16AM",
+   "rarr": "4:05AM",
+   "pct": 59
   },
   "TPA": {
    "to": "TPA",

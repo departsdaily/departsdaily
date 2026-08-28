@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-28T04:17:12-04:00",
+ "generated": "2026-08-28T06:17:10-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 322,
+   "price": 336,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
@@ -213,7 +213,7 @@
    "rdep": "11:55PM",
    "arr": "1:42AM+1",
    "rarr": "5:16AM+1",
-   "pct": 52
+   "pct": 50
   },
   "SFO": {
    "to": "SFO",
@@ -248,17 +248,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 639,
-   "d1": "2026-10-22",
-   "d2": "2026-10-26",
-   "dep": "5:50PM",
+   "price": 900,
+   "d1": "2026-08-31",
+   "d2": "2026-09-05",
+   "dep": "5:40PM",
    "al": "SK",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:25PM",
+   "rdep": "10:25AM",
    "arr": "2:30AM+1",
-   "rarr": "6:10AM+1",
-   "pct": 27
+   "rarr": "8:00PM",
+   "pct": -2
   },
   "AUA": {
    "to": "AUA",
