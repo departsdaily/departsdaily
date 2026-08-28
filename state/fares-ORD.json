@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-28T10:15:21-04:00",
+ "generated": "2026-08-28T12:15:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,9 +68,9 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 118,
-   "d1": "2026-09-30",
-   "d2": "2026-10-05",
+   "price": 115,
+   "d1": "2026-09-26",
+   "d2": "2026-09-29",
    "dep": "6:30AM",
    "al": "Frontier",
    "stops": 0,
@@ -78,7 +78,7 @@
    "rdep": "8:55PM",
    "arr": "9:15AM",
    "rarr": "11:23PM",
-   "pct": 71
+   "pct": 72
   },
   "DFW": {
    "to": "DFW",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 266,
-   "d1": "2026-11-21",
-   "d2": "2026-11-26",
-   "dep": "1:07PM",
-   "al": "United",
+   "price": 273,
+   "d1": "2026-12-13",
+   "d2": "2026-12-19",
+   "dep": "9:00AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:05AM",
-   "arr": "7:25PM",
-   "rarr": "9:11AM",
-   "pct": 37
+   "rdep": "6:00AM",
+   "arr": "2:47PM",
+   "rarr": "1:16PM",
+   "pct": 35
   }
  }
 }

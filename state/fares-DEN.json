@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-28T10:15:57-04:00",
+ "generated": "2026-08-28T12:15:53-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -154,21 +154,6 @@
    "arr": "11:23PM",
    "rarr": "9:15AM",
    "pct": 68
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 152,
-   "d1": "2026-09-13",
-   "d2": "2026-09-19",
-   "dep": "7:00AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "3:35PM",
-   "arr": "12:04PM",
-   "rarr": "10:28PM",
-   "pct": 71
   },
   "SFO": {
    "to": "SFO",
