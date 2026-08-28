@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 15,
+ "n_deals": 13,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -34,19 +34,19 @@
    "section": "cheapest"
   },
   {
-   "file": "story_3_MEX.png",
-   "to": "MEX",
-   "city": "Mexico City",
-   "price": 301,
-   "disc": 35,
-   "section": "cheapest"
-  },
-  {
-   "file": "story_4_SJU.png",
+   "file": "story_3_SJU.png",
    "to": "SJU",
    "city": "San Juan, PR",
    "price": 222,
    "disc": 30,
+   "section": "extra_weekend"
+  },
+  {
+   "file": "story_4_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 240,
+   "disc": 22,
    "section": "extra_weekend"
   },
   {
@@ -55,18 +55,10 @@
    "city": "Los Angeles",
    "price": 240,
    "disc": 22,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_6_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 240,
-   "disc": 22,
    "section": "weekish"
   },
   {
-   "file": "story_7_LAS.png",
+   "file": "story_6_LAS.png",
    "to": "LAS",
    "city": "Las Vegas",
    "price": 268,
@@ -74,11 +66,19 @@
    "section": "cheapest"
   },
   {
-   "file": "story_8_SFO.png",
+   "file": "story_7_SFO.png",
    "to": "SFO",
    "city": "San Francisco",
    "price": 321,
    "disc": 14,
+   "section": "cheapest"
+  },
+  {
+   "file": "story_8_SDQ.png",
+   "to": "SDQ",
+   "city": "Santo Domingo",
+   "price": 278,
+   "disc": 46,
    "section": "cheapest"
   }
  ]

@@ -72,29 +72,6 @@
    "section": "extra_weekend"
   },
   {
-   "to": "ASE",
-   "city": "Aspen",
-   "price": 562,
-   "d1": "2026-12-30",
-   "d2": "2027-01-05",
-   "airline": "AA",
-   "stops": 0,
-   "dep": "11:10AM",
-   "rdep": "2:14PM",
-   "arr": "3:44PM",
-   "rarr": "5:58PM",
-   "baseline": 681,
-   "disc": 17,
-   "nights": 6,
-   "on_shape": true,
-   "rung": "shape",
-   "link": "https://www.aviasales.com/search/CLT3012ASE05011?t=AA17986290001798638240000274CLTASE17991584401799179080000224ASECLT_379babb7f55f39a2ca5301e4fef4f2fb_48249&search_date=27082026&expected_price_uuid=01a044ef-41ac-8030-e103-4e881affa1e3&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Bv08_FXzEnypUJ5Tll9vHQ&expected_price_source=share&expected_price_currency=usd&expected_price=562&marker=755800",
-   "deal": true,
-   "tier": 3,
-   "tier_bonus": 0,
-   "section": "extra_weekend"
-  },
-  {
    "to": "LAX",
    "city": "Los Angeles",
    "price": 240,
@@ -158,29 +135,6 @@
    "on_shape": true,
    "rung": "shape",
    "link": "https://www.aviasales.com/search/CLT1809LAS19091?t=F917897676001789805220000807CLTMCOLAS17898408001789899060000791LASDFWCLT_b38b96a4cb8a97a8a697910092597c62_22149&search_date=21082026&expected_price_uuid=01a026b9-6de9-8040-aedf-c35f2d250709&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=oV1xIXLIsRFf2ncKts9i-Q&expected_price_source=share&expected_price_currency=usd&expected_price=268&marker=755800",
-   "deal": true,
-   "tier": 1,
-   "tier_bonus": 14,
-   "section": "cheapest"
-  },
-  {
-   "to": "MEX",
-   "city": "Mexico City",
-   "price": 301,
-   "d1": "2026-10-14",
-   "d2": "2026-11-05",
-   "airline": "Y4",
-   "stops": 1,
-   "dep": "11:56AM",
-   "rdep": "7:00AM",
-   "arr": "5:16PM",
-   "rarr": "12:24PM",
-   "baseline": 464,
-   "disc": 35,
-   "nights": 22,
-   "on_shape": true,
-   "rung": "shape",
-   "link": "https://www.aviasales.com/search/CLT1410MEX05111?t=F917919789601792016100000739CLTIAHMEX17938620001793962800001620MEXDFWCLT_700edcb5a4be21f00bb8b6a2a485bf3e_24864&search_date=21082026&expected_price_uuid=01a024a4-951f-8040-a4bc-597bd342736d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=v_QUUQQhNdZ7okIJMgVKRQ&expected_price_source=share&expected_price_currency=usd&expected_price=301&marker=755800",
    "deal": true,
    "tier": 1,
    "tier_bonus": 14,
@@ -417,8 +371,8 @@
    "section": "cheapest"
   }
  ],
- "n_deals": 15,
- "n_rows": 18,
+ "n_deals": 13,
+ "n_rows": 16,
  "sections": [
   {
    "key": "weekend",
@@ -474,16 +428,16 @@
    "angle": "A weekend with a couple of days bolted on. Out Wednesday to Friday, back Sunday to Wednesday. 4 to 7 nights.",
    "deals_only": true,
    "rows_target": 14,
-   "n": 3,
-   "n_deals": 3,
+   "n": 2,
+   "n_deals": 2,
    "rungs": {
-    "shape": 3,
+    "shape": 2,
     "window": 0
    },
    "tiers": {
     "1": 2,
     "2": 0,
-    "3": 1
+    "3": 0
    },
    "n_intl": 1,
    "deals": [
@@ -531,29 +485,6 @@
      "deal": true,
      "tier": 1,
      "tier_bonus": 14,
-     "section": "extra_weekend"
-    },
-    {
-     "to": "ASE",
-     "city": "Aspen",
-     "price": 562,
-     "d1": "2026-12-30",
-     "d2": "2027-01-05",
-     "airline": "AA",
-     "stops": 0,
-     "dep": "11:10AM",
-     "rdep": "2:14PM",
-     "arr": "3:44PM",
-     "rarr": "5:58PM",
-     "baseline": 681,
-     "disc": 17,
-     "nights": 6,
-     "on_shape": true,
-     "rung": "shape",
-     "link": "https://www.aviasales.com/search/CLT3012ASE05011?t=AA17986290001798638240000274CLTASE17991584401799179080000224ASECLT_379babb7f55f39a2ca5301e4fef4f2fb_48249&search_date=27082026&expected_price_uuid=01a044ef-41ac-8030-e103-4e881affa1e3&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Bv08_FXzEnypUJ5Tll9vHQ&expected_price_source=share&expected_price_currency=usd&expected_price=562&marker=755800",
-     "deal": true,
-     "tier": 3,
-     "tier_bonus": 0,
      "section": "extra_weekend"
     }
    ]
@@ -635,18 +566,18 @@
    "angle": "Odd days off. These are cheap because the dates are awkward, and we say so. Every other shape lands here.",
    "deals_only": false,
    "rows_target": 14,
-   "n": 12,
-   "n_deals": 9,
+   "n": 11,
+   "n_deals": 8,
    "rungs": {
-    "shape": 12,
+    "shape": 11,
     "window": 0
    },
    "tiers": {
-    "1": 6,
+    "1": 5,
     "2": 1,
     "3": 5
    },
-   "n_intl": 9,
+   "n_intl": 8,
    "deals": [
     {
      "to": "LAS",
@@ -666,29 +597,6 @@
      "on_shape": true,
      "rung": "shape",
      "link": "https://www.aviasales.com/search/CLT1809LAS19091?t=F917897676001789805220000807CLTMCOLAS17898408001789899060000791LASDFWCLT_b38b96a4cb8a97a8a697910092597c62_22149&search_date=21082026&expected_price_uuid=01a026b9-6de9-8040-aedf-c35f2d250709&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=oV1xIXLIsRFf2ncKts9i-Q&expected_price_source=share&expected_price_currency=usd&expected_price=268&marker=755800",
-     "deal": true,
-     "tier": 1,
-     "tier_bonus": 14,
-     "section": "cheapest"
-    },
-    {
-     "to": "MEX",
-     "city": "Mexico City",
-     "price": 301,
-     "d1": "2026-10-14",
-     "d2": "2026-11-05",
-     "airline": "Y4",
-     "stops": 1,
-     "dep": "11:56AM",
-     "rdep": "7:00AM",
-     "arr": "5:16PM",
-     "rarr": "12:24PM",
-     "baseline": 464,
-     "disc": 35,
-     "nights": 22,
-     "on_shape": true,
-     "rung": "shape",
-     "link": "https://www.aviasales.com/search/CLT1410MEX05111?t=F917919789601792016100000739CLTIAHMEX17938620001793962800001620MEXDFWCLT_700edcb5a4be21f00bb8b6a2a485bf3e_24864&search_date=21082026&expected_price_uuid=01a024a4-951f-8040-a4bc-597bd342736d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=v_QUUQQhNdZ7okIJMgVKRQ&expected_price_source=share&expected_price_currency=usd&expected_price=301&marker=755800",
      "deal": true,
      "tier": 1,
      "tier_bonus": 14,
@@ -943,9 +851,9 @@
    "weekish",
    "cheapest"
   ],
-  "on_shape": 18,
+  "on_shape": 16,
   "rungs": {
-   "shape": 18,
+   "shape": 16,
    "window": 0
   }
  }
