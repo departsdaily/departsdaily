@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-29T10:14:45-04:00",
+ "generated": "2026-08-29T11:19:28-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "MAD": {
    "to": "MAD",
    "city": "Madrid",
-   "price": 517,
-   "d1": "2026-10-01",
-   "d2": "2026-10-15",
-   "dep": "9:15AM",
-   "al": "Air Canada",
+   "price": 488,
+   "d1": "2026-09-29",
+   "d2": "2026-10-13",
+   "dep": "6:40PM",
+   "al": "Lufthansa",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:00AM",
-   "arr": "6:41PM",
+   "arr": "6:00AM+1",
    "rarr": "7:10PM",
-   "pct": 41
+   "pct": 45
   },
   "MBJ": {
    "to": "MBJ",

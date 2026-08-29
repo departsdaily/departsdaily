@@ -4,9 +4,9 @@
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 66,
+  "no fares": 67,
   "no fares in window": 13,
-  "not a deal": 19,
+  "not a deal": 18,
   "qualified": 9
  },
  "routes": {
@@ -231,6 +231,10 @@
    "why": "the fare cache returned nothing"
   },
   "SKB": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "SLC": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -594,18 +598,6 @@
    "on_shape": true,
    "rung": "shape",
    "section": "extra_weekend"
-  },
-  "SLC": {
-   "outcome": "not a deal",
-   "price": 363,
-   "typical": 300,
-   "disc_pct": -21,
-   "d1": "2026-09-12",
-   "d2": "2026-09-15",
-   "nights": 3,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
   },
   "SMF": {
    "outcome": "no fares in window",
