@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-29T12:14:55-04:00",
+ "generated": "2026-08-29T14:15:05-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -275,21 +275,6 @@
    "rarr": "10:32PM",
    "pct": 78
   },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 147,
-   "d1": "2026-10-09",
-   "d2": "2026-10-16",
-   "dep": "3:28PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:59PM",
-   "arr": "8:55PM",
-   "rarr": "5:59AM+1",
-   "pct": 81
-  },
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
@@ -398,17 +383,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 401,
-   "d1": "2026-11-04",
-   "d2": "2026-11-11",
+   "price": 413,
+   "d1": "2026-10-26",
+   "d2": "2026-11-09",
    "dep": "7:31AM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "1:01PM",
-   "arr": "1:11PM",
-   "rarr": "5:57PM",
-   "pct": 28
+   "rdep": "2:36PM",
+   "arr": "12:03PM",
+   "rarr": "7:27PM",
+   "pct": 26
   },
   "ROM": {
    "to": "ROM",

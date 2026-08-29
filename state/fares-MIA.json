@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-29T12:16:46-04:00",
+ "generated": "2026-08-29T14:17:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 210,
-   "d1": "2026-09-18",
-   "d2": "2026-09-25",
-   "dep": "7:05AM",
-   "al": "American",
-   "stops": 0,
+   "price": 150,
+   "d1": "2026-09-12",
+   "d2": "2026-09-19",
+   "dep": "5:50AM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "12:35PM",
-   "rarr": "11:43AM",
-   "pct": 72
+   "rdep": "11:50PM",
+   "arr": "12:48PM",
+   "rarr": "5:58AM+1",
+   "pct": 80
   },
   "MSY": {
    "to": "MSY",
@@ -218,9 +218,9 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 365,
-   "d1": "2026-09-24",
-   "d2": "2026-09-29",
+   "price": 343,
+   "d1": "2026-10-01",
+   "d2": "2026-10-05",
    "dep": "5:12PM",
    "al": "Volaris",
    "stops": 1,
@@ -228,7 +228,7 @@
    "rdep": "5:25AM",
    "arr": "10:58PM",
    "rarr": "10:56AM",
-   "pct": 30
+   "pct": 34
   },
   "LON": {
    "to": "LON",
