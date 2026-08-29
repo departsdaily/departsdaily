@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-29T18:00:33-04:00",
+ "generated": "2026-08-29T18:17:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -270,9 +270,9 @@
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:45PM",
+   "rdep": "7:45AM",
    "arr": "7:11PM",
-   "rarr": "7:54PM",
+   "rarr": "8:53AM",
    "pct": 39
   },
   "PAR": {

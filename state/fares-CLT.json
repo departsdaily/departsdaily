@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-29T17:58:01-04:00",
+ "generated": "2026-08-29T18:14:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -589,21 +589,6 @@
    "arr": "3:50PM",
    "rarr": "10:20AM",
    "pct": 0
-  },
-  "YUL": {
-   "to": "YUL",
-   "city": "Montreal",
-   "price": 668,
-   "d1": "2026-12-18",
-   "d2": "2026-12-22",
-   "dep": "5:10PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:10AM",
-   "arr": "8:37PM",
-   "rarr": "2:57PM",
-   "pct": -28
   },
   "YYC": {
    "to": "YYC",
