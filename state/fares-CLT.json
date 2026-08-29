@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-28T20:07:44-04:00",
+ "generated": "2026-08-28T20:14:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 39,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "GND": {
    "to": "GND",
    "city": "Grenada",
-   "price": 710,
-   "d1": "2026-11-03",
-   "d2": "2026-11-09",
-   "dep": "5:00AM",
-   "al": "American",
-   "stops": 1,
+   "price": 651,
+   "d1": "2026-10-01",
+   "d2": "2026-10-09",
+   "dep": "10:56AM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "4:13PM",
-   "arr": "10:51AM",
-   "rarr": "10:27PM",
-   "pct": 3
+   "rdep": "3:20PM",
+   "arr": "6:55PM",
+   "rarr": "10:37PM",
+   "pct": 11
   },
   "HNL": {
    "to": "HNL",

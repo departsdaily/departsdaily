@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-28T20:10:20-04:00",
+ "generated": "2026-08-28T20:17:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 438,
-   "d1": "2026-10-22",
-   "d2": "2026-10-26",
-   "dep": "10:55PM",
-   "al": "Iberia",
-   "stops": 1,
+   "price": 599,
+   "d1": "2026-12-04",
+   "d2": "2026-12-08",
+   "dep": "7:50PM",
+   "al": "Icelandair",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "10:35PM",
-   "arr": "8:25AM+1",
-   "rarr": "7:05AM+1",
-   "pct": 48
+   "rdep": "6:25PM",
+   "arr": "6:45AM+1",
+   "rarr": "6:05AM+1",
+   "pct": 30
   },
   "MBJ": {
    "to": "MBJ",
