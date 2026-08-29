@@ -1,0 +1,88 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-29",
+ "slot": 0,
+ "shape": "board",
+ "label": "THE WHOLE BOARD",
+ "caption_lead": "Today's whole board, out of CLT.",
+ "file": "reel_0.mp4",
+ "seconds": 13.05,
+ "size_mb": 0.86,
+ "fps": 30,
+ "audio": "window-seat.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "weekend",
+ "plan_angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.",
+ "featured": [
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 170,
+   "disc": 50,
+   "baseline": 338,
+   "nights": 2,
+   "d1": "2026-10-09",
+   "d2": "2026-10-11"
+  },
+  {
+   "to": "SXM",
+   "city": "St. Maarten",
+   "price": 377,
+   "disc": 37,
+   "baseline": 600,
+   "nights": 15,
+   "d1": "2026-11-01",
+   "d2": "2026-11-16"
+  },
+  {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 222,
+   "disc": 30,
+   "baseline": 318,
+   "nights": 5,
+   "d1": "2026-11-27",
+   "d2": "2026-12-02"
+  },
+  {
+   "to": "BGI",
+   "city": "Barbados",
+   "price": 448,
+   "disc": 25,
+   "baseline": 596,
+   "nights": 7,
+   "d1": "2026-10-11",
+   "d2": "2026-10-18"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 243,
+   "disc": 21,
+   "baseline": 308,
+   "nights": 7,
+   "d1": "2026-09-16",
+   "d2": "2026-09-23"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 248,
+   "disc": 19,
+   "baseline": 308,
+   "nights": 7,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26"
+  },
+  {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 321,
+   "disc": 14,
+   "baseline": 375,
+   "nights": 6,
+   "d1": "2026-10-05",
+   "d2": "2026-10-11"
+  }
+ ]
+}
