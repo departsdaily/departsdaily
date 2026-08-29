@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-29T08:16:40-04:00",
+ "generated": "2026-08-29T10:16:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 279,
-   "d1": "2026-10-27",
-   "d2": "2026-11-03",
+   "price": 331,
+   "d1": "2026-10-28",
+   "d2": "2026-11-01",
    "dep": "12:00PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "3:30PM",
-   "arr": "4:34PM",
-   "rarr": "7:11PM",
-   "pct": 49
+   "arr": "4:36PM",
+   "rarr": "7:15PM",
+   "pct": 40
   },
   "DFW": {
    "to": "DFW",

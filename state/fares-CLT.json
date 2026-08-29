@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-29T08:14:43-04:00",
+ "generated": "2026-08-29T10:14:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -483,21 +483,6 @@
    "rdep": "7:25AM",
    "arr": "4:48PM",
    "rarr": "12:41PM",
-   "pct": 47
-  },
-  "SLC": {
-   "to": "SLC",
-   "city": "Salt Lake City",
-   "price": 363,
-   "d1": "2026-09-12",
-   "d2": "2026-09-15",
-   "dep": "9:40PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "4:16PM",
-   "arr": "5:15AM+1",
-   "rarr": "11:25PM",
    "pct": 47
   },
   "SMF": {
