@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-28T22:14:36-04:00",
+ "generated": "2026-08-29T00:14:31-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 39,
  "routes_failed": [],
@@ -578,17 +578,17 @@
   "YYC": {
    "to": "YYC",
    "city": "Calgary",
-   "price": 496,
-   "d1": "2026-09-05",
-   "d2": "2026-09-10",
-   "dep": "1:02PM",
-   "al": "Frontier",
-   "stops": 3,
+   "price": 755,
+   "d1": "2026-09-02",
+   "d2": "2026-09-07",
+   "dep": "8:48AM",
+   "al": "United",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:00PM",
-   "arr": "8:12PM",
-   "rarr": "7:14AM+1",
-   "pct": 27
+   "rdep": "1:52PM",
+   "arr": "3:05PM",
+   "rarr": "7:38PM",
+   "pct": -11
   }
  }
 }

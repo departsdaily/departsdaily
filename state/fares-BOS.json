@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-28T22:17:17-04:00",
+ "generated": "2026-08-29T00:17:05-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 322,
+   "price": 336,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
@@ -213,7 +213,7 @@
    "rdep": "11:55PM",
    "arr": "1:42AM+1",
    "rarr": "5:16AM+1",
-   "pct": 52
+   "pct": 50
   },
   "SFO": {
    "to": "SFO",
@@ -244,21 +244,6 @@
    "arr": "8:39PM",
    "rarr": "11:08AM",
    "pct": 29
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 900,
-   "d1": "2026-08-31",
-   "d2": "2026-09-05",
-   "dep": "5:40PM",
-   "al": "SK",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:25AM",
-   "arr": "2:30AM+1",
-   "rarr": "8:00PM",
-   "pct": -2
   },
   "AUA": {
    "to": "AUA",
