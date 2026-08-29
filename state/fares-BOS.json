@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-29T14:17:36-04:00",
+ "generated": "2026-08-29T16:17:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 336,
+   "price": 334,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 549,
-   "d1": "2026-10-18",
-   "d2": "2026-10-22",
-   "dep": "11:35PM",
-   "al": "LL",
-   "stops": 1,
+   "price": 539,
+   "d1": "2026-09-13",
+   "d2": "2026-09-19",
+   "dep": "7:05PM",
+   "al": "Virgin Atlantic",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "8:30AM+1",
-   "rarr": "4:45PM",
-   "pct": 39
+   "rdep": "11:45AM",
+   "arr": "2:10AM+1",
+   "rarr": "7:39PM",
+   "pct": 40
   },
   "PUJ": {
    "to": "PUJ",

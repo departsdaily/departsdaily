@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-08-29T14:16:04-04:00",
+ "generated": "2026-08-29T16:15:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 18,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 269,
-   "d1": "2026-10-06",
-   "d2": "2026-10-11",
+   "price": 354,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
    "dep": "7:12PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:55AM",
    "arr": "1:42AM+1",
-   "rarr": "1:06PM",
-   "pct": 51
+   "rarr": "12:44PM",
+   "pct": 36
   },
   "ORD": {
    "to": "ORD",
@@ -188,9 +188,9 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 322,
-   "d1": "2026-10-07",
-   "d2": "2026-10-11",
+   "price": 337,
+   "d1": "2026-10-15",
+   "d2": "2026-10-22",
    "dep": "1:53PM",
    "al": "Volaris",
    "stops": 1,
@@ -198,7 +198,7 @@
    "rdep": "5:25AM",
    "arr": "7:43PM",
    "rarr": "11:24AM",
-   "pct": 38
+   "pct": 35
   },
   "LON": {
    "to": "LON",

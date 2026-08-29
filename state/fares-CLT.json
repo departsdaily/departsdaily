@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-29T14:14:40-04:00",
+ "generated": "2026-08-29T16:14:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -34,6 +34,21 @@
    "arr": "11:49AM+1",
    "rarr": "11:05PM",
    "pct": -7
+  },
+  "BCN": {
+   "to": "BCN",
+   "city": "Barcelona",
+   "price": 540,
+   "d1": "2026-09-24",
+   "d2": "2026-09-30",
+   "dep": "3:04PM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:05AM",
+   "arr": "2:04AM+1",
+   "rarr": "8:50PM",
+   "pct": 39
   },
   "BGI": {
    "to": "BGI",
@@ -203,17 +218,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 786,
-   "d1": "2026-11-12",
-   "d2": "2026-11-22",
-   "dep": "6:05AM",
+   "price": 791,
+   "d1": "2026-12-01",
+   "d2": "2026-12-06",
+   "dep": "1:45PM",
    "al": "",
-   "stops": 1,
+   "stops": 2,
    "xfer": 1,
    "rdep": "12:35PM",
-   "arr": "4:06PM",
-   "rarr": "12:12AM+1",
-   "pct": 8
+   "arr": "2:37AM+1",
+   "rarr": "12:10AM+1",
+   "pct": 7
   },
   "MAD": {
    "to": "MAD",
