@@ -4,7 +4,8 @@
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 67,
+  "no fares": 53,
+  "fetch failed": 14,
   "no fares in window": 13,
   "not a deal": 18,
   "qualified": 9
@@ -223,60 +224,60 @@
    "why": "the fare cache returned nothing"
   },
   "SJD": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SJO": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SKB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SLC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SRQ": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "STX": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SVD": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TUS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TVC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TYS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "VCE": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "VRB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "YQB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "YVR": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "ASE": {
    "outcome": "no fares in window",
