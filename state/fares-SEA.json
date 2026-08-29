@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-08-28T18:16:51-04:00",
+ "generated": "2026-08-28T20:10:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -274,6 +274,21 @@
    "arr": "6:20AM+1",
    "rarr": "11:35PM",
    "pct": 54
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 866,
+   "d1": "2026-12-03",
+   "d2": "2026-12-10",
+   "dep": "7:05PM",
+   "al": "Turkish",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:40AM",
+   "arr": "9:50AM+1",
+   "rarr": "9:55PM",
+   "pct": 9
   }
  }
 }

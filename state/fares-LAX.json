@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-28T18:15:59-04:00",
+ "generated": "2026-08-28T20:09:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 242,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
-   "dep": "6:30AM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 401,
+   "d1": "2026-08-31",
+   "d2": "2026-09-03",
+   "dep": "11:34PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "8:25AM",
-   "arr": "12:08PM",
-   "rarr": "2:33PM",
-   "pct": 67
+   "rdep": "9:33AM",
+   "arr": "7:02AM+1",
+   "rarr": "6:07PM",
+   "pct": 45
   },
   "DCA": {
    "to": "DCA",
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 147,
-   "d1": "2026-10-12",
-   "d2": "2026-10-17",
-   "dep": "12:21AM",
+   "price": 165,
+   "d1": "2026-10-07",
+   "d2": "2026-10-13",
+   "dep": "10:04AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
    "rdep": "8:01PM",
-   "arr": "4:34AM",
+   "arr": "3:06PM",
    "rarr": "12:51AM+1",
-   "pct": 74
+   "pct": 70
   },
   "PHL": {
    "to": "PHL",
