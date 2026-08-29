@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-29T11:46:15-04:00",
+ "generated": "2026-08-29T12:14:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -109,21 +109,6 @@
    "arr": "7:46PM",
    "rarr": "2:39PM",
    "pct": 48
-  },
-  "FRA": {
-   "to": "FRA",
-   "city": "Frankfurt",
-   "price": 968,
-   "d1": "2026-10-14",
-   "d2": "2026-10-24",
-   "dep": "9:32AM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "10:55AM",
-   "arr": "10:40PM",
-   "rarr": "10:47PM",
-   "pct": -8
   },
   "GND": {
    "to": "GND",
