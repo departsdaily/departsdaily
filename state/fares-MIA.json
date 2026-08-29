@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-29T04:16:40-04:00",
+ "generated": "2026-08-29T06:17:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -214,21 +214,6 @@
    "arr": "10:58PM",
    "rarr": "10:56AM",
    "pct": 30
-  },
-  "GCM": {
-   "to": "GCM",
-   "city": "Grand Cayman",
-   "price": 286,
-   "d1": "2026-11-14",
-   "d2": "2026-11-21",
-   "dep": "1:04PM",
-   "al": "American",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "12:59PM",
-   "arr": "2:45PM",
-   "rarr": "2:39PM",
-   "pct": 55
   },
   "LON": {
    "to": "LON",
