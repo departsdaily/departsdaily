@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-29T02:17:30-04:00",
+ "generated": "2026-08-29T04:17:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 249,
+   "price": 207,
    "d1": "2026-09-04",
-   "d2": "2026-09-11",
-   "dep": "1:30PM",
-   "al": "Southwest",
+   "d2": "2026-09-13",
+   "dep": "4:40PM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:00PM",
-   "arr": "8:25PM",
-   "rarr": "8:20PM",
-   "pct": 66
+   "rdep": "8:25PM",
+   "arr": "12:07AM+1",
+   "rarr": "2:15AM+1",
+   "pct": 72
   },
   "MCO": {
    "to": "MCO",
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 336,
+   "price": 334,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
