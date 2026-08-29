@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 13,
+ "n_deals": 10,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -42,28 +42,28 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_4_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 240,
-   "disc": 22,
-   "section": "extra_weekend"
+   "file": "story_4_BGI.png",
+   "to": "BGI",
+   "city": "Barbados",
+   "price": 448,
+   "disc": 25,
+   "section": "cheapest"
   },
   {
    "file": "story_5_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 240,
-   "disc": 22,
-   "section": "weekish"
+   "price": 243,
+   "disc": 21,
+   "section": "extra_weekend"
   },
   {
-   "file": "story_6_LAS.png",
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 268,
-   "disc": 12,
-   "section": "cheapest"
+   "file": "story_6_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 248,
+   "disc": 19,
+   "section": "weekish"
   },
   {
    "file": "story_7_SFO.png",
