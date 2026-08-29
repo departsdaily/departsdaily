@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-28T20:16:37-04:00",
+ "generated": "2026-08-28T22:16:24-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 230,
-   "d1": "2026-09-26",
-   "d2": "2026-09-28",
-   "dep": "8:15AM",
+   "price": 152,
+   "d1": "2026-09-16",
+   "d2": "2026-09-22",
+   "dep": "6:45AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:55PM",
-   "arr": "11:27AM",
-   "rarr": "11:51PM",
-   "pct": 45
+   "rdep": "11:15AM",
+   "arr": "10:00AM",
+   "rarr": "2:07PM",
+   "pct": 63
   },
   "HOU": {
    "to": "HOU",
@@ -338,17 +338,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 432,
-   "d1": "2026-10-15",
-   "d2": "2026-10-22",
-   "dep": "10:05PM",
-   "al": "UX",
-   "stops": 1,
+   "price": 538,
+   "d1": "2026-10-08",
+   "d2": "2026-10-15",
+   "dep": "6:20PM",
+   "al": "Z0",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:00AM",
-   "arr": "7:45AM+1",
-   "rarr": "8:40PM",
-   "pct": 49
+   "rdep": "1:05PM",
+   "arr": "1:20AM+1",
+   "rarr": "8:55PM",
+   "pct": 37
   },
   "MBJ": {
    "to": "MBJ",
