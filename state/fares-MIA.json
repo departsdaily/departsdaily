@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-30T10:17:38-04:00",
+ "generated": "2026-08-30T12:17:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 258,
-   "d1": "2026-10-22",
-   "d2": "2026-10-25",
-   "dep": "6:40AM",
-   "al": "Southwest",
+   "price": 277,
+   "d1": "2026-09-16",
+   "d2": "2026-09-20",
+   "dep": "5:50AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "12:30PM",
-   "rarr": "12:05PM",
-   "pct": 35
+   "rdep": "8:24PM",
+   "arr": "12:32PM",
+   "rarr": "2:39AM+1",
+   "pct": 30
   },
   "BOS": {
    "to": "BOS",
@@ -128,17 +128,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 299,
-   "d1": "2026-09-05",
-   "d2": "2026-09-08",
-   "dep": "5:28PM",
+   "price": 292,
+   "d1": "2026-09-10",
+   "d2": "2026-09-13",
+   "dep": "5:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:11PM",
-   "arr": "9:42PM",
-   "rarr": "11:07PM",
-   "pct": 7
+   "rdep": "10:48AM",
+   "arr": "12:57PM",
+   "rarr": "5:34PM",
+   "pct": 9
   },
   "NYC": {
    "to": "NYC",

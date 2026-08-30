@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-30T10:17:19-04:00",
+ "generated": "2026-08-30T12:17:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 331,
-   "d1": "2026-10-28",
-   "d2": "2026-11-01",
-   "dep": "12:00PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 274,
+   "d1": "2026-09-28",
+   "d2": "2026-10-04",
+   "dep": "6:55AM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:30PM",
-   "arr": "4:36PM",
-   "rarr": "7:15PM",
-   "pct": 40
+   "rdep": "5:30AM",
+   "arr": "12:38PM",
+   "rarr": "11:17AM",
+   "pct": 50
   },
   "DFW": {
    "to": "DFW",
@@ -158,17 +158,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 197,
-   "d1": "2026-09-04",
-   "d2": "2026-09-08",
-   "dep": "3:30PM",
+   "price": 230,
+   "d1": "2026-10-28",
+   "d2": "2026-11-02",
+   "dep": "3:26PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "6:00AM",
-   "arr": "7:26PM",
+   "arr": "7:15PM",
    "rarr": "9:49AM",
-   "pct": 43
+   "pct": 34
   },
   "MIA": {
    "to": "MIA",
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 337,
-   "d1": "2026-09-17",
-   "d2": "2026-09-22",
-   "dep": "12:59PM",
+   "price": 195,
+   "d1": "2026-10-06",
+   "d2": "2026-10-12",
+   "dep": "6:00AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:05PM",
-   "arr": "8:57PM",
-   "rarr": "5:13AM+1",
-   "pct": 67
+   "rdep": "11:59PM",
+   "arr": "12:20PM",
+   "rarr": "5:35AM+1",
+   "pct": 81
   },
   "TPA": {
    "to": "TPA",
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 457,
-   "d1": "2026-09-13",
-   "d2": "2026-09-19",
+   "price": 561,
+   "d1": "2026-10-12",
+   "d2": "2026-10-31",
    "dep": "8:30PM",
-   "al": "SWISS",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:45AM",
+   "rdep": "8:40AM",
    "arr": "5:45AM+1",
-   "rarr": "7:55PM",
-   "pct": 49
+   "rarr": "8:05PM",
+   "pct": 38
   },
   "PUJ": {
    "to": "PUJ",
