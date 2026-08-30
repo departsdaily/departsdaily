@@ -4,19 +4,19 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-30 10:58 EDT
+   Generated 2026-08-30 11:27 EDT
    Rebuilt this run: CLT (8)
    Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-08-30T10:58:43-04:00",
+ updated:"2026-08-30T11:27:58-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:170,d1:"2026-10-09",d2:"2026-10-11",dep:"11:56AM",al:"Frontier",stops:1,rdep:"12:52AM",arr:"6:19PM",rarr:"6:41AM",exp:"2026-09-01"},
  {to:"MCO",city:"Orlando",price:135,d1:"2026-09-25",d2:"2026-09-27",dep:"9:32AM",al:"Frontier",stops:0,rdep:"6:40AM",arr:"11:33AM",rarr:"8:35AM",exp:"2026-09-01"},
  {to:"LAX",city:"Los Angeles",price:243,d1:"2026-09-16",d2:"2026-09-23",dep:"1:34PM",al:"Frontier",stops:1,rdep:"9:40PM",arr:"7:59PM",rarr:"4:31AM+1",exp:"2026-09-01"},
  {to:"NYC",city:"New York City",price:152,d1:"2026-10-10",d2:"2026-10-12",dep:"8:52AM",al:"Frontier",stops:1,rdep:"6:40PM",arr:"1:29PM",rarr:"8:57PM",exp:"2026-09-01"},
- {to:"MSY",city:"New Orleans",price:188,d1:"2026-11-14",d2:"2026-11-17",dep:"4:00PM",al:"Southwest",stops:1,rdep:"7:45AM",arr:"8:25PM",rarr:"10:50AM",exp:"2026-09-01"},
+ {to:"MIA",city:"Miami",price:188,d1:"2026-10-23",d2:"2026-10-25",dep:"9:41PM",al:"Frontier",stops:0,rdep:"6:42PM",arr:"11:51PM",rarr:"8:56PM",exp:"2026-09-01"},
  {to:"SJU",city:"San Juan, PR",price:222,d1:"2026-11-27",d2:"2026-12-02",dep:"11:57AM",al:"Frontier",stops:1,rdep:"7:25AM",arr:"4:48PM",rarr:"12:41PM",exp:"2026-09-01"},
  {to:"MAD",city:"Madrid",price:470,d1:"2026-09-30",d2:"2026-10-09",dep:"10:25AM",al:"United",stops:1,rdep:"7:00AM",arr:"7:45PM",rarr:"7:10PM",exp:"2026-09-01"},
  {to:"SXM",city:"St. Maarten",price:377,d1:"2026-11-01",d2:"2026-11-16",dep:"8:55AM",al:"Air Canada",stops:1,rdep:"4:45PM",arr:"3:52PM",rarr:"12:16AM+1",exp:"2026-09-01"}],ATL:[
