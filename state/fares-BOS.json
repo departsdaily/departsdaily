@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-29T18:17:55-04:00",
+ "generated": "2026-08-29T20:18:00-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -185,21 +185,6 @@
    "rarr": "12:04PM",
    "pct": 62
   },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 402,
-   "d1": "2026-10-15",
-   "d2": "2026-10-18",
-   "dep": "6:05PM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:30PM",
-   "arr": "12:35AM+1",
-   "rarr": "4:15AM+1",
-   "pct": 34
-  },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
@@ -353,9 +338,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 553,
-   "d1": "2026-11-19",
-   "d2": "2026-11-27",
+   "price": 559,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
    "dep": "7:50PM",
    "al": "Icelandair",
    "stops": 1,
@@ -363,7 +348,7 @@
    "rdep": "11:25AM",
    "arr": "5:45AM+1",
    "rarr": "10:20PM",
-   "pct": 42
+   "pct": 41
   },
   "SJU": {
    "to": "SJU",

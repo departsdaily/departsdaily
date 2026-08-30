@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-08-29T18:17:34-04:00",
+ "generated": "2026-08-29T20:17:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 347,
-   "d1": "2026-09-25",
-   "d2": "2026-10-02",
-   "dep": "4:27PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 387,
+   "d1": "2026-10-04",
+   "d2": "2026-10-11",
+   "dep": "8:50PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:50AM",
-   "arr": "11:11PM",
-   "rarr": "1:20PM",
-   "pct": 45
+   "rdep": "8:15PM",
+   "arr": "2:40AM+1",
+   "rarr": "2:59AM+1",
+   "pct": 38
   },
   "NYC": {
    "to": "NYC",
@@ -173,17 +173,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 296,
-   "d1": "2026-09-18",
-   "d2": "2026-09-25",
-   "dep": "7:45PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 303,
+   "d1": "2026-10-12",
+   "d2": "2026-10-14",
+   "dep": "5:49PM",
+   "al": "Alaska",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:55PM",
-   "arr": "2:16AM+1",
-   "rarr": "3:57AM+1",
-   "pct": 40
+   "rdep": "9:00AM",
+   "arr": "9:59PM",
+   "rarr": "1:44PM",
+   "pct": 38
   },
   "PHL": {
    "to": "PHL",

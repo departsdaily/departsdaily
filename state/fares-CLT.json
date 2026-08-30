@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-29T18:14:45-04:00",
+ "generated": "2026-08-29T20:14:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 40,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "MAD": {
    "to": "MAD",
    "city": "Madrid",
-   "price": 488,
-   "d1": "2026-09-29",
-   "d2": "2026-10-13",
-   "dep": "6:40PM",
-   "al": "Lufthansa",
+   "price": 470,
+   "d1": "2026-09-30",
+   "d2": "2026-10-09",
+   "dep": "10:25AM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:00AM",
-   "arr": "6:00AM+1",
+   "arr": "7:45PM",
    "rarr": "7:10PM",
-   "pct": 45
+   "pct": 47
   },
   "MBJ": {
    "to": "MBJ",
@@ -353,17 +353,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 735,
-   "d1": "2026-09-03",
-   "d2": "2026-09-17",
-   "dep": "7:00AM",
+   "price": 801,
+   "d1": "2026-12-05",
+   "d2": "2026-12-12",
+   "dep": "7:50PM",
    "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:00AM",
-   "arr": "4:16PM",
-   "rarr": "8:10PM",
-   "pct": 18
+   "rdep": "7:25AM",
+   "arr": "4:55AM+1",
+   "rarr": "7:00PM",
+   "pct": 11
   },
   "PDX": {
    "to": "PDX",
@@ -488,17 +488,17 @@
   "SMF": {
    "to": "SMF",
    "city": "Sacramento",
-   "price": 266,
-   "d1": "2026-09-25",
-   "d2": "2026-10-03",
+   "price": 289,
+   "d1": "2026-09-11",
+   "d2": "2026-09-18",
    "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:53AM",
+   "rdep": "8:48AM",
    "arr": "2:21AM+1",
-   "rarr": "5:41PM",
-   "pct": 58
+   "rarr": "2:39PM",
+   "pct": 54
   },
   "SNA": {
    "to": "SNA",
