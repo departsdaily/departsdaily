@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-30T14:17:41-04:00",
+ "generated": "2026-08-30T16:17:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,6 +19,21 @@
    "arr": "12:32PM",
    "rarr": "2:39AM+1",
    "pct": 30
+  },
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 306,
+   "d1": "2026-09-28",
+   "d2": "2026-10-04",
+   "dep": "12:05PM",
+   "al": "JetBlue",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:16PM",
+   "arr": "2:28PM",
+   "rarr": "10:48PM",
+   "pct": 23
   },
   "BOS": {
    "to": "BOS",
@@ -170,6 +185,21 @@
    "rarr": "6:09PM",
    "pct": 66
   },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 294,
+   "d1": "2026-09-15",
+   "d2": "2026-09-20",
+   "dep": "11:25AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:30AM",
+   "arr": "5:29PM",
+   "rarr": "12:17PM",
+   "pct": 47
+  },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
@@ -308,17 +338,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 564,
-   "d1": "2026-09-12",
-   "d2": "2026-09-20",
-   "dep": "12:20AM",
+   "price": 642,
+   "d1": "2026-10-16",
+   "d2": "2026-10-26",
+   "dep": "4:20PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:20PM",
-   "arr": "11:10AM",
-   "rarr": "9:05AM+1",
-   "pct": 37
+   "rdep": "6:40AM",
+   "arr": "3:10AM+1",
+   "rarr": "7:05PM",
+   "pct": 29
   },
   "PUJ": {
    "to": "PUJ",
