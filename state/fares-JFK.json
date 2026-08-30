@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-30T12:17:19-04:00",
+ "generated": "2026-08-30T14:17:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 152,
-   "d1": "2026-09-16",
-   "d2": "2026-09-22",
-   "dep": "6:45AM",
+   "price": 147,
+   "d1": "2026-10-09",
+   "d2": "2026-10-13",
+   "dep": "1:00PM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:15AM",
-   "arr": "10:00AM",
-   "rarr": "2:07PM",
-   "pct": 63
+   "rdep": "8:59PM",
+   "arr": "6:00PM",
+   "rarr": "11:55PM",
+   "pct": 65
   },
   "HOU": {
    "to": "HOU",
@@ -353,17 +353,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 287,
-   "d1": "2026-09-13",
-   "d2": "2026-09-18",
-   "dep": "10:30AM",
+   "price": 144,
+   "d1": "2026-11-02",
+   "d2": "2026-11-06",
+   "dep": "6:30AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:35AM",
-   "arr": "2:50PM",
-   "rarr": "3:19PM",
-   "pct": 47
+   "rdep": "11:30AM",
+   "arr": "10:28AM",
+   "rarr": "3:17PM",
+   "pct": 73
   },
   "NAS": {
    "to": "NAS",

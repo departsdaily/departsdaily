@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-30T12:17:39-04:00",
+ "generated": "2026-08-30T14:17:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -38,16 +38,16 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 218,
+   "price": 216,
    "d1": "2026-10-01",
-   "d2": "2026-10-04",
+   "d2": "2026-10-03",
    "dep": "5:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
+   "rdep": "1:06PM",
    "arr": "1:50PM",
-   "rarr": "2:53PM",
+   "rarr": "8:47PM",
    "pct": 43
   },
   "DEN": {
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 271,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "6:00AM",
+   "price": 160,
+   "d1": "2026-10-20",
+   "d2": "2026-10-23",
+   "dep": "5:05AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:16PM",
-   "arr": "12:31PM",
-   "rarr": "9:00PM",
-   "pct": 41
+   "rdep": "6:05PM",
+   "arr": "9:55AM",
+   "rarr": "8:59PM",
+   "pct": 65
   },
   "LAS": {
    "to": "LAS",
