@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-30T00:18:26-04:00",
+ "generated": "2026-08-30T02:18:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 202,
+   "price": 342,
    "d1": "2026-09-17",
    "d2": "2026-09-20",
-   "dep": "6:00AM",
-   "al": "American",
-   "stops": 0,
+   "dep": "4:47PM",
+   "al": "JetBlue",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:20AM",
-   "arr": "7:47AM",
-   "rarr": "8:04AM",
-   "pct": 48
+   "rdep": "8:25AM",
+   "arr": "6:34PM",
+   "rarr": "11:07AM",
+   "pct": 12
   },
   "DFW": {
    "to": "DFW",
@@ -218,17 +218,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 341,
-   "d1": "2026-09-08",
-   "d2": "2026-09-12",
-   "dep": "12:45PM",
-   "al": "Frontier",
+   "price": 256,
+   "d1": "2026-09-09",
+   "d2": "2026-09-13",
+   "dep": "6:00AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:26PM",
-   "arr": "5:18PM",
-   "rarr": "8:20PM",
-   "pct": 16
+   "rdep": "6:00PM",
+   "arr": "10:11AM",
+   "rarr": "10:32PM",
+   "pct": 37
   },
   "AUA": {
    "to": "AUA",
@@ -338,17 +338,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 278,
-   "d1": "2026-09-13",
-   "d2": "2026-09-18",
-   "dep": "7:55AM",
+   "price": 293,
+   "d1": "2026-10-20",
+   "d2": "2026-10-29",
+   "dep": "2:05PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:15AM",
-   "arr": "12:02PM",
-   "rarr": "6:00PM",
-   "pct": 34
+   "rdep": "1:20PM",
+   "arr": "8:25PM",
+   "rarr": "7:41PM",
+   "pct": 30
   }
  }
 }
