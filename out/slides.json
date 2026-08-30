@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 10,
+ "n_deals": 11,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -74,12 +74,12 @@
    "section": "cheapest"
   },
   {
-   "file": "story_8_SDQ.png",
-   "to": "SDQ",
-   "city": "Santo Domingo",
-   "price": 278,
-   "disc": 46,
-   "section": "cheapest"
+   "file": "story_8_BCN.png",
+   "to": "BCN",
+   "city": "Barcelona",
+   "price": 540,
+   "disc": 35,
+   "section": "extra_weekend"
   }
  ]
 }
