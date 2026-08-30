@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-08-30T08:18:01-04:00",
+ "generated": "2026-08-30T10:18:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -184,6 +184,21 @@
    "arr": "9:31AM",
    "rarr": "12:04PM",
    "pct": 62
+  },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 446,
+   "d1": "2026-09-28",
+   "d2": "2026-10-01",
+   "dep": "6:00AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:24AM",
+   "arr": "12:57PM",
+   "rarr": "6:39AM",
+   "pct": 26
   },
   "SEA": {
    "to": "SEA",

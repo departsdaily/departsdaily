@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-30T08:16:46-04:00",
+ "generated": "2026-08-30T10:16:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 244,
-   "d1": "2026-10-14",
-   "d2": "2026-10-19",
-   "dep": "8:59PM",
-   "al": "JetBlue",
+   "price": 210,
+   "d1": "2026-09-10",
+   "d2": "2026-09-14",
+   "dep": "9:40PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "2:19AM+1",
-   "rarr": "2:41PM",
-   "pct": 74
+   "rdep": "5:55AM",
+   "arr": "5:19AM+1",
+   "rarr": "2:09PM",
+   "pct": 77
   },
   "ORD": {
    "to": "ORD",
