@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-29T22:17:01-04:00",
+ "generated": "2026-08-30T00:17:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 281,
-   "d1": "2026-09-01",
-   "d2": "2026-09-03",
-   "dep": "6:00AM",
+   "price": 342,
+   "d1": "2026-11-24",
+   "d2": "2026-11-29",
+   "dep": "6:40AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:49PM",
-   "arr": "10:23AM",
-   "rarr": "2:52AM+1",
-   "pct": 50
+   "rdep": "11:25PM",
+   "arr": "11:27AM",
+   "rarr": "3:15AM+1",
+   "pct": 39
   },
   "DFW": {
    "to": "DFW",
@@ -98,17 +98,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 150,
-   "d1": "2026-09-12",
-   "d2": "2026-09-19",
-   "dep": "5:50AM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 210,
+   "d1": "2026-09-18",
+   "d2": "2026-09-25",
+   "dep": "7:05AM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "11:50PM",
-   "arr": "12:48PM",
-   "rarr": "5:58AM+1",
-   "pct": 80
+   "rdep": "6:30AM",
+   "arr": "12:35PM",
+   "rarr": "11:43AM",
+   "pct": 72
   },
   "MSY": {
    "to": "MSY",
