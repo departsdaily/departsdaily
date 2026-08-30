@@ -1,0 +1,28 @@
+{
+ "origin": "CLT",
+ "date": "2026-08-30",
+ "slot": 0,
+ "shape": "spotlight",
+ "label": "ONE BIG DEAL",
+ "caption_lead": "The single biggest drop out of CLT today.",
+ "file": "reel_0.mp4",
+ "seconds": 10.4,
+ "size_mb": 0.65,
+ "fps": 30,
+ "audio": "window-seat.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "week",
+ "plan_angle": "A full week away, round trip, verified this morning.",
+ "featured": [
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 170,
+   "disc": 50,
+   "baseline": 338,
+   "nights": 2,
+   "d1": "2026-10-09",
+   "d2": "2026-10-11"
+  }
+ ]
+}
