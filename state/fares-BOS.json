@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-30T18:08:51-04:00",
+ "generated": "2026-08-30T18:17:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 322,
+   "price": 336,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
@@ -213,7 +213,7 @@
    "rdep": "11:55PM",
    "arr": "1:42AM+1",
    "rarr": "5:16AM+1",
-   "pct": 52
+   "pct": 50
   },
   "SFO": {
    "to": "SFO",
