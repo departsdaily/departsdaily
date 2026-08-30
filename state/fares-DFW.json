@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-30T16:16:14-04:00",
+ "generated": "2026-08-30T18:07:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 204,
-   "d1": "2026-10-08",
-   "d2": "2026-10-13",
-   "dep": "5:30AM",
+   "price": 144,
+   "d1": "2026-09-30",
+   "d2": "2026-10-03",
+   "dep": "1:23PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:05AM",
-   "arr": "11:14AM",
-   "rarr": "9:16AM",
-   "pct": 53
+   "rdep": "12:50PM",
+   "arr": "5:20PM",
+   "rarr": "5:13PM",
+   "pct": 67
   },
   "MIA": {
    "to": "MIA",
@@ -203,17 +203,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 240,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "7:18AM",
+   "price": 273,
+   "d1": "2026-10-25",
+   "d2": "2026-10-29",
+   "dep": "9:59AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:15AM",
-   "arr": "11:51AM",
-   "rarr": "12:01PM",
-   "pct": 59
+   "rdep": "8:30AM",
+   "arr": "1:25PM",
+   "rarr": "1:40PM",
+   "pct": 53
   },
   "PHX": {
    "to": "PHX",

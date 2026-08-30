@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-30T16:17:32-04:00",
+ "generated": "2026-08-30T18:08:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -158,7 +158,7 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 105,
+   "price": 104,
    "d1": "2026-10-01",
    "d2": "2026-10-04",
    "dep": "6:30AM",
