@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-29T20:17:19-04:00",
+ "generated": "2026-08-29T22:17:01-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -184,6 +184,21 @@
    "arr": "3:48PM",
    "rarr": "5:22AM+1",
    "pct": 55
+  },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 110,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
+   "dep": "6:00AM",
+   "al": "Breeze",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "9:46AM",
+   "arr": "7:05AM",
+   "rarr": "10:51AM",
+   "pct": 71
   },
   "AMS": {
    "to": "AMS",

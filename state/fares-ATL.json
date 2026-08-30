@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-29T20:15:10-04:00",
+ "generated": "2026-08-29T22:15:02-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 152,
+   "price": 307,
    "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "9:58AM",
+   "d2": "2026-09-14",
+   "dep": "3:49PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:38PM",
-   "arr": "2:47PM",
-   "rarr": "5:13PM",
-   "pct": 78
+   "rdep": "11:11AM",
+   "arr": "8:42PM",
+   "rarr": "4:44PM",
+   "pct": 56
   },
   "MCO": {
    "to": "MCO",
@@ -180,9 +180,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "4:23PM",
+   "rdep": "9:45PM",
    "arr": "10:55PM",
-   "rarr": "6:35PM",
+   "rarr": "11:49PM",
    "pct": 79
   },
   "MSY": {
@@ -293,17 +293,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 717,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "2:55PM",
+   "price": 1355,
+   "d1": "2026-12-17",
+   "d2": "2027-01-07",
+   "dep": "6:50AM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "12:55PM",
-   "arr": "1:49AM+1",
-   "rarr": "1:06AM+1",
-   "pct": 19
+   "rdep": "10:30AM",
+   "arr": "7:21PM",
+   "rarr": "12:48AM+1",
+   "pct": -54
   },
   "AUA": {
    "to": "AUA",
