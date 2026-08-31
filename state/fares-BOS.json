@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-30T20:18:06-04:00",
+ "generated": "2026-08-30T22:18:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 334,
+   "price": 336,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",
@@ -353,17 +353,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 293,
-   "d1": "2026-10-20",
-   "d2": "2026-10-29",
-   "dep": "2:05PM",
+   "price": 311,
+   "d1": "2026-10-14",
+   "d2": "2026-10-21",
+   "dep": "7:42PM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "1:20PM",
-   "arr": "8:25PM",
-   "rarr": "7:41PM",
-   "pct": 30
+   "rdep": "6:20AM",
+   "arr": "11:49PM",
+   "rarr": "10:24AM",
+   "pct": 26
   }
  }
 }

@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-30T20:16:31-04:00",
+ "generated": "2026-08-30T22:16:30-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -124,21 +124,6 @@
    "arr": "10:46PM",
    "rarr": "10:19AM",
    "pct": 63
-  },
-  "NYC": {
-   "to": "NYC",
-   "city": "New York City",
-   "price": 354,
-   "d1": "2026-09-18",
-   "d2": "2026-09-20",
-   "dep": "7:12PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "1:42AM+1",
-   "rarr": "12:44PM",
-   "pct": 36
   },
   "ORD": {
    "to": "ORD",

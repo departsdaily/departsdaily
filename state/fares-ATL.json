@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-30T20:15:33-04:00",
+ "generated": "2026-08-30T22:15:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 30,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 145,
-   "d1": "2026-09-07",
-   "d2": "2026-09-13",
-   "dep": "6:07AM",
+   "price": 146,
+   "d1": "2026-11-19",
+   "d2": "2026-11-23",
+   "dep": "3:46PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:08PM",
-   "arr": "8:20AM",
-   "rarr": "2:24PM",
-   "pct": 65
+   "rdep": "3:40PM",
+   "arr": "8:16PM",
+   "rarr": "5:55PM",
+   "pct": 64
   },
   "LAS": {
    "to": "LAS",
@@ -233,17 +233,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 64,
+   "price": 44,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
-   "dep": "4:06PM",
+   "dep": "9:07PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:40PM",
-   "arr": "6:14PM",
-   "rarr": "3:01PM",
-   "pct": 86
+   "rdep": "5:32PM",
+   "arr": "11:18PM",
+   "rarr": "8:00PM",
+   "pct": 90
   },
   "PHX": {
    "to": "PHX",
@@ -349,6 +349,21 @@
    "arr": "1:37PM",
    "rarr": "4:39PM",
    "pct": 14
+  },
+  "GCM": {
+   "to": "GCM",
+   "city": "Grand Cayman",
+   "price": 436,
+   "d1": "2026-10-10",
+   "d2": "2026-10-15",
+   "dep": "7:29PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:45PM",
+   "arr": "11:04PM",
+   "rarr": "8:24PM",
+   "pct": 32
   },
   "LON": {
    "to": "LON",

@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-30T20:15:13-04:00",
+ "generated": "2026-08-30T22:15:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -235,7 +235,7 @@
    "city": "Madrid",
    "price": 470,
    "d1": "2026-09-30",
-   "d2": "2026-10-09",
+   "d2": "2026-10-14",
    "dep": "10:25AM",
    "al": "United",
    "stops": 1,
@@ -338,17 +338,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 152,
-   "d1": "2026-10-10",
-   "d2": "2026-10-12",
-   "dep": "8:52AM",
+   "price": 147,
+   "d1": "2026-10-03",
+   "d2": "2026-10-05",
+   "dep": "9:40PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:40PM",
-   "arr": "1:29PM",
-   "rarr": "8:57PM",
-   "pct": 63
+   "rdep": "6:43PM",
+   "arr": "2:12AM+1",
+   "rarr": "8:55PM",
+   "pct": 64
   },
   "ORD": {
    "to": "ORD",
@@ -440,6 +440,21 @@
    "rarr": "7:38PM",
    "pct": -5
   },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 970,
+   "d1": "2026-10-12",
+   "d2": "2026-10-24",
+   "dep": "3:59PM",
+   "al": "",
+   "stops": 2,
+   "xfer": 1,
+   "rdep": "6:15AM",
+   "arr": "1:55AM+1",
+   "rarr": "8:16PM",
+   "pct": -2
+  },
   "SAL": {
    "to": "SAL",
    "city": "San Salvador",
@@ -518,17 +533,17 @@
   "SMF": {
    "to": "SMF",
    "city": "Sacramento",
-   "price": 289,
-   "d1": "2026-09-11",
-   "d2": "2026-09-18",
+   "price": 298,
+   "d1": "2026-09-25",
+   "d2": "2026-10-03",
    "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:48AM",
+   "rdep": "11:53AM",
    "arr": "2:21AM+1",
-   "rarr": "2:39PM",
-   "pct": 54
+   "rarr": "5:41PM",
+   "pct": 52
   },
   "SNA": {
    "to": "SNA",
