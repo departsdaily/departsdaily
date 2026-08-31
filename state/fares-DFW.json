@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-31T02:16:02-04:00",
+ "generated": "2026-08-31T04:16:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 273,
-   "d1": "2026-10-22",
-   "d2": "2026-10-31",
-   "dep": "10:37AM",
+   "price": 310,
+   "d1": "2026-09-23",
+   "d2": "2026-09-28",
+   "dep": "7:00AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:27PM",
-   "arr": "4:02PM",
-   "rarr": "9:13PM",
-   "pct": 42
+   "rdep": "7:45PM",
+   "arr": "12:16PM",
+   "rarr": "1:10AM+1",
+   "pct": 34
   },
   "TPA": {
    "to": "TPA",
@@ -353,7 +353,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 1295,
+   "price": 1296,
    "d1": "2026-12-20",
    "d2": "2026-12-27",
    "dep": "3:35PM",

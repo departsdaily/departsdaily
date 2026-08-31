@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-31T02:15:05-04:00",
+ "generated": "2026-08-31T04:15:09-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -19,21 +19,6 @@
    "arr": "11:09AM",
    "rarr": "7:09PM",
    "pct": 27
-  },
-  "AUH": {
-   "to": "AUH",
-   "city": "Abu Dhabi",
-   "price": 1335,
-   "d1": "2026-10-26",
-   "d2": "2026-11-02",
-   "dep": "8:26PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "5:20AM",
-   "arr": "11:49AM+1",
-   "rarr": "11:05PM",
-   "pct": -7
   },
   "BCN": {
    "to": "BCN",
