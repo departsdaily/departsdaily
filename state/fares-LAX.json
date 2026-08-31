@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-08-31T12:16:40-04:00",
+ "generated": "2026-08-31T14:16:45-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -259,6 +259,21 @@
    "arr": "10:22AM",
    "rarr": "8:37PM",
    "pct": 76
+  },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 264,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "6:00AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:02PM",
+   "arr": "11:57AM",
+   "rarr": "3:26AM+1",
+   "pct": 61
   },
   "AMS": {
    "to": "AMS",

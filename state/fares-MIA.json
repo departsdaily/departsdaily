@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-31T12:17:17-04:00",
+ "generated": "2026-08-31T14:17:21-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 312,
-   "d1": "2026-09-05",
-   "d2": "2026-09-08",
-   "dep": "8:10AM",
-   "al": "Frontier",
+   "price": 356,
+   "d1": "2026-10-18",
+   "d2": "2026-10-20",
+   "dep": "5:15AM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:35PM",
-   "arr": "3:48PM",
-   "rarr": "5:22AM+1",
-   "pct": 55
+   "rdep": "10:14PM",
+   "arr": "12:25PM",
+   "rarr": "4:59AM+1",
+   "pct": 48
   },
   "TPA": {
    "to": "TPA",
