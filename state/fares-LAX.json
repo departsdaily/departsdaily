@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-08-31T14:16:45-04:00",
+ "generated": "2026-08-31T16:16:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 165,
-   "d1": "2026-10-07",
-   "d2": "2026-10-13",
-   "dep": "10:04AM",
+   "price": 132,
+   "d1": "2026-10-11",
+   "d2": "2026-10-14",
+   "dep": "12:21AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "8:01PM",
-   "arr": "3:06PM",
+   "arr": "4:34AM",
    "rarr": "12:51AM+1",
-   "pct": 70
+   "pct": 76
   },
   "PHL": {
    "to": "PHL",
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 86,
-   "d1": "2026-09-17",
-   "d2": "2026-09-19",
+   "price": 69,
+   "d1": "2026-10-03",
+   "d2": "2026-10-06",
    "dep": "8:44AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:59PM",
+   "rdep": "9:00AM",
    "arr": "10:22AM",
-   "rarr": "8:37PM",
-   "pct": 76
+   "rarr": "10:37AM",
+   "pct": 81
   },
   "TPA": {
    "to": "TPA",
@@ -293,17 +293,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 341,
-   "d1": "2026-09-30",
+   "price": 337,
+   "d1": "2026-09-29",
    "d2": "2026-10-06",
-   "dep": "12:46AM",
+   "dep": "7:17PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
    "rdep": "9:50PM",
-   "arr": "6:40AM",
+   "arr": "1:17AM+1",
    "rarr": "4:07AM+1",
-   "pct": 34
+   "pct": 35
   },
   "GCM": {
    "to": "GCM",
