@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-08-31T10:17:04-04:00",
+ "generated": "2026-08-31T12:17:17-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -244,6 +244,21 @@
    "arr": "3:55AM+1",
    "rarr": "8:05AM+1",
    "pct": 0
+  },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 447,
+   "d1": "2026-10-02",
+   "d2": "2026-10-09",
+   "dep": "5:14PM",
+   "al": "Copa",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:37PM",
+   "arr": "10:18PM",
+   "rarr": "12:54AM+1",
+   "pct": 28
   },
   "CUN": {
    "to": "CUN",

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-31T10:15:39-04:00",
+ "generated": "2026-08-31T12:15:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 171,
-   "d1": "2026-09-15",
-   "d2": "2026-09-17",
-   "dep": "12:40PM",
-   "al": "United",
-   "stops": 0,
+   "price": 216,
+   "d1": "2026-09-19",
+   "d2": "2026-09-21",
+   "dep": "6:30AM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:46AM",
-   "arr": "2:42PM",
-   "rarr": "10:00AM",
-   "pct": 61
+   "rdep": "6:00PM",
+   "arr": "12:51PM",
+   "rarr": "12:20AM+1",
+   "pct": 50
   },
   "DEN": {
    "to": "DEN",
@@ -233,17 +233,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 239,
-   "d1": "2026-09-18",
-   "d2": "2026-09-24",
-   "dep": "6:00AM",
+   "price": 247,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "5:15PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:21PM",
-   "arr": "11:30AM",
-   "rarr": "7:43PM",
-   "pct": 50
+   "rdep": "7:32PM",
+   "arr": "10:54PM",
+   "rarr": "12:30AM+1",
+   "pct": 49
   },
   "SEA": {
    "to": "SEA",

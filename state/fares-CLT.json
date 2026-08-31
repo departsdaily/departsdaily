@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-31T10:15:04-04:00",
+ "generated": "2026-08-31T12:15:09-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 44,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -68,17 +68,17 @@
   "CUR": {
    "to": "CUR",
    "city": "Curacao",
-   "price": 806,
-   "d1": "2026-10-13",
-   "d2": "2026-10-20",
-   "dep": "9:32AM",
+   "price": 774,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "9:40PM",
    "al": "Frontier",
-   "stops": 4,
+   "stops": 2,
    "xfer": 0,
    "rdep": "11:35AM",
-   "arr": "8:40PM",
-   "rarr": "10:27PM",
-   "pct": -19
+   "arr": "5:05AM+1",
+   "rarr": "9:42PM",
+   "pct": -14
   },
   "DEN": {
    "to": "DEN",
@@ -124,6 +124,21 @@
    "arr": "7:46PM",
    "rarr": "2:39PM",
    "pct": 48
+  },
+  "FRA": {
+   "to": "FRA",
+   "city": "Frankfurt",
+   "price": 1235,
+   "d1": "2026-09-05",
+   "d2": "2026-09-19",
+   "dep": "9:52PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "6:15PM",
+   "arr": "9:53AM+1",
+   "rarr": "7:10AM+1",
+   "pct": -37
   },
   "GND": {
    "to": "GND",
@@ -518,17 +533,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 222,
-   "d1": "2026-11-27",
-   "d2": "2026-12-02",
-   "dep": "11:57AM",
-   "al": "Frontier",
+   "price": 653,
+   "d1": "2026-12-29",
+   "d2": "2027-01-09",
+   "dep": "11:00AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "4:48PM",
-   "rarr": "12:41PM",
-   "pct": 47
+   "rdep": "8:20AM",
+   "arr": "3:53PM",
+   "rarr": "12:21PM",
+   "pct": -55
   },
   "SMF": {
    "to": "SMF",
@@ -634,6 +649,21 @@
    "arr": "3:50PM",
    "rarr": "10:20AM",
    "pct": 0
+  },
+  "YYZ": {
+   "to": "YYZ",
+   "city": "Toronto",
+   "price": 463,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "11:50AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "4:00PM",
+   "arr": "4:29PM",
+   "rarr": "10:39PM",
+   "pct": 4
   }
  }
 }
