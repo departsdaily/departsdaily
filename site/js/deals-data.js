@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-08-31 12:13 EDT
-   Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
-   Carried forward:  none
+   Generated 2026-08-31 13:42 EDT
+   Rebuilt this run: CLT (8)
+   Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-08-31T12:13:58-04:00",
+ updated:"2026-08-31T13:42:06-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:170,d1:"2026-10-09",d2:"2026-10-11",dep:"11:56AM",al:"Frontier",stops:1,rdep:"12:52AM",arr:"6:19PM",rarr:"6:41AM",exp:"2026-09-02"},
@@ -19,7 +19,7 @@ const DEALS={CLT:[
  {to:"MIA",city:"Miami",price:188,d1:"2026-10-23",d2:"2026-10-25",dep:"9:41PM",al:"Frontier",stops:0,rdep:"6:42PM",arr:"11:51PM",rarr:"8:56PM",exp:"2026-09-02"},
  {to:"MAD",city:"Madrid",price:470,d1:"2026-09-30",d2:"2026-10-09",dep:"10:25AM",al:"United",stops:1,rdep:"7:00AM",arr:"7:45PM",rarr:"7:10PM",exp:"2026-09-02"},
  {to:"SXM",city:"St. Maarten",price:377,d1:"2026-11-01",d2:"2026-11-16",dep:"8:55AM",al:"Air Canada",stops:1,rdep:"4:45PM",arr:"3:52PM",rarr:"12:16AM+1",exp:"2026-09-02"},
- {to:"PAR",city:"Paris",price:835,d1:"2026-12-29",d2:"2027-01-09",dep:"5:10PM",al:"Air Canada",stops:1,rdep:"11:15AM",arr:"2:57AM+1",rarr:"9:55PM",exp:"2026-09-02"}],ATL:[
+ {to:"SAL",city:"San Salvador",price:373,d1:"2026-09-25",d2:"2026-10-09",dep:"6:00AM",al:"United",stops:2,rdep:"6:00AM",arr:"1:53PM",rarr:"11:56AM",exp:"2026-09-02"}],ATL:[
  {to:"MCO",city:"Orlando",price:32,d1:"2026-09-26",d2:"2026-09-29",dep:"8:20PM",al:"Frontier",stops:0,rdep:"9:30AM",arr:"9:59PM",rarr:"11:14AM",exp:"2026-09-02"},
  {to:"TPA",city:"Tampa",price:49,d1:"2026-10-30",d2:"2026-11-02",dep:"3:48PM",al:"Frontier",stops:0,rdep:"5:57PM",arr:"5:22PM",rarr:"7:49PM",exp:"2026-09-02"},
  {to:"MIA",city:"Miami",price:75,d1:"2026-11-11",d2:"2026-11-14",dep:"9:00PM",al:"Frontier",stops:0,rdep:"9:45PM",arr:"10:55PM",rarr:"11:49PM",exp:"2026-09-02"},

@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-31T12:15:09-04:00",
+ "generated": "2026-08-31T13:43:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 44,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -214,21 +214,6 @@
    "arr": "7:59PM",
    "rarr": "4:31AM+1",
    "pct": 66
-  },
-  "LIR": {
-   "to": "LIR",
-   "city": "Liberia, Costa Rica",
-   "price": 1009,
-   "d1": "2026-12-17",
-   "d2": "2027-01-07",
-   "dep": "3:32PM",
-   "al": "United",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "3:10PM",
-   "arr": "12:34AM+1",
-   "rarr": "10:36PM",
-   "pct": -58
   },
   "LON": {
    "to": "LON",
