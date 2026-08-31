@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-30T22:15:12-04:00",
+ "generated": "2026-08-31T00:15:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -368,17 +368,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 1493,
-   "d1": "2026-12-18",
-   "d2": "2027-01-02",
-   "dep": "8:55AM",
+   "price": 835,
+   "d1": "2026-12-29",
+   "d2": "2027-01-09",
+   "dep": "5:10PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:45PM",
-   "arr": "6:42PM",
-   "rarr": "12:36AM+1",
-   "pct": -66
+   "rdep": "11:15AM",
+   "arr": "2:57AM+1",
+   "rarr": "9:55PM",
+   "pct": 7
   },
   "PDX": {
    "to": "PDX",
@@ -634,21 +634,6 @@
    "arr": "3:50PM",
    "rarr": "10:20AM",
    "pct": 0
-  },
-  "YYC": {
-   "to": "YYC",
-   "city": "Calgary",
-   "price": 755,
-   "d1": "2026-09-02",
-   "d2": "2026-09-07",
-   "dep": "8:48AM",
-   "al": "United",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "1:52PM",
-   "arr": "3:05PM",
-   "rarr": "7:38PM",
-   "pct": -11
   }
  }
 }

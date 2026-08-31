@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-08-30T22:15:33-04:00",
+ "generated": "2026-08-31T00:15:25-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 30,
+ "routes_priced": 31,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -23,32 +23,32 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 228,
-   "d1": "2026-10-30",
-   "d2": "2026-11-02",
-   "dep": "9:00PM",
+   "price": 231,
+   "d1": "2026-09-15",
+   "d2": "2026-09-22",
+   "dep": "9:28AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:59AM",
-   "arr": "2:24AM+1",
-   "rarr": "4:38PM",
-   "pct": 57
+   "rdep": "12:52PM",
+   "arr": "12:07PM",
+   "rarr": "4:07PM",
+   "pct": 56
   },
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 309,
-   "d1": "2026-09-14",
-   "d2": "2026-09-21",
-   "dep": "7:59PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 243,
+   "d1": "2026-10-16",
+   "d2": "2026-10-18",
+   "dep": "9:10PM",
+   "al": "Southwest",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "1:06PM",
-   "arr": "3:00AM+1",
-   "rarr": "7:57PM",
-   "pct": 24
+   "rdep": "6:55AM",
+   "arr": "10:55PM",
+   "rarr": "8:50AM",
+   "pct": 40
   },
   "DEN": {
    "to": "DEN",
@@ -394,6 +394,21 @@
    "arr": "3:33PM",
    "rarr": "7:04PM",
    "pct": 25
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 262,
+   "d1": "2026-12-10",
+   "d2": "2026-12-14",
+   "dep": "7:40AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "10:20AM",
+   "arr": "10:47AM",
+   "rarr": "1:38PM",
+   "pct": 45
   },
   "PAR": {
    "to": "PAR",

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-30T22:15:52-04:00",
+ "generated": "2026-08-31T00:15:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 145,
-   "d1": "2026-09-23",
-   "d2": "2026-09-27",
-   "dep": "6:59AM",
+   "price": 208,
+   "d1": "2026-09-17",
+   "d2": "2026-09-19",
+   "dep": "8:19PM",
    "al": "American",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "10:27AM",
-   "rarr": "9:10AM",
-   "pct": 63
+   "rdep": "8:33AM",
+   "arr": "10:54PM",
+   "rarr": "11:35AM",
+   "pct": 47
   },
   "DCA": {
    "to": "DCA",
