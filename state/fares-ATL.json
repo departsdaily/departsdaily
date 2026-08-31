@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-31T06:15:31-04:00",
+ "generated": "2026-08-31T08:15:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 31,
  "routes_failed": [],
@@ -428,17 +428,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 413,
-   "d1": "2026-10-26",
-   "d2": "2026-11-09",
-   "dep": "7:31AM",
+   "price": 396,
+   "d1": "2026-11-09",
+   "d2": "2026-11-18",
+   "dep": "1:28PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:36PM",
-   "arr": "12:03PM",
-   "rarr": "7:27PM",
-   "pct": 26
+   "rdep": "2:21PM",
+   "arr": "6:01PM",
+   "rarr": "7:36PM",
+   "pct": 29
   },
   "ROM": {
    "to": "ROM",
