@@ -1,39 +1,24 @@
 {
  "origin": "LAX",
- "generated": "2026-08-31T00:16:36-04:00",
+ "generated": "2026-08-31T02:16:38-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 238,
-   "d1": "2026-09-14",
-   "d2": "2026-09-19",
-   "dep": "9:40PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:24PM",
-   "arr": "5:29AM+1",
-   "rarr": "1:15AM+1",
-   "pct": 56
-  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 219,
+   "price": 294,
    "d1": "2026-10-02",
    "d2": "2026-10-09",
-   "dep": "6:15AM",
+   "dep": "11:45AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:14PM",
-   "arr": "11:15AM",
-   "rarr": "8:42PM",
-   "pct": 63
+   "rdep": "6:49PM",
+   "arr": "4:47PM",
+   "rarr": "12:38AM+1",
+   "pct": 51
   },
   "BOS": {
    "to": "BOS",
@@ -143,17 +128,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 213,
-   "d1": "2026-11-04",
-   "d2": "2026-11-08",
-   "dep": "10:35AM",
+   "price": 292,
+   "d1": "2026-09-05",
+   "d2": "2026-09-08",
+   "dep": "11:20PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "4:08PM",
-   "rarr": "12:38PM",
-   "pct": 63
+   "rdep": "12:49PM",
+   "arr": "4:33AM+1",
+   "rarr": "6:55PM",
+   "pct": 49
   },
   "MIA": {
    "to": "MIA",

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-31T00:15:43-04:00",
+ "generated": "2026-08-31T02:15:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -413,17 +413,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 407,
-   "d1": "2026-12-11",
-   "d2": "2026-12-16",
+   "price": 752,
+   "d1": "2026-10-07",
+   "d2": "2026-10-14",
    "dep": "8:10PM",
-   "al": "TAP Portugal",
+   "al": "Turkish",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "7:20AM+1",
-   "rarr": "6:45PM",
-   "pct": 57
+   "rdep": "3:35PM",
+   "arr": "9:30AM+1",
+   "rarr": "5:25AM+1",
+   "pct": 21
   },
   "SJU": {
    "to": "SJU",
