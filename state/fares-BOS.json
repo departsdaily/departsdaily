@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-08-30T18:17:53-04:00",
+ "generated": "2026-08-30T20:18:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 247,
-   "d1": "2026-09-03",
-   "d2": "2026-09-07",
-   "dep": "11:09AM",
-   "al": "American",
-   "stops": 0,
+   "price": 160,
+   "d1": "2026-09-10",
+   "d2": "2026-09-14",
+   "dep": "12:54PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:44PM",
-   "arr": "2:43PM",
-   "rarr": "12:58AM+1",
-   "pct": 42
+   "rdep": "5:32AM",
+   "arr": "6:03PM",
+   "rarr": "10:19AM",
+   "pct": 62
   },
   "MSY": {
    "to": "MSY",
@@ -203,7 +203,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 336,
+   "price": 334,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
    "dep": "7:20PM",

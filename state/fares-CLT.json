@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-08-30T18:15:07-04:00",
+ "generated": "2026-08-30T20:15:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 42,
  "routes_failed": [],
@@ -368,7 +368,7 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 1418,
+   "price": 1493,
    "d1": "2026-12-18",
    "d2": "2027-01-02",
    "dep": "8:55AM",
@@ -378,7 +378,7 @@
    "rdep": "1:45PM",
    "arr": "6:42PM",
    "rarr": "12:36AM+1",
-   "pct": -58
+   "pct": -66
   },
   "PDX": {
    "to": "PDX",
@@ -398,17 +398,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 591,
-   "d1": "2026-11-20",
-   "d2": "2026-11-29",
-   "dep": "6:20AM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 528,
+   "d1": "2026-11-25",
+   "d2": "2026-11-28",
+   "dep": "6:00PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "10:57PM",
-   "arr": "12:19PM",
-   "rarr": "4:58AM+1",
-   "pct": 11
+   "rdep": "1:01AM",
+   "arr": "10:50PM",
+   "rarr": "4:53AM",
+   "pct": 21
   },
   "PRG": {
    "to": "PRG",

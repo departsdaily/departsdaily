@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-08-30T18:15:27-04:00",
+ "generated": "2026-08-30T20:15:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 65,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "dep": "5:30AM",
+   "price": 114,
+   "d1": "2026-09-19",
+   "d2": "2026-09-21",
+   "dep": "5:05PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:05AM",
-   "arr": "8:00AM",
-   "rarr": "10:30AM",
-   "pct": 85
+   "rdep": "7:48PM",
+   "arr": "7:43PM",
+   "rarr": "10:08PM",
+   "pct": 75
   },
   "DTW": {
    "to": "DTW",
@@ -368,17 +368,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 409,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "12:35PM",
+   "price": 405,
+   "d1": "2026-10-11",
+   "d2": "2026-10-16",
+   "dep": "12:37PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "3:42PM",
-   "arr": "3:27PM",
-   "rarr": "6:51PM",
-   "pct": 24
+   "rdep": "3:48PM",
+   "arr": "3:33PM",
+   "rarr": "7:04PM",
+   "pct": 25
   },
   "PAR": {
    "to": "PAR",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 193,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "8:22PM",
+   "price": 173,
+   "d1": "2026-12-04",
+   "d2": "2026-12-14",
+   "dep": "3:41PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:59PM",
-   "arr": "11:59PM",
-   "rarr": "8:13PM",
-   "pct": 54
+   "rdep": "4:13PM",
+   "arr": "8:14PM",
+   "rarr": "9:41PM",
+   "pct": 59
   }
  }
 }

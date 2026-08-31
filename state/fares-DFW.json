@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-30T18:16:04-04:00",
+ "generated": "2026-08-30T20:16:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 144,
+   "price": 121,
    "d1": "2026-09-30",
    "d2": "2026-10-03",
    "dep": "1:23PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:50PM",
+   "rdep": "5:19PM",
    "arr": "5:20PM",
-   "rarr": "5:13PM",
-   "pct": 67
+   "rarr": "9:43PM",
+   "pct": 72
   },
   "MIA": {
    "to": "MIA",
@@ -338,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 482,
-   "d1": "2026-10-06",
-   "d2": "2026-10-15",
-   "dep": "1:23PM",
-   "al": "Frontier",
-   "stops": 3,
+   "price": 430,
+   "d1": "2026-12-18",
+   "d2": "2026-12-23",
+   "dep": "6:45AM",
+   "al": "JetBlue",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:38AM",
-   "arr": "9:24PM",
-   "rarr": "3:48PM",
-   "pct": 14
+   "rdep": "5:30PM",
+   "arr": "11:51AM",
+   "rarr": "11:28PM",
+   "pct": 23
   },
   "ROM": {
    "to": "ROM",
