@@ -72,6 +72,29 @@
    "section": "extra_weekend"
   },
   {
+   "to": "YYC",
+   "city": "Calgary",
+   "price": 479,
+   "d1": "2026-10-22",
+   "d2": "2026-10-28",
+   "airline": "F9",
+   "stops": 3,
+   "dep": "9:29AM",
+   "rdep": "6:00AM",
+   "arr": "6:41PM",
+   "rarr": "11:57AM",
+   "baseline": 581,
+   "disc": 18,
+   "nights": 6,
+   "on_shape": true,
+   "rung": "shape",
+   "link": "https://www.aviasales.com/search/CLT2210YYC28101?t=AC17926613401792718220001068CLTPHLDTWYYZYYC17931672001793204760000506YYCYYZCLT_ccf92a96b91036cfa8192ca1e54a1953_41586&search_date=01092026&expected_price_uuid=01a05d7b-7842-8030-a763-a5e4d23207b6&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rVnjmdWuFOFsTgO4a3nmvA&expected_price_source=share&expected_price_currency=usd&expected_price=479&marker=755800",
+   "deal": true,
+   "tier": 3,
+   "tier_bonus": 0,
+   "section": "extra_weekend"
+  },
+  {
    "to": "LAX",
    "city": "Los Angeles",
    "price": 248,
@@ -279,8 +302,8 @@
    "section": "cheapest"
   }
  ],
- "n_deals": 9,
- "n_rows": 12,
+ "n_deals": 10,
+ "n_rows": 13,
  "sections": [
   {
    "key": "weekend",
@@ -336,18 +359,18 @@
    "angle": "A weekend with a couple of days bolted on. Out Wednesday to Friday, back Sunday to Wednesday. 4 to 7 nights.",
    "deals_only": true,
    "rows_target": 14,
-   "n": 2,
-   "n_deals": 2,
+   "n": 3,
+   "n_deals": 3,
    "rungs": {
-    "shape": 2,
+    "shape": 3,
     "window": 0
    },
    "tiers": {
     "1": 1,
     "2": 0,
-    "3": 1
+    "3": 2
    },
-   "n_intl": 1,
+   "n_intl": 2,
    "deals": [
     {
      "to": "LAX",
@@ -390,6 +413,29 @@
      "on_shape": true,
      "rung": "shape",
      "link": "https://www.aviasales.com/search/CLT2409BCN30091?t=LH17902622401790342100000971CLTORDBCN17907591001790786700000820BCNMUCCLT_5e96d03baf49d82937fcf18640a6ccd1_46517&search_date=29082026&expected_price_uuid=01a04ef9-0430-8040-2d66-0f3b7122fdae&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=OCbzZOLMLRqVtUT2SVV60Q&expected_price_source=share&expected_price_currency=usd&expected_price=540&marker=755800",
+     "deal": true,
+     "tier": 3,
+     "tier_bonus": 0,
+     "section": "extra_weekend"
+    },
+    {
+     "to": "YYC",
+     "city": "Calgary",
+     "price": 479,
+     "d1": "2026-10-22",
+     "d2": "2026-10-28",
+     "airline": "F9",
+     "stops": 3,
+     "dep": "9:29AM",
+     "rdep": "6:00AM",
+     "arr": "6:41PM",
+     "rarr": "11:57AM",
+     "baseline": 581,
+     "disc": 18,
+     "nights": 6,
+     "on_shape": true,
+     "rung": "shape",
+     "link": "https://www.aviasales.com/search/CLT2210YYC28101?t=AC17926613401792718220001068CLTPHLDTWYYZYYC17931672001793204760000506YYCYYZCLT_ccf92a96b91036cfa8192ca1e54a1953_41586&search_date=01092026&expected_price_uuid=01a05d7b-7842-8030-a763-a5e4d23207b6&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rVnjmdWuFOFsTgO4a3nmvA&expected_price_source=share&expected_price_currency=usd&expected_price=479&marker=755800",
      "deal": true,
      "tier": 3,
      "tier_bonus": 0,
@@ -667,9 +713,9 @@
    "weekish",
    "cheapest"
   ],
-  "on_shape": 12,
+  "on_shape": 13,
   "rungs": {
-   "shape": 12,
+   "shape": 13,
    "window": 0
   }
  }
