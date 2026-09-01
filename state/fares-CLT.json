@@ -1,9 +1,15 @@
 {
  "origin": "CLT",
- "generated": "2026-09-01T06:15:17-04:00",
+ "generated": "2026-09-01T06:54:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 42,
- "routes_failed": [],
+ "routes_failed": [
+  "BZN",
+  "GGT",
+  "MYR",
+  "PBI",
+  "SJD"
+ ],
  "fares": {
   "AUA": {
    "to": "AUA",
