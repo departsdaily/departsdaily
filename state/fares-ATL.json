@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-01T14:15:35-04:00",
+ "generated": "2026-09-01T16:10:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 30,
  "routes_failed": [],
@@ -240,9 +240,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:32PM",
+   "rdep": "8:41AM",
    "arr": "11:18PM",
-   "rarr": "8:00PM",
+   "rarr": "11:06AM",
    "pct": 90
   },
   "SEA": {
@@ -293,17 +293,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 1355,
-   "d1": "2026-12-17",
-   "d2": "2027-01-07",
-   "dep": "6:50AM",
-   "al": "Frontier",
-   "stops": 2,
+   "price": 511,
+   "d1": "2026-10-22",
+   "d2": "2026-10-26",
+   "dep": "9:50PM",
+   "al": "Turkish",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:30AM",
-   "arr": "7:21PM",
-   "rarr": "12:48AM+1",
-   "pct": -54
+   "rdep": "10:30PM",
+   "arr": "12:15PM+1",
+   "rarr": "2:10PM+1",
+   "pct": 42
   },
   "AUA": {
    "to": "AUA",
