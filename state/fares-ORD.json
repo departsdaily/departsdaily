@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-08-31T18:15:44-04:00",
+ "generated": "2026-08-31T20:15:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 219,
-   "d1": "2026-09-17",
-   "d2": "2026-09-20",
-   "dep": "10:26AM",
+   "price": 230,
+   "d1": "2026-09-30",
+   "d2": "2026-10-03",
+   "dep": "3:50PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:58AM",
-   "arr": "3:05PM",
+   "arr": "9:39PM",
    "rarr": "4:42PM",
-   "pct": 50
+   "pct": 47
   },
   "BNA": {
    "to": "BNA",
@@ -278,17 +278,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 197,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
-   "dep": "7:25AM",
+   "price": 216,
+   "d1": "2026-09-30",
+   "d2": "2026-10-06",
+   "dep": "7:11AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "12:32PM",
-   "rarr": "12:36PM",
-   "pct": 51
+   "rdep": "6:00PM",
+   "arr": "11:28AM",
+   "rarr": "12:12AM+1",
+   "pct": 46
   },
   "AMS": {
    "to": "AMS",

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-08-31T18:16:54-04:00",
+ "generated": "2026-08-31T20:17:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 64,
-   "d1": "2026-09-26",
-   "d2": "2026-09-28",
-   "dep": "6:45PM",
+   "price": 162,
+   "d1": "2026-09-12",
+   "d2": "2026-09-14",
+   "dep": "9:00PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:35AM",
-   "arr": "10:02PM",
-   "rarr": "9:29AM",
-   "pct": 85
+   "rdep": "8:36AM",
+   "arr": "12:15AM+1",
+   "rarr": "11:33AM",
+   "pct": 61
   },
   "MSY": {
    "to": "MSY",
@@ -323,16 +323,16 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 403,
-   "d1": "2026-12-13",
-   "d2": "2026-12-17",
-   "dep": "9:30PM",
+   "price": 405,
+   "d1": "2026-10-17",
+   "d2": "2026-10-21",
+   "dep": "7:25AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:05PM",
-   "arr": "2:29AM+1",
-   "rarr": "6:17PM",
+   "rdep": "12:00PM",
+   "arr": "12:09PM",
+   "rarr": "4:43PM",
    "pct": 37
   },
   "LON": {
@@ -413,9 +413,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 439,
-   "d1": "2026-10-23",
-   "d2": "2026-10-31",
+   "price": 424,
+   "d1": "2026-10-14",
+   "d2": "2026-10-26",
    "dep": "12:30AM",
    "al": "N0",
    "stops": 0,
@@ -423,7 +423,7 @@
    "rdep": "12:35PM",
    "arr": "8:30AM",
    "rarr": "9:55PM",
-   "pct": 54
+   "pct": 55
   },
   "SJU": {
    "to": "SJU",
