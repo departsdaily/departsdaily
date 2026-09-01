@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-31T20:16:05-04:00",
+ "generated": "2026-08-31T22:16:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -308,7 +308,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 696,
+   "price": 713,
    "d1": "2026-12-16",
    "d2": "2026-12-20",
    "dep": "7:00AM",
@@ -317,8 +317,8 @@
    "xfer": 0,
    "rdep": "1:50PM",
    "arr": "2:30PM",
-   "rarr": "9:55PM",
-   "pct": -29
+   "rarr": "6:45PM",
+   "pct": -32
   },
   "PAR": {
    "to": "PAR",

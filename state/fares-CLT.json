@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-31T20:15:10-04:00",
+ "generated": "2026-08-31T22:15:07-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -499,21 +499,6 @@
    "arr": "9:18PM",
    "rarr": "5:03AM+1",
    "pct": 51
-  },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 321,
-   "d1": "2026-10-05",
-   "d2": "2026-10-11",
-   "dep": "3:13PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:59PM",
-   "arr": "10:20PM",
-   "rarr": "6:19AM+1",
-   "pct": 60
   },
   "SJU": {
    "to": "SJU",

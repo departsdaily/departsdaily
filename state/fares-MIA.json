@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-08-31T20:17:18-04:00",
+ "generated": "2026-08-31T22:17:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -188,17 +188,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 354,
+   "price": 377,
    "d1": "2026-10-16",
    "d2": "2026-10-20",
-   "dep": "5:50AM",
-   "al": "Frontier",
-   "stops": 1,
+   "dep": "6:18PM",
+   "al": "Alaska",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "4:27PM",
-   "arr": "1:23PM",
-   "rarr": "11:08PM",
-   "pct": 44
+   "rdep": "8:08AM",
+   "arr": "12:59AM+1",
+   "rarr": "2:15PM",
+   "pct": 40
   },
   "SFO": {
    "to": "SFO",
@@ -278,17 +278,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 754,
-   "d1": "2026-11-27",
-   "d2": "2026-12-06",
+   "price": 722,
+   "d1": "2026-11-15",
+   "d2": "2026-11-19",
    "dep": "5:15PM",
    "al": "Icelandair",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:15AM",
-   "arr": "4:05AM+1",
-   "rarr": "10:28PM",
-   "pct": 11
+   "rdep": "7:00PM",
+   "arr": "6:50AM+1",
+   "rarr": "11:45AM+1",
+   "pct": 15
   },
   "MBJ": {
    "to": "MBJ",
