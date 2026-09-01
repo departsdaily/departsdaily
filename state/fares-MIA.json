@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-01T16:12:07-04:00",
+ "generated": "2026-09-01T16:17:30-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 277,
-   "d1": "2026-09-16",
-   "d2": "2026-09-20",
+   "price": 147,
+   "d1": "2026-10-17",
+   "d2": "2026-10-20",
    "dep": "5:50AM",
-   "al": "Frontier",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:24PM",
-   "arr": "12:32PM",
-   "rarr": "2:39AM+1",
-   "pct": 30
+   "rdep": "1:15PM",
+   "arr": "10:45AM",
+   "rarr": "3:55PM",
+   "pct": 63
   },
   "BNA": {
    "to": "BNA",
