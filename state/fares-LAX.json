@@ -1,10 +1,25 @@
 {
  "origin": "LAX",
- "generated": "2026-09-01T00:16:57-04:00",
+ "generated": "2026-09-01T02:16:47-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
+  "AUS": {
+   "to": "AUS",
+   "city": "Austin",
+   "price": 273,
+   "d1": "2026-10-29",
+   "d2": "2026-11-01",
+   "dep": "9:57PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "1:08PM",
+   "arr": "2:07AM+1",
+   "rarr": "5:39PM",
+   "pct": 49
+  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
@@ -128,17 +143,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 231,
-   "d1": "2026-09-05",
-   "d2": "2026-09-09",
-   "dep": "11:20PM",
+   "price": 144,
+   "d1": "2026-11-04",
+   "d2": "2026-11-08",
+   "dep": "11:52AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:48PM",
-   "arr": "4:33AM+1",
-   "rarr": "9:10PM",
-   "pct": 60
+   "rdep": "5:55AM",
+   "arr": "5:48PM",
+   "rarr": "12:38PM",
+   "pct": 75
   },
   "MIA": {
    "to": "MIA",
@@ -173,17 +188,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 177,
-   "d1": "2026-09-23",
-   "d2": "2026-09-25",
-   "dep": "3:25PM",
+   "price": 244,
+   "d1": "2026-10-14",
+   "d2": "2026-10-19",
+   "dep": "8:59PM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:00PM",
-   "arr": "8:57PM",
-   "rarr": "12:53AM+1",
-   "pct": 81
+   "rdep": "6:00AM",
+   "arr": "2:19AM+1",
+   "rarr": "2:41PM",
+   "pct": 74
   },
   "ORD": {
    "to": "ORD",

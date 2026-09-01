@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-01T00:15:16-04:00",
+ "generated": "2026-09-01T02:15:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -334,21 +334,6 @@
    "arr": "8:25PM",
    "rarr": "10:50AM",
    "pct": 60
-  },
-  "MUC": {
-   "to": "MUC",
-   "city": "Munich",
-   "price": 918,
-   "d1": "2026-09-24",
-   "d2": "2026-09-30",
-   "dep": "4:30PM",
-   "al": "AY",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "6:35PM",
-   "arr": "1:10AM+1",
-   "rarr": "10:36AM+1",
-   "pct": -2
   },
   "NYC": {
    "to": "NYC",

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-01T00:17:17-04:00",
+ "generated": "2026-09-01T02:17:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 274,
-   "d1": "2026-09-28",
-   "d2": "2026-10-04",
-   "dep": "6:55AM",
-   "al": "American",
-   "stops": 1,
+   "price": 331,
+   "d1": "2026-10-28",
+   "d2": "2026-11-01",
+   "dep": "12:00PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:30AM",
-   "arr": "12:38PM",
-   "rarr": "11:17AM",
-   "pct": 50
+   "rdep": "3:30PM",
+   "arr": "4:36PM",
+   "rarr": "7:15PM",
+   "pct": 40
   },
   "DFW": {
    "to": "DFW",
@@ -398,17 +398,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 293,
-   "d1": "2026-09-08",
-   "d2": "2026-09-15",
-   "dep": "1:30AM",
-   "al": "Avianca",
-   "stops": 2,
+   "price": 358,
+   "d1": "2026-09-22",
+   "d2": "2026-09-29",
+   "dep": "2:20AM",
+   "al": "Copa",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:35PM",
-   "arr": "10:05AM",
-   "rarr": "5:05AM+1",
-   "pct": 48
+   "rdep": "6:41PM",
+   "arr": "10:12AM",
+   "rarr": "2:34AM+1",
+   "pct": 36
   },
   "ROM": {
    "to": "ROM",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 162,
-   "d1": "2026-09-25",
-   "d2": "2026-09-29",
-   "dep": "6:45PM",
-   "al": "American",
-   "stops": 1,
+   "price": 182,
+   "d1": "2026-10-29",
+   "d2": "2026-11-09",
+   "dep": "3:45PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:58PM",
-   "arr": "12:41AM+1",
-   "rarr": "8:50PM",
-   "pct": 61
+   "rdep": "7:00AM",
+   "arr": "7:42PM",
+   "rarr": "11:03AM",
+   "pct": 57
   }
  }
 }
