@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-01T12:18:12-04:00",
+ "generated": "2026-09-01T14:18:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 146,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "7:59AM",
+   "price": 168,
+   "d1": "2026-09-04",
+   "d2": "2026-09-07",
+   "dep": "7:05AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:42AM",
-   "arr": "9:31AM",
-   "rarr": "12:04PM",
-   "pct": 62
+   "rdep": "7:20AM",
+   "arr": "8:38AM",
+   "rarr": "8:46AM",
+   "pct": 56
   },
   "PHX": {
    "to": "PHX",

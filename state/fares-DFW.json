@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-01T12:16:16-04:00",
+ "generated": "2026-09-01T14:16:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -128,7 +128,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 117,
+   "price": 119,
    "d1": "2026-09-30",
    "d2": "2026-10-03",
    "dep": "1:23PM",
@@ -138,7 +138,7 @@
    "rdep": "5:19PM",
    "arr": "5:20PM",
    "rarr": "9:43PM",
-   "pct": 73
+   "pct": 72
   },
   "MIA": {
    "to": "MIA",
@@ -199,21 +199,6 @@
    "arr": "8:29PM",
    "rarr": "8:41AM",
    "pct": 51
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 273,
-   "d1": "2026-10-25",
-   "d2": "2026-10-29",
-   "dep": "9:59AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:30AM",
-   "arr": "1:25PM",
-   "rarr": "1:40PM",
-   "pct": 53
   },
   "PHX": {
    "to": "PHX",
