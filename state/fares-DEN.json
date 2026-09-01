@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-08-31T22:16:21-04:00",
+ "generated": "2026-09-01T00:16:37-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -139,21 +139,6 @@
    "arr": "11:23PM",
    "rarr": "9:15AM",
    "pct": 68
-  },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 219,
-   "d1": "2026-09-03",
-   "d2": "2026-09-06",
-   "dep": "10:48PM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "4:48PM",
-   "arr": "12:39AM+1",
-   "rarr": "6:46PM",
-   "pct": 37
   },
   "SFO": {
    "to": "SFO",

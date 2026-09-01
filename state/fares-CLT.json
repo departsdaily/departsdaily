@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-08-31T22:15:07-04:00",
+ "generated": "2026-09-01T00:15:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -79,6 +79,21 @@
    "arr": "5:05AM+1",
    "rarr": "9:42PM",
    "pct": -14
+  },
+  "CZM": {
+   "to": "CZM",
+   "city": "Cozumel",
+   "price": 801,
+   "d1": "2026-09-07",
+   "d2": "2026-09-11",
+   "dep": "9:52PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "4:47PM",
+   "arr": "5:21AM+1",
+   "rarr": "12:35AM+1",
+   "pct": -34
   },
   "DEN": {
    "to": "DEN",
@@ -278,17 +293,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 188,
-   "d1": "2026-10-23",
-   "d2": "2026-10-25",
-   "dep": "9:41PM",
+   "price": 201,
+   "d1": "2026-10-10",
+   "d2": "2026-10-17",
+   "dep": "7:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:42PM",
-   "arr": "11:51PM",
-   "rarr": "8:56PM",
-   "pct": 54
+   "rdep": "5:00PM",
+   "arr": "10:10PM",
+   "rarr": "7:13PM",
+   "pct": 50
   },
   "MIL": {
    "to": "MIL",
@@ -338,17 +353,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 147,
-   "d1": "2026-10-03",
-   "d2": "2026-10-05",
-   "dep": "9:40PM",
+   "price": 146,
+   "d1": "2026-09-14",
+   "d2": "2026-09-21",
+   "dep": "9:32AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:43PM",
-   "arr": "2:12AM+1",
-   "rarr": "8:55PM",
-   "pct": 64
+   "rdep": "5:55AM",
+   "arr": "2:16PM",
+   "rarr": "10:39AM",
+   "pct": 65
   },
   "ORD": {
    "to": "ORD",
@@ -503,17 +518,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 653,
-   "d1": "2026-12-29",
-   "d2": "2027-01-09",
-   "dep": "11:00AM",
-   "al": "American",
+   "price": 308,
+   "d1": "2026-10-12",
+   "d2": "2026-10-20",
+   "dep": "9:42PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:20AM",
-   "arr": "3:53PM",
-   "rarr": "12:21PM",
-   "pct": -55
+   "rdep": "3:00AM",
+   "arr": "2:35AM+1",
+   "rarr": "7:56AM",
+   "pct": 27
   },
   "SMF": {
    "to": "SMF",

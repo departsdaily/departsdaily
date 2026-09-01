@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-08-31T22:16:04-04:00",
+ "generated": "2026-09-01T00:16:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -128,7 +128,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 120,
+   "price": 118,
    "d1": "2026-09-30",
    "d2": "2026-10-03",
    "dep": "1:23PM",
@@ -138,7 +138,7 @@
    "rdep": "5:19PM",
    "arr": "5:20PM",
    "rarr": "9:43PM",
-   "pct": 72
+   "pct": 73
   },
   "MIA": {
    "to": "MIA",
@@ -278,16 +278,16 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 296,
-   "d1": "2026-12-02",
-   "d2": "2026-12-06",
-   "dep": "10:11AM",
+   "price": 294,
+   "d1": "2026-10-03",
+   "d2": "2026-10-07",
+   "dep": "9:00PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:55PM",
-   "arr": "3:31PM",
-   "rarr": "5:04AM+1",
+   "rdep": "9:50PM",
+   "arr": "2:03AM+1",
+   "rarr": "2:56AM+1",
    "pct": 43
   },
   "LON": {
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 1057,
+   "price": 984,
    "d1": "2026-09-06",
    "d2": "2026-09-19",
-   "dep": "4:16PM",
+   "dep": "8:00AM",
    "al": "",
    "stops": 2,
    "xfer": 1,
-   "rdep": "3:30PM",
-   "arr": "4:28AM+1",
-   "rarr": "6:03AM+1",
-   "pct": -17
+   "rdep": "11:45AM",
+   "arr": "6:46PM",
+   "rarr": "1:20AM+1",
+   "pct": -9
   },
   "PUJ": {
    "to": "PUJ",
