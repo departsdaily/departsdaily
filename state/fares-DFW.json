@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-01T02:16:10-04:00",
+ "generated": "2026-09-01T04:16:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -53,32 +53,32 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 114,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "2:48PM",
+   "price": 125,
+   "d1": "2026-10-01",
+   "d2": "2026-10-05",
+   "dep": "10:40AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "9:19PM",
-   "arr": "5:01PM",
+   "arr": "12:59PM",
    "rarr": "11:20PM",
-   "pct": 70
+   "pct": 67
   },
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 175,
-   "d1": "2026-09-12",
-   "d2": "2026-09-19",
+   "price": 203,
+   "d1": "2026-09-14",
+   "d2": "2026-09-21",
    "dep": "1:45PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:37PM",
+   "rdep": "5:43PM",
    "arr": "4:47PM",
-   "rarr": "10:12PM",
-   "pct": 62
+   "rarr": "10:55PM",
+   "pct": 55
   },
   "HOU": {
    "to": "HOU",
