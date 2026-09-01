@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-09-01 11:10 EDT
+   Generated 2026-09-01 11:32 EDT
    Rebuilt this run: CLT (8)
    Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-09-01T11:10:29-04:00",
+ updated:"2026-09-01T11:32:33-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:170,d1:"2026-10-09",d2:"2026-10-11",dep:"11:56AM",al:"Frontier",stops:1,rdep:"12:52AM",arr:"6:19PM",rarr:"6:41AM",exp:"2026-09-03"},
@@ -18,7 +18,7 @@ const DEALS={CLT:[
  {to:"NYC",city:"New York City",price:146,d1:"2026-09-14",d2:"2026-09-21",dep:"9:32AM",al:"Frontier",stops:1,rdep:"5:55AM",arr:"2:16PM",rarr:"10:39AM",exp:"2026-09-03"},
  {to:"MIA",city:"Miami",price:201,d1:"2026-10-10",d2:"2026-10-17",dep:"7:59PM",al:"Frontier",stops:0,rdep:"5:00PM",arr:"10:10PM",rarr:"7:13PM",exp:"2026-09-03"},
  {to:"MAD",city:"Madrid",price:470,d1:"2026-09-30",d2:"2026-10-09",dep:"10:25AM",al:"United",stops:1,rdep:"7:00AM",arr:"7:45PM",rarr:"7:10PM",exp:"2026-09-03"},
- {to:"YYC",city:"Calgary",price:479,d1:"2026-10-22",d2:"2026-10-28",dep:"9:29AM",al:"Frontier",stops:3,rdep:"6:00AM",arr:"6:41PM",rarr:"11:57AM",exp:"2026-09-03"},
+ {to:"SXM",city:"St. Maarten",price:377,d1:"2026-11-01",d2:"2026-11-16",dep:"8:55AM",al:"Air Canada",stops:1,rdep:"4:45PM",arr:"3:52PM",rarr:"12:16AM+1",exp:"2026-09-03"},
  {to:"SJU",city:"San Juan, PR",price:308,d1:"2026-10-12",d2:"2026-10-20",dep:"9:42PM",al:"Frontier",stops:1,rdep:"3:00AM",arr:"2:35AM+1",rarr:"7:56AM",exp:"2026-09-03"}],ATL:[
  {to:"MCO",city:"Orlando",price:32,d1:"2026-09-26",d2:"2026-09-29",dep:"8:20PM",al:"Frontier",stops:0,rdep:"9:30AM",arr:"9:59PM",rarr:"11:14AM",exp:"2026-09-03"},
  {to:"TPA",city:"Tampa",price:49,d1:"2026-10-30",d2:"2026-11-02",dep:"3:48PM",al:"Frontier",stops:0,rdep:"5:57PM",arr:"5:22PM",rarr:"7:49PM",exp:"2026-09-03"},
