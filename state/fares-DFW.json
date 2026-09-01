@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-01T10:16:18-04:00",
+ "generated": "2026-09-01T12:16:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -128,7 +128,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 119,
+   "price": 117,
    "d1": "2026-09-30",
    "d2": "2026-10-03",
    "dep": "1:23PM",
@@ -138,7 +138,7 @@
    "rdep": "5:19PM",
    "arr": "5:20PM",
    "rarr": "9:43PM",
-   "pct": 72
+   "pct": 73
   },
   "MIA": {
    "to": "MIA",
@@ -158,17 +158,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 54,
-   "d1": "2026-09-14",
-   "d2": "2026-09-18",
-   "dep": "2:52PM",
-   "al": "Frontier",
+   "price": 121,
+   "d1": "2026-10-12",
+   "d2": "2026-10-15",
+   "dep": "7:30PM",
+   "al": "Southwest",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:26PM",
-   "arr": "4:31PM",
-   "rarr": "7:17PM",
-   "pct": 86
+   "rdep": "5:10AM",
+   "arr": "8:55PM",
+   "rarr": "6:40AM",
+   "pct": 68
   },
   "NYC": {
    "to": "NYC",
