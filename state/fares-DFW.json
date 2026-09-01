@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-01T06:16:16-04:00",
+ "generated": "2026-09-01T08:15:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -128,7 +128,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 118,
+   "price": 119,
    "d1": "2026-09-30",
    "d2": "2026-10-03",
    "dep": "1:23PM",
@@ -138,7 +138,7 @@
    "rdep": "5:19PM",
    "arr": "5:20PM",
    "rarr": "9:43PM",
-   "pct": 73
+   "pct": 72
   },
   "MIA": {
    "to": "MIA",
