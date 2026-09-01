@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-01T16:15:16-04:00",
+ "generated": "2026-09-01T18:15:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 43,
  "routes_failed": [],
@@ -19,6 +19,21 @@
    "arr": "11:09AM",
    "rarr": "7:09PM",
    "pct": 27
+  },
+  "AUH": {
+   "to": "AUH",
+   "city": "Abu Dhabi",
+   "price": 1369,
+   "d1": "2026-09-15",
+   "d2": "2026-10-06",
+   "dep": "5:57PM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:45PM",
+   "arr": "9:55AM+1",
+   "rarr": "4:23PM+1",
+   "pct": -10
   },
   "BCN": {
    "to": "BCN",
@@ -454,21 +469,6 @@
    "arr": "1:55AM+1",
    "rarr": "8:16PM",
    "pct": -2
-  },
-  "SAL": {
-   "to": "SAL",
-   "city": "San Salvador",
-   "price": 373,
-   "d1": "2026-09-25",
-   "d2": "2026-10-09",
-   "dep": "6:00AM",
-   "al": "United",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "1:53PM",
-   "rarr": "11:56AM",
-   "pct": 40
   },
   "SDQ": {
    "to": "SDQ",
