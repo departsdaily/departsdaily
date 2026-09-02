@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-02T00:15:13-04:00",
+ "generated": "2026-09-02T02:25:54-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -140,6 +140,21 @@
    "rarr": "7:10AM+1",
    "pct": -37
   },
+  "GDL": {
+   "to": "GDL",
+   "city": "Guadalajara",
+   "price": 322,
+   "d1": "2026-12-26",
+   "d2": "2027-01-09",
+   "dep": "2:48PM",
+   "al": "Volaris",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "8:13AM",
+   "arr": "7:21PM",
+   "rarr": "12:10PM",
+   "pct": 43
+  },
   "GND": {
    "to": "GND",
    "city": "Grenada",
@@ -263,17 +278,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 222,
-   "d1": "2026-11-05",
-   "d2": "2026-11-08",
-   "dep": "10:18PM",
+   "price": 195,
+   "d1": "2026-09-19",
+   "d2": "2026-09-25",
+   "dep": "7:27PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:16PM",
-   "arr": "12:29AM+1",
-   "rarr": "9:33PM",
-   "pct": 45
+   "rdep": "6:54PM",
+   "arr": "9:38PM",
+   "rarr": "9:14PM",
+   "pct": 52
   },
   "MIL": {
    "to": "MIL",

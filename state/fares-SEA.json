@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-09-02T00:17:34-04:00",
+ "generated": "2026-09-02T02:28:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 17,
  "routes_failed": [],
  "fares": {
   "DCA": {
@@ -169,21 +169,6 @@
    "arr": "4:20AM",
    "rarr": "3:57AM+1",
    "pct": 44
-  },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 541,
-   "d1": "2026-11-21",
-   "d2": "2026-11-28",
-   "dep": "2:50PM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:30AM",
-   "arr": "8:40PM",
-   "rarr": "2:40PM",
-   "pct": 16
   },
   "PHX": {
    "to": "PHX",
