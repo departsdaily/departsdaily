@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-01T18:17:20-04:00",
+ "generated": "2026-09-01T20:17:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 303,
-   "d1": "2026-10-12",
-   "d2": "2026-10-14",
-   "dep": "5:49PM",
+   "price": 277,
+   "d1": "2026-09-18",
+   "d2": "2026-09-25",
+   "dep": "12:16AM",
    "al": "Alaska",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:00AM",
-   "arr": "9:59PM",
-   "rarr": "1:44PM",
-   "pct": 38
+   "rdep": "8:55PM",
+   "arr": "4:20AM",
+   "rarr": "3:57AM+1",
+   "pct": 44
   },
   "PHL": {
    "to": "PHL",

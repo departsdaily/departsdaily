@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-01T18:17:37-04:00",
+ "generated": "2026-09-01T20:18:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 342,
-   "d1": "2026-09-17",
-   "d2": "2026-09-20",
-   "dep": "4:47PM",
+   "price": 261,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "6:15AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:25AM",
-   "arr": "6:34PM",
-   "rarr": "11:07AM",
-   "pct": 12
+   "rdep": "4:59PM",
+   "arr": "7:58AM",
+   "rarr": "7:15PM",
+   "pct": 33
   },
   "DFW": {
    "to": "DFW",
@@ -68,17 +68,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 278,
-   "d1": "2026-09-06",
-   "d2": "2026-09-15",
-   "dep": "12:45PM",
+   "price": 349,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
+   "dep": "12:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:04PM",
-   "arr": "8:06PM",
+   "arr": "8:27PM",
    "rarr": "4:39AM+1",
-   "pct": 59
+   "pct": 48
   },
   "LAX": {
    "to": "LAX",
@@ -338,7 +338,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 505,
+   "price": 550,
    "d1": "2026-12-28",
    "d2": "2027-01-01",
    "dep": "10:10PM",
@@ -348,7 +348,7 @@
    "rdep": "5:55AM",
    "arr": "7:50AM+1",
    "rarr": "5:10PM",
-   "pct": 47
+   "pct": 42
   },
   "SJU": {
    "to": "SJU",
