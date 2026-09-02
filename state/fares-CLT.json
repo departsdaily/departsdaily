@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-02T11:18:36-04:00",
+ "generated": "2026-09-02T12:15:10-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -559,21 +559,6 @@
    "arr": "2:47PM+1",
    "rarr": "6:15AM+1",
    "pct": -22
-  },
-  "UVF": {
-   "to": "UVF",
-   "city": "St. Lucia",
-   "price": 747,
-   "d1": "2026-12-15",
-   "d2": "2026-12-31",
-   "dep": "8:55AM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:40PM",
-   "arr": "4:12PM",
-   "rarr": "1:41AM+1",
-   "pct": -4
   },
   "YYC": {
    "to": "YYC",

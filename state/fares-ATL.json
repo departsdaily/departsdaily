@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-02T10:15:30-04:00",
+ "generated": "2026-09-02T12:15:28-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 30,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 44,
+   "price": 41,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
    "dep": "5:10AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:32PM",
+   "rdep": "8:41AM",
    "arr": "7:16AM",
-   "rarr": "8:00PM",
-   "pct": 90
+   "rarr": "11:06AM",
+   "pct": 91
   },
   "SEA": {
    "to": "SEA",
@@ -413,17 +413,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 396,
-   "d1": "2026-11-09",
-   "d2": "2026-11-18",
-   "dep": "1:28PM",
+   "price": 392,
+   "d1": "2026-10-10",
+   "d2": "2026-10-16",
+   "dep": "7:49PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:21PM",
-   "arr": "6:01PM",
-   "rarr": "7:36PM",
-   "pct": 29
+   "rdep": "1:23PM",
+   "arr": "12:15AM+1",
+   "rarr": "6:14PM",
+   "pct": 30
   },
   "ROM": {
    "to": "ROM",
