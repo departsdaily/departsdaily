@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-01T22:16:07-04:00",
+ "generated": "2026-09-02T00:16:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 233,
-   "d1": "2026-10-24",
-   "d2": "2026-11-01",
-   "dep": "9:40AM",
-   "al": "Southwest",
-   "stops": 0,
+   "price": 183,
+   "d1": "2026-11-05",
+   "d2": "2026-11-10",
+   "dep": "5:35AM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "1:30PM",
-   "arr": "10:50AM",
-   "rarr": "2:40PM",
-   "pct": 47
+   "rdep": "12:19PM",
+   "arr": "11:32AM",
+   "rarr": "5:22PM",
+   "pct": 58
   },
   "LAS": {
    "to": "LAS",

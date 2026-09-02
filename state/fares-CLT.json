@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-01T22:15:12-04:00",
+ "generated": "2026-09-02T00:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -65,21 +65,6 @@
    "rarr": "12:02AM+1",
    "pct": 38
   },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 643,
-   "d1": "2026-09-04",
-   "d2": "2026-09-09",
-   "dep": "9:38PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "12:49PM",
-   "arr": "3:22AM+1",
-   "rarr": "8:50PM",
-   "pct": -24
-  },
   "CUR": {
    "to": "CUR",
    "city": "Curacao",
@@ -139,21 +124,6 @@
    "arr": "9:23PM",
    "rarr": "7:10PM",
    "pct": -4
-  },
-  "FLL": {
-   "to": "FLL",
-   "city": "Ft. Lauderdale",
-   "price": 291,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "11:50AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:24PM",
-   "arr": "4:11PM",
-   "rarr": "8:43PM",
-   "pct": 28
   },
   "FRA": {
    "to": "FRA",
@@ -250,7 +220,7 @@
    "city": "Madrid",
    "price": 470,
    "d1": "2026-09-30",
-   "d2": "2026-10-09",
+   "d2": "2026-10-13",
    "dep": "10:25AM",
    "al": "United",
    "stops": 1,
@@ -278,16 +248,16 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 135,
-   "d1": "2026-09-25",
-   "d2": "2026-09-27",
-   "dep": "9:32AM",
+   "price": 137,
+   "d1": "2026-11-11",
+   "d2": "2026-11-16",
+   "dep": "6:05AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:40AM",
-   "arr": "11:33AM",
-   "rarr": "8:35AM",
+   "arr": "7:56AM",
+   "rarr": "8:37AM",
    "pct": 67
   },
   "MIA": {
@@ -379,21 +349,6 @@
    "arr": "6:42PM",
    "rarr": "12:36AM+1",
    "pct": -66
-  },
-  "PDX": {
-   "to": "PDX",
-   "city": "Portland, OR",
-   "price": 306,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "10:35AM",
-   "al": "Southwest",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "10:45PM",
-   "arr": "6:40PM",
-   "rarr": "5:30AM+1",
-   "pct": 61
   },
   "PHX": {
    "to": "PHX",

@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-09-01T22:16:42-04:00",
+ "generated": "2026-09-02T00:16:42-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 245,
-   "d1": "2026-11-07",
-   "d2": "2026-11-15",
-   "dep": "6:00AM",
-   "al": "Frontier",
+   "price": 212,
+   "d1": "2026-09-09",
+   "d2": "2026-09-16",
+   "dep": "11:35AM",
+   "al": "Southwest",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:59PM",
-   "arr": "9:32AM",
-   "rarr": "2:47AM+1",
-   "pct": 47
+   "rdep": "2:50PM",
+   "arr": "2:55PM",
+   "rarr": "6:20PM",
+   "pct": 54
   },
   "LAS": {
    "to": "LAS",
@@ -215,21 +215,6 @@
    "rarr": "12:51AM+1",
    "pct": 73
   },
-  "PHL": {
-   "to": "PHL",
-   "city": "Philadelphia",
-   "price": 460,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "11:20PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "7:12AM+1",
-   "rarr": "2:35PM",
-   "pct": 37
-  },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
@@ -263,7 +248,7 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 35,
+   "price": 40,
    "d1": "2026-10-03",
    "d2": "2026-10-06",
    "dep": "8:44AM",
@@ -273,22 +258,7 @@
    "rdep": "9:00AM",
    "arr": "10:22AM",
    "rarr": "10:37AM",
-   "pct": 90
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 264,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "6:00AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "9:02PM",
-   "arr": "11:57AM",
-   "rarr": "3:26AM+1",
-   "pct": 61
+   "pct": 89
   },
   "AMS": {
    "to": "AMS",

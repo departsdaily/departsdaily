@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-01T22:17:00-04:00",
+ "generated": "2026-09-02T00:17:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 277,
-   "d1": "2026-09-04",
-   "d2": "2026-09-06",
-   "dep": "5:00PM",
+   "price": 416,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "dep": "3:30PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:24AM",
-   "arr": "8:41PM",
-   "rarr": "8:50AM",
-   "pct": 33
+   "arr": "6:07PM",
+   "rarr": "8:49AM",
+   "pct": 0
   },
   "BOS": {
    "to": "BOS",
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 207,
-   "d1": "2026-09-04",
-   "d2": "2026-09-07",
-   "dep": "9:30PM",
+   "price": 242,
+   "d1": "2026-11-19",
+   "d2": "2026-11-26",
+   "dep": "9:29PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:10AM",
-   "arr": "10:59PM",
-   "rarr": "7:19AM",
-   "pct": 49
+   "rdep": "6:00AM",
+   "arr": "10:52PM",
+   "rarr": "7:12AM",
+   "pct": 40
   },
   "DEN": {
    "to": "DEN",
@@ -83,7 +83,7 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 219,
+   "price": 216,
    "d1": "2026-09-30",
    "d2": "2026-10-05",
    "dep": "11:30AM",
@@ -93,7 +93,7 @@
    "rdep": "5:44PM",
    "arr": "3:09PM",
    "rarr": "9:25PM",
-   "pct": 60
+   "pct": 61
   },
   "FLL": {
    "to": "FLL",
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 261,
-   "d1": "2026-10-23",
-   "d2": "2026-10-26",
-   "dep": "6:30PM",
-   "al": "American",
-   "stops": 1,
+   "price": 197,
+   "d1": "2026-09-22",
+   "d2": "2026-09-25",
+   "dep": "8:00AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:08PM",
-   "arr": "12:03AM+1",
-   "rarr": "7:15PM",
-   "pct": 52
+   "rdep": "5:18PM",
+   "arr": "11:58AM",
+   "rarr": "8:55PM",
+   "pct": 64
   },
   "LAS": {
    "to": "LAS",
@@ -145,14 +145,14 @@
    "city": "Los Angeles",
    "price": 245,
    "d1": "2026-10-02",
-   "d2": "2026-10-06",
+   "d2": "2026-10-07",
    "dep": "6:00AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:35PM",
+   "rdep": "1:55PM",
    "arr": "11:59AM",
-   "rarr": "2:01AM+1",
+   "rarr": "7:26PM",
    "pct": 74
   },
   "MCO": {
@@ -368,17 +368,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 298,
-   "d1": "2026-09-08",
-   "d2": "2026-09-13",
-   "dep": "11:00AM",
+   "price": 316,
+   "d1": "2026-12-01",
+   "d2": "2026-12-08",
+   "dep": "6:00AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:34PM",
-   "arr": "3:18PM",
+   "rdep": "2:18PM",
+   "arr": "10:23AM",
    "rarr": "6:47PM",
-   "pct": 38
+   "pct": 34
   },
   "PAR": {
    "to": "PAR",
