@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-02T10:42:52-04:00",
+ "generated": "2026-09-02T11:18:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 40,
  "routes_failed": [],
@@ -518,17 +518,17 @@
   "SXM": {
    "to": "SXM",
    "city": "St. Maarten",
-   "price": 377,
-   "d1": "2026-11-01",
-   "d2": "2026-11-16",
-   "dep": "8:55AM",
-   "al": "Air Canada",
+   "price": 673,
+   "d1": "2026-12-18",
+   "d2": "2026-12-22",
+   "dep": "6:50AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:45PM",
-   "arr": "3:52PM",
-   "rarr": "12:16AM+1",
-   "pct": 43
+   "rdep": "2:20PM",
+   "arr": "12:07PM",
+   "rarr": "7:51PM",
+   "pct": -2
   },
   "TPA": {
    "to": "TPA",
