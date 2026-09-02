@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-01T20:15:16-04:00",
+ "generated": "2026-09-01T22:15:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -143,17 +143,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 210,
-   "d1": "2026-11-05",
-   "d2": "2026-11-11",
-   "dep": "5:38PM",
+   "price": 291,
+   "d1": "2026-09-04",
+   "d2": "2026-09-06",
+   "dep": "11:50AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:22AM",
-   "arr": "7:46PM",
-   "rarr": "2:39PM",
-   "pct": 48
+   "rdep": "6:24PM",
+   "arr": "4:11PM",
+   "rarr": "8:43PM",
+   "pct": 28
   },
   "FRA": {
    "to": "FRA",
@@ -199,21 +199,6 @@
    "arr": "7:47PM",
    "rarr": "2:22AM+1",
    "pct": 0
-  },
-  "JAX": {
-   "to": "JAX",
-   "city": "Jacksonville",
-   "price": 376,
-   "d1": "2026-11-15",
-   "d2": "2026-11-19",
-   "dep": "5:38PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "3:00PM",
-   "arr": "9:11PM",
-   "rarr": "6:38PM",
-   "pct": 41
   },
   "LAS": {
    "to": "LAS",
@@ -308,17 +293,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 201,
-   "d1": "2026-10-10",
-   "d2": "2026-10-17",
-   "dep": "7:59PM",
+   "price": 222,
+   "d1": "2026-11-05",
+   "d2": "2026-11-08",
+   "dep": "10:18PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:00PM",
-   "arr": "10:10PM",
-   "rarr": "7:13PM",
-   "pct": 50
+   "rdep": "7:16PM",
+   "arr": "12:29AM+1",
+   "rarr": "9:33PM",
+   "pct": 45
   },
   "MIL": {
    "to": "MIL",
