@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-02T08:15:02-04:00",
+ "generated": "2026-09-02T10:15:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 40,
  "routes_failed": [],
@@ -235,7 +235,7 @@
    "city": "Madrid",
    "price": 470,
    "d1": "2026-09-30",
-   "d2": "2026-10-13",
+   "d2": "2026-10-14",
    "dep": "10:25AM",
    "al": "United",
    "stops": 1,
@@ -455,20 +455,35 @@
    "rarr": "5:03AM+1",
    "pct": 51
   },
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 308,
+   "d1": "2026-10-07",
+   "d2": "2026-10-12",
+   "dep": "6:55PM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:59PM",
+   "arr": "1:35AM+1",
+   "rarr": "6:19AM+1",
+   "pct": 62
+  },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 308,
-   "d1": "2026-10-12",
-   "d2": "2026-10-20",
-   "dep": "9:42PM",
+   "price": 255,
+   "d1": "2026-09-23",
+   "d2": "2026-09-27",
+   "dep": "9:32AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:00AM",
-   "arr": "2:35AM+1",
-   "rarr": "7:56AM",
-   "pct": 27
+   "rdep": "2:57AM",
+   "arr": "2:36PM",
+   "rarr": "7:54AM",
+   "pct": 39
   },
   "SMF": {
    "to": "SMF",
@@ -559,21 +574,6 @@
    "arr": "4:12PM",
    "rarr": "1:41AM+1",
    "pct": -4
-  },
-  "VPS": {
-   "to": "VPS",
-   "city": "Destin / 30A",
-   "price": 346,
-   "d1": "2026-09-26",
-   "d2": "2026-09-28",
-   "dep": "1:00PM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "3:50PM",
-   "rarr": "10:20AM",
-   "pct": 0
   },
   "YYC": {
    "to": "YYC",

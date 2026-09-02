@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-02T08:17:25-04:00",
+ "generated": "2026-09-02T10:17:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -158,7 +158,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 277,
+   "price": 279,
    "d1": "2026-09-18",
    "d2": "2026-09-25",
    "dep": "12:16AM",
@@ -168,7 +168,7 @@
    "rdep": "8:55PM",
    "arr": "4:20AM",
    "rarr": "3:57AM+1",
-   "pct": 44
+   "pct": 43
   },
   "PHX": {
    "to": "PHX",
