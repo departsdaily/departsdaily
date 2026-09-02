@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-02T16:17:19-04:00",
+ "generated": "2026-09-02T19:36:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -338,17 +338,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 263,
-   "d1": "2026-11-24",
-   "d2": "2026-11-28",
+   "price": 266,
+   "d1": "2026-12-01",
+   "d2": "2026-12-08",
    "dep": "12:55PM",
    "al": "DM",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:55PM",
+   "rdep": "9:38AM",
    "arr": "3:31PM",
-   "rarr": "8:42PM",
-   "pct": 53
+   "rarr": "12:25PM",
+   "pct": 52
   },
   "ROM": {
    "to": "ROM",
@@ -368,17 +368,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 115,
-   "d1": "2026-10-22",
-   "d2": "2026-10-26",
-   "dep": "8:10AM",
+   "price": 192,
+   "d1": "2026-09-12",
+   "d2": "2026-09-16",
+   "dep": "11:45AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:04AM",
-   "arr": "10:49AM",
-   "rarr": "5:55AM",
-   "pct": 73
+   "rdep": "12:59AM",
+   "arr": "2:27PM",
+   "rarr": "7:50AM",
+   "pct": 54
   }
  }
 }

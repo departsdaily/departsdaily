@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-02T16:16:24-04:00",
+ "generated": "2026-09-02T19:35:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -35,21 +35,6 @@
    "rarr": "9:55AM",
    "pct": 54
   },
-  "DCA": {
-   "to": "DCA",
-   "city": "Washington DC",
-   "price": 277,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "6:45AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "1:06PM",
-   "arr": "10:11AM",
-   "rarr": "4:57PM",
-   "pct": 47
-  },
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
@@ -64,21 +49,6 @@
    "arr": "12:47PM",
    "rarr": "10:49PM",
    "pct": 74
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 187,
-   "d1": "2026-10-16",
-   "d2": "2026-10-22",
-   "dep": "6:10AM",
-   "al": "Frontier",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:24AM",
-   "arr": "8:36AM",
-   "rarr": "9:05AM",
-   "pct": 57
   },
   "LAX": {
    "to": "LAX",

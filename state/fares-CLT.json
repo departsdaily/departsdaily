@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-02T16:15:10-04:00",
+ "generated": "2026-09-02T19:34:04-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -368,17 +368,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 818,
-   "d1": "2026-10-17",
-   "d2": "2026-10-21",
-   "dep": "3:59PM",
+   "price": 775,
+   "d1": "2026-10-21",
+   "d2": "2026-11-01",
+   "dep": "9:32AM",
    "al": "",
-   "stops": 1,
+   "stops": 2,
    "xfer": 1,
-   "rdep": "6:50PM",
-   "arr": "1:10AM+1",
-   "rarr": "5:17AM+1",
-   "pct": 9
+   "rdep": "10:20PM",
+   "arr": "9:25PM",
+   "rarr": "11:57AM+1",
+   "pct": 14
   },
   "PHX": {
    "to": "PHX",
@@ -574,21 +574,6 @@
    "arr": "4:25PM",
    "rarr": "6:13PM",
    "pct": 51
-  },
-  "TYO": {
-   "to": "TYO",
-   "city": "Tokyo",
-   "price": 1524,
-   "d1": "2026-12-14",
-   "d2": "2026-12-23",
-   "dep": "5:07PM",
-   "al": "Frontier",
-   "stops": 3,
-   "xfer": 0,
-   "rdep": "2:45PM",
-   "arr": "2:47PM+1",
-   "rarr": "6:15AM+1",
-   "pct": -22
   },
   "YYC": {
    "to": "YYC",

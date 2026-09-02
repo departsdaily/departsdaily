@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-09-02T16:17:36-04:00",
+ "generated": "2026-09-02T19:36:25-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 17,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "DCA": {
@@ -140,6 +140,21 @@
    "rarr": "12:54AM+1",
    "pct": 46
   },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 370,
+   "d1": "2026-10-29",
+   "d2": "2026-11-02",
+   "dep": "12:25PM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:10AM",
+   "arr": "8:10PM",
+   "rarr": "11:15AM",
+   "pct": 34
+  },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
@@ -229,6 +244,21 @@
    "arr": "10:30PM",
    "rarr": "11:24AM+1",
    "pct": 31
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 730,
+   "d1": "2026-12-19",
+   "d2": "2027-01-09",
+   "dep": "1:35PM",
+   "al": "Southwest",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "12:55PM",
+   "arr": "1:25AM+1",
+   "rarr": "10:33PM",
+   "pct": -52
   },
   "PAR": {
    "to": "PAR",
