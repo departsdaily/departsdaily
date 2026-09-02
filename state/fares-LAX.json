@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-09-02T02:27:21-04:00",
+ "generated": "2026-09-02T04:16:44-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -128,32 +128,32 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 46,
-   "d1": "2026-10-10",
-   "d2": "2026-10-15",
-   "dep": "11:19AM",
+   "price": 33,
+   "d1": "2026-10-28",
+   "d2": "2026-10-31",
+   "dep": "5:15PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "1:45PM",
-   "arr": "12:39PM",
-   "rarr": "3:10PM",
-   "pct": 85
+   "rdep": "8:00AM",
+   "arr": "6:30PM",
+   "rarr": "9:19AM",
+   "pct": 89
   },
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 144,
+   "price": 210,
    "d1": "2026-11-04",
    "d2": "2026-11-08",
-   "dep": "11:52AM",
+   "dep": "5:07PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:55AM",
-   "arr": "5:48PM",
+   "arr": "10:44PM",
    "rarr": "12:38PM",
-   "pct": 75
+   "pct": 63
   },
   "MIA": {
    "to": "MIA",
@@ -169,21 +169,6 @@
    "arr": "8:22PM",
    "rarr": "12:29PM",
    "pct": 66
-  },
-  "MSY": {
-   "to": "MSY",
-   "city": "New Orleans",
-   "price": 264,
-   "d1": "2026-10-26",
-   "d2": "2026-10-29",
-   "dep": "1:32PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:08PM",
-   "arr": "6:21PM",
-   "rarr": "10:37PM",
-   "pct": 50
   },
   "NYC": {
    "to": "NYC",
