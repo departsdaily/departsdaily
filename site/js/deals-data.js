@@ -4,19 +4,19 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-09-02 10:13 EDT
-   Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
-   Carried forward:  none
+   Generated 2026-09-02 10:41 EDT
+   Rebuilt this run: CLT (8)
+   Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-09-02T10:13:56-04:00",
+ updated:"2026-09-02T10:41:37-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:170,d1:"2026-10-09",d2:"2026-10-11",dep:"11:56AM",al:"Frontier",stops:1,rdep:"12:52AM",arr:"6:19PM",rarr:"6:41AM",exp:"2026-09-04"},
  {to:"MCO",city:"Orlando",price:137,d1:"2026-11-11",d2:"2026-11-16",dep:"6:05AM",al:"Frontier",stops:0,rdep:"6:40AM",arr:"7:56AM",rarr:"8:37AM",exp:"2026-09-04"},
  {to:"LAX",city:"Los Angeles",price:241,d1:"2026-09-16",d2:"2026-09-23",dep:"9:40PM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"4:51AM+1",rarr:"6:59AM",exp:"2026-09-04"},
  {to:"NYC",city:"New York City",price:146,d1:"2026-09-14",d2:"2026-09-21",dep:"9:32AM",al:"Frontier",stops:1,rdep:"5:55AM",arr:"2:16PM",rarr:"10:39AM",exp:"2026-09-04"},
- {to:"SFO",city:"San Francisco",price:308,d1:"2026-10-07",d2:"2026-10-12",dep:"6:55PM",al:"Southwest",stops:1,rdep:"11:59PM",arr:"1:35AM+1",rarr:"6:19AM+1",exp:"2026-09-04"},
+ {to:"MIA",city:"Miami",price:195,d1:"2026-09-19",d2:"2026-09-25",dep:"7:27PM",al:"Frontier",stops:0,rdep:"6:54PM",arr:"9:38PM",rarr:"9:14PM",exp:"2026-09-04"},
  {to:"MAD",city:"Madrid",price:470,d1:"2026-09-30",d2:"2026-10-14",dep:"10:25AM",al:"United",stops:1,rdep:"7:00AM",arr:"7:45PM",rarr:"7:10PM",exp:"2026-09-04"},
  {to:"GDL",city:"Guadalajara",price:322,d1:"2026-12-26",d2:"2027-01-09",dep:"2:48PM",al:"Volaris",stops:0,rdep:"8:13AM",arr:"7:21PM",rarr:"12:10PM",exp:"2026-09-04"},
  {to:"SJU",city:"San Juan, PR",price:255,d1:"2026-09-23",d2:"2026-09-27",dep:"9:32AM",al:"Frontier",stops:1,rdep:"2:57AM",arr:"2:36PM",rarr:"7:54AM",exp:"2026-09-04"}],ATL:[

@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 11,
+ "n_deals": 12,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -74,12 +74,12 @@
    "section": "cheapest"
   },
   {
-   "file": "story_8_GDL.png",
-   "to": "GDL",
-   "city": "Guadalajara",
-   "price": 322,
-   "disc": 50,
-   "section": "cheapest"
+   "file": "story_8_SFO.png",
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 308,
+   "disc": 18,
+   "section": "extra_weekend"
   }
  ]
 }
