@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-02T14:15:31-04:00",
+ "generated": "2026-09-02T16:07:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 169,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "8:00AM",
+   "price": 174,
+   "d1": "2026-10-21",
+   "d2": "2026-10-23",
+   "dep": "5:10PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:28PM",
-   "arr": "10:20AM",
-   "rarr": "9:44PM",
-   "pct": 60
+   "rdep": "10:26AM",
+   "arr": "7:31PM",
+   "rarr": "12:34PM",
+   "pct": 58
   },
   "PHL": {
    "to": "PHL",
@@ -233,9 +233,9 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 322,
-   "d1": "2026-09-14",
-   "d2": "2026-09-18",
+   "price": 261,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
    "dep": "7:03AM",
    "al": "Alaska",
    "stops": 0,
@@ -243,7 +243,7 @@
    "rdep": "11:43PM",
    "arr": "12:25PM",
    "rarr": "4:33AM+1",
-   "pct": 52
+   "pct": 61
   },
   "SFO": {
    "to": "SFO",

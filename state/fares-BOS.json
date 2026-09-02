@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-02T14:17:58-04:00",
+ "generated": "2026-09-02T16:09:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 337,
-   "d1": "2026-09-17",
-   "d2": "2026-09-20",
+   "price": 318,
+   "d1": "2026-09-18",
+   "d2": "2026-09-27",
    "dep": "10:51AM",
    "al": "American",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:20AM",
+   "rdep": "6:59AM",
    "arr": "12:36PM",
-   "rarr": "8:04AM",
-   "pct": 13
+   "rarr": "9:39AM",
+   "pct": 18
   },
   "DFW": {
    "to": "DFW",
@@ -293,17 +293,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 383,
-   "d1": "2026-10-08",
-   "d2": "2026-10-14",
-   "dep": "4:49PM",
+   "price": 421,
+   "d1": "2026-09-07",
+   "d2": "2026-09-14",
+   "dep": "7:22PM",
    "al": "American",
    "stops": 2,
    "xfer": 0,
-   "rdep": "5:13PM",
-   "arr": "11:12PM",
-   "rarr": "10:23PM",
-   "pct": 29
+   "rdep": "5:16PM",
+   "arr": "1:47AM+1",
+   "rarr": "11:35PM",
+   "pct": 22
   },
   "NAS": {
    "to": "NAS",

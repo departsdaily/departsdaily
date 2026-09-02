@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-02T14:17:40-04:00",
+ "generated": "2026-09-02T16:09:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -53,9 +53,9 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 521,
-   "d1": "2026-09-07",
-   "d2": "2026-09-13",
+   "price": 314,
+   "d1": "2026-09-06",
+   "d2": "2026-09-10",
    "dep": "8:23AM",
    "al": "Alaska",
    "stops": 0,
@@ -63,7 +63,7 @@
    "rdep": "6:29PM",
    "arr": "2:24PM",
    "rarr": "12:56AM+1",
-   "pct": 17
+   "pct": 50
   },
   "HOU": {
    "to": "HOU",

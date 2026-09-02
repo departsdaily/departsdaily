@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-02T14:17:03-04:00",
+ "generated": "2026-09-02T16:08:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 230,
-   "d1": "2026-10-22",
-   "d2": "2026-10-27",
-   "dep": "3:59PM",
+   "price": 210,
+   "d1": "2026-10-05",
+   "d2": "2026-10-08",
+   "dep": "2:44PM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:00AM",
-   "arr": "8:31PM",
-   "rarr": "12:16PM",
-   "pct": 34
+   "rdep": "6:12AM",
+   "arr": "5:47PM",
+   "rarr": "8:49AM",
+   "pct": 39
   },
   "MIA": {
    "to": "MIA",
@@ -353,17 +353,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 210,
-   "d1": "2026-10-17",
-   "d2": "2026-10-24",
-   "dep": "6:00AM",
+   "price": 227,
+   "d1": "2026-11-11",
+   "d2": "2026-11-16",
+   "dep": "7:00AM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:45AM",
-   "arr": "10:53AM",
-   "rarr": "3:29PM",
-   "pct": 61
+   "rdep": "11:30AM",
+   "arr": "12:03PM",
+   "rarr": "3:17PM",
+   "pct": 58
   },
   "NAS": {
    "to": "NAS",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 182,
-   "d1": "2026-10-29",
-   "d2": "2026-11-09",
-   "dep": "3:45PM",
+   "price": 191,
+   "d1": "2026-09-08",
+   "d2": "2026-09-13",
+   "dep": "12:00PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "7:42PM",
-   "rarr": "11:03AM",
-   "pct": 57
+   "rdep": "6:00AM",
+   "arr": "3:59PM",
+   "rarr": "9:52AM",
+   "pct": 55
   }
  }
 }

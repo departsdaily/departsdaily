@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-02T14:17:21-04:00",
+ "generated": "2026-09-02T16:09:15-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 433,
-   "d1": "2026-09-05",
-   "d2": "2026-09-07",
-   "dep": "5:55PM",
+   "price": 170,
+   "d1": "2026-11-11",
+   "d2": "2026-11-17",
+   "dep": "7:33PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
    "rdep": "5:00AM",
-   "arr": "9:30PM",
-   "rarr": "8:24AM",
-   "pct": -2
+   "arr": "10:59PM",
+   "rarr": "8:37AM",
+   "pct": 60
   },
   "DCA": {
    "to": "DCA",
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 658,
-   "d1": "2026-10-08",
-   "d2": "2026-10-22",
-   "dep": "4:20PM",
+   "price": 599,
+   "d1": "2026-11-11",
+   "d2": "2026-11-17",
+   "dep": "11:50PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "3:10AM+1",
-   "rarr": "5:50PM",
-   "pct": 27
+   "rdep": "6:40AM",
+   "arr": "10:30AM+1",
+   "rarr": "7:05PM",
+   "pct": 33
   },
   "PUJ": {
    "to": "PUJ",
