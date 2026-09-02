@@ -1,25 +1,10 @@
 {
  "origin": "ATL",
- "generated": "2026-09-02T12:15:28-04:00",
+ "generated": "2026-09-02T14:15:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 30,
+ "routes_priced": 29,
  "routes_failed": [],
  "fares": {
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 250,
-   "d1": "2026-11-20",
-   "d2": "2026-11-22",
-   "dep": "2:46PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:52AM",
-   "arr": "7:20PM",
-   "rarr": "1:42PM",
-   "pct": 51
-  },
   "BOS": {
    "to": "BOS",
    "city": "Boston",

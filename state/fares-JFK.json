@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-02T12:16:56-04:00",
+ "generated": "2026-09-02T14:17:03-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 331,
-   "d1": "2026-10-28",
-   "d2": "2026-11-01",
-   "dep": "12:00PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 341,
+   "d1": "2026-10-12",
+   "d2": "2026-10-16",
+   "dep": "7:14AM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:30PM",
-   "arr": "4:36PM",
-   "rarr": "7:15PM",
-   "pct": 40
+   "rdep": "6:30AM",
+   "arr": "12:57PM",
+   "rarr": "11:45AM",
+   "pct": 38
   },
   "DFW": {
    "to": "DFW",
@@ -323,17 +323,17 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 405,
+   "price": 462,
    "d1": "2026-10-17",
    "d2": "2026-10-21",
-   "dep": "7:25AM",
+   "dep": "6:00AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:00PM",
-   "arr": "12:09PM",
-   "rarr": "4:43PM",
-   "pct": 37
+   "rdep": "8:00AM",
+   "arr": "10:54AM",
+   "rarr": "12:40PM",
+   "pct": 28
   },
   "LON": {
    "to": "LON",

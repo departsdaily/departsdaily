@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-02T12:15:10-04:00",
+ "generated": "2026-09-02T14:15:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -64,6 +64,21 @@
    "arr": "4:31PM",
    "rarr": "12:02AM+1",
    "pct": 38
+  },
+  "CUN": {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 462,
+   "d1": "2026-11-02",
+   "d2": "2026-11-08",
+   "dep": "5:10PM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:30PM",
+   "arr": "11:32PM",
+   "rarr": "3:36AM+1",
+   "pct": 11
   },
   "CUR": {
    "to": "CUR",
@@ -394,6 +409,21 @@
    "arr": "4:05AM+1",
    "rarr": "12:34AM+1",
    "pct": 15
+  },
+  "PSP": {
+   "to": "PSP",
+   "city": "Palm Springs",
+   "price": 406,
+   "d1": "2026-11-14",
+   "d2": "2026-11-18",
+   "dep": "5:05PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:00AM",
+   "arr": "11:23PM",
+   "rarr": "11:36AM",
+   "pct": 40
   },
   "PUJ": {
    "to": "PUJ",

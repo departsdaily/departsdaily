@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-02T12:17:46-04:00",
+ "generated": "2026-09-02T14:17:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 342,
+   "price": 337,
    "d1": "2026-09-17",
    "d2": "2026-09-20",
-   "dep": "4:47PM",
-   "al": "JetBlue",
-   "stops": 1,
+   "dep": "10:51AM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:25AM",
-   "arr": "6:34PM",
-   "rarr": "11:07AM",
-   "pct": 12
+   "rdep": "6:20AM",
+   "arr": "12:36PM",
+   "rarr": "8:04AM",
+   "pct": 13
   },
   "DFW": {
    "to": "DFW",
@@ -263,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 371,
-   "d1": "2026-10-30",
-   "d2": "2026-11-06",
-   "dep": "7:10AM",
-   "al": "JetBlue",
+   "price": 998,
+   "d1": "2026-12-26",
+   "d2": "2026-12-30",
+   "dep": "6:53PM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:30PM",
-   "arr": "12:51PM",
-   "rarr": "9:29PM",
-   "pct": 29
+   "rdep": "5:36PM",
+   "arr": "12:28AM+1",
+   "rarr": "11:09PM",
+   "pct": -92
   },
   "LON": {
    "to": "LON",
