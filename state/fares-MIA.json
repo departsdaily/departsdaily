@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-02T06:17:06-04:00",
+ "generated": "2026-09-02T08:17:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -353,17 +353,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 742,
-   "d1": "2026-11-07",
-   "d2": "2026-11-15",
+   "price": 637,
+   "d1": "2026-11-17",
+   "d2": "2026-12-03",
    "dep": "4:50PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "4:10AM+1",
-   "rarr": "7:00PM",
-   "pct": 22
+   "rdep": "7:35PM",
+   "arr": "4:05AM+1",
+   "rarr": "8:40AM+1",
+   "pct": 33
   },
   "SJU": {
    "to": "SJU",

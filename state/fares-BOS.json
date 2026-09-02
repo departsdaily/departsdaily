@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-09-02T06:17:40-04:00",
+ "generated": "2026-09-02T08:17:43-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -203,17 +203,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 336,
-   "d1": "2026-10-14",
-   "d2": "2026-10-19",
-   "dep": "7:20PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 443,
+   "d1": "2026-11-24",
+   "d2": "2026-11-28",
+   "dep": "8:10AM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:55PM",
-   "arr": "1:42AM+1",
-   "rarr": "5:16AM+1",
-   "pct": 50
+   "rdep": "9:05AM",
+   "arr": "5:30PM",
+   "rarr": "6:24PM",
+   "pct": 34
   },
   "SFO": {
    "to": "SFO",
@@ -304,6 +304,21 @@
    "arr": "11:12PM",
    "rarr": "10:23PM",
    "pct": 29
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 552,
+   "d1": "2026-12-28",
+   "d2": "2027-01-01",
+   "dep": "6:00AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:47PM",
+   "arr": "11:01AM",
+   "rarr": "10:39PM",
+   "pct": -15
   },
   "PAR": {
    "to": "PAR",
