@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-03T02:15:00-04:00",
+ "generated": "2026-09-03T04:15:12-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -319,6 +319,21 @@
    "arr": "8:25PM",
    "rarr": "10:50AM",
    "pct": 60
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 490,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "5:38PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:25PM",
+   "arr": "8:49PM",
+   "rarr": "5:42PM",
+   "pct": -2
   },
   "NYC": {
    "to": "NYC",
