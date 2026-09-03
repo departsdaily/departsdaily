@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-03T08:16:23-04:00",
+ "generated": "2026-09-03T10:16:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 17,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 197,
-   "d1": "2026-10-21",
-   "d2": "2026-10-25",
-   "dep": "1:07PM",
-   "al": "Frontier",
-   "stops": 0,
+   "price": 145,
+   "d1": "2026-09-26",
+   "d2": "2026-09-28",
+   "dep": "11:15AM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "4:27PM",
-   "arr": "4:12PM",
-   "rarr": "7:17PM",
-   "pct": 48
+   "rdep": "11:05PM",
+   "arr": "2:10PM",
+   "rarr": "5:35AM+1",
+   "pct": 62
   },
   "SFO": {
    "to": "SFO",

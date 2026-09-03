@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-03T08:15:04-04:00",
+ "generated": "2026-09-03T10:15:03-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -428,17 +428,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 587,
-   "d1": "2026-12-14",
-   "d2": "2026-12-20",
-   "dep": "8:55AM",
-   "al": "Air Canada",
-   "stops": 1,
+   "price": 638,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "5:38PM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "2:50PM",
-   "arr": "3:37PM",
-   "rarr": "7:38PM",
-   "pct": -5
+   "rdep": "5:05PM",
+   "arr": "10:25PM",
+   "rarr": "1:05AM+1",
+   "pct": -14
   },
   "ROM": {
    "to": "ROM",
@@ -503,7 +503,7 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 255,
+   "price": 254,
    "d1": "2026-09-23",
    "d2": "2026-09-27",
    "dep": "9:32AM",
@@ -513,7 +513,7 @@
    "rdep": "2:57AM",
    "arr": "2:36PM",
    "rarr": "7:54AM",
-   "pct": 39
+   "pct": 40
   },
   "SMF": {
    "to": "SMF",

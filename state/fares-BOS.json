@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-09-03T08:17:57-04:00",
+ "generated": "2026-09-03T10:17:42-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "DCA": {
@@ -48,6 +48,21 @@
    "rdep": "6:20AM",
    "arr": "12:28PM",
    "rarr": "11:11AM",
+   "pct": 36
+  },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 368,
+   "d1": "2026-10-09",
+   "d2": "2026-10-18",
+   "dep": "2:59PM",
+   "al": "JetBlue",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "9:12PM",
+   "arr": "7:20PM",
+   "rarr": "3:14AM+1",
    "pct": 36
   },
   "LAS": {
