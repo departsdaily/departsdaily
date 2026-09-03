@@ -1,0 +1,48 @@
+{
+ "origin": "CLT",
+ "date": "2026-09-03",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from CLT, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 4.53,
+ "fps": 30,
+ "audio": "coast-road.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "urgent",
+ "plan_angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices.",
+ "featured": [
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 170,
+   "disc": 50,
+   "baseline": 338,
+   "nights": 2,
+   "d1": "2026-10-09",
+   "d2": "2026-10-11"
+  },
+  {
+   "to": "BGI",
+   "city": "Barbados",
+   "price": 448,
+   "disc": 25,
+   "baseline": 596,
+   "nights": 7,
+   "d1": "2026-10-11",
+   "d2": "2026-10-18"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 241,
+   "disc": 22,
+   "baseline": 308,
+   "nights": 7,
+   "d1": "2026-09-16",
+   "d2": "2026-09-23"
+  }
+ ]
+}
