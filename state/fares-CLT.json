@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-03T06:54:14-04:00",
+ "generated": "2026-09-03T07:54:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -574,6 +574,21 @@
    "arr": "5:11PM",
    "rarr": "3:37AM+1",
    "pct": 45
+  },
+  "TYO": {
+   "to": "TYO",
+   "city": "Tokyo",
+   "price": 1195,
+   "d1": "2026-10-01",
+   "d2": "2026-10-11",
+   "dep": "1:04PM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:00PM",
+   "arr": "11:30AM+1",
+   "rarr": "8:11PM+1",
+   "pct": 4
   },
   "YYC": {
    "to": "YYC",
