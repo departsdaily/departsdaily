@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-02T19:34:58-04:00",
+ "generated": "2026-09-02T21:28:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -68,7 +68,7 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 174,
+   "price": 172,
    "d1": "2026-09-22",
    "d2": "2026-09-29",
    "dep": "1:33PM",
@@ -113,17 +113,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 198,
-   "d1": "2026-10-07",
-   "d2": "2026-10-12",
-   "dep": "10:11AM",
+   "price": 168,
+   "d1": "2026-10-02",
+   "d2": "2026-10-10",
+   "dep": "10:08PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:03PM",
-   "arr": "2:49PM",
-   "rarr": "10:59PM",
-   "pct": 62
+   "rdep": "3:45PM",
+   "arr": "1:29AM+1",
+   "rarr": "7:13PM",
+   "pct": 68
   },
   "MCO": {
    "to": "MCO",
@@ -188,17 +188,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 201,
-   "d1": "2026-09-29",
-   "d2": "2026-10-01",
-   "dep": "5:56PM",
+   "price": 210,
+   "d1": "2026-10-16",
+   "d2": "2026-10-19",
+   "dep": "10:08PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "8:29PM",
-   "rarr": "8:41AM",
-   "pct": 51
+   "rdep": "6:20AM",
+   "arr": "12:31AM+1",
+   "rarr": "8:59AM",
+   "pct": 49
   },
   "PHX": {
    "to": "PHX",
@@ -278,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 294,
-   "d1": "2026-10-03",
-   "d2": "2026-10-07",
-   "dep": "9:00PM",
+   "price": 200,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "8:05PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:50PM",
-   "arr": "2:03AM+1",
-   "rarr": "2:56AM+1",
-   "pct": 43
+   "rdep": "11:55PM",
+   "arr": "12:57AM+1",
+   "rarr": "5:04AM+1",
+   "pct": 62
   },
   "LON": {
    "to": "LON",
