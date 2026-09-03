@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-03T10:15:03-04:00",
+ "generated": "2026-09-03T10:44:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -8,9 +8,9 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 453,
-   "d1": "2026-10-11",
-   "d2": "2026-10-21",
+   "price": 558,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
    "dep": "6:20AM",
    "al": "JetBlue",
    "stops": 1,
@@ -18,7 +18,7 @@
    "rdep": "1:55PM",
    "arr": "11:09AM",
    "rarr": "7:09PM",
-   "pct": 27
+   "pct": 10
   },
   "AUH": {
    "to": "AUH",

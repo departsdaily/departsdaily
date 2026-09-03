@@ -233,6 +233,29 @@
    "section": "cheapest"
   },
   {
+   "to": "YUL",
+   "city": "Montreal",
+   "price": 431,
+   "d1": "2026-10-06",
+   "d2": "2026-10-09",
+   "airline": "PD",
+   "stops": 0,
+   "dep": "",
+   "rdep": "",
+   "arr": "",
+   "rarr": "",
+   "baseline": 445,
+   "disc": 3,
+   "nights": 3,
+   "on_shape": true,
+   "rung": "shape",
+   "link": "https://www.aviasales.com/search/CLT0610YUL09101?currency=usd&marker=755800",
+   "deal": false,
+   "tier": 3,
+   "tier_bonus": 0,
+   "section": "cheapest"
+  },
+  {
    "to": "HNL",
    "city": "Honolulu",
    "price": 491,
@@ -253,29 +276,6 @@
    "deal": true,
    "tier": 3,
    "tier_bonus": 0,
-   "section": "cheapest"
-  },
-  {
-   "to": "PUJ",
-   "city": "Punta Cana",
-   "price": 587,
-   "d1": "2026-12-14",
-   "d2": "2026-12-20",
-   "airline": "AC",
-   "stops": 1,
-   "dep": "8:55AM",
-   "rdep": "2:50PM",
-   "arr": "3:37PM",
-   "rarr": "7:38PM",
-   "baseline": 590,
-   "disc": 1,
-   "nights": 6,
-   "on_shape": true,
-   "rung": "shape",
-   "link": "https://www.aviasales.com/search/CLT1412PUJ20121?t=AC17972385001797284400000705CLTYYZPUJ17977782001797807900000555PUJFLLCLT_42b76905989286870b3106031ab12a36_50294&search_date=27082026&expected_price_uuid=01a0432a-4091-8040-2a82-e7384168990a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2rHdviTT0ipch4wAkSs2aQ&expected_price_source=share&expected_price_currency=usd&expected_price=587&marker=755800",
-   "deal": false,
-   "tier": 1,
-   "tier_bonus": 14,
    "section": "cheapest"
   }
  ],
@@ -504,9 +504,9 @@
     "window": 0
    },
    "tiers": {
-    "1": 4,
+    "1": 3,
     "2": 0,
-    "3": 2
+    "3": 3
    },
    "n_intl": 3,
    "deals": [
@@ -603,6 +603,29 @@
      "section": "cheapest"
     },
     {
+     "to": "YUL",
+     "city": "Montreal",
+     "price": 431,
+     "d1": "2026-10-06",
+     "d2": "2026-10-09",
+     "airline": "PD",
+     "stops": 0,
+     "dep": "",
+     "rdep": "",
+     "arr": "",
+     "rarr": "",
+     "baseline": 445,
+     "disc": 3,
+     "nights": 3,
+     "on_shape": true,
+     "rung": "shape",
+     "link": "https://www.aviasales.com/search/CLT0610YUL09101?currency=usd&marker=755800",
+     "deal": false,
+     "tier": 3,
+     "tier_bonus": 0,
+     "section": "cheapest"
+    },
+    {
      "to": "HNL",
      "city": "Honolulu",
      "price": 491,
@@ -623,29 +646,6 @@
      "deal": true,
      "tier": 3,
      "tier_bonus": 0,
-     "section": "cheapest"
-    },
-    {
-     "to": "PUJ",
-     "city": "Punta Cana",
-     "price": 587,
-     "d1": "2026-12-14",
-     "d2": "2026-12-20",
-     "airline": "AC",
-     "stops": 1,
-     "dep": "8:55AM",
-     "rdep": "2:50PM",
-     "arr": "3:37PM",
-     "rarr": "7:38PM",
-     "baseline": 590,
-     "disc": 1,
-     "nights": 6,
-     "on_shape": true,
-     "rung": "shape",
-     "link": "https://www.aviasales.com/search/CLT1412PUJ20121?t=AC17972385001797284400000705CLTYYZPUJ17977782001797807900000555PUJFLLCLT_42b76905989286870b3106031ab12a36_50294&search_date=27082026&expected_price_uuid=01a0432a-4091-8040-2a82-e7384168990a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2rHdviTT0ipch4wAkSs2aQ&expected_price_source=share&expected_price_currency=usd&expected_price=587&marker=755800",
-     "deal": false,
-     "tier": 1,
-     "tier_bonus": 14,
      "section": "cheapest"
     }
    ]
