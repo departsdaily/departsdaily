@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-09-02T21:29:11-04:00",
+ "generated": "2026-09-03T00:16:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -248,32 +248,32 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 417,
-   "d1": "2026-09-15",
-   "d2": "2026-10-01",
-   "dep": "10:20AM",
-   "al": "AT",
+   "price": 782,
+   "d1": "2026-10-18",
+   "d2": "2026-10-27",
+   "dep": "4:40PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "12:55AM+1",
-   "rarr": "9:55AM+1",
-   "pct": 53
+   "rdep": "7:00AM",
+   "arr": "6:50AM+1",
+   "rarr": "10:55PM",
+   "pct": 11
   },
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 340,
-   "d1": "2026-09-29",
-   "d2": "2026-10-06",
-   "dep": "7:52PM",
-   "al": "Volaris",
+   "price": 246,
+   "d1": "2027-01-01",
+   "d2": "2027-01-06",
+   "dep": "8:00PM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:50AM",
-   "arr": "1:46AM+1",
-   "rarr": "5:07PM",
-   "pct": 35
+   "rdep": "4:30PM",
+   "arr": "1:15AM+1",
+   "rarr": "10:40PM",
+   "pct": 53
   },
   "GCM": {
    "to": "GCM",
@@ -304,6 +304,21 @@
    "arr": "2:10AM+1",
    "rarr": "9:20PM",
    "pct": 36
+  },
+  "MBJ": {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 459,
+   "d1": "2026-11-09",
+   "d2": "2026-11-17",
+   "dep": "5:55PM",
+   "al": "Southwest",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "1:50PM",
+   "arr": "1:30AM+1",
+   "rarr": "9:55PM",
+   "pct": 15
   },
   "PAR": {
    "to": "PAR",
@@ -338,9 +353,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 673,
-   "d1": "2026-10-07",
-   "d2": "2026-10-15",
+   "price": 692,
+   "d1": "2026-10-14",
+   "d2": "2026-10-24",
    "dep": "4:45PM",
    "al": "DE",
    "stops": 1,
@@ -348,7 +363,7 @@
    "rdep": "8:10AM",
    "arr": "5:45AM+1",
    "rarr": "10:00PM",
-   "pct": 29
+   "pct": 27
   },
   "SJU": {
    "to": "SJU",

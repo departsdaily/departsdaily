@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-02T21:27:59-04:00",
+ "generated": "2026-09-03T00:15:23-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -94,21 +94,6 @@
    "arr": "9:21AM",
    "rarr": "12:06AM+1",
    "pct": 75
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 306,
-   "d1": "2026-09-05",
-   "d2": "2026-09-07",
-   "dep": "8:29PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "4:19PM",
-   "arr": "12:56AM+1",
-   "rarr": "9:49PM",
-   "pct": 25
   },
   "LAS": {
    "to": "LAS",
@@ -218,7 +203,7 @@
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 41,
+   "price": 44,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
    "dep": "5:10AM",
@@ -228,7 +213,7 @@
    "rdep": "8:41AM",
    "arr": "7:16AM",
    "rarr": "11:06AM",
-   "pct": 91
+   "pct": 90
   },
   "SEA": {
    "to": "SEA",
@@ -308,9 +293,9 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 449,
-   "d1": "2026-09-12",
-   "d2": "2026-09-19",
+   "price": 299,
+   "d1": "2026-09-21",
+   "d2": "2026-09-25",
    "dep": "10:50AM",
    "al": "Frontier",
    "stops": 0,
@@ -318,7 +303,7 @@
    "rdep": "1:51PM",
    "arr": "1:37PM",
    "rarr": "4:39PM",
-   "pct": 14
+   "pct": 43
   },
   "GCM": {
    "to": "GCM",
@@ -398,17 +383,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 392,
-   "d1": "2026-10-10",
-   "d2": "2026-10-16",
-   "dep": "7:49PM",
+   "price": 396,
+   "d1": "2026-11-09",
+   "d2": "2026-11-18",
+   "dep": "1:28PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:23PM",
-   "arr": "12:15AM+1",
-   "rarr": "6:14PM",
-   "pct": 30
+   "rdep": "2:21PM",
+   "arr": "6:01PM",
+   "rarr": "7:36PM",
+   "pct": 29
   },
   "ROM": {
    "to": "ROM",

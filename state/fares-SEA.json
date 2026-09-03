@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-02T21:30:04-04:00",
+ "generated": "2026-09-03T00:17:22-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -180,9 +180,9 @@
    "al": "Alaska",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:00PM",
+   "rdep": "6:00AM",
    "arr": "4:20AM",
-   "rarr": "11:38PM",
+   "rarr": "10:30AM",
    "pct": 42
   },
   "PHX": {

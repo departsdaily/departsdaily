@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-02T21:27:40-04:00",
+ "generated": "2026-09-03T00:15:04-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -140,21 +140,6 @@
    "rarr": "7:10PM",
    "pct": -4
   },
-  "FRA": {
-   "to": "FRA",
-   "city": "Frankfurt",
-   "price": 1235,
-   "d1": "2026-09-05",
-   "d2": "2026-09-19",
-   "dep": "9:52PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "6:15PM",
-   "arr": "9:53AM+1",
-   "rarr": "7:10AM+1",
-   "pct": -37
-  },
   "GDL": {
    "to": "GDL",
    "city": "Guadalajara",
@@ -278,9 +263,9 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 137,
-   "d1": "2026-11-11",
-   "d2": "2026-11-16",
+   "price": 135,
+   "d1": "2026-11-06",
+   "d2": "2026-11-09",
    "dep": "6:05AM",
    "al": "Frontier",
    "stops": 0,
@@ -563,17 +548,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 235,
-   "d1": "2026-10-02",
-   "d2": "2026-10-06",
-   "dep": "10:56AM",
+   "price": 266,
+   "d1": "2026-10-16",
+   "d2": "2026-10-19",
+   "dep": "11:56AM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:52PM",
-   "arr": "4:25PM",
-   "rarr": "6:13PM",
-   "pct": 51
+   "rdep": "9:50PM",
+   "arr": "5:11PM",
+   "rarr": "3:37AM+1",
+   "pct": 45
   },
   "YYC": {
    "to": "YYC",

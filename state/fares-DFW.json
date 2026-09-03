@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-02T21:28:35-04:00",
+ "generated": "2026-09-03T00:15:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 197,
-   "d1": "2026-09-23",
-   "d2": "2026-09-25",
-   "dep": "7:00AM",
+   "price": 283,
+   "d1": "2026-09-17",
+   "d2": "2026-09-20",
+   "dep": "6:30AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:08PM",
-   "arr": "11:55AM",
+   "arr": "1:22PM",
    "rarr": "9:21PM",
-   "pct": 56
+   "pct": 36
   },
   "BOS": {
    "to": "BOS",
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 132,
-   "d1": "2026-11-04",
-   "d2": "2026-11-09",
-   "dep": "10:03PM",
+   "price": 168,
+   "d1": "2026-09-17",
+   "d2": "2026-09-19",
+   "dep": "10:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "1:08AM+1",
-   "rarr": "8:54PM",
-   "pct": 71
+   "rdep": "8:40AM",
+   "arr": "1:59AM+1",
+   "rarr": "11:41AM",
+   "pct": 64
   },
   "LAX": {
    "to": "LAX",
@@ -278,7 +278,7 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 200,
+   "price": 174,
    "d1": "2026-11-05",
    "d2": "2026-11-09",
    "dep": "8:05PM",
@@ -288,7 +288,7 @@
    "rdep": "11:55PM",
    "arr": "12:57AM+1",
    "rarr": "5:04AM+1",
-   "pct": 62
+   "pct": 67
   },
   "LON": {
    "to": "LON",
