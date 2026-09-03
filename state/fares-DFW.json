@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-03T16:15:41-04:00",
+ "generated": "2026-09-03T18:15:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -143,16 +143,16 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 148,
-   "d1": "2026-09-30",
-   "d2": "2026-10-02",
-   "dep": "1:23PM",
+   "price": 146,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
+   "dep": "4:24PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:30AM",
-   "arr": "5:20PM",
-   "rarr": "1:52PM",
+   "rdep": "7:20AM",
+   "arr": "8:59PM",
+   "rarr": "12:22PM",
    "pct": 66
   },
   "MIA": {
@@ -278,7 +278,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 594,
+   "price": 990,
    "d1": "2026-10-13",
    "d2": "2026-10-18",
    "dep": "9:30PM",
@@ -288,7 +288,7 @@
    "rdep": "11:20PM",
    "arr": "1:05PM+1",
    "rarr": "3:25PM+1",
-   "pct": 32
+   "pct": -12
   },
   "CUN": {
    "to": "CUN",
@@ -323,7 +323,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 713,
+   "price": 693,
    "d1": "2026-12-16",
    "d2": "2026-12-20",
    "dep": "7:00AM",
@@ -333,7 +333,7 @@
    "rdep": "1:50PM",
    "arr": "2:30PM",
    "rarr": "6:45PM",
-   "pct": -32
+   "pct": -28
   },
   "PAR": {
    "to": "PAR",

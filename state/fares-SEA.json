@@ -1,16 +1,16 @@
 {
  "origin": "SEA",
- "generated": "2026-09-03T16:17:20-04:00",
+ "generated": "2026-09-03T18:17:24-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 381,
-   "d1": "2026-09-18",
-   "d2": "2026-09-21",
+   "price": 437,
+   "d1": "2026-09-12",
+   "d2": "2026-09-16",
    "dep": "4:27PM",
    "al": "Frontier",
    "stops": 1,
@@ -18,7 +18,7 @@
    "rdep": "7:00AM",
    "arr": "10:47PM",
    "rarr": "2:04PM",
-   "pct": 42
+   "pct": 34
   },
   "DEN": {
    "to": "DEN",
@@ -215,20 +215,35 @@
    "rarr": "9:40PM",
    "pct": 67
   },
+  "CUN": {
+   "to": "CUN",
+   "city": "Canc\u00fan",
+   "price": 564,
+   "d1": "2026-09-26",
+   "d2": "2026-10-10",
+   "dep": "4:27PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "5:25AM",
+   "arr": "1:11AM+1",
+   "rarr": "2:36PM",
+   "pct": -8
+  },
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 590,
-   "d1": "2026-12-01",
-   "d2": "2026-12-08",
-   "dep": "7:45AM",
-   "al": "Air Canada",
+   "price": 612,
+   "d1": "2026-10-16",
+   "d2": "2026-10-23",
+   "dep": "3:40PM",
+   "al": "Icelandair",
    "stops": 2,
    "xfer": 0,
-   "rdep": "6:50PM",
-   "arr": "10:30PM",
-   "rarr": "11:24AM+1",
-   "pct": 31
+   "rdep": "6:15PM",
+   "arr": "4:10AM+1",
+   "rarr": "7:20AM+1",
+   "pct": 28
   },
   "NAS": {
    "to": "NAS",
@@ -274,6 +289,21 @@
    "arr": "5:35AM+1",
    "rarr": "8:25PM",
    "pct": 40
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 631,
+   "d1": "2026-09-20",
+   "d2": "2026-09-27",
+   "dep": "6:45PM",
+   "al": "Southwest",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "9:25PM",
+   "arr": "4:00AM+1",
+   "rarr": "7:25AM+1",
+   "pct": -50
   }
  }
 }
