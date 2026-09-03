@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-03T14:16:02-04:00",
+ "generated": "2026-09-03T16:10:00-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -79,6 +79,21 @@
    "arr": "4:32PM",
    "rarr": "5:57PM",
    "pct": 32
+  },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 219,
+   "d1": "2026-10-01",
+   "d2": "2026-10-08",
+   "dep": "6:13PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "10:29AM",
+   "arr": "8:40PM",
+   "rarr": "1:10PM",
+   "pct": 49
   },
   "LAX": {
    "to": "LAX",

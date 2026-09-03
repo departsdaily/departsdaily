@@ -1,41 +1,39 @@
 {
  "origin": "BOS",
- "generated": "2026-09-03T14:17:31-04:00",
+ "generated": "2026-09-03T16:11:28-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
- "routes_failed": [
-  "ROM"
- ],
+ "routes_priced": 25,
+ "routes_failed": [],
  "fares": {
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 318,
+   "price": 223,
    "d1": "2026-09-18",
-   "d2": "2026-09-27",
-   "dep": "10:51AM",
-   "al": "American",
-   "stops": 1,
+   "d2": "2026-09-20",
+   "dep": "6:05AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:59AM",
-   "arr": "12:36PM",
-   "rarr": "9:39AM",
-   "pct": 18
+   "rdep": "1:15PM",
+   "arr": "7:46AM",
+   "rarr": "3:02PM",
+   "pct": 43
   },
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 308,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "8:40AM",
-   "al": "Southwest",
+   "price": 365,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
+   "dep": "11:17AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "2:00PM",
-   "rarr": "10:20AM",
-   "pct": 43
+   "rdep": "9:54PM",
+   "arr": "5:45PM",
+   "rarr": "3:51AM+1",
+   "pct": 33
   },
   "FLL": {
    "to": "FLL",
@@ -100,17 +98,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 181,
+   "price": 132,
    "d1": "2026-10-10",
    "d2": "2026-10-17",
-   "dep": "8:35PM",
-   "al": "JetBlue",
+   "dep": "5:49PM",
+   "al": "Breeze",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:00AM",
-   "arr": "11:55PM",
-   "rarr": "1:00PM",
-   "pct": 54
+   "rdep": "7:45AM",
+   "arr": "9:26PM",
+   "rarr": "11:02AM",
+   "pct": 66
   },
   "MIA": {
    "to": "MIA",
@@ -145,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 224,
-   "d1": "2026-10-10",
-   "d2": "2026-10-17",
-   "dep": "4:11PM",
+   "price": 226,
+   "d1": "2026-11-03",
+   "d2": "2026-11-07",
+   "dep": "9:45AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:35AM",
-   "arr": "5:29PM",
-   "rarr": "7:59AM",
-   "pct": 45
+   "rdep": "6:40AM",
+   "arr": "11:02AM",
+   "rarr": "7:52AM",
+   "pct": 44
   },
   "ORD": {
    "to": "ORD",
@@ -351,6 +349,21 @@
    "arr": "11:44PM",
    "rarr": "8:14PM",
    "pct": 44
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 550,
+   "d1": "2026-12-28",
+   "d2": "2027-01-01",
+   "dep": "10:10PM",
+   "al": "TAP Portugal",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:55AM",
+   "arr": "7:50AM+1",
+   "rarr": "5:10PM",
+   "pct": 42
   },
   "SJU": {
    "to": "SJU",

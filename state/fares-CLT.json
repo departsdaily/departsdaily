@@ -1,13 +1,9 @@
 {
  "origin": "CLT",
- "generated": "2026-09-03T14:14:49-04:00",
+ "generated": "2026-09-03T16:08:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
- "routes_failed": [
-  "DEN",
-  "MDE",
-  "TYS"
- ],
+ "routes_priced": 42,
+ "routes_failed": [],
  "fares": {
   "AUA": {
    "to": "AUA",
@@ -113,6 +109,21 @@
    "arr": "5:21AM+1",
    "rarr": "12:35AM+1",
    "pct": -34
+  },
+  "DEN": {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 239,
+   "d1": "2026-10-31",
+   "d2": "2026-11-03",
+   "dep": "7:30AM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "3:41PM",
+   "arr": "11:16AM",
+   "rarr": "7:00PM",
+   "pct": 47
   },
   "DUB": {
    "to": "DUB",

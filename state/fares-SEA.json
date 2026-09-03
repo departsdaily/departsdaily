@@ -1,11 +1,9 @@
 {
  "origin": "SEA",
- "generated": "2026-09-03T14:17:13-04:00",
+ "generated": "2026-09-03T16:11:09-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
- "routes_failed": [
-  "PHL"
- ],
+ "routes_priced": 18,
+ "routes_failed": [],
  "fares": {
   "DCA": {
    "to": "DCA",
@@ -130,17 +128,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 283,
-   "d1": "2026-09-10",
-   "d2": "2026-09-17",
-   "dep": "8:00AM",
-   "al": "Alaska",
-   "stops": 0,
+   "price": 353,
+   "d1": "2026-09-17",
+   "d2": "2026-09-24",
+   "dep": "4:27PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:16PM",
-   "arr": "2:13PM",
-   "rarr": "12:54AM+1",
-   "pct": 55
+   "rdep": "5:50AM",
+   "arr": "11:11PM",
+   "rarr": "1:20PM",
+   "pct": 44
   },
   "MSY": {
    "to": "MSY",
@@ -216,21 +214,6 @@
    "arr": "10:54PM",
    "rarr": "9:40PM",
    "pct": 67
-  },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 694,
-   "d1": "2026-09-07",
-   "d2": "2026-09-13",
-   "dep": "11:00PM",
-   "al": "Volaris",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:49PM",
-   "arr": "6:44AM+1",
-   "rarr": "8:38PM",
-   "pct": -33
   },
   "LON": {
    "to": "LON",
