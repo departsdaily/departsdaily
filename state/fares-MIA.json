@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-03T10:17:07-04:00",
+ "generated": "2026-09-03T12:17:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -235,14 +235,14 @@
    "city": "Amsterdam",
    "price": 401,
    "d1": "2026-11-08",
-   "d2": "2026-11-14",
+   "d2": "2026-11-15",
    "dep": "4:50PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:50PM",
+   "rdep": "7:00AM",
    "arr": "4:10AM+1",
-   "rarr": "6:50AM+1",
+   "rarr": "8:00PM",
    "pct": 54
   },
   "AUA": {

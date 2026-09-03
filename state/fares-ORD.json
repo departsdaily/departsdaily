@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-03T10:15:40-04:00",
+ "generated": "2026-09-03T12:16:02-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -173,9 +173,9 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 114,
-   "d1": "2026-09-21",
-   "d2": "2026-09-23",
+   "price": 149,
+   "d1": "2026-09-23",
+   "d2": "2026-09-30",
    "dep": "7:11AM",
    "al": "Frontier",
    "stops": 0,
@@ -183,7 +183,7 @@
    "rdep": "12:53PM",
    "arr": "10:23AM",
    "rarr": "4:20PM",
-   "pct": 74
+   "pct": 66
   },
   "MSY": {
    "to": "MSY",
@@ -203,17 +203,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 196,
-   "d1": "2026-09-10",
-   "d2": "2026-09-12",
-   "dep": "10:59AM",
-   "al": "JetBlue",
+   "price": 145,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
+   "dep": "11:37AM",
+   "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:10AM",
-   "arr": "1:20PM",
-   "rarr": "10:58AM",
-   "pct": 53
+   "rdep": "6:55AM",
+   "arr": "1:59PM",
+   "rarr": "9:48AM",
+   "pct": 65
   },
   "PHL": {
    "to": "PHL",
@@ -308,17 +308,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 539,
-   "d1": "2026-09-13",
-   "d2": "2026-09-18",
-   "dep": "9:01PM",
-   "al": "American",
-   "stops": 2,
+   "price": 342,
+   "d1": "2026-12-02",
+   "d2": "2026-12-07",
+   "dep": "10:05AM",
+   "al": "Air Canada",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "2:30PM",
-   "arr": "3:15AM+1",
-   "rarr": "11:26PM",
-   "pct": 13
+   "rdep": "5:25PM",
+   "arr": "4:57PM",
+   "rarr": "12:54AM+1",
+   "pct": 45
   },
   "CUN": {
    "to": "CUN",
