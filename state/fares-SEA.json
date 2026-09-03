@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-03T00:17:22-04:00",
+ "generated": "2026-09-03T02:17:26-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 314,
+   "price": 491,
    "d1": "2026-09-06",
    "d2": "2026-09-10",
    "dep": "8:23AM",
    "al": "Alaska",
-   "stops": 0,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "6:29PM",
+   "rdep": "12:18PM",
    "arr": "2:24PM",
-   "rarr": "12:56AM+1",
-   "pct": 50
+   "rarr": "10:47PM",
+   "pct": 22
   },
   "HOU": {
    "to": "HOU",
@@ -188,17 +188,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 223,
-   "d1": "2026-09-30",
+   "price": 276,
+   "d1": "2026-09-29",
    "d2": "2026-10-04",
-   "dep": "7:25PM",
+   "dep": "4:27PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:23PM",
-   "arr": "11:52PM",
-   "rarr": "9:28PM",
-   "pct": 44
+   "rdep": "8:56PM",
+   "arr": "9:17PM",
+   "rarr": "1:49AM+1",
+   "pct": 31
   },
   "SFO": {
    "to": "SFO",

@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-03T00:17:39-04:00",
+ "generated": "2026-09-03T02:17:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 998,
+   "price": 1289,
    "d1": "2026-12-26",
-   "d2": "2026-12-30",
-   "dep": "6:53PM",
-   "al": "American",
-   "stops": 1,
+   "d2": "2027-01-02",
+   "dep": "1:15PM",
+   "al": "P3",
+   "stops": 3,
    "xfer": 0,
-   "rdep": "5:36PM",
-   "arr": "12:28AM+1",
-   "rarr": "11:09PM",
-   "pct": -92
+   "rdep": "11:55PM",
+   "arr": "2:35AM+1",
+   "rarr": "10:08AM+1",
+   "pct": -148
   },
   "LON": {
    "to": "LON",
