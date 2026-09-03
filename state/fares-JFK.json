@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-03T12:17:22-04:00",
+ "generated": "2026-09-03T14:16:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 219,
+   "price": 217,
    "d1": "2026-09-24",
    "d2": "2026-09-28",
-   "dep": "6:30PM",
+   "dep": "4:15PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "4:43PM",
-   "arr": "10:24PM",
-   "rarr": "8:29PM",
-   "pct": 60
+   "rdep": "9:47AM",
+   "arr": "8:12PM",
+   "rarr": "1:30PM",
+   "pct": 61
   },
   "FLL": {
    "to": "FLL",
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 280,
-   "d1": "2026-11-25",
-   "d2": "2026-11-29",
-   "dep": "7:50PM",
+   "price": 216,
+   "d1": "2026-10-22",
+   "d2": "2026-10-26",
+   "dep": "9:59PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:59PM",
-   "arr": "1:45AM+1",
-   "rarr": "4:49AM+1",
-   "pct": 59
+   "rdep": "6:00AM",
+   "arr": "3:44AM+1",
+   "rarr": "10:48AM",
+   "pct": 68
   },
   "LAX": {
    "to": "LAX",

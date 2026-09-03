@@ -1,9 +1,11 @@
 {
  "origin": "LAX",
- "generated": "2026-09-03T12:17:02-04:00",
+ "generated": "2026-09-03T14:16:20-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
- "routes_failed": [],
+ "routes_priced": 24,
+ "routes_failed": [
+  "ROM"
+ ],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -233,7 +235,7 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 61,
+   "price": 83,
    "d1": "2026-10-03",
    "d2": "2026-10-06",
    "dep": "8:44AM",
@@ -243,7 +245,7 @@
    "rdep": "9:00AM",
    "arr": "10:22AM",
    "rarr": "10:37AM",
-   "pct": 83
+   "pct": 77
   },
   "AMS": {
    "to": "AMS",
@@ -349,21 +351,6 @@
    "arr": "3:43AM+1",
    "rarr": "12:13AM+1",
    "pct": 16
-  },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 692,
-   "d1": "2026-10-14",
-   "d2": "2026-10-24",
-   "dep": "4:45PM",
-   "al": "DE",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:10AM",
-   "arr": "5:45AM+1",
-   "rarr": "10:00PM",
-   "pct": 27
   },
   "SJU": {
    "to": "SJU",

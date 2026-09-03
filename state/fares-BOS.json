@@ -1,9 +1,11 @@
 {
  "origin": "BOS",
- "generated": "2026-09-03T12:18:19-04:00",
+ "generated": "2026-09-03T14:17:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
- "routes_failed": [],
+ "routes_priced": 24,
+ "routes_failed": [
+  "ROM"
+ ],
  "fares": {
   "DCA": {
    "to": "DCA",
@@ -143,17 +145,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 216,
-   "d1": "2026-09-21",
-   "d2": "2026-09-28",
-   "dep": "5:15AM",
+   "price": 224,
+   "d1": "2026-10-10",
+   "d2": "2026-10-17",
+   "dep": "4:11PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:40AM",
-   "arr": "6:27AM",
+   "rdep": "6:35AM",
+   "arr": "5:29PM",
    "rarr": "7:59AM",
-   "pct": 47
+   "pct": 45
   },
   "ORD": {
    "to": "ORD",
@@ -278,17 +280,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 544,
-   "d1": "2026-12-28",
-   "d2": "2027-01-01",
-   "dep": "7:40PM",
+   "price": 438,
+   "d1": "2026-09-17",
+   "d2": "2026-09-30",
+   "dep": "5:45AM",
    "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:00PM",
-   "arr": "4:00AM+1",
-   "rarr": "10:07PM",
-   "pct": 36
+   "rdep": "12:40PM",
+   "arr": "2:40PM",
+   "rarr": "9:27PM",
+   "pct": 48
   },
   "MBJ": {
    "to": "MBJ",
@@ -349,21 +351,6 @@
    "arr": "11:44PM",
    "rarr": "8:14PM",
    "pct": 44
-  },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 550,
-   "d1": "2026-12-28",
-   "d2": "2027-01-01",
-   "dep": "10:10PM",
-   "al": "TAP Portugal",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "7:50AM+1",
-   "rarr": "5:10PM",
-   "pct": 42
   },
   "SJU": {
    "to": "SJU",
