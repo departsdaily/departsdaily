@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-03T20:16:27-04:00",
+ "generated": "2026-09-03T22:16:09-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -368,17 +368,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 305,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "5:00AM",
-   "al": "United",
+   "price": 397,
+   "d1": "2026-09-10",
+   "d2": "2026-09-14",
+   "dep": "9:40PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:40AM",
-   "arr": "12:56PM",
-   "rarr": "4:27PM",
-   "pct": 27
+   "rdep": "6:33AM",
+   "arr": "5:36AM+1",
+   "rarr": "3:24PM",
+   "pct": 5
   }
  }
 }

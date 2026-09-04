@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-03T20:16:07-04:00",
+ "generated": "2026-09-03T22:15:51-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 19,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 219,
-   "d1": "2026-10-01",
-   "d2": "2026-10-08",
-   "dep": "6:13PM",
+   "price": 212,
+   "d1": "2026-09-22",
+   "d2": "2026-09-26",
+   "dep": "6:09AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:29AM",
-   "arr": "8:40PM",
-   "rarr": "1:10PM",
-   "pct": 49
+   "rdep": "6:25AM",
+   "arr": "8:35AM",
+   "rarr": "9:05AM",
+   "pct": 51
   },
   "LAX": {
    "to": "LAX",
@@ -263,17 +263,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 862,
-   "d1": "2026-09-23",
-   "d2": "2026-09-30",
-   "dep": "12:40PM",
-   "al": "",
-   "stops": 3,
-   "xfer": 1,
-   "rdep": "11:45AM",
-   "arr": "12:47AM+1",
-   "rarr": "2:59AM+1",
-   "pct": 4
+   "price": 934,
+   "d1": "2026-09-28",
+   "d2": "2026-10-03",
+   "dep": "4:40PM",
+   "al": "Icelandair",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "6:50PM",
+   "arr": "4:00AM+1",
+   "rarr": "8:55AM+1",
+   "pct": -4
   },
   "ROM": {
    "to": "ROM",

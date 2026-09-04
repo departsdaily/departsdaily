@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-03T20:14:47-04:00",
+ "generated": "2026-09-03T22:14:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -173,16 +173,16 @@
   "HNL": {
    "to": "HNL",
    "city": "Honolulu",
-   "price": 491,
+   "price": 738,
    "d1": "2026-10-06",
-   "d2": "2026-10-12",
-   "dep": "8:46AM",
+   "d2": "2026-10-13",
+   "dep": "11:39AM",
    "al": "United",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "4:00PM",
-   "arr": "7:47PM",
-   "rarr": "2:22AM+1",
+   "rdep": "3:23PM",
+   "arr": "11:56PM",
+   "rarr": "3:38AM+1",
    "pct": 0
   },
   "LAS": {

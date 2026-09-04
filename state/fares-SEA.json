@@ -1,10 +1,25 @@
 {
  "origin": "SEA",
- "generated": "2026-09-03T20:17:26-04:00",
+ "generated": "2026-09-03T22:17:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
+  "BOS": {
+   "to": "BOS",
+   "city": "Boston",
+   "price": 508,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
+   "dep": "12:05PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:20PM",
+   "arr": "8:07PM",
+   "rarr": "1:37AM+1",
+   "pct": 24
+  },
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
@@ -173,17 +188,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 283,
-   "d1": "2026-09-18",
-   "d2": "2026-09-25",
-   "dep": "12:16AM",
-   "al": "Alaska",
+   "price": 298,
+   "d1": "2026-11-04",
+   "d2": "2026-11-08",
+   "dep": "4:27PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:55PM",
-   "arr": "4:20AM",
-   "rarr": "3:57AM+1",
-   "pct": 42
+   "rdep": "5:15PM",
+   "arr": "9:41PM",
+   "rarr": "12:31AM+1",
+   "pct": 39
   },
   "PHX": {
    "to": "PHX",
