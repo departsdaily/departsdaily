@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-04T10:15:40-04:00",
+ "generated": "2026-09-04T12:15:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 115,
-   "d1": "2026-09-26",
-   "d2": "2026-09-29",
+   "price": 209,
+   "d1": "2026-10-01",
+   "d2": "2026-10-08",
    "dep": "6:30AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "8:55PM",
    "arr": "9:15AM",
-   "rarr": "11:23PM",
-   "pct": 72
+   "rarr": "11:24PM",
+   "pct": 49
   },
   "DFW": {
    "to": "DFW",
@@ -98,16 +98,16 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 151,
-   "d1": "2026-09-21",
-   "d2": "2026-09-24",
-   "dep": "7:00AM",
-   "al": "JetBlue",
-   "stops": 1,
+   "price": 153,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
+   "dep": "8:04AM",
+   "al": "Frontier",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "12:18PM",
-   "arr": "12:43PM",
-   "rarr": "3:45PM",
+   "rdep": "1:07PM",
+   "arr": "11:12AM",
+   "rarr": "4:30PM",
    "pct": 65
   },
   "HOU": {

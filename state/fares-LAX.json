@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-04T10:16:32-04:00",
+ "generated": "2026-09-04T12:16:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 542,
-   "d1": "2026-10-02",
-   "d2": "2026-10-20",
-   "dep": "3:40PM",
-   "al": "United",
-   "stops": 1,
+   "price": 693,
+   "d1": "2026-09-18",
+   "d2": "2026-10-08",
+   "dep": "10:20AM",
+   "al": "AT",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "2:10AM+1",
-   "rarr": "9:20PM",
-   "pct": 36
+   "rdep": "6:55AM",
+   "arr": "1:55AM+1",
+   "rarr": "11:45PM",
+   "pct": 18
   },
   "MBJ": {
    "to": "MBJ",

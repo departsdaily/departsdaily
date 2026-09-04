@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-04T10:16:50-04:00",
+ "generated": "2026-09-04T12:17:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 233,
-   "d1": "2026-10-14",
+   "price": 240,
+   "d1": "2026-10-15",
    "d2": "2026-10-23",
-   "dep": "7:22AM",
+   "dep": "5:20PM",
    "al": "Alaska",
    "stops": 1,
    "xfer": 0,
    "rdep": "6:56PM",
-   "arr": "4:36PM",
+   "arr": "2:03AM+1",
    "rarr": "3:05AM+1",
-   "pct": 75
+   "pct": 74
   },
   "MCO": {
    "to": "MCO",
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 208,
-   "d1": "2026-10-03",
-   "d2": "2026-10-10",
-   "dep": "6:45PM",
-   "al": "American",
-   "stops": 1,
+   "price": 157,
+   "d1": "2026-09-18",
+   "d2": "2026-09-26",
+   "dep": "7:20PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:22PM",
-   "arr": "11:02PM",
-   "rarr": "9:16PM",
-   "pct": 43
+   "rdep": "3:30PM",
+   "arr": "10:38PM",
+   "rarr": "6:14PM",
+   "pct": 57
   },
   "AMS": {
    "to": "AMS",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 191,
-   "d1": "2026-09-08",
-   "d2": "2026-09-13",
-   "dep": "12:00PM",
+   "price": 176,
+   "d1": "2026-10-31",
+   "d2": "2026-11-09",
+   "dep": "3:14PM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "3:59PM",
-   "rarr": "9:52AM",
-   "pct": 55
+   "rdep": "6:25AM",
+   "arr": "9:04PM",
+   "rarr": "12:02PM",
+   "pct": 58
   }
  }
 }

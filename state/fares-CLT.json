@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-04T11:07:01-04:00",
+ "generated": "2026-09-04T12:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -469,6 +469,21 @@
    "arr": "11:31PM",
    "rarr": "8:09PM",
    "pct": -7
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 487,
+   "d1": "2026-10-04",
+   "d2": "2026-10-08",
+   "dep": "7:54PM",
+   "al": "Frontier",
+   "stops": 3,
+   "xfer": 0,
+   "rdep": "9:16PM",
+   "arr": "2:44AM+1",
+   "rarr": "8:16AM+1",
+   "pct": 34
   },
   "SFO": {
    "to": "SFO",

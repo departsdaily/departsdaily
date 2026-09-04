@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-04T10:17:41-04:00",
+ "generated": "2026-09-04T12:18:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 329,
-   "d1": "2026-10-05",
-   "d2": "2026-10-10",
-   "dep": "7:30PM",
-   "al": "Southwest",
-   "stops": 2,
+   "price": 310,
+   "d1": "2026-09-25",
+   "d2": "2026-09-30",
+   "dep": "6:50AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:15PM",
-   "arr": "3:55AM+1",
-   "rarr": "12:30AM+1",
-   "pct": 57
+   "rdep": "2:39PM",
+   "arr": "1:13PM",
+   "rarr": "8:59PM",
+   "pct": 60
   },
   "TPA": {
    "to": "TPA",
