@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-04T04:16:22-04:00",
+ "generated": "2026-09-04T06:16:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 1002,
-   "d1": "2026-09-15",
-   "d2": "2026-09-21",
-   "dep": "9:30PM",
-   "al": "Turkish",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:05AM",
-   "arr": "1:30PM+1",
-   "rarr": "11:45PM",
-   "pct": -18
+   "price": 771,
+   "d1": "2026-11-04",
+   "d2": "2026-11-10",
+   "dep": "9:27AM",
+   "al": "",
+   "stops": 2,
+   "xfer": 1,
+   "rdep": "9:35AM",
+   "arr": "8:19PM",
+   "rarr": "11:41PM",
+   "pct": 9
   },
   "MBJ": {
    "to": "MBJ",
