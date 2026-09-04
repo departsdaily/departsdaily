@@ -1,34 +1,11 @@
 {
- "date": "2026-09-03",
+ "date": "2026-09-04",
  "origin": "CLT",
  "deals": [
   {
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 170,
-   "d1": "2026-10-09",
-   "d2": "2026-10-11",
-   "airline": "F9",
-   "stops": 1,
-   "dep": "11:56AM",
-   "rdep": "12:52AM",
-   "arr": "6:19PM",
-   "rarr": "6:41AM",
-   "baseline": 338,
-   "disc": 50,
-   "nights": 2,
-   "on_shape": true,
-   "rung": "shape",
-   "link": "https://www.aviasales.com/search/CLT0910LAS11101?t=F917915469601791569040000548CLTIAHLAS17916799201791717060000439LASIAHCLT_0c209e5a06c251d631bf971a3016fa0c_14625&search_date=28082026&expected_price_uuid=01a046a0-770e-8040-aa91-2ddc97684fd8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=IATiJ0JOUJ2KFwUGT5wJYw&expected_price_source=share&expected_price_currency=usd&expected_price=170&marker=755800",
-   "deal": true,
-   "tier": 1,
-   "tier_bonus": 14,
-   "section": "weekend"
-  },
-  {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 241,
+   "price": 240,
    "d1": "2026-09-16",
    "d2": "2026-09-23",
    "airline": "F9",
@@ -42,7 +19,7 @@
    "nights": 7,
    "on_shape": true,
    "rung": "shape",
-   "link": "https://www.aviasales.com/search/CLT1609LAX23091?t=F917895948001789668600001410CLTMCOLAX17901251401790167080000519LAXDFWCLT_848aa99754f7d4c1bdca0d85699cce24_20774&search_date=31082026&expected_price_uuid=01a05a27-dd03-8030-67d2-b5d86a56e6ac&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=YY63RyGBMcVhMfh1od77RQ&expected_price_source=share&expected_price_currency=usd&expected_price=241&marker=755800",
+   "link": "https://www.aviasales.com/search/CLT1609LAX23091?t=F917895948001789668600001410CLTMCOLAX17901251401790167080000519LAXDFWCLT_848aa99754f7d4c1bdca0d85699cce24_20770&search_date=03092026&expected_price_uuid=01a069aa-27f7-8030-6829-8e912b739b4f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=YY63RyGBMcVhMfh1od77RQ&expected_price_source=share&expected_price_currency=usd&expected_price=240&marker=755800",
    "deal": true,
    "tier": 1,
    "tier_bonus": 14,
@@ -134,7 +111,7 @@
    "nights": 7,
    "on_shape": true,
    "rung": "shape",
-   "link": "https://www.aviasales.com/search/CLT1909LAX26091?t=F917898366601789860540000578CLTDFWLAX17904024001790507640001574LAXIAHCLT_eefa519b7485f3e61519641e5eeea697_21440&search_date=31082026&expected_price_uuid=01a05a26-f0b5-8030-65b0-97bef85e800d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=3ng_CYDkHIWBT_hzcFrX1g&expected_price_source=share&expected_price_currency=usd&expected_price=248&marker=755800",
+   "link": "https://www.aviasales.com/search/CLT1909LAX26091?t=F917898366601789860540000578CLTDFWLAX17904024001790507640001574LAXIAHCLT_eefa519b7485f3e61519641e5eeea697_21527&search_date=03092026&expected_price_uuid=01a069a7-bfe8-8030-6e17-ac655ee57cfd&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=3ng_CYDkHIWBT_hzcFrX1g&expected_price_source=share&expected_price_currency=usd&expected_price=248&marker=755800",
    "deal": true,
    "tier": 1,
    "tier_bonus": 14,
@@ -182,6 +159,29 @@
    "rung": "shape",
    "link": "https://www.aviasales.com/search/CLT1710LAS03111?t=F917922586201792278720000515CLTPHLLAS17937107401793789820001138LASIAHCLT_a968582b6c18b0a45caada61ce3268c0_22829&search_date=02092026&expected_price_uuid=01a0600e-b354-8040-6651-38bc2928fa80&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=l9jM7orazB2PKNy80S3sNA&expected_price_source=share&expected_price_currency=usd&expected_price=263&marker=755800",
    "deal": true,
+   "tier": 1,
+   "tier_bonus": 14,
+   "section": "cheapest"
+  },
+  {
+   "to": "SAN",
+   "city": "San Diego",
+   "price": 268,
+   "d1": "2026-09-21",
+   "d2": "2026-10-06",
+   "airline": "WN",
+   "stops": 1,
+   "dep": "6:15PM",
+   "rdep": "9:50PM",
+   "arr": "1:10AM+1",
+   "rarr": "4:25AM+1",
+   "baseline": 295,
+   "disc": 9,
+   "nights": 15,
+   "on_shape": true,
+   "rung": "shape",
+   "link": "https://www.aviasales.com/search/CLT2109SAN06101?t=WN17900145001790031000000455CLTBWISAN17913234001791366900000545SANBWICLT_7d396d7ed64be81afb05aafe7cbbf4a0_23236&search_date=04092026&expected_price_uuid=01a069c2-8848-8040-2e4c-12cb8b271d32&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=vQ9fwuimwItbBTvFk7bqdA&expected_price_source=share&expected_price_currency=usd&expected_price=268&marker=755800",
+   "deal": false,
    "tier": 1,
    "tier_bonus": 14,
    "section": "cheapest"
@@ -254,33 +254,10 @@
    "tier": 3,
    "tier_bonus": 0,
    "section": "cheapest"
-  },
-  {
-   "to": "HNL",
-   "city": "Honolulu",
-   "price": 491,
-   "d1": "2026-10-06",
-   "d2": "2026-10-12",
-   "airline": "United",
-   "stops": 1,
-   "dep": "",
-   "rdep": "",
-   "arr": "",
-   "rarr": "",
-   "baseline": 658,
-   "disc": 25,
-   "nights": 6,
-   "on_shape": true,
-   "rung": "shape",
-   "link": "https://www.aviasales.com/search/CLT0610HNL12101?currency=usd&marker=755800",
-   "deal": true,
-   "tier": 3,
-   "tier_bonus": 0,
-   "section": "cheapest"
   }
  ],
- "n_deals": 11,
- "n_rows": 12,
+ "n_deals": 9,
+ "n_rows": 11,
  "sections": [
   {
    "key": "weekend",
@@ -290,43 +267,19 @@
    "angle": "Out Thursday or Friday, back Sunday or Monday. 2 to 4 nights. Built for a normal 9 to 5.",
    "deals_only": true,
    "rows_target": 14,
-   "n": 1,
-   "n_deals": 1,
+   "n": 0,
+   "n_deals": 0,
    "rungs": {
-    "shape": 1,
+    "shape": 0,
     "window": 0
    },
    "tiers": {
-    "1": 1,
+    "1": 0,
     "2": 0,
     "3": 0
    },
    "n_intl": 0,
-   "deals": [
-    {
-     "to": "LAS",
-     "city": "Las Vegas",
-     "price": 170,
-     "d1": "2026-10-09",
-     "d2": "2026-10-11",
-     "airline": "F9",
-     "stops": 1,
-     "dep": "11:56AM",
-     "rdep": "12:52AM",
-     "arr": "6:19PM",
-     "rarr": "6:41AM",
-     "baseline": 338,
-     "disc": 50,
-     "nights": 2,
-     "on_shape": true,
-     "rung": "shape",
-     "link": "https://www.aviasales.com/search/CLT0910LAS11101?t=F917915469601791569040000548CLTIAHLAS17916799201791717060000439LASIAHCLT_0c209e5a06c251d631bf971a3016fa0c_14625&search_date=28082026&expected_price_uuid=01a046a0-770e-8040-aa91-2ddc97684fd8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=IATiJ0JOUJ2KFwUGT5wJYw&expected_price_source=share&expected_price_currency=usd&expected_price=170&marker=755800",
-     "deal": true,
-     "tier": 1,
-     "tier_bonus": 14,
-     "section": "weekend"
-    }
-   ]
+   "deals": []
   },
   {
    "key": "extra_weekend",
@@ -352,7 +305,7 @@
     {
      "to": "LAX",
      "city": "Los Angeles",
-     "price": 241,
+     "price": 240,
      "d1": "2026-09-16",
      "d2": "2026-09-23",
      "airline": "F9",
@@ -366,7 +319,7 @@
      "nights": 7,
      "on_shape": true,
      "rung": "shape",
-     "link": "https://www.aviasales.com/search/CLT1609LAX23091?t=F917895948001789668600001410CLTMCOLAX17901251401790167080000519LAXDFWCLT_848aa99754f7d4c1bdca0d85699cce24_20774&search_date=31082026&expected_price_uuid=01a05a27-dd03-8030-67d2-b5d86a56e6ac&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=YY63RyGBMcVhMfh1od77RQ&expected_price_source=share&expected_price_currency=usd&expected_price=241&marker=755800",
+     "link": "https://www.aviasales.com/search/CLT1609LAX23091?t=F917895948001789668600001410CLTMCOLAX17901251401790167080000519LAXDFWCLT_848aa99754f7d4c1bdca0d85699cce24_20770&search_date=03092026&expected_price_uuid=01a069aa-27f7-8030-6829-8e912b739b4f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=YY63RyGBMcVhMfh1od77RQ&expected_price_source=share&expected_price_currency=usd&expected_price=240&marker=755800",
      "deal": true,
      "tier": 1,
      "tier_bonus": 14,
@@ -481,7 +434,7 @@
      "nights": 7,
      "on_shape": true,
      "rung": "shape",
-     "link": "https://www.aviasales.com/search/CLT1909LAX26091?t=F917898366601789860540000578CLTDFWLAX17904024001790507640001574LAXIAHCLT_eefa519b7485f3e61519641e5eeea697_21440&search_date=31082026&expected_price_uuid=01a05a26-f0b5-8030-65b0-97bef85e800d&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=3ng_CYDkHIWBT_hzcFrX1g&expected_price_source=share&expected_price_currency=usd&expected_price=248&marker=755800",
+     "link": "https://www.aviasales.com/search/CLT1909LAX26091?t=F917898366601789860540000578CLTDFWLAX17904024001790507640001574LAXIAHCLT_eefa519b7485f3e61519641e5eeea697_21527&search_date=03092026&expected_price_uuid=01a069a7-bfe8-8030-6e17-ac655ee57cfd&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=3ng_CYDkHIWBT_hzcFrX1g&expected_price_source=share&expected_price_currency=usd&expected_price=248&marker=755800",
      "deal": true,
      "tier": 1,
      "tier_bonus": 14,
@@ -498,15 +451,15 @@
    "deals_only": false,
    "rows_target": 14,
    "n": 6,
-   "n_deals": 5,
+   "n_deals": 4,
    "rungs": {
     "shape": 6,
     "window": 0
    },
    "tiers": {
-    "1": 3,
+    "1": 4,
     "2": 0,
-    "3": 3
+    "3": 2
    },
    "n_intl": 3,
    "deals": [
@@ -552,6 +505,29 @@
      "rung": "shape",
      "link": "https://www.aviasales.com/search/CLT1710LAS03111?t=F917922586201792278720000515CLTPHLLAS17937107401793789820001138LASIAHCLT_a968582b6c18b0a45caada61ce3268c0_22829&search_date=02092026&expected_price_uuid=01a0600e-b354-8040-6651-38bc2928fa80&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=l9jM7orazB2PKNy80S3sNA&expected_price_source=share&expected_price_currency=usd&expected_price=263&marker=755800",
      "deal": true,
+     "tier": 1,
+     "tier_bonus": 14,
+     "section": "cheapest"
+    },
+    {
+     "to": "SAN",
+     "city": "San Diego",
+     "price": 268,
+     "d1": "2026-09-21",
+     "d2": "2026-10-06",
+     "airline": "WN",
+     "stops": 1,
+     "dep": "6:15PM",
+     "rdep": "9:50PM",
+     "arr": "1:10AM+1",
+     "rarr": "4:25AM+1",
+     "baseline": 295,
+     "disc": 9,
+     "nights": 15,
+     "on_shape": true,
+     "rung": "shape",
+     "link": "https://www.aviasales.com/search/CLT2109SAN06101?t=WN17900145001790031000000455CLTBWISAN17913234001791366900000545SANBWICLT_7d396d7ed64be81afb05aafe7cbbf4a0_23236&search_date=04092026&expected_price_uuid=01a069c2-8848-8040-2e4c-12cb8b271d32&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=vQ9fwuimwItbBTvFk7bqdA&expected_price_source=share&expected_price_currency=usd&expected_price=268&marker=755800",
+     "deal": false,
      "tier": 1,
      "tier_bonus": 14,
      "section": "cheapest"
@@ -624,42 +600,19 @@
      "tier": 3,
      "tier_bonus": 0,
      "section": "cheapest"
-    },
-    {
-     "to": "HNL",
-     "city": "Honolulu",
-     "price": 491,
-     "d1": "2026-10-06",
-     "d2": "2026-10-12",
-     "airline": "United",
-     "stops": 1,
-     "dep": "",
-     "rdep": "",
-     "arr": "",
-     "rarr": "",
-     "baseline": 658,
-     "disc": 25,
-     "nights": 6,
-     "on_shape": true,
-     "rung": "shape",
-     "link": "https://www.aviasales.com/search/CLT0610HNL12101?currency=usd&marker=755800",
-     "deal": true,
-     "tier": 3,
-     "tier_bonus": 0,
-     "section": "cheapest"
     }
    ]
   }
  ],
  "skip": null,
  "plan": {
-  "shape": "urgent",
-  "cover": "GOING SOON",
-  "angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices.",
+  "shape": "friday",
+  "cover": "FRIDAY FARES",
+  "angle": "Expedia's 2026 Air Hacks Report puts Friday as the cheapest day of the week to book a flight, about 3% under Sunday, and the cheapest day to fly overall, up to 8% under a Sunday departure. Worth knowing: for US domestic routes specifically that report still has Tuesday as the cheapest day to actually fly, roughly 14% under Sunday.",
   "content": "board",
   "nights": [
    2,
-   4
+   9
   ],
   "sections": [
    "weekend",
@@ -667,9 +620,9 @@
    "weekish",
    "cheapest"
   ],
-  "on_shape": 12,
+  "on_shape": 11,
   "rungs": {
-   "shape": 12,
+   "shape": 11,
    "window": 0
   }
  }

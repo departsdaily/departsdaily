@@ -4,22 +4,22 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-09-04 06:14 EDT
-   Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
-   Carried forward:  none
+   Generated 2026-09-04 06:53 EDT
+   Rebuilt this run: CLT (8)
+   Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-09-04T06:14:01-04:00",
+ updated:"2026-09-04T06:53:21-04:00",
 };
 const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:135,d1:"2026-11-06",d2:"2026-11-09",dep:"6:05AM",al:"Frontier",stops:0,rdep:"6:40AM",arr:"7:56AM",rarr:"8:37AM",exp:"2026-09-06"},
  {to:"LAX",city:"Los Angeles",price:240,d1:"2026-09-16",d2:"2026-09-23",dep:"9:40PM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"4:51AM+1",rarr:"6:59AM",exp:"2026-09-06"},
  {to:"NYC",city:"New York City",price:146,d1:"2026-09-14",d2:"2026-09-21",dep:"9:32AM",al:"Frontier",stops:1,rdep:"5:55AM",arr:"2:16PM",rarr:"10:39AM",exp:"2026-09-06"},
  {to:"LAS",city:"Las Vegas",price:318,d1:"2026-11-01",d2:"2026-11-06",dep:"11:52AM",al:"Frontier",stops:1,rdep:"12:38AM",arr:"6:31PM",rarr:"5:58AM",exp:"2026-09-06"},
- {to:"SMF",city:"Sacramento",price:295,d1:"2026-09-25",d2:"2026-10-03",dep:"7:54PM",al:"Frontier",stops:1,rdep:"11:53AM",arr:"2:21AM+1",rarr:"5:41PM",exp:"2026-09-06"},
+ {to:"MIA",city:"Miami",price:195,d1:"2026-09-19",d2:"2026-09-25",dep:"7:27PM",al:"Frontier",stops:0,rdep:"6:54PM",arr:"9:38PM",rarr:"9:14PM",exp:"2026-09-06"},
  {to:"MAD",city:"Madrid",price:443,d1:"2026-11-01",d2:"2026-11-12",dep:"1:06PM",al:"United",stops:1,rdep:"7:25AM",arr:"10:44PM",rarr:"7:50PM",exp:"2026-09-06"},
  {to:"SJU",city:"San Juan, PR",price:254,d1:"2026-09-23",d2:"2026-09-27",dep:"9:32AM",al:"Frontier",stops:1,rdep:"2:57AM",arr:"2:36PM",rarr:"7:54AM",exp:"2026-09-06"},
- {to:"YYC",city:"Calgary",price:479,d1:"2026-10-22",d2:"2026-10-28",dep:"9:29AM",al:"Frontier",stops:3,rdep:"6:00AM",arr:"6:41PM",rarr:"11:57AM",exp:"2026-09-06"}],ATL:[
+ {to:"MBJ",city:"Montego Bay",price:496,d1:"2026-10-12",d2:"2026-10-19",dep:"9:15AM",al:"Air Canada",stops:1,rdep:"12:30PM",arr:"3:11PM",rarr:"6:42PM",exp:"2026-09-06"}],ATL:[
  {to:"MCO",city:"Orlando",price:36,d1:"2026-10-17",d2:"2026-10-20",dep:"5:49PM",al:"Frontier",stops:0,rdep:"9:25AM",arr:"7:28PM",rarr:"11:15AM",exp:"2026-09-06"},
  {to:"MIA",city:"Miami",price:72,d1:"2026-11-01",d2:"2026-11-07",dep:"1:28PM",al:"Frontier",stops:0,rdep:"5:05AM",arr:"3:25PM",rarr:"7:20AM",exp:"2026-09-06"},
  {to:"DTW",city:"Detroit",price:123,d1:"2026-09-25",d2:"2026-09-30",dep:"10:40PM",al:"Frontier",stops:0,rdep:"3:25PM",arr:"12:42AM+1",rarr:"5:30PM",exp:"2026-09-06"},
