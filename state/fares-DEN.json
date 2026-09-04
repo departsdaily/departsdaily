@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-03T18:16:06-04:00",
+ "generated": "2026-09-03T20:16:07-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -18,21 +18,6 @@
    "rdep": "8:24PM",
    "arr": "6:29PM",
    "rarr": "10:49PM",
-   "pct": 54
-  },
-  "BOS": {
-   "to": "BOS",
-   "city": "Boston",
-   "price": 241,
-   "d1": "2026-10-04",
-   "d2": "2026-10-13",
-   "dep": "10:30PM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:25AM",
-   "arr": "3:10AM+1",
-   "rarr": "9:55AM",
    "pct": 54
   },
   "DCA": {
@@ -53,17 +38,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 133,
-   "d1": "2026-09-16",
-   "d2": "2026-09-23",
+   "price": 114,
+   "d1": "2026-10-01",
+   "d2": "2026-10-08",
    "dep": "9:19PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "2:48PM",
+   "rdep": "5:01AM",
    "arr": "11:20PM",
-   "rarr": "5:01PM",
-   "pct": 65
+   "rarr": "12:22PM",
+   "pct": 70
   },
   "FLL": {
    "to": "FLL",

@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-03T18:14:48-04:00",
+ "generated": "2026-09-03T20:14:47-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -203,7 +203,7 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 241,
+   "price": 240,
    "d1": "2026-09-16",
    "d2": "2026-09-23",
    "dep": "9:40PM",
@@ -485,21 +485,6 @@
    "rarr": "8:09PM",
    "pct": -7
   },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 365,
-   "d1": "2026-10-28",
-   "d2": "2026-11-03",
-   "dep": "11:52AM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "8:09PM",
-   "arr": "9:18PM",
-   "rarr": "5:03AM+1",
-   "pct": 51
-  },
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
@@ -548,16 +533,16 @@
   "SNA": {
    "to": "SNA",
    "city": "Orange County",
-   "price": 486,
-   "d1": "2026-09-16",
-   "d2": "2026-09-23",
-   "dep": "11:10AM",
-   "al": "Southwest",
-   "stops": 2,
+   "price": 674,
+   "d1": "2026-10-16",
+   "d2": "2026-10-20",
+   "dep": "6:00PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:45AM",
-   "arr": "5:50PM",
-   "rarr": "2:25PM",
+   "rdep": "7:15AM",
+   "arr": "11:17PM",
+   "rarr": "12:00PM",
    "pct": 0
   },
   "SXM": {
