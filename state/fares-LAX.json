@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-04T02:17:11-04:00",
+ "generated": "2026-09-04T04:17:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 264,
-   "d1": "2026-10-02",
-   "d2": "2026-10-09",
-   "dep": "2:28PM",
+   "price": 187,
+   "d1": "2026-09-09",
+   "d2": "2026-09-11",
+   "dep": "6:15AM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "4:29PM",
-   "arr": "7:39PM",
-   "rarr": "1:06AM+1",
-   "pct": 56
+   "rdep": "3:14PM",
+   "arr": "11:15AM",
+   "rarr": "8:34PM",
+   "pct": 69
   },
   "BOS": {
    "to": "BOS",
@@ -233,17 +233,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 62,
-   "d1": "2026-10-06",
-   "d2": "2026-10-09",
-   "dep": "8:44AM",
+   "price": 54,
+   "d1": "2026-10-09",
+   "d2": "2026-10-12",
+   "dep": "12:01PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:02PM",
-   "arr": "10:22AM",
+   "arr": "1:32PM",
    "rarr": "7:40PM",
-   "pct": 83
+   "pct": 85
   },
   "AMS": {
    "to": "AMS",
