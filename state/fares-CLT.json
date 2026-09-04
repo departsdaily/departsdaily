@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-04T12:15:13-04:00",
+ "generated": "2026-09-04T14:14:57-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -188,17 +188,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 318,
-   "d1": "2026-11-01",
-   "d2": "2026-11-06",
-   "dep": "11:52AM",
+   "price": 187,
+   "d1": "2026-09-08",
+   "d2": "2026-09-10",
+   "dep": "10:47AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:38AM",
-   "arr": "6:31PM",
-   "rarr": "5:58AM",
-   "pct": 57
+   "rdep": "12:59AM",
+   "arr": "4:44PM",
+   "rarr": "6:22AM",
+   "pct": 75
   },
   "LAX": {
    "to": "LAX",
@@ -409,21 +409,6 @@
    "arr": "11:23PM",
    "rarr": "11:36AM",
    "pct": 40
-  },
-  "PUJ": {
-   "to": "PUJ",
-   "city": "Punta Cana",
-   "price": 638,
-   "d1": "2026-10-12",
-   "d2": "2026-10-19",
-   "dep": "5:38PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "5:05PM",
-   "arr": "10:25PM",
-   "rarr": "1:05AM+1",
-   "pct": -14
   },
   "ROM": {
    "to": "ROM",

@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-04T12:16:29-04:00",
+ "generated": "2026-09-04T14:16:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 854,
-   "d1": "2026-12-25",
+   "price": 876,
+   "d1": "2026-12-26",
    "d2": "2027-01-08",
-   "dep": "5:01PM",
-   "al": "British Airways",
+   "dep": "5:25PM",
+   "al": "Lufthansa",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:05PM",
-   "arr": "4:50AM+1",
-   "rarr": "8:45AM+1",
-   "pct": 10
+   "rdep": "6:50PM",
+   "arr": "4:45AM+1",
+   "rarr": "7:00AM+1",
+   "pct": 8
   }
  }
 }

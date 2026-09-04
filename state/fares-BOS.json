@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-09-04T12:18:05-04:00",
+ "generated": "2026-09-04T14:17:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "DCA": {
@@ -244,6 +244,21 @@
    "arr": "10:11AM",
    "rarr": "10:32PM",
    "pct": 37
+  },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 588,
+   "d1": "2026-09-25",
+   "d2": "2026-10-07",
+   "dep": "8:50PM",
+   "al": "Icelandair",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:10PM",
+   "arr": "5:25AM+1",
+   "rarr": "11:15PM",
+   "pct": 33
   },
   "AUA": {
    "to": "AUA",
