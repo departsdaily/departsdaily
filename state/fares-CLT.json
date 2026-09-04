@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-04T06:54:35-04:00",
+ "generated": "2026-09-04T07:54:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -289,21 +289,6 @@
    "arr": "9:38PM",
    "rarr": "9:14PM",
    "pct": 52
-  },
-  "MIL": {
-   "to": "MIL",
-   "city": "Milan",
-   "price": 894,
-   "d1": "2026-12-20",
-   "d2": "2026-12-31",
-   "dep": "5:10PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:10AM",
-   "arr": "5:47AM+1",
-   "rarr": "5:15PM",
-   "pct": 1
   },
   "MSY": {
    "to": "MSY",
