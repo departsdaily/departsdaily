@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-04T14:16:43-04:00",
+ "generated": "2026-09-04T16:16:51-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 157,
-   "d1": "2026-09-18",
-   "d2": "2026-09-26",
-   "dep": "7:20PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 208,
+   "d1": "2026-10-03",
+   "d2": "2026-10-10",
+   "dep": "6:45PM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:30PM",
-   "arr": "10:38PM",
-   "rarr": "6:14PM",
-   "pct": 57
+   "rdep": "5:22PM",
+   "arr": "11:02PM",
+   "rarr": "9:16PM",
+   "pct": 43
   },
   "AMS": {
    "to": "AMS",
@@ -323,17 +323,17 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 462,
-   "d1": "2026-10-17",
-   "d2": "2026-10-21",
-   "dep": "6:00AM",
+   "price": 493,
+   "d1": "2026-12-13",
+   "d2": "2026-12-17",
+   "dep": "9:30PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:00AM",
-   "arr": "10:54AM",
-   "rarr": "12:40PM",
-   "pct": 28
+   "rdep": "12:35PM",
+   "arr": "2:29AM+1",
+   "rarr": "4:19PM",
+   "pct": 23
   },
   "LON": {
    "to": "LON",

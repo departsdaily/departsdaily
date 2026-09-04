@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-04T14:14:57-04:00",
+ "generated": "2026-09-04T16:15:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -125,21 +125,6 @@
    "rarr": "7:00PM",
    "pct": 47
   },
-  "DUB": {
-   "to": "DUB",
-   "city": "Dublin",
-   "price": 815,
-   "d1": "2026-09-28",
-   "d2": "2026-10-05",
-   "dep": "9:32AM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "9:23PM",
-   "rarr": "7:10PM",
-   "pct": -4
-  },
   "GDL": {
    "to": "GDL",
    "city": "Guadalajara",
@@ -218,17 +203,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 817,
-   "d1": "2026-09-28",
-   "d2": "2026-10-05",
-   "dep": "9:32AM",
+   "price": 832,
+   "d1": "2026-09-30",
+   "d2": "2026-10-11",
+   "dep": "9:40PM",
    "al": "",
    "stops": 1,
    "xfer": 1,
    "rdep": "2:00PM",
-   "arr": "8:03PM",
-   "rarr": "1:20AM+1",
-   "pct": 4
+   "arr": "7:59AM+1",
+   "rarr": "1:21AM+1",
+   "pct": 2
   },
   "MAD": {
    "to": "MAD",
