@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-04T08:16:32-04:00",
+ "generated": "2026-09-04T10:16:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -124,6 +124,21 @@
    "arr": "10:47PM",
    "rarr": "10:18AM",
    "pct": 78
+  },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 145,
+   "d1": "2026-11-12",
+   "d2": "2026-11-15",
+   "dep": "10:47AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:05PM",
+   "arr": "2:25PM",
+   "rarr": "3:15AM+1",
+   "pct": 69
   },
   "NYC": {
    "to": "NYC",
