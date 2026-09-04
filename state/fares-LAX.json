@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-04T16:16:33-04:00",
+ "generated": "2026-09-04T18:16:34-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 340,
-   "d1": "2026-09-29",
+   "price": 341,
+   "d1": "2026-09-30",
    "d2": "2026-10-06",
-   "dep": "7:52PM",
+   "dep": "12:46AM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:50AM",
-   "arr": "1:46AM+1",
-   "rarr": "5:07PM",
-   "pct": 35
+   "rdep": "9:50PM",
+   "arr": "6:40AM",
+   "rarr": "4:07AM+1",
+   "pct": 34
   },
   "GCM": {
    "to": "GCM",

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-04T16:16:51-04:00",
+ "generated": "2026-09-04T18:16:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 245,
+   "price": 200,
    "d1": "2026-09-23",
-   "d2": "2026-09-29",
+   "d2": "2026-09-26",
    "dep": "8:10AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:05AM",
+   "rdep": "7:00AM",
    "arr": "10:58AM",
-   "rarr": "9:33AM",
-   "pct": 41
+   "rarr": "9:27AM",
+   "pct": 52
   },
   "PHX": {
    "to": "PHX",
@@ -398,17 +398,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 416,
-   "d1": "2026-12-10",
-   "d2": "2026-12-18",
-   "dep": "7:40AM",
+   "price": 385,
+   "d1": "2026-10-27",
+   "d2": "2026-11-03",
+   "dep": "7:00AM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:10PM",
-   "arr": "1:28PM",
-   "rarr": "5:11PM",
-   "pct": 26
+   "rdep": "8:55AM",
+   "arr": "12:35PM",
+   "rarr": "1:54PM",
+   "pct": 31
   },
   "ROM": {
    "to": "ROM",

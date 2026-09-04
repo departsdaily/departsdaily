@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-04T16:15:03-04:00",
+ "generated": "2026-09-04T18:15:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 39,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 239,
-   "d1": "2026-10-31",
-   "d2": "2026-11-03",
-   "dep": "7:30AM",
-   "al": "American",
-   "stops": 0,
+   "price": 312,
+   "d1": "2026-09-24",
+   "d2": "2026-09-27",
+   "dep": "7:54PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:41PM",
-   "arr": "11:16AM",
-   "rarr": "7:00PM",
-   "pct": 47
+   "rdep": "7:12PM",
+   "arr": "11:43PM",
+   "rarr": "12:54AM+1",
+   "pct": 31
   },
   "GDL": {
    "to": "GDL",
