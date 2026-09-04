@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-04T00:16:03-04:00",
+ "generated": "2026-09-04T02:16:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BNA": {
@@ -101,12 +101,12 @@
    "price": 45,
    "d1": "2026-11-14",
    "d2": "2026-11-17",
-   "dep": "5:30AM",
+   "dep": "10:24PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "12:38AM",
-   "arr": "8:37AM",
+   "arr": "1:29AM+1",
    "rarr": "3:18AM",
    "pct": 90
   },
@@ -199,21 +199,6 @@
    "arr": "6:56PM",
    "rarr": "3:09PM",
    "pct": 49
-  },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 178,
-   "d1": "2026-09-16",
-   "d2": "2026-09-18",
-   "dep": "3:38PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "5:23PM",
-   "arr": "6:23PM",
-   "rarr": "9:24PM",
-   "pct": 62
   },
   "SEA": {
    "to": "SEA",
@@ -353,17 +338,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 1304,
-   "d1": "2026-12-20",
-   "d2": "2026-12-27",
-   "dep": "3:35PM",
-   "al": "United",
+   "price": 909,
+   "d1": "2026-09-14",
+   "d2": "2026-09-20",
+   "dep": "9:30PM",
+   "al": "Turkish",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:15PM",
-   "arr": "2:55AM+1",
-   "rarr": "2:55AM+1",
-   "pct": -37
+   "rdep": "8:00PM",
+   "arr": "12:05PM+1",
+   "rarr": "11:20AM+1",
+   "pct": 4
   },
   "SJU": {
    "to": "SJU",

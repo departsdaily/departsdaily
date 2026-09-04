@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-09-04T00:16:37-04:00",
+ "generated": "2026-09-04T02:17:11-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -173,17 +173,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 297,
-   "d1": "2026-09-27",
-   "d2": "2026-09-30",
-   "dep": "11:50PM",
-   "al": "Frontier",
+   "price": 288,
+   "d1": "2026-11-03",
+   "d2": "2026-11-12",
+   "dep": "1:55PM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:30PM",
-   "arr": "6:24AM+1",
-   "rarr": "8:57PM",
-   "pct": 68
+   "rdep": "5:05PM",
+   "arr": "7:40PM",
+   "rarr": "12:00AM+1",
+   "pct": 69
   },
   "ORD": {
    "to": "ORD",
@@ -203,17 +203,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 111,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "dep": "5:07PM",
-   "al": "Allegiant",
+   "price": 94,
+   "d1": "2026-09-17",
+   "d2": "2026-09-20",
+   "dep": "9:30AM",
+   "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "7:22AM",
-   "arr": "6:36PM",
+   "arr": "10:54AM",
    "rarr": "8:45AM",
-   "pct": 69
+   "pct": 74
   },
   "SEA": {
    "to": "SEA",
@@ -319,6 +319,21 @@
    "arr": "1:30AM+1",
    "rarr": "9:55PM",
    "pct": 15
+  },
+  "NAS": {
+   "to": "NAS",
+   "city": "Nassau",
+   "price": 521,
+   "d1": "2026-09-24",
+   "d2": "2026-10-01",
+   "dep": "4:39PM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "2:53PM",
+   "arr": "10:55PM",
+   "rarr": "9:37PM",
+   "pct": -9
   },
   "PAR": {
    "to": "PAR",
