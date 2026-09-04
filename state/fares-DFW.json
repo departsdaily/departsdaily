@@ -1,25 +1,10 @@
 {
  "origin": "DFW",
- "generated": "2026-09-03T22:15:34-04:00",
+ "generated": "2026-09-04T00:16:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
-  "AUS": {
-   "to": "AUS",
-   "city": "Austin",
-   "price": 424,
-   "d1": "2026-09-06",
-   "d2": "2026-09-08",
-   "dep": "9:25AM",
-   "al": "Southwest",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "6:35AM",
-   "arr": "10:25AM",
-   "rarr": "7:40AM",
-   "pct": 12
-  },
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
@@ -113,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 36,
+   "price": 45,
    "d1": "2026-11-14",
    "d2": "2026-11-17",
-   "dep": "10:24PM",
+   "dep": "5:30AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "12:38AM",
-   "arr": "1:29AM+1",
+   "arr": "8:37AM",
    "rarr": "3:18AM",
-   "pct": 92
+   "pct": 90
   },
   "LAX": {
    "to": "LAX",

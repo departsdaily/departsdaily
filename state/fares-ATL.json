@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-03T22:14:57-04:00",
+ "generated": "2026-09-04T00:15:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -173,37 +173,37 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 168,
-   "d1": "2026-10-21",
-   "d2": "2026-10-25",
-   "dep": "6:41PM",
+   "price": 144,
+   "d1": "2026-10-09",
+   "d2": "2026-10-12",
+   "dep": "8:30AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:29AM",
-   "arr": "8:59PM",
-   "rarr": "12:05PM",
-   "pct": 62
+   "rdep": "5:55AM",
+   "arr": "12:58PM",
+   "rarr": "10:46AM",
+   "pct": 67
   },
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 174,
-   "d1": "2026-10-21",
-   "d2": "2026-10-23",
-   "dep": "5:10PM",
+   "price": 215,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
+   "dep": "8:00AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:26AM",
-   "arr": "7:31PM",
-   "rarr": "12:34PM",
-   "pct": 58
+   "rdep": "7:28PM",
+   "arr": "10:20AM",
+   "rarr": "9:44PM",
+   "pct": 49
   },
   "PHL": {
    "to": "PHL",
    "city": "Philadelphia",
-   "price": 44,
+   "price": 54,
    "d1": "2026-10-02",
    "d2": "2026-10-06",
    "dep": "5:10AM",
@@ -213,7 +213,22 @@
    "rdep": "8:41AM",
    "arr": "7:16AM",
    "rarr": "11:06AM",
-   "pct": 90
+   "pct": 88
+  },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 296,
+   "d1": "2026-12-03",
+   "d2": "2026-12-10",
+   "dep": "6:52PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:42PM",
+   "arr": "1:21AM+1",
+   "rarr": "9:55PM",
+   "pct": 52
   },
   "SEA": {
    "to": "SEA",
@@ -383,17 +398,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 534,
+   "price": 716,
    "d1": "2026-10-10",
    "d2": "2026-10-16",
-   "dep": "9:50PM",
-   "al": "Turkish",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "3:35PM",
-   "arr": "11:20AM+1",
-   "rarr": "6:10AM+1",
-   "pct": 44
+   "dep": "3:41PM",
+   "al": "",
+   "stops": 3,
+   "xfer": 1,
+   "rdep": "7:25AM",
+   "arr": "4:16AM+1",
+   "rarr": "10:19PM",
+   "pct": 25
   },
   "SJU": {
    "to": "SJU",
