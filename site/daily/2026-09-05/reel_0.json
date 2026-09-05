@@ -1,0 +1,28 @@
+{
+ "origin": "CLT",
+ "date": "2026-09-05",
+ "slot": 0,
+ "shape": "spotlight",
+ "label": "ONE BIG DEAL",
+ "caption_lead": "The single biggest drop out of CLT today.",
+ "file": "reel_0.mp4",
+ "seconds": 10.4,
+ "size_mb": 0.68,
+ "fps": 30,
+ "audio": "first-light.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "weekend",
+ "plan_angle": "Out Thursday or Friday, back Sunday or Monday. A real long weekend, and you burn no vacation days.",
+ "featured": [
+  {
+   "to": "GDL",
+   "city": "Guadalajara",
+   "price": 322,
+   "disc": 50,
+   "baseline": 644,
+   "nights": 14,
+   "d1": "2026-12-26",
+   "d2": "2027-01-09"
+  }
+ ]
+}
