@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-04T22:14:56-04:00",
+ "generated": "2026-09-05T00:14:59-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 38,
+ "routes_priced": 37,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -94,21 +94,6 @@
    "arr": "5:05AM+1",
    "rarr": "9:42PM",
    "pct": -24
-  },
-  "CZM": {
-   "to": "CZM",
-   "city": "Cozumel",
-   "price": 801,
-   "d1": "2026-09-07",
-   "d2": "2026-09-11",
-   "dep": "9:52PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "4:47PM",
-   "arr": "5:21AM+1",
-   "rarr": "12:35AM+1",
-   "pct": -34
   },
   "DEN": {
    "to": "DEN",

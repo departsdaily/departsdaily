@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-04T22:15:49-04:00",
+ "generated": "2026-09-05T00:15:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 942,
-   "d1": "2026-10-04",
-   "d2": "2026-10-09",
-   "dep": "7:55AM",
-   "al": "",
+   "price": 845,
+   "d1": "2027-01-03",
+   "d2": "2027-01-10",
+   "dep": "7:55PM",
+   "al": "American",
    "stops": 1,
-   "xfer": 1,
-   "rdep": "6:50PM",
-   "arr": "6:50PM",
-   "rarr": "7:01AM+1",
-   "pct": -5
+   "xfer": 0,
+   "rdep": "10:55AM",
+   "arr": "6:24AM+1",
+   "rarr": "11:00PM",
+   "pct": 6
   },
   "PUJ": {
    "to": "PUJ",

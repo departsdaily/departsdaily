@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-04T22:16:24-04:00",
+ "generated": "2026-09-05T00:16:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 250,
-   "d1": "2026-09-26",
-   "d2": "2026-10-03",
-   "dep": "11:50PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 166,
+   "d1": "2026-10-08",
+   "d2": "2026-10-14",
+   "dep": "3:35PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:37PM",
-   "arr": "6:00AM+1",
-   "rarr": "1:33AM+1",
-   "pct": 66
+   "rdep": "9:45AM",
+   "arr": "8:33PM",
+   "rarr": "3:22PM",
+   "pct": 78
   },
   "HOU": {
    "to": "HOU",
@@ -263,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 341,
+   "price": 340,
    "d1": "2026-09-30",
    "d2": "2026-10-06",
-   "dep": "12:46AM",
+   "dep": "12:37AM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:50PM",
-   "arr": "6:40AM",
-   "rarr": "4:07AM+1",
-   "pct": 34
+   "rdep": "5:40PM",
+   "arr": "6:38AM",
+   "rarr": "11:36PM",
+   "pct": 35
   },
   "GCM": {
    "to": "GCM",

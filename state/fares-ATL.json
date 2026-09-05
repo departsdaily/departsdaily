@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-04T22:15:14-04:00",
+ "generated": "2026-09-05T00:15:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 197,
-   "d1": "2026-09-22",
-   "d2": "2026-09-29",
-   "dep": "6:00AM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 179,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
+   "dep": "3:30PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:00AM",
-   "arr": "8:35AM",
-   "rarr": "11:45AM",
-   "pct": 63
+   "rdep": "12:54PM",
+   "arr": "8:15PM",
+   "rarr": "4:00PM",
+   "pct": 66
   },
   "DCA": {
    "to": "DCA",
@@ -53,17 +53,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 127,
-   "d1": "2026-12-01",
-   "d2": "2026-12-06",
-   "dep": "11:04AM",
-   "al": "American",
+   "price": 66,
+   "d1": "2026-11-07",
+   "d2": "2026-11-11",
+   "dep": "6:21PM",
+   "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:04AM",
-   "arr": "1:44PM",
-   "rarr": "1:21PM",
-   "pct": 72
+   "rdep": "1:08PM",
+   "arr": "9:04PM",
+   "rarr": "3:20PM",
+   "pct": 85
   },
   "DTW": {
    "to": "DTW",
