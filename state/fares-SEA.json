@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-09-05T04:17:27-04:00",
+ "generated": "2026-09-05T08:17:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -79,6 +79,21 @@
    "arr": "3:00AM+1",
    "rarr": "4:34PM",
    "pct": 49
+  },
+  "FLL": {
+   "to": "FLL",
+   "city": "Ft. Lauderdale",
+   "price": 548,
+   "d1": "2026-09-11",
+   "d2": "2026-09-14",
+   "dep": "7:45PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "9:54PM",
+   "arr": "4:30AM+1",
+   "rarr": "7:49AM+1",
+   "pct": 13
   },
   "HOU": {
    "to": "HOU",

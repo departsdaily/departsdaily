@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-05T04:16:36-04:00",
+ "generated": "2026-09-05T08:16:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -263,7 +263,7 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 340,
+   "price": 345,
    "d1": "2026-09-30",
    "d2": "2026-10-06",
    "dep": "12:37AM",
@@ -273,7 +273,7 @@
    "rdep": "5:40PM",
    "arr": "6:38AM",
    "rarr": "11:36PM",
-   "pct": 35
+   "pct": 34
   },
   "GCM": {
    "to": "GCM",

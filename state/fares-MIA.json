@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-09-05T04:17:10-04:00",
+ "generated": "2026-09-05T08:17:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -199,21 +199,6 @@
    "arr": "12:59AM+1",
    "rarr": "2:15PM",
    "pct": 40
-  },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 356,
-   "d1": "2026-10-18",
-   "d2": "2026-10-20",
-   "dep": "5:15AM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:14PM",
-   "arr": "12:25PM",
-   "rarr": "4:59AM+1",
-   "pct": 48
   },
   "TPA": {
    "to": "TPA",

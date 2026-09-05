@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-05T04:16:01-04:00",
+ "generated": "2026-09-05T08:16:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 209,
-   "d1": "2026-11-24",
-   "d2": "2026-11-27",
-   "dep": "7:30AM",
-   "al": "Southwest",
+   "price": 163,
+   "d1": "2026-11-20",
+   "d2": "2026-11-22",
+   "dep": "9:46PM",
+   "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30PM",
-   "arr": "8:30AM",
-   "rarr": "7:30PM",
-   "pct": 57
+   "rdep": "5:00AM",
+   "arr": "10:57PM",
+   "rarr": "6:15AM",
+   "pct": 66
   },
   "BNA": {
    "to": "BNA",
