@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-05T14:18:25-04:00",
+ "generated": "2026-09-05T16:18:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 161,
-   "d1": "2026-09-30",
-   "d2": "2026-10-04",
-   "dep": "7:25PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 152,
+   "d1": "2026-10-09",
+   "d2": "2026-10-12",
+   "dep": "8:40PM",
+   "al": "Southwest",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:50AM",
-   "arr": "11:44PM",
-   "rarr": "9:42AM",
-   "pct": 58
+   "rdep": "10:15PM",
+   "arr": "11:10PM",
+   "rarr": "1:00AM+1",
+   "pct": 60
   },
   "LAX": {
    "to": "LAX",
@@ -233,17 +233,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 166,
-   "d1": "2026-10-03",
-   "d2": "2026-10-09",
-   "dep": "1:22PM",
-   "al": "United",
+   "price": 91,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
+   "dep": "8:48PM",
+   "al": "Alaska",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:45PM",
-   "arr": "3:37PM",
-   "rarr": "1:15AM+1",
-   "pct": 58
+   "rdep": "7:02AM",
+   "arr": "10:59PM",
+   "rarr": "9:09AM",
+   "pct": 77
   },
   "AMS": {
    "to": "AMS",

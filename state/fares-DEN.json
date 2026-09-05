@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-05T14:17:01-04:00",
+ "generated": "2026-09-05T16:16:48-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -304,21 +304,6 @@
    "arr": "2:52AM+1",
    "rarr": "1:16AM+1",
    "pct": -3
-  },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 876,
-   "d1": "2026-12-26",
-   "d2": "2027-01-08",
-   "dep": "5:25PM",
-   "al": "Lufthansa",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:50PM",
-   "arr": "4:45AM+1",
-   "rarr": "7:00AM+1",
-   "pct": 8
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T14:15:38-04:00",
+ "generated": "2026-09-05T16:15:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 35,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BCN": {
    "to": "BCN",
    "city": "Barcelona",
-   "price": 540,
-   "d1": "2026-09-24",
-   "d2": "2026-09-30",
-   "dep": "3:04PM",
-   "al": "United",
+   "price": 953,
+   "d1": "2026-09-21",
+   "d2": "2026-10-04",
+   "dep": "6:40PM",
+   "al": "Lufthansa",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:05AM",
-   "arr": "2:04AM+1",
-   "rarr": "8:50PM",
-   "pct": 39
+   "rdep": "1:25PM",
+   "arr": "5:25AM+1",
+   "rarr": "1:10AM+1",
+   "pct": -8
   },
   "CUN": {
    "to": "CUN",

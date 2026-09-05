@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-05T14:18:47-04:00",
+ "generated": "2026-09-05T16:18:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -98,7 +98,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 130,
+   "price": 142,
    "d1": "2026-10-10",
    "d2": "2026-10-17",
    "dep": "5:49PM",
@@ -108,7 +108,7 @@
    "rdep": "7:45AM",
    "arr": "9:26PM",
    "rarr": "11:02AM",
-   "pct": 67
+   "pct": 64
   },
   "MIA": {
    "to": "MIA",
@@ -338,17 +338,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 539,
-   "d1": "2026-09-13",
-   "d2": "2026-09-19",
-   "dep": "7:05PM",
-   "al": "Virgin Atlantic",
-   "stops": 0,
+   "price": 596,
+   "d1": "2026-11-19",
+   "d2": "2026-11-24",
+   "dep": "10:10PM",
+   "al": "TAP Portugal",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:45AM",
-   "arr": "2:10AM+1",
-   "rarr": "7:39PM",
-   "pct": 40
+   "rdep": "10:20AM",
+   "arr": "7:15AM+1",
+   "rarr": "8:30PM",
+   "pct": 34
   },
   "ROM": {
    "to": "ROM",

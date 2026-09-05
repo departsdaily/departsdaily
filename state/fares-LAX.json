@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-05T14:17:22-04:00",
+ "generated": "2026-09-05T16:17:09-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 33,
-   "d1": "2026-10-28",
-   "d2": "2026-10-31",
-   "dep": "5:15PM",
+   "price": 44,
+   "d1": "2026-10-08",
+   "d2": "2026-10-14",
+   "dep": "4:33PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "2:55PM",
-   "arr": "6:30PM",
-   "rarr": "4:16PM",
-   "pct": 89
+   "arr": "5:52PM",
+   "rarr": "4:20PM",
+   "pct": 85
   },
   "MCO": {
    "to": "MCO",
@@ -188,7 +188,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 160,
+   "price": 141,
    "d1": "2026-10-11",
    "d2": "2026-10-14",
    "dep": "12:21AM",
@@ -198,7 +198,7 @@
    "rdep": "8:01PM",
    "arr": "4:34AM",
    "rarr": "12:51AM+1",
-   "pct": 71
+   "pct": 75
   },
   "PHX": {
    "to": "PHX",
@@ -263,8 +263,8 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 345,
-   "d1": "2026-09-30",
+   "price": 333,
+   "d1": "2026-09-29",
    "d2": "2026-10-06",
    "dep": "12:37AM",
    "al": "Volaris",
@@ -273,22 +273,22 @@
    "rdep": "5:40PM",
    "arr": "6:38AM",
    "rarr": "11:36PM",
-   "pct": 34
+   "pct": 36
   },
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 511,
-   "d1": "2026-12-13",
-   "d2": "2026-12-17",
-   "dep": "11:30PM",
+   "price": 400,
+   "d1": "2026-10-20",
+   "d2": "2026-10-25",
+   "dep": "10:07PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:00PM",
-   "arr": "6:59AM+1",
-   "rarr": "11:28PM",
-   "pct": 20
+   "rdep": "8:00AM",
+   "arr": "5:40AM+1",
+   "rarr": "3:24PM",
+   "pct": 38
   },
   "LON": {
    "to": "LON",

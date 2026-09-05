@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-05T14:18:05-04:00",
+ "generated": "2026-09-05T16:17:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -248,7 +248,7 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 359,
+   "price": 365,
    "d1": "2026-09-24",
    "d2": "2026-09-29",
    "dep": "5:12PM",
@@ -258,7 +258,7 @@
    "rdep": "5:25AM",
    "arr": "10:58PM",
    "rarr": "10:56AM",
-   "pct": 31
+   "pct": 30
   },
   "LON": {
    "to": "LON",
