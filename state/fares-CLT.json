@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T06:54:43-04:00",
+ "generated": "2026-09-05T07:54:48-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 34,
+ "routes_priced": 35,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -484,6 +484,21 @@
    "arr": "11:30AM+1",
    "rarr": "8:11PM+1",
    "pct": 4
+  },
+  "VPS": {
+   "to": "VPS",
+   "city": "Destin / 30A",
+   "price": 519,
+   "d1": "2026-09-18",
+   "d2": "2026-09-20",
+   "dep": "11:35AM",
+   "al": "American",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "7:15AM",
+   "arr": "1:29PM",
+   "rarr": "9:00AM",
+   "pct": 0
   },
   "YYC": {
    "to": "YYC",

@@ -4,12 +4,12 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-09-05 06:53 EDT
+   Generated 2026-09-05 07:53 EDT
    Rebuilt this run: CLT (8)
    Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-09-05T06:53:35-04:00",
+ updated:"2026-09-05T07:53:36-04:00",
 };
 const DEALS={CLT:[
  {to:"LAS",city:"Las Vegas",price:187,d1:"2026-09-08",d2:"2026-09-10",dep:"10:47AM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"4:44PM",rarr:"6:22AM",exp:"2026-09-07"},
@@ -17,9 +17,9 @@ const DEALS={CLT:[
  {to:"LAX",city:"Los Angeles",price:240,d1:"2026-09-16",d2:"2026-09-23",dep:"9:40PM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"4:51AM+1",rarr:"6:59AM",exp:"2026-09-07"},
  {to:"NYC",city:"New York City",price:146,d1:"2026-09-14",d2:"2026-09-21",dep:"9:32AM",al:"Frontier",stops:1,rdep:"5:55AM",arr:"2:16PM",rarr:"10:39AM",exp:"2026-09-07"},
  {to:"MAD",city:"Madrid",price:443,d1:"2026-11-01",d2:"2026-11-12",dep:"1:06PM",al:"United",stops:1,rdep:"7:25AM",arr:"10:44PM",rarr:"7:50PM",exp:"2026-09-07"},
- {to:"PSP",city:"Palm Springs",price:406,d1:"2026-11-14",d2:"2026-11-18",dep:"5:05PM",al:"American",stops:1,rdep:"6:00AM",arr:"11:23PM",rarr:"11:36AM",exp:"2026-09-07"},
- {to:"SJU",city:"San Juan, PR",price:254,d1:"2026-09-23",d2:"2026-09-27",dep:"9:32AM",al:"Frontier",stops:1,rdep:"2:57AM",arr:"2:36PM",rarr:"7:54AM",exp:"2026-09-07"},
- {to:"YYC",city:"Calgary",price:479,d1:"2026-10-22",d2:"2026-10-28",dep:"9:29AM",al:"Frontier",stops:3,rdep:"6:00AM",arr:"6:41PM",rarr:"11:57AM",exp:"2026-09-07"}],ATL:[
+ {to:"SAT",city:"San Antonio",price:290,d1:"2026-10-15",d2:"2026-10-18",dep:"9:32AM",al:"Frontier",stops:1,rdep:"8:21PM",arr:"2:37PM",rarr:"2:11AM+1",exp:"2026-09-07"},
+ {to:"GDL",city:"Guadalajara",price:322,d1:"2026-12-26",d2:"2027-01-09",dep:"2:48PM",al:"Volaris",stops:0,rdep:"8:13AM",arr:"7:21PM",rarr:"12:10PM",exp:"2026-09-07"},
+ {to:"SJU",city:"San Juan, PR",price:254,d1:"2026-09-23",d2:"2026-09-27",dep:"9:32AM",al:"Frontier",stops:1,rdep:"2:57AM",arr:"2:36PM",rarr:"7:54AM",exp:"2026-09-07"}],ATL:[
  {to:"MCO",city:"Orlando",price:36,d1:"2026-10-17",d2:"2026-10-20",dep:"5:49PM",al:"Frontier",stops:0,rdep:"9:25AM",arr:"7:28PM",rarr:"11:15AM",exp:"2026-09-07"},
  {to:"PHL",city:"Philadelphia",price:61,d1:"2026-10-02",d2:"2026-10-06",dep:"5:10AM",al:"Frontier",stops:0,rdep:"8:41AM",arr:"7:16AM",rarr:"11:06AM",exp:"2026-09-07"},
  {to:"MSY",city:"New Orleans",price:140,d1:"2026-09-25",d2:"2026-09-29",dep:"8:20PM",al:"Frontier",stops:1,rdep:"5:17PM",arr:"11:57PM",rarr:"7:01PM",exp:"2026-09-07"},
