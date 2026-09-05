@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-05T10:16:01-04:00",
+ "generated": "2026-09-05T12:16:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 147,
-   "d1": "2026-09-28",
-   "d2": "2026-10-05",
-   "dep": "8:15AM",
-   "al": "American",
-   "stops": 0,
+   "price": 212,
+   "d1": "2026-10-23",
+   "d2": "2026-10-26",
+   "dep": "8:11PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:18AM",
-   "arr": "10:03AM",
-   "rarr": "7:19AM",
-   "pct": 62
+   "rdep": "5:03PM",
+   "arr": "1:21AM+1",
+   "rarr": "9:46PM",
+   "pct": 46
   },
   "BOS": {
    "to": "BOS",
@@ -353,17 +353,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 373,
-   "d1": "2026-11-25",
-   "d2": "2026-11-30",
-   "dep": "8:40AM",
-   "al": "United",
+   "price": 801,
+   "d1": "2026-12-24",
+   "d2": "2027-01-06",
+   "dep": "9:17AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:20PM",
-   "arr": "12:48PM",
-   "rarr": "10:06PM",
-   "pct": 31
+   "rdep": "1:42PM",
+   "arr": "1:30PM",
+   "rarr": "7:57PM",
+   "pct": -48
   },
   "NAS": {
    "to": "NAS",
@@ -398,17 +398,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 409,
-   "d1": "2026-12-01",
-   "d2": "2026-12-11",
-   "dep": "3:45PM",
+   "price": 447,
+   "d1": "2026-09-26",
+   "d2": "2026-09-30",
+   "dep": "9:55AM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:45PM",
-   "arr": "10:32PM",
-   "rarr": "3:12AM+1",
-   "pct": 27
+   "rdep": "5:05PM",
+   "arr": "4:20PM",
+   "rarr": "12:17AM+1",
+   "pct": 20
   },
   "ROM": {
    "to": "ROM",

@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-09-05T10:18:00-04:00",
+ "generated": "2026-09-05T12:18:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "DCA": {
@@ -23,17 +23,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 365,
-   "d1": "2026-09-24",
-   "d2": "2026-09-27",
-   "dep": "11:17AM",
-   "al": "Frontier",
+   "price": 269,
+   "d1": "2026-11-24",
+   "d2": "2026-11-29",
+   "dep": "5:35AM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:54PM",
-   "arr": "5:45PM",
-   "rarr": "3:51AM+1",
-   "pct": 33
+   "rdep": "10:50PM",
+   "arr": "10:30AM",
+   "rarr": "3:15AM+1",
+   "pct": 50
   },
   "FLL": {
    "to": "FLL",
@@ -349,21 +349,6 @@
    "arr": "2:10AM+1",
    "rarr": "7:39PM",
    "pct": 40
-  },
-  "PUJ": {
-   "to": "PUJ",
-   "city": "Punta Cana",
-   "price": 311,
-   "d1": "2026-11-27",
-   "d2": "2026-12-05",
-   "dep": "4:34PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "2:43PM",
-   "arr": "11:44PM",
-   "rarr": "8:14PM",
-   "pct": 44
   },
   "ROM": {
    "to": "ROM",

@@ -1,9 +1,11 @@
 {
  "origin": "SEA",
- "generated": "2026-09-05T10:17:42-04:00",
+ "generated": "2026-09-05T12:18:15-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
- "routes_failed": [],
+ "routes_priced": 22,
+ "routes_failed": [
+  "PAR"
+ ],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -233,17 +235,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 134,
-   "d1": "2026-10-02",
-   "d2": "2026-10-05",
-   "dep": "8:43PM",
-   "al": "Alaska",
+   "price": 166,
+   "d1": "2026-10-03",
+   "d2": "2026-10-09",
+   "dep": "1:22PM",
+   "al": "United",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:53PM",
-   "arr": "10:54PM",
-   "rarr": "10:00PM",
-   "pct": 66
+   "rdep": "10:45PM",
+   "arr": "3:37PM",
+   "rarr": "1:15AM+1",
+   "pct": 58
   },
   "AMS": {
    "to": "AMS",
@@ -304,21 +306,6 @@
    "arr": "1:25AM+1",
    "rarr": "10:33PM",
    "pct": -52
-  },
-  "PAR": {
-   "to": "PAR",
-   "city": "Paris",
-   "price": 726,
-   "d1": "2026-10-26",
-   "d2": "2026-11-03",
-   "dep": "6:50PM",
-   "al": "DE",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:35AM",
-   "arr": "6:20AM+1",
-   "rarr": "11:35PM",
-   "pct": 19
   },
   "ROM": {
    "to": "ROM",

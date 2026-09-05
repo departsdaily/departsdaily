@@ -1,9 +1,11 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T10:15:23-04:00",
+ "generated": "2026-09-05T12:15:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 35,
- "routes_failed": [],
+ "routes_failed": [
+  "MHH"
+ ],
  "fares": {
   "AUA": {
    "to": "AUA",
