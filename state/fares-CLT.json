@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T04:15:01-04:00",
+ "generated": "2026-09-05T06:54:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 34,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 832,
-   "d1": "2026-09-30",
-   "d2": "2026-10-11",
-   "dep": "9:40PM",
+   "price": 952,
+   "d1": "2026-10-19",
+   "d2": "2026-10-27",
+   "dep": "9:32AM",
    "al": "",
    "stops": 1,
    "xfer": 1,
-   "rdep": "2:00PM",
-   "arr": "7:59AM+1",
-   "rarr": "1:21AM+1",
-   "pct": 2
+   "rdep": "10:10AM",
+   "arr": "8:05PM",
+   "rarr": "9:47PM",
+   "pct": -12
   },
   "MAD": {
    "to": "MAD",
