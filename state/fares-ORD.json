@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-05T08:16:02-04:00",
+ "generated": "2026-09-05T10:16:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -23,7 +23,7 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 163,
+   "price": 147,
    "d1": "2026-09-28",
    "d2": "2026-10-05",
    "dep": "8:15AM",
@@ -33,7 +33,7 @@
    "rdep": "5:18AM",
    "arr": "10:03AM",
    "rarr": "7:19AM",
-   "pct": 58
+   "pct": 62
   },
   "BOS": {
    "to": "BOS",

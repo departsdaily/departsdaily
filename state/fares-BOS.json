@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-05T08:18:07-04:00",
+ "generated": "2026-09-05T10:18:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 368,
-   "d1": "2026-10-09",
-   "d2": "2026-10-18",
-   "dep": "2:59PM",
-   "al": "JetBlue",
-   "stops": 2,
+   "price": 303,
+   "d1": "2026-11-24",
+   "d2": "2026-11-29",
+   "dep": "5:35AM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:12PM",
-   "arr": "7:20PM",
-   "rarr": "3:14AM+1",
-   "pct": 36
+   "rdep": "9:55PM",
+   "arr": "10:55AM",
+   "rarr": "2:15AM+1",
+   "pct": 47
   },
   "LAS": {
    "to": "LAS",
