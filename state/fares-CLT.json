@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-04T18:15:01-04:00",
+ "generated": "2026-09-04T20:14:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 38,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -139,21 +139,6 @@
    "arr": "7:21PM",
    "rarr": "12:10PM",
    "pct": 43
-  },
-  "GND": {
-   "to": "GND",
-   "city": "Grenada",
-   "price": 651,
-   "d1": "2026-10-01",
-   "d2": "2026-10-09",
-   "dep": "10:56AM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "3:20PM",
-   "arr": "6:55PM",
-   "rarr": "10:37PM",
-   "pct": 11
   },
   "HNL": {
    "to": "HNL",
@@ -488,31 +473,31 @@
   "SMF": {
    "to": "SMF",
    "city": "Sacramento",
-   "price": 295,
-   "d1": "2026-09-25",
-   "d2": "2026-10-03",
+   "price": 364,
+   "d1": "2026-09-11",
+   "d2": "2026-09-18",
    "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:53AM",
+   "rdep": "8:48AM",
    "arr": "2:21AM+1",
-   "rarr": "5:41PM",
-   "pct": 53
+   "rarr": "2:39PM",
+   "pct": 42
   },
   "SNA": {
    "to": "SNA",
    "city": "Orange County",
-   "price": 674,
-   "d1": "2026-10-16",
-   "d2": "2026-10-20",
-   "dep": "6:00PM",
-   "al": "American",
-   "stops": 0,
+   "price": 508,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26",
+   "dep": "1:00PM",
+   "al": "Southwest",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "7:15AM",
-   "arr": "11:17PM",
-   "rarr": "12:00PM",
+   "rdep": "6:25PM",
+   "arr": "7:30PM",
+   "rarr": "2:40AM+1",
    "pct": 0
   },
   "SXM": {

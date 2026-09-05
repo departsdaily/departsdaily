@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-04T18:17:30-04:00",
+ "generated": "2026-09-04T20:17:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 311,
+   "price": 333,
    "d1": "2026-10-14",
    "d2": "2026-10-19",
-   "dep": "10:15PM",
+   "dep": "11:55PM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:59PM",
-   "arr": "3:35AM+1",
-   "rarr": "12:20AM+1",
-   "pct": 51
+   "rdep": "7:02PM",
+   "arr": "6:30AM+1",
+   "rarr": "2:46AM+1",
+   "pct": 48
   },
   "ORD": {
    "to": "ORD",
@@ -203,17 +203,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 259,
+   "price": 231,
    "d1": "2026-09-29",
    "d2": "2026-10-04",
-   "dep": "10:57AM",
+   "dep": "8:15PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:24PM",
-   "arr": "3:11PM",
-   "rarr": "11:27PM",
-   "pct": 35
+   "rdep": "5:23PM",
+   "arr": "12:35AM+1",
+   "rarr": "9:28PM",
+   "pct": 42
   },
   "SFO": {
    "to": "SFO",
@@ -233,17 +233,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 1137,
+   "price": 1056,
    "d1": "2027-01-02",
    "d2": "2027-01-06",
    "dep": "2:35PM",
    "al": "Icelandair",
    "stops": 2,
    "xfer": 0,
-   "rdep": "11:20AM",
+   "rdep": "9:25PM",
    "arr": "2:50AM+1",
-   "rarr": "10:45PM",
-   "pct": -29
+   "rarr": "9:55AM+1",
+   "pct": -20
   },
   "CUN": {
    "to": "CUN",
