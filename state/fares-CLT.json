@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T16:15:27-04:00",
+ "generated": "2026-09-05T19:21:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 35,
+ "routes_priced": 36,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -49,6 +49,21 @@
    "arr": "5:25AM+1",
    "rarr": "1:10AM+1",
    "pct": -8
+  },
+  "BGI": {
+   "to": "BGI",
+   "city": "Barbados",
+   "price": 1116,
+   "d1": "2026-12-18",
+   "d2": "2026-12-28",
+   "dep": "6:00AM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "3:15PM",
+   "arr": "12:18PM",
+   "rarr": "10:19PM",
+   "pct": -55
   },
   "CUN": {
    "to": "CUN",
