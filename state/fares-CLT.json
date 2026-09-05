@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T02:15:18-04:00",
+ "generated": "2026-09-05T04:15:01-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 37,
+ "routes_priced": 34,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -49,21 +49,6 @@
    "arr": "2:04AM+1",
    "rarr": "8:50PM",
    "pct": 39
-  },
-  "BGI": {
-   "to": "BGI",
-   "city": "Barbados",
-   "price": 448,
-   "d1": "2026-10-11",
-   "d2": "2026-10-18",
-   "dep": "9:15AM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "4:20PM",
-   "arr": "4:31PM",
-   "rarr": "12:02AM+1",
-   "pct": 38
   },
   "CUN": {
    "to": "CUN",
@@ -199,21 +184,6 @@
    "arr": "10:44PM",
    "rarr": "7:50PM",
    "pct": 50
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 496,
-   "d1": "2026-10-12",
-   "d2": "2026-10-19",
-   "dep": "9:15AM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:30PM",
-   "arr": "3:11PM",
-   "rarr": "6:42PM",
-   "pct": 8
   },
   "MCO": {
    "to": "MCO",
@@ -394,21 +364,6 @@
    "arr": "2:37PM",
    "rarr": "2:11AM+1",
    "pct": 47
-  },
-  "SDQ": {
-   "to": "SDQ",
-   "city": "Santo Domingo",
-   "price": 580,
-   "d1": "2026-10-11",
-   "d2": "2026-10-18",
-   "dep": "5:38PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "3:35PM",
-   "arr": "11:31PM",
-   "rarr": "8:09PM",
-   "pct": -7
   },
   "SEA": {
    "to": "SEA",

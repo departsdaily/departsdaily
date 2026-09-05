@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-05T02:18:27-04:00",
+ "generated": "2026-09-05T04:17:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 226,
-   "d1": "2026-11-03",
-   "d2": "2026-11-07",
-   "dep": "9:45AM",
+   "price": 259,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26",
+   "dep": "4:11PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:40AM",
-   "arr": "11:02AM",
-   "rarr": "7:52AM",
-   "pct": 44
+   "rdep": "3:30PM",
+   "arr": "5:29PM",
+   "rarr": "5:21PM",
+   "pct": 36
   },
   "ORD": {
    "to": "ORD",

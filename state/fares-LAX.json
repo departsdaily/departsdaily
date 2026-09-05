@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-05T02:17:03-04:00",
+ "generated": "2026-09-05T04:16:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -8,7 +8,7 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 231,
+   "price": 241,
    "d1": "2026-10-01",
    "d2": "2026-10-05",
    "dep": "2:50PM",
@@ -17,8 +17,8 @@
    "xfer": 0,
    "rdep": "8:24PM",
    "arr": "7:06PM",
-   "rarr": "1:18AM+1",
-   "pct": 57
+   "rarr": "1:15AM+1",
+   "pct": 55
   },
   "BNA": {
    "to": "BNA",
@@ -83,7 +83,7 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 177,
+   "price": 171,
    "d1": "2026-10-01",
    "d2": "2026-10-04",
    "dep": "10:45AM",
@@ -93,37 +93,37 @@
    "rdep": "8:25AM",
    "arr": "1:50PM",
    "rarr": "12:00PM",
-   "pct": 66
+   "pct": 67
   },
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 166,
-   "d1": "2026-10-08",
-   "d2": "2026-10-14",
-   "dep": "3:35PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 250,
+   "d1": "2026-09-26",
+   "d2": "2026-10-03",
+   "dep": "11:50PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:45AM",
-   "arr": "8:33PM",
-   "rarr": "3:22PM",
-   "pct": 78
+   "rdep": "6:37PM",
+   "arr": "6:00AM+1",
+   "rarr": "1:33AM+1",
+   "pct": 66
   },
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 182,
-   "d1": "2026-09-24",
-   "d2": "2026-09-28",
-   "dep": "6:45PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 212,
+   "d1": "2026-09-09",
+   "d2": "2026-09-16",
+   "dep": "11:35AM",
+   "al": "Southwest",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:57PM",
-   "arr": "9:58PM",
-   "rarr": "7:49PM",
-   "pct": 60
+   "rdep": "2:50PM",
+   "arr": "2:55PM",
+   "rarr": "6:20PM",
+   "pct": 54
   },
   "LAS": {
    "to": "LAS",
