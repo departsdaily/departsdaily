@@ -1,11 +1,9 @@
 {
  "origin": "SEA",
- "generated": "2026-09-05T12:18:15-04:00",
+ "generated": "2026-09-05T14:18:25-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
- "routes_failed": [
-  "PAR"
- ],
+ "routes_priced": 23,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -280,17 +278,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 612,
-   "d1": "2026-10-16",
-   "d2": "2026-10-23",
-   "dep": "3:40PM",
+   "price": 617,
+   "d1": "2026-10-11",
+   "d2": "2026-10-18",
+   "dep": "7:00PM",
    "al": "Icelandair",
    "stops": 2,
    "xfer": 0,
-   "rdep": "6:15PM",
-   "arr": "4:10AM+1",
-   "rarr": "7:20AM+1",
-   "pct": 28
+   "rdep": "5:55AM",
+   "arr": "7:20AM+1",
+   "rarr": "6:45PM",
+   "pct": 27
   },
   "NAS": {
    "to": "NAS",
@@ -306,6 +304,21 @@
    "arr": "1:25AM+1",
    "rarr": "10:33PM",
    "pct": -52
+  },
+  "PAR": {
+   "to": "PAR",
+   "city": "Paris",
+   "price": 726,
+   "d1": "2026-10-26",
+   "d2": "2026-11-03",
+   "dep": "6:50PM",
+   "al": "DE",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:35AM",
+   "arr": "6:20AM+1",
+   "rarr": "11:35PM",
+   "pct": 19
   },
   "ROM": {
    "to": "ROM",

@@ -1,11 +1,9 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T12:15:36-04:00",
+ "generated": "2026-09-05T14:15:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 35,
- "routes_failed": [
-  "MHH"
- ],
+ "routes_failed": [],
  "fares": {
   "AUA": {
    "to": "AUA",
@@ -250,16 +248,16 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 146,
-   "d1": "2026-09-14",
-   "d2": "2026-09-21",
-   "dep": "9:32AM",
+   "price": 145,
+   "d1": "2026-10-02",
+   "d2": "2026-10-05",
+   "dep": "9:40PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "2:16PM",
-   "rarr": "10:39AM",
+   "rdep": "6:43PM",
+   "arr": "2:12AM+1",
+   "rarr": "8:55PM",
    "pct": 65
   },
   "ORD": {
