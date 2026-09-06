@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-06T16:15:33-04:00",
+ "generated": "2026-09-06T18:15:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -255,9 +255,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:08AM",
+   "rdep": "1:41PM",
    "arr": "5:33PM",
-   "rarr": "9:03AM",
+   "rarr": "3:30PM",
    "pct": 91
   },
   "AMS": {

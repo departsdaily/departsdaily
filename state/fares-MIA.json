@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-09-06T16:17:21-04:00",
+ "generated": "2026-09-06T18:17:36-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -154,6 +154,21 @@
    "arr": "12:26PM",
    "rarr": "2:34AM+1",
    "pct": 54
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 345,
+   "d1": "2026-11-26",
+   "d2": "2026-12-02",
+   "dep": "11:03AM",
+   "al": "Alaska",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "9:15PM",
+   "arr": "5:54PM",
+   "rarr": "3:14AM+1",
+   "pct": 45
   },
   "TPA": {
    "to": "TPA",
