@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-06T08:17:14-04:00",
+ "generated": "2026-09-06T10:16:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -129,15 +129,15 @@
    "to": "LAS",
    "city": "Las Vegas",
    "price": 44,
-   "d1": "2026-10-08",
-   "d2": "2026-10-14",
-   "dep": "4:33PM",
+   "d1": "2026-10-28",
+   "d2": "2026-10-30",
+   "dep": "5:15PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "2:55PM",
-   "arr": "5:52PM",
-   "rarr": "4:20PM",
+   "rdep": "6:30AM",
+   "arr": "6:30PM",
+   "rarr": "7:48AM",
    "pct": 85
   },
   "MCO": {
@@ -248,7 +248,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 80,
+   "price": 74,
    "d1": "2026-10-01",
    "d2": "2026-10-05",
    "dep": "5:44PM",
@@ -258,7 +258,7 @@
    "rdep": "8:15PM",
    "arr": "8:40PM",
    "rarr": "11:04PM",
-   "pct": 81
+   "pct": 83
   },
   "SFO": {
    "to": "SFO",
