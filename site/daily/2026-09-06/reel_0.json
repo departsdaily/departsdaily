@@ -1,0 +1,48 @@
+{
+ "origin": "CLT",
+ "date": "2026-09-06",
+ "slot": 0,
+ "shape": "destination",
+ "label": "THREE CITIES",
+ "caption_lead": "Three cities from CLT, all under their typical fare.",
+ "file": "reel_0.mp4",
+ "seconds": 13.2,
+ "size_mb": 4.9,
+ "fps": 30,
+ "audio": "first-light.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "twoweek",
+ "plan_angle": "The big one. Honeymoon, anniversary, the trip you keep putting off.",
+ "featured": [
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 240,
+   "disc": 22,
+   "baseline": 308,
+   "nights": 7,
+   "d1": "2026-09-16",
+   "d2": "2026-09-23"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 263,
+   "disc": 22,
+   "baseline": 338,
+   "nights": 17,
+   "d1": "2026-10-17",
+   "d2": "2026-11-03"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 246,
+   "disc": 20,
+   "baseline": 308,
+   "nights": 3,
+   "d1": "2026-09-25",
+   "d2": "2026-09-28"
+  }
+ ]
+}
