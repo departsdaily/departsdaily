@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-06T02:33:04-04:00",
+ "generated": "2026-09-06T04:17:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 565,
-   "d1": "2026-09-18",
-   "d2": "2026-09-27",
-   "dep": "6:21AM",
-   "al": "Copa",
+   "price": 477,
+   "d1": "2026-11-23",
+   "d2": "2026-11-28",
+   "dep": "9:15PM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:22PM",
-   "arr": "11:33AM",
-   "rarr": "5:38PM",
-   "pct": -5
+   "rdep": "6:20PM",
+   "arr": "4:58AM+1",
+   "rarr": "2:09AM+1",
+   "pct": 12
   },
   "NAS": {
    "to": "NAS",

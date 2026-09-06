@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-06T02:32:06-04:00",
+ "generated": "2026-09-06T04:16:45-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],

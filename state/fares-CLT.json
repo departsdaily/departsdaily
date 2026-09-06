@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-06T02:30:48-04:00",
+ "generated": "2026-09-06T04:15:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 36,
+ "routes_priced": 35,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -469,21 +469,6 @@
    "arr": "12:07PM",
    "rarr": "7:51PM",
    "pct": -2
-  },
-  "TPA": {
-   "to": "TPA",
-   "city": "Tampa",
-   "price": 266,
-   "d1": "2026-10-16",
-   "d2": "2026-10-19",
-   "dep": "11:56AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "9:50PM",
-   "arr": "5:11PM",
-   "rarr": "3:37AM+1",
-   "pct": 45
   },
   "TYO": {
    "to": "TYO",
