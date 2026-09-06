@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-06T12:16:46-04:00",
+ "generated": "2026-09-06T14:17:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -368,17 +368,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 358,
-   "d1": "2026-11-26",
+   "price": 427,
+   "d1": "2026-11-25",
    "d2": "2026-12-09",
-   "dep": "5:15PM",
-   "al": "TAP Portugal",
+   "dep": "8:50PM",
+   "al": "British Airways",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:35PM",
-   "arr": "6:55AM+1",
-   "rarr": "11:55AM+1",
-   "pct": 60
+   "rdep": "7:10AM",
+   "arr": "8:45AM+1",
+   "rarr": "8:00PM",
+   "pct": 53
   },
   "PUJ": {
    "to": "PUJ",

@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-06T12:16:10-04:00",
+ "generated": "2026-09-06T14:16:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 283,
-   "d1": "2026-09-17",
-   "d2": "2026-09-20",
-   "dep": "6:30AM",
+   "price": 247,
+   "d1": "2026-10-08",
+   "d2": "2026-10-13",
+   "dep": "3:48PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:08PM",
-   "arr": "1:22PM",
-   "rarr": "9:21PM",
-   "pct": 36
+   "rdep": "6:33PM",
+   "arr": "5:48PM",
+   "rarr": "8:57PM",
+   "pct": 44
   },
   "BOS": {
    "to": "BOS",
@@ -338,7 +338,7 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 430,
+   "price": 435,
    "d1": "2026-12-18",
    "d2": "2026-12-23",
    "dep": "6:45AM",
@@ -348,7 +348,7 @@
    "rdep": "5:30PM",
    "arr": "11:51AM",
    "rarr": "11:28PM",
-   "pct": 23
+   "pct": 22
   },
   "ROM": {
    "to": "ROM",
@@ -364,6 +364,21 @@
    "arr": "12:05PM+1",
    "rarr": "11:20AM+1",
    "pct": 4
+  },
+  "SJU": {
+   "to": "SJU",
+   "city": "San Juan, PR",
+   "price": 444,
+   "d1": "2026-09-12",
+   "d2": "2026-09-16",
+   "dep": "9:21AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:42PM",
+   "arr": "3:12PM",
+   "rarr": "12:59AM+1",
+   "pct": -6
   }
  }
 }

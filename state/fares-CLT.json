@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-06T12:15:13-04:00",
+ "generated": "2026-09-06T14:15:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 34,
+ "routes_priced": 36,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -64,6 +64,21 @@
    "arr": "12:18PM",
    "rarr": "10:19PM",
    "pct": -55
+  },
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 319,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
+   "dep": "1:51PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:59PM",
+   "arr": "6:19PM",
+   "rarr": "2:02AM+1",
+   "pct": 27
   },
   "CUN": {
    "to": "CUN",
@@ -188,7 +203,7 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 135,
+   "price": 125,
    "d1": "2026-11-06",
    "d2": "2026-11-09",
    "dep": "6:05AM",
@@ -198,7 +213,7 @@
    "rdep": "6:40AM",
    "arr": "7:56AM",
    "rarr": "8:37AM",
-   "pct": 67
+   "pct": 70
   },
   "MIA": {
    "to": "MIA",
@@ -214,6 +229,21 @@
    "arr": "9:38PM",
    "rarr": "9:14PM",
    "pct": 52
+  },
+  "MIL": {
+   "to": "MIL",
+   "city": "Milan",
+   "price": 1157,
+   "d1": "2026-12-17",
+   "d2": "2026-12-21",
+   "dep": "6:25PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:55PM",
+   "arr": "4:25AM+1",
+   "rarr": "6:25AM+1",
+   "pct": -29
   },
   "MSY": {
    "to": "MSY",

@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-06T12:17:59-04:00",
+ "generated": "2026-09-06T14:18:37-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 142,
+   "price": 167,
    "d1": "2026-10-10",
    "d2": "2026-10-17",
    "dep": "5:49PM",
    "al": "Breeze",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:45AM",
+   "rdep": "2:07PM",
    "arr": "9:26PM",
-   "rarr": "11:02AM",
-   "pct": 64
+   "rarr": "5:09PM",
+   "pct": 57
   },
   "MIA": {
    "to": "MIA",
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 259,
-   "d1": "2026-09-19",
-   "d2": "2026-09-26",
-   "dep": "4:11PM",
+   "price": 310,
+   "d1": "2026-09-10",
+   "d2": "2026-09-18",
+   "dep": "1:10PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "3:30PM",
-   "arr": "5:29PM",
-   "rarr": "5:21PM",
-   "pct": 36
+   "rdep": "6:40AM",
+   "arr": "2:26PM",
+   "rarr": "7:59AM",
+   "pct": 23
   },
   "ORD": {
    "to": "ORD",

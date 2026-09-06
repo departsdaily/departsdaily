@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-06T12:15:32-04:00",
+ "generated": "2026-09-06T14:15:51-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 148,
+   "price": 139,
    "d1": "2026-10-03",
-   "d2": "2026-10-05",
+   "d2": "2026-10-06",
    "dep": "7:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:10PM",
+   "rdep": "10:44AM",
    "arr": "11:24PM",
-   "rarr": "10:10PM",
-   "pct": 69
+   "rarr": "1:55PM",
+   "pct": 71
   },
   "DFW": {
    "to": "DFW",
@@ -248,17 +248,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 74,
-   "d1": "2026-09-16",
-   "d2": "2026-09-21",
-   "dep": "4:59PM",
+   "price": 39,
+   "d1": "2026-11-10",
+   "d2": "2026-11-14",
+   "dep": "10:11AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "6:31PM",
-   "rarr": "7:54PM",
-   "pct": 83
+   "rdep": "1:41PM",
+   "arr": "11:49AM",
+   "rarr": "3:30PM",
+   "pct": 91
   },
   "AMS": {
    "to": "AMS",
