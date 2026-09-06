@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-05T21:22:22-04:00",
+ "generated": "2026-09-06T02:32:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -94,6 +94,21 @@
    "arr": "8:35AM",
    "rarr": "9:05AM",
    "pct": 51
+  },
+  "LAS": {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 141,
+   "d1": "2026-12-05",
+   "d2": "2026-12-09",
+   "dep": "1:00PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:59PM",
+   "arr": "3:05PM",
+   "rarr": "9:10PM",
+   "pct": 61
   },
   "LAX": {
    "to": "LAX",
@@ -304,6 +319,21 @@
    "arr": "2:52AM+1",
    "rarr": "1:16AM+1",
    "pct": -3
+  },
+  "ROM": {
+   "to": "ROM",
+   "city": "Rome",
+   "price": 1506,
+   "d1": "2026-12-18",
+   "d2": "2027-01-03",
+   "dep": "2:19PM",
+   "al": "",
+   "stops": 2,
+   "xfer": 1,
+   "rdep": "10:15PM",
+   "arr": "3:45AM+1",
+   "rarr": "4:02PM+1",
+   "pct": -59
   }
  }
 }

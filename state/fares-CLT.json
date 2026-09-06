@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-05T21:20:58-04:00",
+ "generated": "2026-09-06T02:30:48-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 35,
+ "routes_priced": 36,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -143,17 +143,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 187,
-   "d1": "2026-09-08",
-   "d2": "2026-09-10",
-   "dep": "10:47AM",
+   "price": 300,
+   "d1": "2026-11-05",
+   "d2": "2026-11-08",
+   "dep": "2:46PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:59AM",
-   "arr": "4:44PM",
-   "rarr": "6:22AM",
-   "pct": 75
+   "rdep": "12:38AM",
+   "arr": "8:58PM",
+   "rarr": "5:58AM",
+   "pct": 59
   },
   "LAX": {
    "to": "LAX",
@@ -349,6 +349,21 @@
    "arr": "1:55AM+1",
    "rarr": "8:16PM",
    "pct": -2
+  },
+  "SAL": {
+   "to": "SAL",
+   "city": "San Salvador",
+   "price": 1124,
+   "d1": "2026-12-17",
+   "d2": "2027-01-07",
+   "dep": "1:53PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "9:35AM",
+   "arr": "9:31PM",
+   "rarr": "5:55PM",
+   "pct": -81
   },
   "SAT": {
    "to": "SAT",

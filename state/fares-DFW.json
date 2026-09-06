@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-05T21:22:01-04:00",
+ "generated": "2026-09-06T02:31:48-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -364,21 +364,6 @@
    "arr": "12:05PM+1",
    "rarr": "11:20AM+1",
    "pct": 4
-  },
-  "SJU": {
-   "to": "SJU",
-   "city": "San Juan, PR",
-   "price": 182,
-   "d1": "2026-09-12",
-   "d2": "2026-09-16",
-   "dep": "9:21AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:57AM",
-   "arr": "3:12PM",
-   "rarr": "9:08AM",
-   "pct": 57
   }
  }
 }

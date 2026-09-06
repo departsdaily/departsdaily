@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-05T21:23:06-04:00",
+ "generated": "2026-09-06T02:32:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 192,
-   "d1": "2026-11-21",
-   "d2": "2026-11-25",
-   "dep": "7:00PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 376,
+   "d1": "2026-10-27",
+   "d2": "2026-11-02",
+   "dep": "7:22AM",
+   "al": "Alaska",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:25PM",
-   "arr": "12:47AM+1",
-   "rarr": "3:01AM+1",
-   "pct": 71
+   "rdep": "7:23AM",
+   "arr": "4:46PM",
+   "rarr": "3:44PM",
+   "pct": 43
   },
   "SEA": {
    "to": "SEA",
@@ -278,32 +278,32 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 406,
-   "d1": "2026-10-22",
-   "d2": "2026-10-30",
-   "dep": "10:05PM",
-   "al": "UX",
+   "price": 601,
+   "d1": "2026-10-14",
+   "d2": "2026-10-21",
+   "dep": "6:55PM",
+   "al": "SK",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00PM",
-   "arr": "8:00AM+1",
-   "rarr": "6:00AM+1",
-   "pct": 54
+   "rdep": "10:45AM",
+   "arr": "4:10AM+1",
+   "rarr": "8:50PM",
+   "pct": 32
   },
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 277,
-   "d1": "2026-11-21",
-   "d2": "2026-11-25",
-   "dep": "2:44PM",
-   "al": "Copa",
+   "price": 413,
+   "d1": "2026-12-01",
+   "d2": "2026-12-08",
+   "dep": "9:42AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:35PM",
-   "arr": "10:19PM",
-   "rarr": "2:58AM+1",
-   "pct": 55
+   "rdep": "2:10PM",
+   "arr": "2:25PM",
+   "rarr": "8:30PM",
+   "pct": 33
   },
   "CUN": {
    "to": "CUN",
@@ -413,7 +413,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 439,
+   "price": 449,
    "d1": "2026-10-23",
    "d2": "2026-10-31",
    "dep": "12:30AM",
@@ -423,7 +423,7 @@
    "rdep": "12:35PM",
    "arr": "8:30AM",
    "rarr": "9:55PM",
-   "pct": 54
+   "pct": 53
   },
   "SJU": {
    "to": "SJU",

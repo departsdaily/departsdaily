@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-09-05T21:23:26-04:00",
+ "generated": "2026-09-06T02:33:04-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -185,21 +185,6 @@
    "rarr": "2:34AM+1",
    "pct": 54
   },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 377,
-   "d1": "2026-10-16",
-   "d2": "2026-10-20",
-   "dep": "6:18PM",
-   "al": "Alaska",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "8:08AM",
-   "arr": "12:59AM+1",
-   "rarr": "2:15PM",
-   "pct": 40
-  },
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
@@ -278,17 +263,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 311,
-   "d1": "2026-11-11",
-   "d2": "2026-12-01",
-   "dep": "8:30AM",
-   "al": "American",
-   "stops": 0,
+   "price": 565,
+   "d1": "2026-09-18",
+   "d2": "2026-09-27",
+   "dep": "6:21AM",
+   "al": "Copa",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:09PM",
-   "arr": "10:15AM",
-   "rarr": "8:05PM",
-   "pct": 42
+   "rdep": "12:22PM",
+   "arr": "11:33AM",
+   "rarr": "5:38PM",
+   "pct": -5
   },
   "NAS": {
    "to": "NAS",
@@ -353,7 +338,7 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 138,
+   "price": 133,
    "d1": "2026-10-22",
    "d2": "2026-10-26",
    "dep": "8:10AM",
@@ -363,7 +348,7 @@
    "rdep": "3:04AM",
    "arr": "10:49AM",
    "rarr": "5:55AM",
-   "pct": 67
+   "pct": 68
   }
  }
 }

@@ -1,8 +1,8 @@
 {
  "origin": "LAX",
- "generated": "2026-09-05T21:22:43-04:00",
+ "generated": "2026-09-06T02:32:26-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -170,6 +170,21 @@
    "rarr": "12:29PM",
    "pct": 64
   },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 298,
+   "d1": "2026-09-26",
+   "d2": "2026-09-28",
+   "dep": "11:45AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:00PM",
+   "arr": "4:45PM",
+   "rarr": "2:01AM+1",
+   "pct": 44
+  },
   "NYC": {
    "to": "NYC",
    "city": "New York City",
@@ -188,7 +203,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 130,
+   "price": 138,
    "d1": "2026-10-13",
    "d2": "2026-10-17",
    "dep": "12:21AM",
@@ -198,7 +213,22 @@
    "rdep": "8:01PM",
    "arr": "4:34AM",
    "rarr": "12:51AM+1",
-   "pct": 77
+   "pct": 75
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 352,
+   "d1": "2026-10-08",
+   "d2": "2026-10-13",
+   "dep": "12:40PM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "8:44PM",
+   "arr": "6:25PM",
+   "rarr": "3:23AM+1",
+   "pct": 52
   },
   "PHX": {
    "to": "PHX",
@@ -218,7 +248,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 99,
+   "price": 80,
    "d1": "2026-10-01",
    "d2": "2026-10-05",
    "dep": "5:44PM",
@@ -228,7 +258,7 @@
    "rdep": "8:15PM",
    "arr": "8:40PM",
    "rarr": "11:04PM",
-   "pct": 77
+   "pct": 81
   },
   "SFO": {
    "to": "SFO",
@@ -338,17 +368,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 601,
-   "d1": "2026-09-18",
-   "d2": "2026-10-08",
-   "dep": "10:20AM",
-   "al": "AT",
+   "price": 358,
+   "d1": "2026-11-26",
+   "d2": "2026-12-09",
+   "dep": "5:15PM",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:40PM",
-   "arr": "12:20AM+1",
-   "rarr": "1:05PM+1",
-   "pct": 33
+   "rdep": "8:35PM",
+   "arr": "6:55AM+1",
+   "rarr": "11:55AM+1",
+   "pct": 60
   },
   "PUJ": {
    "to": "PUJ",

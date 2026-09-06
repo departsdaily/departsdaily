@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-05T21:24:07-04:00",
+ "generated": "2026-09-06T02:33:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 256,
-   "d1": "2026-09-09",
-   "d2": "2026-09-13",
-   "dep": "6:00AM",
-   "al": "American",
+   "price": 331,
+   "d1": "2026-10-15",
+   "d2": "2026-10-19",
+   "dep": "12:34PM",
+   "al": "Allegiant",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:00PM",
-   "arr": "10:11AM",
-   "rarr": "10:32PM",
-   "pct": 37
+   "rdep": "10:26AM",
+   "arr": "5:18PM",
+   "rarr": "3:06PM",
+   "pct": 19
   },
   "AMS": {
    "to": "AMS",
@@ -270,9 +270,9 @@
    "al": "American",
    "stops": 2,
    "xfer": 0,
-   "rdep": "5:16PM",
+   "rdep": "5:59PM",
    "arr": "11:45PM",
-   "rarr": "12:49AM+1",
+   "rarr": "1:39AM+1",
    "pct": 34
   },
   "CUN": {
