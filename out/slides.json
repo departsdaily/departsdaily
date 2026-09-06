@@ -3,26 +3,20 @@
   "slide1_board.png",
   "slide2_board.png",
   "slide3_board.png",
-  "slide4_cta.png"
+  "slide4_board.png",
+  "slide5_cta.png"
  ],
- "n_deals": 8,
- "board_slides": 3,
+ "n_deals": 9,
+ "board_slides": 4,
  "sections": [
+  "LONG WEEKEND",
   "EXTRA LONG WEEKEND",
   "WEEK-ISH",
   "CHEAPEST OUT OF CLT"
  ],
  "stories": [
   {
-   "file": "story_1_LAS.png",
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 187,
-   "disc": 39,
-   "section": "cheapest"
-  },
-  {
-   "file": "story_2_LAX.png",
+   "file": "story_1_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 240,
@@ -30,7 +24,23 @@
    "section": "extra_weekend"
   },
   {
+   "file": "story_2_LAS.png",
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 263,
+   "disc": 22,
+   "section": "cheapest"
+  },
+  {
    "file": "story_3_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 246,
+   "disc": 20,
+   "section": "weekend"
+  },
+  {
+   "file": "story_4_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 248,
@@ -38,7 +48,7 @@
    "section": "weekish"
   },
   {
-   "file": "story_4_MSY.png",
+   "file": "story_5_MSY.png",
    "to": "MSY",
    "city": "New Orleans",
    "price": 188,
@@ -46,7 +56,15 @@
    "section": "cheapest"
   },
   {
-   "file": "story_5_SFO.png",
+   "file": "story_6_LAS.png",
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 300,
+   "disc": 17,
+   "section": "weekend"
+  },
+  {
+   "file": "story_7_SFO.png",
    "to": "SFO",
    "city": "San Francisco",
    "price": 308,
@@ -54,28 +72,12 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_6_GDL.png",
+   "file": "story_8_GDL.png",
    "to": "GDL",
    "city": "Guadalajara",
    "price": 322,
    "disc": 50,
    "section": "cheapest"
-  },
-  {
-   "file": "story_7_BCN.png",
-   "to": "BCN",
-   "city": "Barcelona",
-   "price": 540,
-   "disc": 35,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_8_YYC.png",
-   "to": "YYC",
-   "city": "Calgary",
-   "price": 479,
-   "disc": 18,
-   "section": "extra_weekend"
   }
  ]
 }
