@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-05T19:24:41-04:00",
+ "generated": "2026-09-05T21:23:46-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 201,
-   "d1": "2026-10-14",
-   "d2": "2026-10-17",
-   "dep": "8:00PM",
+   "price": 146,
+   "d1": "2026-10-02",
+   "d2": "2026-10-04",
+   "dep": "4:27PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "1:07PM",
-   "arr": "1:20AM+1",
-   "rarr": "4:12PM",
-   "pct": 47
+   "rdep": "8:58PM",
+   "arr": "7:21PM",
+   "rarr": "11:59PM",
+   "pct": 62
   },
   "DFW": {
    "to": "DFW",

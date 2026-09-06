@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-05T19:25:01-04:00",
+ "generated": "2026-09-05T21:24:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 392,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "5:45AM",
-   "al": "Air Canada",
-   "stops": 1,
+   "price": 412,
+   "d1": "2026-11-12",
+   "d2": "2026-11-17",
+   "dep": "4:56PM",
+   "al": "American",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "5:25PM",
-   "arr": "1:05PM",
-   "rarr": "12:28AM+1",
-   "pct": 37
+   "rdep": "5:16PM",
+   "arr": "11:45PM",
+   "rarr": "12:49AM+1",
+   "pct": 34
   },
   "CUN": {
    "to": "CUN",

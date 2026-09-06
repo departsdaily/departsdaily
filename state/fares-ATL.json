@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-05T19:22:12-04:00",
+ "generated": "2026-09-05T21:21:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -23,7 +23,7 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 241,
+   "price": 236,
    "d1": "2026-10-16",
    "d2": "2026-10-18",
    "dep": "9:10PM",
@@ -33,7 +33,7 @@
    "rdep": "6:55AM",
    "arr": "10:55PM",
    "rarr": "8:50AM",
-   "pct": 41
+   "pct": 42
   },
   "DEN": {
    "to": "DEN",
@@ -353,17 +353,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 565,
-   "d1": "2026-10-22",
-   "d2": "2026-10-26",
+   "price": 658,
+   "d1": "2026-10-12",
+   "d2": "2026-10-16",
    "dep": "9:50PM",
    "al": "Turkish",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:45AM",
+   "rdep": "7:50PM",
    "arr": "12:25PM+1",
-   "rarr": "10:50PM",
-   "pct": 37
+   "rarr": "11:05AM+1",
+   "pct": 27
   },
   "PUJ": {
    "to": "PUJ",

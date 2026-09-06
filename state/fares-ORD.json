@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-05T19:22:34-04:00",
+ "generated": "2026-09-05T21:21:40-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -206,12 +206,12 @@
    "price": 145,
    "d1": "2026-09-18",
    "d2": "2026-09-20",
-   "dep": "11:37AM",
+   "dep": "4:01PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:55AM",
-   "arr": "1:59PM",
+   "arr": "6:29PM",
    "rarr": "9:48AM",
    "pct": 65
   },
