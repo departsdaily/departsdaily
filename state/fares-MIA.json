@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-09-06T14:17:56-04:00",
+ "generated": "2026-09-06T16:17:21-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,21 +19,6 @@
    "arr": "10:45AM",
    "rarr": "3:55PM",
    "pct": 63
-  },
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 306,
-   "d1": "2026-09-28",
-   "d2": "2026-10-04",
-   "dep": "12:05PM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:16PM",
-   "arr": "2:28PM",
-   "rarr": "10:48PM",
-   "pct": 23
   },
   "BOS": {
    "to": "BOS",
@@ -278,17 +263,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 599,
-   "d1": "2026-11-11",
-   "d2": "2026-11-17",
-   "dep": "11:50PM",
+   "price": 597,
+   "d1": "2026-10-14",
+   "d2": "2026-10-21",
+   "dep": "4:20PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:40AM",
-   "arr": "10:30AM+1",
-   "rarr": "7:05PM",
-   "pct": 33
+   "rdep": "2:40PM",
+   "arr": "3:10AM+1",
+   "rarr": "2:40AM+1",
+   "pct": 34
   },
   "PUJ": {
    "to": "PUJ",

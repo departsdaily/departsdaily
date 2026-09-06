@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-06T14:16:54-04:00",
+ "generated": "2026-09-06T16:16:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 391,
-   "d1": "2026-10-15",
-   "d2": "2026-10-18",
-   "dep": "7:02PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 224,
+   "d1": "2026-10-26",
+   "d2": "2026-10-29",
+   "dep": "7:20PM",
+   "al": "Southwest",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:54AM",
-   "arr": "2:00AM+1",
-   "rarr": "11:52AM",
-   "pct": 26
+   "rdep": "5:00AM",
+   "arr": "11:15PM",
+   "rarr": "9:30AM",
+   "pct": 58
   },
   "DCA": {
    "to": "DCA",

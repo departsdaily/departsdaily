@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-09-06T14:18:37-04:00",
+ "generated": "2026-09-06T16:17:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "DCA": {
@@ -349,6 +349,21 @@
    "arr": "7:15AM+1",
    "rarr": "8:30PM",
    "pct": 34
+  },
+  "PUJ": {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 481,
+   "d1": "2026-12-23",
+   "d2": "2027-01-06",
+   "dep": "5:28PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:39PM",
+   "arr": "1:37AM+1",
+   "rarr": "1:41AM+1",
+   "pct": 14
   },
   "ROM": {
    "to": "ROM",
