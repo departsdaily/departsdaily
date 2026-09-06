@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-06T10:17:59-04:00",
+ "generated": "2026-09-06T12:17:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 349,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "12:54PM",
-   "al": "Frontier",
+   "price": 381,
+   "d1": "2026-09-21",
+   "d2": "2026-09-30",
+   "dep": "8:40PM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:04PM",
-   "arr": "8:27PM",
-   "rarr": "4:39AM+1",
-   "pct": 48
+   "rdep": "10:06PM",
+   "arr": "2:26AM+1",
+   "rarr": "5:36AM+1",
+   "pct": 44
   },
   "LAX": {
    "to": "LAX",

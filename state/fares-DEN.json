@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-06T10:16:28-04:00",
+ "generated": "2026-09-06T12:16:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 350,
-   "d1": "2026-10-15",
-   "d2": "2026-10-22",
-   "dep": "1:53PM",
-   "al": "Volaris",
+   "price": 530,
+   "d1": "2026-12-16",
+   "d2": "2026-12-23",
+   "dep": "9:55PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:41PM",
-   "arr": "7:43PM",
-   "rarr": "2:17AM+1",
-   "pct": 33
+   "rdep": "11:55PM",
+   "arr": "2:44AM+1",
+   "rarr": "6:06AM+1",
+   "pct": -2
   },
   "LON": {
    "to": "LON",
