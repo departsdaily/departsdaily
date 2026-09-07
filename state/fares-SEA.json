@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-06T18:17:55-04:00",
+ "generated": "2026-09-06T20:17:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 285,
+   "price": 290,
    "d1": "2026-10-14",
    "d2": "2026-10-18",
    "dep": "8:55AM",
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:18PM",
+   "rdep": "5:40AM",
    "arr": "1:00PM",
-   "rarr": "6:23PM",
-   "pct": 46
+   "rarr": "11:00AM",
+   "pct": 45
   },
   "BOS": {
    "to": "BOS",
@@ -188,17 +188,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 298,
+   "price": 201,
    "d1": "2026-11-04",
    "d2": "2026-11-08",
-   "dep": "4:27PM",
-   "al": "Frontier",
-   "stops": 1,
+   "dep": "5:24PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:15PM",
-   "arr": "9:41PM",
-   "rarr": "12:31AM+1",
-   "pct": 39
+   "rdep": "6:49AM",
+   "arr": "9:45PM",
+   "rarr": "11:39AM",
+   "pct": 59
   },
   "PHX": {
    "to": "PHX",
@@ -233,7 +233,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 1056,
+   "price": 1152,
    "d1": "2027-01-02",
    "d2": "2027-01-06",
    "dep": "2:35PM",
@@ -243,7 +243,7 @@
    "rdep": "9:25PM",
    "arr": "2:50AM+1",
    "rarr": "9:55AM+1",
-   "pct": -20
+   "pct": -31
   },
   "CUN": {
    "to": "CUN",

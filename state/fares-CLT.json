@@ -1,14 +1,14 @@
 {
  "origin": "CLT",
- "generated": "2026-09-06T18:15:16-04:00",
+ "generated": "2026-09-06T20:15:18-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 36,
+ "routes_priced": 35,
  "routes_failed": [],
  "fares": {
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 558,
+   "price": 576,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "dep": "6:20AM",
@@ -18,7 +18,7 @@
    "rdep": "1:55PM",
    "arr": "11:09AM",
    "rarr": "7:09PM",
-   "pct": 10
+   "pct": 7
   },
   "AUH": {
    "to": "AUH",
@@ -319,21 +319,6 @@
    "arr": "9:25PM",
    "rarr": "11:57AM+1",
    "pct": 14
-  },
-  "PHX": {
-   "to": "PHX",
-   "city": "Phoenix",
-   "price": 528,
-   "d1": "2026-11-25",
-   "d2": "2026-11-28",
-   "dep": "6:00PM",
-   "al": "American",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "1:01AM",
-   "arr": "10:50PM",
-   "rarr": "4:53AM",
-   "pct": 21
   },
   "PSP": {
    "to": "PSP",

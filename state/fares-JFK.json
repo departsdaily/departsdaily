@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-06T18:17:18-04:00",
+ "generated": "2026-09-06T20:17:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -99,15 +99,15 @@
    "to": "FLL",
    "city": "Ft. Lauderdale",
    "price": 211,
-   "d1": "2026-09-20",
-   "d2": "2026-09-25",
-   "dep": "12:00PM",
+   "d1": "2026-10-23",
+   "d2": "2026-10-26",
+   "dep": "6:00AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:45AM",
-   "arr": "3:08PM",
-   "rarr": "11:36AM",
+   "rdep": "8:30AM",
+   "arr": "9:05AM",
+   "rarr": "11:20AM",
    "pct": 49
   },
   "HOU": {
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 200,
+   "price": 245,
    "d1": "2026-09-23",
-   "d2": "2026-09-26",
+   "d2": "2026-09-29",
    "dep": "8:10AM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:00AM",
+   "rdep": "7:05AM",
    "arr": "10:58AM",
-   "rarr": "9:27AM",
-   "pct": 52
+   "rarr": "9:33AM",
+   "pct": 41
   },
   "PHX": {
    "to": "PHX",
@@ -263,32 +263,32 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 208,
-   "d1": "2026-10-03",
-   "d2": "2026-10-10",
+   "price": 252,
+   "d1": "2026-09-25",
+   "d2": "2026-10-03",
    "dep": "6:45PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:22PM",
+   "rdep": "6:12PM",
    "arr": "11:02PM",
-   "rarr": "9:16PM",
-   "pct": 43
+   "rarr": "10:04PM",
+   "pct": 32
   },
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 601,
-   "d1": "2026-10-14",
-   "d2": "2026-10-21",
-   "dep": "6:55PM",
+   "price": 613,
+   "d1": "2026-10-22",
+   "d2": "2026-10-30",
+   "dep": "5:10PM",
    "al": "SK",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:45AM",
-   "arr": "4:10AM+1",
-   "rarr": "8:50PM",
-   "pct": 32
+   "rdep": "10:30AM",
+   "arr": "2:50AM+1",
+   "rarr": "8:40PM",
+   "pct": 30
   },
   "AUA": {
    "to": "AUA",
@@ -338,17 +338,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 462,
-   "d1": "2026-10-05",
-   "d2": "2026-10-12",
-   "dep": "6:30PM",
-   "al": "Virgin Atlantic",
+   "price": 395,
+   "d1": "2026-10-02",
+   "d2": "2026-10-13",
+   "dep": "6:20PM",
+   "al": "Z0",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:05PM",
-   "arr": "1:45AM+1",
-   "rarr": "3:50AM+1",
-   "pct": 46
+   "rdep": "1:05PM",
+   "arr": "1:20AM+1",
+   "rarr": "8:55PM",
+   "pct": 54
   },
   "MBJ": {
    "to": "MBJ",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 176,
-   "d1": "2026-10-31",
+   "price": 216,
+   "d1": "2026-10-30",
    "d2": "2026-11-09",
-   "dep": "3:14PM",
-   "al": "JetBlue",
+   "dep": "9:00PM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:25AM",
-   "arr": "9:04PM",
-   "rarr": "12:02PM",
-   "pct": 58
+   "rdep": "1:53PM",
+   "arr": "2:40AM+1",
+   "rarr": "7:51PM",
+   "pct": 49
   }
  }
 }

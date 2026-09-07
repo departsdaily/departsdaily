@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-06T18:15:36-04:00",
+ "generated": "2026-09-06T20:15:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -233,9 +233,9 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 337,
+   "price": 370,
    "d1": "2026-09-14",
-   "d2": "2026-09-19",
+   "d2": "2026-09-20",
    "dep": "5:25PM",
    "al": "Frontier",
    "stops": 0,
@@ -243,21 +243,21 @@
    "rdep": "10:05PM",
    "arr": "10:48PM",
    "rarr": "2:50AM+1",
-   "pct": 56
+   "pct": 52
   },
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 40,
+   "price": 39,
    "d1": "2026-11-10",
    "d2": "2026-11-14",
    "dep": "3:59PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "1:41PM",
+   "rdep": "7:08AM",
    "arr": "5:33PM",
-   "rarr": "3:30PM",
+   "rarr": "9:03AM",
    "pct": 91
   },
   "AMS": {
@@ -398,17 +398,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 173,
-   "d1": "2026-12-04",
-   "d2": "2026-12-14",
-   "dep": "3:41PM",
+   "price": 177,
+   "d1": "2026-10-01",
+   "d2": "2026-10-05",
+   "dep": "3:51PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:13PM",
-   "arr": "8:14PM",
-   "rarr": "9:41PM",
-   "pct": 59
+   "rdep": "6:55PM",
+   "arr": "8:32PM",
+   "rarr": "1:21AM+1",
+   "pct": 58
   }
  }
 }

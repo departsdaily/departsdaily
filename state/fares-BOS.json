@@ -1,8 +1,8 @@
 {
  "origin": "BOS",
- "generated": "2026-09-06T18:18:14-04:00",
+ "generated": "2026-09-06T20:18:08-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -128,17 +128,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 160,
-   "d1": "2026-09-10",
-   "d2": "2026-09-14",
-   "dep": "12:54PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 170,
+   "d1": "2026-10-31",
+   "d2": "2026-11-07",
+   "dep": "6:30PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "5:32AM",
-   "arr": "6:03PM",
-   "rarr": "10:19AM",
-   "pct": 62
+   "rdep": "8:34PM",
+   "arr": "10:05PM",
+   "rarr": "11:58PM",
+   "pct": 60
   },
   "NYC": {
    "to": "NYC",
@@ -260,21 +260,6 @@
    "rarr": "1:39AM+1",
    "pct": 34
   },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 412,
-   "d1": "2027-01-02",
-   "d2": "2027-01-07",
-   "dep": "9:01AM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "1:51PM",
-   "rarr": "2:00PM",
-   "pct": 21
-  },
   "LON": {
    "to": "LON",
    "city": "London",
@@ -293,17 +278,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 638,
+   "price": 659,
    "d1": "2026-12-17",
    "d2": "2027-01-06",
-   "dep": "10:35AM",
+   "dep": "3:30PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
    "rdep": "2:20PM",
-   "arr": "4:50PM",
+   "arr": "9:45PM",
    "rarr": "8:18PM",
-   "pct": -18
+   "pct": -22
   },
   "NAS": {
    "to": "NAS",

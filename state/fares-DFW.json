@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-06T18:16:18-04:00",
+ "generated": "2026-09-06T20:16:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 265,
-   "d1": "2026-10-09",
-   "d2": "2026-10-14",
-   "dep": "7:10PM",
-   "al": "Southwest",
-   "stops": 0,
+   "price": 269,
+   "d1": "2026-09-24",
+   "d2": "2026-10-02",
+   "dep": "10:40AM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:05AM",
-   "arr": "9:55PM",
-   "rarr": "9:15AM",
-   "pct": 45
+   "rdep": "7:00AM",
+   "arr": "4:30PM",
+   "rarr": "1:10PM",
+   "pct": 44
   },
   "DEN": {
    "to": "DEN",
@@ -203,7 +203,7 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 186,
+   "price": 179,
    "d1": "2026-10-10",
    "d2": "2026-10-12",
    "dep": "9:55PM",
@@ -213,7 +213,7 @@
    "rdep": "8:11PM",
    "arr": "12:29AM+1",
    "rarr": "2:19AM+1",
-   "pct": 55
+   "pct": 56
   },
   "SEA": {
    "to": "SEA",
