@@ -1,13 +1,14 @@
 {
- "date": "2026-09-06",
+ "date": "2026-09-07",
  "origin": "CLT",
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 65,
-  "not a deal": 20,
-  "no fares in window": 16,
-  "qualified": 6
+  "no fares": 55,
+  "fetch failed": 17,
+  "not a deal": 15,
+  "no fares in window": 15,
+  "qualified": 5
  },
  "routes": {
   "ABQ": {
@@ -59,6 +60,10 @@
    "why": "the fare cache returned nothing"
   },
   "BUD": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "BZE": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -150,10 +155,6 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
-  "MIL": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
-  },
   "MLB": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -178,6 +179,10 @@
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
+  "PHX": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
   "PLS": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
@@ -187,6 +192,10 @@
    "why": "the fare cache returned nothing"
   },
   "PNS": {
+   "outcome": "no fares",
+   "why": "the fare cache returned nothing"
+  },
+  "PRG": {
    "outcome": "no fares",
    "why": "the fare cache returned nothing"
   },
@@ -223,58 +232,78 @@
    "why": "the fare cache returned nothing"
   },
   "SJD": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
+  },
+  "SJO": {
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SKB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SLC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
+  },
+  "SRQ": {
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "STT": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "STX": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SVD": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TUS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TVC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TYS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "UVF": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "VCE": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "VRB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
+  },
+  "YQB": {
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
+  },
+  "YUL": {
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
+  },
+  "YVR": {
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "AUA": {
    "outcome": "not a deal",
-   "price": 558,
+   "price": 576,
    "typical": 378,
-   "disc_pct": -48,
+   "disc_pct": -52,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "nights": 7,
@@ -323,11 +352,6 @@
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
-  "BZE": {
-   "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
-   "section": "cheapest"
-  },
   "CUN": {
    "outcome": "not a deal",
    "price": 434,
@@ -342,9 +366,9 @@
   },
   "CUR": {
    "outcome": "not a deal",
-   "price": 840,
+   "price": 826,
    "typical": 563,
-   "disc_pct": -49,
+   "disc_pct": -47,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "nights": 7,
@@ -425,14 +449,19 @@
    "rung": "shape",
    "section": "weekend"
   },
+  "MIL": {
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "section": "cheapest"
+  },
   "MSY": {
-   "outcome": "qualified",
-   "price": 188,
-   "typical": 232,
-   "disc_pct": 19,
-   "d1": "2026-11-14",
-   "d2": "2026-11-17",
-   "nights": 3,
+   "outcome": "not a deal",
+   "price": 238,
+   "typical": 208,
+   "disc_pct": -14,
+   "d1": "2026-10-11",
+   "d2": "2026-10-16",
+   "nights": 5,
    "on_shape": true,
    "rung": "shape",
    "section": "cheapest"
@@ -449,18 +478,6 @@
    "rung": "shape",
    "section": "cheapest"
   },
-  "PHX": {
-   "outcome": "not a deal",
-   "price": 528,
-   "typical": 334,
-   "disc_pct": -58,
-   "d1": "2026-11-25",
-   "d2": "2026-11-28",
-   "nights": 3,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
   "POP": {
    "outcome": "not a deal",
    "price": 701,
@@ -471,11 +488,6 @@
    "nights": 3,
    "on_shape": true,
    "rung": "shape",
-   "section": "cheapest"
-  },
-  "PRG": {
-   "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "PSP": {
@@ -491,8 +503,15 @@
    "section": "cheapest"
   },
   "PUJ": {
-   "outcome": "no fares in window",
-   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
+   "outcome": "not a deal",
+   "price": 635,
+   "typical": 533,
+   "disc_pct": -19,
+   "d1": "2027-01-30",
+   "d2": "2027-02-03",
+   "nights": 4,
+   "on_shape": true,
+   "rung": "shape",
    "section": "cheapest"
   },
   "RNO": {
@@ -501,15 +520,8 @@
    "section": "cheapest"
   },
   "ROM": {
-   "outcome": "not a deal",
-   "price": 970,
-   "typical": 812,
-   "disc_pct": -19,
-   "d1": "2026-10-12",
-   "d2": "2026-10-24",
-   "nights": 12,
-   "on_shape": true,
-   "rung": "shape",
+   "outcome": "no fares in window",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "SAL": {
@@ -565,43 +577,19 @@
    "rung": "shape",
    "section": "extra_weekend"
   },
-  "SJO": {
+  "SJU": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
-  "SJU": {
-   "outcome": "not a deal",
-   "price": 308,
-   "typical": 292,
-   "disc_pct": -5,
-   "d1": "2026-10-12",
-   "d2": "2026-10-20",
-   "nights": 8,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
   "SMF": {
-   "outcome": "not a deal",
-   "price": 412,
-   "typical": 273,
-   "disc_pct": -51,
-   "d1": "2026-09-09",
-   "d2": "2026-09-22",
-   "nights": 13,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
-  "SRQ": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "SXM": {
    "outcome": "no fares in window",
-   "why": "3 offers, none leaving 3-150 days out in the cheapest shape",
+   "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
    "section": "cheapest"
   },
   "TYO": {
@@ -612,42 +600,6 @@
   "VPS": {
    "outcome": "no fares in window",
    "why": "1 offers, none leaving 3-150 days out in the cheapest shape",
-   "section": "cheapest"
-  },
-  "YQB": {
-   "outcome": "not a deal",
-   "price": 590,
-   "typical": 530,
-   "disc_pct": -11,
-   "d1": "2026-12-16",
-   "d2": "2026-12-19",
-   "nights": 3,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
-  "YUL": {
-   "outcome": "not a deal",
-   "price": 431,
-   "typical": 445,
-   "disc_pct": 3,
-   "d1": "2026-10-06",
-   "d2": "2026-10-09",
-   "nights": 3,
-   "on_shape": true,
-   "rung": "shape",
-   "section": "cheapest"
-  },
-  "YVR": {
-   "outcome": "not a deal",
-   "price": 691,
-   "typical": 598,
-   "disc_pct": -16,
-   "d1": "2026-10-08",
-   "d2": "2026-10-08",
-   "nights": 0,
-   "on_shape": true,
-   "rung": "shape",
    "section": "cheapest"
   },
   "YYC": {
