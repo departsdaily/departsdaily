@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-07T06:16:01-04:00",
+ "generated": "2026-09-07T08:16:50-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -308,17 +308,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 693,
+   "price": 660,
    "d1": "2026-12-16",
    "d2": "2026-12-20",
    "dep": "7:00AM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:50PM",
+   "rdep": "3:45PM",
    "arr": "2:30PM",
-   "rarr": "6:45PM",
-   "pct": -28
+   "rarr": "8:35PM",
+   "pct": -22
   },
   "PAR": {
    "to": "PAR",

@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-07T06:17:41-04:00",
+ "generated": "2026-09-07T08:19:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 145,
-   "d1": "2026-11-13",
-   "d2": "2026-11-15",
-   "dep": "4:10PM",
+   "price": 159,
+   "d1": "2026-11-06",
+   "d2": "2026-11-08",
+   "dep": "6:10AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "4:55PM",
-   "arr": "6:50PM",
-   "rarr": "7:05PM",
-   "pct": 63
+   "rdep": "2:06PM",
+   "arr": "7:59AM",
+   "rarr": "4:05PM",
+   "pct": 59
   },
   "DFW": {
    "to": "DFW",
