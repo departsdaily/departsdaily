@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-07T12:17:19-04:00",
+ "generated": "2026-09-07T14:17:10-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -278,16 +278,16 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 613,
-   "d1": "2026-10-22",
-   "d2": "2026-10-30",
+   "price": 614,
+   "d1": "2026-10-08",
+   "d2": "2026-10-15",
    "dep": "5:10PM",
    "al": "SK",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:30AM",
+   "rdep": "7:00AM",
    "arr": "2:50AM+1",
-   "rarr": "8:40PM",
+   "rarr": "5:05PM",
    "pct": 30
   },
   "AUA": {
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 377,
-   "d1": "2026-10-12",
-   "d2": "2026-10-20",
-   "dep": "10:05PM",
+   "price": 554,
+   "d1": "2026-11-12",
+   "d2": "2026-11-16",
+   "dep": "10:00PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:15PM",
-   "arr": "7:40AM+1",
-   "rarr": "7:55AM+1",
-   "pct": 58
+   "rdep": "12:35PM",
+   "arr": "7:30AM+1",
+   "rarr": "11:40PM",
+   "pct": 38
   },
   "PUJ": {
    "to": "PUJ",
