@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-07T10:15:11-04:00",
+ "generated": "2026-09-07T12:03:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 35,
  "routes_failed": [],
@@ -308,17 +308,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 775,
-   "d1": "2026-10-21",
-   "d2": "2026-11-01",
-   "dep": "9:32AM",
-   "al": "",
-   "stops": 2,
-   "xfer": 1,
-   "rdep": "10:20PM",
-   "arr": "9:25PM",
-   "rarr": "11:57AM+1",
-   "pct": 14
+   "price": 484,
+   "d1": "2026-11-19",
+   "d2": "2026-11-25",
+   "dep": "5:10PM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:15PM",
+   "arr": "2:22AM+1",
+   "rarr": "10:37PM",
+   "pct": 46
   },
   "PSP": {
    "to": "PSP",
@@ -518,17 +518,17 @@
   "YYZ": {
    "to": "YYZ",
    "city": "Toronto",
-   "price": 463,
-   "d1": "2026-10-12",
-   "d2": "2026-10-19",
-   "dep": "11:50AM",
+   "price": 516,
+   "d1": "2026-09-14",
+   "d2": "2026-09-20",
+   "dep": "5:38PM",
    "al": "Frontier",
    "stops": 2,
    "xfer": 0,
-   "rdep": "4:00PM",
-   "arr": "4:29PM",
-   "rarr": "10:39PM",
-   "pct": 4
+   "rdep": "4:50PM",
+   "arr": "1:08AM+1",
+   "rarr": "9:40PM",
+   "pct": -7
   }
  }
 }
