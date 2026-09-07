@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-07T00:17:03-04:00",
+ "generated": "2026-09-07T02:16:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -233,15 +233,15 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 309,
-   "d1": "2026-10-13",
-   "d2": "2026-10-19",
-   "dep": "5:29PM",
+   "price": 310,
+   "d1": "2026-10-09",
+   "d2": "2026-10-16",
+   "dep": "5:59PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:15PM",
-   "arr": "11:48PM",
+   "arr": "12:20AM+1",
    "rarr": "3:35AM+1",
    "pct": 52
   },
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 505,
-   "d1": "2026-11-27",
-   "d2": "2026-12-02",
-   "dep": "7:25PM",
-   "al": "Icelandair",
-   "stops": 2,
+   "price": 554,
+   "d1": "2026-11-12",
+   "d2": "2026-11-16",
+   "dep": "10:00PM",
+   "al": "TAP Portugal",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:45PM",
-   "arr": "5:20AM+1",
-   "rarr": "8:10AM+1",
-   "pct": 44
+   "rdep": "12:35PM",
+   "arr": "7:30AM+1",
+   "rarr": "11:40PM",
+   "pct": 38
   },
   "PUJ": {
    "to": "PUJ",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 216,
-   "d1": "2026-10-30",
+   "price": 232,
+   "d1": "2026-10-29",
    "d2": "2026-11-09",
-   "dep": "9:00PM",
-   "al": "American",
-   "stops": 1,
+   "dep": "3:45PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "1:53PM",
-   "arr": "2:40AM+1",
-   "rarr": "7:51PM",
-   "pct": 49
+   "rdep": "11:20AM",
+   "arr": "7:42PM",
+   "rarr": "3:24PM",
+   "pct": 45
   }
  }
 }
