@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-07T08:15:41-04:00",
+ "generated": "2026-09-07T10:15:11-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 34,
+ "routes_priced": 35,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -394,6 +394,21 @@
    "arr": "1:35AM+1",
    "rarr": "6:19AM+1",
    "pct": 62
+  },
+  "SJO": {
+   "to": "SJO",
+   "city": "San Jos\u00e9, Costa Rica",
+   "price": 448,
+   "d1": "2026-12-01",
+   "d2": "2026-12-08",
+   "dep": "10:20AM",
+   "al": "Avianca",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:15PM",
+   "arr": "6:57PM",
+   "rarr": "1:46AM+1",
+   "pct": 25
   },
   "SJU": {
    "to": "SJU",

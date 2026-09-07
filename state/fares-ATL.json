@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-07T08:16:03-04:00",
+ "generated": "2026-09-07T10:15:29-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DTW": {
    "to": "DTW",
    "city": "Detroit",
-   "price": 123,
-   "d1": "2026-09-25",
-   "d2": "2026-09-30",
-   "dep": "10:40PM",
+   "price": 251,
+   "d1": "2026-09-11",
+   "d2": "2026-09-14",
+   "dep": "6:30AM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
    "rdep": "3:25PM",
-   "arr": "12:42AM+1",
+   "arr": "10:52AM",
    "rarr": "5:30PM",
-   "pct": 74
+   "pct": 46
   },
   "FLL": {
    "to": "FLL",
