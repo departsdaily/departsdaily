@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-07T14:15:18-04:00",
+ "generated": "2026-09-07T16:15:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 35,
+ "routes_priced": 37,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -79,6 +79,21 @@
    "arr": "6:19PM",
    "rarr": "2:02AM+1",
    "pct": 27
+  },
+  "BZN": {
+   "to": "BZN",
+   "city": "Bozeman",
+   "price": 275,
+   "d1": "2026-10-25",
+   "d2": "2026-11-01",
+   "dep": "6:35AM",
+   "al": "Southwest",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "7:55AM",
+   "arr": "2:00PM",
+   "rarr": "1:55PM",
+   "pct": 58
   },
   "CUN": {
    "to": "CUN",
@@ -293,17 +308,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 231,
-   "d1": "2026-10-08",
-   "d2": "2026-10-13",
-   "dep": "9:42PM",
+   "price": 149,
+   "d1": "2026-10-28",
+   "d2": "2026-11-01",
+   "dep": "9:32AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:40AM",
-   "arr": "2:48AM+1",
-   "rarr": "1:20PM",
-   "pct": 42
+   "rdep": "8:00AM",
+   "arr": "2:52PM",
+   "rarr": "1:23PM",
+   "pct": 62
   },
   "PAR": {
    "to": "PAR",
@@ -469,6 +484,21 @@
    "arr": "12:07PM",
    "rarr": "7:51PM",
    "pct": -2
+  },
+  "TPA": {
+   "to": "TPA",
+   "city": "Tampa",
+   "price": 383,
+   "d1": "2026-09-12",
+   "d2": "2026-09-16",
+   "dep": "9:32AM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "2:10PM",
+   "arr": "2:53PM",
+   "rarr": "7:25PM",
+   "pct": 21
   },
   "TYO": {
    "to": "TYO",

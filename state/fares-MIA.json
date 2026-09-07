@@ -1,8 +1,8 @@
 {
  "origin": "MIA",
- "generated": "2026-09-07T14:17:28-04:00",
+ "generated": "2026-09-07T16:17:27-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,6 +19,21 @@
    "arr": "10:45AM",
    "rarr": "3:55PM",
    "pct": 63
+  },
+  "BNA": {
+   "to": "BNA",
+   "city": "Nashville",
+   "price": 223,
+   "d1": "2026-09-28",
+   "d2": "2026-10-02",
+   "dep": "5:50AM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "3:14PM",
+   "arr": "12:59PM",
+   "rarr": "10:06PM",
+   "pct": 44
   },
   "BOS": {
    "to": "BOS",
@@ -49,6 +64,21 @@
    "arr": "1:53PM",
    "rarr": "3:04PM",
    "pct": 31
+  },
+  "DEN": {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 206,
+   "d1": "2026-10-13",
+   "d2": "2026-10-20",
+   "dep": "10:36PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:57PM",
+   "arr": "4:01AM+1",
+   "rarr": "11:57PM",
+   "pct": 63
   },
   "HOU": {
    "to": "HOU",

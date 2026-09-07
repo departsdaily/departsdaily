@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-07T14:16:33-04:00",
+ "generated": "2026-09-07T16:16:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 22,
  "routes_failed": [],
@@ -278,15 +278,15 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 530,
-   "d1": "2026-12-16",
-   "d2": "2026-12-23",
-   "dep": "9:55PM",
-   "al": "Frontier",
+   "price": 531,
+   "d1": "2026-12-30",
+   "d2": "2027-01-08",
+   "dep": "2:40PM",
+   "al": "Viva Aerobus",
    "stops": 1,
    "xfer": 0,
    "rdep": "11:55PM",
-   "arr": "2:44AM+1",
+   "arr": "7:35PM",
    "rarr": "6:06AM+1",
    "pct": -2
   },
@@ -308,7 +308,7 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 998,
+   "price": 927,
    "d1": "2026-09-30",
    "d2": "2026-10-07",
    "dep": "3:15PM",
@@ -318,7 +318,7 @@
    "rdep": "12:25PM",
    "arr": "2:52AM+1",
    "rarr": "1:16AM+1",
-   "pct": -11
+   "pct": -3
   },
   "ROM": {
    "to": "ROM",
