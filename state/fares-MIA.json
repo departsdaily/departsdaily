@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-07T10:17:12-04:00",
+ "generated": "2026-09-07T12:17:38-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -170,6 +170,21 @@
    "rarr": "3:14AM+1",
    "pct": 45
   },
+  "SFO": {
+   "to": "SFO",
+   "city": "San Francisco",
+   "price": 319,
+   "d1": "2026-09-28",
+   "d2": "2026-10-06",
+   "dep": "9:30PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "10:05PM",
+   "arr": "6:09AM+1",
+   "rarr": "4:45AM+1",
+   "pct": 54
+  },
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
@@ -199,21 +214,6 @@
    "arr": "4:10AM+1",
    "rarr": "8:00PM",
    "pct": 54
-  },
-  "AUA": {
-   "to": "AUA",
-   "city": "Aruba",
-   "price": 447,
-   "d1": "2026-10-02",
-   "d2": "2026-10-09",
-   "dep": "5:14PM",
-   "al": "Copa",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:37PM",
-   "arr": "10:18PM",
-   "rarr": "12:54AM+1",
-   "pct": 28
   },
   "CUN": {
    "to": "CUN",
