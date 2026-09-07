@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-06T20:15:18-04:00",
+ "generated": "2026-09-06T22:15:10-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 35,
+ "routes_priced": 34,
  "routes_failed": [],
  "fares": {
   "AUA": {
@@ -334,21 +334,6 @@
    "arr": "11:23PM",
    "rarr": "11:36AM",
    "pct": 40
-  },
-  "ROM": {
-   "to": "ROM",
-   "city": "Rome",
-   "price": 970,
-   "d1": "2026-10-12",
-   "d2": "2026-10-24",
-   "dep": "3:59PM",
-   "al": "",
-   "stops": 2,
-   "xfer": 1,
-   "rdep": "6:15AM",
-   "arr": "1:55AM+1",
-   "rarr": "8:16PM",
-   "pct": -2
   },
   "SAL": {
    "to": "SAL",

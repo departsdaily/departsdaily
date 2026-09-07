@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-06T20:15:38-04:00",
+ "generated": "2026-09-06T22:15:29-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -83,17 +83,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 88,
+   "price": 133,
    "d1": "2026-10-08",
    "d2": "2026-10-12",
-   "dep": "7:25AM",
+   "dep": "3:40PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
    "rdep": "9:58PM",
-   "arr": "9:21AM",
+   "arr": "6:18PM",
    "rarr": "12:06AM+1",
-   "pct": 75
+   "pct": 63
   },
   "LAS": {
    "to": "LAS",
@@ -289,21 +289,6 @@
    "arr": "1:37PM",
    "rarr": "4:39PM",
    "pct": 43
-  },
-  "GCM": {
-   "to": "GCM",
-   "city": "Grand Cayman",
-   "price": 436,
-   "d1": "2026-10-10",
-   "d2": "2026-10-15",
-   "dep": "7:29PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "4:45PM",
-   "arr": "11:04PM",
-   "rarr": "8:24PM",
-   "pct": 32
   },
   "LON": {
    "to": "LON",
