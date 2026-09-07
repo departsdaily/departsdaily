@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-07T16:16:50-04:00",
+ "generated": "2026-09-07T18:16:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 210,
-   "d1": "2026-10-02",
-   "d2": "2026-10-10",
+   "price": 180,
+   "d1": "2026-10-24",
+   "d2": "2026-11-01",
    "dep": "6:00AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:59PM",
-   "arr": "9:24AM",
-   "rarr": "2:34AM+1",
-   "pct": 54
+   "arr": "9:26AM",
+   "rarr": "2:47AM+1",
+   "pct": 61
   },
   "LAS": {
    "to": "LAS",
@@ -173,17 +173,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 298,
-   "d1": "2026-09-26",
-   "d2": "2026-09-28",
-   "dep": "11:45AM",
-   "al": "Frontier",
+   "price": 251,
+   "d1": "2026-09-30",
+   "d2": "2026-10-04",
+   "dep": "10:30AM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:00PM",
-   "arr": "4:45PM",
-   "rarr": "2:01AM+1",
-   "pct": 44
+   "rdep": "5:10AM",
+   "arr": "2:15PM",
+   "rarr": "10:05AM",
+   "pct": 53
   },
   "NYC": {
    "to": "NYC",
