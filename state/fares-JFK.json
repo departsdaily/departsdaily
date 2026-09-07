@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-07T02:16:52-04:00",
+ "generated": "2026-09-07T04:16:52-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -113,7 +113,7 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 197,
+   "price": 285,
    "d1": "2026-09-29",
    "d2": "2026-10-02",
    "dep": "8:00AM",
@@ -123,7 +123,7 @@
    "rdep": "5:18PM",
    "arr": "11:58AM",
    "rarr": "8:55PM",
-   "pct": 64
+   "pct": 47
   },
   "LAS": {
    "to": "LAS",
