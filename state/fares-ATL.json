@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-06T22:15:29-04:00",
+ "generated": "2026-09-07T00:15:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -255,9 +255,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "7:08AM",
+   "rdep": "1:41PM",
    "arr": "5:33PM",
-   "rarr": "9:03AM",
+   "rarr": "3:30PM",
    "pct": 91
   },
   "AMS": {
@@ -319,21 +319,6 @@
    "arr": "12:56PM",
    "rarr": "7:11PM",
    "pct": 26
-  },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 262,
-   "d1": "2026-12-10",
-   "d2": "2026-12-14",
-   "dep": "7:40AM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "10:20AM",
-   "arr": "10:47AM",
-   "rarr": "1:38PM",
-   "pct": 45
   },
   "PAR": {
    "to": "PAR",
