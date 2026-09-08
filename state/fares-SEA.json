@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-07T18:17:58-04:00",
+ "generated": "2026-09-07T20:17:30-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -218,17 +218,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 231,
+   "price": 259,
    "d1": "2026-09-29",
    "d2": "2026-10-04",
    "dep": "8:15PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:23PM",
+   "rdep": "7:24PM",
    "arr": "12:35AM+1",
-   "rarr": "9:28PM",
-   "pct": 42
+   "rarr": "11:37PM",
+   "pct": 35
   },
   "SFO": {
    "to": "SFO",
@@ -278,7 +278,7 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 617,
+   "price": 631,
    "d1": "2026-10-11",
    "d2": "2026-10-18",
    "dep": "7:00PM",
@@ -288,7 +288,7 @@
    "rdep": "5:55AM",
    "arr": "7:20AM+1",
    "rarr": "6:45PM",
-   "pct": 27
+   "pct": 26
   },
   "NAS": {
    "to": "NAS",

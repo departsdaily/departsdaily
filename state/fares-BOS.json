@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-07T18:18:17-04:00",
+ "generated": "2026-09-07T20:17:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -278,7 +278,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 659,
+   "price": 658,
    "d1": "2026-12-17",
    "d2": "2027-01-06",
    "dep": "3:30PM",
@@ -308,17 +308,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 596,
+   "price": 573,
    "d1": "2026-11-19",
    "d2": "2026-11-24",
-   "dep": "10:10PM",
-   "al": "TAP Portugal",
-   "stops": 1,
+   "dep": "7:50PM",
+   "al": "Icelandair",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "10:20AM",
-   "arr": "7:15AM+1",
-   "rarr": "8:30PM",
-   "pct": 34
+   "rdep": "5:00AM",
+   "arr": "6:20AM+1",
+   "rarr": "2:40PM",
+   "pct": 36
   },
   "PUJ": {
    "to": "PUJ",

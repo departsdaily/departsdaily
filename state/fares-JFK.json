@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-07T18:17:19-04:00",
+ "generated": "2026-09-07T20:16:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -278,7 +278,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 613,
+   "price": 611,
    "d1": "2026-10-27",
    "d2": "2026-11-03",
    "dep": "11:05PM",
@@ -288,7 +288,7 @@
    "rdep": "11:00AM",
    "arr": "8:45AM+1",
    "rarr": "9:55PM",
-   "pct": 30
+   "pct": 31
   },
   "AUA": {
    "to": "AUA",
@@ -338,17 +338,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 560,
-   "d1": "2026-10-08",
-   "d2": "2026-10-15",
+   "price": 537,
+   "d1": "2026-10-02",
+   "d2": "2026-10-08",
    "dep": "6:20PM",
    "al": "Z0",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
+   "rdep": "1:05PM",
    "arr": "1:20AM+1",
-   "rarr": "5:05PM",
-   "pct": 34
+   "rarr": "8:55PM",
+   "pct": 37
   },
   "MBJ": {
    "to": "MBJ",
