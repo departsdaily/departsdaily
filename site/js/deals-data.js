@@ -4,21 +4,21 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-09-08 10:14 EDT
-   Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
-   Carried forward:  none
+   Generated 2026-09-08 10:46 EDT
+   Rebuilt this run: CLT (8)
+   Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-09-08T10:14:09-04:00",
+ updated:"2026-09-08T10:46:14-04:00",
 };
 const DEALS={CLT:[
  {to:"MIA",city:"Miami",price:109,d1:"2026-11-13",d2:"2026-11-15",dep:"9:41PM",al:"Frontier",stops:0,rdep:"7:16PM",arr:"11:51PM",rarr:"9:33PM",exp:"2026-09-10"},
  {to:"MCO",city:"Orlando",price:125,d1:"2026-11-06",d2:"2026-11-09",dep:"6:05AM",al:"Frontier",stops:0,rdep:"6:40AM",arr:"7:56AM",rarr:"8:37AM",exp:"2026-09-10"},
  {to:"LAX",city:"Los Angeles",price:240,d1:"2026-09-16",d2:"2026-09-23",dep:"9:40PM",al:"Frontier",stops:1,rdep:"12:59AM",arr:"4:51AM+1",rarr:"6:59AM",exp:"2026-09-10"},
  {to:"NYC",city:"New York City",price:145,d1:"2026-10-02",d2:"2026-10-05",dep:"9:40PM",al:"Frontier",stops:1,rdep:"6:43PM",arr:"2:12AM+1",rarr:"8:55PM",exp:"2026-09-10"},
- {to:"LAS",city:"Las Vegas",price:300,d1:"2026-11-05",d2:"2026-11-08",dep:"2:46PM",al:"Frontier",stops:1,rdep:"12:38AM",arr:"8:58PM",rarr:"5:58AM",exp:"2026-09-10"},
  {to:"MAD",city:"Madrid",price:443,d1:"2026-11-01",d2:"2026-11-12",dep:"1:06PM",al:"United",stops:1,rdep:"7:25AM",arr:"10:44PM",rarr:"7:50PM",exp:"2026-09-10"},
  {to:"PAR",city:"Paris",price:484,d1:"2026-11-19",d2:"2026-11-25",dep:"5:10PM",al:"Air Canada",stops:1,rdep:"12:15PM",arr:"2:22AM+1",rarr:"10:37PM",exp:"2026-09-10"},
+ {to:"JAX",city:"Jacksonville",price:381,d1:"2026-10-13",d2:"2026-10-20",dep:"6:40AM",al:"Southwest",stops:1,rdep:"12:45PM",arr:"9:45AM",rarr:"5:00PM",exp:"2026-09-10"},
  {to:"SJU",city:"San Juan, PR",price:254,d1:"2026-09-23",d2:"2026-09-27",dep:"9:32AM",al:"Frontier",stops:1,rdep:"2:57AM",arr:"2:36PM",rarr:"7:54AM",exp:"2026-09-10"}],ATL:[
  {to:"MCO",city:"Orlando",price:36,d1:"2026-10-17",d2:"2026-10-20",dep:"7:49PM",al:"Frontier",stops:0,rdep:"7:10AM",arr:"9:30PM",rarr:"9:02AM",exp:"2026-09-10"},
  {to:"TPA",city:"Tampa",price:39,d1:"2026-11-10",d2:"2026-11-14",dep:"10:11AM",al:"Frontier",stops:0,rdep:"1:41PM",arr:"11:49AM",rarr:"3:30PM",exp:"2026-09-10"},
