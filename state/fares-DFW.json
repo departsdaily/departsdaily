@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-08T16:15:59-04:00",
+ "generated": "2026-09-08T18:16:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -203,32 +203,47 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 179,
+   "price": 175,
    "d1": "2026-10-10",
    "d2": "2026-10-12",
-   "dep": "9:55PM",
+   "dep": "4:25PM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:20AM",
+   "arr": "7:07PM",
+   "rarr": "8:59AM",
+   "pct": 57
+  },
+  "PHL": {
+   "to": "PHL",
+   "city": "Philadelphia",
+   "price": 154,
+   "d1": "2026-09-28",
+   "d2": "2026-09-30",
+   "dep": "7:48PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:11PM",
-   "arr": "12:29AM+1",
-   "rarr": "2:19AM+1",
-   "pct": 56
+   "rdep": "12:40PM",
+   "arr": "12:14AM+1",
+   "rarr": "5:39PM",
+   "pct": 74
   },
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 352,
-   "d1": "2026-09-23",
-   "d2": "2026-09-28",
-   "dep": "7:00AM",
-   "al": "Frontier",
+   "price": 296,
+   "d1": "2026-09-26",
+   "d2": "2026-10-04",
+   "dep": "8:00AM",
+   "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:45PM",
-   "arr": "12:16PM",
-   "rarr": "1:10AM+1",
-   "pct": 25
+   "rdep": "5:15AM",
+   "arr": "12:10PM",
+   "rarr": "10:20AM",
+   "pct": 37
   },
   "SFO": {
    "to": "SFO",

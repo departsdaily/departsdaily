@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-08T16:17:05-04:00",
+ "generated": "2026-09-08T18:17:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -203,17 +203,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 319,
-   "d1": "2026-09-28",
-   "d2": "2026-10-06",
-   "dep": "9:30PM",
+   "price": 252,
+   "d1": "2026-09-22",
+   "d2": "2026-09-24",
+   "dep": "2:37PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:05PM",
-   "arr": "6:09AM+1",
-   "rarr": "4:45AM+1",
-   "pct": 54
+   "rdep": "11:42AM",
+   "arr": "10:06PM",
+   "rarr": "6:20PM",
+   "pct": 64
   },
   "TPA": {
    "to": "TPA",
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 597,
-   "d1": "2026-10-14",
-   "d2": "2026-10-21",
+   "price": 561,
+   "d1": "2026-10-21",
+   "d2": "2026-10-25",
    "dep": "4:20PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:40PM",
+   "rdep": "8:00AM",
    "arr": "3:10AM+1",
-   "rarr": "2:40AM+1",
-   "pct": 34
+   "rarr": "8:25PM",
+   "pct": 38
   },
   "PUJ": {
    "to": "PUJ",

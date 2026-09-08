@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-08T16:15:08-04:00",
+ "generated": "2026-09-08T18:15:11-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -34,21 +34,6 @@
    "arr": "11:09AM",
    "rarr": "7:09PM",
    "pct": 7
-  },
-  "AUH": {
-   "to": "AUH",
-   "city": "Abu Dhabi",
-   "price": 1369,
-   "d1": "2026-09-15",
-   "d2": "2026-10-06",
-   "dep": "5:57PM",
-   "al": "American",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "10:45PM",
-   "arr": "9:55AM+1",
-   "rarr": "4:23PM+1",
-   "pct": -10
   },
   "BCN": {
    "to": "BCN",
@@ -410,6 +395,21 @@
    "rarr": "11:25AM",
    "pct": 74
   },
+  "PRG": {
+   "to": "PRG",
+   "city": "Prague",
+   "price": 856,
+   "d1": "2026-11-13",
+   "d2": "2026-11-20",
+   "dep": "6:50PM",
+   "al": "Lufthansa",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:10AM",
+   "arr": "4:05AM+1",
+   "rarr": "5:00PM",
+   "pct": 3
+  },
   "PSP": {
    "to": "PSP",
    "city": "Palm Springs",
@@ -424,6 +424,21 @@
    "arr": "11:23PM",
    "rarr": "11:36AM",
    "pct": 40
+  },
+  "PUJ": {
+   "to": "PUJ",
+   "city": "Punta Cana",
+   "price": 418,
+   "d1": "2026-10-25",
+   "d2": "2026-11-01",
+   "dep": "8:55AM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "10:40PM",
+   "arr": "3:17PM",
+   "rarr": "5:36AM+1",
+   "pct": 25
   },
   "SAL": {
    "to": "SAL",
@@ -563,17 +578,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 383,
-   "d1": "2026-09-12",
-   "d2": "2026-09-16",
-   "dep": "9:32AM",
+   "price": 250,
+   "d1": "2026-10-18",
+   "d2": "2026-10-24",
+   "dep": "8:45PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "2:10PM",
-   "arr": "2:53PM",
-   "rarr": "7:25PM",
-   "pct": 21
+   "rdep": "6:15AM",
+   "arr": "1:26AM+1",
+   "rarr": "1:39PM",
+   "pct": 48
   },
   "TYO": {
    "to": "TYO",
