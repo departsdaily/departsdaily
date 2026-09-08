@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-07T20:16:56-04:00",
+ "generated": "2026-09-07T22:17:23-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -68,17 +68,17 @@
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 341,
-   "d1": "2026-10-12",
-   "d2": "2026-10-16",
-   "dep": "7:14AM",
+   "price": 396,
+   "d1": "2026-09-28",
+   "d2": "2026-10-04",
+   "dep": "6:55AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "12:57PM",
-   "rarr": "11:45AM",
-   "pct": 38
+   "rdep": "5:30AM",
+   "arr": "12:38PM",
+   "rarr": "11:17AM",
+   "pct": 28
   },
   "DFW": {
    "to": "DFW",
@@ -203,17 +203,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 260,
-   "d1": "2026-09-23",
-   "d2": "2026-09-29",
-   "dep": "1:00PM",
+   "price": 230,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
+   "dep": "8:05PM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
    "rdep": "10:59AM",
-   "arr": "5:28PM",
+   "arr": "10:58PM",
    "rarr": "1:20PM",
-   "pct": 37
+   "pct": 44
   },
   "PHX": {
    "to": "PHX",
@@ -308,17 +308,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 314,
+   "price": 304,
    "d1": "2026-11-15",
    "d2": "2026-11-21",
-   "dep": "10:56AM",
-   "al": "JetBlue",
+   "dep": "7:04AM",
+   "al": "Aerom\u00e9xico",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:25AM",
-   "arr": "3:15PM",
-   "rarr": "3:09PM",
-   "pct": 40
+   "rdep": "1:32PM",
+   "arr": "3:27PM",
+   "rarr": "9:14PM",
+   "pct": 42
   },
   "GCM": {
    "to": "GCM",
@@ -413,17 +413,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 455,
-   "d1": "2026-10-23",
-   "d2": "2026-10-31",
-   "dep": "12:30AM",
+   "price": 426,
+   "d1": "2026-10-30",
+   "d2": "2026-11-14",
+   "dep": "7:05PM",
    "al": "N0",
    "stops": 0,
    "xfer": 0,
    "rdep": "12:35PM",
-   "arr": "8:30AM",
+   "arr": "2:55AM+1",
    "rarr": "9:55PM",
-   "pct": 52
+   "pct": 55
   },
   "SJU": {
    "to": "SJU",

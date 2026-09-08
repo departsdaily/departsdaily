@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-07T20:17:47-04:00",
+ "generated": "2026-09-07T22:18:19-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 269,
-   "d1": "2026-11-24",
-   "d2": "2026-11-29",
-   "dep": "5:35AM",
-   "al": "Southwest",
+   "price": 236,
+   "d1": "2026-10-23",
+   "d2": "2026-10-27",
+   "dep": "11:47AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:50PM",
-   "arr": "10:30AM",
-   "rarr": "3:15AM+1",
-   "pct": 50
+   "rdep": "9:10PM",
+   "arr": "6:30PM",
+   "rarr": "2:11AM+1",
+   "pct": 56
   },
   "FLL": {
    "to": "FLL",
@@ -83,7 +83,7 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 381,
+   "price": 337,
    "d1": "2026-09-21",
    "d2": "2026-09-30",
    "dep": "8:40PM",
@@ -93,7 +93,7 @@
    "rdep": "10:06PM",
    "arr": "2:26AM+1",
    "rarr": "5:36AM+1",
-   "pct": 44
+   "pct": 50
   },
   "LAX": {
    "to": "LAX",

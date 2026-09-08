@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-07T20:17:30-04:00",
+ "generated": "2026-09-07T22:17:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 23,
  "routes_failed": [],
@@ -128,7 +128,7 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 69,
+   "price": 67,
    "d1": "2026-10-24",
    "d2": "2026-10-26",
    "dep": "8:00PM",
@@ -308,17 +308,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 726,
-   "d1": "2026-10-26",
-   "d2": "2026-11-03",
-   "dep": "6:50PM",
-   "al": "DE",
-   "stops": 1,
+   "price": 766,
+   "d1": "2026-12-03",
+   "d2": "2026-12-11",
+   "dep": "2:35PM",
+   "al": "Icelandair",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:35AM",
-   "arr": "6:20AM+1",
-   "rarr": "11:35PM",
-   "pct": 19
+   "rdep": "8:10AM",
+   "arr": "3:40AM+1",
+   "rarr": "9:35PM",
+   "pct": 15
   },
   "ROM": {
    "to": "ROM",

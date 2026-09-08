@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-07T20:15:47-04:00",
+ "generated": "2026-09-07T22:16:03-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 239,
-   "d1": "2026-10-14",
-   "d2": "2026-10-20",
+   "price": 249,
+   "d1": "2026-10-26",
+   "d2": "2026-10-30",
    "dep": "6:30AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "6:00PM",
-   "arr": "12:38PM",
-   "rarr": "12:32AM+1",
-   "pct": 45
+   "arr": "12:45PM",
+   "rarr": "12:36AM+1",
+   "pct": 43
   },
   "DEN": {
    "to": "DEN",
@@ -173,9 +173,9 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 149,
-   "d1": "2026-09-23",
-   "d2": "2026-09-30",
+   "price": 163,
+   "d1": "2026-09-26",
+   "d2": "2026-10-03",
    "dep": "7:11AM",
    "al": "Frontier",
    "stops": 0,
@@ -183,7 +183,7 @@
    "rdep": "12:53PM",
    "arr": "10:23AM",
    "rarr": "4:20PM",
-   "pct": 66
+   "pct": 63
   },
   "MSY": {
    "to": "MSY",
@@ -413,17 +413,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 354,
-   "d1": "2026-11-04",
-   "d2": "2026-11-08",
-   "dep": "6:05PM",
-   "al": "American",
+   "price": 200,
+   "d1": "2026-11-12",
+   "d2": "2026-11-16",
+   "dep": "8:00AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:32AM",
-   "arr": "12:05AM+1",
-   "rarr": "5:03PM",
-   "pct": 16
+   "rdep": "3:59PM",
+   "arr": "1:51PM",
+   "rarr": "10:29PM",
+   "pct": 52
   }
  }
 }
