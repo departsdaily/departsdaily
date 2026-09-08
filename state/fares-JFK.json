@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-08T04:17:01-04:00",
+ "generated": "2026-09-08T06:17:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 365,
-   "d1": "2026-10-03",
-   "d2": "2026-10-06",
-   "dep": "1:00PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 329,
+   "d1": "2026-11-10",
+   "d2": "2026-11-12",
+   "dep": "7:32AM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "8:29PM",
-   "arr": "9:07PM",
-   "rarr": "2:05AM+1",
-   "pct": 65
+   "rdep": "2:55PM",
+   "arr": "2:08PM",
+   "rarr": "8:25PM",
+   "pct": 68
   },
   "TPA": {
    "to": "TPA",
