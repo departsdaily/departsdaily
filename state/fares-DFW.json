@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-08T12:16:10-04:00",
+ "generated": "2026-09-08T14:16:18-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -278,17 +278,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 174,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "8:05PM",
+   "price": 195,
+   "d1": "2026-09-22",
+   "d2": "2026-09-29",
+   "dep": "9:00PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:55PM",
-   "arr": "12:57AM+1",
-   "rarr": "5:04AM+1",
-   "pct": 67
+   "rdep": "9:50PM",
+   "arr": "2:03AM+1",
+   "rarr": "2:56AM+1",
+   "pct": 62
   },
   "LON": {
    "to": "LON",
@@ -368,17 +368,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 444,
-   "d1": "2026-09-12",
-   "d2": "2026-09-16",
-   "dep": "9:21AM",
+   "price": 179,
+   "d1": "2026-10-02",
+   "d2": "2026-10-12",
+   "dep": "9:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:42PM",
-   "arr": "3:12PM",
-   "rarr": "12:59AM+1",
-   "pct": -6
+   "rdep": "7:44PM",
+   "arr": "3:47AM+1",
+   "rarr": "2:04AM+1",
+   "pct": 57
   }
  }
 }

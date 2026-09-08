@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-08T12:16:45-04:00",
+ "generated": "2026-09-08T14:16:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 264,
-   "d1": "2026-10-02",
-   "d2": "2026-10-09",
-   "dep": "2:28PM",
+   "price": 292,
+   "d1": "2026-10-22",
+   "d2": "2026-10-25",
+   "dep": "11:20AM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "4:29PM",
-   "arr": "7:39PM",
-   "rarr": "1:06AM+1",
-   "pct": 56
+   "rdep": "9:44PM",
+   "arr": "4:25PM",
+   "rarr": "3:00AM+1",
+   "pct": 51
   },
   "BOS": {
    "to": "BOS",
@@ -278,7 +278,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 782,
+   "price": 819,
    "d1": "2026-10-18",
    "d2": "2026-10-27",
    "dep": "4:40PM",
@@ -288,7 +288,7 @@
    "rdep": "7:00AM",
    "arr": "6:50AM+1",
    "rarr": "10:55PM",
-   "pct": 11
+   "pct": 7
   },
   "CUN": {
    "to": "CUN",
@@ -398,9 +398,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 692,
-   "d1": "2026-10-14",
-   "d2": "2026-10-24",
+   "price": 708,
+   "d1": "2026-10-07",
+   "d2": "2026-10-15",
    "dep": "4:45PM",
    "al": "DE",
    "stops": 1,
@@ -408,7 +408,7 @@
    "rdep": "8:10AM",
    "arr": "5:45AM+1",
    "rarr": "10:00PM",
-   "pct": 27
+   "pct": 25
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-08T12:17:58-04:00",
+ "generated": "2026-09-08T14:18:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -68,7 +68,7 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 303,
+   "price": 301,
    "d1": "2026-11-24",
    "d2": "2026-11-29",
    "dep": "5:35AM",
@@ -78,7 +78,7 @@
    "rdep": "9:55PM",
    "arr": "10:55AM",
    "rarr": "2:15AM+1",
-   "pct": 47
+   "pct": 48
   },
   "LAS": {
    "to": "LAS",
@@ -98,17 +98,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 307,
+   "price": 349,
    "d1": "2026-10-02",
    "d2": "2026-10-05",
    "dep": "7:30PM",
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:50PM",
+   "rdep": "11:05PM",
    "arr": "2:45AM+1",
-   "rarr": "6:42AM+1",
-   "pct": 58
+   "rarr": "5:30AM+1",
+   "pct": 52
   },
   "MCO": {
    "to": "MCO",

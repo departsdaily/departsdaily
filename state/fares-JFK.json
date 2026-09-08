@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-08T12:17:03-04:00",
+ "generated": "2026-09-08T14:17:15-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 282,
-   "d1": "2026-11-05",
-   "d2": "2026-11-09",
-   "dep": "10:10PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "price": 272,
+   "d1": "2026-10-28",
+   "d2": "2026-11-06",
+   "dep": "9:59AM",
+   "al": "Alaska",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:15PM",
-   "arr": "4:04AM+1",
-   "rarr": "4:05AM+1",
-   "pct": 59
+   "rdep": "7:02AM",
+   "arr": "6:27PM",
+   "rarr": "2:55PM",
+   "pct": 60
   },
   "LAX": {
    "to": "LAX",
@@ -278,17 +278,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 611,
+   "price": 618,
    "d1": "2026-10-27",
    "d2": "2026-11-03",
-   "dep": "11:05PM",
-   "al": "UX",
-   "stops": 1,
+   "dep": "6:35PM",
+   "al": "SK",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:00AM",
-   "arr": "8:45AM+1",
-   "rarr": "9:55PM",
-   "pct": 31
+   "rdep": "9:25PM",
+   "arr": "5:25AM+1",
+   "rarr": "9:30AM+1",
+   "pct": 30
   },
   "AUA": {
    "to": "AUA",
@@ -353,7 +353,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 236,
+   "price": 336,
    "d1": "2026-12-03",
    "d2": "2026-12-08",
    "dep": "9:30PM",
@@ -363,7 +363,7 @@
    "rdep": "1:10PM",
    "arr": "2:30AM+1",
    "rarr": "5:09PM",
-   "pct": 56
+   "pct": 38
   },
   "NAS": {
    "to": "NAS",
@@ -413,7 +413,7 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 361,
+   "price": 425,
    "d1": "2026-10-30",
    "d2": "2026-11-14",
    "dep": "7:05PM",
@@ -423,7 +423,7 @@
    "rdep": "12:35PM",
    "arr": "2:55AM+1",
    "rarr": "9:55PM",
-   "pct": 62
+   "pct": 55
   },
   "SJU": {
    "to": "SJU",
