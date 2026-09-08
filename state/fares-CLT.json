@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-08T00:15:14-04:00",
+ "generated": "2026-09-08T02:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 38,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -173,16 +173,16 @@
   "HNL": {
    "to": "HNL",
    "city": "Honolulu",
-   "price": 738,
-   "d1": "2026-10-06",
-   "d2": "2026-10-13",
-   "dep": "11:39AM",
-   "al": "United",
-   "stops": 2,
+   "price": 795,
+   "d1": "2026-09-12",
+   "d2": "2026-09-16",
+   "dep": "2:36PM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "3:23PM",
-   "arr": "11:56PM",
-   "rarr": "3:38AM+1",
+   "rdep": "8:40PM",
+   "arr": "1:21AM+1",
+   "rarr": "7:06AM+1",
    "pct": 0
   },
   "LAS": {
@@ -349,6 +349,21 @@
    "arr": "2:22AM+1",
    "rarr": "10:37PM",
    "pct": 46
+  },
+  "PDX": {
+   "to": "PDX",
+   "city": "Portland, OR",
+   "price": 202,
+   "d1": "2026-11-20",
+   "d2": "2026-11-27",
+   "dep": "8:10AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:45AM",
+   "arr": "2:45PM",
+   "rarr": "11:25AM",
+   "pct": 74
   },
   "PSP": {
    "to": "PSP",
