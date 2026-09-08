@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-08T06:17:16-04:00",
+ "generated": "2026-09-08T08:17:03-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 242,
-   "d1": "2026-11-19",
-   "d2": "2026-11-26",
-   "dep": "9:29PM",
+   "price": 263,
+   "d1": "2026-10-14",
+   "d2": "2026-10-17",
+   "dep": "9:30PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "10:52PM",
-   "rarr": "7:12AM",
-   "pct": 40
+   "rdep": "6:20AM",
+   "arr": "10:59PM",
+   "rarr": "7:29AM",
+   "pct": 35
   },
   "DEN": {
    "to": "DEN",
@@ -353,17 +353,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 386,
-   "d1": "2026-10-17",
-   "d2": "2026-10-24",
-   "dep": "6:45PM",
-   "al": "American",
+   "price": 354,
+   "d1": "2026-11-30",
+   "d2": "2026-12-13",
+   "dep": "6:00AM",
+   "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:13PM",
-   "arr": "11:50PM",
-   "rarr": "10:07PM",
-   "pct": 29
+   "rdep": "1:35PM",
+   "arr": "11:07AM",
+   "rarr": "5:24PM",
+   "pct": 34
   },
   "NAS": {
    "to": "NAS",
