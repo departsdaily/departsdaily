@@ -4,14 +4,16 @@
   "slide2_board.png",
   "slide3_board.png",
   "slide4_board.png",
-  "slide5_cta.png"
+  "slide5_board.png",
+  "slide6_cta.png"
  ],
- "n_deals": 10,
- "board_slides": 4,
+ "n_deals": 11,
+ "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
   "EXTRA LONG WEEKEND",
   "WEEK-ISH",
+  "CHEAPEST OUT OF CLT",
   "CHEAPEST OUT OF CLT"
  ],
  "stories": [
@@ -27,20 +29,12 @@
    "file": "story_2_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 259,
-   "disc": 25,
-   "section": "cheapest"
-  },
-  {
-   "file": "story_3_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
    "price": 240,
    "disc": 22,
    "section": "extra_weekend"
   },
   {
-   "file": "story_4_LAS.png",
+   "file": "story_3_LAS.png",
    "to": "LAS",
    "city": "Las Vegas",
    "price": 263,
@@ -48,7 +42,7 @@
    "section": "cheapest"
   },
   {
-   "file": "story_5_LAX.png",
+   "file": "story_4_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 246,
@@ -56,7 +50,7 @@
    "section": "weekend"
   },
   {
-   "file": "story_6_LAX.png",
+   "file": "story_5_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 248,
@@ -64,12 +58,20 @@
    "section": "weekish"
   },
   {
-   "file": "story_7_LAS.png",
+   "file": "story_6_LAS.png",
    "to": "LAS",
    "city": "Las Vegas",
    "price": 300,
    "disc": 17,
    "section": "weekend"
+  },
+  {
+   "file": "story_7_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 257,
+   "disc": 17,
+   "section": "cheapest"
   },
   {
    "file": "story_8_SFO.png",
