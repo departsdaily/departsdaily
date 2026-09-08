@@ -1,11 +1,9 @@
 {
  "origin": "CLT",
- "generated": "2026-09-08T08:15:14-04:00",
+ "generated": "2026-09-08T10:15:20-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 39,
- "routes_failed": [
-  "REK"
- ],
+ "routes_failed": [],
  "fares": {
   "ATH": {
    "to": "ATH",

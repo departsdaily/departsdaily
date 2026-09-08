@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-08T08:15:52-04:00",
+ "generated": "2026-09-08T10:15:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -173,17 +173,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 163,
-   "d1": "2026-09-26",
-   "d2": "2026-10-03",
-   "dep": "7:11AM",
+   "price": 154,
+   "d1": "2026-10-17",
+   "d2": "2026-10-20",
+   "dep": "8:04AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:53PM",
-   "arr": "10:23AM",
-   "rarr": "4:20PM",
-   "pct": 63
+   "rdep": "1:07PM",
+   "arr": "11:12AM",
+   "rarr": "4:30PM",
+   "pct": 65
   },
   "MSY": {
    "to": "MSY",
@@ -203,17 +203,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 145,
-   "d1": "2026-09-18",
+   "price": 154,
+   "d1": "2026-09-17",
    "d2": "2026-09-20",
-   "dep": "1:35PM",
+   "dep": "4:40PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
    "rdep": "6:55AM",
-   "arr": "4:00PM",
+   "arr": "6:59PM",
    "rarr": "9:48AM",
-   "pct": 65
+   "pct": 63
   },
   "PHL": {
    "to": "PHL",
