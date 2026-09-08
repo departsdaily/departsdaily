@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-08T10:47:29-04:00",
+ "generated": "2026-09-08T11:19:35-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 40,
  "routes_failed": [],
@@ -244,6 +244,21 @@
    "arr": "10:44PM",
    "rarr": "7:50PM",
    "pct": 50
+  },
+  "MBJ": {
+   "to": "MBJ",
+   "city": "Montego Bay",
+   "price": 669,
+   "d1": "2026-09-25",
+   "d2": "2026-09-29",
+   "dep": "9:15AM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:30PM",
+   "arr": "3:11PM",
+   "rarr": "6:42PM",
+   "pct": -24
   },
   "MCO": {
    "to": "MCO",
@@ -574,21 +589,6 @@
    "arr": "1:29PM",
    "rarr": "9:00AM",
    "pct": 0
-  },
-  "YYC": {
-   "to": "YYC",
-   "city": "Calgary",
-   "price": 479,
-   "d1": "2026-10-22",
-   "d2": "2026-10-28",
-   "dep": "9:29AM",
-   "al": "Frontier",
-   "stops": 3,
-   "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "6:41PM",
-   "rarr": "11:57AM",
-   "pct": 30
   },
   "YYZ": {
    "to": "YYZ",
