@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-08T14:17:33-04:00",
+ "generated": "2026-09-08T16:17:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 147,
-   "d1": "2026-10-17",
-   "d2": "2026-10-20",
-   "dep": "5:50AM",
-   "al": "Southwest",
+   "price": 287,
+   "d1": "2026-11-21",
+   "d2": "2026-11-25",
+   "dep": "10:59PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:15PM",
-   "arr": "10:45AM",
-   "rarr": "3:55PM",
-   "pct": 63
+   "rdep": "12:00PM",
+   "arr": "3:51AM+1",
+   "rarr": "4:32PM",
+   "pct": 28
   },
   "BNA": {
    "to": "BNA",
@@ -248,17 +248,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 365,
-   "d1": "2026-09-24",
-   "d2": "2026-09-29",
-   "dep": "5:12PM",
-   "al": "Volaris",
+   "price": 358,
+   "d1": "2026-10-28",
+   "d2": "2026-11-05",
+   "dep": "8:00AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:25AM",
-   "arr": "10:58PM",
-   "rarr": "10:56AM",
-   "pct": 30
+   "rdep": "2:51PM",
+   "arr": "4:32PM",
+   "rarr": "7:43PM",
+   "pct": 31
   },
   "GCM": {
    "to": "GCM",
@@ -308,17 +308,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 326,
-   "d1": "2026-11-05",
-   "d2": "2026-11-15",
-   "dep": "7:45PM",
+   "price": 332,
+   "d1": "2026-10-12",
+   "d2": "2026-10-20",
+   "dep": "10:00AM",
    "al": "UP",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:13PM",
-   "arr": "8:45PM",
-   "rarr": "1:24PM",
-   "pct": 32
+   "rdep": "5:30PM",
+   "arr": "11:00AM",
+   "rarr": "6:35PM",
+   "pct": 31
   },
   "PAR": {
    "to": "PAR",
