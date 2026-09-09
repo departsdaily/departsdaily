@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-09T10:16:06-04:00",
+ "generated": "2026-09-09T12:16:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -353,7 +353,7 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 158,
+   "price": 162,
    "d1": "2026-10-17",
    "d2": "2026-10-21",
    "dep": "5:15AM",
@@ -363,7 +363,7 @@
    "rdep": "12:59AM",
    "arr": "11:17AM",
    "rarr": "7:34AM",
-   "pct": 62
+   "pct": 61
   }
  }
 }
