@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-09T12:17:14-04:00",
+ "generated": "2026-09-09T14:16:42-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 146,
+   "price": 185,
    "d1": "2026-09-24",
-   "d2": "2026-09-28",
+   "d2": "2026-09-26",
    "dep": "8:48AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:49PM",
+   "rdep": "3:14PM",
    "arr": "2:08PM",
-   "rarr": "7:18PM",
-   "pct": 76
+   "rarr": "8:34PM",
+   "pct": 69
   },
   "BOS": {
    "to": "BOS",
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 44,
-   "d1": "2026-10-28",
-   "d2": "2026-10-30",
-   "dep": "5:15PM",
+   "price": 36,
+   "d1": "2026-10-03",
+   "d2": "2026-10-06",
+   "dep": "5:20PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "6:30PM",
-   "rarr": "7:48AM",
-   "pct": 85
+   "rdep": "2:55PM",
+   "arr": "6:42PM",
+   "rarr": "4:23PM",
+   "pct": 88
   },
   "MCO": {
    "to": "MCO",
@@ -293,17 +293,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 345,
-   "d1": "2026-09-30",
+   "price": 350,
+   "d1": "2026-09-29",
    "d2": "2026-10-06",
-   "dep": "12:37AM",
+   "dep": "7:17PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:40PM",
-   "arr": "6:38AM",
+   "arr": "1:17AM+1",
    "rarr": "11:36PM",
-   "pct": 34
+   "pct": 33
   },
   "GCM": {
    "to": "GCM",

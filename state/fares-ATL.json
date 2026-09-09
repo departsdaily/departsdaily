@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-09T12:16:07-04:00",
+ "generated": "2026-09-09T14:15:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -259,6 +259,21 @@
    "arr": "11:49AM",
    "rarr": "3:30PM",
    "pct": 91
+  },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 606,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "8:59PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "11:50AM",
+   "arr": "2:32AM+1",
+   "rarr": "7:46PM",
+   "pct": 2
   },
   "CUN": {
    "to": "CUN",

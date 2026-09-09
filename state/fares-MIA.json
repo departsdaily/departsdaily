@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-09T12:17:47-04:00",
+ "generated": "2026-09-09T14:17:17-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 204,
-   "d1": "2026-10-26",
-   "d2": "2026-10-29",
-   "dep": "5:15AM",
+   "price": 179,
+   "d1": "2026-11-05",
+   "d2": "2026-11-07",
+   "dep": "12:44PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "12:01AM",
-   "arr": "11:58AM",
-   "rarr": "5:44AM",
-   "pct": 66
+   "arr": "7:24PM",
+   "rarr": "5:41AM",
+   "pct": 70
   },
   "LAX": {
    "to": "LAX",
@@ -128,17 +128,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 246,
-   "d1": "2026-10-08",
+   "price": 178,
+   "d1": "2026-10-06",
    "d2": "2026-10-13",
-   "dep": "10:55PM",
+   "dep": "9:43PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "5:05PM",
-   "arr": "2:37AM+1",
-   "rarr": "8:56PM",
-   "pct": 23
+   "arr": "1:33AM+1",
+   "rarr": "8:58PM",
+   "pct": 44
   },
   "NYC": {
    "to": "NYC",
@@ -158,32 +158,32 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 146,
-   "d1": "2026-09-14",
-   "d2": "2026-09-17",
-   "dep": "5:50AM",
+   "price": 153,
+   "d1": "2026-10-15",
+   "d2": "2026-10-20",
+   "dep": "1:07PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "12:47PM",
-   "rarr": "12:52PM",
-   "pct": 67
+   "rdep": "8:04AM",
+   "arr": "4:30PM",
+   "rarr": "11:12AM",
+   "pct": 65
   },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 254,
-   "d1": "2026-10-07",
-   "d2": "2026-10-12",
+   "price": 271,
+   "d1": "2026-10-06",
+   "d2": "2026-10-09",
    "dep": "5:55AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:51PM",
-   "arr": "12:26PM",
-   "rarr": "2:34AM+1",
-   "pct": 54
+   "rdep": "5:01AM",
+   "arr": "12:23PM",
+   "rarr": "10:15AM",
+   "pct": 51
   },
   "SEA": {
    "to": "SEA",
@@ -233,17 +233,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 401,
+   "price": 690,
    "d1": "2026-11-08",
-   "d2": "2026-11-15",
+   "d2": "2026-11-14",
    "dep": "4:50PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
+   "rdep": "5:50PM",
    "arr": "4:10AM+1",
-   "rarr": "8:00PM",
-   "pct": 54
+   "rarr": "6:50AM+1",
+   "pct": 22
   },
   "CUN": {
    "to": "CUN",

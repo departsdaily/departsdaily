@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-09T12:15:49-04:00",
+ "generated": "2026-09-09T14:15:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 40,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -394,21 +394,6 @@
    "arr": "4:05AM+1",
    "rarr": "5:00PM",
    "pct": 3
-  },
-  "PSP": {
-   "to": "PSP",
-   "city": "Palm Springs",
-   "price": 406,
-   "d1": "2026-11-14",
-   "d2": "2026-11-18",
-   "dep": "5:05PM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "11:23PM",
-   "rarr": "11:36AM",
-   "pct": 40
   },
   "PUJ": {
    "to": "PUJ",
