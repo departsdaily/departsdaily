@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 8,
+ "n_deals": 9,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -74,11 +74,11 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_8_PDX.png",
-   "to": "PDX",
-   "city": "Portland, OR",
-   "price": 202,
-   "disc": 47,
+   "file": "story_8_PTY.png",
+   "to": "PTY",
+   "city": "Panama City",
+   "price": 312,
+   "disc": 48,
    "section": "weekish"
   }
  ]
