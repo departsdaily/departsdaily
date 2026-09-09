@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-09T08:15:12-04:00",
+ "generated": "2026-09-09T10:15:49-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -488,17 +488,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 308,
-   "d1": "2026-10-07",
-   "d2": "2026-10-12",
-   "dep": "6:55PM",
-   "al": "Southwest",
-   "stops": 1,
+   "price": 362,
+   "d1": "2026-11-03",
+   "d2": "2026-11-06",
+   "dep": "12:05PM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "11:59PM",
-   "arr": "1:35AM+1",
-   "rarr": "6:19AM+1",
-   "pct": 62
+   "rdep": "11:52PM",
+   "arr": "8:20PM",
+   "rarr": "6:15AM+1",
+   "pct": 55
   },
   "SJO": {
    "to": "SJO",

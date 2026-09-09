@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-09T08:15:30-04:00",
+ "generated": "2026-09-09T10:16:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 299,
-   "d1": "2026-09-21",
-   "d2": "2026-09-25",
-   "dep": "10:50AM",
+   "price": 292,
+   "d1": "2026-12-20",
+   "d2": "2026-12-26",
+   "dep": "4:02PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "1:51PM",
-   "arr": "1:37PM",
-   "rarr": "4:39PM",
-   "pct": 43
+   "rdep": "11:40AM",
+   "arr": "10:29PM",
+   "rarr": "5:36PM",
+   "pct": 44
   },
   "LON": {
    "to": "LON",
