@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-08T22:16:05-04:00",
+ "generated": "2026-09-09T00:16:18-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -34,21 +34,6 @@
    "arr": "5:48PM",
    "rarr": "8:57PM",
    "pct": 44
-  },
-  "BOS": {
-   "to": "BOS",
-   "city": "Boston",
-   "price": 436,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "9:54PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:53AM",
-   "arr": "3:51AM+1",
-   "rarr": "6:16PM",
-   "pct": 19
   },
   "DCA": {
    "to": "DCA",

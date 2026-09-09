@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-08T22:15:13-04:00",
+ "generated": "2026-09-09T00:15:21-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 44,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -64,21 +64,6 @@
    "arr": "12:18PM",
    "rarr": "10:19PM",
    "pct": -55
-  },
-  "BNA": {
-   "to": "BNA",
-   "city": "Nashville",
-   "price": 319,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "1:51PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "9:59PM",
-   "arr": "6:19PM",
-   "rarr": "2:02AM+1",
-   "pct": 27
   },
   "BZN": {
    "to": "BZN",
@@ -563,17 +548,17 @@
   "SMF": {
    "to": "SMF",
    "city": "Sacramento",
-   "price": 364,
-   "d1": "2026-09-11",
-   "d2": "2026-09-18",
-   "dep": "7:54PM",
-   "al": "Frontier",
-   "stops": 1,
+   "price": 431,
+   "d1": "2026-09-25",
+   "d2": "2026-10-03",
+   "dep": "6:30PM",
+   "al": "Southwest",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "8:48AM",
-   "arr": "2:21AM+1",
-   "rarr": "2:39PM",
-   "pct": 42
+   "rdep": "7:25PM",
+   "arr": "1:00AM+1",
+   "rarr": "3:20AM+1",
+   "pct": 31
   },
   "SNA": {
    "to": "SNA",
@@ -623,17 +608,17 @@
   "TYO": {
    "to": "TYO",
    "city": "Tokyo",
-   "price": 1195,
-   "d1": "2026-10-01",
-   "d2": "2026-10-11",
-   "dep": "1:04PM",
+   "price": 1144,
+   "d1": "2026-10-14",
+   "d2": "2026-10-20",
+   "dep": "8:39PM",
    "al": "American",
    "stops": 2,
    "xfer": 0,
-   "rdep": "10:00PM",
-   "arr": "11:30AM+1",
-   "rarr": "8:11PM+1",
-   "pct": 4
+   "rdep": "6:30PM",
+   "arr": "6:15PM+1",
+   "rarr": "5:01PM+1",
+   "pct": 8
   },
   "VPS": {
    "to": "VPS",
@@ -653,17 +638,17 @@
   "YYZ": {
    "to": "YYZ",
    "city": "Toronto",
-   "price": 516,
-   "d1": "2026-09-14",
-   "d2": "2026-09-20",
-   "dep": "5:38PM",
-   "al": "Frontier",
-   "stops": 2,
+   "price": 465,
+   "d1": "2026-10-02",
+   "d2": "2026-10-09",
+   "dep": "6:00AM",
+   "al": "United",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "4:50PM",
-   "arr": "1:08AM+1",
-   "rarr": "9:40PM",
-   "pct": -7
+   "rdep": "6:00AM",
+   "arr": "9:10AM",
+   "rarr": "8:18AM",
+   "pct": 3
   }
  }
 }

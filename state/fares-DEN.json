@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-08T22:16:22-04:00",
+ "generated": "2026-09-09T00:16:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
+ "routes_priced": 19,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -170,21 +170,6 @@
    "rarr": "8:50PM",
    "pct": 52
   },
-  "ORD": {
-   "to": "ORD",
-   "city": "Chicago",
-   "price": 289,
-   "d1": "2026-09-11",
-   "d2": "2026-09-13",
-   "dep": "10:44AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "4:16PM",
-   "rarr": "11:00AM",
-   "pct": 30
-  },
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
@@ -263,17 +248,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 1122,
-   "d1": "2026-09-11",
-   "d2": "2026-09-26",
-   "dep": "3:15PM",
-   "al": "",
+   "price": 736,
+   "d1": "2026-10-07",
+   "d2": "2026-10-14",
+   "dep": "6:35PM",
+   "al": "British Airways",
    "stops": 1,
-   "xfer": 1,
-   "rdep": "11:55AM",
-   "arr": "2:10AM+1",
-   "rarr": "12:27AM+1",
-   "pct": -32
+   "xfer": 0,
+   "rdep": "9:45AM",
+   "arr": "3:35AM+1",
+   "rarr": "9:29PM",
+   "pct": 13
   },
   "PAR": {
    "to": "PAR",

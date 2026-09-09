@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-09-08T22:17:29-04:00",
+ "generated": "2026-09-09T00:17:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -64,36 +64,6 @@
    "arr": "1:32AM+1",
    "rarr": "10:39PM",
    "pct": 39
-  },
-  "FLL": {
-   "to": "FLL",
-   "city": "Ft. Lauderdale",
-   "price": 548,
-   "d1": "2026-09-11",
-   "d2": "2026-09-14",
-   "dep": "7:45PM",
-   "al": "Frontier",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "9:54PM",
-   "arr": "4:30AM+1",
-   "rarr": "7:49AM+1",
-   "pct": 13
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 250,
-   "d1": "2026-10-07",
-   "d2": "2026-10-12",
-   "dep": "2:15PM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:10PM",
-   "arr": "7:25PM",
-   "rarr": "2:05AM+1",
-   "pct": 57
   },
   "LAS": {
    "to": "LAS",
@@ -278,17 +248,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 631,
-   "d1": "2026-10-11",
-   "d2": "2026-10-18",
-   "dep": "7:00PM",
-   "al": "Icelandair",
-   "stops": 2,
+   "price": 433,
+   "d1": "2026-09-21",
+   "d2": "2026-10-01",
+   "dep": "9:50PM",
+   "al": "Virgin Atlantic",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "7:20AM+1",
-   "rarr": "6:45PM",
-   "pct": 26
+   "rdep": "6:15AM",
+   "arr": "7:35AM+1",
+   "rarr": "5:45PM",
+   "pct": 49
   },
   "NAS": {
    "to": "NAS",
@@ -308,17 +278,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 766,
-   "d1": "2026-12-03",
-   "d2": "2026-12-11",
-   "dep": "2:35PM",
-   "al": "Icelandair",
-   "stops": 2,
+   "price": 951,
+   "d1": "2027-01-01",
+   "d2": "2027-01-06",
+   "dep": "2:30PM",
+   "al": "WestJet",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "8:10AM",
-   "arr": "3:40AM+1",
-   "rarr": "9:35PM",
-   "pct": 15
+   "rdep": "6:40PM",
+   "arr": "1:10AM+1",
+   "rarr": "9:17AM+1",
+   "pct": -6
   },
   "ROM": {
    "to": "ROM",
