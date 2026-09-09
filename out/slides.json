@@ -7,7 +7,7 @@
   "slide5_board.png",
   "slide6_cta.png"
  ],
- "n_deals": 11,
+ "n_deals": 8,
  "board_slides": 5,
  "sections": [
   "LONG WEEKEND",
@@ -34,15 +34,7 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_3_LAS.png",
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 263,
-   "disc": 22,
-   "section": "cheapest"
-  },
-  {
-   "file": "story_4_LAX.png",
+   "file": "story_3_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 246,
@@ -50,12 +42,20 @@
    "section": "weekend"
   },
   {
-   "file": "story_5_LAX.png",
+   "file": "story_4_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 248,
    "disc": 19,
    "section": "weekish"
+  },
+  {
+   "file": "story_5_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 249,
+   "disc": 19,
+   "section": "cheapest"
   },
   {
    "file": "story_6_LAS.png",
@@ -66,20 +66,20 @@
    "section": "weekend"
   },
   {
-   "file": "story_7_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 257,
-   "disc": 17,
-   "section": "cheapest"
-  },
-  {
-   "file": "story_8_SFO.png",
+   "file": "story_7_SFO.png",
    "to": "SFO",
    "city": "San Francisco",
    "price": 308,
    "disc": 18,
    "section": "extra_weekend"
+  },
+  {
+   "file": "story_8_PDX.png",
+   "to": "PDX",
+   "city": "Portland, OR",
+   "price": 202,
+   "disc": 47,
+   "section": "weekish"
   }
  ]
 }
