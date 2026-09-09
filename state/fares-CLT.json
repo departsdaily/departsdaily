@@ -1,10 +1,25 @@
 {
  "origin": "CLT",
- "generated": "2026-09-09T16:15:09-04:00",
+ "generated": "2026-09-09T18:15:03-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 387,
+   "d1": "2026-11-05",
+   "d2": "2026-11-11",
+   "dep": "1:22PM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:05PM",
+   "arr": "10:55PM",
+   "rarr": "10:26PM",
+   "pct": 56
+  },
   "ATH": {
    "to": "ATH",
    "city": "Athens",
@@ -203,17 +218,17 @@
   "MAD": {
    "to": "MAD",
    "city": "Madrid",
-   "price": 443,
-   "d1": "2026-11-01",
-   "d2": "2026-11-12",
-   "dep": "1:06PM",
-   "al": "United",
+   "price": 391,
+   "d1": "2026-09-30",
+   "d2": "2026-10-13",
+   "dep": "9:15AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "10:44PM",
-   "rarr": "7:50PM",
-   "pct": 50
+   "rdep": "7:00AM",
+   "arr": "6:41PM",
+   "rarr": "7:10PM",
+   "pct": 56
   },
   "MBJ": {
    "to": "MBJ",
@@ -338,17 +353,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 484,
+   "price": 663,
    "d1": "2026-11-19",
    "d2": "2026-11-25",
-   "dep": "5:10PM",
-   "al": "Air Canada",
+   "dep": "10:52AM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:15PM",
-   "arr": "2:22AM+1",
-   "rarr": "10:37PM",
-   "pct": 46
+   "rdep": "12:05PM",
+   "arr": "8:20PM",
+   "rarr": "10:46PM",
+   "pct": 26
   },
   "PDX": {
    "to": "PDX",
