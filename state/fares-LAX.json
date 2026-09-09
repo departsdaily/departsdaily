@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-08T18:16:37-04:00",
+ "generated": "2026-09-08T20:16:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 292,
-   "d1": "2026-10-22",
-   "d2": "2026-10-25",
-   "dep": "11:20AM",
+   "price": 146,
+   "d1": "2026-09-24",
+   "d2": "2026-09-28",
+   "dep": "8:48AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:44PM",
-   "arr": "4:25PM",
-   "rarr": "3:00AM+1",
-   "pct": 51
+   "rdep": "1:49PM",
+   "arr": "2:08PM",
+   "rarr": "7:18PM",
+   "pct": 76
   },
   "BOS": {
    "to": "BOS",
@@ -270,9 +270,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:07PM",
+   "rdep": "6:02PM",
    "arr": "10:22AM",
-   "rarr": "1:43PM",
+   "rarr": "7:36PM",
    "pct": 87
   },
   "AMS": {

@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-08T18:16:54-04:00",
+ "generated": "2026-09-08T20:17:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -23,17 +23,17 @@
   "BNA": {
    "to": "BNA",
    "city": "Nashville",
-   "price": 204,
+   "price": 238,
    "d1": "2026-09-28",
    "d2": "2026-09-30",
-   "dep": "8:00AM",
+   "dep": "4:59PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:30AM",
-   "arr": "10:32AM",
+   "arr": "7:34PM",
    "rarr": "12:48PM",
-   "pct": 51
+   "pct": 43
   },
   "BOS": {
    "to": "BOS",
@@ -428,17 +428,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 232,
-   "d1": "2026-10-29",
-   "d2": "2026-11-09",
-   "dep": "3:45PM",
+   "price": 315,
+   "d1": "2026-10-25",
+   "d2": "2026-10-29",
+   "dep": "3:55PM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:20AM",
-   "arr": "7:42PM",
-   "rarr": "3:24PM",
-   "pct": 45
+   "rdep": "6:00AM",
+   "arr": "7:52PM",
+   "rarr": "11:29AM",
+   "pct": 25
   }
  }
 }

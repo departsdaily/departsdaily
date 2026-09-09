@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-08T18:15:11-04:00",
+ "generated": "2026-09-08T20:15:21-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 42,
+ "routes_priced": 43,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -263,9 +263,9 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 125,
-   "d1": "2026-11-06",
-   "d2": "2026-11-09",
+   "price": 109,
+   "d1": "2026-11-10",
+   "d2": "2026-11-13",
    "dep": "6:05AM",
    "al": "Frontier",
    "stops": 0,
@@ -273,7 +273,7 @@
    "rdep": "6:40AM",
    "arr": "7:56AM",
    "rarr": "8:37AM",
-   "pct": 70
+   "pct": 74
   },
   "MIA": {
    "to": "MIA",
@@ -394,6 +394,21 @@
    "arr": "2:45PM",
    "rarr": "11:25AM",
    "pct": 74
+  },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 451,
+   "d1": "2026-09-18",
+   "d2": "2026-09-22",
+   "dep": "7:54PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "6:30PM",
+   "arr": "1:39AM+1",
+   "rarr": "1:55AM+1",
+   "pct": 32
   },
   "PRG": {
    "to": "PRG",

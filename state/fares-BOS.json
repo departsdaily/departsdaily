@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-08T18:17:45-04:00",
+ "generated": "2026-09-08T20:18:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 24,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 241,
-   "d1": "2026-10-09",
-   "d2": "2026-10-11",
-   "dep": "7:00AM",
+   "price": 246,
+   "d1": "2026-11-13",
+   "d2": "2026-11-15",
+   "dep": "11:46AM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:15PM",
-   "arr": "8:23AM",
-   "rarr": "9:35PM",
-   "pct": 40
+   "rdep": "8:07AM",
+   "arr": "1:14PM",
+   "rarr": "9:25AM",
+   "pct": 39
   },
   "ORD": {
    "to": "ORD",
@@ -338,9 +338,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 550,
-   "d1": "2026-12-28",
-   "d2": "2027-01-01",
+   "price": 628,
+   "d1": "2026-11-19",
+   "d2": "2026-11-27",
    "dep": "10:10PM",
    "al": "TAP Portugal",
    "stops": 1,
@@ -348,7 +348,7 @@
    "rdep": "5:55AM",
    "arr": "7:50AM+1",
    "rarr": "5:10PM",
-   "pct": 42
+   "pct": 34
   },
   "SJU": {
    "to": "SJU",
