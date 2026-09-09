@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-09T02:17:09-04:00",
+ "generated": "2026-09-09T04:17:13-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -86,12 +86,12 @@
    "price": 217,
    "d1": "2026-09-30",
    "d2": "2026-10-05",
-   "dep": "11:30AM",
+   "dep": "7:59AM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
    "rdep": "10:24AM",
-   "arr": "3:09PM",
+   "arr": "11:42AM",
    "rarr": "1:58PM",
    "pct": 61
   },
@@ -353,17 +353,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 236,
-   "d1": "2026-12-03",
-   "d2": "2026-12-08",
-   "dep": "9:30PM",
+   "price": 244,
+   "d1": "2026-10-31",
+   "d2": "2026-11-06",
+   "dep": "3:26PM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
    "rdep": "1:10PM",
-   "arr": "2:30AM+1",
+   "arr": "8:33PM",
    "rarr": "5:09PM",
-   "pct": 56
+   "pct": 55
   },
   "NAS": {
    "to": "NAS",

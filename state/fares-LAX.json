@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-09T02:16:50-04:00",
+ "generated": "2026-09-09T04:16:53-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 153,
-   "d1": "2026-10-07",
-   "d2": "2026-10-14",
-   "dep": "7:40AM",
-   "al": "Southwest",
+   "price": 250,
+   "d1": "2026-09-26",
+   "d2": "2026-10-03",
+   "dep": "11:50PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:55PM",
-   "arr": "1:45PM",
-   "rarr": "11:10PM",
-   "pct": 79
+   "rdep": "6:37PM",
+   "arr": "6:00AM+1",
+   "rarr": "1:33AM+1",
+   "pct": 66
   },
   "HOU": {
    "to": "HOU",
@@ -248,7 +248,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 70,
+   "price": 98,
    "d1": "2026-10-31",
    "d2": "2026-11-03",
    "dep": "3:41PM",
@@ -258,7 +258,7 @@
    "rdep": "8:09PM",
    "arr": "6:54PM",
    "rarr": "10:59PM",
-   "pct": 84
+   "pct": 77
   },
   "SFO": {
    "to": "SFO",
@@ -270,9 +270,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:02PM",
+   "rdep": "12:07PM",
    "arr": "10:22AM",
-   "rarr": "7:36PM",
+   "rarr": "1:43PM",
    "pct": 87
   },
   "AMS": {
