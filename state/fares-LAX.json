@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-09T00:16:54-04:00",
+ "generated": "2026-09-09T02:16:50-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -270,9 +270,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "12:07PM",
+   "rdep": "6:02PM",
    "arr": "10:22AM",
-   "rarr": "1:43PM",
+   "rarr": "7:36PM",
    "pct": 87
   },
   "AMS": {

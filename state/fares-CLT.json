@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-09T00:15:21-04:00",
+ "generated": "2026-09-09T02:15:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 43,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "ATH": {
@@ -139,21 +139,6 @@
    "arr": "3:25AM+1",
    "rarr": "8:35PM",
    "pct": 7
-  },
-  "GDL": {
-   "to": "GDL",
-   "city": "Guadalajara",
-   "price": 322,
-   "d1": "2026-12-26",
-   "d2": "2027-01-09",
-   "dep": "2:48PM",
-   "al": "Volaris",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "8:13AM",
-   "arr": "7:21PM",
-   "rarr": "12:10PM",
-   "pct": 43
   },
   "HNL": {
    "to": "HNL",
@@ -574,21 +559,6 @@
    "arr": "11:17PM",
    "rarr": "12:02PM",
    "pct": 0
-  },
-  "SXM": {
-   "to": "SXM",
-   "city": "St. Maarten",
-   "price": 673,
-   "d1": "2026-12-18",
-   "d2": "2026-12-22",
-   "dep": "6:50AM",
-   "al": "JetBlue",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:20PM",
-   "arr": "12:07PM",
-   "rarr": "7:51PM",
-   "pct": -2
   },
   "TPA": {
    "to": "TPA",

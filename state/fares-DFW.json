@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-09T00:16:18-04:00",
+ "generated": "2026-09-09T02:16:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -79,21 +79,6 @@
    "arr": "4:35PM",
    "rarr": "10:12PM",
    "pct": 62
-  },
-  "HOU": {
-   "to": "HOU",
-   "city": "Houston",
-   "price": 183,
-   "d1": "2026-11-05",
-   "d2": "2026-11-10",
-   "dep": "5:35AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "12:19PM",
-   "arr": "11:32AM",
-   "rarr": "5:22PM",
-   "pct": 58
   },
   "LAS": {
    "to": "LAS",
@@ -263,17 +248,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 594,
+   "price": 969,
    "d1": "2026-10-19",
    "d2": "2026-10-25",
-   "dep": "9:30PM",
-   "al": "Turkish",
+   "dep": "3:05PM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:20PM",
-   "arr": "12:55PM+1",
-   "rarr": "2:40PM+1",
-   "pct": 32
+   "rdep": "7:00AM",
+   "arr": "1:40AM+1",
+   "rarr": "6:50PM",
+   "pct": -10
   },
   "CUN": {
    "to": "CUN",

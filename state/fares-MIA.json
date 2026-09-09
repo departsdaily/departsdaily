@@ -1,6 +1,6 @@
 {
  "origin": "MIA",
- "generated": "2026-09-09T00:17:32-04:00",
+ "generated": "2026-09-09T02:17:26-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -251,12 +251,12 @@
    "price": 358,
    "d1": "2026-10-28",
    "d2": "2026-11-05",
-   "dep": "8:00AM",
+   "dep": "1:15PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
    "rdep": "2:51PM",
-   "arr": "4:32PM",
+   "arr": "9:55PM",
    "rarr": "7:43PM",
    "pct": 31
   },
