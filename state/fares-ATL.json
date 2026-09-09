@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-09T14:15:31-04:00",
+ "generated": "2026-09-09T16:02:07-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 24,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -214,21 +214,6 @@
    "arr": "7:16AM",
    "rarr": "11:06AM",
    "pct": 86
-  },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 261,
-   "d1": "2026-09-24",
-   "d2": "2026-09-27",
-   "dep": "7:03AM",
-   "al": "Alaska",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:43PM",
-   "arr": "12:25PM",
-   "rarr": "4:33AM+1",
-   "pct": 61
   },
   "SFO": {
    "to": "SFO",

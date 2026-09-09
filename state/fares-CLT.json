@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-09T14:15:13-04:00",
+ "generated": "2026-09-09T16:01:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 40,
  "routes_failed": [],
@@ -83,17 +83,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 434,
-   "d1": "2026-10-19",
-   "d2": "2026-10-25",
+   "price": 494,
+   "d1": "2026-10-03",
+   "d2": "2026-10-09",
    "dep": "9:15AM",
    "al": "Air Canada",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "7:00AM",
+   "rdep": "1:20PM",
    "arr": "3:06PM",
-   "rarr": "1:06PM",
-   "pct": 17
+   "rarr": "9:05PM",
+   "pct": 5
   },
   "CUR": {
    "to": "CUR",
@@ -428,17 +428,17 @@
   "SAL": {
    "to": "SAL",
    "city": "San Salvador",
-   "price": 1124,
+   "price": 1256,
    "d1": "2026-12-17",
    "d2": "2027-01-07",
-   "dep": "1:53PM",
-   "al": "Frontier",
-   "stops": 2,
+   "dep": "10:10AM",
+   "al": "United",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:35AM",
-   "arr": "9:31PM",
-   "rarr": "5:55PM",
-   "pct": -81
+   "rdep": "4:40PM",
+   "arr": "4:14PM",
+   "rarr": "10:17PM",
+   "pct": -103
   },
   "SAT": {
    "to": "SAT",
