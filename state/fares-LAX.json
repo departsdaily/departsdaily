@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-08T20:16:57-04:00",
+ "generated": "2026-09-08T22:16:39-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -98,16 +98,16 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 157,
+   "price": 153,
    "d1": "2026-10-07",
    "d2": "2026-10-14",
-   "dep": "1:45PM",
-   "al": "JetBlue",
-   "stops": 0,
+   "dep": "7:40AM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:00AM",
-   "arr": "6:42PM",
-   "rarr": "11:34AM",
+   "rdep": "4:55PM",
+   "arr": "1:45PM",
+   "rarr": "11:10PM",
    "pct": 79
   },
   "HOU": {
@@ -263,17 +263,17 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 46,
+   "price": 49,
    "d1": "2026-09-29",
    "d2": "2026-10-01",
    "dep": "8:44AM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:02PM",
+   "rdep": "12:07PM",
    "arr": "10:22AM",
-   "rarr": "7:36PM",
-   "pct": 87
+   "rarr": "1:43PM",
+   "pct": 86
   },
   "AMS": {
    "to": "AMS",

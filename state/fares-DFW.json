@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-08T20:16:18-04:00",
+ "generated": "2026-09-08T22:16:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -38,17 +38,17 @@
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 384,
-   "d1": "2026-10-28",
-   "d2": "2026-11-02",
-   "dep": "7:41AM",
+   "price": 436,
+   "d1": "2026-09-11",
+   "d2": "2026-09-13",
+   "dep": "9:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:39PM",
-   "arr": "12:46PM",
-   "rarr": "6:42PM",
-   "pct": 29
+   "rdep": "11:53AM",
+   "arr": "3:51AM+1",
+   "rarr": "6:16PM",
+   "pct": 19
   },
   "DCA": {
    "to": "DCA",
@@ -293,17 +293,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 195,
-   "d1": "2026-09-22",
-   "d2": "2026-09-29",
-   "dep": "9:00PM",
+   "price": 367,
+   "d1": "2026-11-05",
+   "d2": "2026-11-09",
+   "dep": "8:05PM",
    "al": "Volaris",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:50PM",
-   "arr": "2:03AM+1",
-   "rarr": "2:56AM+1",
-   "pct": 62
+   "rdep": "11:55PM",
+   "arr": "12:57AM+1",
+   "rarr": "5:04AM+1",
+   "pct": 29
   },
   "LON": {
    "to": "LON",
