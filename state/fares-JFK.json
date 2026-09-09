@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-09T06:16:53-04:00",
+ "generated": "2026-09-09T08:17:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 391,
-   "d1": "2026-11-17",
-   "d2": "2026-11-19",
-   "dep": "5:48PM",
-   "al": "JetBlue",
-   "stops": 2,
+   "price": 379,
+   "d1": "2026-10-07",
+   "d2": "2026-10-14",
+   "dep": "7:25AM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "3:43PM",
-   "arr": "1:20AM+1",
-   "rarr": "10:58PM",
-   "pct": 36
+   "rdep": "5:08PM",
+   "arr": "11:35AM",
+   "rarr": "8:59PM",
+   "pct": 38
   },
   "BNA": {
    "to": "BNA",
@@ -53,9 +53,9 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 263,
-   "d1": "2026-10-14",
-   "d2": "2026-10-17",
+   "price": 268,
+   "d1": "2026-10-01",
+   "d2": "2026-10-10",
    "dep": "9:30PM",
    "al": "JetBlue",
    "stops": 0,
@@ -63,7 +63,7 @@
    "rdep": "6:20AM",
    "arr": "10:59PM",
    "rarr": "7:29AM",
-   "pct": 35
+   "pct": 34
   },
   "DEN": {
    "to": "DEN",

@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-09T06:16:02-04:00",
+ "generated": "2026-09-09T08:16:06-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 23,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -49,21 +49,6 @@
    "arr": "4:30PM",
    "rarr": "1:10PM",
    "pct": 44
-  },
-  "DEN": {
-   "to": "DEN",
-   "city": "Denver",
-   "price": 193,
-   "d1": "2026-09-16",
-   "d2": "2026-09-19",
-   "dep": "2:00PM",
-   "al": "Southwest",
-   "stops": 0,
-   "xfer": 0,
-   "rdep": "11:10AM",
-   "arr": "4:00PM",
-   "rarr": "1:10PM",
-   "pct": 49
   },
   "FLL": {
    "to": "FLL",
@@ -128,17 +113,17 @@
   "MIA": {
    "to": "MIA",
    "city": "Miami",
-   "price": 167,
-   "d1": "2026-10-16",
-   "d2": "2026-10-20",
-   "dep": "8:38AM",
+   "price": 154,
+   "d1": "2026-10-21",
+   "d2": "2026-10-28",
+   "dep": "1:08PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:47PM",
-   "arr": "12:56PM",
-   "rarr": "6:10PM",
-   "pct": 63
+   "rdep": "10:36PM",
+   "arr": "5:33PM",
+   "rarr": "3:23AM+1",
+   "pct": 66
   },
   "MSY": {
    "to": "MSY",
@@ -308,17 +293,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 942,
-   "d1": "2026-10-04",
-   "d2": "2026-10-09",
-   "dep": "7:55AM",
-   "al": "",
+   "price": 858,
+   "d1": "2026-10-25",
+   "d2": "2026-10-31",
+   "dep": "10:15PM",
+   "al": "British Airways",
    "stops": 1,
-   "xfer": 1,
-   "rdep": "6:50PM",
-   "arr": "6:50PM",
-   "rarr": "7:01AM+1",
-   "pct": -5
+   "xfer": 0,
+   "rdep": "6:25PM",
+   "arr": "8:40AM+1",
+   "rarr": "6:05AM+1",
+   "pct": 5
   },
   "PUJ": {
    "to": "PUJ",
