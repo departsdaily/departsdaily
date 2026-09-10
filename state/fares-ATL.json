@@ -1,6 +1,6 @@
 {
  "origin": "ATL",
- "generated": "2026-09-09T20:14:44-04:00",
+ "generated": "2026-09-09T22:14:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -113,17 +113,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 195,
-   "d1": "2026-10-30",
-   "d2": "2026-11-02",
-   "dep": "9:21AM",
+   "price": 166,
+   "d1": "2026-11-25",
+   "d2": "2026-11-27",
+   "dep": "3:45PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:36PM",
-   "arr": "3:22PM",
-   "rarr": "12:58AM+1",
-   "pct": 72
+   "rdep": "5:15AM",
+   "arr": "8:53PM",
+   "rarr": "11:04AM",
+   "pct": 76
   },
   "MCO": {
    "to": "MCO",
@@ -218,9 +218,9 @@
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
-   "price": 370,
-   "d1": "2026-09-14",
-   "d2": "2026-09-20",
+   "price": 151,
+   "d1": "2026-10-01",
+   "d2": "2026-10-06",
    "dep": "5:25PM",
    "al": "Frontier",
    "stops": 0,
@@ -228,7 +228,7 @@
    "rdep": "10:05PM",
    "arr": "10:48PM",
    "rarr": "2:50AM+1",
-   "pct": 52
+   "pct": 80
   },
   "TPA": {
    "to": "TPA",
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 658,
-   "d1": "2026-10-12",
-   "d2": "2026-10-16",
-   "dep": "9:50PM",
-   "al": "Turkish",
+   "price": 802,
+   "d1": "2026-11-20",
+   "d2": "2026-12-01",
+   "dep": "8:15AM",
+   "al": "WestJet",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:50PM",
-   "arr": "12:25PM+1",
-   "rarr": "11:05AM+1",
-   "pct": 27
+   "rdep": "1:30PM",
+   "arr": "10:05PM",
+   "rarr": "3:10AM+1",
+   "pct": 11
   },
   "PUJ": {
    "to": "PUJ",

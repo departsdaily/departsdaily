@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-09T20:15:01-04:00",
+ "generated": "2026-09-09T22:15:04-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 344,
-   "d1": "2026-10-08",
-   "d2": "2026-10-11",
-   "dep": "9:40AM",
+   "price": 313,
+   "d1": "2026-11-23",
+   "d2": "2026-11-25",
+   "dep": "7:26PM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "11:30AM",
-   "arr": "11:46AM",
-   "rarr": "1:52PM",
-   "pct": 21
+   "rdep": "10:18AM",
+   "arr": "9:29PM",
+   "rarr": "12:44PM",
+   "pct": 28
   },
   "DEN": {
    "to": "DEN",
@@ -113,17 +113,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 198,
-   "d1": "2026-11-06",
-   "d2": "2026-11-08",
-   "dep": "1:06PM",
+   "price": 159,
+   "d1": "2026-10-23",
+   "d2": "2026-10-26",
+   "dep": "8:11PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:06PM",
-   "arr": "4:11PM",
-   "rarr": "7:59PM",
-   "pct": 53
+   "rdep": "11:36AM",
+   "arr": "2:00AM+1",
+   "rarr": "2:25PM",
+   "pct": 62
   },
   "LAS": {
    "to": "LAS",
@@ -398,17 +398,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 421,
-   "d1": "2026-09-27",
-   "d2": "2026-10-14",
-   "dep": "6:00PM",
-   "al": "TAP Portugal",
+   "price": 559,
+   "d1": "2026-12-14",
+   "d2": "2026-12-21",
+   "dep": "6:30PM",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:45AM",
-   "arr": "5:10AM+1",
-   "rarr": "5:15PM",
-   "pct": 56
+   "rdep": "11:25AM",
+   "arr": "5:25AM+1",
+   "rarr": "11:20PM",
+   "pct": 41
   },
   "SJU": {
    "to": "SJU",
