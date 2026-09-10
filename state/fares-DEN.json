@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-10T08:15:42-04:00",
+ "generated": "2026-09-10T12:15:31-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 18,
+ "routes_priced": 16,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -49,21 +49,6 @@
    "arr": "11:20PM",
    "rarr": "12:22PM",
    "pct": 70
-  },
-  "FLL": {
-   "to": "FLL",
-   "city": "Ft. Lauderdale",
-   "price": 382,
-   "d1": "2026-09-14",
-   "d2": "2026-09-18",
-   "dep": "10:28AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:40AM",
-   "arr": "4:32PM",
-   "rarr": "5:57PM",
-   "pct": 32
   },
   "HOU": {
    "to": "HOU",
@@ -184,21 +169,6 @@
    "arr": "12:43AM+1",
    "rarr": "10:48PM",
    "pct": 49
-  },
-  "SEA": {
-   "to": "SEA",
-   "city": "Seattle",
-   "price": 145,
-   "d1": "2026-09-26",
-   "d2": "2026-09-28",
-   "dep": "11:15AM",
-   "al": "Southwest",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "11:05PM",
-   "arr": "2:10PM",
-   "rarr": "5:35AM+1",
-   "pct": 62
   },
   "SFO": {
    "to": "SFO",

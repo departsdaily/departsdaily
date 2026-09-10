@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-10T08:15:59-04:00",
+ "generated": "2026-09-10T12:15:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 79,
-   "d1": "2026-10-31",
-   "d2": "2026-11-03",
-   "dep": "3:41PM",
+   "price": 67,
+   "d1": "2026-10-30",
+   "d2": "2026-11-02",
+   "dep": "5:06PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:09PM",
-   "arr": "6:54PM",
-   "rarr": "10:59PM",
-   "pct": 82
+   "rdep": "10:50AM",
+   "arr": "8:08PM",
+   "rarr": "1:38PM",
+   "pct": 84
   },
   "SFO": {
    "to": "SFO",

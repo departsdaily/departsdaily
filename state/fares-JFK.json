@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-10T08:16:17-04:00",
+ "generated": "2026-09-10T12:16:05-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 266,
-   "d1": "2026-09-23",
-   "d2": "2026-09-29",
-   "dep": "7:59AM",
+   "price": 244,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "7:15AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:37PM",
-   "arr": "2:47PM",
-   "rarr": "7:34PM",
-   "pct": 71
+   "rdep": "1:04PM",
+   "arr": "1:49PM",
+   "rarr": "7:28PM",
+   "pct": 74
   },
   "MCO": {
    "to": "MCO",
@@ -188,17 +188,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 331,
-   "d1": "2026-12-04",
-   "d2": "2026-12-07",
-   "dep": "4:30PM",
-   "al": "JetBlue",
+   "price": 338,
+   "d1": "2026-11-19",
+   "d2": "2026-11-26",
+   "dep": "7:59AM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:50PM",
-   "arr": "9:50PM",
-   "rarr": "9:35PM",
-   "pct": 30
+   "rdep": "6:50PM",
+   "arr": "12:19PM",
+   "rarr": "9:50PM",
+   "pct": 29
   },
   "ORD": {
    "to": "ORD",

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-10T08:15:06-04:00",
+ "generated": "2026-09-10T12:14:59-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -98,9 +98,9 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 143,
-   "d1": "2026-10-05",
-   "d2": "2026-10-10",
+   "price": 115,
+   "d1": "2026-09-30",
+   "d2": "2026-10-08",
    "dep": "7:11AM",
    "al": "Frontier",
    "stops": 0,
@@ -108,22 +108,22 @@
    "rdep": "1:07PM",
    "arr": "10:23AM",
    "rarr": "4:30PM",
-   "pct": 67
+   "pct": 74
   },
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 159,
-   "d1": "2026-10-23",
-   "d2": "2026-10-26",
-   "dep": "8:11PM",
+   "price": 146,
+   "d1": "2026-10-28",
+   "d2": "2026-11-01",
+   "dep": "9:51AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "11:36AM",
-   "arr": "2:00AM+1",
-   "rarr": "2:25PM",
-   "pct": 62
+   "rdep": "12:27PM",
+   "arr": "3:35PM",
+   "rarr": "6:14PM",
+   "pct": 65
   },
   "LAS": {
    "to": "LAS",
@@ -308,17 +308,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 342,
-   "d1": "2026-12-02",
-   "d2": "2026-12-07",
-   "dep": "10:05AM",
-   "al": "Air Canada",
+   "price": 541,
+   "d1": "2026-09-13",
+   "d2": "2026-09-18",
+   "dep": "6:00AM",
+   "al": "United",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:25PM",
-   "arr": "4:57PM",
-   "rarr": "12:54AM+1",
-   "pct": 45
+   "rdep": "4:30PM",
+   "arr": "12:59PM",
+   "rarr": "12:03AM+1",
+   "pct": 13
   },
   "CUN": {
    "to": "CUN",
@@ -353,17 +353,17 @@
   "NAS": {
    "to": "NAS",
    "city": "Nassau",
-   "price": 353,
-   "d1": "2026-11-25",
-   "d2": "2026-11-29",
-   "dep": "3:45PM",
+   "price": 358,
+   "d1": "2026-10-25",
+   "d2": "2026-11-01",
+   "dep": "4:30PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
    "rdep": "2:05PM",
-   "arr": "9:57PM",
+   "arr": "9:40PM",
    "rarr": "8:32PM",
-   "pct": 26
+   "pct": 25
   },
   "PAR": {
    "to": "PAR",
