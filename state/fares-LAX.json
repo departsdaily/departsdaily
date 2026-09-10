@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-10T12:15:48-04:00",
+ "generated": "2026-09-10T14:16:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -53,16 +53,16 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 261,
-   "d1": "2026-10-23",
-   "d2": "2026-10-25",
-   "dep": "2:28PM",
+   "price": 263,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
+   "dep": "11:40AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:00AM",
-   "arr": "8:20PM",
-   "rarr": "1:38PM",
+   "arr": "5:40PM",
+   "rarr": "1:34PM",
    "pct": 61
   },
   "DEN": {
@@ -353,17 +353,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 427,
-   "d1": "2026-11-25",
-   "d2": "2026-12-09",
-   "dep": "8:50PM",
-   "al": "British Airways",
+   "price": 599,
+   "d1": "2026-10-18",
+   "d2": "2026-10-26",
+   "dep": "10:20AM",
+   "al": "AT",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:10AM",
-   "arr": "8:45AM+1",
-   "rarr": "8:00PM",
-   "pct": 53
+   "rdep": "12:10PM",
+   "arr": "12:10AM+1",
+   "rarr": "3:40AM+1",
+   "pct": 33
   },
   "PUJ": {
    "to": "PUJ",

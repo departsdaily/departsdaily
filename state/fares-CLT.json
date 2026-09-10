@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-10T12:14:24-04:00",
+ "generated": "2026-09-10T14:14:32-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 39,
+ "routes_priced": 38,
  "routes_failed": [],
  "fares": {
   "AMS": {
@@ -218,17 +218,17 @@
   "MAD": {
    "to": "MAD",
    "city": "Madrid",
-   "price": 443,
-   "d1": "2026-11-01",
-   "d2": "2026-11-12",
-   "dep": "1:06PM",
+   "price": 464,
+   "d1": "2026-09-30",
+   "d2": "2026-10-13",
+   "dep": "7:50PM",
    "al": "United",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "7:25AM",
-   "arr": "10:44PM",
-   "rarr": "7:50PM",
-   "pct": 50
+   "rdep": "10:05AM",
+   "arr": "5:10AM+1",
+   "rarr": "12:22AM+1",
+   "pct": 47
   },
   "MBJ": {
    "to": "MBJ",
@@ -439,21 +439,6 @@
    "arr": "4:14PM",
    "rarr": "10:17PM",
    "pct": -103
-  },
-  "SAT": {
-   "to": "SAT",
-   "city": "San Antonio",
-   "price": 290,
-   "d1": "2026-10-15",
-   "d2": "2026-10-18",
-   "dep": "9:32AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "8:21PM",
-   "arr": "2:37PM",
-   "rarr": "2:11AM+1",
-   "pct": 47
   },
   "SEA": {
    "to": "SEA",

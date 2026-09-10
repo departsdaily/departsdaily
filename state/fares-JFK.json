@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-10T12:16:05-04:00",
+ "generated": "2026-09-10T14:16:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -8,9 +8,9 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 359,
-   "d1": "2026-10-07",
-   "d2": "2026-10-14",
+   "price": 278,
+   "d1": "2026-10-20",
+   "d2": "2026-10-24",
    "dep": "12:29PM",
    "al": "American",
    "stops": 0,
@@ -18,7 +18,7 @@
    "rdep": "6:15AM",
    "arr": "4:38PM",
    "rarr": "10:02AM",
-   "pct": 41
+   "pct": 55
   },
   "BNA": {
    "to": "BNA",
@@ -83,17 +83,17 @@
   "DFW": {
    "to": "DFW",
    "city": "Dallas",
-   "price": 217,
-   "d1": "2026-11-03",
-   "d2": "2026-11-10",
-   "dep": "12:00PM",
+   "price": 200,
+   "d1": "2026-10-22",
+   "d2": "2026-10-26",
+   "dep": "6:30AM",
    "al": "American",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:29AM",
-   "arr": "4:10PM",
-   "rarr": "1:59PM",
-   "pct": 61
+   "rdep": "5:44PM",
+   "arr": "10:37AM",
+   "rarr": "9:25PM",
+   "pct": 64
   },
   "FLL": {
    "to": "FLL",
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 244,
-   "d1": "2026-09-17",
-   "d2": "2026-09-21",
-   "dep": "7:15AM",
+   "price": 266,
+   "d1": "2026-09-23",
+   "d2": "2026-09-29",
+   "dep": "7:59AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "1:04PM",
-   "arr": "1:49PM",
-   "rarr": "7:28PM",
-   "pct": 74
+   "rdep": "12:37PM",
+   "arr": "2:47PM",
+   "rarr": "7:34PM",
+   "pct": 71
   },
   "MCO": {
    "to": "MCO",
@@ -338,17 +338,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 537,
-   "d1": "2026-10-02",
-   "d2": "2026-10-08",
-   "dep": "6:20PM",
-   "al": "Z0",
-   "stops": 0,
+   "price": 509,
+   "d1": "2026-10-27",
+   "d2": "2026-11-03",
+   "dep": "7:50PM",
+   "al": "Aer Lingus",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "1:05PM",
-   "arr": "1:20AM+1",
-   "rarr": "8:55PM",
-   "pct": 37
+   "rdep": "4:30PM",
+   "arr": "3:40AM+1",
+   "rarr": "1:40AM+1",
+   "pct": 40
   },
   "MBJ": {
    "to": "MBJ",
@@ -413,16 +413,16 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 499,
-   "d1": "2026-10-23",
-   "d2": "2026-10-31",
-   "dep": "12:30AM",
-   "al": "N0",
-   "stops": 0,
+   "price": 508,
+   "d1": "2026-11-11",
+   "d2": "2026-11-16",
+   "dep": "10:05PM",
+   "al": "UX",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:35PM",
-   "arr": "8:30AM",
-   "rarr": "9:55PM",
+   "rdep": "3:55PM",
+   "arr": "7:35AM+1",
+   "rarr": "2:45AM+1",
    "pct": 47
   },
   "SJU": {
