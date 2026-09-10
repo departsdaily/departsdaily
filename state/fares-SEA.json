@@ -1,24 +1,24 @@
 {
  "origin": "SEA",
- "generated": "2026-09-09T18:17:15-04:00",
+ "generated": "2026-09-09T20:16:43-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 20,
  "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 292,
-   "d1": "2026-10-14",
-   "d2": "2026-10-18",
-   "dep": "8:55AM",
-   "al": "Southwest",
+   "price": 331,
+   "d1": "2026-09-25",
+   "d2": "2026-09-28",
+   "dep": "9:45PM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:40AM",
-   "arr": "1:00PM",
-   "rarr": "11:00AM",
-   "pct": 45
+   "rdep": "8:24PM",
+   "arr": "3:17AM+1",
+   "rarr": "1:50AM+1",
+   "pct": 38
   },
   "BOS": {
    "to": "BOS",
@@ -158,17 +158,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 201,
-   "d1": "2026-11-04",
-   "d2": "2026-11-08",
-   "dep": "5:24PM",
-   "al": "American",
+   "price": 256,
+   "d1": "2026-09-30",
+   "d2": "2026-10-03",
+   "dep": "12:16AM",
+   "al": "Alaska",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:49AM",
-   "arr": "9:45PM",
-   "rarr": "11:39AM",
-   "pct": 59
+   "rdep": "7:00AM",
+   "arr": "4:20AM",
+   "rarr": "11:42AM",
+   "pct": 48
   },
   "PHL": {
    "to": "PHL",
@@ -218,7 +218,7 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 1152,
+   "price": 1058,
    "d1": "2027-01-02",
    "d2": "2027-01-06",
    "dep": "2:35PM",
@@ -228,7 +228,7 @@
    "rdep": "9:25PM",
    "arr": "2:50AM+1",
    "rarr": "9:55AM+1",
-   "pct": -31
+   "pct": -20
   },
   "CUN": {
    "to": "CUN",
@@ -260,21 +260,6 @@
    "rarr": "5:45PM",
    "pct": 49
   },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 730,
-   "d1": "2026-12-19",
-   "d2": "2027-01-09",
-   "dep": "1:35PM",
-   "al": "Southwest",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "12:55PM",
-   "arr": "1:25AM+1",
-   "rarr": "10:33PM",
-   "pct": -52
-  },
   "PAR": {
    "to": "PAR",
    "city": "Paris",
@@ -293,17 +278,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 566,
-   "d1": "2026-10-04",
-   "d2": "2026-10-18",
-   "dep": "5:40PM",
-   "al": "DE",
+   "price": 774,
+   "d1": "2026-10-09",
+   "d2": "2026-10-16",
+   "dep": "7:00PM",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "8:10AM",
-   "arr": "5:35AM+1",
-   "rarr": "8:25PM",
-   "pct": 40
+   "rdep": "3:45PM",
+   "arr": "7:10AM+1",
+   "rarr": "4:35AM+1",
+   "pct": 19
   },
   "SJU": {
    "to": "SJU",

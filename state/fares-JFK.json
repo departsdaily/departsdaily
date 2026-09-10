@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-09T18:16:43-04:00",
+ "generated": "2026-09-09T20:16:10-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -165,9 +165,9 @@
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:05AM",
+   "rdep": "4:04PM",
    "arr": "8:31PM",
-   "rarr": "2:22PM",
+   "rarr": "8:30PM",
    "pct": 72
   },
   "MIA": {
@@ -323,17 +323,17 @@
   "GCM": {
    "to": "GCM",
    "city": "Grand Cayman",
-   "price": 493,
+   "price": 445,
    "d1": "2026-12-13",
    "d2": "2026-12-17",
    "dep": "7:29AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:35PM",
+   "rdep": "3:30PM",
    "arr": "12:28PM",
-   "rarr": "4:19PM",
-   "pct": 23
+   "rarr": "8:47PM",
+   "pct": 30
   },
   "LON": {
    "to": "LON",
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 466,
-   "d1": "2026-10-12",
-   "d2": "2026-10-17",
-   "dep": "10:05PM",
+   "price": 554,
+   "d1": "2026-11-12",
+   "d2": "2026-11-16",
+   "dep": "10:00PM",
    "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:20AM",
-   "arr": "7:40AM+1",
-   "rarr": "9:00PM",
-   "pct": 48
+   "rdep": "12:35PM",
+   "arr": "7:30AM+1",
+   "rarr": "11:40PM",
+   "pct": 38
   },
   "PUJ": {
    "to": "PUJ",
@@ -413,17 +413,17 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 425,
-   "d1": "2026-10-30",
-   "d2": "2026-11-14",
-   "dep": "7:05PM",
+   "price": 499,
+   "d1": "2026-10-23",
+   "d2": "2026-10-31",
+   "dep": "12:30AM",
    "al": "N0",
    "stops": 0,
    "xfer": 0,
    "rdep": "12:35PM",
-   "arr": "2:55AM+1",
+   "arr": "8:30AM",
    "rarr": "9:55PM",
-   "pct": 55
+   "pct": 47
   },
   "SJU": {
    "to": "SJU",

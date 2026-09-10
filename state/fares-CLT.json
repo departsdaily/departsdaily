@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-09T18:15:03-04:00",
+ "generated": "2026-09-09T20:14:25-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -38,7 +38,7 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 576,
+   "price": 631,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "dep": "6:20AM",
@@ -48,7 +48,7 @@
    "rdep": "1:55PM",
    "arr": "11:09AM",
    "rarr": "7:09PM",
-   "pct": 7
+   "pct": -2
   },
   "BCN": {
    "to": "BCN",
@@ -203,16 +203,16 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 240,
-   "d1": "2026-09-16",
-   "d2": "2026-09-23",
-   "dep": "9:40PM",
+   "price": 241,
+   "d1": "2026-10-30",
+   "d2": "2026-11-03",
+   "dep": "4:47PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:59AM",
-   "arr": "4:51AM+1",
-   "rarr": "6:59AM",
+   "rdep": "12:03AM",
+   "arr": "11:18PM",
+   "rarr": "5:57AM",
    "pct": 66
   },
   "MAD": {
@@ -221,12 +221,12 @@
    "price": 391,
    "d1": "2026-09-30",
    "d2": "2026-10-13",
-   "dep": "9:15AM",
+   "dep": "3:40PM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:00AM",
-   "arr": "6:41PM",
+   "arr": "1:06AM+1",
    "rarr": "7:10PM",
    "pct": 56
   },

@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-09T18:15:37-04:00",
+ "generated": "2026-09-09T20:15:01-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -248,17 +248,17 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 319,
-   "d1": "2026-11-23",
-   "d2": "2026-11-26",
-   "dep": "6:00AM",
-   "al": "Alaska",
-   "stops": 0,
+   "price": 252,
+   "d1": "2026-10-04",
+   "d2": "2026-10-06",
+   "dep": "8:55PM",
+   "al": "Frontier",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:40AM",
-   "arr": "10:41AM",
-   "rarr": "3:56PM",
-   "pct": 35
+   "rdep": "10:57AM",
+   "arr": "4:07AM+1",
+   "rarr": "5:32PM",
+   "pct": 49
   },
   "SFO": {
    "to": "SFO",
