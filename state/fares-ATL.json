@@ -1,24 +1,24 @@
 {
  "origin": "ATL",
- "generated": "2026-09-09T22:14:47-04:00",
+ "generated": "2026-09-10T00:14:49-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "BOS": {
    "to": "BOS",
    "city": "Boston",
-   "price": 179,
-   "d1": "2026-09-18",
-   "d2": "2026-09-20",
-   "dep": "3:30PM",
+   "price": 151,
+   "d1": "2026-11-05",
+   "d2": "2026-11-10",
+   "dep": "9:01AM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "12:54PM",
-   "arr": "8:15PM",
-   "rarr": "4:00PM",
-   "pct": 66
+   "rdep": "12:15PM",
+   "arr": "11:44AM",
+   "rarr": "3:35PM",
+   "pct": 71
   },
   "DCA": {
    "to": "DCA",
@@ -215,6 +215,21 @@
    "rarr": "11:06AM",
    "pct": 86
   },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 230,
+   "d1": "2026-12-09",
+   "d2": "2026-12-14",
+   "dep": "4:01PM",
+   "al": "Alaska",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "11:59PM",
+   "arr": "9:32PM",
+   "rarr": "4:51AM+1",
+   "pct": 65
+  },
   "SFO": {
    "to": "SFO",
    "city": "San Francisco",
@@ -248,7 +263,7 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 606,
+   "price": 547,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "dep": "8:59PM",
@@ -257,8 +272,8 @@
    "xfer": 0,
    "rdep": "11:50AM",
    "arr": "2:32AM+1",
-   "rarr": "7:46PM",
-   "pct": 2
+   "rarr": "7:33PM",
+   "pct": 12
   },
   "CUN": {
    "to": "CUN",

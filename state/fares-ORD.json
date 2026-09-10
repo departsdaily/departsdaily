@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-09T22:15:04-04:00",
+ "generated": "2026-09-10T00:15:08-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 145,
-   "d1": "2026-09-25",
-   "d2": "2026-09-27",
-   "dep": "8:55PM",
+   "price": 178,
+   "d1": "2026-10-18",
+   "d2": "2026-10-20",
+   "dep": "3:30PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:53AM",
-   "arr": "1:05AM+1",
-   "rarr": "6:51AM",
-   "pct": 69
+   "rdep": "2:55PM",
+   "arr": "7:46PM",
+   "rarr": "8:33PM",
+   "pct": 62
   },
   "LAX": {
    "to": "LAX",
@@ -278,17 +278,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 164,
-   "d1": "2026-09-29",
-   "d2": "2026-10-06",
-   "dep": "6:20AM",
+   "price": 180,
+   "d1": "2026-10-05",
+   "d2": "2026-10-14",
+   "dep": "10:26AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:15AM",
-   "arr": "10:02AM",
-   "rarr": "11:17AM",
-   "pct": 59
+   "rdep": "7:08AM",
+   "arr": "2:10PM",
+   "rarr": "11:23AM",
+   "pct": 55
   },
   "AMS": {
    "to": "AMS",
@@ -368,9 +368,9 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 484,
-   "d1": "2026-12-11",
-   "d2": "2026-12-17",
+   "price": 578,
+   "d1": "2026-12-10",
+   "d2": "2026-12-19",
    "dep": "6:30PM",
    "al": "Icelandair",
    "stops": 1,
@@ -378,7 +378,7 @@
    "rdep": "1:00PM",
    "arr": "4:15AM+1",
    "rarr": "11:30PM",
-   "pct": 46
+   "pct": 36
   },
   "PUJ": {
    "to": "PUJ",

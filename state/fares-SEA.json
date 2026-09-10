@@ -1,6 +1,6 @@
 {
  "origin": "SEA",
- "generated": "2026-09-09T22:16:52-04:00",
+ "generated": "2026-09-10T00:17:00-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 20,
  "routes_failed": [],
@@ -83,7 +83,7 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 66,
+   "price": 71,
    "d1": "2026-10-31",
    "d2": "2026-11-04",
    "dep": "8:09PM",
@@ -93,7 +93,7 @@
    "rdep": "3:41PM",
    "arr": "10:59PM",
    "rarr": "6:54PM",
-   "pct": 85
+   "pct": 83
   },
   "MCO": {
    "to": "MCO",
@@ -293,17 +293,17 @@
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 631,
-   "d1": "2026-09-20",
-   "d2": "2026-09-27",
-   "dep": "6:45PM",
-   "al": "Southwest",
-   "stops": 2,
+   "price": 320,
+   "d1": "2026-11-08",
+   "d2": "2026-11-12",
+   "dep": "9:45PM",
+   "al": "American",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "9:25PM",
-   "arr": "4:00AM+1",
-   "rarr": "7:25AM+1",
-   "pct": -50
+   "rdep": "2:29PM",
+   "arr": "6:22AM+1",
+   "rarr": "12:24AM+1",
+   "pct": 24
   }
  }
 }
