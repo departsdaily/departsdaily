@@ -18,7 +18,15 @@
  ],
  "stories": [
   {
-   "file": "story_1_SJO.png",
+   "file": "story_1_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 207,
+   "disc": 37,
+   "section": "cheapest"
+  },
+  {
+   "file": "story_2_SJO.png",
    "to": "SJO",
    "city": "San Jos\u00e9, Costa Rica",
    "price": 448,
@@ -26,15 +34,23 @@
    "section": "cheapest"
   },
   {
-   "file": "story_2_LAX.png",
+   "file": "story_3_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 240,
-   "disc": 22,
+   "price": 241,
+   "disc": 26,
    "section": "extra_weekend"
   },
   {
-   "file": "story_3_LAX.png",
+   "file": "story_4_LAS.png",
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 272,
+   "disc": 20,
+   "section": "weekend"
+  },
+  {
+   "file": "story_5_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 246,
@@ -42,7 +58,7 @@
    "section": "weekend"
   },
   {
-   "file": "story_4_LAX.png",
+   "file": "story_6_LAX.png",
    "to": "LAX",
    "city": "Los Angeles",
    "price": 248,
@@ -50,35 +66,19 @@
    "section": "weekish"
   },
   {
-   "file": "story_5_LAX.png",
-   "to": "LAX",
-   "city": "Los Angeles",
-   "price": 249,
-   "disc": 19,
-   "section": "cheapest"
-  },
-  {
-   "file": "story_6_LAS.png",
-   "to": "LAS",
-   "city": "Las Vegas",
-   "price": 300,
-   "disc": 17,
-   "section": "weekend"
-  },
-  {
-   "file": "story_7_SFO.png",
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 308,
-   "disc": 18,
-   "section": "extra_weekend"
-  },
-  {
-   "file": "story_8_PTY.png",
+   "file": "story_7_PTY.png",
    "to": "PTY",
    "city": "Panama City",
    "price": 312,
    "disc": 48,
+   "section": "weekish"
+  },
+  {
+   "file": "story_8_PDX.png",
+   "to": "PDX",
+   "city": "Portland, OR",
+   "price": 202,
+   "disc": 47,
    "section": "weekish"
   }
  ]
