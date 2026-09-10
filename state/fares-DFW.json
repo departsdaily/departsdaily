@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-10T06:15:30-04:00",
+ "generated": "2026-09-10T08:15:24-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
+ "routes_priced": 25,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -259,6 +259,21 @@
    "arr": "1:40AM+1",
    "rarr": "6:50PM",
    "pct": -10
+  },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 398,
+   "d1": "2026-12-10",
+   "d2": "2026-12-14",
+   "dep": "7:00AM",
+   "al": "Air Canada",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:25PM",
+   "arr": "3:20PM",
+   "rarr": "2:30AM+1",
+   "pct": 36
   },
   "CUN": {
    "to": "CUN",
