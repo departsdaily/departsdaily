@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-10T04:16:16-04:00",
+ "generated": "2026-09-10T06:16:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -248,7 +248,7 @@
   "SEA": {
    "to": "SEA",
    "city": "Seattle",
-   "price": 76,
+   "price": 79,
    "d1": "2026-10-31",
    "d2": "2026-11-03",
    "dep": "3:41PM",
@@ -323,17 +323,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 660,
-   "d1": "2026-09-27",
-   "d2": "2026-10-03",
-   "dep": "10:20AM",
-   "al": "AT",
+   "price": 424,
+   "d1": "2026-09-30",
+   "d2": "2026-10-07",
+   "dep": "5:00AM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:10PM",
-   "arr": "12:35AM+1",
-   "rarr": "9:50AM+1",
-   "pct": 22
+   "rdep": "3:05PM",
+   "arr": "4:29PM",
+   "rarr": "4:02AM+1",
+   "pct": 50
   },
   "NAS": {
    "to": "NAS",
