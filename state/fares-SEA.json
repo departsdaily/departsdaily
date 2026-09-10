@@ -1,9 +1,12 @@
 {
  "origin": "SEA",
- "generated": "2026-09-10T00:17:00-04:00",
+ "generated": "2026-09-10T02:17:02-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 20,
- "routes_failed": [],
+ "routes_priced": 19,
+ "routes_failed": [
+  "AMS",
+  "MCO"
+ ],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -65,6 +68,21 @@
    "rarr": "10:39PM",
    "pct": 39
   },
+  "HOU": {
+   "to": "HOU",
+   "city": "Houston",
+   "price": 346,
+   "d1": "2026-11-20",
+   "d2": "2026-11-23",
+   "dep": "9:53PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:44PM",
+   "arr": "4:01AM+1",
+   "rarr": "4:05AM+1",
+   "pct": 41
+  },
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
@@ -83,32 +101,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 71,
-   "d1": "2026-10-31",
-   "d2": "2026-11-04",
-   "dep": "8:09PM",
+   "price": 70,
+   "d1": "2026-10-06",
+   "d2": "2026-10-09",
+   "dep": "8:15PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "3:41PM",
-   "arr": "10:59PM",
-   "rarr": "6:54PM",
-   "pct": 83
-  },
-  "MCO": {
-   "to": "MCO",
-   "city": "Orlando",
-   "price": 274,
-   "d1": "2026-10-15",
-   "d2": "2026-10-23",
-   "dep": "4:37PM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:22PM",
-   "arr": "12:19AM+1",
-   "rarr": "1:50AM+1",
-   "pct": 59
+   "rdep": "5:15PM",
+   "arr": "11:04PM",
+   "rarr": "8:11PM",
+   "pct": 84
   },
   "MIA": {
    "to": "MIA",
@@ -214,21 +217,6 @@
    "arr": "10:59PM",
    "rarr": "9:09AM",
    "pct": 77
-  },
-  "AMS": {
-   "to": "AMS",
-   "city": "Amsterdam",
-   "price": 1058,
-   "d1": "2027-01-02",
-   "d2": "2027-01-06",
-   "dep": "2:35PM",
-   "al": "Icelandair",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "9:25PM",
-   "arr": "2:50AM+1",
-   "rarr": "9:55AM+1",
-   "pct": -20
   },
   "CUN": {
    "to": "CUN",

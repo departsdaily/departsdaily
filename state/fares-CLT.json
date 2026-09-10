@@ -1,9 +1,15 @@
 {
  "origin": "CLT",
- "generated": "2026-09-10T00:14:30-04:00",
+ "generated": "2026-09-10T02:14:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
- "routes_failed": [],
+ "routes_priced": 40,
+ "routes_failed": [
+  "CTG",
+  "DUB",
+  "ELH",
+  "JAC",
+  "NYC"
+ ],
  "fares": {
   "AMS": {
    "to": "AMS",
@@ -188,17 +194,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 300,
-   "d1": "2026-11-05",
-   "d2": "2026-11-08",
-   "dep": "2:46PM",
+   "price": 272,
+   "d1": "2026-10-09",
+   "d2": "2026-10-12",
+   "dep": "11:56AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:38AM",
-   "arr": "8:58PM",
-   "rarr": "5:58AM",
-   "pct": 59
+   "rdep": "10:15PM",
+   "arr": "6:19PM",
+   "rarr": "4:38AM+1",
+   "pct": 63
   },
   "LAX": {
    "to": "LAX",
@@ -319,21 +325,6 @@
    "arr": "8:49PM",
    "rarr": "5:42PM",
    "pct": -2
-  },
-  "NYC": {
-   "to": "NYC",
-   "city": "New York City",
-   "price": 145,
-   "d1": "2026-10-02",
-   "d2": "2026-10-05",
-   "dep": "9:40PM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "6:43PM",
-   "arr": "2:12AM+1",
-   "rarr": "8:55PM",
-   "pct": 65
   },
   "ORD": {
    "to": "ORD",
