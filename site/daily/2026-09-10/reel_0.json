@@ -1,0 +1,88 @@
+{
+ "origin": "CLT",
+ "date": "2026-09-10",
+ "slot": 0,
+ "shape": "board",
+ "label": "THE WHOLE BOARD",
+ "caption_lead": "Today's whole board, out of CLT.",
+ "file": "reel_0.mp4",
+ "seconds": 13.05,
+ "size_mb": 0.86,
+ "fps": 30,
+ "audio": "window-seat.mp3",
+ "audio_start": 0.0,
+ "plan_shape": "urgent",
+ "plan_angle": "Long weekend shaped, leaving inside three weeks. Short window, real prices.",
+ "featured": [
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 207,
+   "disc": 37,
+   "baseline": 327,
+   "nights": 2,
+   "d1": "2026-10-25",
+   "d2": "2026-10-27"
+  },
+  {
+   "to": "SJO",
+   "city": "San Jos\u00e9, Costa Rica",
+   "price": 448,
+   "disc": 35,
+   "baseline": 690,
+   "nights": 7,
+   "d1": "2026-12-01",
+   "d2": "2026-12-08"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 241,
+   "disc": 26,
+   "baseline": 327,
+   "nights": 4,
+   "d1": "2026-10-30",
+   "d2": "2026-11-03"
+  },
+  {
+   "to": "LAS",
+   "city": "Las Vegas",
+   "price": 272,
+   "disc": 20,
+   "baseline": 338,
+   "nights": 3,
+   "d1": "2026-10-09",
+   "d2": "2026-10-12"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 246,
+   "disc": 20,
+   "baseline": 308,
+   "nights": 3,
+   "d1": "2026-09-25",
+   "d2": "2026-09-28"
+  },
+  {
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 248,
+   "disc": 19,
+   "baseline": 308,
+   "nights": 7,
+   "d1": "2026-09-19",
+   "d2": "2026-09-26"
+  },
+  {
+   "to": "PTY",
+   "city": "Panama City",
+   "price": 312,
+   "disc": 48,
+   "baseline": 601,
+   "nights": 10,
+   "d1": "2027-02-04",
+   "d2": "2027-02-14"
+  }
+ ]
+}
