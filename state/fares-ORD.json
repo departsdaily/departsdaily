@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-10T16:15:09-04:00",
+ "generated": "2026-09-10T18:15:11-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -398,9 +398,9 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 559,
-   "d1": "2026-12-14",
-   "d2": "2026-12-21",
+   "price": 526,
+   "d1": "2026-11-11",
+   "d2": "2026-11-25",
    "dep": "6:30PM",
    "al": "Icelandair",
    "stops": 1,
@@ -408,7 +408,7 @@
    "rdep": "11:25AM",
    "arr": "5:25AM+1",
    "rarr": "11:20PM",
-   "pct": 41
+   "pct": 45
   },
   "SJU": {
    "to": "SJU",

@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-09-10T16:17:00-04:00",
+ "generated": "2026-09-10T18:16:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 21,
+ "routes_priced": 22,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -34,6 +34,21 @@
    "arr": "8:07PM",
    "rarr": "1:37AM+1",
    "pct": 24
+  },
+  "DCA": {
+   "to": "DCA",
+   "city": "Washington DC",
+   "price": 351,
+   "d1": "2026-10-02",
+   "d2": "2026-10-05",
+   "dep": "4:27PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:00PM",
+   "arr": "10:47PM",
+   "rarr": "12:53AM+1",
+   "pct": 47
   },
   "DEN": {
    "to": "DEN",
@@ -83,17 +98,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 146,
+   "price": 167,
    "d1": "2026-10-08",
    "d2": "2026-10-12",
-   "dep": "6:55AM",
+   "dep": "12:25PM",
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
    "rdep": "10:15PM",
-   "arr": "10:40AM",
+   "arr": "4:10PM",
    "rarr": "1:00AM+1",
-   "pct": 62
+   "pct": 56
   },
   "LAX": {
    "to": "LAX",
@@ -248,17 +263,17 @@
   "CUN": {
    "to": "CUN",
    "city": "Canc\u00fan",
-   "price": 564,
-   "d1": "2026-09-26",
-   "d2": "2026-10-10",
-   "dep": "4:27PM",
-   "al": "Frontier",
-   "stops": 2,
+   "price": 906,
+   "d1": "2026-12-21",
+   "d2": "2026-12-27",
+   "dep": "9:50PM",
+   "al": "Southwest",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:25AM",
-   "arr": "1:11AM+1",
-   "rarr": "2:36PM",
-   "pct": -8
+   "rdep": "8:50AM",
+   "arr": "4:40AM+1",
+   "rarr": "4:55PM",
+   "pct": -74
   },
   "LON": {
    "to": "LON",
