@@ -1,8 +1,8 @@
 {
  "origin": "DFW",
- "generated": "2026-09-10T14:15:30-04:00",
+ "generated": "2026-09-10T16:02:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 25,
+ "routes_priced": 26,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -64,6 +64,21 @@
    "arr": "4:30PM",
    "rarr": "1:10PM",
    "pct": 44
+  },
+  "DEN": {
+   "to": "DEN",
+   "city": "Denver",
+   "price": 87,
+   "d1": "2026-10-24",
+   "d2": "2026-10-26",
+   "dep": "7:00AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "6:35AM",
+   "arr": "9:19AM",
+   "rarr": "8:37AM",
+   "pct": 77
   },
   "FLL": {
    "to": "FLL",

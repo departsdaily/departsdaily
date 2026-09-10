@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-10T14:14:32-04:00",
+ "generated": "2026-09-10T16:01:40-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 38,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "AMS": {
@@ -38,17 +38,17 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 631,
+   "price": 650,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "dep": "6:20AM",
    "al": "JetBlue",
-   "stops": 1,
+   "stops": 2,
    "xfer": 0,
-   "rdep": "1:55PM",
+   "rdep": "11:50AM",
    "arr": "11:09AM",
-   "rarr": "7:09PM",
-   "pct": -2
+   "rarr": "9:47PM",
+   "pct": -5
   },
   "BCN": {
    "to": "BCN",
@@ -394,6 +394,21 @@
    "arr": "4:05AM+1",
    "rarr": "5:00PM",
    "pct": 3
+  },
+  "PTY": {
+   "to": "PTY",
+   "city": "Panama City",
+   "price": 744,
+   "d1": "2026-10-12",
+   "d2": "2026-10-19",
+   "dep": "7:00AM",
+   "al": "United",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "9:45AM",
+   "arr": "2:08PM",
+   "rarr": "5:11PM",
+   "pct": -20
   },
   "PUJ": {
    "to": "PUJ",
