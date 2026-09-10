@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-10T02:15:13-04:00",
+ "generated": "2026-09-10T04:15:16-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "PHX": {
    "to": "PHX",
    "city": "Phoenix",
-   "price": 173,
-   "d1": "2026-10-19",
-   "d2": "2026-10-22",
+   "price": 187,
+   "d1": "2026-10-23",
+   "d2": "2026-10-26",
    "dep": "4:20PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "7:32PM",
+   "rdep": "7:38PM",
    "arr": "8:27PM",
-   "rarr": "10:59PM",
-   "pct": 64
+   "rarr": "12:37AM+1",
+   "pct": 61
   },
   "SEA": {
    "to": "SEA",

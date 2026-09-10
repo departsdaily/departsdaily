@@ -1,12 +1,9 @@
 {
  "origin": "SEA",
- "generated": "2026-09-10T02:17:02-04:00",
+ "generated": "2026-09-10T04:17:14-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 19,
- "routes_failed": [
-  "AMS",
-  "MCO"
- ],
+ "routes_priced": 21,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -113,6 +110,21 @@
    "rarr": "8:11PM",
    "pct": 84
   },
+  "MCO": {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 274,
+   "d1": "2026-10-15",
+   "d2": "2026-10-23",
+   "dep": "4:37PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:22PM",
+   "arr": "12:19AM+1",
+   "rarr": "1:50AM+1",
+   "pct": 59
+  },
   "MIA": {
    "to": "MIA",
    "city": "Miami",
@@ -131,17 +143,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 441,
-   "d1": "2026-09-25",
-   "d2": "2026-09-29",
-   "dep": "9:45PM",
+   "price": 364,
+   "d1": "2026-11-11",
+   "d2": "2026-11-15",
+   "dep": "12:14PM",
    "al": "Frontier",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:17PM",
-   "arr": "5:09AM+1",
-   "rarr": "1:27AM+1",
-   "pct": 21
+   "rdep": "10:45AM",
+   "arr": "6:31PM",
+   "rarr": "4:57PM",
+   "pct": 35
   },
   "NYC": {
    "to": "NYC",
@@ -217,6 +229,21 @@
    "arr": "10:59PM",
    "rarr": "9:09AM",
    "pct": 77
+  },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 1058,
+   "d1": "2027-01-02",
+   "d2": "2027-01-06",
+   "dep": "2:35PM",
+   "al": "Icelandair",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "9:25PM",
+   "arr": "2:50AM+1",
+   "rarr": "9:55AM+1",
+   "pct": -20
   },
   "CUN": {
    "to": "CUN",

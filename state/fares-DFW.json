@@ -1,11 +1,9 @@
 {
  "origin": "DFW",
- "generated": "2026-09-10T02:15:31-04:00",
+ "generated": "2026-09-10T04:15:35-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
- "routes_failed": [
-  "AMS"
- ],
+ "routes_priced": 24,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -246,6 +244,21 @@
    "arr": "1:05AM+1",
    "rarr": "10:37PM",
    "pct": 69
+  },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 969,
+   "d1": "2026-10-19",
+   "d2": "2026-10-25",
+   "dep": "3:05PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "1:40AM+1",
+   "rarr": "6:50PM",
+   "pct": -10
   },
   "CUN": {
    "to": "CUN",

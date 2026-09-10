@@ -1,12 +1,9 @@
 {
  "origin": "LAX",
- "generated": "2026-09-10T02:16:08-04:00",
+ "generated": "2026-09-10T04:16:16-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
- "routes_failed": [
-  "DFW",
-  "MSY"
- ],
+ "routes_priced": 27,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -83,19 +80,34 @@
    "rarr": "1:23AM+1",
    "pct": 61
   },
+  "DFW": {
+   "to": "DFW",
+   "city": "Dallas",
+   "price": 171,
+   "d1": "2026-10-01",
+   "d2": "2026-10-04",
+   "dep": "10:45AM",
+   "al": "Frontier",
+   "stops": 0,
+   "xfer": 0,
+   "rdep": "8:25AM",
+   "arr": "1:50PM",
+   "rarr": "12:00PM",
+   "pct": 67
+  },
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 250,
-   "d1": "2026-09-26",
-   "d2": "2026-10-03",
-   "dep": "11:50PM",
+   "price": 253,
+   "d1": "2026-10-21",
+   "d2": "2026-10-28",
+   "dep": "12:21AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:37PM",
-   "arr": "6:00AM+1",
-   "rarr": "1:33AM+1",
+   "rdep": "6:39AM",
+   "arr": "7:42AM",
+   "rarr": "2:09PM",
    "pct": 66
   },
   "HOU": {
@@ -157,6 +169,21 @@
    "arr": "8:49PM",
    "rarr": "12:19PM",
    "pct": 80
+  },
+  "MSY": {
+   "to": "MSY",
+   "city": "New Orleans",
+   "price": 251,
+   "d1": "2026-09-30",
+   "d2": "2026-10-04",
+   "dep": "10:30AM",
+   "al": "Southwest",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "5:10AM",
+   "arr": "2:15PM",
+   "rarr": "10:05AM",
+   "pct": 53
   },
   "NYC": {
    "to": "NYC",
@@ -307,21 +334,6 @@
    "arr": "12:35AM+1",
    "rarr": "9:50AM+1",
    "pct": 22
-  },
-  "MBJ": {
-   "to": "MBJ",
-   "city": "Montego Bay",
-   "price": 461,
-   "d1": "2026-11-09",
-   "d2": "2026-11-18",
-   "dep": "8:00PM",
-   "al": "Southwest",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "1:50PM",
-   "arr": "3:15AM+1",
-   "rarr": "9:55PM",
-   "pct": 15
   },
   "NAS": {
    "to": "NAS",

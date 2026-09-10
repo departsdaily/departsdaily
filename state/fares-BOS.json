@@ -1,12 +1,9 @@
 {
  "origin": "BOS",
- "generated": "2026-09-10T02:17:19-04:00",
+ "generated": "2026-09-10T04:17:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 23,
- "routes_failed": [
-  "AUA",
-  "MCO"
- ],
+ "routes_priced": 25,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -112,6 +109,21 @@
    "arr": "2:45AM+1",
    "rarr": "5:30AM+1",
    "pct": 52
+  },
+  "MCO": {
+   "to": "MCO",
+   "city": "Orlando",
+   "price": 145,
+   "d1": "2026-10-23",
+   "d2": "2026-10-25",
+   "dep": "12:57PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:45AM",
+   "arr": "5:43PM",
+   "rarr": "11:02AM",
+   "pct": 63
   },
   "MIA": {
    "to": "MIA",
@@ -247,6 +259,21 @@
    "arr": "5:25AM+1",
    "rarr": "11:15PM",
    "pct": 33
+  },
+  "AUA": {
+   "to": "AUA",
+   "city": "Aruba",
+   "price": 412,
+   "d1": "2026-11-12",
+   "d2": "2026-11-17",
+   "dep": "4:56PM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "5:59PM",
+   "arr": "11:45PM",
+   "rarr": "1:39AM+1",
+   "pct": 34
   },
   "CUN": {
    "to": "CUN",

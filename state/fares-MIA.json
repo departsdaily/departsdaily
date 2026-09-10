@@ -1,11 +1,9 @@
 {
  "origin": "MIA",
- "generated": "2026-09-10T02:16:44-04:00",
+ "generated": "2026-09-10T04:16:55-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 24,
- "routes_failed": [
-  "SEA"
- ],
+ "routes_priced": 25,
+ "routes_failed": [],
  "fares": {
   "AUS": {
    "to": "AUS",
@@ -186,6 +184,21 @@
    "arr": "12:23PM",
    "rarr": "10:15AM",
    "pct": 51
+  },
+  "SEA": {
+   "to": "SEA",
+   "city": "Seattle",
+   "price": 333,
+   "d1": "2026-12-08",
+   "d2": "2026-12-12",
+   "dep": "8:14PM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "12:38PM",
+   "arr": "2:59AM+1",
+   "rarr": "7:57PM",
+   "pct": 47
   },
   "SFO": {
    "to": "SFO",

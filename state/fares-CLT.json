@@ -1,15 +1,9 @@
 {
  "origin": "CLT",
- "generated": "2026-09-10T02:14:34-04:00",
+ "generated": "2026-09-10T04:14:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 40,
- "routes_failed": [
-  "CTG",
-  "DUB",
-  "ELH",
-  "JAC",
-  "NYC"
- ],
+ "routes_failed": [],
  "fares": {
   "AMS": {
    "to": "AMS",
@@ -311,20 +305,20 @@
    "rarr": "5:04PM",
    "pct": 54
   },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 490,
-   "d1": "2026-10-12",
-   "d2": "2026-10-19",
-   "dep": "5:38PM",
+  "NYC": {
+   "to": "NYC",
+   "city": "New York City",
+   "price": 156,
+   "d1": "2026-10-03",
+   "d2": "2026-10-06",
+   "dep": "4:01PM",
    "al": "Frontier",
-   "stops": 1,
+   "stops": 0,
    "xfer": 0,
-   "rdep": "2:25PM",
-   "arr": "8:49PM",
-   "rarr": "5:42PM",
-   "pct": -2
+   "rdep": "6:43PM",
+   "arr": "5:58PM",
+   "rarr": "8:55PM",
+   "pct": 62
   },
   "ORD": {
    "to": "ORD",
