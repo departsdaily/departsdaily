@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-11T10:16:02-04:00",
+ "generated": "2026-09-11T12:16:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 969,
-   "d1": "2026-10-19",
+   "price": 587,
+   "d1": "2026-10-16",
    "d2": "2026-10-25",
-   "dep": "3:05PM",
-   "al": "American",
+   "dep": "12:25PM",
+   "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:00AM",
-   "arr": "1:40AM+1",
-   "rarr": "6:50PM",
-   "pct": -10
+   "rdep": "7:30AM",
+   "arr": "10:53PM",
+   "rarr": "7:50PM",
+   "pct": 33
   },
   "AUA": {
    "to": "AUA",
