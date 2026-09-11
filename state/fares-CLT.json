@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-11T08:15:13-04:00",
+ "generated": "2026-09-11T10:15:08-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 38,
+ "routes_priced": 39,
  "routes_failed": [],
  "fares": {
   "AMS": {
@@ -278,17 +278,17 @@
   "MSY": {
    "to": "MSY",
    "city": "New Orleans",
-   "price": 220,
-   "d1": "2026-09-19",
-   "d2": "2026-09-25",
-   "dep": "9:32AM",
+   "price": 238,
+   "d1": "2026-10-11",
+   "d2": "2026-10-16",
+   "dep": "9:42PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "10:48AM",
-   "arr": "1:31PM",
-   "rarr": "5:04PM",
-   "pct": 54
+   "rdep": "9:05PM",
+   "arr": "1:37AM+1",
+   "rarr": "12:55AM+1",
+   "pct": 50
   },
   "NYC": {
    "to": "NYC",
@@ -514,6 +514,21 @@
    "arr": "5:15PM",
    "rarr": "1:00PM",
    "pct": 0
+  },
+  "STT": {
+   "to": "STT",
+   "city": "St. Thomas",
+   "price": 922,
+   "d1": "2026-12-24",
+   "d2": "2026-12-31",
+   "dep": "5:00AM",
+   "al": "American",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "6:29PM",
+   "arr": "10:01AM",
+   "rarr": "11:58PM",
+   "pct": -65
   },
   "TPA": {
    "to": "TPA",
