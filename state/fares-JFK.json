@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-10T22:16:32-04:00",
+ "generated": "2026-09-11T00:16:06-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 278,
+   "price": 315,
    "d1": "2026-10-20",
    "d2": "2026-10-24",
-   "dep": "12:29PM",
-   "al": "American",
-   "stops": 0,
+   "dep": "11:29AM",
+   "al": "JetBlue",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:15AM",
-   "arr": "4:38PM",
-   "rarr": "10:02AM",
-   "pct": 55
+   "rdep": "1:00PM",
+   "arr": "5:57PM",
+   "rarr": "6:40PM",
+   "pct": 49
   },
   "BNA": {
    "to": "BNA",
@@ -143,17 +143,17 @@
   "LAX": {
    "to": "LAX",
    "city": "Los Angeles",
-   "price": 266,
-   "d1": "2026-09-23",
-   "d2": "2026-09-29",
-   "dep": "7:59AM",
+   "price": 244,
+   "d1": "2026-09-17",
+   "d2": "2026-09-21",
+   "dep": "7:15AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:37PM",
-   "arr": "2:47PM",
-   "rarr": "7:34PM",
-   "pct": 71
+   "rdep": "1:04PM",
+   "arr": "1:49PM",
+   "rarr": "7:28PM",
+   "pct": 74
   },
   "MCO": {
    "to": "MCO",
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 551,
-   "d1": "2026-11-26",
-   "d2": "2026-12-06",
-   "dep": "7:25PM",
+   "price": 529,
+   "d1": "2026-12-02",
+   "d2": "2026-12-09",
+   "dep": "5:00PM",
    "al": "Aer Lingus",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:30AM",
-   "arr": "3:35AM+1",
-   "rarr": "6:54PM",
-   "pct": 39
+   "rdep": "9:20PM",
+   "arr": "1:05AM+1",
+   "rarr": "6:39AM+1",
+   "pct": 41
   },
   "PUJ": {
    "to": "PUJ",

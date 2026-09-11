@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-10T22:17:29-04:00",
+ "generated": "2026-09-11T00:16:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 540,
-   "d1": "2026-10-28",
-   "d2": "2026-11-09",
-   "dep": "10:20PM",
-   "al": "Aer Lingus",
+   "price": 514,
+   "d1": "2027-01-09",
+   "d2": "2027-01-17",
+   "dep": "7:50PM",
+   "al": "Icelandair",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:25PM",
-   "arr": "6:00AM+1",
-   "rarr": "4:15AM+1",
-   "pct": 39
+   "rdep": "12:55PM",
+   "arr": "4:20AM+1",
+   "rarr": "10:10PM",
+   "pct": 42
   },
   "AUA": {
    "to": "AUA",
