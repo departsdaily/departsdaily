@@ -4,19 +4,19 @@
    Rewritten every hour by scripts/update_deals.py from
    live Travelpayouts/Aviasales fare data. Every fare below was found
    in a real search; departure times come from the fare itself.
-   Generated 2026-09-11 06:13 EDT
-   Rebuilt this run: CLT (8), ATL (8), ORD (8), DFW (8), DEN (8), LAX (8), JFK (8), MIA (8), SEA (8), BOS (8)
-   Carried forward:  none
+   Generated 2026-09-11 06:53 EDT
+   Rebuilt this run: CLT (8)
+   Carried forward:  ATL, ORD, DFW, DEN, LAX, JFK, MIA, SEA, BOS
    ===================================================================== */
 const BOARD={
- updated:"2026-09-11T06:13:57-04:00",
+ updated:"2026-09-11T06:53:10-04:00",
 };
 const DEALS={CLT:[
  {to:"MCO",city:"Orlando",price:70,d1:"2026-11-11",d2:"2026-11-14",dep:"6:05AM",al:"Frontier",stops:0,rdep:"3:14PM",arr:"7:56AM",rarr:"5:05PM",exp:"2026-09-13"},
  {to:"MIA",city:"Miami",price:109,d1:"2026-11-13",d2:"2026-11-15",dep:"9:41PM",al:"Frontier",stops:0,rdep:"7:16PM",arr:"11:51PM",rarr:"9:33PM",exp:"2026-09-13"},
  {to:"LAX",city:"Los Angeles",price:207,d1:"2026-10-25",d2:"2026-10-27",dep:"9:05PM",al:"Southwest",stops:1,rdep:"11:10AM",arr:"3:10AM+1",rarr:"4:55PM",exp:"2026-09-13"},
  {to:"NYC",city:"New York City",price:148,d1:"2026-09-26",d2:"2026-09-29",dep:"9:40PM",al:"Frontier",stops:1,rdep:"6:43PM",arr:"2:12AM+1",rarr:"8:55PM",exp:"2026-09-13"},
- {to:"BZN",city:"Bozeman",price:275,d1:"2026-10-25",d2:"2026-11-01",dep:"6:35AM",al:"Southwest",stops:2,rdep:"7:55AM",arr:"2:00PM",rarr:"1:55PM",exp:"2026-09-13"},
+ {to:"LAS",city:"Las Vegas",price:272,d1:"2026-10-09",d2:"2026-10-12",dep:"11:56AM",al:"Frontier",stops:1,rdep:"10:15PM",arr:"6:19PM",rarr:"4:38AM+1",exp:"2026-09-13"},
  {to:"AMS",city:"Amsterdam",price:387,d1:"2026-11-05",d2:"2026-11-11",dep:"1:22PM",al:"United",stops:1,rdep:"12:05PM",arr:"10:55PM",rarr:"10:26PM",exp:"2026-09-13"},
  {to:"ROM",city:"Rome",price:602,d1:"2026-10-01",d2:"2026-10-12",dep:"6:40PM",al:"United",stops:1,rdep:"7:05PM",arr:"4:50AM+1",rarr:"6:20AM+1",exp:"2026-09-13"},
  {to:"PAR",city:"Paris",price:663,d1:"2026-11-19",d2:"2026-11-25",dep:"10:52AM",al:"United",stops:1,rdep:"12:05PM",arr:"8:20PM",rarr:"10:46PM",exp:"2026-09-13"}],ATL:[
