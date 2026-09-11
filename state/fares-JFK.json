@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-11T00:16:06-04:00",
+ "generated": "2026-09-11T02:16:14-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 529,
+   "price": 526,
    "d1": "2026-12-02",
    "d2": "2026-12-09",
-   "dep": "5:00PM",
-   "al": "Aer Lingus",
-   "stops": 1,
+   "dep": "5:35PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "9:20PM",
-   "arr": "1:05AM+1",
-   "rarr": "6:39AM+1",
-   "pct": 41
+   "rdep": "11:25AM",
+   "arr": "12:35AM+1",
+   "rarr": "7:55PM",
+   "pct": 42
   },
   "PUJ": {
    "to": "PUJ",
