@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-11T16:02:51-04:00",
+ "generated": "2026-09-11T19:32:47-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -293,17 +293,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 901,
+   "price": 883,
    "d1": "2026-11-20",
    "d2": "2026-11-29",
-   "dep": "12:50PM",
-   "al": "United",
+   "dep": "8:45AM",
+   "al": "Air Canada",
    "stops": 2,
    "xfer": 0,
-   "rdep": "9:00PM",
-   "arr": "10:38PM",
-   "rarr": "7:53AM+1",
-   "pct": -2
+   "rdep": "1:25PM",
+   "arr": "6:32PM",
+   "rarr": "3:30AM+1",
+   "pct": 0
   },
   "AUA": {
    "to": "AUA",

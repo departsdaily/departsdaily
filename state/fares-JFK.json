@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-11T16:04:05-04:00",
+ "generated": "2026-09-11T19:33:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -263,17 +263,17 @@
   "TPA": {
    "to": "TPA",
    "city": "Tampa",
-   "price": 252,
-   "d1": "2026-10-03",
-   "d2": "2026-10-10",
-   "dep": "12:00PM",
-   "al": "American",
-   "stops": 1,
+   "price": 247,
+   "d1": "2026-10-05",
+   "d2": "2026-10-11",
+   "dep": "7:20PM",
+   "al": "JetBlue",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "3:33PM",
-   "arr": "3:42PM",
-   "rarr": "7:27PM",
-   "pct": 32
+   "rdep": "7:20AM",
+   "arr": "10:40PM",
+   "rarr": "10:04AM",
+   "pct": 33
   },
   "AMS": {
    "to": "AMS",
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 526,
-   "d1": "2026-12-02",
-   "d2": "2026-12-09",
-   "dep": "5:35PM",
-   "al": "American",
-   "stops": 0,
+   "price": 372,
+   "d1": "2026-09-23",
+   "d2": "2026-09-30",
+   "dep": "6:00PM",
+   "al": "Virgin Atlantic",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "11:25AM",
-   "arr": "12:35AM+1",
-   "rarr": "7:55PM",
-   "pct": 42
+   "rdep": "9:30AM",
+   "arr": "2:40AM+1",
+   "rarr": "5:54PM",
+   "pct": 59
   },
   "PUJ": {
    "to": "PUJ",

@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-11T16:05:00-04:00",
+ "generated": "2026-09-11T19:34:48-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -8,17 +8,17 @@
   "AUS": {
    "to": "AUS",
    "city": "Austin",
-   "price": 518,
-   "d1": "2026-11-25",
-   "d2": "2026-11-29",
-   "dep": "4:34PM",
+   "price": 465,
+   "d1": "2026-10-16",
+   "d2": "2026-10-18",
+   "dep": "5:17AM",
    "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:50PM",
-   "arr": "10:30PM",
-   "rarr": "2:25AM+1",
-   "pct": 4
+   "rdep": "12:48PM",
+   "arr": "10:42AM",
+   "rarr": "5:54PM",
+   "pct": 14
   },
   "DCA": {
    "to": "DCA",

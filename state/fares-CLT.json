@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-11T16:02:13-04:00",
+ "generated": "2026-09-11T19:32:12-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 41,
  "routes_failed": [],
@@ -83,32 +83,32 @@
   "CUR": {
    "to": "CUR",
    "city": "Curacao",
-   "price": 826,
+   "price": 838,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
-   "dep": "1:03PM",
-   "al": "American",
-   "stops": 1,
+   "dep": "5:38PM",
+   "al": "Frontier",
+   "stops": 2,
    "xfer": 0,
-   "rdep": "4:13PM",
-   "arr": "6:12PM",
-   "rarr": "9:37PM",
-   "pct": -21
+   "rdep": "1:22PM",
+   "arr": "1:04AM+1",
+   "rarr": "10:59PM",
+   "pct": -23
   },
   "DEN": {
    "to": "DEN",
    "city": "Denver",
-   "price": 316,
+   "price": 249,
    "d1": "2026-10-05",
-   "d2": "2026-10-09",
+   "d2": "2026-10-12",
    "dep": "7:54PM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "9:12PM",
+   "rdep": "7:02PM",
    "arr": "11:43PM",
-   "rarr": "2:21AM+1",
-   "pct": 30
+   "rarr": "12:39AM+1",
+   "pct": 45
   },
   "FRA": {
    "to": "FRA",
@@ -203,17 +203,17 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 792,
-   "d1": "2026-09-19",
-   "d2": "2026-09-25",
-   "dep": "9:40PM",
-   "al": "",
+   "price": 783,
+   "d1": "2026-10-13",
+   "d2": "2026-10-29",
+   "dep": "9:15AM",
+   "al": "Air Canada",
    "stops": 1,
-   "xfer": 1,
-   "rdep": "2:00PM",
-   "arr": "7:59AM+1",
-   "rarr": "1:20AM+1",
-   "pct": 7
+   "xfer": 0,
+   "rdep": "7:40AM",
+   "arr": "6:06PM",
+   "rarr": "7:25PM",
+   "pct": 8
   },
   "MAD": {
    "to": "MAD",
@@ -413,7 +413,7 @@
   "PTY": {
    "to": "PTY",
    "city": "Panama City",
-   "price": 744,
+   "price": 766,
    "d1": "2026-10-12",
    "d2": "2026-10-19",
    "dep": "7:00AM",
@@ -423,7 +423,7 @@
    "rdep": "9:45AM",
    "arr": "2:08PM",
    "rarr": "5:11PM",
-   "pct": -20
+   "pct": -24
   },
   "PUJ": {
    "to": "PUJ",

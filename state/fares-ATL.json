@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-11T16:02:32-04:00",
+ "generated": "2026-09-11T19:32:30-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 27,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -188,17 +188,17 @@
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 151,
-   "d1": "2026-11-19",
-   "d2": "2026-11-26",
-   "dep": "7:40AM",
+   "price": 167,
+   "d1": "2026-12-09",
+   "d2": "2026-12-12",
+   "dep": "6:52PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "5:26PM",
-   "arr": "9:56AM",
-   "rarr": "7:59PM",
-   "pct": 64
+   "rdep": "8:10AM",
+   "arr": "9:16PM",
+   "rarr": "10:26AM",
+   "pct": 60
   },
   "PHL": {
    "to": "PHL",
@@ -214,6 +214,21 @@
    "arr": "7:16AM",
    "rarr": "11:06AM",
    "pct": 86
+  },
+  "PHX": {
+   "to": "PHX",
+   "city": "Phoenix",
+   "price": 174,
+   "d1": "2026-10-03",
+   "d2": "2026-10-08",
+   "dep": "7:59PM",
+   "al": "Frontier",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "4:23PM",
+   "arr": "1:20AM+1",
+   "rarr": "10:22PM",
+   "pct": 72
   },
   "SEA": {
    "to": "SEA",
