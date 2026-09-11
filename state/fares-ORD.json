@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-11T02:15:00-04:00",
+ "generated": "2026-09-11T04:15:41-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
