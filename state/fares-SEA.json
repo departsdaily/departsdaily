@@ -1,8 +1,8 @@
 {
  "origin": "SEA",
- "generated": "2026-09-10T20:16:49-04:00",
+ "generated": "2026-09-10T22:17:10-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 22,
+ "routes_priced": 21,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -19,21 +19,6 @@
    "arr": "3:17AM+1",
    "rarr": "1:50AM+1",
    "pct": 38
-  },
-  "BOS": {
-   "to": "BOS",
-   "city": "Boston",
-   "price": 508,
-   "d1": "2026-09-24",
-   "d2": "2026-09-27",
-   "dep": "12:05PM",
-   "al": "American",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:20PM",
-   "arr": "8:07PM",
-   "rarr": "1:37AM+1",
-   "pct": 24
   },
   "DCA": {
    "to": "DCA",

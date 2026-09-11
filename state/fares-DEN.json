@@ -1,8 +1,8 @@
 {
  "origin": "DEN",
- "generated": "2026-09-10T20:15:40-04:00",
+ "generated": "2026-09-10T22:15:54-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 16,
+ "routes_priced": 15,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -53,17 +53,17 @@
   "HOU": {
    "to": "HOU",
    "city": "Houston",
-   "price": 144,
-   "d1": "2026-11-23",
-   "d2": "2026-11-27",
-   "dep": "7:35AM",
-   "al": "Southwest",
+   "price": 129,
+   "d1": "2026-10-01",
+   "d2": "2026-10-05",
+   "dep": "9:16PM",
+   "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "10:30PM",
-   "arr": "10:00AM",
-   "rarr": "1:05AM+1",
-   "pct": 67
+   "rdep": "10:38PM",
+   "arr": "11:43PM",
+   "rarr": "1:15AM+1",
+   "pct": 70
   },
   "LAS": {
    "to": "LAS",
@@ -169,21 +169,6 @@
    "arr": "12:43AM+1",
    "rarr": "10:48PM",
    "pct": 49
-  },
-  "SFO": {
-   "to": "SFO",
-   "city": "San Francisco",
-   "price": 336,
-   "d1": "2026-11-25",
-   "d2": "2026-11-29",
-   "dep": "6:42AM",
-   "al": "Frontier",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "7:11PM",
-   "arr": "10:38AM",
-   "rarr": "10:57PM",
-   "pct": 31
   },
   "TPA": {
    "to": "TPA",

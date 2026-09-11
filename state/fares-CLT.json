@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-10T20:14:29-04:00",
+ "generated": "2026-09-10T22:14:36-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 38,
  "routes_failed": [],
@@ -79,21 +79,6 @@
    "arr": "2:00PM",
    "rarr": "1:55PM",
    "pct": 58
-  },
-  "CUN": {
-   "to": "CUN",
-   "city": "Canc\u00fan",
-   "price": 494,
-   "d1": "2026-10-03",
-   "d2": "2026-10-09",
-   "dep": "9:15AM",
-   "al": "Air Canada",
-   "stops": 2,
-   "xfer": 0,
-   "rdep": "1:20PM",
-   "arr": "3:06PM",
-   "rarr": "9:05PM",
-   "pct": 5
   },
   "CUR": {
    "to": "CUR",
@@ -244,6 +229,21 @@
    "arr": "7:56AM",
    "rarr": "5:05PM",
    "pct": 83
+  },
+  "MEX": {
+   "to": "MEX",
+   "city": "Mexico City",
+   "price": 642,
+   "d1": "2026-11-25",
+   "d2": "2026-11-29",
+   "dep": "6:00AM",
+   "al": "Volaris",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "11:10AM",
+   "arr": "11:31AM",
+   "rarr": "3:58PM",
+   "pct": -23
   },
   "MIA": {
    "to": "MIA",
