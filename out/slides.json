@@ -6,7 +6,7 @@
   "slide4_board.png",
   "slide5_cta.png"
  ],
- "n_deals": 9,
+ "n_deals": 10,
  "board_slides": 4,
  "sections": [
   "LONG WEEKEND",
@@ -56,7 +56,15 @@
    "section": "weekend"
   },
   {
-   "file": "story_6_SFO.png",
+   "file": "story_6_LAX.png",
+   "to": "LAX",
+   "city": "Los Angeles",
+   "price": 260,
+   "disc": 16,
+   "section": "extra_weekend"
+  },
+  {
+   "file": "story_7_SFO.png",
    "to": "SFO",
    "city": "San Francisco",
    "price": 324,
@@ -64,19 +72,11 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_7_PTY.png",
+   "file": "story_8_PTY.png",
    "to": "PTY",
    "city": "Panama City",
    "price": 312,
    "disc": 48,
-   "section": "weekish"
-  },
-  {
-   "file": "story_8_PDX.png",
-   "to": "PDX",
-   "city": "Portland, OR",
-   "price": 202,
-   "disc": 47,
    "section": "weekish"
   }
  ]
