@@ -1,6 +1,6 @@
 {
  "origin": "DEN",
- "generated": "2026-09-11T14:16:19-04:00",
+ "generated": "2026-09-11T16:03:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 15,
  "routes_failed": [],
@@ -143,17 +143,17 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 252,
-   "d1": "2026-09-25",
-   "d2": "2026-09-27",
-   "dep": "6:00AM",
-   "al": "Southwest",
+   "price": 216,
+   "d1": "2026-10-20",
+   "d2": "2026-10-23",
+   "dep": "10:40AM",
+   "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:20AM",
-   "arr": "10:20AM",
-   "rarr": "11:05AM",
-   "pct": 54
+   "rdep": "8:29PM",
+   "arr": "4:28PM",
+   "rarr": "2:46AM+1",
+   "pct": 61
   },
   "PHX": {
    "to": "PHX",

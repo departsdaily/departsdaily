@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-11T14:15:06-04:00",
+ "generated": "2026-09-11T16:02:13-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 40,
+ "routes_priced": 41,
  "routes_failed": [],
  "fares": {
   "AMS": {
@@ -113,16 +113,16 @@
   "FRA": {
    "to": "FRA",
    "city": "Frankfurt",
-   "price": 841,
-   "d1": "2026-10-24",
-   "d2": "2026-11-06",
-   "dep": "3:59PM",
-   "al": "Frontier",
-   "stops": 2,
+   "price": 840,
+   "d1": "2026-10-22",
+   "d2": "2026-11-04",
+   "dep": "10:25AM",
+   "al": "Lufthansa",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "10:50AM",
-   "arr": "3:25AM+1",
-   "rarr": "8:35PM",
+   "rdep": "1:20PM",
+   "arr": "7:50PM",
+   "rarr": "12:26AM+1",
    "pct": 7
   },
   "HNL": {
@@ -184,6 +184,21 @@
    "arr": "3:10AM+1",
    "rarr": "4:55PM",
    "pct": 71
+  },
+  "LIM": {
+   "to": "LIM",
+   "city": "Lima",
+   "price": 788,
+   "d1": "2026-10-16",
+   "d2": "2026-10-21",
+   "dep": "9:40PM",
+   "al": "Frontier",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "1:30PM",
+   "arr": "9:24AM+1",
+   "rarr": "9:39PM",
+   "pct": -5
   },
   "LON": {
    "to": "LON",
