@@ -1,8 +1,8 @@
 {
  "origin": "ATL",
- "generated": "2026-09-11T06:15:30-04:00",
+ "generated": "2026-09-11T08:15:33-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 26,
+ "routes_priced": 27,
  "routes_failed": [],
  "fares": {
   "BOS": {
@@ -259,6 +259,21 @@
    "arr": "11:49AM",
    "rarr": "3:30PM",
    "pct": 91
+  },
+  "AMS": {
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 916,
+   "d1": "2026-10-11",
+   "d2": "2026-10-16",
+   "dep": "7:30PM",
+   "al": "SK",
+   "stops": 1,
+   "xfer": 0,
+   "rdep": "7:00AM",
+   "arr": "5:45AM+1",
+   "rarr": "5:55PM",
+   "pct": -4
   },
   "AUA": {
    "to": "AUA",
