@@ -1,6 +1,6 @@
 {
  "origin": "BOS",
- "generated": "2026-09-10T18:17:16-04:00",
+ "generated": "2026-09-10T20:17:07-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 25,
  "routes_failed": [],
@@ -233,17 +233,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 588,
-   "d1": "2026-09-25",
-   "d2": "2026-10-07",
-   "dep": "8:50PM",
-   "al": "Icelandair",
+   "price": 540,
+   "d1": "2026-10-28",
+   "d2": "2026-11-09",
+   "dep": "10:20PM",
+   "al": "Aer Lingus",
    "stops": 1,
    "xfer": 0,
-   "rdep": "2:10PM",
-   "arr": "5:25AM+1",
-   "rarr": "11:15PM",
-   "pct": 33
+   "rdep": "7:25PM",
+   "arr": "6:00AM+1",
+   "rarr": "4:15AM+1",
+   "pct": 39
   },
   "AUA": {
    "to": "AUA",
@@ -293,7 +293,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 658,
+   "price": 687,
    "d1": "2026-12-17",
    "d2": "2027-01-06",
    "dep": "3:30PM",
@@ -303,7 +303,7 @@
    "rdep": "2:20PM",
    "arr": "9:45PM",
    "rarr": "8:18PM",
-   "pct": -22
+   "pct": -27
   },
   "NAS": {
    "to": "NAS",
@@ -323,17 +323,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 573,
+   "price": 548,
    "d1": "2026-11-19",
    "d2": "2026-11-24",
-   "dep": "7:50PM",
-   "al": "Icelandair",
-   "stops": 2,
+   "dep": "5:15PM",
+   "al": "Aer Lingus",
+   "stops": 1,
    "xfer": 0,
-   "rdep": "5:00AM",
-   "arr": "6:20AM+1",
-   "rarr": "2:40PM",
-   "pct": 36
+   "rdep": "6:20AM",
+   "arr": "12:50AM+1",
+   "rarr": "3:05PM",
+   "pct": 39
   },
   "PUJ": {
    "to": "PUJ",
@@ -353,32 +353,32 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 628,
+   "price": 558,
    "d1": "2026-11-19",
    "d2": "2026-11-27",
-   "dep": "10:10PM",
-   "al": "TAP Portugal",
+   "dep": "8:00PM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "7:50AM+1",
-   "rarr": "5:10PM",
-   "pct": 34
+   "rdep": "6:00AM",
+   "arr": "5:20AM+1",
+   "rarr": "4:50PM",
+   "pct": 41
   },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 322,
-   "d1": "2026-10-14",
-   "d2": "2026-10-21",
-   "dep": "11:10AM",
+   "price": 334,
+   "d1": "2026-12-22",
+   "d2": "2026-12-30",
+   "dep": "4:30PM",
    "al": "JetBlue",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:20AM",
-   "arr": "3:14PM",
-   "rarr": "10:24AM",
-   "pct": 23
+   "rdep": "8:35PM",
+   "arr": "10:39PM",
+   "rarr": "12:48AM+1",
+   "pct": 20
   }
  }
 }

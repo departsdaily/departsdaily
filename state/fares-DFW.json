@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-10T18:15:29-04:00",
+ "generated": "2026-09-10T20:15:23-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -173,32 +173,32 @@
   "NYC": {
    "to": "NYC",
    "city": "New York City",
-   "price": 192,
-   "d1": "2026-11-04",
-   "d2": "2026-11-07",
-   "dep": "8:05AM",
+   "price": 177,
+   "d1": "2026-10-17",
+   "d2": "2026-10-23",
+   "dep": "8:38AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:30AM",
-   "arr": "12:47PM",
-   "rarr": "12:00PM",
-   "pct": 65
+   "rdep": "8:29PM",
+   "arr": "1:15PM",
+   "rarr": "12:27AM+1",
+   "pct": 68
   },
   "ORD": {
    "to": "ORD",
    "city": "Chicago",
-   "price": 175,
+   "price": 186,
    "d1": "2026-10-10",
    "d2": "2026-10-12",
-   "dep": "4:25PM",
+   "dep": "9:55PM",
    "al": "Frontier",
-   "stops": 0,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "6:20AM",
-   "arr": "7:07PM",
-   "rarr": "8:59AM",
-   "pct": 57
+   "rdep": "4:20PM",
+   "arr": "12:29AM+1",
+   "rarr": "10:54PM",
+   "pct": 55
   },
   "PHL": {
    "to": "PHL",
@@ -323,17 +323,17 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 660,
+   "price": 708,
    "d1": "2026-12-16",
    "d2": "2026-12-20",
    "dep": "7:00AM",
    "al": "Air Canada",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:45PM",
+   "rdep": "1:50PM",
    "arr": "2:30PM",
-   "rarr": "8:35PM",
-   "pct": -22
+   "rarr": "9:55PM",
+   "pct": -31
   },
   "PAR": {
    "to": "PAR",

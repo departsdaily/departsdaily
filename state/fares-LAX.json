@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-10T18:16:04-04:00",
+ "generated": "2026-09-10T20:15:58-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 27,
  "routes_failed": [],
@@ -98,7 +98,7 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 253,
+   "price": 254,
    "d1": "2026-10-21",
    "d2": "2026-10-28",
    "dep": "12:21AM",
@@ -143,17 +143,17 @@
   "MCO": {
    "to": "MCO",
    "city": "Orlando",
-   "price": 144,
-   "d1": "2026-11-04",
-   "d2": "2026-11-08",
-   "dep": "5:07PM",
+   "price": 263,
+   "d1": "2026-11-13",
+   "d2": "2026-11-17",
+   "dep": "11:52AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "5:55AM",
-   "arr": "10:44PM",
-   "rarr": "12:38PM",
-   "pct": 75
+   "rdep": "11:30AM",
+   "arr": "5:48PM",
+   "rarr": "5:51PM",
+   "pct": 54
   },
   "MIA": {
    "to": "MIA",
