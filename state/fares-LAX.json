@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-11T22:16:27-04:00",
+ "generated": "2026-09-12T00:16:27-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -128,17 +128,17 @@
   "LAS": {
    "to": "LAS",
    "city": "Las Vegas",
-   "price": 36,
-   "d1": "2026-10-03",
-   "d2": "2026-10-06",
-   "dep": "9:20PM",
+   "price": 33,
+   "d1": "2026-10-10",
+   "d2": "2026-10-13",
+   "dep": "9:57PM",
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
    "rdep": "2:55PM",
-   "arr": "10:41PM",
-   "rarr": "4:23PM",
-   "pct": 88
+   "arr": "11:17PM",
+   "rarr": "4:20PM",
+   "pct": 89
   },
   "MCO": {
    "to": "MCO",
@@ -353,17 +353,17 @@
   "PUJ": {
    "to": "PUJ",
    "city": "Punta Cana",
-   "price": 474,
-   "d1": "2026-10-25",
-   "d2": "2026-11-01",
-   "dep": "6:57PM",
+   "price": 471,
+   "d1": "2027-01-10",
+   "d2": "2027-01-20",
+   "dep": "9:50PM",
    "al": "American",
-   "stops": 2,
+   "stops": 1,
    "xfer": 0,
-   "rdep": "12:58PM",
-   "arr": "3:43AM+1",
-   "rarr": "9:31PM",
-   "pct": 15
+   "rdep": "4:26PM",
+   "arr": "6:02AM+1",
+   "rarr": "1:33AM+1",
+   "pct": 16
   },
   "ROM": {
    "to": "ROM",

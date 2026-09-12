@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-11T22:15:34-04:00",
+ "generated": "2026-09-12T00:15:33-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -204,15 +204,15 @@
    "to": "NYC",
    "city": "New York City",
    "price": 154,
-   "d1": "2026-09-25",
-   "d2": "2026-09-28",
-   "dep": "3:50PM",
-   "al": "Frontier",
-   "stops": 1,
+   "d1": "2026-09-17",
+   "d2": "2026-09-20",
+   "dep": "4:40PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "1:30PM",
-   "arr": "9:29PM",
-   "rarr": "8:05PM",
+   "rdep": "6:55AM",
+   "arr": "6:59PM",
+   "rarr": "9:48AM",
    "pct": 63
   },
   "PHL": {
@@ -308,7 +308,7 @@
   "AUA": {
    "to": "AUA",
    "city": "Aruba",
-   "price": 555,
+   "price": 494,
    "d1": "2026-10-24",
    "d2": "2026-10-31",
    "dep": "8:01AM",
@@ -318,7 +318,7 @@
    "rdep": "3:51PM",
    "arr": "3:20PM",
    "rarr": "11:37PM",
-   "pct": 10
+   "pct": 20
   },
   "CUN": {
    "to": "CUN",
