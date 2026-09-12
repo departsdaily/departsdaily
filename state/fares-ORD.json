@@ -1,8 +1,8 @@
 {
  "origin": "ORD",
- "generated": "2026-09-11T21:34:38-04:00",
+ "generated": "2026-09-11T22:15:34-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 29,
+ "routes_priced": 28,
  "routes_failed": [],
  "fares": {
   "AUS": {
@@ -364,21 +364,6 @@
    "arr": "1:03AM+1",
    "rarr": "9:21PM",
    "pct": -51
-  },
-  "NAS": {
-   "to": "NAS",
-   "city": "Nassau",
-   "price": 358,
-   "d1": "2026-10-25",
-   "d2": "2026-11-01",
-   "dep": "4:30PM",
-   "al": "Air Canada",
-   "stops": 1,
-   "xfer": 0,
-   "rdep": "2:05PM",
-   "arr": "9:40PM",
-   "rarr": "8:32PM",
-   "pct": 25
   },
   "PAR": {
    "to": "PAR",
