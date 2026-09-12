@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-12T06:16:54-04:00",
+ "generated": "2026-09-12T08:16:43-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -413,32 +413,32 @@
   "ROM": {
    "to": "ROM",
    "city": "Rome",
-   "price": 508,
-   "d1": "2026-11-11",
-   "d2": "2026-11-16",
+   "price": 493,
+   "d1": "2026-10-02",
+   "d2": "2026-10-10",
    "dep": "10:05PM",
-   "al": "UX",
+   "al": "TAP Portugal",
    "stops": 1,
    "xfer": 0,
-   "rdep": "3:55PM",
-   "arr": "7:35AM+1",
-   "rarr": "2:45AM+1",
-   "pct": 47
+   "rdep": "1:35PM",
+   "arr": "8:15AM+1",
+   "rarr": "12:50AM+1",
+   "pct": 48
   },
   "SJU": {
    "to": "SJU",
    "city": "San Juan, PR",
-   "price": 328,
-   "d1": "2026-10-06",
-   "d2": "2026-10-20",
-   "dep": "12:15PM",
+   "price": 319,
+   "d1": "2026-12-09",
+   "d2": "2026-12-15",
+   "dep": "7:55AM",
    "al": "JetBlue",
    "stops": 1,
    "xfer": 0,
-   "rdep": "6:20AM",
-   "arr": "4:11PM",
-   "rarr": "11:40AM",
-   "pct": 22
+   "rdep": "9:45AM",
+   "arr": "1:45PM",
+   "rarr": "3:27PM",
+   "pct": 24
   }
  }
 }
