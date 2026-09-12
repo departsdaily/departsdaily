@@ -1,6 +1,6 @@
 {
  "origin": "CLT",
- "generated": "2026-09-12T10:15:02-04:00",
+ "generated": "2026-09-12T10:22:56-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 42,
  "routes_failed": [],
@@ -158,17 +158,17 @@
   "JAX": {
    "to": "JAX",
    "city": "Jacksonville",
-   "price": 381,
-   "d1": "2026-10-13",
-   "d2": "2026-10-20",
+   "price": 205,
+   "d1": "2026-10-28",
+   "d2": "2026-11-01",
    "dep": "6:40AM",
    "al": "Southwest",
    "stops": 1,
    "xfer": 0,
-   "rdep": "12:45PM",
+   "rdep": "2:10PM",
    "arr": "9:45AM",
-   "rarr": "5:00PM",
-   "pct": 40
+   "rarr": "5:35PM",
+   "pct": 68
   },
   "LAS": {
    "to": "LAS",

@@ -4,9 +4,10 @@
  "routes_considered": 107,
  "min_discount_pct": 12.0,
  "summary": {
-  "no fares": 67,
-  "qualified": 8,
-  "not a deal": 18,
+  "no fares": 51,
+  "fetch failed": 16,
+  "qualified": 9,
+  "not a deal": 17,
   "no fares in window": 14
  },
  "routes": {
@@ -215,68 +216,68 @@
    "why": "the fare cache returned nothing"
   },
   "SJD": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SKB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SLC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SRQ": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "STX": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "SVD": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TUS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TVC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "TYS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "UVF": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "VPS": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "VRB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "YQB": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "YUL": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "YVR": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "YYC": {
-   "outcome": "no fares",
-   "why": "the fare cache returned nothing"
+   "outcome": "fetch failed",
+   "why": "HTTP Error 429: Too Many Requests"
   },
   "AMS": {
    "outcome": "qualified",
@@ -388,16 +389,16 @@
    "section": "cheapest"
   },
   "JAX": {
-   "outcome": "not a deal",
-   "price": 381,
+   "outcome": "qualified",
+   "price": 205,
    "typical": 268,
-   "disc_pct": -42,
-   "d1": "2026-10-13",
-   "d2": "2026-10-20",
-   "nights": 7,
+   "disc_pct": 24,
+   "d1": "2026-10-28",
+   "d2": "2026-11-01",
+   "nights": 4,
    "on_shape": true,
    "rung": "shape",
-   "section": "cheapest"
+   "section": "extra_weekend"
   },
   "LAS": {
    "outcome": "qualified",
