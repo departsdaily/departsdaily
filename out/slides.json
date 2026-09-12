@@ -4,16 +4,14 @@
   "slide2_board.png",
   "slide3_board.png",
   "slide4_board.png",
-  "slide5_board.png",
-  "slide6_cta.png"
+  "slide5_cta.png"
  ],
- "n_deals": 9,
- "board_slides": 5,
+ "n_deals": 8,
+ "board_slides": 4,
  "sections": [
   "LONG WEEKEND",
   "EXTRA LONG WEEKEND",
   "WEEK-ISH",
-  "CHEAPEST OUT OF CLT",
   "CHEAPEST OUT OF CLT"
  ],
  "stories": [
@@ -66,20 +64,20 @@
    "section": "extra_weekend"
   },
   {
-   "file": "story_7_PTY.png",
-   "to": "PTY",
-   "city": "Panama City",
-   "price": 312,
-   "disc": 48,
-   "section": "weekish"
-  },
-  {
-   "file": "story_8_PDX.png",
+   "file": "story_7_PDX.png",
    "to": "PDX",
    "city": "Portland, OR",
    "price": 202,
    "disc": 47,
    "section": "weekish"
+  },
+  {
+   "file": "story_8_AMS.png",
+   "to": "AMS",
+   "city": "Amsterdam",
+   "price": 387,
+   "disc": 41,
+   "section": "extra_weekend"
   }
  ]
 }
