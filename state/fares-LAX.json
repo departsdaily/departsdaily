@@ -1,6 +1,6 @@
 {
  "origin": "LAX",
- "generated": "2026-09-12T10:16:40-04:00",
+ "generated": "2026-09-12T12:16:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -135,9 +135,9 @@
    "al": "Frontier",
    "stops": 0,
    "xfer": 0,
-   "rdep": "6:30AM",
+   "rdep": "2:55PM",
    "arr": "11:17PM",
-   "rarr": "7:49AM",
+   "rarr": "4:20PM",
    "pct": 86
   },
   "MCO": {
@@ -323,7 +323,7 @@
   "LON": {
    "to": "LON",
    "city": "London",
-   "price": 370,
+   "price": 619,
    "d1": "2026-11-08",
    "d2": "2026-11-14",
    "dep": "9:20AM",
@@ -333,7 +333,7 @@
    "rdep": "7:30AM",
    "arr": "11:30PM",
    "rarr": "11:15PM",
-   "pct": 56
+   "pct": 27
   },
   "PAR": {
    "to": "PAR",
