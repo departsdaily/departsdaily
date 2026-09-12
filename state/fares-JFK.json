@@ -1,6 +1,6 @@
 {
  "origin": "JFK",
- "generated": "2026-09-11T19:33:57-04:00",
+ "generated": "2026-09-11T21:35:55-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 29,
  "routes_failed": [],
@@ -98,17 +98,17 @@
   "FLL": {
    "to": "FLL",
    "city": "Ft. Lauderdale",
-   "price": 211,
-   "d1": "2026-10-23",
-   "d2": "2026-10-26",
-   "dep": "6:00AM",
+   "price": 189,
+   "d1": "2026-10-26",
+   "d2": "2026-10-30",
+   "dep": "6:05PM",
    "al": "JetBlue",
    "stops": 0,
    "xfer": 0,
-   "rdep": "8:30AM",
-   "arr": "9:05AM",
-   "rarr": "11:20AM",
-   "pct": 49
+   "rdep": "6:00AM",
+   "arr": "9:19PM",
+   "rarr": "8:52AM",
+   "pct": 55
   },
   "HOU": {
    "to": "HOU",
@@ -383,17 +383,17 @@
   "PAR": {
    "to": "PAR",
    "city": "Paris",
-   "price": 372,
-   "d1": "2026-09-23",
-   "d2": "2026-09-30",
-   "dep": "6:00PM",
-   "al": "Virgin Atlantic",
-   "stops": 1,
+   "price": 526,
+   "d1": "2026-12-02",
+   "d2": "2026-12-09",
+   "dep": "5:35PM",
+   "al": "American",
+   "stops": 0,
    "xfer": 0,
-   "rdep": "9:30AM",
-   "arr": "2:40AM+1",
-   "rarr": "5:54PM",
-   "pct": 59
+   "rdep": "11:25AM",
+   "arr": "12:35AM+1",
+   "rarr": "7:55PM",
+   "pct": 42
   },
   "PUJ": {
    "to": "PUJ",

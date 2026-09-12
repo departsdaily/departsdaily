@@ -1,6 +1,6 @@
 {
  "origin": "DFW",
- "generated": "2026-09-11T19:33:05-04:00",
+ "generated": "2026-09-11T21:34:57-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 26,
  "routes_failed": [],
@@ -53,17 +53,17 @@
   "DCA": {
    "to": "DCA",
    "city": "Washington DC",
-   "price": 269,
-   "d1": "2026-09-24",
-   "d2": "2026-10-02",
-   "dep": "10:40AM",
+   "price": 281,
+   "d1": "2026-10-15",
+   "d2": "2026-10-18",
+   "dep": "10:37AM",
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
    "rdep": "7:00AM",
-   "arr": "4:30PM",
-   "rarr": "1:10PM",
-   "pct": 44
+   "arr": "4:23PM",
+   "rarr": "1:06PM",
+   "pct": 41
   },
   "DEN": {
    "to": "DEN",
@@ -195,9 +195,9 @@
    "al": "Frontier",
    "stops": 1,
    "xfer": 0,
-   "rdep": "4:20PM",
+   "rdep": "3:30PM",
    "arr": "12:29AM+1",
-   "rarr": "10:54PM",
+   "rarr": "10:24PM",
    "pct": 55
   },
   "PHL": {
@@ -263,17 +263,17 @@
   "AMS": {
    "to": "AMS",
    "city": "Amsterdam",
-   "price": 587,
-   "d1": "2026-10-16",
+   "price": 969,
+   "d1": "2026-10-19",
    "d2": "2026-10-25",
-   "dep": "12:25PM",
-   "al": "Air Canada",
+   "dep": "3:05PM",
+   "al": "American",
    "stops": 1,
    "xfer": 0,
-   "rdep": "7:30AM",
-   "arr": "10:53PM",
-   "rarr": "7:50PM",
-   "pct": 33
+   "rdep": "7:00AM",
+   "arr": "1:40AM+1",
+   "rarr": "6:50PM",
+   "pct": -10
   },
   "AUA": {
    "to": "AUA",

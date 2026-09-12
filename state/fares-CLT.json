@@ -1,8 +1,8 @@
 {
  "origin": "CLT",
- "generated": "2026-09-11T19:32:12-04:00",
+ "generated": "2026-09-11T21:33:58-04:00",
  "source": "scripts/update_deals.py",
- "routes_priced": 41,
+ "routes_priced": 42,
  "routes_failed": [],
  "fares": {
   "AMS": {
@@ -49,6 +49,21 @@
    "arr": "11:09AM",
    "rarr": "9:47PM",
    "pct": -5
+  },
+  "AUH": {
+   "to": "AUH",
+   "city": "Abu Dhabi",
+   "price": 1420,
+   "d1": "2026-11-20",
+   "d2": "2026-12-04",
+   "dep": "7:32AM",
+   "al": "American",
+   "stops": 2,
+   "xfer": 0,
+   "rdep": "5:20AM",
+   "arr": "10:49PM",
+   "rarr": "11:22PM",
+   "pct": -14
   },
   "BGI": {
    "to": "BGI",
