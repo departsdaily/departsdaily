@@ -1,6 +1,6 @@
 {
  "origin": "ORD",
- "generated": "2026-09-12T02:15:39-04:00",
+ "generated": "2026-09-12T04:15:32-04:00",
  "source": "scripts/update_deals.py",
  "routes_priced": 28,
  "routes_failed": [],
@@ -353,7 +353,7 @@
   "MBJ": {
    "to": "MBJ",
    "city": "Montego Bay",
-   "price": 816,
+   "price": 812,
    "d1": "2026-10-08",
    "d2": "2026-10-12",
    "dep": "7:44PM",
@@ -363,7 +363,7 @@
    "rdep": "3:48PM",
    "arr": "1:03AM+1",
    "rarr": "9:21PM",
-   "pct": -51
+   "pct": -50
   },
   "PAR": {
    "to": "PAR",
